@@ -13,7 +13,7 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
-tauri = { version = "2", features = ["tray-icon", "image-png", "devtools", "macos-private-api"] }
+tauri = { version = "2", features = ["tray-icon", "image-png", "macos-private-api"] }
 tauri-plugin-opener = "2"
 tauri-plugin-single-instance = { version = "2", features = ["deep-link"] }
 tauri-plugin-deep-link = "2"
@@ -36,3 +36,9 @@ sys-locale = "0.3"
 
 # 进程内直调酷狗 API（Rust 移植版）
 kugoumusicapi = { path = "../rust-api" }
+
+[features]
+# 默认关闭 devtools，避免打包产物右键菜单可打开调试器（WebView2 Inspect）。
+# 本地需要调试时：`tauri dev --features devtools`（仅开发用，不会进入 release 包）。
+default = []
+devtools = ["tauri/devtools"]

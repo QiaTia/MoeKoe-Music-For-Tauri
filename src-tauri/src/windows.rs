@@ -64,7 +64,8 @@ pub fn create_main_window(app: &AppHandle, store: &SettingsStore) -> tauri::Resu
 
     let window = builder.build()?;
 
-    #[cfg(debug_assertions)]
+    // 仅当显式开启 devtools 特性时自动打开（release 包默认无此特性，右键不会再有 Inspect 菜单）
+    #[cfg(feature = "devtools")]
     window.open_devtools();
 
     Ok(window)

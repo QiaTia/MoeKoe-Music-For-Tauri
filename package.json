@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "dev": "tauri dev",
     "tauri": "tauri",
-    "tauri:dev": "tauri dev",
+    "tauri:dev": "tauri dev --features devtools",
     "tauri:build": "tauri build"
   },
   "engines": {
