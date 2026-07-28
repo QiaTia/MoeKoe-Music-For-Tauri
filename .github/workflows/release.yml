@@ -19,6 +19,7 @@ jobs:
       matrix:
         include:
           - platform: 'windows-latest'
+            # Windows 分架构构建：在一个 runner 上顺序产出 x86_64 与 arm64 两个独立 exe
             args: ''
           - platform: 'macos-latest'
             # macOS 分架构构建：在一个 runner 上顺序产出 x86_64 与 aarch64 两个独立 dmg
@@ -50,8 +51,10 @@ jobs:
       - name: Setup Rust toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
-          # macOS 分架构构建需要同时安装 x86_64 与 aarch64 两个 target 以支持交叉编译
-          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+          # 分架构构建需要安装对应的交叉编译 target：
+          #  - macOS：x86_64 / aarch64
+          #  - Windows：额外安装 arm64（x86_64 为默认 target，无需单独列出）
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || matrix.platform == 'windows-latest' && 'aarch64-pc-windows-msvc' || '' }}
 
       - name: Rust cache
         uses: swatinem/rust-cache@v2
@@ -62,8 +65,8 @@ jobs:
         # 项目使用 npm（仓库中无 lockfile，action 会自动回退到 npm）
         run: npm install
 
-      - name: Build and publish (Tauri) - Windows / Linux
-        if: matrix.platform != 'macos-latest'
+      - name: Build and publish (Tauri) - Linux
+        if: matrix.platform == 'ubuntu-22.04'
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -76,7 +79,7 @@ jobs:
 
             自动构建的跨平台桌面客户端：
 
-            - **Windows**：`*.exe` 安装包（NSIS）
+            - **Windows**：`*.exe` 安装包（NSIS）× 2（分别提供 x86_64 与 arm64 两个独立安装包）
             - **macOS**：`*.dmg` × 2（分别提供 Intel / x86_64 与 Apple Silicon / aarch64 两个独立安装包）
             - **Linux**：`*.deb` 与 `*.AppImage`
 
@@ -84,6 +87,52 @@ jobs:
           releaseDraft: false
           prerelease: false
           args: '${{ matrix.args }}'
+
+      - name: Build and publish (Tauri) - Windows x86_64
+        if: matrix.platform == 'windows-latest'
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: 'src-tauri'
+          tagName: '${{ github.ref_name }}'
+          releaseName: 'MoeKoe Music ${{ github.ref_name }}'
+          releaseBody: |
+            ## MoeKoe Music ${{ github.ref_name }}
+
+            自动构建的跨平台桌面客户端：
+
+            - **Windows**：`*.exe` 安装包（NSIS）× 2（分别提供 x86_64 与 arm64 两个独立安装包）
+            - **macOS**：`*.dmg` × 2（分别提供 Intel / x86_64 与 Apple Silicon / aarch64 两个独立安装包）
+            - **Linux**：`*.deb` 与 `*.AppImage`
+
+            > 注：macOS 未签名版本首次打开时，请在「访达」中右键点击应用 → 打开，以绕过 Gatekeeper 拦截。
+          releaseDraft: false
+          prerelease: false
+          args: ''
+
+      - name: Build and publish (Tauri) - Windows arm64
+        if: matrix.platform == 'windows-latest'
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: 'src-tauri'
+          tagName: '${{ github.ref_name }}'
+          releaseName: 'MoeKoe Music ${{ github.ref_name }}'
+          releaseBody: |
+            ## MoeKoe Music ${{ github.ref_name }}
+
+            自动构建的跨平台桌面客户端：
+
+            - **Windows**：`*.exe` 安装包（NSIS）× 2（分别提供 x86_64 与 arm64 两个独立安装包）
+            - **macOS**：`*.dmg` × 2（分别提供 Intel / x86_64 与 Apple Silicon / aarch64 两个独立安装包）
+            - **Linux**：`*.deb` 与 `*.AppImage`
+
+            > 注：macOS 未签名版本首次打开时，请在「访达」中右键点击应用 → 打开，以绕过 Gatekeeper 拦截。
+          releaseDraft: false
+          prerelease: false
+          args: '--target aarch64-pc-windows-msvc'
 
       - name: Build and publish (Tauri) - macOS x86_64 (Intel)
         if: matrix.platform == 'macos-latest'
@@ -107,7 +156,7 @@ jobs:
 
             自动构建的跨平台桌面客户端：
 
-            - **Windows**：`*.exe` 安装包（NSIS）
+            - **Windows**：`*.exe` 安装包（NSIS）× 2（分别提供 x86_64 与 arm64 两个独立安装包）
             - **macOS**：`*.dmg` × 2（分别提供 Intel / x86_64 与 Apple Silicon / aarch64 两个独立安装包）
             - **Linux**：`*.deb` 与 `*.AppImage`
 
@@ -137,7 +186,7 @@ jobs:
 
             自动构建的跨平台桌面客户端：
 
-            - **Windows**：`*.exe` 安装包（NSIS）
+            - **Windows**：`*.exe` 安装包（NSIS）× 2（分别提供 x86_64 与 arm64 两个独立安装包）
             - **macOS**：`*.dmg` × 2（分别提供 Intel / x86_64 与 Apple Silicon / aarch64 两个独立安装包）
             - **Linux**：`*.deb` 与 `*.AppImage`
 
