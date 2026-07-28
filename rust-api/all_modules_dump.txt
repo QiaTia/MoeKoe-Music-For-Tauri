@@ -1,0 +1,4101 @@
+================ FILE: ai_recommend.js ================
+const { appid, clientver, signParamsKey, cryptoMd5 } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const mid = params?.cookie?.KUGOU_API_MID; // 可以自定义
+  const clienttime = Date.now();
+
+  const recommend_source = (params?.album_audio_id || '').split(',').map((s) => ({ ID: Number(s) }));
+
+  const dataMap = {
+    platform: 'ios',
+    clientver,
+    clienttime: clienttime,
+    userid,
+    client_playlist: [],
+    source_type: 2,
+    playlist_ver: 2,
+    area_code: 1,
+    appid,
+    key: signParamsKey(clienttime.toString()),
+    mid,
+    recommend_source,
+  };
+
+  return useAxios({
+    url: '/recommend',
+    data: dataMap,
+    method: 'post',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'songlistairec.kugou.com' },
+    clearDefaultParams: true,
+  });
+};
+
+================ FILE: album.js ================
+const { clientver, appid, cryptoMd5, signParamsKey } = require('../util');
+
+
+module.exports = (params, useAxios) => {
+  const dateTime = Date.now();
+  const data = (params?.album_id || '').split(',').map((s) => ({ album_id: s, album_name: '', author_name: '' }));
+  const dfid = params?.cookie?.dfid || params?.dfid || '-';
+  const userid = params?.cookie?.userid || params?.userid || 0;
+  const token = params?.cookie?.token || params?.token || 0;
+
+  const dataMap = {
+    appid,
+    clienttime: dateTime,
+    clientver,
+    data,
+    dfid,
+    fields: params?.fields || '',
+    key: signParamsKey(dateTime),
+    mid: params?.cookie?.KUGOU_API_MID,
+  };
+
+  if (token) dataMap['token'] = token;
+  if (userid) dataMap['userid'] = userid;
+
+  return useAxios({
+    baseURL: 'http://kmr.service.kugou.com',
+    url: '/v1/album',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'kmr.service.kugou.com', 'Content-Type': 'application/json' },
+  });
+};
+
+================ FILE: album_detail.js ================
+// 专辑详情
+module.exports = (params, useAxios) => {
+  const data = {
+    data: [{ album_id: params.id }],
+    is_buy: params?.is_buy || 0,
+    fields: 'album_id,album_name,publish_date,sizable_cover,intro,language,is_publish,heat,type,quality,authors,exclusive,author_name,trans_param',
+  };
+  return useAxios({
+    url: '/kmr/v2/albums',
+    method: 'POST',
+    data,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'openapi.kugou.com', 'kg-tid': '255' },
+  });
+};
+
+================ FILE: album_shop.js ================
+// 唱片店
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/zhuanjidata/v3/album_shop_v2/get_classify_data',
+    method: 'GET',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: album_songs.js ================
+// 专辑音乐列表
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    album_id: params.id,
+    is_buy:  params?.is_buy || '',
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+  };
+
+  return useAxios({
+    url: '/v1/album_audio/lite',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'openapi.kugou.com', 'kg-tid': '255' },
+  });
+}
+================ FILE: artist_albums.js ================
+// 获取歌手专辑
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    author_id: params.id,
+    pagesize: params?.pagesize || 30,
+    page: params?.page || 1,
+    sort: params?.sort === 'hot' ? 3 : 1, // 3：最热，1：最新
+    category: 1,
+    area_code: 'all',
+  };
+
+  return useAxios({
+    url: '/kmr/v1/author/albums',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'openapi.kugou.com', 'kg-tid': 36 },
+  });
+};
+
+================ FILE: artist_audios.js ================
+const { cryptoMd5, signParamsKey, clientver, appid } = require('../util');
+// 获取歌手单曲
+
+module.exports = (params, useAxios) => {
+  const clienttime = Math.floor(new Date().getTime() / 1000);
+  const mid = params?.cookie?.KUGOU_API_MID;
+  const dataMap = {
+    appid,
+    clientver,
+    mid,
+    clienttime,
+    key: signParamsKey(clienttime),
+    author_id: params.id,
+    pagesize: params?.pagesize || 30,
+    page: params?.page || 1,
+    sort: params?.sort === 'hot' ? 1 : 2, // 1：最热，2：最新
+    area_code: 'all',
+  };
+
+  return useAxios({
+    baseURL: 'https://openapi.kugou.com',
+    url: '/kmr/v1/audio_group/author',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'openapi.kugou.com', 'kg-tid': 220 },
+  });
+};
+
+================ FILE: artist_detail.js ================
+// 歌手详情
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/kmr/v3/author',
+    method: 'POST',
+    data: { author_id: params.id },
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'openapi.kugou.com', 'kg-tid': 36 },
+  });
+};
+
+================ FILE: artist_follow.js ================
+const { cryptoAesEncrypt, rsaEncrypt2 } = require('../util');
+// 关注歌手
+module.exports = (params, useAxios) => {
+  const singerid = Number(params.id);
+  const token = params?.token || params.cookie?.token || '';
+  const userid = Number(params?.userid || params?.cookie?.userid || 0);
+  const clienttime = Math.floor(Date.now() / 1000);
+
+  const encrypt = cryptoAesEncrypt({ singerid, token });
+  
+
+  const paramsMap = {
+    plat: 0,
+    userid,
+    singerid,
+    source: 7,
+    p: rsaEncrypt2({ clienttime, key: encrypt.key }),
+    params: encrypt.str
+  }
+
+  
+
+  return useAxios({
+    url: '/followservice/v3/follow_singer',
+    method: 'post',
+    data: paramsMap,
+    params: {clienttime},
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: artist_follow_newsongs.js ================
+// 获取关注歌手新歌
+module.exports = (params, useAxios) => {
+  const last_album_id = params.last_album_id || 0;
+  const page_size = params.pagesize || 30;
+  const opt_sort = params.opt_sort === 2 ? 2 : 1;
+ 
+  const paramsMap = {
+    last_album_id,
+    page_size,
+    opt_sort,
+  };
+
+  return useAxios({
+    url: '/feed/v1/follow/newsong_album_list',
+    method: 'post',
+    data: { last_album_id },
+    params: paramsMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: artist_honour.js ================
+// 歌手荣誉详情
+module.exports = (params, useAxios) => {
+  return useAxios({
+    baseURL: 'http://h5activity.kugou.com',
+    url: '/v1/query_singer_honour_detail',
+    method: 'POST',
+    params: { singer_id: params.id, pagesize: params?.pagesize || 30, page: params?.page || 1 },
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: artist_lists.js ================
+// 歌手列表
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+    musician: Number(params.musician || 0),
+    sextype: params.sextypes || 0,
+    showtype: 2,
+    type: params.type || 0,
+    hotsize:  Number(params.hotsize || 30)
+  };
+
+  return useAxios({
+    url: '/ocean/v6/singer/list',
+    method: 'GET',
+    params: paramsMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: artist_unfollow.js ================
+const { cryptoAesEncrypt, rsaEncrypt2 } = require('../util');
+// 取消关注歌手
+module.exports = (params, useAxios) => {
+  const singerid = params.id;
+  const token = params?.token || params.cookie?.token || '';
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const clienttime = Math.floor(Date.now() / 1000);
+
+  const encrypt = cryptoAesEncrypt({ singerid, token });
+
+  const paramsMap = {
+    plat: 0,
+    userid,
+    singerid,
+    source: 7,
+    p: rsaEncrypt2({ clienttime, key: encrypt.key }),
+    params: encrypt.str
+  }
+
+
+  return useAxios({
+    url: '/followservice/v3/unfollow_singer',
+    method: 'post',
+    data: paramsMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: artist_videos.js ================
+// 获取歌手mv
+
+const tag_idx = { official: 18, live: 20, fan: 23, artist: 42419, all: '' };
+
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+    author_id: params.id,
+    is_fanmade: '',
+    tag_idx: tag_idx[params?.tag || 'all'] || '', // 18:官方版本，20：现场版本，23：饭制版本，42419：歌手发布
+    pagesize: params.pagesize || 30,
+    page: params.page || 1,
+  };
+
+  return useAxios({
+    baseURL: 'https://openapicdn.kugou.com',
+    url: '/kmr/v1/author/videos',
+    method: 'GET',
+    params: paramsMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: audio.js ================
+const {  signParamsKey, appid, clientver } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const dateTime = Date.now();
+  const data = (params?.hash || '').split(',').map((s) => ({ hash: s, audio_id: 0 }));
+  const dfid = params?.cookie?.dfid || params?.dfid || '-';
+  const userid = params?.cookie?.userid || params?.userid || 0;
+  const token = params?.cookie?.token || params?.token || 0;
+
+  const dataMap = {
+    appid,
+    clienttime: dateTime,
+    clientver,
+    data,
+    dfid,
+    key: signParamsKey(dateTime),
+    mid: params?.cookie?.KUGOU_API_MID,
+  };
+
+  if (token) dataMap['token'] = token;
+  if (userid) dataMap['userid'] = userid;
+
+  return useAxios({
+    baseURL: 'http://kmr.service.kugou.com',
+    url: '/v1/audio/audio',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'kmr.service.kugou.com', 'Content-Type': 'application/json' },
+  });
+};
+
+================ FILE: audio_accompany_matching.js ================
+const { cryptoMd5, appid } = require('../util');
+
+module.exports = (params, useAxios) => {
+
+  const dataMap = {
+    isteen: 0,
+    mixId: Number(params.mixId) || 0,
+    usemkv: 1,
+    platform: 2,
+    fileName: params.fileName || '',
+    hash: params.hash,
+    version: 12375,
+    appid,
+  }
+
+
+  const str = '*s&iN#G70*';
+  const paramsString = Object.keys(dataMap)
+    .sort()
+    .map((key) => `${key}=${typeof dataMap[key] === 'object' ? JSON.stringify(dataMap[key]) : dataMap[key]}`)
+    .join('&');
+  dataMap['sign'] = cryptoMd5(`${paramsString}${str}`).substring(8, 24);
+  
+  return useAxios({
+    baseURL: 'https://nsongacsing.kugou.com',
+    url: '/sing7/accompanywan/json/v2/cdn/optimal_matching_accompany_2_listen.do',
+    params: dataMap,
+    method: 'get',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    clearDefaultParams: true,
+    notSignature: true,
+  });
+};
+
+================ FILE: audio_ktv_total.js ================
+const { cryptoMd5, appid } = require('../util');
+
+module.exports = (params, useAxios) => {
+
+  const dataMap = {
+    isteen: 0,
+    songId: Number(params.songId),
+    usemkv: 1,
+    platform: 2,
+    singerName: params.singerName,
+    songHash: params.songHash,
+    version: 12375,
+    appid,
+  }
+
+
+  const str = '*s&iN#G70*';
+  const paramsString = Object.keys(dataMap)
+    .sort()
+    .map((key) => `${key}=${typeof dataMap[key] === 'object' ? JSON.stringify(dataMap[key]) : dataMap[key]}`)
+    .join('&');
+  dataMap['sign'] = cryptoMd5(`${paramsString}${str}`).substring(8, 24);
+  
+  return useAxios({
+    baseURL: 'https://acsing.service.kugou.com',
+    url: '/sing7/listenguide/json/v2/cdn/listenguide/get_total_opus_num_v02.do',
+    params: dataMap,
+    method: 'get',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    clearDefaultParams: true,
+    notSignature: true,
+  });
+};
+
+================ FILE: audio_related.js ================
+const { cryptoMd5 } = require('../util');
+
+const sortType = { all: 1, hot: 2, new: 3 };
+
+// https://listkmrp3cdnretry.kugou.com/v3/album_audio/related
+module.exports = (params, useAxios) => {
+  const show_detail = Number(params.show_detail) === 0;
+
+  let dataMap = {
+    album_audio_id: Number(params.album_audio_id),
+    appid: 1005,
+    area_code: 1,
+    clientver: 12329,
+  };
+
+  if (!show_detail) {
+    dataMap = {
+      ...dataMap,
+      page: params.page || 1,
+      pagesize: params.pagesize || 30,
+      show_input: 1,
+      show_type: params.show_type || 0,
+      sort: sortType[params.sort] || 1,
+      type: params.type || 0,
+    };
+  }
+
+  dataMap['version'] = 1;
+
+  const str = 'OIlwieks28dk2k092lksi2UIkp';
+  const paramsString = Object.keys(dataMap)
+    .sort()
+    .map((key) => `${key}=${typeof dataMap[key] === 'object' ? JSON.stringify(dataMap[key]) : dataMap[key]}`)
+    .join('');
+  dataMap['signature'] = cryptoMd5(`${str}${paramsString}${str}`);
+
+  return useAxios({
+    baseURL: 'https://listkmrp3cdnretry.kugou.com',
+    url: !show_detail ? '/v3/album_audio/related' : '/v2/audio_related/total',
+    params: dataMap,
+    method: 'get',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    clearDefaultParams: true,
+  });
+};
+
+================ FILE: brush.js ================
+const { appid, clientver, signParamsKey } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const userid = params?.cookie?.userid || params?.userid || 0;
+  const vip_type = params?.cookie?.vip_type || params?.vipType || 0;
+  const dateTime = Date.now();
+
+  const personal_recommend = {
+    userid,
+    appid,
+    playlist_ver: 2,
+    clienttime: dateTime,
+    mid: params?.cookie?.KUGOU_API_MID,
+    new_sync_point: dateTime,
+    module_id: 1,
+    action: 'login',
+    vip_type,
+    vip_flags: 3,
+    recommend_source_locked: 0,
+    song_pool_id: Number(params?.song_pool_id || 0),
+    callerid: 0,
+    m_type: 1,
+    kguid: userid,
+    platform: 'ios',
+    area_code: 1,
+    fakem: 'ca981cfc583a4c37f28d2d49000013c16a0a',
+    clientver: 11850,
+    mode: params?.mode || 'normal',
+    active_swtich: 'on',
+    key: signParamsKey(dateTime),
+  };
+
+  const dataMap = {
+    behaviors: [],
+    abtest: {
+      abtest: { shuashua: { commentcard: 2 } },
+    },
+    personal_recommend_params: personal_recommend,
+  };
+
+  return useAxios({
+    url: '/genesisapi/v1/newepoch_song_rec/feed',
+    data: dataMap,
+    params: { sort_type: 1, platform: 'ios', page: 1, content_ver: 4, clientver: 11850 },
+    method: 'post',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: captcha_sent.js ================
+// 手机验证码发送
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    businessid: 5,
+    mobile: `${params?.mobile}`,
+    plat: 3,
+  };
+
+  return useAxios({
+    baseURL: 'http://login.user.kugou.com',
+    url: '/v7/send_mobile_code',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: {mid: params?.cookie?.KUGOU_API_MID},
+  });
+};
+
+================ FILE: comment_album.js ================
+// 歌曲评论
+module.exports = (params, useAxios) => {
+
+  const paramsMap = {
+    childrenid: params.id,
+    need_show_image: 1,
+    p: params.page || 1,
+    pagesize: params.pagesize || 30,
+    show_classify: params.show_classify || 1,
+    show_hotword_list: params.show_hotword_list || 1,
+    code: '94f1792ced1df89aa68a7939eaf2efca',
+  }
+
+  return useAxios({
+    url: '/m.comment.service/v1/cmtlist',
+    encryptType: 'android',
+    method: 'POST',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: comment_count.js ================
+// 歌曲评论数
+module.exports = (params, useAxios) => {
+
+  const paramsMap = {
+    r: 'comments/getcommentsnum',
+    code: 'fc4be23b4e972707f36b8a828a93ba8a',
+  };
+
+  if (params && params.hash) {
+    paramsMap.hash = params.hash;
+  } else if (params && params.special_id) {
+    paramsMap.childrenid = params.special_id;
+  }
+
+  return useAxios({
+    url: '/index.php',
+    encryptType: 'web',
+    method: 'GET',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'sum.comment.service.kugou.com' },
+  });
+};
+
+================ FILE: comment_floor.js ================
+// 楼层评论
+const songCode = 'fc4be23b4e972707f36b8a828a93ba8a';
+const playlistCode = 'ca53b96fe5a1d9c22d71c8f522ef7c4f';
+const albumCode = '94f1792ced1df89aa68a7939eaf2efca';
+
+const isNonEmpty = (value) => {
+  if (value == null) return false;
+  const text = `${value}`.trim();
+  return text !== '' && text !== 'null' && text !== 'undefined';
+};
+
+const resolveFloorCommentRequestConfig = (params = {}) => {
+  const resourceType = `${params.resource_type || params.resourceType || ''}`.toLowerCase();
+  const code = isNonEmpty(params.code)
+    ? `${params.code}`
+    : resourceType === 'playlist'
+        ? playlistCode
+        : resourceType === 'album'
+            ? albumCode
+            : songCode;
+
+  const useServiceEndpoint =
+    resourceType === 'playlist' ||
+    resourceType === 'album' ||
+    code === playlistCode ||
+    code === albumCode;
+
+  const paramsMap = {
+    childrenid: params.special_id,
+    need_show_image: 1,
+    p: params.page || 1,
+    pagesize: params.pagesize || 30,
+    show_classify: params.show_classify ?? 1,
+    show_hotword_list: params.show_hotword_list ?? 1,
+    code,
+    tid: params.tid,
+  };
+
+  if (isNonEmpty(params.mixsongid)) {
+    paramsMap.mixsongid = params.mixsongid;
+  }
+
+  return {
+    url: useServiceEndpoint
+      ? '/m.comment.service/v1/hot_replylist'
+      : '/mcomment/v1/hot_replylist',
+    encryptType: 'android',
+    method: 'POST',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  };
+};
+
+const commentFloor = (params, useAxios) => {
+  return useAxios(resolveFloorCommentRequestConfig(params));
+};
+
+module.exports = commentFloor;
+module.exports.resolveFloorCommentRequestConfig = resolveFloorCommentRequestConfig;
+
+================ FILE: comment_music.js ================
+// 歌曲评论
+module.exports = (params, useAxios) => {
+
+  const paramsMap = {
+    mixsongid: params.mixsongid,
+    need_show_image: 1,
+    p: params.page || 1,
+    pagesize: params.pagesize || 30,
+    show_classify: params.show_classify || 1,
+    show_hotword_list: params.show_hotword_list || 1,
+    extdata: '0',
+    code: 'fc4be23b4e972707f36b8a828a93ba8a'
+  }
+
+  return useAxios({
+    url: '/mcomment/v1/cmtlist',
+    encryptType: 'android',
+    method: 'POST',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: comment_music_classify.js ================
+// 歌曲评论-根据分类获取评论
+module.exports = (params, useAxios) => {
+
+  const paramsMap = {
+    mixsongid: params.mixsongid,
+    need_show_image: 1,
+    page: params.page || 1,
+    pagesize: params.pagesize || 30,
+    type_id: params.type_id,
+    extdata: '0',
+    code: 'fc4be23b4e972707f36b8a828a93ba8a',
+    sort_method: Number(params.sort) === 2 ? params.sort : 1
+  }
+
+  return useAxios({
+    url: '/mcomment/v1/cmt_classify_list',
+    encryptType: 'android',
+    method: 'POST',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: comment_music_hotword.js ================
+// 歌曲评论-更具热词获取评论
+module.exports = (params, useAxios) => {
+
+  const paramsMap = {
+    mixsongid: params.mixsongid,
+    need_show_image: 1,
+    p: params.page || 1,
+    pagesize: params.pagesize || 30,
+    hot_word: params.hot_word,
+    extdata: '0',
+    code: 'fc4be23b4e972707f36b8a828a93ba8a',
+  }
+
+  return useAxios({
+    url: '/mcomment/v1/get_hot_word',
+    encryptType: 'android',
+    method: 'POST',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: comment_playlist.js ================
+// 歌曲评论
+module.exports = (params, useAxios) => {
+
+  const paramsMap = {
+    childrenid: params.id,
+    need_show_image: 1,
+    p: params.page || 1,
+    pagesize: params.pagesize || 30,
+    show_classify: params.show_classify || 1,
+    show_hotword_list: params.show_hotword_list || 1,
+    code: 'ca53b96fe5a1d9c22d71c8f522ef7c4f',
+    content_type: 0,
+    tag: 5
+  }
+
+  return useAxios({
+    url: '/m.comment.service/v1/cmtlist',
+    encryptType: 'android',
+    method: 'POST',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: everyday_friend.js ================
+
+module.exports = (params, useAxios) => {
+  return useAxios({
+    baseURL: 'https://acsing.service.kugou.com',
+    url: '/sing7/relation/json/v3/friend_rec_by_using_song_list',
+    encryptType: 'android',
+    method: 'POST',
+    data: {list: [{user_id: 853927886, mixsong_ids: [290083753,251724346,571554587,250126644,208831644,40328518,250504076,581706850,318347675,585258401,288481998,407414475,28239430,280584633,291957521,64556644,243149863,488725103,32114153,39951172,29019580,40397606,327507651,32029382,32218359,340353127,276448762,177071956,100031397,249251602]}]},
+    params: { channel: 130, isteen: 0, platform: 2, usemkv: 1 },
+    cookie: params?.cookie || {},
+    headers: { pid: 126556797 },
+  });
+};
+
+================ FILE: everyday_history.js ================
+// mode list ,song
+
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+   mode: params.mode || 'list',
+   platform: params.platform || 'ios' 
+  };
+
+  if (params.history_name) paramsMap['history_name'] = params.history_name;
+  if (params.date) paramsMap['date'] = params.date;
+
+  return useAxios({
+    url: '/everyday/api/v1/get_history',
+    encryptType: 'android',
+    method: 'POST',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'everydayrec.service.kugou.com' },
+  });
+};
+
+================ FILE: everyday_recommend.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/everyday_song_recommend',
+    encryptType: 'android',
+    method: 'POST',
+    params: { platform: params.platform || 'ios' },
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'everydayrec.service.kugou.com' },
+  });
+};
+
+================ FILE: everyday_style_recommend.js ================
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    platform: params.platform || 'ios' 
+  };
+
+  return useAxios({
+    url: '/everydayrec.service/everyday_style_recommend',
+    encryptType: 'android',
+    method: 'POST',
+    data: {},
+    params: { tagids: params.tagids ?? ''},
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: favorite_count.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: `/count/v1/audio/mget_collect`,
+    method: 'GET',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    params: { mixsongids: params.mixsongids },
+  });
+};
+
+================ FILE: fm_class.js ================
+const { appid, clientver, cryptoMd5, signParamsKey } = require('../util');
+module.exports = (params, useAxios) => {
+  const dateTime = Date.now();
+  const userid = params?.cookie?.userid || params?.userid || 0;
+  const dataMap = {
+    kguid: userid,
+    clienttime: dateTime,
+    mid: params?.cookie?.KUGOU_API_MID,
+    platform: 'android',
+    clientver,
+    uid: userid,
+    get_tracker: 1,
+    key: signParamsKey(dateTime),
+    appid,
+  };
+
+  return useAxios({
+    url: '/v1/class_fm_song',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'fm.service.kugou.com' },
+  });
+};
+
+================ FILE: fm_image.js ================
+const { appid, clientver, signParamsKey } = require('../util');
+module.exports = (params, useAxios) => {
+  const dateTime = Date.now();
+  const dfid = params?.cookie?.dfid || params?.dfid || '-';
+  const userid = params?.cookie?.userid || params?.userid;
+  const token = params?.cookie?.token || params?.token;
+
+  const fmData = (params?.fmid || '').split(',').map((s) => ({ fields: 'imgUrl100,imgUrl50', fmid: s, fmtype: 2 }));
+
+  const dataMap = {
+    appid,
+    clienttime: dateTime,
+    clientver,
+    data: fmData,
+    dfid,
+    key: signParamsKey(dateTime),
+    mid: params?.cookie?.KUGOU_API_MID,
+  };
+  if (userid) dataMap['userid'] = userid;
+  if (token) dataMap['token'] = token;
+
+  return useAxios({
+    url: '/v1/fm_info',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'fm.service.kugou.com', 'Content-Type': 'application/json' },
+  });
+};
+
+================ FILE: fm_recommend.js ================
+const { appid, clientver, signParamsKey } = require('../util');
+module.exports = (params, useAxios) => {
+  const dateTime = Date.now();
+  const dfid = params?.cookie?.dfid || params?.dfid || '-';
+  const dataMap = {
+    appid,
+    clientver,
+    clienttime: dateTime,
+    mid: params?.cookie?.KUGOU_API_MID,
+    key: signParamsKey(dateTime),
+    rcmdsongcount: 1,
+    level: 0,
+    area_code: 1,
+    get_tracker: 1,
+    uid: 0,
+  };
+
+  return useAxios({
+    url: '/v1/rcmd_list',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'fm.service.kugou.com' },
+  });
+};
+
+================ FILE: fm_songs.js ================
+const { appid, clientver, signParamsKey } = require('../util');
+module.exports = (params, useAxios) => {
+  const dateTime = Date.now();
+  const userid = params?.cookie?.userid || params?.userid;
+
+  const fmData = (params?.fmid || '').split(',').map((s) => ({
+    fmid: s,
+    fmtype: params?.type || 2,
+    offset: params?.offset || -1,
+    size: params?.size || 20,
+    singername: s.singername || '',
+  }));
+
+  // fmType 生成
+  (params?.fmtype || '').split(',').forEach((s, l) => (fmData[l].fmtype = s || fmData[l].fmtype));
+
+  (params?.fmoffset || '').split(',').forEach((s, l) => (fmData[l].offset = s || fmData[l].offset));
+
+  (params?.fmsize || '').split(',').forEach((s, l) => (fmData[l].size = s || fmData[l].size));
+
+  const dataMap = {
+    appid,
+    area_code: 1,
+    clienttime: dateTime,
+    clientver,
+    data: fmData,
+    get_tracker: 1,
+    key: signParamsKey(dateTime),
+    mid: params?.cookie?.KUGOU_API_MID,
+    uid: userid,
+  };
+
+  return useAxios({
+    url: '/v1/app_song_list_offset',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'fm.service.kugou.com', 'Content-Type': 'application/json' },
+  });
+};
+
+================ FILE: images.js ================
+const { signatureAndroidParams, appid, clientver } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const data = (params?.hash || '').split(',').map((s) => ({ album_id: 0, hash: s, album_audio_id: 0 }));
+  (params?.album_id || '').split(',').forEach((s, index) => {
+    if (index <= data.length - 1) {
+      data[index]['album_id'] = s || 0;
+    }
+  });
+  (params?.album_audio_id || '').split(',').forEach((s, index) => {
+    if (index <= data.length - 1) {
+      data[index]['album_audio_id'] = s || 0;
+    }
+  });
+
+  const paramsMap = {
+    album_image_type: '-3',
+    appid,
+    clientver,
+    author_image_type: '3,4,5',
+    count: params?.count || 5,
+    data,
+    isCdn: 1,
+    publish_time: 1,
+  };
+
+  const query = Object.keys(paramsMap)
+    .sort()
+    .map((s) => `${s}=${encodeURIComponent(typeof paramsMap[s] === 'object' ? JSON.stringify(paramsMap[s]) : paramsMap[s])}`);
+
+  const signature = signatureAndroidParams(paramsMap);
+
+  return useAxios({
+    baseURL: 'https://expendablekmr.kugou.com',
+    url: `/container/v2/image?${query.join('&')}`,
+    method: 'GET',
+    encryptType: 'android',
+    params: { signature },
+    cookie: params?.cookie || {},
+    notSign: true,
+    clearDefaultParams: true,
+  });
+};
+
+================ FILE: images_audio.js ================
+const { signatureAndroidParams, appid, clientver } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const data = (params?.hash || '').split(',').map((s) => ({ audio_id: 0, hash: s, album_audio_id: 0, filename: '' }));
+  (params?.audio_id || '').split(',').forEach((s, index) => {
+    if (index <= data.length - 1) {
+      data[index]['audio_id'] = s || 0;
+    }
+  });
+  (params?.album_audio_id || '').split(',').forEach((s, index) => {
+    if (index <= data.length - 1) {
+      data[index]['album_audio_id'] = s || 0;
+    }
+  });
+  (params?.filename || '').split(',').forEach((s, index) => {
+    if (index <= data.length - 1) {
+      data[index]['filename'] = s;
+    }
+  });
+
+  const paramsMap = {
+    appid,
+    clientver,
+    count: params?.count || 5,
+    data,
+    isCdn: 1,
+    publish_time: 1,
+    show_authors: 1,
+  };
+
+  const query = Object.keys(paramsMap)
+    .sort()
+    .map((s) => `${s}=${encodeURIComponent(typeof paramsMap[s] === 'object' ? JSON.stringify(paramsMap[s]) : paramsMap[s])}`);
+
+  const signature = signatureAndroidParams(paramsMap);
+
+  return useAxios({
+    baseURL: 'https://expendablekmr.kugou.com',
+    url: `/v2/author_image/audio?${query.join('&')}`,
+    method: 'GET',
+    encryptType: 'android',
+    params: { signature },
+    cookie: params?.cookie || {},
+    notSign: true,
+    clearDefaultParams: true,
+  });
+};
+
+================ FILE: ip.js ================
+// 根据 ip id 获取相对应的 歌曲/专辑/视频/歌手
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    is_publish: 1,
+    ip_id: params?.id,
+    sort: 3,
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+    query: 1,
+  };
+
+  const type = ['audios', 'albums', 'videos', 'author_list'].includes(params?.type) ? params.type : 'audios';
+
+  return useAxios({
+    url: `/openapi/v1/ip/${type}`,
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: ip_dateil.js ================
+// 获取ip详情
+module.exports = (params, useAxios) => {
+  const data = (params?.id || '').split(',').map((s) => ({ ip_id: s }));
+
+  const dataMap = {
+    data,
+    is_publish: 1,
+  };
+
+  return useAxios({
+    url: '/openapi/v1/ip',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: ip_playlist.js ================
+// 根据 ip 获取相对于歌单
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    ip: params?.id,
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+  };
+
+  return useAxios({
+    url: '/ocean/v6/pubsongs/list_info_for_ip',
+    encryptType: 'android',
+    method: 'POST',
+    params: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: ip_zone.js ================
+// ip 专区
+module.exports = (params, useAxios) => {
+  return new Promise((resolve, reject) => {
+    useAxios({
+      url: `/v1/zone/index`,
+      encryptType: 'android',
+      method: 'GET',
+      cookie: params?.cookie || {},
+      headers: { 'x-router': 'yuekucategory.kugou.com' },
+    })
+      .then((resp) => {
+        if (resp.body.status == 1) {
+          if (resp.body.data?.list) {
+            const list = Array.isArray(resp.body.data.list) ? resp.body.data?.list : [];
+            for (let index = 0; index < list.length; index += 1) {
+              if (list[index].special_link) {
+                const urls = new URLSearchParams(list[index].special_link);
+                if (urls.has('path')) {
+                  const pathUrls = new URLSearchParams(urls.get('path') || '');
+                  list[index]['ip_id'] = Number(pathUrls.get('ip_id') || '');
+                }
+              }
+            }
+            resp.body.data.list = list;
+          }
+        }
+        resolve(resp);
+      })
+      .catch((e) => reject(e));
+  });
+};
+
+================ FILE: ip_zone_home.js ================
+// 获取今日推荐信息，有可能为空
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    id: params?.id,
+    share: 0,
+  };
+
+  return useAxios({
+    url: '/v1/zone/home',
+    encryptType: 'android',
+    method: 'GET',
+    params: dataMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'yuekucategory.kugou.com' },
+  });
+};
+
+================ FILE: kmr_audio_mv.js ================
+const { appid, clientver } = require('../util');
+// 根据 album_audio_id/MixSongID 获取歌曲 相对应的 mv
+module.exports = (params, useAxios) => {
+  const resource = (params?.album_audio_id || '').split(',').map((s) => ({ album_audio_id: s }));
+
+  const paramsMap = {
+    data: resource,
+    fields: params.fields || '',
+  };
+
+
+  return useAxios({
+    url: '/kmr/v1/audio/mv',
+    method: 'POST',
+    data: paramsMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: {'x-router': 'openapi.kugou.com', 'KG-TID': 38},
+  });
+};
+
+================ FILE: krm_audio.js ================
+// 根据 album_audio_id/MixSongID 获取歌曲 相对应的 歌手/专辑/歌曲信息
+module.exports = (params, useAxios) => {
+  const resource = (params?.album_audio_id || '').split(',').map((s) => ({ entity_id: Number(s) }));
+
+  const paramsMap = {
+    data: resource,
+    fields: params.fields || 'base',
+  };
+
+  return useAxios({
+    url: '/kmr/v2/audio',
+    method: 'POST',
+    data: paramsMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: {'x-router': 'openapi.kugou.com', 'KG-TID': 238},
+  });
+};
+
+================ FILE: lastest_songs_listen.js ================
+// 获取继续播放信息
+module.exports = (params, useAxios) => {
+  const token = params?.token || params.cookie?.token || '';
+  const userid = Number(params?.userid || params?.cookie?.userid || 0);
+  const paramsMap = {
+    area_code: '1',
+    sources: ['pc', 'mobile', 'tv', 'car'],
+    userid,
+    ret_info: 1,
+    token,
+    pagesize: Number(params.pagesize || 30)
+  }
+
+  return useAxios({
+    url: '/playque/devque/v1/get_latest_songs',
+    encryptType: 'android',
+    method: 'POST',
+    data: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: login.js ================
+const { cryptoAesDecrypt, cryptoAesEncrypt, cryptoRSAEncrypt } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const dateNow = Date.now();
+  const encrypt = cryptoAesEncrypt({ pwd: params?.password || '', code: '' ,  clienttime_ms: dateNow});
+  const dataMap = {
+    plat: 1,
+    support_multi: 1,
+    clienttime_ms: dateNow,
+    t1: '562a6f12a6e803453647d16a08f5f0c2ff7eee692cba2ab74cc4c8ab47fc467561a7c6b586ce7dc46a63613b246737c03a1dc8f8d162d8ce1d2c71893d19f1d4b797685a4c6d3d81341cbde65e488c4829a9b4d42ef2df470eb102979fa5adcdd9b4eecfea8b909ff7599abeb49867640f10c3c70fc444effca9d15db44a9a6c907731e2bb0f22cd9b3536380169995693e5f0e2424e3378097d3813186e3fe96bbe7023808a0981b4e2b6135a76faac',
+    t2: '31c4daf4cf480169ccea1cb7d4a209295865a9d2b788510301694db229b87807469ea0d41b4d4b9173c2151da7294aeebfc9738df154bbdf11a4e117bb5dff6a3af8ce5ce333e681c1f29a44038f27567d58992eb81283e080778ac77db1400fdf49b7cf7e26be2e5af4da7830cc3be4',
+    t3: 'MCwwLDAsMCwwLDAsMCwwLDA=',
+    username: params?.username,
+    params: encrypt.str,
+    pk: cryptoRSAEncrypt({'clienttime_ms': dateNow, key: encrypt.key}).toUpperCase()
+  };
+
+  return new Promise((resolve, reject) => {
+    useAxios({
+      url: '/v9/login_by_pwd',
+      method: 'POST',
+      data: dataMap,
+      encryptType: 'android',
+      cookie: params?.cookie || {},
+      headers: { 'x-router': 'login.user.kugou.com' },
+    }).then(res => {
+      const { body } = res;
+      if (body?.status && body?.status === 1) {
+        if (body?.data?.secu_params) {
+          const getToken = cryptoAesDecrypt(body.data.secu_params, encrypt.key);
+          if (typeof getToken === 'object') {
+            res.body.data = { ...body.data, ...getToken};
+            Object.keys(getToken).forEach(key => res.cookie.push(`${key}=${getToken[key]}`));
+          } else {
+            res.body.data['token'] = getToken;
+            res.cookie.push(`token=${getToken}`);
+          }
+          res.cookie.push(`userid=${res.body.data?.userid || 0}`)
+          res.cookie.push(`vip_type=${res.body.data?.vip_type || 0}`)
+          res.cookie.push(`vip_token=${res.body.data?.vip_token || ''}`)
+
+          resolve(res);
+          return;
+        }
+      }
+      resolve(res);
+    }).catch(e => reject(e));
+  });
+}
+
+================ FILE: login_cellphone.js ================
+// 手机登录
+const { cryptoAesDecrypt, cryptoAesEncrypt, cryptoRSAEncrypt, signParamsKey, isLite, randomString } = require('../util');
+
+let liteT2Key = 'fd14b35e3f81af3817a20ae7adae7020';
+let liteT2Iv = '17a20ae7adae7020';
+let liteT1Key = '5e4ef500e9597fe004bd09a46d8add98';
+let liteT1Iv = '04bd09a46d8add98';
+
+module.exports = (params, useAxios) => {
+  const dateTime = Date.now();
+  const encrypt = cryptoAesEncrypt({ mobile: params?.mobile || '', code: params?.code || '' });
+  const mobile = params?.mobile && `${params.mobile.toString().substring(0, 2)}*****${params.mobile.toString().substring(10, 11)}`;
+  const dfid = params?.cookie?.dfid ?? randomString(24);
+  const t2 = cryptoAesEncrypt(
+    `${params.cookie?.KUGOU_API_GUID}|0f607264fc6318a92b9e13c65db7cd3c|${params.cookie?.KUGOU_API_MAC}|${params.cookie?.KUGOU_API_DEV}|${dateTime}`,
+    { key: liteT2Key, iv: liteT2Iv }
+  );
+  const t1 = cryptoAesEncrypt(`|${dateTime}`, { key: liteT1Key, iv: liteT1Iv });
+  let dataMap = {
+    plat: 1,
+    support_multi: 1,
+    t1: isLite ? t1 : 0,
+    t2: isLite ? t2 : 0,
+    clienttime_ms: dateTime,
+    mobile,
+    key: signParamsKey(dateTime),
+    pk: cryptoRSAEncrypt({ 'clienttime_ms': dateTime, key: encrypt.key }).toUpperCase(),
+    params: encrypt.str,
+  };
+
+  if (params?.userid) dataMap['userid'] = params.userid;
+
+  if (isLite) {
+    dataMap['dfid'] = dfid;
+    dataMap['dev'] = params.cookie?.KUGOU_API_DEV;
+    dataMap['gitversion'] = '5f0b7c4';
+  } else {
+    dataMap['t3'] = 'MCwwLDAsMCwwLDAsMCwwLDA=';
+  }
+
+  return new Promise((resolve, reject) => {
+    useAxios({
+      baseURL: 'https://loginserviceretry.kugou.com',
+      url: `/v7/login_by_verifycode`,
+      method: 'POST',
+      data: dataMap,
+      encryptType: 'android',
+      headers: {
+        'support-calm': '1',
+        'User-Agent': 'Android16-1070-11440-130-0-LOGIN-wifi',
+      },
+      cookie: params?.cookie || {},
+    })
+      .then((res) => {
+        const { body } = res;
+        if (body?.status && body?.status === 1) {
+          if (body?.data?.secu_params) {
+            const getToken = cryptoAesDecrypt(body.data.secu_params, encrypt.key);
+            if (typeof getToken === 'object') {
+              res.body.data = { ...body.data, ...getToken };
+              Object.keys(getToken).forEach((key) => res.cookie.push(`${key}=${getToken[key]}`));
+            } else {
+              res.body.data['token'] = getToken;
+            }
+          }
+          res.cookie.push(`t1=${res.body.data['t1']}`);
+          res.cookie.push(`token=${res.body.data['token']}`);
+          res.cookie.push(`userid=${res.body.data?.userid || 0}`);
+          res.cookie.push(`vip_type=${res.body.data?.vip_type || 0}`);
+          res.cookie.push(`vip_token=${res.body.data?.vip_token || ''}`);
+        }
+        resolve(res);
+      })
+      .catch((e) => reject(e));
+  });
+};
+
+================ FILE: login_device.js ================
+const { cryptoAesEncrypt, cryptoRSAEncrypt } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const clienttime_ms = parseInt(new Date().getTime());
+  const encrypt = cryptoAesEncrypt({ token: params.token || params.cookie?.token });
+  const dataMap = {
+    plat: 1,
+    userid: params.userid || params.cookie?.userid || 0,
+    clienttime_ms,
+    pk: cryptoRSAEncrypt({ clienttime_ms, key: encrypt.key }).toUpperCase(),
+    params: encrypt.str,
+  };
+
+  return useAxios({
+    baseURL: 'https://userinfoservice.kugou.com',
+    url: '/v2/get_dev',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: login_device_kick.js ================
+//登出选定设备
+const { cryptoAesEncrypt, cryptoRSAEncrypt, appid, clientver, srcappid,signParamsKey } = require('../util');
+module.exports = (params, useAxios) => {
+  const clienttime_ms = parseInt(new Date().getTime());
+  const encrypt = cryptoAesEncrypt({ token: params.token || params.cookie?.token });
+  const mid = calculateMid(params.mid)
+  const dateTime = Date.now();
+  const dataMap = {
+    appid,
+    clientver,
+    clienttime: clienttime_ms,
+    mid: mid,
+    uuid,
+    dfid,
+    plat: 1,
+    userid,
+    token: encrypt,
+    t_mid :guid,
+    t : dateTime,
+    t_appid: 3116,
+    t_clientver: 10597,
+    srcappid,
+    signature: signParamsKey(dateTime),
+  };
+
+return useAxios({
+    url: '/loginservice/v1/dev_logout',
+    encryptType: 'android',
+    method: 'GET',
+    data: dataMap,
+    cookie: params?.cookie,
+    headers: { 'Host':'gateway.kugou.com'}
+  });
+};
+================ FILE: login_openplat.js ================
+// 开放平台登录
+const axios = require('axios');
+const { wx_appid, wx_secret, cryptoAesDecrypt, cryptoAesEncrypt, cryptoRSAEncrypt, wx_lite_appid, wx_lite_secret, isLite } = require('../util');
+const appid = isLite ? wx_lite_appid : wx_appid;
+const secret = isLite ? wx_lite_secret : wx_secret;
+
+let liteT2Key = 'fd14b35e3f81af3817a20ae7adae7020';
+let liteT2Iv = '17a20ae7adae7020';
+let liteT1Key = '5e4ef500e9597fe004bd09a46d8add98';
+let liteT1Iv = '04bd09a46d8add98';
+
+const assetsToken = (code) => {
+  return axios({
+    url: 'https://api.weixin.qq.com/sns/oauth2/access_token',
+    method: 'POST',
+    params: { secret, appid, code, grant_type: 'authorization_code' },
+  });
+};
+
+module.exports = (params, useAxios) => {
+  const answer = { status: 500, body: {}, cookie: [] };
+  return new Promise(async (resolve, reject) => {
+    try {
+      const assetsTokenResp = await assetsToken(params?.code || '');
+
+      if (assetsTokenResp.data?.access_token && assetsTokenResp.data?.openid) {
+        const dateNow = Date.now();
+        const encrypt = cryptoAesEncrypt({ access_token: assetsTokenResp.data.access_token });
+        const pk = cryptoRSAEncrypt({ 'clienttime_ms': dateNow, key: encrypt.key }).toUpperCase();
+        const t2 = cryptoAesEncrypt(
+          `${params.cookie?.KUGOU_API_GUID}|0f607264fc6318a92b9e13c65db7cd3c|${params.cookie?.KUGOU_API_MAC}|${params.cookie?.KUGOU_API_DEV}|${dateNow}`,
+          { key: liteT2Key, iv: liteT2Iv }
+        );
+        const t1 = cryptoAesEncrypt(`|${dateNow}`, { key: liteT1Key, iv: liteT1Iv });
+
+        const dataMap = {
+          dev: params.cookie?.KUGOU_API_DEV,
+          force_login: 1,
+          partnerid: 36,
+          clienttime_ms: dateNow,
+          t1: isLite ? t1 : 0,
+          t2: isLite ? t2 : 0,
+          t3: 'MCwwLDAsMCwwLDAsMCwwLDA=',
+          openid: assetsTokenResp.data.openid,
+          params: encrypt.str,
+          pk,
+        };
+
+        const response = await useAxios({
+          url: `/v6/login_by_openplat`,
+          method: 'POST',
+          data: dataMap,
+          cookie: params?.cookie,
+          encryptType: 'android',
+          headers: { 'x-router': 'login.user.kugou.com' },
+        });
+
+        if (response.body?.status === 1) {
+          const getToken = cryptoAesDecrypt(response.body.data?.secu_params, encrypt.key);
+          if (typeof getToken === 'object') {
+            response.body.data = { ...response.body.data, ...getToken };
+            Object.keys(getToken).forEach((key) => response.cookie.push(`${key}=${getToken[key]}`));
+          } else {
+            response.body.data['token'] = getToken;
+            response.cookie.push(`token=${getToken}`);
+          }
+          response.cookie.push(`t1=${response.body.data?.t1 ?? ''}`);
+          response.cookie.push(`userid=${response.body.data?.userid || 0}`);
+          response.cookie.push(`vip_type=${response.body.data?.vip_type || 0}`);
+          response.cookie.push(`vip_token=${response.body.data?.vip_token || ''}`);
+        }
+        resolve(response);
+      } else {
+        answer.status = 502;
+        answer.body = { status: 0, msg: assetsTokenResp.data };
+        reject(answer);
+      }
+    } catch (error) {
+      answer.status = 502;
+      answer.body = { status: 0, msg: error };
+      reject(answer);
+    }
+  });
+};
+
+================ FILE: login_qr_check.js ================
+const { srcappid, appid } = require('../util');
+
+// 酷狗二维码状态检测
+// 0 为二维码过期，1 为等待扫码，2 为待确认，4 为授权登录成功（4 状态码下会返回 token）
+module.exports = (params, useAxios) => {
+  return new Promise((resolve, reject) => {
+    useAxios({
+      baseURL: 'https://login-user.kugou.com',
+      url: '/v2/get_userinfo_qrcode',
+      method: 'GET',
+      params: { plat: 4, appid, srcappid, qrcode: params?.key },
+      encryptType: 'web',
+      cookie: params?.cookie || {},
+    }).then(resp => {
+      if (resp.body?.data?.status == 4) {
+        resp.cookie.push(`token=${resp.body?.data?.token}`);
+        resp.cookie.push(`userid=${resp.body?.data?.userid}`);
+      }
+      resolve(resp);
+    }).catch(e => reject(e));
+  });
+};
+================ FILE: login_qr_create.js ================
+const qrcode = require('qrcode');
+// 酷狗二维码生成
+
+module.exports = (params, useAxios) => {
+  return new Promise(async (resolve) => {
+    const url = `https://h5.kugou.com/apps/loginQRCode/html/index.html?qrcode=${params.key}`
+    return resolve({
+      code: 200,
+      status: 200,
+      body: {
+        code: 200,
+        data: {
+          url: url,
+          base64: params?.qrimg ? await qrcode.toDataURL(url) : '',
+        },
+      },
+    })
+  })
+}
+================ FILE: login_qr_key.js ================
+const { srcappid, appid } = require('../util');
+
+// 二维码 key 生成接口
+module.exports = (params, useAxios) => {
+  return useAxios({
+    baseURL: 'https://login-user.kugou.com',
+    url: '/v2/qrcode',
+    method: 'GET',
+    params: {
+      appid: params?.type === 'web' ? 1014 : 1001,
+      type: 1,
+      plat: 4,
+      qrcode_txt: `https://h5.kugou.com/apps/loginQRCode/html/index.html?appid=${appid}&`,
+      srcappid,
+    },
+    encryptType: 'web',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: login_token.js ================
+// 刷新登录
+const { cryptoAesDecrypt, cryptoAesEncrypt, cryptoRSAEncrypt, isLite } = require('../util');
+
+const key = '90b8382a1bb4ccdcf063102053fd75b8';
+const iv = 'f063102053fd75b8';
+
+const liteKey = 'c24f74ca2820225badc01946dba4fdf7';
+const liteIv = 'adc01946dba4fdf7';
+
+let liteT2Key = 'fd14b35e3f81af3817a20ae7adae7020';
+let liteT2Iv = '17a20ae7adae7020';
+let liteT1Key = '5e4ef500e9597fe004bd09a46d8add98';
+let liteT1Iv = '04bd09a46d8add98';
+
+module.exports = (params, useAxios) => {
+  const dateNow = Date.now();
+  const token = params?.token || params?.cookie?.token || '';
+  const userid = params?.userid || params?.cookie?.userid || '0';
+  const encrypt = cryptoAesEncrypt({ clienttime: Math.floor(dateNow / 1000), token }, { key: isLite ? liteKey : key, iv: isLite ? liteIv : iv });
+  const encryptParams = cryptoAesEncrypt({});
+  const pk = cryptoRSAEncrypt({ clienttime_ms: dateNow, key: encryptParams.key });
+
+  const t2 = cryptoAesEncrypt(
+    `${params.cookie?.KUGOU_API_GUID}|0f607264fc6318a92b9e13c65db7cd3c|${params.cookie?.KUGOU_API_MAC}|${params.cookie?.KUGOU_API_DEV}|${dateNow}`,
+    { key: liteT2Key, iv: liteT2Iv }
+  );
+  const t1 = cryptoAesEncrypt(params.cookie?.t1 ? `${params.cookie?.t1}|${dateNow}` : `|${dateNow}`, { key: liteT1Key, iv: liteT1Iv });
+
+  const dataMap = {
+    dfid: params?.cookie?.dfid || '-',
+    p3: encrypt,
+    plat: 1,
+    t1: isLite ? t1 : 0,
+    t2: isLite ? t2 : 0,
+    t3: 'MCwwLDAsMCwwLDAsMCwwLDA=',
+    pk,
+    params: encryptParams.str,
+    userid,
+    clienttime_ms: dateNow,
+  };
+
+  if (isLite) {
+    dataMap['dev'] = params.cookie?.KUGOU_API_DEV;
+  }
+  
+
+  return new Promise((resolve, reject) => {
+    useAxios({
+      baseURL: 'http://login.user.kugou.com',
+      url: `/v5/login_by_token`,
+      method: 'POST',
+      data: dataMap,
+      cookie: params?.cookie,
+      encryptType: 'android',
+    })
+      .then((res) => {
+        const { body } = res;
+        if (body?.status && body?.status === 1) {
+          if (body?.data?.secu_params) {
+            const getToken = cryptoAesDecrypt(body.data.secu_params, encryptParams.key);
+            if (typeof getToken === 'object') {
+              res.body.data = { ...body.data, ...getToken };
+              Object.keys(getToken).forEach((key) => res.cookie.push(`${key}=${getToken[key]}`));
+            } else {
+              res.body.data['token'] = getToken;
+            }
+          }
+          
+          res.cookie.push(`t1=${res.body.data['t1']}`);
+          res.cookie.push(`token=${res.body.data['token']}`);
+          res.cookie.push(`userid=${res.body.data?.userid || 0}`);
+          res.cookie.push(`vip_type=${res.body.data?.vip_type || 0}`);
+          res.cookie.push(`vip_token=${res.body.data?.vip_token || ''}`);
+        }
+        resolve(res);
+      })
+      .catch((e) => reject(e));
+  });
+};
+
+================ FILE: login_wx_check.js ================
+
+const axios = require('axios');
+
+module.exports = (params, useAxios) => {
+  const answer = { status: 500, body: {}, cookie: [] };
+  return new Promise(async (resolve, reject) => {
+    try {
+      const resp = await axios({ url: `https://long.open.weixin.qq.com/connect/l/qrconnect?f=json&uuid=${params?.uuid || ''}` });
+
+      answer.status = 200;
+      answer.body = resp.data;
+
+      resolve(answer);
+    } catch (err) {
+      answer.status = 502;
+      answer.body = { status: 0, msg: err };
+      reject(answer);
+    }
+  });
+}
+
+================ FILE: login_wx_create.js ================
+const axios = require('axios');
+const { wx_appid, wx_secret, cryptoMd5, cryptoSha1, randomString, wx_lite_appid, wx_lite_secret, isLite } = require('../util');
+
+const appid = isLite ? wx_lite_appid : wx_appid;
+const secret = isLite ? wx_lite_secret : wx_secret;
+
+const accessToken = () => {
+  return axios({ url: 'https://api.weixin.qq.com/cgi-bin/token', params: { appid, secret, grant_type: 'client_credential' } });
+};
+
+/**
+ *
+ * @param {string} accessToken
+ * @returns
+ */
+const ticket = (accessToken) => axios({ url: 'https://api.weixin.qq.com/cgi-bin/ticket/getticket', params: { access_token: accessToken, type: 2 } });
+
+module.exports = (params, useAxios) => {
+  const answer = { status: 500, body: {}, cookie: [] };
+  return new Promise(async (resolve, reject) => {
+    try {
+      const accessTokenResp = await accessToken();
+      if (accessTokenResp.data?.access_token) {
+        const ticketResp = await ticket(accessTokenResp.data.access_token);
+
+        if (ticketResp.data?.errcode === 0) {
+          const ticket = ticketResp.data.ticket;
+          const timestamp = Date.now();
+          const noncestr = cryptoMd5(randomString());
+          const signaturePrams = `appid=${appid}&noncestr=${noncestr}&sdk_ticket=${ticket}&timestamp=${timestamp}`;
+          const signature = cryptoSha1(signaturePrams);
+          const params = { appid: appid, noncestr, timestamp, scope: 'snsapi_userinfo', signature };
+          const connect = await axios({ url: 'https://open.weixin.qq.com/connect/sdk/qrconnect', params });
+
+          if (connect.data?.errcode === 0) {
+            answer.status = 200;
+            connect.data.qrcode['qrcodeurl'] = `https://open.weixin.qq.com/connect/confirm?uuid=${connect.data.uuid}`;
+            answer.body = connect.data;
+            resolve(answer);
+          } else {
+            answer.status = 502;
+            answer.body = { status: 0, msg: connect.data };
+            reject(answer);
+          }
+        } else {
+          answer.status = 502;
+          answer.body = { status: 0, msg: ticketResp.data };
+          reject(answer);
+        }
+      } else {
+        answer.status = 502;
+        answer.body = { status: 0, msg: accessTokenResp.data };
+        reject(answer);
+      }
+    } catch (e) {
+      answer.status = 502;
+      answer.body = { status: 0, msg: e };
+      reject(answer);
+    }
+  });
+};
+
+================ FILE: longaudio_album_audios.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: `/longaudio/v2/album_audios`,
+    method: 'post',
+    encryptType: 'android',
+    data: {
+      album_id: params.album_id,
+      area_code: 1,
+      tagid: 0,
+      page: params.page || 1,
+      pagesize: params.pagesize || 30,
+    },
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'openapi.kugou.com', 'KG-TID': '78' },
+  });
+};
+
+================ FILE: longaudio_album_detail.js ================
+module.exports = (params, useAxios) => {
+  const data =  (params.album_id || '').split(',').map((s) => ({ album_id: s }));
+  return useAxios({
+    url: `/openapi/v2/broadcast`,
+    method: 'post',
+    encryptType: 'android',
+    data: {
+      data,
+      show_album_tag: 1,
+      fields: "album_name,album_id,category,authors,sizable_cover,intro,author_name,trans_param,album_tag,mix_intro,full_intro,is_publish"
+    },
+    cookie: params?.cookie || {},
+    headers: {'KG-TID': '78'}
+  });
+};
+
+================ FILE: longaudio_daily_recommend.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: `/longaudio/v1/home_new/daily_recommend`,
+    method: 'post',
+    encryptType: 'android',
+    params: { module_id: 1, size: params.pagesize || 30, page: params.page || 1 },
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: longaudio_rank_recommend.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: `/longaudio/v1/home_new/rank_card_recommend`,
+    method: 'get',
+    encryptType: 'android',
+    params: {platform: 'ios'},
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: longaudio_vip_recommend.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: `/longaudio/v1/home_new/vip_select_recommend`,
+    method: 'post',
+    encryptType: 'android',
+    data: {album_playlist: []},
+    params: {position: '2', clientver: 12329},
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: longaudio_week_recommend.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: `/longaudio/v1/home_new/week_new_albums_recommend`,
+    method: 'post',
+    encryptType: 'android',
+    data: {album_playlist: []},
+    params: {clientver: 12329},
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: lyric.js ================
+// 歌词获取
+const { decodeLyrics } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    ver: 1,
+    client: params?.client || 'android',
+    id: params?.id,
+    accesskey: params?.accesskey,
+    fmt: params.fmt || 'krc',
+    charset: 'utf8',
+  };
+
+  return new Promise((resolve, reject) => {
+    useAxios({
+		  baseURL: 'https://lyrics.kugou.com',
+		  url: '/download',
+      method: 'GET',
+      params: dataMap,
+      cookie: params?.cookie || {},
+      encryptType: 'android',
+    })
+      .then((res) => {
+        if (params?.decode) {
+          if (res.body?.content) {
+            res.body['decodeContent'] = params?.fmt == 'lrc' || Number(res.body?.contenttype) !== 0 ? Buffer.from(res.body?.content, 'base64').toString() : decodeLyrics(res.body.content);
+            resolve(res);
+            return;
+          }
+        }
+        resolve(res);
+      })
+      .catch((e) => reject(e));
+  });
+};
+
+================ FILE: pc_diantai.js ================
+// 电台 banner
+module.exports = (params, useAxios) => {
+  const userid = params?.cookie?.userid || params?.userid || 0;
+  const dataMap = {
+    isvip: 0,
+    userid,
+    vipType: 0,
+  };
+  return useAxios({
+    baseURL: 'https://adservice.kugou.com',
+    url: '/v3/pc_diantai',
+    data: dataMap,
+    method: 'post',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: personal_fm.js ================
+const { signParamsKey, appid, clientver } = require('../util');
+module.exports = (params, useAxios) => {
+  const userid = params?.cookie?.userid || params?.userid || 0;
+  const token = params?.cookie?.token || params?.token || 0;
+  const vip_type = params?.cookie?.vip_type || params?.vipType || 0;
+  const dateTime = Date.now();
+
+  const dataMap = {
+    appid,
+    clienttime: dateTime,
+    mid: params?.cookie?.KUGOU_API_MID,
+    action: params?.action || 'play',
+    recommend_source_locked: 0,
+    song_pool_id: Number(params?.song_pool_id || 0),
+    callerid: 0,
+    m_type: 1,
+    platform: params?.platform || 'ios',
+    area_code: 1,
+    remain_songcnt: Number(params?.remain_songcnt || 0),
+    clientver,
+    is_overplay: params?.is_overplay ? 1 : 0,
+    mode: params?.mode || 'normal',
+    fakem: 'ca981cfc583a4c37f28d2d49000013c16a0a',
+    key: signParamsKey(dateTime),
+  };
+
+  if (userid) {
+    dataMap['userid'] = userid;
+    dataMap['kguid'] = userid;
+  }
+  if (token) dataMap['token'] = token;
+  if (vip_type) dataMap['vip_type'] = vip_type;
+
+  if (params?.hash) dataMap['hash'] = params.hash;
+  if (params?.songid) dataMap['songid'] = params.songid;
+  if (params?.playtime) dataMap['playtime'] = params.playtime;
+
+  return useAxios({
+    url: '/v2/personal_recommend',
+    data: dataMap,
+    method: 'post',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'persnfm.service.kugou.com' },
+  });
+};
+
+================ FILE: playhistory_upload.js ================
+// 提交听歌历史
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params?.cookie?.token || '';
+
+  const songs = [{ mxid: Number(params.mxid), op: 1, ot: Number(params.time || Math.floor(Date.now() / 1000)), pc: Number(params.pc || 1) }];
+  const dataMap = { songs, token, userid };
+
+  return useAxios({
+    url: '/playhistory/v1/upload_songs',
+    data: dataMap,
+    encryptType: 'android',
+    method: 'POST',
+    params: { plat: 3 },
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: playlist_add.js ================
+// 收藏歌单
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params.cookie?.token || '';
+  const clienttime = Math.floor(Date.now() / 1000);
+
+  const dataMap = {
+    userid,
+    token,
+    total_ver: 0,
+    name: params.name,
+    type: params.type || 0,
+    source: params.source === 0 ? 0 : params.source || 1,
+    is_pri: 0,
+    list_create_userid: params.list_create_userid,
+    list_create_listid: params.list_create_listid,
+    list_create_gid: params.list_create_gid || '',
+    from_shupinmv: 0,
+  };
+
+  if (params.type === 0) {
+    dataMap['is_pri'] = params.is_pri || 0;
+  }
+
+  return useAxios({
+    url: '/cloudlist.service/v5/add_list',
+    data: dataMap,
+    params: params.type === 0 ? { last_time: clienttime, last_area: 'gztx', userid, token } : {},
+    method: 'post',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: playlist_del.js ================
+const { playlistAesEncrypt, playlistAesDecrypt, rsaEncrypt2, signParamsKey, clientver, appid } = require('../util');
+
+// 取消收藏歌单
+module.exports = (params, useAxios) => {
+  const answer = { status: 500, body: {}, cookie: [] };
+  return new Promise(async (resolve) => {
+    try {
+      const userid = params?.userid || params?.cookie?.userid || 0;
+      const token = params?.token || params.cookie?.token || '';
+      const clienttime = Math.floor(Date.now() / 1000);
+
+      const dataMap = {
+        listid: Number(params.listid),
+        total_ver: 0,
+        type: 1,
+      };
+
+      const aesEncrypt = playlistAesEncrypt(dataMap);
+
+      const p = rsaEncrypt2({ aes: aesEncrypt.key, uid: userid, token }).toUpperCase();
+
+      const paramsMap = {
+        clienttime,
+        key: signParamsKey(clienttime.toString()),
+        last_area: 'gztx',
+        clientver,
+        appid,
+        last_time: clienttime,
+        p,
+      };
+
+      const respone = await useAxios({
+        url: '/v2/delete_list',
+        params: paramsMap,
+        data: aesEncrypt.str,
+        method: 'post',
+        encryptType: 'android',
+        headers: { 'x-router': 'cloudlist.service.kugou.com' },
+        responseType: 'arraybuffer',
+        cookie: params?.cookie || {},
+      });
+
+      respone.body = playlistAesDecrypt({ str: respone.body.toString('base64'), key: aesEncrypt.key });
+
+      resolve(respone);
+    } catch (error) {
+      console.log(error);
+      answer.body = error;
+      resolve(answer);
+    }
+  });
+};
+
+================ FILE: playlist_detail.js ================
+// 获取歌单详情
+
+module.exports = (params, useAxios) => {
+  const data = (params?.ids || '').split(',').map(s => ({'global_collection_id': s }));
+  
+  const dataMap = {
+    data,
+    userid: params?.userid || params?.cookie?.userid || 0,
+    token: params?.token || params?.cookie?.token || ''
+  };
+
+  return useAxios({
+    url: '/v3/get_list_info',
+    method: 'POST',
+    encryptType: 'android',
+    data: dataMap,
+    cookie: params?.cookie || {},
+    headers: {'x-router': 'pubsongs.kugou.com'}
+  })
+
+
+}
+================ FILE: playlist_effect.js ================
+// 获取音效歌单
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+  };
+
+  return useAxios({
+    url: '/pubsongs/v1/get_sound_effect_list',
+    method: 'POST',
+    encryptType: 'android',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: playlist_similar.js ================
+const { appid, clientver, signParamsKey } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const data = (params?.ids || '').split(',').map((s) => ({ 'global_collection_id': s }));
+  const clienttime = Date.now();
+
+  const dataMap = {
+    appid,
+    clientver,
+    clienttime,
+    key: signParamsKey(clienttime),
+    userid: params?.userid || params?.cookie?.userid || 0,
+    ugc: 1,
+    show_list: 1,
+    need_songs: 1,
+    data,
+  };
+
+  return useAxios({
+    url: '/pubsongs/v1/kmr_get_similar_lists',
+    method: 'POST',
+    encryptType: 'android',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: playlist_tags.js ================
+// 获取歌单分类
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    tag_type: 'collection',
+    tag_id: 0,
+    source: 3,
+  };
+
+  return useAxios({
+    url: '/pubsongs/v1/get_tags_by_type',
+    method: 'POST',
+    encryptType: 'android',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: playlist_track_all.js ================
+// 获取歌单所有歌曲
+module.exports = (params, useAxios) => {
+  const pagesize = params?.pagesize || 30;
+  const paramsMap = {
+    area_code: 1,
+    begin_idx: (Number(params.page || 1) - 1) * pagesize,
+    plat: 1,
+    type: 1,
+    // module: 'NONE',
+    mode: 1,
+    personal_switch: 1,
+    extend_fields: 'abtags,hot_cmt,popularization',
+    // page: params?.page || 1,
+    pagesize ,
+    global_collection_id: params?.id,
+  };
+
+  return useAxios({
+    url: '/pubsongs/v2/get_other_list_file_nofilt',
+    method: 'GET',
+    encryptType: 'android',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+    // headers: { 'x-router': 'pubsongscdn.kugou.com' },
+  });
+};
+
+================ FILE: playlist_track_all_new.js ================
+// 获取歌单所有歌曲
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || '0';
+  const token = params?.token || params?.cookie?.token || '0';
+  const dataMap = {
+    listid: params.listid,
+    userid,
+    area_code: 1,
+    show_relate_goods: 0,
+    pagesize: params.pagesize || 30,
+    allplatform: 1,
+    show_cover: 1,
+    type: 0,
+    token,
+    page: params.page || 1,
+  };
+
+  return useAxios({
+    url: '/v4/get_list_all_file',
+    method: 'post',
+    encryptType: 'android',
+    data: dataMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'cloudlist.service.kugou.com' },
+  });
+};
+
+================ FILE: playlist_tracks_add.js ================
+// 对歌单添加歌曲
+// listid, 歌单listid
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params.cookie?.token || '';
+  const clienttime = Math.floor(Date.now() / 1000);
+
+  const resource = (params.data || '').split(',').map((s) => {
+    const data = s.split('|');
+    return {
+      number: 1,
+      name: data[0] || '',
+      hash: data[1] || '',
+      size: 0,
+      sort: 0,
+      timelen: 0,
+      bitrate: 0,
+      album_id: Number(data[2] || 0),
+      mixsongid: Number(data[3] || 0),
+    };
+  });
+
+  const dataMap = {
+    userid,
+    token,
+    listid: params.listid,
+    list_ver: 0,
+    type: 0,
+    slow_upload: 1,
+    scene: 'false;null',
+    data: resource,
+  };
+
+  return useAxios({
+    url: '/cloudlist.service/v6/add_song',
+    data: dataMap,
+    params: { last_time: clienttime, last_area: 'gztx', userid, token },
+    method: 'post',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: playlist_tracks_del.js ================
+// 对歌单删除歌曲
+
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params.cookie?.token || '';
+
+  const resource = (params.fileids || '').split(',').map((s) => ({ fileid: Number(s) }));
+
+  const dataMap = {
+    listid: params.listid,
+    userid,
+    data: resource,
+    type: 0,
+    token,
+    list_ver: 0,
+  };
+
+  return useAxios({
+    url: '/v4/delete_songs',
+    data: dataMap,
+    method: 'post',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'cloudlist.service.kugou.com' },
+  });
+};
+
+================ FILE: privilege_lite.js ================
+// 获取歌曲信息
+const { appid, clientver } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const resource = (params?.hash || '').split(',').map((s) => ({ type: 'audio', page_id: 0, hash: s, album_id: 0 }));
+  (params?.album_id || '').split(',').forEach((s, l) => (resource[l]['album_id'] = s));
+
+  const dataMap = {
+    appid,
+    area_code: 1,
+    behavior: 'play',
+    clientver,
+    need_hash_offset: 1,
+    relate: 1,
+    support_verify: 1,
+    resource,
+    qualities: ['128', '320', 'flac', 'high', 'viper_atmos', 'viper_tape', 'viper_clear'],
+  };
+
+  return useAxios({
+    url: '/v2/get_res_privilege/lite',
+    data: dataMap,
+    method: 'post',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'media.store.kugou.com', 'Content-Type': 'application/json' },
+  });
+};
+
+================ FILE: rank_audio.js ================
+// 获取排行榜音乐列表
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    show_portrait_mv: 1,
+    show_type_total: 1,
+    filter_original_remarks: 1,
+    area_code: 1,
+    pagesize: params.pagesize || 30,
+    rank_cid: params.rank_cid || 0,
+    type: 1,
+    page: params.page || 1,
+    rank_id: params.rankid,
+  };
+  return useAxios({
+    url: '/openapi/kmr/v2/rank/audio',
+    method: 'post',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'kg-tid': '369' },
+  });
+};
+
+================ FILE: rank_info.js ================
+// 获取排行榜详情
+module.exports = (params, useAxios) => {
+  const parmasMap = {
+    rank_cid: params.rank_cid || 0,
+    rankid: params.rankid,
+    with_album_img: params.album_img || 1,
+    zone: params.zone || '',
+  };
+
+  return useAxios({
+    url: '/ocean/v6/rank/info',
+    method: 'get',
+    encryptType: 'android',
+    params: parmasMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: rank_list.js ================
+// 获取排行榜列表
+
+module.exports = (params, useAxios) => {
+  const parmasMap = {
+    plat: 2,
+    withsong: params.withsong || 1,
+    parentid: 0,
+  };
+
+  return useAxios({
+    url: '/ocean/v6/rank/list',
+    method: 'get',
+    encryptType: 'android',
+    params: parmasMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: rank_top.js ================
+// 获取排行榜推荐列表
+
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/mobileservice/api/v5/rank/rec_rank_list',
+    method: 'get',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: rank_vol.js ================
+// 获取排行榜往期列表
+module.exports = (params, useAxios) => {
+  const parmasMap = {
+    rank_cid: params.rank_cid || 0,
+    rankid: params.rankid,
+    ranktype: 1,
+    type: 0,
+    plat: 2,
+  };
+
+  return useAxios({
+    url: '/ocean/v6/rank/vol',
+    method: 'get',
+    encryptType: 'android',
+    params: parmasMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: recommend_songs.js ================
+// 每日推荐歌曲
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    platform: params?.platform || 'android',
+    userid: params?.userid || params?.cookie?.userid || '0',
+  };
+
+  return useAxios({
+    url: '/everyday_song_recommend',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'everydayrec.service.kugou.com' },
+  });
+};
+
+================ FILE: register_dev.js ================
+const { playlistAesEncrypt, playlistAesDecrypt, rsaEncrypt2, signParamsKey, clientver, appid } = require('../util');
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params.cookie?.token || '';
+  //可用内存，单位是字节
+  const availableRamSize = params?.availableRamSize || 4983533568;
+  //内部存储可用空间，单位是字节（约 48 MB）
+  const availableRomSize = params?.availableRomSize || 48114719;
+  //外部存储可用空间，单位是字节（约 48 MB）
+  const availableSDSize = params?.availableSDSize || 48114717;
+  //基带版本
+  const basebandVer = params?.basebandVer || '';
+  //电池电量百分比
+  const batteryLevel = params?.batteryLevel || 100;
+  //电池状态
+  const batteryStatus = params?.batteryStatus || 3;
+  //品牌
+  const brand = params?.brand || 'Redmi';
+  //设备序号
+  const buildSerial = params?.buildSerial || 'unknown';
+  //设备代号
+  const device = params?.device || 'marble';
+  //IMEI 号
+  const imei = params?.imei || params.cookie?.KUGOU_API_GUID;
+  //sim 卡号序号
+  const imsi = params?.imsi || '';
+  //厂商
+  const manufacturer = params?.manufacturer || 'Xiaomi';
+  //设备uuid
+  const uuid = params?.uuid  || params.cookie?.KUGOU_API_GUID;
+  //是否有加速度传感器
+  const accelerometer = params?.accelerometer || false;
+  //加速度传感器值
+  const accelerometerValue = params?.accelerometerValue || '';
+  //是否有重力传感器
+  const gravity = params?.gravity || false;
+  //重力传感器的值
+  const gravityValue = params?.gravityValue  || '';
+  //是否有陀螺仪
+  const gyroscope = params?.gyroscope || false;
+  //陀螺仪的值
+  const gyroscopeValue = params?.gyroscopeValue || '';
+  //是否有光线传感器
+  const light = params?.light  || false;
+  //光线传感器的值
+  const lightValue = params?.lightValue || '';
+  //是否有磁力传感器
+  const magnetic = params?.magnetic || false;
+  //磁力传感器的值
+  const magneticValue = params?.magneticValue  || '';
+  //是否有方向传感器
+  const orientation = params?.orientation || false;
+  //方向传感器的值
+  const orientationValue = params?.orientationValue || '';
+  //是否有压力传感器
+  const pressure = params?.pressure|| false;
+  //压力传感器的值
+  const pressureValue = params?.pressureValue || '';
+  //是否有步数传感器
+  const step_counter = params?.step_counter || false;
+  //步数传感器的值
+  const step_counterValue = params?.step_counterValue || '';
+  //是否有温度传感器
+  const temperature = params?.temperature || false;
+  //温度传感器的值
+  const temperatureValue = params?.temperatureValue || '';
+
+
+
+  const dataMap = {
+    'availableRamSize': availableRamSize,
+    'availableRomSize': availableRomSize,
+    'availableSDSize': availableSDSize,
+    'basebandVer': basebandVer,
+    'batteryLevel': batteryLevel,
+    'batteryStatus': batteryStatus,
+    'brand': brand,
+    'buildSerial': buildSerial,
+    'device': device,
+    'imei': imei,
+    'imsi': imsi,
+    'manufacturer': manufacturer,
+    'uuid': uuid,
+    'accelerometer': accelerometer,
+    'accelerometerValue': accelerometerValue,
+    'gravity': gravity,
+    'gravityValue': gravityValue,
+    'gyroscope': gyroscope,
+    'gyroscopeValue': gyroscopeValue,
+    'light': light,
+    'lightValue': lightValue,
+    'magnetic': magnetic,
+    'magneticValue': magneticValue,
+    'orientation': orientation,
+    'orientationValue': orientationValue,
+    'pressure': pressure,
+    'pressureValue': pressureValue,
+    'step_counter': step_counter,
+    'step_counterValue': step_counterValue,
+    'temperature': temperature,
+    'temperatureValue': temperatureValue,
+  };
+
+  const aesEncrypt = playlistAesEncrypt(dataMap);
+
+  const p = rsaEncrypt2({ aes: aesEncrypt.key, uid: userid, token });
+  console.log('p', p, { aes: aesEncrypt.key, uid: userid, token });
+  return new Promise((resolve, reject) => {
+    useAxios({
+      baseURL: 'https://userservice.kugou.com',
+      url: '/risk/v2/r_register_dev',
+      method: 'POST',
+      data: aesEncrypt.str,
+      params: { part: 1, platid: 1, p },
+      encryptType: 'android',
+      cookie: params?.cookie || {},
+      responseType: 'arraybuffer',
+    })
+      .then((res) => {
+        console.log('raw response', res.body.toString('base64'), aesEncrypt);
+        res.body = playlistAesDecrypt({ str: res.body.toString('base64'), key: aesEncrypt.key });
+
+        console.log(res.body);
+
+        const { body } = res;
+        if (body?.status === 1 && body?.data) {
+          res.cookie.push(`dfid=${res.body.data['dfid']}`);
+        }
+
+        resolve(res);
+      })
+      .catch((e) => reject(e));
+  });
+};
+
+================ FILE: scene_audio_list.js ================
+const { appid, clientver } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params.cookie?.token || '';
+
+  const dataMap = {
+    appid,
+    clientver,
+    token,
+    userid,
+  };
+
+  return useAxios({
+    url: '/scene/v1/scene/audio_list',
+    method: 'POST',
+    encryptType: 'android',
+    params: { scene_id: params.id, module_id: params.module_id, tag: params.tag, page: params.page || 1, page_size: params.pagesize || 30 },
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: scene_collection_list.js ================
+const { appid, clientver } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params.cookie?.token || '';
+
+  const dataMap = {
+    appid,
+    clientver,
+    token,
+    userid,
+    tag_id: params.tag_id,
+    page: params.page || 1,
+    page_size: params.pagesize || 30,
+    exposed_data: [],
+  };
+
+  return useAxios({
+    url: '/scene/v1/distribution/collection_list',
+    method: 'POST',
+    encryptType: 'android',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: scene_lists.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/scene/v1/scene/list',
+    method: 'GET',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: scene_lists_v2.js ================
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || '0';
+
+  const sortType = { rec: 1, hot: 2, new: 3 };
+
+  return useAxios({
+    url: '/scene/v1/scene/list_v2',
+    params: {
+      scene_id: params.id,
+      page: params.page || 1,
+      pagesize: params.pagesize || 30,
+      sort_type: sortType[params.sort || 'rec'] || 1,
+      kugouid: userid,
+    },
+    data: { exposure: [] },
+    method: 'POST',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: scene_module.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/scene/v1/scene/module',
+    params: { scene_id: params.id },
+    method: 'POST',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: scene_module_info.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/scene/v1/scene/module_info',
+    params: { scene_id: params.id, module_id: params.module_id },
+    method: 'GET',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: scene_music.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/genesisapi/v1/scene_music/rec_music',
+    params: { scene_id: params.id, page: params.page || 1, pagesize: params.pagesize || 30 },
+    data: { exposure: [] },
+    method: 'POST',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: scene_video_list.js ================
+const { appid, clientver } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params.cookie?.token || '';
+
+  const dataMap = {
+    appid,
+    clientver,
+    token,
+    userid,
+    tag_id: params.tag_id,
+    page: params.page || 1,
+    page_size: params.pagesize || 30,
+    exposed_data: [],
+  };
+
+  return useAxios({
+    url: '/scene/v1/distribution/video_list',
+    method: 'POST',
+    encryptType: 'android',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: search.js ================
+// 搜索
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    // token: '',
+    albumhide: 0,
+    iscorrection: 1,
+    keyword: params?.keywords || '',
+    nocollect: 0,
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+    platform: 'AndroidFilter',
+  };
+
+
+  const type = ['special', 'lyric', 'song', 'album', 'author', 'mv'].includes(params.type) ? params.type : 'song';
+
+  return useAxios({
+    url: `/${type === 'song' ? 'v3' : 'v1'}/search/${type}`,
+    method: 'GET',
+    params: dataMap,
+    encryptType: 'android',
+    headers: { 'x-router': 'complexsearch.kugou.com' },
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: search_complex.js ================
+// 综合搜索
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    platform: 'AndroidFilter',
+    keyword: params.keywords,
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+    cursor: 0,
+  };
+
+  return useAxios({
+    baseURL: 'https://complexsearch.kugou.com',
+    url: '/v6/search/complex',
+    method: 'GET',
+    params: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: search_default.js ================
+const { clientver } = require('../util');
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const vip_type = params?.vip_type || params?.cookie?.vip_type || 65530;
+  const dataMap = {
+    'plat': 0,
+    'userid': Number(userid),
+    'tags': '{}',
+    'vip_type': vip_type,
+    'm_type': 0,
+    'own_ads': {},
+    'ability': '3',
+    'sources': [],
+    'bitmap': 2,
+    'mode': 'normal',
+  };
+
+  return useAxios({
+    url: '/searchnofocus/v1/search_no_focus_word',
+    method: 'POST',
+    data: dataMap,
+    params: { clientver: 12329 },
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: search_hot.js ================
+// 热搜
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    navid: 1,
+    plat: 2,
+  };
+
+  return useAxios({
+    url: '/api/v3/search/hot_tab',
+    method: 'GET',
+    params: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: {'x-router': 'msearch.kugou.com'}
+  });
+};
+
+================ FILE: search_lyric.js ================
+// 歌词搜索
+const { appid, clientver } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    album_audio_id: params?.album_audio_id || 0,
+    appid,
+    clientver,
+    duration: 0,
+    hash: params?.hash || '',
+    keyword: params?.keywords || '',
+    lrctxt: 1,
+    man: params.man ?? 'no',
+  };
+
+  return useAxios({
+    baseURL: 'https://lyrics.kugou.com',
+    url: '/v1/search',
+    method: 'GET',
+    params: dataMap,
+    cookie: params?.cookie || {},
+    encryptType: 'android',
+    clearDefaultParams: true,
+    notSign: true,
+  });
+};
+
+================ FILE: search_mixed.js ================
+const { cryptoMd5 } = require('../util');
+// 综合搜索
+module.exports = (params, useAxios) => {
+  const time = Date.now();
+  
+  const dataMap = {
+    ab_tag: 0,
+    ability: 511,
+    albumhide: 0,
+    apiver: 22,
+    area_code: 1,
+    clientver: 20125,
+    cursor: 0,
+    is_gpay: 0,
+    iscorrection: 1,
+    keyword: params.keyword,
+    nocollect: 0,
+    osversion: 16.5,
+    platform: 'IOSFilter',
+    recver: 2,
+    req_ai: 1,
+    requestid: `${cryptoMd5(`bdaa53d04e7475feb9024164a47032f9${time}`)}_0`,
+    search_ability: 3,
+    sec_aggre: 1,
+    sec_aggre_bitmap: 0,
+    style_type: 3,
+    tag: 'em',
+  };
+
+  return useAxios({
+    url: '/v3/search/mixed',
+    method: 'GET',
+    params: dataMap,
+    encryptType: 'android',
+    headers: { 'x-router': 'complexsearch.kugou.com', 'kg-clienttimems': time.toString() },
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: search_suggest.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/v2/getSearchTip',
+    method: 'GET',
+    params: {
+      keyword: params.keywords,
+      AlbumTipCount: params.albumTipCount || 10,
+      CorrectTipCount: params.correctTipCount || 10,
+      MVTipCount: params.mvTipCount || 10,
+      MusicTipCount: params.musicTipCount || 10,
+      radiotip: 1
+    },
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'searchtip.kugou.com' },
+  });
+};
+
+================ FILE: server_now.js ================
+// 获取服务器时间
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params?.cookie?.token || '';
+
+  return useAxios({
+    url: '/v1/server_now',
+    data: { token, userid },
+    encryptType: 'android',
+    method: 'POST',
+    params: { plat: 3 },
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'usercenter.kugou.com' },
+  });
+};
+
+================ FILE: sheet_collection.js ================
+const { srcappid} = require('../util');
+// 乐谱详情
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+    srcappid,
+    position: params.position ?? 2
+  }
+  return useAxios({
+    url: '/miniyueku/v1/opern_square/get_home_module_config',
+    encryptType: 'web',
+    method: 'GET',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: sheet_collection_detail.js ================
+const { srcappid } = require('../util');
+// 乐谱合集详情
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+    srcappid,
+    page: params.page ?? 1,
+    collection_id: params.collection_id
+  }
+  return useAxios({
+    url: '/miniyueku/v1/opern_square/collection_detail',
+    encryptType: 'web',
+    method: 'GET',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: sheet_detail.js ================
+// 乐谱详情
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+    id: params.id,
+    source: params.source,
+  }
+  return useAxios({
+    baseURL: 'https://miniyueku.kugou.com',
+    url: '/v1/opern/detail',
+    encryptType: 'android',
+    method: 'GET',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: sheet_hot.js ================
+const { srcappid } = require('../util');
+// 推荐乐谱
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+    srcappid,
+    opern_type: params.opern_type ?? 1,
+  };
+  return useAxios({
+    url: '/miniyueku/v1/opern_square/get_home_hot_opern',
+    encryptType: 'web',
+    method: 'GET',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: sheet_list.js ================
+// 乐谱列表 // 0全部，1、钢琴，2、吉他，3、鼓谱，98：简谱，99:其他
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+    album_audio_id: params.album_audio_id,
+    opern_type: params.opern_type ?? 0,
+    page: params.page ?? 1,
+    pagesize: params.pagesize ?? 30,
+  }
+  return useAxios({
+    url: '/miniyueku/v1/opern/list',
+    encryptType: 'android',
+    method: 'GET',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: singer_list.js ================
+// 获取歌手列表
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/ocean/v6/singer/list',
+    encryptType: 'android',
+    method: 'GET',
+    params: {
+      hotsize: params?.hotsize ?? 200,
+      musician: 0,
+      sextype: params?.sextype ?? 0,
+      showtype: 2,
+      type: params?.type ?? 0,
+    },
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: song_climax.js ================
+// 获取音频高潮部分
+
+module.exports = (params, useAxios) => {
+  const data = (params?.hash || '').split(',').map((s) => ({ hash: s }));
+
+  return useAxios({
+    baseURL: 'https://expendablekmrcdn.kugou.com',
+    url: '/v1/audio_climax/audio',
+    method: 'GET',
+    params: { data: JSON.stringify(data) },
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: song_ranking.js ================
+// 歌曲成绩单
+
+module.exports = (params, useAxios) => {
+
+  return useAxios({
+    url: '/grow/v1/song_ranking/play_page/ranking_info',
+    method: 'GET',
+    params: { album_audio_id: params.album_audio_id },
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: song_ranking_filter.js ================
+// 歌曲成绩单
+
+module.exports = (params, useAxios) => {
+
+  return useAxios({
+    url: '/grow/v1/song_ranking/unlock/v2/ranking_filter',
+    method: 'GET',
+    params: { album_audio_id: params.album_audio_id, page: params.page || 1, pagesize: params.pagesize || 30 },
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: song_url.js ================
+const { randomString } = require('../util/util');
+
+// 获取音乐urls
+// quality 支持 魔法音乐
+// piano 钢琴
+// acappella 人声 伴奏 分离
+// subwoofer 乐器
+// ancient 尤克里里
+// dj dj
+module.exports = (params, useAxios) => {
+  const quality = ['piano', 'acappella', 'subwoofer', 'ancient', 'dj', 'surnay'].includes(params.quality)
+    ? `magic_${params?.quality}`
+    : params.quality;
+
+  const isLite = process.env.platform === 'lite';
+  const page_id = isLite ? 967177915 : 151369488;
+  const ppage_id = isLite
+    ? (params.ppage_id || '356753938,823673182,967485191')
+    : '463467626,350369493,788954147';
+
+  const dataMap = {
+    album_id: Number(params.album_id ?? 0),
+    area_code: 1,
+    hash: (params?.hash || '').toLowerCase(),
+    ssa_flag: 'is_fromtrack',
+    version: 11430,
+    page_id,
+    quality: quality || 128,
+    album_audio_id: Number(params.album_audio_id ?? 0),
+
+    behavior: 'play',
+    pid: isLite ? 411 : 2,
+    cmd: 26,
+    pidversion: 3001,
+    IsFreePart: params?.free_part ? 1 : 0, //是否返回试听部分（仅部分歌曲）
+    ppage_id,
+    cdnBackup: 1,
+    module: '',
+    clientver: 11430,
+  };
+  
+  return useAxios({
+    url: '/v5/url',
+    method: 'GET',
+    params: dataMap,
+    encryptType: 'android',
+    headers: { 'x-router': 'trackercdn.kugou.com'},
+    encryptKey: true,
+    notSign: true,
+    cookie: Object.assign({}, {dfid: randomString(24)}, params?.cookie ),
+  });
+};
+
+================ FILE: song_url_new.js ================
+const { randomString, appid, cryptoMd5 } = require('../util');
+module.exports = (params, useAxios) => {
+  // const quality = ['piano', 'acappella', 'subwoofer', 'ancient', 'dj', 'surnay'].includes(params.quality)
+  //   ? `magic_${params?.quality}`
+  //   : params.quality;
+
+  const vip_token = params?.vip_token || params?.cookie?.vip_token || '';
+  const token = params?.token || params?.cookie?.token || '';
+  const clienttime_ms = Date.now();
+  const userid = Number(params?.userid || params?.cookie?.userid || '0');
+  const dfid = params?.dfid || params?.cookie?.dfid || randomString(24); // 自定义
+  const vip_type = params?.cookie?.vip_type || params?.vipType || 0;
+
+  const dataMap = {
+    area_code: '1',
+    behavior: 'play',
+    qualities: ['128', '320', 'flac', 'high', 'multitrack', 'viper_atmos', 'viper_tape', 'viper_clear'],
+    'resource': {
+      'album_audio_id': params.album_audio_id,
+      'collect_list_id': '3',
+      'collect_time': clienttime_ms,
+      'hash': params.hash,
+      'id': 0,
+      'page_id': 1,
+      'type': 'audio',
+    },
+    token,
+    'tracker_param': {
+      all_m: 1,
+      auth: '',
+      is_free_part: params?.free_part ? 1 : 0,
+      key: cryptoMd5(`${params.hash}185672dd44712f60bb1736df5a377e82${appid}${params?.cookie?.KUGOU_API_MID}${userid}`),
+      module_id: 0,
+      need_climax: 1,
+      need_xcdn: 1,
+      open_time: '',
+      pid: '411',
+      pidversion: '3001',
+      priv_vip_type: '6',
+      viptoken: vip_token,
+    },
+    userid: `${userid}`,
+    'vip': vip_type,
+  };
+
+  return useAxios({
+    baseURL: 'http://tracker.kugou.com',
+    url: '/v6/priv_url',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: Object.assign({}, { dfid }, params?.cookie),
+  });
+};
+
+================ FILE: theme_music.js ================
+// 获取主题音乐
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    platform: 'android',
+    clienttime: Math.floor(Date.now() / 1000),
+    show_theme_category_ids: params?.ids,
+    userid: params?.userid || params?.cookie?.userid || 0,
+    module_id: 508,
+  };
+
+  return useAxios({
+    url: '/everydayrec.service/v1/mul_theme_category_recommend',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: theme_music_detail.js ================
+// 获取主题音乐详情
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    platform: 'android',
+    clienttime: Math.floor(Date.now() / 1000),
+    theme_category_id: params?.id,
+    show_theme_category_id: 0,
+    userid: params?.userid || params?.cookie?.userid || 0,
+    module_id: 508,
+  };
+
+  return useAxios({
+    url: '/everydayrec.service/v1/theme_category_recommend',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: theme_playlist.js ================
+// 主题歌单
+const { clientver } = require('../util');
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    platform: 'android',
+    clientver,
+    clienttime: Date.now(),
+    area_code: 1,
+    module_id: 1,
+    userid: params?.userid || params?.cookie?.userid || 0,
+  };
+
+  return useAxios({
+    url: '/v2/getthemelist',
+    method: 'POST',
+    encryptType: 'android',
+    data: dataMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'everydayrec.service.kugou.com' },
+  });
+};
+
+================ FILE: theme_playlist_track.js ================
+// 获取主题歌单说有歌曲
+const { clientver } = require('../util');
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    platform: 'android',
+    clientver,
+    clienttime: Date.now(),
+    area_code: 1,
+    module_id: 1,
+    userid: params?.userid || params?.cookie?.userid || 0,
+    theme_id: params?.theme_id,
+  };
+
+  return useAxios({
+    url: '/v2/gettheme_songidlist',
+    method: 'POST',
+    encryptType: 'android',
+    data: dataMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'everydayrec.service.kugou.com' },
+  });
+};
+
+================ FILE: top_album.js ================
+// 推荐专辑
+const { apiver } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    apiver,
+    token: params?.token || params?.cookie?.token || '',
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+    withpriv: 1,
+  };
+
+  return useAxios({
+    url: '/musicadservice/v1/mobile_newalbum_sp',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: top_card.js ================
+// 热门好歌精选
+// song_module_1 card_id_1: 精选好歌随心听 || 私人专属好歌
+// song_module_2 card_id_2: 经典怀旧金曲
+// song_module_3 card_id_3:  热门好歌精选
+// song_module_4 card_id_4: 小众宝藏佳作
+// song_module_6 card_id_6: vip专属推荐
+
+const { appid, clientver, cryptoMd5, signParamsKey } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const dfid = params?.dfid || params?.cookie?.dfid || '-';
+  const fakem = '60f7ebf1f812edbac3c63a7310001701760f';
+  const mid = params?.cookie?.KUGOU_API_MID;
+  const dateTime = Date.now();
+
+  const dataMap = {
+    appid,
+    clientver,
+    platform: 'android',
+    clienttime: dateTime,
+    userid: params?.userid || params?.cookie?.userid || 0,
+    key: signParamsKey(dateTime),
+    fakem,
+    area_code: 1,
+    mid,
+    uuid: '-',
+    client_playlist: [],
+    u_info: 'a0c35cd40af564444b5584c2754dedec',
+  };
+
+  return useAxios({
+    url: '/singlecardrec.service/v1/single_card_recommend',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    params: { 'card_id': params?.card_id || 1, fakem, area_code: 1, platform: 'ios'},
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: top_card_youth.js ================
+// 热门好歌精选
+// 3006: VIP专属推荐
+// 3001: 私人专属好歌
+// 3004: 小众宝藏佳作
+// 3014: 喜欢这首歌的TA也喜欢
+// 3102: 喜欢「欧美」的TA也喜欢
+// 3101:  概念er新推
+// 3005: 潮流尝鲜
+
+module.exports = (params, useAxios) => {
+
+  const dataMap = {
+    tagid: params.tagid ?? '',
+    u_info: '',
+    source_mixsong: ''
+  };
+
+  return useAxios({
+    url: 'youth/v1/song/single_card_recommend',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    params: { 'card_id': params?.card_id || 3005, area_code: 1, platform: 'ops', module_id: 1, ver: 'v2', pagesize: params.pagesize ?? 30 },
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: top_ip.js ================
+/**
+ *
+ * @param {Record<string, any>} params
+ * @param {useAxios} useAxios
+ * @returns
+ */
+module.exports = (params, useAxios) => {
+  const dataMap = { tags: {} };
+  return new Promise((resolve, reject) => {
+    useAxios({
+      baseURL: 'http://musicadservice.kugou.com',
+      url: '/v1/daily_recommend',
+      encryptType: 'android',
+      method: 'POST',
+      data: dataMap,
+      params: {
+        clientver: 12349,
+        area_code: 1,
+      },
+      cookie: params?.cookie || {},
+    })
+      .then((resp) => {
+        if (resp.body.status == 1) {
+          const list = Array.isArray(resp.body.data.list) ? [...resp.body.data.list] : [];
+          list.forEach((s, index) => {
+            const inner_url = s?.extra?.inner_url;
+            if (inner_url) {
+              const findIndex = inner_url.lastIndexOf('ip_id');
+              if (findIndex !== -1) {
+                list[index]['extra']['ip_id'] = Number(inner_url.substring(findIndex + 6));
+              }
+            }
+          });
+          resp.body.data.list = list;
+        }
+        resolve(resp);
+      })
+      .catch((e) => reject(e));
+  });
+};
+
+================ FILE: top_playlist.js ================
+// 歌单
+// categoryid 0：推荐，11292：HI-RES
+
+const { appid, clientver, signParamsKey } = require('../util');
+
+module.exports = (params, useAxios) => {
+  const dateTime = (Date.now() / 1000).toFixed(0);
+  const specialRecommend = {
+    withtag: params?.withtag || 1,
+    withsong: params?.withsong || 1,
+    sort: params?.sort || 1,
+    ugc: 1,
+    is_selected: 0,
+    withrecommend: 1,
+    area_code: 1,
+    categoryid: params?.category_id || 0,
+  };
+
+  const dataMap = {
+    appid,
+    mid: params?.cookie?.KUGOU_API_MID,
+    clientver,
+    platform: 'android',
+    clienttime: dateTime,
+    userid: params?.userid || params?.cookie?.userid || 0,
+    module_id: params?.module_id || 1,
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+    key: signParamsKey(dateTime.toString()),
+    special_recommend: specialRecommend,
+    req_multi: 1,
+    retrun_min: 5,
+    return_special_falg: 1,
+  };
+
+  return useAxios({
+    url: '/v2/special_recommend',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'specialrec.service.kugou.com' },
+  });
+};
+
+================ FILE: top_song.js ================
+/**
+ * 新歌速递
+ */
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    rank_id: params?.type || 21608,
+    userid: params?.userid || params?.cookie?.userid || 0,
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+    tags: [],
+  };
+
+  return useAxios({
+    url: '/musicadservice/container/v1/newsong_publish',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: user_cloud.js ================
+const { playlistAesEncrypt, playlistAesDecrypt, rsaEncrypt2, signParamsKey, clientver, appid } = require('../util');
+module.exports = (params, useAxios) => {
+  const answer = { status: 500, body: {}, cookie: [] };
+  return new Promise(async (resolve) => {
+    try {
+      const userid = params?.userid || params?.cookie?.userid || 0;
+      const token = params?.token || params.cookie?.token || '';
+      const mid = params?.cookie?.KUGOU_API_MID; // 可以自定义
+      const clienttime = Math.floor(Date.now() / 1000);
+
+      const dataMap = {
+        page: params.page ?? 1,
+        pagesize: params.pagesize ?? 30,
+        getkmr: 1,
+      };
+
+      const aesEncrypt = playlistAesEncrypt(dataMap);
+
+      const p = rsaEncrypt2({ aes: aesEncrypt.key, uid: userid, token }).toUpperCase();
+
+      const paramsMap = {
+        clienttime,
+        mid,
+        key: signParamsKey(clienttime.toString(), appid),
+        clientver,
+        appid,
+        p,
+      };
+
+      const respone = await useAxios({
+        baseURL: 'https://mcloudservice.kugou.com',
+        url: '/v1/get_list',
+        params: paramsMap,
+        data: Buffer.from(aesEncrypt.str, 'base64'),
+        method: 'post',
+        encryptType: 'android',
+        responseType: 'arraybuffer',
+        cookie: params?.cookie || {},
+        clearDefaultParams: true,
+        notSignature: true,
+      });
+
+      respone.body = playlistAesDecrypt({ str: respone.body.toString('base64'), key: aesEncrypt.key });
+
+      resolve(respone);
+    } catch (error) {
+      console.log(error);
+      answer.body = error;
+      resolve(answer);
+    }
+  });
+};
+
+================ FILE: user_cloud_url.js ================
+// 获取云盘音乐url
+const { signCloudKey } = require('../util');
+module.exports = (params, useAxios) => {
+  const hash = String(params.hash).toLocaleLowerCase();
+  const paramsMap = {
+    hash: hash,
+    ssa_flag: 'is_fromtrack',
+    version: '20102',
+    ssl: 0,
+    album_audio_id: params.album_audio_id ?? 0,
+    pid: 20026,
+    audio_id: params.audio_id ?? 0,
+    kv_id: 2,
+    key: signCloudKey(hash, 20026),
+    bucket: 'musicclound',
+    name: params.name ?? '',
+    with_res_tag: 0,
+  };
+
+  return useAxios({
+    url: '/bsstrackercdngz/v2/query_musicclound_url',
+    encryptType: 'android',
+    method: 'get',
+    params: paramsMap,
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: user_detail.js ================
+const { cryptoAesEncrypt, cryptoRSAEncrypt } = require('../util');
+module.exports = (params, useAxios) => {
+  const token = params?.token || params?.cookie?.token || '';
+  const userid = Number(params?.userid || params?.cookie?.userid || '0');
+  const clienttime_ms = Math.floor(Date.now() / 1000);
+  const pk = cryptoRSAEncrypt({ token, clienttime: clienttime_ms }).toUpperCase();
+
+  const dataMap = {
+    visit_time: clienttime_ms,
+    usertype: 1,
+    p: pk,
+    userid,
+  };
+  console.log(params?.cookie);
+  return useAxios({
+    url: '/v3/get_my_info',
+    method: 'POST',
+    data: dataMap,
+    params: { plat: 1 },
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'usercenter.kugou.com' },
+  });
+};
+================ FILE: user_follow.js ================
+const { cryptoRSAEncrypt } = require('../util');
+/**
+ * 获取用户关注的歌手
+ */
+module.exports = (params, useAxios) => {
+  const token = params?.token || params?.cookie?.token || '';
+  const userid = params?.userid || params?.cookie?.userid || '0';
+  const dateTime = Math.floor(Date.now() / 1000);
+  const dataMap = {
+    merge: 2,
+    need_iden_type: 1,
+    ext_params: 'k_pic,jumptype,singerid,score',
+    userid,
+    type: 0,
+    id_type: 0,
+    p: cryptoRSAEncrypt({ clienttime: dateTime, token }).toUpperCase(),
+  };
+
+  return useAxios({
+    url: '/v4/follow_list',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    params: { plat: 1 },
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'relationuser.kugou.com' },
+  });
+};
+
+================ FILE: user_follow_message.js ================
+/**
+ * 获取用户关注的歌手的消息
+ */
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || '0';
+  
+
+  return useAxios({
+    url: '/msg.mobile/v3/msgtag/history',
+    encryptType: 'android',
+    method: 'GET',
+    params: { filter: 1, maxid: 0, pagesize: params.pagesize ?? 30, tag: `chat:${userid}_${params.id}`},
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: user_history.js ================
+// 获取用户听歌排行
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || 0;
+  const token = params?.token || params?.cookie?.token || '';
+
+  const dataMap = {  token, userid, source_classify: 'app',  to_subdivide_sr: 1 };
+
+  if (params.bp) dataMap['bp'] = params.bp;
+
+  return useAxios({
+    url: '/playhistory/v1/get_songs',
+    data: dataMap,
+    encryptType: 'android',
+    method: 'POST',
+    cookie: params?.cookie || {},
+  });
+
+};
+
+================ FILE: user_listen.js ================
+const { cryptoRSAEncrypt } = require('../util');
+module.exports = (params, useAxios) => {
+  const token = params?.token || params?.cookie?.token || '';
+  const userid = params?.userid || params?.cookie?.userid || '0';
+
+  const clienttime = Math.floor(Date.now() / 1000);
+
+  const p = cryptoRSAEncrypt({ clienttime, token }).toUpperCase();
+  const dataMap = {
+    t_userid: userid,
+    userid,
+    list_type: params.type || 0,
+    area_code: 1,
+    cover: 2,
+    p,
+  };
+
+  return useAxios({
+    baseURL: 'https://listenservice.kugou.com',
+    url: '/v2/get_list',
+    data: dataMap,
+    params: { clienttime, plat: 0 },
+    method: 'POST',
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: user_playlist.js ================
+// 获取用户歌单
+
+module.exports = (params, useAxios) => {
+  const userid = params?.cookie?.userid || params?.userid || 0;
+  const token = params?.cookie?.token || params?.token || '';
+
+  const dataMap = {
+    userid,
+    token,
+    total_ver: 979,
+    type: 2,
+    page: params?.page || 1,
+    pagesize: params?.pagesize || 30,
+  };
+
+  return useAxios({
+    url: '/v7/get_all_list',
+    encryptType: 'android',
+    method: 'post',
+    data: dataMap,
+    params: { plat: 1, userid: Number(userid), token },
+    cookie: params?.cookie,
+    headers: { 'x-router': 'cloudlist.service.kugou.com' },
+  });
+};
+
+================ FILE: user_video_collect.js ================
+const { cryptoRSAEncrypt } = require('../util');
+/**
+ * 获取用户关注的歌手
+ */
+module.exports = (params, useAxios) => {
+  const token = params?.token || params?.cookie?.token || '';
+  const userid = params?.userid || params?.cookie?.userid || '0';
+  const dataMap = {
+    userid,
+    token,
+    page: params?.page ?? 1,
+    pagesize: params?.pagesize ?? 30,
+  };
+
+  return useAxios({
+    url: '/collectservice/v2/collect_list_mixvideo',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    params: { plat: 1 },
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: user_video_love.js ================
+const { cryptoRSAEncrypt } = require('../util');
+/**
+ * 获取用户关注的歌手
+ */
+module.exports = (params, useAxios) => {
+  const userid = params?.userid || params?.cookie?.userid || '0';
+  const paramsMap = {
+    kugouid: userid,
+    pagesize: params?.pagesize ?? 30,
+    load_video_info: 1,
+    p: 1,
+    plat: 1
+  };
+
+  return useAxios({
+    url: '/m.comment.service/v1/get_user_like_video',
+    encryptType: 'android',
+    method: 'get',
+    params: paramsMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: user_vip_detail.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    baseURL: 'https://kugouvip.kugou.com',
+    url: '/v1/get_union_vip',
+    method: 'GET',
+    params: {busi_type: 'concept'},
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: video_detail.js ================
+const { appid, clientver, signParamsKey, cryptoMd5 } = require('../util');
+// 获取视频详情
+module.exports = (params, useAxios) => {
+  const dfid = params?.cookie?.dfid || '-'; // 自定义
+  const mid = params?.cookie?.KUGOU_API_MID; // 可以自定义
+  const uuid = cryptoMd5(`${dfid}${mid}`); // 可以自定义
+  const token = params?.token || params?.cookie?.token || '';
+  const clienttime = Math.floor(new Date().getTime() / 1000);
+
+  const resource = (params.id || '').split(',').map((s) => ({ video_id: s }));
+
+  const dataMap = {
+    appid,
+    clientver,
+    clienttime,
+    mid,
+    uuid,
+    dfid,
+    token: token || '',
+    key: signParamsKey(clienttime.toString()),
+    show_resolution: 1,
+    data: resource,
+  };
+  return useAxios({
+    url: '/v1/video',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    clearDefaultParams: true,
+    headers: { 'x-router': 'kmr.service.kugou.com' },
+  });
+};
+
+================ FILE: video_privilege.js ================
+const { cryptoMd5, signParamsKey, clientver, appid } = require('../util');
+// 获取视频特权
+
+module.exports = (params, useAxios) => {
+  const dfid = params?.cookie?.dfid || '-';
+  const mid = params?.cookie?.KUGOU_API_MID;
+
+  const resource = (params?.hash || '').split(',').map((s) => ({ hash: s, id: 0, name: '' }));
+
+  const dataMap = {
+    appid,
+    area_code: 1,
+    behavior: 'play',
+    clientver,
+    dfid,
+    mid,
+    resource,
+    token: params?.cookie?.token || '',
+    userid: params?.cookie?.userid || 0,
+    vip: params?.cookie?.vip_type || 0,
+  };
+
+  return useAxios({
+    url: '/v1/get_video_privilege',
+    method: 'POST',
+    data: dataMap,
+    encryptType: 'android',
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'media.store.kugou.com' },
+  });
+};
+
+================ FILE: video_url.js ================
+// 获取视频urls
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+    backupdomain: 1,
+    cmd: 123,
+    ext: 'mp4',
+    ismp3: 0,
+    hash: params.hash,
+    pid: 1,
+    type: 1,
+  };
+
+  return useAxios({
+    url: '/v2/interface/index',
+    method: 'GET',
+    params: paramsMap,
+    encryptType: 'android',
+    encryptKey: true,
+    headers: { 'x-router': 'trackermv.kugou.com' },
+  });
+};
+
+================ FILE: youth_channel_all.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/youth/v2/channel/channel_all_list',
+    encryptType: 'android',
+    method: 'get',
+    params: { page: params.page || 1, pagesize: params.pagesize || 30, type: 1},
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_channel_amway.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/youth/api/amway/v2/index',
+    encryptType: 'android',
+    method: 'get',
+    params: { global_collection_id: params.global_collection_id },
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_channel_detail.js ================
+module.exports = (params, useAxios) => {
+  const data = (params.global_collection_id || '').split(',').map((s) => ({ global_collection_id: s }));
+  return useAxios({
+    url: '/youth/api/channel/v1/channel_list_by_id',
+    encryptType: 'android',
+    method: 'post',
+    data: { data },
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_channel_similar.js ================
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/youth/v1/channel/get_friendly_channel',
+    encryptType: 'android',
+    method: 'post',
+    data: {
+      area_code: 1,
+      playlist_ver: 2,
+      vip_type: params?.vip_type || params?.cookie?.vip_type || 0,
+      platform: 'ios'
+    },
+    params: { channel_id: params.channel_id },
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_channel_song.js ================
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    global_collection_id: params.global_collection_id,
+    pagesize: params.pagesize || 30,
+    page: params.page || 1,
+    is_filter: 0,
+  }
+  return useAxios({
+    url: '/youth/api/channel/v1/channel_get_song_audit_passed',
+    encryptType: 'android',
+    method: 'get',
+    params: dataMap,
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_channel_song_detail.js ================
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    global_collection_id: params.global_collection_id,
+    fileid: params.fileid
+  }
+  return useAxios({
+    url: '/youth/v2/post/get_song_detail',
+    encryptType: 'android',
+    method: 'get',
+    params: dataMap,
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_channel_sub.js ================
+module.exports = (params, useAxios) => {
+  const t = Number(params.t) === 0 ? 0 : 1;
+  return useAxios({
+    url: `/youth/v1/channel${t === 0 ? '_un' : ''}_subscribe`,
+    encryptType: 'android',
+    method: t === 0 ? 'delete': 'post',
+    params: { global_collection_id: params.global_collection_id, source: 1},
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_day_vip.js ================
+// 领取vip(领取一天) 需要登录
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/youth/v1/recharge/receive_vip_listen_song',
+    encryptType: 'android',
+    method: 'post',
+    params: { source_id: 90139, receive_day: params.receive_day },
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_day_vip_upgrade.js ================
+const { srcappid } = require("../util");
+
+//升级vip
+module.exports = (params, useAxios) => {
+  const paramsMap = {
+    kugouid: Number(params?.userid || params?.cookie?.userid || 0),
+    ad_type: 1,
+  }
+
+
+  
+
+  return useAxios({
+    url: '/youth/v1/listen_song/upgrade_vip_reward',
+    encryptType: 'android',
+    method: 'post',
+    params: paramsMap,
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_dynamic.js ================
+
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/youth/v3/user/get_dynamic',
+    encryptType: 'android',
+    method: 'get',
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_dynamic_recent.js ================
+
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/youth/v3/user/recent_dynamic',
+    encryptType: 'android',
+    method: 'get',
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_listen_song.js ================
+// 听歌领取vip 需要登录
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    mixsongid: params?.mixsongid || 666075191
+  }
+
+  return useAxios({
+    url: '/youth/v2/report/listen_song',
+    data: dataMap,
+    method: 'POST',
+    encryptTyPe: 'android',
+    params: { clientver: 10566 },
+    cookie: params?.cookie,
+    headers: {
+      "user-agent": "Android13-1070-10566-201-0-ReportPlaySongToServerProtocol-wifi",
+      "content-type": "application/json; charset=utf-8",
+    },
+  });
+};
+
+================ FILE: youth_month_vip_record.js ================
+
+module.exports = (params, useAxios) => {
+
+  return useAxios({
+    url: '/youth/v1/activity/get_month_vip_record',
+    encryptType: 'android',
+    params: { latest_limit: 100 },
+    method: 'get',
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_union_vip.js ================
+// 领取vip 需要登录
+module.exports = (params, useAxios) => {
+ const paramsMap = {
+  busi_type: 'concept',
+  opt_product_types: 'dvip,qvip',
+  product_type: 'svip',
+ }
+
+  return useAxios({
+    baseURL: 'https://kugouvip.kugou.com',
+    url: '/v1/get_union_vip',
+    encryptType: 'android',
+    method: 'get',
+    params: paramsMap,
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_user_song.js ================
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    filter_video:	0,
+    type:	params?.type || 0,
+    userid: params.userid,
+    pagesize: params.pagesize || 30,
+    page: params.page || 1,
+    is_filter: 0,
+  }
+  return useAxios({
+    url: '/youth/v1/get_user_song_public',
+    encryptType: 'android',
+    method: 'get',
+    params: dataMap,
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: youth_vip.js ================
+// 领取vip 需要登录
+module.exports = (params, useAxios) => {
+  const time = Date.now();
+  const dataMap = {
+    ad_id: 12307537187,
+    play_end: time,
+    play_start: time - 30000,
+  };
+
+  return useAxios({
+    url: '/youth/v1/ad/play_report',
+    encryptType: 'android',
+    method: 'post',
+    data: dataMap,
+    cookie: params?.cookie,
+  });
+};
+
+================ FILE: yueku.js ================
+// 获取安卓乐库相关内容
+
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/v1/yueku/recommend_v2',
+    encryptType: 'android',
+    method: 'GET',
+    params: { operator: 7, plat: 0, type: 11, area_code: 1, req_multi: 1 },
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'service.mobile.kugou.com' },
+  });
+};
+
+================ FILE: yueku_banner.js ================
+// 获取乐库下的 banner
+
+module.exports = (params, useAxios) => {
+  const dataMap = {
+    plat: 0,
+    channel: 201,
+    operator: 7,
+    networktype: 2,
+    userid: params?.userid || params?.cookie?.userid || 0,
+    vip_type: 0,
+    m_type: 0,
+    tags: [],
+    apiver: 5,
+    ability: 2,
+    mode: 'normal',
+  };
+
+  return useAxios({
+    url: '/ads.gateway/v3/listen_banner',
+    encryptType: 'android',
+    method: 'POST',
+    data: dataMap,
+    cookie: params?.cookie || {},
+  });
+};
+
+================ FILE: yueku_fm.js ================
+// 获取乐库下的 fm
+
+module.exports = (params, useAxios) => {
+  return useAxios({
+    url: '/v1/time_fm_info',
+    encryptType: 'android',
+    method: 'GET',
+    params: { operator: 7, plat: 0, type: 11, area_code: 1, req_multi: 1 },
+    cookie: params?.cookie || {},
+    headers: { 'x-router': 'fm.service.kugou.com' },
+  });
+};
+

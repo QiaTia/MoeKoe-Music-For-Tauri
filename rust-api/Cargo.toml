@@ -1,0 +1,56 @@
+[package]
+name = "kugoumusicapi"
+version = "1.5.1"
+edition = "2021"
+description = "酷狗音乐 API 中转聚合服务 (Rust 移植版, 迁移自 Node.js kugoumusicapi)"
+license = "MIT"
+
+[[bin]]
+name = "kugoumusicapi"
+path = "src/main.rs"
+
+[dependencies]
+# Web 框架
+axum = { version = "0.7", features = ["macros"] }
+tokio = { version = "1", features = ["full"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["fs"] }
+
+# HTTP 客户端 (对应 axios)
+reqwest = { version = "0.12", default-features = false, features = ["json", "gzip", "rustls-tls"] }
+
+# 序列化 —— preserve_order 保证 JSON.stringify 的键顺序与 Node 一致 (签名命脉)
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+serde_urlencoded = "0.7"
+
+# 加密/摘要 (对应 crypto-js / node-forge)
+md-5 = "0.10"
+sha1 = "0.10"
+aes = "0.8"
+cbc = { version = "0.1", features = ["alloc"] }
+hex = "0.4"
+base64 = "0.22"
+rsa = { version = "0.9", features = ["sha2"] }
+num-bigint = "0.4"
+num-traits = "0.2"
+
+# 压缩 (对应 pako, KRC 歌词解压)
+flate2 = "1"
+
+# 二维码 (对应 qrcode)
+qrcode = "0.14"
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+# 缓存 (对应 apicache / memory-cache)
+moka = { version = "0.12", features = ["future"] }
+
+# 环境变量与工具
+dotenvy = "0.15"
+rand = "0.8"
+percent-encoding = "2"
+once_cell = "1"
+url = "2"
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

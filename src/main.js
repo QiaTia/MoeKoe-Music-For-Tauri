@@ -1,3 +1,8 @@
+import { installTauriShim } from './utils/tauriShim';
+// Tauri 环境下先注入 Electron 兼容层（window.electron / window.electronAPI），
+// 必须早于任何检查 window.electron 的代码执行
+installTauriShim();
+
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import piniaPersistedstate from 'pinia-plugin-persistedstate';

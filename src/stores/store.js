@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
 import { getApiBaseUrl } from '../utils/apiBaseUrl';
+import { shouldUseInvoke, invokeApi } from '../utils/invokeBridge';
 
 // 用于设备注册的独立 axios 实例（不带拦截器，避免循环依赖）
 const registerDeviceApi = axios.create({
@@ -30,8 +31,15 @@ export const MoeAuthStore = defineStore('MoeData', {
         async initDevice() {
             if (this.Device) return this.Device;
             try {
-                const response = await registerDeviceApi.get('/register/dev');
-                const device = response?.data?.data;
+                let device;
+                if (shouldUseInvoke()) {
+                    // Tauri：进程内直调（无需认证）
+                    const body = await invokeApi('GET', '/register/dev');
+                    device = body?.data;
+                } else {
+                    const response = await registerDeviceApi.get('/register/dev');
+                    device = response?.data?.data;
+                }
                 if (device) {
                     this.Device = device;
                     return device;

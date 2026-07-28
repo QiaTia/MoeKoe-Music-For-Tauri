@@ -1,0 +1,38 @@
+[package]
+name = "moekoemusic"
+version = "1.6.5"
+description = "MoeKoe Music"
+authors = ["MoeJue <MoeJue@qq.com>"]
+edition = "2021"
+
+[lib]
+name = "moekoemusic_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "image-png", "devtools", "macos-private-api"] }
+tauri-plugin-opener = "2"
+tauri-plugin-single-instance = { version = "2", features = ["deep-link"] }
+tauri-plugin-deep-link = "2"
+tauri-plugin-global-shortcut = "2"
+tauri-plugin-autostart = "2"
+tauri-plugin-notification = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+tokio = { version = "1", features = ["full"] }
+
+# WS 远程控制服务(6520)，复用 api/rust 已编译的 axum
+axum = { version = "0.7", features = ["ws"] }
+futures-util = "0.3"
+
+# 在线更新下载（版本与 api/rust 对齐避免重复编译）
+reqwest = { version = "0.12", default-features = false, features = ["json", "gzip", "rustls-tls", "stream"] }
+
+url = "2"
+sys-locale = "0.3"
+
+# 进程内直调酷狗 API（Rust 移植版）
+kugoumusicapi = { path = "../rust-api" }

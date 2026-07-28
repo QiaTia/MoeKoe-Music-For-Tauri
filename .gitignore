@@ -1,4 +1,4 @@
-# Logs
+# ---- 日志 ----
 logs
 *.log
 npm-debug.log*
@@ -6,32 +6,54 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-.history
 
+# ---- 依赖 ----
 node_modules
-dist_electron
+
+# ---- 前端构建产物 ----
 dist
 dist-ssr
+dev-dist/
 *.local
+vite.config.js.timestamp-*
+
+# ---- Tauri / Rust 构建产物 ----
+src-tauri/target/
+src-tauri/gen/schemas/
+rust-api/target/
+
+# ---- 环境变量 ----
+.env
+.env.*
+!.env.example
+
+# ---- 遗留的 pnpm 文件（项目使用 npm）----
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# ---- 测试与临时目录 ----
 test
 bin/*
-.serena/*
-api/.serena/*
 
-# Editor directories and files
-.codebuddy/*
+# ---- 编辑器 / IDE ----
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
+.history
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-dev-dist/*
-pnpm-lock.yaml
-pnpm-workspace.yaml
-vite.config.js*
 
+# ---- AI 助手工作目录 ----
+.codebuddy/
+.workbuddy/
+.serena/
+
+# ---- 系统文件 ----
+.DS_Store
+Thumbs.db
+
+# ---- 插件扩展 ----
 plugins/extensions/*

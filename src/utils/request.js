@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { MoeAuthStore } from '../stores/store';
 import { getApiBaseUrl } from './apiBaseUrl';
+import { shouldUseInvoke, invokeApi } from './invokeBridge';
 
 // 创建一个 axios 实例
 const httpClient = axios.create({
@@ -13,33 +14,38 @@ const httpClient = axios.create({
     withCredentials: true,
 });
 
+// 构造认证串（HTTP 模式作为 Authorization 头；invoke 模式作为 auth 参数）
+function buildAuth() {
+    const MoeAuth = MoeAuthStore();
+    const token = MoeAuth.UserInfo?.token;
+    const userid = MoeAuth.UserInfo?.userid;
+    const t1 = MoeAuth.UserInfo?.t1;
+    const dfid = MoeAuth.Device?.dfid;
+    const mid = MoeAuth.Device?.mid;
+    const guid = MoeAuth.Device?.guid;
+    const serverDev = MoeAuth.Device?.serverDev;
+    const mac = MoeAuth.Device?.mac;
+
+    const authParts = [];
+    if (token) authParts.push(`token=${(token)}`);
+    if (userid) authParts.push(`userid=${(userid)}`);
+    if (dfid) authParts.push(`dfid=${(dfid)}`);
+    if (t1) authParts.push(`t1=${(t1)}`);
+    if (mid) authParts.push(`KUGOU_API_MID=${(mid)}`);
+    if (guid) authParts.push(`KUGOU_API_GUID=${(guid)}`);
+    if (serverDev) authParts.push(`KUGOU_API_DEV=${(serverDev)}`);
+    if (mac) authParts.push(`KUGOU_API_MAC=${(mac)}`);
+    return authParts.join(';');
+}
+
 // 请求拦截器
 httpClient.interceptors.request.use(
     config => {
-        const MoeAuth = MoeAuthStore();
-        const token = MoeAuth.UserInfo?.token;
-        const userid = MoeAuth.UserInfo?.userid;
-        const t1 = MoeAuth.UserInfo?.t1;
-        const dfid = MoeAuth.Device?.dfid;
-        const mid = MoeAuth.Device?.mid;
-        const guid = MoeAuth.Device?.guid;
-        const serverDev = MoeAuth.Device?.serverDev;
-        const mac = MoeAuth.Device?.mac;
-
-        const authParts = [];
-        if (token) authParts.push(`token=${(token)}`);
-        if (userid) authParts.push(`userid=${(userid)}`);
-        if (dfid) authParts.push(`dfid=${(dfid)}`);
-        if (t1) authParts.push(`t1=${(t1)}`);
-        if (mid) authParts.push(`KUGOU_API_MID=${(mid)}`);
-        if (guid) authParts.push(`KUGOU_API_GUID=${(guid)}`);
-        if (serverDev) authParts.push(`KUGOU_API_DEV=${(serverDev)}`);
-        if (mac) authParts.push(`KUGOU_API_MAC=${(mac)}`);
-
-        if (authParts.length > 0) {
+        const auth = buildAuth();
+        if (auth) {
             config.headers = {
                 ...config.headers,
-                Authorization: authParts.join(';')
+                Authorization: auth
             };
         }
         return config;
@@ -74,7 +80,9 @@ httpClient.interceptors.response.use(
 // 封装 GET 请求
 export const get = async (url, params = {}, config = {}, onSuccess = null, onError = null) => {
     try {
-        const response = await httpClient.get(url, { params, ...config });
+        const response = shouldUseInvoke()
+            ? await invokeApi('GET', url, { params, auth: buildAuth() })
+            : await httpClient.get(url, { params, ...config });
         if (onSuccess) onSuccess(response);
         return response;
     } catch (error) {
@@ -86,7 +94,9 @@ export const get = async (url, params = {}, config = {}, onSuccess = null, onErr
 // 封装 POST 请求
 export const post = async (url, data = {}, config = {}, onSuccess = null, onError = null) => {
     try {
-        const response = await httpClient.post(url, data, config);
+        const response = shouldUseInvoke()
+            ? await invokeApi('POST', url, { params: config?.params || {}, data, auth: buildAuth() })
+            : await httpClient.post(url, data, config);
         if (onSuccess) onSuccess(response);
         return response;
     } catch (error) {
@@ -98,7 +108,9 @@ export const post = async (url, data = {}, config = {}, onSuccess = null, onErro
 // 封装 PUT 请求
 export const put = async (url, data = {}, config = {}, onSuccess = null, onError = null) => {
     try {
-        const response = await httpClient.put(url, data, config);
+        const response = shouldUseInvoke()
+            ? await invokeApi('PUT', url, { params: config?.params || {}, data, auth: buildAuth() })
+            : await httpClient.put(url, data, config);
         if (onSuccess) onSuccess(response);
         return response;
     } catch (error) {
@@ -110,7 +122,9 @@ export const put = async (url, data = {}, config = {}, onSuccess = null, onError
 // 封装 DELETE 请求
 export const del = async (url, config = {}, onSuccess = null, onError = null) => {
     try {
-        const response = await httpClient.delete(url, config);
+        const response = shouldUseInvoke()
+            ? await invokeApi('DELETE', url, { params: config?.params || {}, auth: buildAuth() })
+            : await httpClient.delete(url, config);
         if (onSuccess) onSuccess(response);
         return response;
     } catch (error) {
@@ -122,7 +136,9 @@ export const del = async (url, config = {}, onSuccess = null, onError = null) =>
 // 封装 PATCH 请求
 export const patch = async (url, data = {}, config = {}, onSuccess = null, onError = null) => {
     try {
-        const response = await httpClient.patch(url, data, config);
+        const response = shouldUseInvoke()
+            ? await invokeApi('PATCH', url, { params: config?.params || {}, data, auth: buildAuth() })
+            : await httpClient.patch(url, data, config);
         if (onSuccess) onSuccess(response);
         return response;
     } catch (error) {
