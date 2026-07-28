@@ -4,9 +4,9 @@
   "version": "1.6.9",
   "identifier": "cn.MoeKoe.Music",
   "build": {
-    "beforeDevCommand": "npm run serve",
+    "beforeDevCommand": "node scripts/sync-version.mjs && npm run serve",
     "devUrl": "http://localhost:8080",
-    "beforeBuildCommand": "npm run build",
+    "beforeBuildCommand": "node scripts/sync-version.mjs && npm run build",
     "frontendDist": "../dist"
   },
   "app": {
@@ -19,7 +19,9 @@
   "plugins": {
     "deep-link": {
       "desktop": {
-        "schemes": ["moekoe"]
+        "schemes": [
+          "moekoe"
+        ]
       }
     }
   },
@@ -36,7 +38,10 @@
     },
     "windows": {
       "nsis": {
-        "languages": ["SimpChinese", "English"],
+        "languages": [
+          "SimpChinese",
+          "English"
+        ],
         "installMode": "both"
       }
     }

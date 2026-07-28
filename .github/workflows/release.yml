@@ -21,8 +21,8 @@ jobs:
           - platform: 'windows-latest'
             args: ''
           - platform: 'macos-latest'
-            # 通用二进制：同时兼容 Intel 与 Apple Silicon
-            args: '--target universal-apple-darwin'
+            # macOS 分架构构建：在一个 runner 上顺序产出 x86_64 与 aarch64 两个独立 dmg
+            args: ''
           - platform: 'ubuntu-22.04'
             # 跳过 rpm（CI 镜像缺 rpmbuild），保留 deb 与 AppImage
             args: '--bundles deb,appimage'
@@ -50,7 +50,7 @@ jobs:
       - name: Setup Rust toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
-          # macOS 通用二进制需要同时编译 x86_64 与 aarch64
+          # macOS 分架构构建需要同时安装 x86_64 与 aarch64 两个 target 以支持交叉编译
           targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
 
       - name: Rust cache
@@ -62,7 +62,31 @@ jobs:
         # 项目使用 npm（仓库中无 lockfile，action 会自动回退到 npm）
         run: npm install
 
-      - name: Build and publish (Tauri)
+      - name: Build and publish (Tauri) - Windows / Linux
+        if: matrix.platform != 'macos-latest'
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: 'src-tauri'
+          tagName: '${{ github.ref_name }}'
+          releaseName: 'MoeKoe Music ${{ github.ref_name }}'
+          releaseBody: |
+            ## MoeKoe Music ${{ github.ref_name }}
+
+            自动构建的跨平台桌面客户端：
+
+            - **Windows**：`*.exe` 安装包（NSIS）
+            - **macOS**：`*.dmg` × 2（分别提供 Intel / x86_64 与 Apple Silicon / aarch64 两个独立安装包）
+            - **Linux**：`*.deb` 与 `*.AppImage`
+
+            > 注：macOS 未签名版本首次打开时，请在「访达」中右键点击应用 → 打开，以绕过 Gatekeeper 拦截。
+          releaseDraft: false
+          prerelease: false
+          args: '${{ matrix.args }}'
+
+      - name: Build and publish (Tauri) - macOS x86_64 (Intel)
+        if: matrix.platform == 'macos-latest'
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -84,10 +108,40 @@ jobs:
             自动构建的跨平台桌面客户端：
 
             - **Windows**：`*.exe` 安装包（NSIS）
-            - **macOS**：`*.dmg`（通用二进制，支持 Intel / Apple Silicon）
+            - **macOS**：`*.dmg` × 2（分别提供 Intel / x86_64 与 Apple Silicon / aarch64 两个独立安装包）
             - **Linux**：`*.deb` 与 `*.AppImage`
 
             > 注：macOS 未签名版本首次打开时，请在「访达」中右键点击应用 → 打开，以绕过 Gatekeeper 拦截。
           releaseDraft: false
           prerelease: false
-          args: '${{ matrix.args }}'
+          args: '--target x86_64-apple-darwin'
+
+      - name: Build and publish (Tauri) - macOS aarch64 (Apple Silicon)
+        if: matrix.platform == 'macos-latest'
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # ↓↓↓ 可选：在仓库 Settings → Secrets 配置以下变量后，macOS 会自动签名并公证。
+          # APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          # APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          # APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          # APPLE_ID: ${{ secrets.APPLE_ID }}
+          # APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+          # APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        with:
+          projectPath: 'src-tauri'
+          tagName: '${{ github.ref_name }}'
+          releaseName: 'MoeKoe Music ${{ github.ref_name }}'
+          releaseBody: |
+            ## MoeKoe Music ${{ github.ref_name }}
+
+            自动构建的跨平台桌面客户端：
+
+            - **Windows**：`*.exe` 安装包（NSIS）
+            - **macOS**：`*.dmg` × 2（分别提供 Intel / x86_64 与 Apple Silicon / aarch64 两个独立安装包）
+            - **Linux**：`*.deb` 与 `*.AppImage`
+
+            > 注：macOS 未签名版本首次打开时，请在「访达」中右键点击应用 → 打开，以绕过 Gatekeeper 拦截。
+          releaseDraft: false
+          prerelease: false
+          args: '--target aarch64-apple-darwin'
