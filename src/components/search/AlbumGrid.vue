@@ -2,7 +2,7 @@
   <div class="album-grid">
     <div v-for="(album, index) in albums" :key="index" class="album-card" @click="onAlbumClick(album)">
       <div class="album-cover">
-        <img :src="(album.img || './assets/images/ico.png').replace('/240/', '/480/')" />
+        <img :src="ensureHttps((album.img || './assets/images/ico.png').replace('/240/', '/480/'))" />
         <div class="album-overlay">
           <button class="play-button">
             <i class="fas fa-play"></i>
@@ -35,6 +35,8 @@
 </template>
 
 <script setup>
+import { ensureHttps } from '@/utils/utils';
+
 const props = defineProps({
   albums: {
     type: Array,

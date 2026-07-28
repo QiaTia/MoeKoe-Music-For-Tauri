@@ -1,9 +1,9 @@
 <template>
   <div class="artist-grid">
     <div v-for="(artist, index) in artists" :key="index" class="artist-card" @click="onArtistClick(artist)"
-      :style="{ '--artist-bg': `url(${artist.Avatar || './assets/images/ico.png'})` }">
+      :style="{ '--artist-bg': `url(${ensureHttps(artist.Avatar || './assets/images/ico.png')})` }">
       <div class="artist-avatar">
-        <img :src="(artist.Avatar || './assets/images/ico.png').replace('/240/', '/480/')" />
+        <img :src="ensureHttps((artist.Avatar || './assets/images/ico.png').replace('/240/', '/480/'))" />
       </div>
       <div class="artist-info">
         <h3 class="artist-name">{{ artist.AuthorName }}</h3>
@@ -28,6 +28,8 @@
 </template>
 
 <script setup>
+import { ensureHttps } from '@/utils/utils';
+
 const props = defineProps({
   artists: {
     type: Array,

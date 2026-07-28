@@ -13,7 +13,7 @@
     "windows": [],
     "macOSPrivateApi": true,
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; img-src * data: blob: https: http:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https:; connect-src * https: http: ws: wss:; media-src * data: blob: https: http:; font-src * data: https: http:; frame-src * https: http:"
     }
   },
   "plugins": {

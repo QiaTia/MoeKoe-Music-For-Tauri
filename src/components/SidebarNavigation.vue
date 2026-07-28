@@ -1,5 +1,6 @@
 <template>
     <div class="side-top-actions" :class="{ collapsed: isCollapsed }">
+        <div class="side-drag-region" data-tauri-drag-region></div>
         <div class="side-action-buttons">
             <button class="side-action-button" title="折叠/展开" @click="toggleCollapse">
                 <i :class="isCollapsed ? 'fas fa-indent' : 'fas fa-outdent'"></i>
@@ -24,7 +25,7 @@
     <aside class="side-navigation" :class="{ collapsed: isCollapsed }">
         <div class="side-profile">
             <router-link :to="!isCollapsed ? '/library' : '/settings'" class="side-profile-link">
-                <img :src="MoeAuth.UserInfo ? MoeAuth.UserInfo.pic : './assets/images/profile.jpg'"
+                <img :src="MoeAuth.UserInfo ? ensureHttps(MoeAuth.UserInfo.pic) : './assets/images/profile.jpg'"
                     alt="Profile Picture">
                 <div class="side-profile-info">
                     <span>{{ MoeAuth.UserInfo?.nickname || $t('deng-lu') }}</span>
@@ -149,6 +150,7 @@ import { ref, onMounted, onUnmounted, watch } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { get } from '../utils/request';
+import { ensureHttps } from '../utils/utils';
 import { MoeAuthStore } from '../stores/store';
 import AppUpdateDialog from './AppUpdateDialog.vue';
 import { ABOUT_DISCLAIMER_KEYS, DISCLAIMER_BANNER_SRC } from '../config/disclaimer';
@@ -430,6 +432,13 @@ watch(() => MoeAuth.isAuthenticated, (isAuthenticated) => {
     position: absolute;
     inset: 0 100px 0 0;
     -webkit-app-region: drag;
+}
+
+// Tauri 拖拽区域（真实 DOM 元素，替代仅 Electron 支持的 ::before + -webkit-app-region）
+.side-drag-region {
+    position: absolute;
+    inset: 0 100px 0 0;
+    z-index: 0;
 }
 
 .side-top-actions.collapsed {

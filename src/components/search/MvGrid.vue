@@ -18,6 +18,7 @@
 </template>
 
 <script setup>
+import { ensureHttps } from '@/utils/utils';
 const props = defineProps({
   mvs: {
     type: Array,
@@ -36,7 +37,7 @@ const getImage = (url, size) => {
   if (!url) return './assets/images/ico.png';
 
   if (/^https?:\/\//.test(url)) {
-    return url.replace('{size}', size);
+    return ensureHttps(url.replace('{size}', size));
   }
 
   if (/^\d{14,}\.[a-zA-Z0-9]+$/.test(url)) {
@@ -48,7 +49,7 @@ const getImage = (url, size) => {
     return `https://imge.kugou.com${url}`.replace('{size}', size);
   }
 
-  return url.replace('{size}', size);
+  return ensureHttps(url.replace('{size}', size));
 };
 
 const formatDate = (value) => {

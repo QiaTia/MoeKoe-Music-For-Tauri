@@ -26,6 +26,10 @@ fn primary_work_area(app: &AppHandle) -> (f64, f64) {
 
 /// 创建主窗口（按保存的 windowState 恢复位置尺寸）
 pub fn create_main_window(app: &AppHandle, store: &SettingsStore) -> tauri::Result<WebviewWindow> {
+    // macOS 始终使用原生标题栏（提供红绿灯按钮），其他平台按用户设置
+    #[cfg(target_os = "macos")]
+    let native_title_bar = true;
+    #[cfg(not(target_os = "macos"))]
     let native_title_bar = store.setting_str("nativeTitleBar").as_deref() == Some("on");
     let start_minimized = store.setting_str("startMinimized").as_deref() == Some("on");
     let (screen_w, screen_h) = primary_work_area(app);
@@ -51,6 +55,12 @@ pub fn create_main_window(app: &AppHandle, store: &SettingsStore) -> tauri::Resu
         .decorations(native_title_bar)
         .visible(!start_minimized)
         .disable_drag_drop_handler(); // 允许页面内 HTML5 拖拽
+
+    // Windows WebView2: 允许混合内容（HTTPS 页面加载 HTTP 图片等资源）
+    #[cfg(target_os = "windows")]
+    {
+        builder = builder.additional_browser_args("--allow-mixed-content");
+    }
 
     if valid_pos {
         builder = builder.position(x.unwrap(), y.unwrap());
@@ -118,7 +128,7 @@ pub fn create_lyrics_window(app: &AppHandle, store: &SettingsStore) -> tauri::Re
         (((screen_w - width) / 2.0).floor(), screen_h - height)
     };
 
-    let window =
+    let builder =
         WebviewWindowBuilder::new(app, LYRICS, WebviewUrl::App("index.html#/lyrics".into()))
             .title("MoeKoe Lyrics")
             .inner_size(width, height)
@@ -130,8 +140,13 @@ pub fn create_lyrics_window(app: &AppHandle, store: &SettingsStore) -> tauri::Re
             .skip_taskbar(true)
             .always_on_top(true)
             .visible_on_all_workspaces(true)
-            .resizable(true)
-            .build()?;
+            .resizable(true);
+
+    // Windows WebView2: 允许混合内容
+    #[cfg(target_os = "windows")]
+    let builder = builder.additional_browser_args("--allow-mixed-content");
+
+    let window = builder.build()?;
 
     // 尺寸变化持久化（对齐 electron 'resize' → lyricsWindowSize）
     {
@@ -255,14 +270,18 @@ pub fn create_mv_window(app: &AppHandle, url: &str) -> Result<(), String> {
     let parsed: url::Url = url.parse().map_err(|e| format!("invalid url: {e}"))?;
     let (screen_w, screen_h) = primary_work_area(app);
 
-    let window = WebviewWindowBuilder::new(app, MV, WebviewUrl::External(parsed))
+    let builder = WebviewWindowBuilder::new(app, MV, WebviewUrl::External(parsed))
         .title("MoeKoe MV")
         .inner_size((screen_w * 0.8).min(1280.0), (screen_h * 0.8).min(720.0))
         .decorations(false)
         .transparent(true)
-        .center()
-        .build()
-        .map_err(|e| e.to_string())?;
+        .center();
+
+    // Windows WebView2: 允许混合内容
+    #[cfg(target_os = "windows")]
+    let builder = builder.additional_browser_args("--allow-mixed-content");
+
+    let window = builder.build().map_err(|e| e.to_string())?;
 
     let _ = window.show();
     Ok(())

@@ -45,7 +45,7 @@
                             :class="item.class"
                             @click="item.onClick?.()"
                         >
-                            <img :src="item.match.song.Image" alt="">
+                            <img :src="ensureHttps(item.match.song.Image)" alt="">
                             <span class="hero-shade"></span>
                             <button class="hero-play card-action" type="button" title="播放" @click.stop="playSong(item.match.song)">
                                 <i class="fas fa-play"></i>
@@ -182,6 +182,7 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { recognizeAudio } from '@/utils/recognize';
+import { ensureHttps } from '@/utils/utils';
 import PlaylistSelectModal from '@/components/PlaylistSelectModal.vue';
 
 const props = defineProps({

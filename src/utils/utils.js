@@ -87,9 +87,19 @@ export const applyColorTheme = (theme) => {
 };
 
 
+/**
+ * 将 HTTP 图片 URL 升级为 HTTPS，避免 Tauri 生产环境下
+ * 被混合内容策略 / macOS ATS 拦截导致图片无法展示。
+ */
+export const ensureHttps = (url) => {
+    if (typeof url !== 'string' || !url) return url;
+    // 仅对 http:// 开头的远程资源 URL 做升级（排除 data: / blob: / 相对路径）
+    return url.replace(/^http:\/\//, 'https://');
+};
+
 export const getCover = (coverUrl, size) => {
     if (!coverUrl) return './assets/images/ico.png';
-    return coverUrl.replace("{size}", size);
+    return ensureHttps(coverUrl.replace("{size}", size));
 };
 
 export const getProfileBgColor = (src, tone = 0.52) => new Promise((resolve, reject) => {
@@ -176,6 +186,13 @@ export const formatTimestampToAgo = (timestamp) => {
 
 export const requestMicrophonePermission = async () => {
     if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) return false;
+
+    // Tauri WebView (macOS WKWebView / Windows WebView2) 不支持 getUserMedia 的
+    // 媒体捕获权限弹窗，调用会静默失败。在 Tauri 环境下跳过权限申请，
+    // 直接返回 true —— enumerateDevices 本身不需要麦克风权限即可列出设备。
+    if (typeof window !== 'undefined' && window.__TAURI_INTERNALS__) {
+        return true;
+    }
 
     try {
         if (navigator.permissions?.query) {

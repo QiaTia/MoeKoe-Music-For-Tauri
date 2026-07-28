@@ -79,7 +79,7 @@ export function useHelpers(t) {
     const MoeAuth = MoeAuthStore();
     if (!MoeAuth.isAuthenticated) return;
 
-    const todayKey = new Date().toISOString().split('T')[0];
+    const todayKey = new Date().toLocaleDateString().split('T')[0];
     const lastVipDate = localStorage.getItem('lastVipRequestDate');
 
     if (lastVipDate === todayKey) {
