@@ -13,9 +13,6 @@
             <button class="side-action-button" title="刷新页面" @click="refreshPage">
                 <i class="fas fa-redo"></i>
             </button>
-            <button class="side-action-button side-recognize-button" title="听歌识曲" @click="router.push('/recognize')">
-                <i class="fas fa-microphone"></i>
-            </button>
         </div>
         <div class="side-top-search">
             <i class="fas fa-search"></i>
@@ -93,10 +90,6 @@
                 <router-link to="/LocalMusic" class="side-link" title="本地音乐">
                     <i class="fas fa-compact-disc"></i>
                     <span>本地音乐</span>
-                </router-link>
-                <router-link to="/recognize" class="side-link" title="听歌识曲">
-                    <i class="fas fa-microphone"></i>
-                    <span>听歌识曲</span>
                 </router-link>
             </div>
 
@@ -471,11 +464,6 @@ watch(() => MoeAuth.isAuthenticated, (isAuthenticated) => {
         color: #bbb;
         cursor: not-allowed;
     }
-}
-
-.side-recognize-button:hover {
-    background: var(--side-hover);
-    color: var(--color-primary);
 }
 
 .side-action-button {

@@ -120,6 +120,9 @@ export function installTauriShim() {
             once: (channel, listener) => addListener(channel, listener, true),
             removeListener,
             removeAllListeners,
+            // 请求/响应型 IPC（对应 Electron ipcRenderer.invoke）。
+            // 目前仅桌面歌词悬停轮询用到 `lyrics-window-pointer-state`。
+            invoke: (channel, ...args) => invoke('ipc_invoke', { channel, args }),
         },
         platform,
     };

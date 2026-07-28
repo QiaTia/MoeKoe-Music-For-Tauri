@@ -1,116 +1,93 @@
 name: Release
 
+# 推送形如 v* 的 tag（例如 v1.6.9）时，自动为 Windows / macOS / Linux 构建并发布到 Releases。
+# 也可在 GitHub 网页上手动触发（workflow_dispatch）。
 on:
   push:
-    branches:
-      - main
-    paths:
-      - "package.json"
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  # 创建版本号
-  increment-version:
-    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, 'release'))
-    name: Increment Version
-    runs-on: ubuntu-latest
-    outputs:
-      version: ${{ steps.set-version.outputs.NEW_VERSION }}
-      body: ${{ steps.create-release.outputs.RELEASE_BODY }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-          submodules: recursive
-      - name: Increment version
-        id: set-version
-        run: |
-          VERSION=$(git tag --sort=-v:refname | head -n 1)
-          MAJOR=$(echo $VERSION | awk -F. '{print $1}' | sed 's/v//')
-          MINOR=$(echo $VERSION | awk -F. '{print $2}')
-          PATCH=$(echo $VERSION | awk -F. '{print $3}')
-          PATCH=$((PATCH + 1))
-          if [ "$PATCH" -gt 9 ]; then
-            PATCH=0
-            MINOR=$((MINOR + 1))
-          fi
-          NEW_VERSION="v$MAJOR.$MINOR.$PATCH"
-          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_OUTPUT
-
-      - name: Create release body
-        id: create-release
-        run: |
-          # 获取上一个tag
-          PREV_TAG=$(git describe --tags --abbrev=0)
-          # 获取最后一个tag到现在的所有commit信息
-          COMMITS=$(git log ${PREV_TAG}..HEAD --pretty=format:"* %s")
-          # 如果没有commit信息，使用默认消息
-          if [ -z "$COMMITS" ]; then
-            COMMITS="* Regular update and bug fixes"
-          fi
-          # 创建changelog链接
-          CHANGELOG_LINK="https://github.com/${GITHUB_REPOSITORY}/compare/${PREV_TAG}...${{ steps.set-version.outputs.NEW_VERSION }}"
-          # 创建release body
-          RELEASE_BODY="## What's Changed\n\n${COMMITS}\n\n**Full Changelog**: [${PREV_TAG}...${{ steps.set-version.outputs.NEW_VERSION }}](${CHANGELOG_LINK})"
-          # 将release body转义后输出
-          echo "RELEASE_BODY<<EOF" >> $GITHUB_OUTPUT
-          echo -e "$RELEASE_BODY" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v3
-        with:
-          tag_name: ${{ steps.set-version.outputs.NEW_VERSION }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: "Release ${{ steps.set-version.outputs.NEW_VERSION }}"
-          body: ${{ steps.create-release.outputs.RELEASE_BODY }}
-          prerelease: false
-          draft: true # 先创建草稿
-
-
-  build-and-upload:
-    name: Build and Upload
-    needs: increment-version
+  build:
+    name: Build (${{ matrix.platform }})
     strategy:
+      fail-fast: false
       matrix:
-        node: [lts/*]
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
-    timeout-minutes: 30
+        include:
+          - platform: 'windows-latest'
+            args: ''
+          - platform: 'macos-latest'
+            # 通用二进制：同时兼容 Intel 与 Apple Silicon
+            args: '--target universal-apple-darwin'
+          - platform: 'ubuntu-22.04'
+            # 跳过 rpm（CI 镜像缺 rpmbuild），保留 deb 与 AppImage
+            args: '--bundles deb,appimage'
+    runs-on: ${{ matrix.platform }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          submodules: true
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Linux build dependencies
+        if: matrix.platform == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libayatana-appindicator3-dev \
+            librsvg2-dev \
+            patchelf
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
-          cache: 'npm' # use cache
+          node-version: 22
 
-      - name: Build
+      - name: Setup Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          # macOS 通用二进制需要同时编译 x86_64 与 aarch64
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+
+      - name: Rust cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: './src-tauri -> target'
+
+      - name: Install frontend dependencies
+        # 项目使用 npm（仓库中无 lockfile，action 会自动回退到 npm）
+        run: npm install
+
+      - name: Build and publish (Tauri)
+        uses: tauri-apps/tauri-action@v0
         env:
-          os: ${{ runner.os == 'Windows' && 'win' || runner.os == 'macOS' && 'macos' || 'linux' }}
-        run: |
-          npm run install-all
-          npm run build
-          npm run electron:build:${{ env.os }}
-
-      - name: Upload to Release
-        uses: softprops/action-gh-release@v3
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # ↓↓↓ 可选：在仓库 Settings → Secrets 配置以下变量后，macOS 会自动签名并公证。
+          #     不配置则以「未签名」方式构建（功能正常，仅首次打开需右键→打开绕过 Gatekeeper）。
+          # APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          # APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          # APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          # APPLE_ID: ${{ secrets.APPLE_ID }}
+          # APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+          # APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
         with:
-          tag_name: ${{ needs.increment-version.outputs.version }}
-          draft: false # 这里更新下状态
-          files: |
-            ./dist_electron/*.exe
-            ./dist_electron/*.zip
-            ./dist_electron/*.dmg
-            ./dist_electron/*.AppImage
-            ./dist_electron/*.deb
-            ./dist_electron/*.blockmap
-            ./dist_electron/latest*.yml
+          projectPath: 'src-tauri'
+          tagName: '${{ github.ref_name }}'
+          releaseName: 'MoeKoe Music ${{ github.ref_name }}'
+          releaseBody: |
+            ## MoeKoe Music ${{ github.ref_name }}
+
+            自动构建的跨平台桌面客户端：
+
+            - **Windows**：`*.exe` 安装包（NSIS）
+            - **macOS**：`*.dmg`（通用二进制，支持 Intel / Apple Silicon）
+            - **Linux**：`*.deb` 与 `*.AppImage`
+
+            > 注：macOS 未签名版本首次打开时，请在「访达」中右键点击应用 → 打开，以绕过 Gatekeeper 拦截。
+          releaseDraft: false
+          prerelease: false
+          args: '${{ matrix.args }}'

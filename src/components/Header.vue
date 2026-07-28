@@ -27,9 +27,6 @@
                         @click="getSearch"
                         @keydown.enter="getSearch"
                     >
-                    <router-link to="/recognize" class="header-recognize-entry" title="听歌识曲">
-                        <i class="fas fa-microphone"></i>
-                    </router-link>
                 </div>
                 <div class="profile" @click="toggleProfile">
                     <img :src="MoeAuth.UserInfo ? MoeAuth.UserInfo.pic : './assets/images/profile.jpg'" alt="Profile Picture">
@@ -305,7 +302,6 @@ header::before {
 .nav-arrow,
 .nav-links a,
 .search-bar input,
-.header-recognize-entry,
 .profile,
 .profile img {
     -webkit-app-region: no-drag;
@@ -380,32 +376,6 @@ header::before {
             border-color: var(--primary-color);
         }
     }
-}
-
-.header-recognize-entry {
-    position: absolute;
-    top: 50%;
-    right: 1px;
-    width: 30px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: #6a6a6a;
-    text-decoration: none;
-    transition: 0.2s;
-
-    &:hover {
-        color: var(--color-primary);
-        background: var(--header-nav-hover-bg);
-    }
-
-    &:active {
-        transform: translateY(-50%) scale(0.92);
-    }
-
-    transform: translateY(-50%);
 }
 
 .profile {

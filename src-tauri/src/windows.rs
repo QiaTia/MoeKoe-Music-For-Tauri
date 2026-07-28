@@ -224,10 +224,22 @@ pub fn close_lyrics_window(app: &AppHandle) -> bool {
     }
 }
 
-/// 移动歌词窗口（渲染进程手动拖拽）
-pub fn move_lyrics_window(app: &AppHandle, store: &SettingsStore, x: f64, y: f64) {
+/// 移动歌词窗口（渲染进程手动拖拽 / 缩放）
+/// width/height 为可选项：纯拖拽移动时与当前尺寸一致（set_size 为空操作）；
+/// 边缘缩放时下发新尺寸。坐标均为屏幕逻辑像素。
+pub fn move_lyrics_window(
+    app: &AppHandle,
+    store: &SettingsStore,
+    x: f64,
+    y: f64,
+    width: Option<f64>,
+    height: Option<f64>,
+) {
     if let Some(win) = app.get_webview_window(LYRICS) {
         let _ = win.set_position(LogicalPosition::new(x, y));
+        if let (Some(w), Some(h)) = (width, height) {
+            let _ = win.set_size(LogicalSize::new(w, h));
+        }
         store.set("lyricsWindowPosition", json!({ "x": x, "y": y }));
     }
 }

@@ -1,8 +1,9 @@
 // src/services/request.js
 import axios from 'axios';
+import { invoke } from '@tauri-apps/api/core';
 import { MoeAuthStore } from '../stores/store';
 import { getApiBaseUrl } from './apiBaseUrl';
-import { shouldUseInvoke, invokeApi } from './invokeBridge';
+import { shouldUseInvoke } from './invokeBridge';
 import { handleRiskResponse } from './riskVerify';
 
 // 创建一个 axios 实例
@@ -104,11 +105,45 @@ httpClient.interceptors.response.use(
     }
 );
 
+// ── Tauri invoke 通道：进程内直调 + 风控接入 ──────────────────
+// 对齐 axios 拦截器：把响应（含响应头 ssa-code）交给 handleRiskResponse，
+// 命中风控（error_code 20028 / ssa-code）时弹出安全验证并自动重试。
+const invokeApiResponse = async (method, url, { params = {}, data = null, auth = '' } = {}) => {
+    const resp = await invoke('api_request', {
+        method,
+        path: url,
+        params,
+        body: data,
+        auth: auth || null,
+    });
+    const status = resp?.status ?? 500;
+    const body = resp?.body;
+    const headers = resp?.headers ?? {};
+    if (status >= 200 && status < 300) {
+        return { status, data: body, headers, config: {} };
+    }
+    const error = new Error(`Request failed with status code ${status}`);
+    error.response = { status, data: body, headers, config: {} };
+    throw error;
+};
+
+const invokeWithRisk = async (method, url, { params = {}, data = null, auth = '' } = {}) => {
+    const response = await invokeApiResponse(method, url, { params, data, auth });
+    const riskResult = await handleRiskResponse(
+        response,
+        // 验证通过后重试原请求（invoke 直调，不走 HTTP）
+        () => invokeApiResponse(method, url, { params, data, auth }),
+        // 验证码信息/提交走原 axios（与 Electron 一致，避免再触发风控）
+        (riskUrl, riskParams) => httpClient.get(riskUrl, { params: riskParams, __skipRisk: true }),
+    );
+    return riskResult.handled ? riskResult.data : response.data;
+};
+
 // 封装 GET 请求
 export const get = async (url, params = {}, config = {}, onSuccess = null, onError = null) => {
     try {
         const response = shouldUseInvoke()
-            ? await invokeApi('GET', url, { params, auth: buildAuth() })
+            ? await invokeWithRisk('GET', url, { params, auth: buildAuth() })
             : await httpClient.get(url, { params, ...config });
         if (onSuccess) onSuccess(response);
         return response;
@@ -122,7 +157,7 @@ export const get = async (url, params = {}, config = {}, onSuccess = null, onErr
 export const post = async (url, data = {}, config = {}, onSuccess = null, onError = null) => {
     try {
         const response = shouldUseInvoke()
-            ? await invokeApi('POST', url, { params: config?.params || {}, data, auth: buildAuth() })
+            ? await invokeWithRisk('POST', url, { params: config?.params || {}, data, auth: buildAuth() })
             : await httpClient.post(url, data, config);
         if (onSuccess) onSuccess(response);
         return response;
@@ -136,7 +171,7 @@ export const post = async (url, data = {}, config = {}, onSuccess = null, onErro
 export const put = async (url, data = {}, config = {}, onSuccess = null, onError = null) => {
     try {
         const response = shouldUseInvoke()
-            ? await invokeApi('PUT', url, { params: config?.params || {}, data, auth: buildAuth() })
+            ? await invokeWithRisk('PUT', url, { params: config?.params || {}, data, auth: buildAuth() })
             : await httpClient.put(url, data, config);
         if (onSuccess) onSuccess(response);
         return response;
@@ -150,7 +185,7 @@ export const put = async (url, data = {}, config = {}, onSuccess = null, onError
 export const del = async (url, config = {}, onSuccess = null, onError = null) => {
     try {
         const response = shouldUseInvoke()
-            ? await invokeApi('DELETE', url, { params: config?.params || {}, auth: buildAuth() })
+            ? await invokeWithRisk('DELETE', url, { params: config?.params || {}, auth: buildAuth() })
             : await httpClient.delete(url, config);
         if (onSuccess) onSuccess(response);
         return response;
@@ -164,7 +199,7 @@ export const del = async (url, config = {}, onSuccess = null, onError = null) =>
 export const patch = async (url, data = {}, config = {}, onSuccess = null, onError = null) => {
     try {
         const response = shouldUseInvoke()
-            ? await invokeApi('PATCH', url, { params: config?.params || {}, data, auth: buildAuth() })
+            ? await invokeWithRisk('PATCH', url, { params: config?.params || {}, data, auth: buildAuth() })
             : await httpClient.patch(url, data, config);
         if (onSuccess) onSuccess(response);
         return response;

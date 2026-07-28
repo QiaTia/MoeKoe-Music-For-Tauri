@@ -271,6 +271,7 @@ pub fn run() {
             ipc::open_log_path,
             ipc::export_log,
             ipc::start_update_download,
+            ipc::ipc_invoke,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
