@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <div v-else-if="variant === 'search-grid'" class="skeleton-search-grid">
+    <div v-else-if="variant === 'search-grid'" :class="['skeleton-search-grid', { avatar }]">
         <div v-for="index in count" :key="index" class="search-grid-card">
             <div :class="['grid-cover', { avatar }]"></div>
             <div class="line"></div>
@@ -27,6 +27,22 @@
             <div class="compact-info">
                 <div class="line"></div>
                 <div class="line short"></div>
+            </div>
+        </div>
+    </div>
+
+    <div v-else-if="variant === 'detail-header'" class="skeleton-detail-header">
+        <div :class="['detail-cover', { avatar }]"></div>
+        <div class="detail-content">
+            <div class="detail-line title"></div>
+            <div class="detail-line subtitle"></div>
+            <div class="detail-line meta"></div>
+            <div class="detail-line description"></div>
+            <div class="detail-actions">
+                <div class="detail-button primary"></div>
+                <div class="detail-button secondary"></div>
+                <div class="detail-icon"></div>
+                <div class="detail-icon"></div>
             </div>
         </div>
     </div>
@@ -74,6 +90,10 @@ defineProps({
 .cover,
 .grid-cover,
 .compact-cover,
+.detail-cover,
+.detail-line,
+.detail-button,
+.detail-icon,
 .card-cover,
 .card-title,
 .card-text {
@@ -90,6 +110,7 @@ defineProps({
 .skeleton-card-grid,
 .skeleton-song-list,
 .skeleton-search-grid,
+.skeleton-detail-header,
 .skeleton-compact-grid {
     --skeleton-surface: #f5f5f5;
     --skeleton-surface-strong: #f0f0f0;
@@ -101,6 +122,7 @@ defineProps({
     &:is(.dark .skeleton-card-grid),
     &:is(.dark .skeleton-song-list),
     &:is(.dark .skeleton-search-grid),
+    &:is(.dark .skeleton-detail-header),
     &:is(.dark .skeleton-compact-grid) {
         --skeleton-surface: #1d1d1d;
         --skeleton-surface-strong: #242424;
@@ -112,25 +134,24 @@ defineProps({
 }
 
 .skeleton-card-grid {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+    gap: 18px;
 }
 
 .card {
     background-color: var(--skeleton-surface);
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 10px;
-    width: 200px;
     text-align: center;
-    height: 250px;
+    min-width: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .card-cover {
     width: 100%;
-    height: 200px;
-    border-radius: 8px;
+    aspect-ratio: 1;
+    border-radius: 6px;
 }
 
 .card-info {
@@ -162,7 +183,8 @@ defineProps({
     border-bottom: 1px solid var(--skeleton-border);
     border-radius: 5px;
     gap: 10px;
-    margin-bottom: 15px;
+    min-width: 0;
+    margin-bottom: 10px;
 }
 
 .cover {
@@ -176,6 +198,7 @@ defineProps({
     display: flex;
     flex-direction: column;
     gap: 8px;
+    min-width: 0;
 }
 
 .song-meta {
@@ -190,7 +213,7 @@ defineProps({
     height: 16px;
     border-radius: 3px;
     width: 100%;
-    margin-top: 5px;
+    margin-bottom: 7px;
 
     &.short {
         width: 60%;
@@ -204,33 +227,120 @@ defineProps({
 
 .skeleton-search-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+
+    &.avatar {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 15px;
+    }
 }
 
 .skeleton-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+    margin-bottom: 34px;
+}
+
+.skeleton-detail-header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 10px;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    min-height: 200px;
+}
+
+.detail-cover {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+
+    &.avatar {
+        border-radius: 50%;
+    }
+}
+
+.detail-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.detail-line {
+    height: 16px;
+    border-radius: 4px;
+
+    &.title {
+        width: min(520px, 72%);
+        height: 42px;
+        margin-bottom: 14px;
+    }
+
+    &.subtitle {
+        width: 220px;
+        margin-bottom: 10px;
+    }
+
+    &.meta {
+        width: 38%;
+        margin-bottom: 12px;
+    }
+
+    &.description {
+        width: 88%;
+        height: 44px;
+        margin-bottom: 16px;
+    }
+}
+
+.detail-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.detail-button {
+    height: 40px;
+    border-radius: 5px;
+
+    &.primary {
+        width: 120px;
+    }
+
+    &.secondary {
+        width: 96px;
+    }
+}
+
+.detail-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
 }
 
 .compact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    width: 250px;
-    height: 68px;
-    padding-left: 10px;
-    border-radius: 10px;
+    min-width: 0;
+    min-height: 64px;
+    padding: 7px 40px 7px 8px;
+    border-radius: 8px;
     background-color: var(--skeleton-surface);
+    box-shadow: 0 6px 18px rgba(31, 41, 55, 0.07);
 }
 
 .compact-cover {
     width: 50px;
     height: 50px;
+    flex: 0 0 auto;
     margin-right: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .compact-info {
@@ -244,22 +354,106 @@ defineProps({
 .search-grid-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     padding: 15px;
     background-color: var(--skeleton-surface-strong);
-    border-radius: 8px;
+    border-radius: 10px;
+    min-width: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .grid-cover {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    aspect-ratio: 1;
     border-radius: 8px;
-    margin: 0 auto 10px;
+    margin: 0 0 12px;
 
     &.avatar {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
+        aspect-ratio: auto;
         border-radius: 50%;
+        margin: 15px auto 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skeleton-card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+        gap: 12px;
+    }
+
+    .card {
+        padding: 8px;
+    }
+
+    .skeleton-compact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 28px;
+    }
+
+    .compact-item {
+        min-height: 62px;
+        padding: 7px 10px 7px 7px;
+    }
+
+    .compact-cover {
+        width: 48px;
+        height: 48px;
+    }
+
+    .skeleton-search-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+        &.avatar {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    .skeleton-detail-header {
+        gap: 14px;
+    }
+
+    .detail-cover {
+        width: 160px;
+        height: 160px;
+    }
+
+    .detail-line.title {
+        width: 88%;
+        height: 34px;
+    }
+
+    .detail-line.meta,
+    .detail-line.description {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .skeleton-compact-grid,
+    .skeleton-search-grid.avatar {
+        grid-template-columns: 1fr;
+    }
+
+    .skeleton-detail-header {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .detail-cover {
+        width: 136px;
+        height: 136px;
+    }
+
+    .detail-content {
+        width: 100%;
+    }
+
+    .detail-actions {
+        flex-wrap: wrap;
     }
 }
 </style>

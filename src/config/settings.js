@@ -62,6 +62,28 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
                 label: '搜索模式'
             },
             {
+                key: 'navigationMode',
+                defaultValue: 'top',
+                itemIcon: 'fas fa-bars',
+                selectionTitle: '导航方式',
+                options: [
+                    { displayText: '顶部', value: 'top' },
+                    { displayText: '左侧', value: 'side' }
+                ],
+                label: '导航方式'
+            },
+            {
+                key: 'playerBarLayout',
+                defaultValue: 'full',
+                itemIcon: 'fas fa-window-maximize',
+                selectionTitle: '播放栏布局',
+                options: [
+                    { displayText: '底部通栏', value: 'full' },
+                    { displayText: '右侧对齐', value: 'content' }
+                ],
+                label: '播放栏布局'
+            },
+            {
                 key: 'nativeTitleBar',
                 defaultValue: 'off',
                 itemIcon: 'fas fa-window-maximize',
@@ -83,15 +105,7 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
                 selectionTitle: t('zi-ti-she-zhi'),
                 keepOpen: true,
                 label: t('zi-ti-she-zhi'),
-                showRefreshHint: true,
-                refreshHintText: t('shua-xin-hou-sheng-xiao'),
                 helpLink: 'https://music.moekoe.cn/guide/font-settings.html'
-            },
-            {
-                key: 'fontUrl',
-                hidden: true,
-                defaultValue: '',
-                defaultDisplayText: t('mo-ren-zi-ti')
             },
             {
                 key: 'startupPage',
@@ -235,6 +249,16 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
                 ],
                 available: 'client',
                 label: t('xian-shi-zhuo-mian-ge-ci')
+            },
+            {
+                key: 'desktopLyricsFont',
+                defaultValue: '',
+                defaultDisplayText: t('mo-ren-zi-ti'),
+                itemIcon: 'fas fa-font',
+                selectionTitle: t('ge-ci-zi-ti-she-zhi'),
+                keepOpen: true,
+                label: t('ge-ci-zi-ti-she-zhi'),
+                helpLink: 'https://music.moekoe.cn/guide/font-settings.html'
             },
             {
                 key: 'statusBarLyrics',
@@ -439,6 +463,7 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
             },
             {
                 key: 'pwa',
+                available: 'web',
                 itemIcon: 'fas fa-mobile-alt',
                 label: t('pwa-app'),
                 customText: t('install'),
@@ -478,6 +503,20 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
                 available: 'client',
                 label: '日志',
                 customText: '操作'
+            },
+            {
+                key: 'backgroundThrottling',
+                defaultValue: 'off',
+                itemIcon: 'fas fa-bolt',
+                selectionTitle: '禁用后台节流',
+                options: [
+                    { displayText: '打开', value: 'on' },
+                    { displayText: '关闭', value: 'off' }
+                ],
+                available: 'client',
+                label: '禁用后台节流',
+                showRefreshHint: true,
+                refreshHintText: '重启后生效'    
             }
         ]
     }

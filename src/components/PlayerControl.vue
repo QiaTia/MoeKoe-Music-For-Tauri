@@ -15,6 +15,9 @@
             <div class="album-art" @click="toggleLyrics(currentSong.hash, currentTime)">
                 <img v-if="currentSong.img" :src="currentSong.img" alt="Album Art" />
                 <i v-else class="fas fa-music"></i>
+                <span class="album-art-hover-indicator" aria-hidden="true">
+                    <i class="fas fa-angle-double-up"></i>
+                </span>
             </div>
             <div class="song-info" @click="toggleLyrics(currentSong.hash, currentTime)">
                 <div class="song-title-row">
@@ -137,9 +140,9 @@
                 ></div>
             </template>
             <div class="lyrics-screen" :class="{ 'cover-background': lyricsBackground === 'cover' }">
-                <div class="close-btn">
-                    <i class="fas fa-chevron-down" @click="toggleLyrics(currentSong.hash, currentTime)"></i>
-                </div>
+                <button class="close-btn" type="button" aria-label="关闭歌词" @click="toggleLyrics(currentSong.hash, currentTime)">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
                 <FullscreenLyricsSettings v-model="fullscreenLyricsSettings" @change="handleFullscreenLyricsSettingsChange" />
 
                 <div class="lyrics-mode-btn" v-if="hasMultiLyricsMode" @click="switchLyricsMode" :title="lyricsMode === 'translation' ? t('qie-huan-dao-yin-yi') : t('qie-huan-dao-fan-yi')">
@@ -230,8 +233,8 @@
                 <div id="lyrics-container" @wheel="handleLyricsWheel">
                     <template v-if="lyricsData.length > 0">
                         <div v-if="lyricsDisplayMode === 'single'" id="lyrics" class="single-lyrics" :class="{ 'line-highlight-mode': lyricsHighlightMode === 'line' }"
-                            :style="{ fontSize: lyricsFontSize }">
-                            <transition name="single-lyric-fade">
+                            :style="{ fontSize: lyricsFontSize, fontFamily: lyricsFontFamily }">
+                            <transition name="single-lyric-fade" appear>
                                 <div class="line-group" v-if="currentSingleLyricsLine" :key="singleLyricsLineIndex">
                                     <div class="line" @click="handleLyricsClick(singleLyricsLineIndex)" :class="{ click: lyricsFlag, 'line-highlight': isCurrentLyricsLine(singleLyricsLineIndex), [lyricsAlign]: true }">
                                         <span v-for="(charData, charIndex) in currentSingleLyricsLine.characters" :key="charIndex" class="char"
@@ -245,8 +248,8 @@
                             </transition>
                         </div>
                         <div v-else id="lyrics" :class="{ 'line-highlight-mode': lyricsHighlightMode === 'line' }"
-                            :style="{ fontSize: lyricsFontSize, transform: `translateY(${scrollAmount ? scrollAmount + 'px' : '50%'})` }">
-                            <div class="line-group" v-for="(lineData, lineIndex) in lyricsData" :key="lineIndex">
+                            :style="{ fontSize: lyricsFontSize, fontFamily: lyricsFontFamily, transform: `translateY(${scrollAmount ? scrollAmount + 'px' : '50%'})` }">
+                            <div class="line-group" :class="{ 'current-line-group': currentLyricsLineIndex === lineIndex }" v-for="(lineData, lineIndex) in lyricsData" :key="lineIndex">
                                 <div class="line" @click="handleLyricsClick(lineIndex)" :class="{ click: lyricsFlag, 'line-highlight': isCurrentLyricsLine(lineIndex), [lyricsAlign]: true }">
                                     <span v-for="(charData, charIndex) in lineData.characters" :key="charIndex" class="char"
                                         :class="{ highlight: lyricsHighlightMode === 'char' && charData.highlighted }">
@@ -258,7 +261,7 @@
                             </div>
                         </div>
                     </template>
-                    <div v-else class="no-lyrics">{{ SongTips }}</div>
+                    <div v-else class="no-lyrics" :style="{ fontFamily: lyricsFontFamily }">{{ SongTips }}</div>
                 </div>
             </div>
         </div>
@@ -309,6 +312,14 @@ const fullscreenLyricsDefaultSettings = {
 };
 const fullscreenLyricsSettings = ref({ ...fullscreenLyricsDefaultSettings });
 const lyricsFontSize = computed(() => fullscreenLyricsSettings.value.fontSize);
+const desktopLyricsFont = ref('');
+const fontFamilyFallback = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif";
+const escapeFontFamily = (fontFamily) => String(fontFamily).replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+const lyricsFontFamily = computed(() => {
+    return desktopLyricsFont.value
+        ? `"${escapeFontFamily(desktopLyricsFont.value)}", ${fontFamilyFallback}`
+        : fontFamilyFallback;
+});
 const lyricsAlign = computed(() => fullscreenLyricsSettings.value.align);
 const lyricsBackground = computed(() => fullscreenLyricsSettings.value.background);
 const lyricsHighlightMode = computed(() => fullscreenLyricsSettings.value.highlightMode || 'char');
@@ -462,6 +473,7 @@ const updateCurrentTime = throttle(() => {
                     const lyricsPayload = hasLyricsData ? JSON.parse(JSON.stringify(lyricsData.value)) : [];
                     window.electron.ipcRenderer.send('lyrics-data', {
                         currentTime: audio.currentTime,
+                        playing: playing.value,
                         lyricsData: lyricsPayload,
                         currentSongHash: currentSong.value?.hash || '',
                         currentLyric: currentLine
@@ -470,6 +482,7 @@ const updateCurrentTime = throttle(() => {
                     // 如果序列化失败，只发送必要的数据
                     window.electron.ipcRenderer.send('lyrics-data', {
                         currentTime: audio.currentTime,
+                        playing: playing.value,
                         lyricsData: [],
                         currentSongHash: currentSong.value?.hash || '',
                         currentLyric: currentLine
@@ -979,6 +992,17 @@ const togglePlayPause = async () => {
         playing.value = false;
     } else {
         console.log('[PlayerControl] 开始播放');
+
+        try {
+            mediaSession.changeMediaSession(currentSong.value);
+            // 更新SMTC位置状态
+            if (audio.duration) {
+                mediaSession.updatePositionState(audio.currentTime, audio.duration, currentSpeed.value);
+            }
+        } catch(smtcErr) {
+            console.warn('[PlayerControl] 更新 SMTC 信息失败:', smtcErr);
+        }
+
         try {
             await audio.play();
             playing.value = true;
@@ -1240,6 +1264,21 @@ const handleLyricsWheel = (event) => {
     restoreLyricsScroll();
 };
 
+// 窗口尺寸变化后重新居中当前歌词行（scrollAmount 基于旧容器高度计算，需重算）
+let lyricsResizeTimer = null;
+const handleWindowResize = () => {
+    if (lyricsResizeTimer) clearTimeout(lyricsResizeTimer);
+    lyricsResizeTimer = setTimeout(() => {
+        lyricsResizeTimer = null;
+        if (!showLyrics.value || lyricsFlag.value || lyricsDisplayMode.value !== 'scroll') return;
+        const lyricsContainer = document.getElementById('lyrics-container');
+        const lineIndex = getCurrentLineIndex(audio.currentTime);
+        const lineElement = document.querySelectorAll('.line-group')[lineIndex];
+        if (!lyricsContainer || !lineElement) return;
+        scrollAmount.value = -lineElement.offsetTop + (lyricsContainer.offsetHeight / 2) - (lineElement.offsetHeight / 2);
+    }, 150);
+};
+
 const handleLyricsClick = (lineIndex) => {
     // if (!lyricsFlag.value) return;
     console.log('[PlayerControl] 点击歌词:', lineIndex);
@@ -1482,6 +1521,14 @@ const handleDocumentClick = (event) => {
     }
 };
 
+const syncDesktopLyricsFont = (settings = JSON.parse(localStorage.getItem('settings') || '{}')) => {
+    desktopLyricsFont.value = settings?.desktopLyricsFont || '';
+};
+
+const handleSettingsChange = (event) => {
+    syncDesktopLyricsFont(event.detail?.settings);
+};
+
 // 跳转到搜索页面搜索歌曲
 const searchSong = (songName) => {
     // 关闭全屏歌词
@@ -1503,6 +1550,7 @@ onMounted(() => {
     audioController.initAudio();
 
     const savedSettings = JSON.parse(localStorage.getItem('settings') || '{}');
+    syncDesktopLyricsFont(savedSettings);
     setAudioOutputDeviceWatcherEnabled(savedSettings.pauseOnAudioOutputChange === 'on');
     void applyAudioOutputDevice(savedSettings.audioOutputDevice);
 
@@ -1619,6 +1667,8 @@ onMounted(() => {
     // 添加事件监听
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('click', handleDocumentClick);
+    window.addEventListener('settings-change', handleSettingsChange);
+    window.addEventListener('resize', handleWindowResize);
 
     // 设置特定于PlayerControl的监听器
     audio.addEventListener('pause', () => {
@@ -1706,6 +1756,12 @@ onUnmounted(() => {
     // 清理键盘事件
     document.removeEventListener('keydown', handleKeyDown);
     document.removeEventListener('click', handleDocumentClick);
+    window.removeEventListener('settings-change', handleSettingsChange);
+    window.removeEventListener('resize', handleWindowResize);
+    if (lyricsResizeTimer) {
+        clearTimeout(lyricsResizeTimer);
+        lyricsResizeTimer = null;
+    }
 });
 
 // 对外暴露接口

@@ -34,6 +34,19 @@ export const onboardingGuideSteps = [
 
 export const onboardingGuideGroups = [
     {
+        key: 'userAgreement',
+        version: '1',
+        routeNames: ['Index'],
+        triggerSelector: '.user-agreement-guide',
+        steps: [
+            {
+                selector: '.user-agreement-guide',
+                title: '用户条款',
+                description: '首次使用前需要阅读并确认用户条款。同意后才会继续进入应用，开始认真阅读吧。'
+            }
+        ]
+    },
+    {
         key: 'main',
         version: ONBOARDING_GUIDE_VERSION,
         storageKey: ONBOARDING_GUIDE_STORAGE_KEY,
@@ -43,10 +56,15 @@ export const onboardingGuideGroups = [
     },
     {
         key: 'home',
-        version: '1',
+        version: '2',
         routeNames: ['Index'],
         triggerSelector: '.recommendations',
         steps: [
+            {
+                selector: '.recommend-title',
+                title: '切换推荐卡片样式',
+                description: '点击“推荐”标题可以在图片卡片和图标卡片之间切换，如果你不喜欢胡桃的话。'
+            },
             {
                 selector: '.recommendations .radio-card',
                 title: 'MoeKoe Radio',

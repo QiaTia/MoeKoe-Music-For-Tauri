@@ -15,17 +15,34 @@
                 <ExtensionManager v-if="section.title === t('cha-jian')" />
                 <div v-else class="settings-cards">
                     <div v-for="(item, itemIndex) in getVisibleItems(section)" :key="itemIndex" class="setting-card"
-                        @click="item.action ? item.action(item.helpLink) : openSelection(item.key, item.helpLink)">
+                        :class="{ 'setting-card--toggle': isToggleItem(item) }" @click="handleCardClick(item)">
                         <div class="setting-card-header">
-                            <i :class="item.itemIcon || 'fas fa-sliders-h'"></i>
-                            <span>{{ item.label }}</span>
-                            <span v-if="item.showRefreshHint && showRefreshHint[item.key]" class="refresh-hint">
-                                {{ item.refreshHintText }}
-                            </span>
+                            <div class="setting-card-title">
+                                <i :class="item.itemIcon || 'fas fa-sliders-h'"></i>
+                                <span>{{ item.label }}</span>
+                                <span v-if="item.showRefreshHint && showRefreshHint[item.key]" class="refresh-hint">
+                                    {{ item.refreshHintText }}
+                                </span>
+                            </div>
+                            <button v-if="item.helpLink" type="button" class="card-help-link"
+                                :title="$t('bang-zhu')" :aria-label="$t('bang-zhu')"
+                                @click.stop="openHelpLink(item.helpLink)">
+                                <i class="fas fa-question-circle"></i>
+                            </button>
                         </div>
                         <div class="setting-card-value">
-                            <span>{{ item.icon }}{{ item.customText || selectedSettings[item.key]?.displayText }}</span>
-                            <i class="fas fa-chevron-right"></i>
+                            <template v-if="isToggleItem(item)">
+                                <span>{{ item.icon }}{{ selectedSettings[item.key]?.displayText }}</span>
+                                <button type="button" class="setting-switch" :class="{ active: isToggleEnabled(item) }"
+                                    :aria-checked="isToggleEnabled(item)" role="switch"
+                                    @click.stop="toggleSetting(item)">
+                                    <span class="setting-switch-thumb"></span>
+                                </button>
+                            </template>
+                            <template v-else>
+                                <span>{{ item.icon }}{{ item.customText || selectedSettings[item.key]?.displayText }}</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </template>
                         </div>
                     </div>
                 </div>
@@ -43,14 +60,17 @@
             </div>
         </div>
 
-        <div v-if="isSelectionOpen" class="modal">
+        <teleport to="body">
+        <div v-if="isSelectionOpen" class="modal" @click.self="closeSelection">
             <div class="modal-content">
                 <a v-if="currentHelpLink" class="help-link" @click="openHelpLink" :title="$t('bang-zhu')"
                     :aria-label="$t('bang-zhu')">
                     <i class="fas fa-question-circle"></i>
                 </a>
                 <h3>{{ getSettingItem(selectionType)?.selectionTitle }}</h3>
-                <ul v-if="selectionType !== 'font' && selectionType !== 'audioOutputDevice'">
+                <input v-if="isFontSelection()" class="font-search" placeholder="搜索字体..."
+                    v-model="fontSearch" />
+                <ul v-if="!isFontSelection() && selectionType !== 'audioOutputDevice'">
                     <li v-for="option in getSettingItem(selectionType)?.options || []" :key="option.value"
                         @click="selectOption(option)">
                         {{ option.displayText }}
@@ -66,18 +86,21 @@
                     </li>
                 </ul>
 
-                <div v-if="selectionType === 'font'" class="api-settings-container" @focusout="handleFontFocusOut">
-                    <div class="api-setting-item">
-                        <label>{{ $t('zi-ti-url-di-zhi') }}</label>
-                        <input type="text" v-model="fontUrlInput" class="api-input"
-                            :placeholder="$t('qing-shu-ru-zi-ti-url-di-zhi')" />
-                    </div>
-                    <div class="api-setting-item">
-                        <label>{{ $t('zi-ti-ming-cheng') }}</label>
-                        <input type="text" v-model="fontFamilyInput" class="api-input"
-                            :placeholder="$t('qing-shu-ru-zi-ti-ming-cheng')" />
-                    </div>
-                </div>
+                <ul v-else-if="isFontSelection()" class="font-list">
+                    <li v-if="fontOptionsLoading">{{ $t('jia-zai-zhong') }}</li>
+                    <li v-else-if="fontOptions.length === 0">{{ $t('mo-ren-zi-ti') }}</li>
+                    <template v-else v-for="option in fontOptions" :key="option.value">
+                        <li v-if="!fontSearch || option.displayText.toLowerCase().includes(fontSearch.toLowerCase())"
+                            :style="{ fontFamily: option.value }"
+                            @click="selectFontOption(option)"
+                            v-html="fontSearch? option.displayText.replace(
+                                new RegExp(fontSearch, 'ig'),
+                                `<mark>${fontSearch}</mark>`
+                            ): option.displayText">
+                        </li>
+                    </template>
+                    
+                </ul>
 
                 <div v-if="selectionType === 'highDpi'" class="scale-slider-container">
                     <div class="scale-slider-label">{{ $t('suo-fang-yin-zi') }}: {{ dpiScale }} <span
@@ -146,9 +169,11 @@
                 <button @click="closeSelection">{{ $t('guan-bi-an-niu') }}</button>
             </div>
         </div>
+        </teleport>
 
         <!-- 快捷键设置弹窗 -->
-        <div v-if="showShortcutModal" class="shortcut-modal">
+        <teleport to="body">
+        <div v-if="showShortcutModal" class="shortcut-modal" @click.self="closeShortcutSettings">
             <div class="shortcut-modal-content">
                 <h3>{{ $t('kuai-jie-jian-she-zhi') }}</h3>
                 <div class="shortcut-list">
@@ -170,6 +195,7 @@
                 </div>
             </div>
         </div>
+        </teleport>
     </div>
 </template>
 
@@ -178,7 +204,7 @@ import { ref, onMounted, getCurrentInstance, onUnmounted, reactive } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { MoeAuthStore } from '../stores/store';
 import ExtensionManager from '@/components/ExtensionManager.vue';
-import { requestMicrophonePermission } from '../utils/utils';
+import { applyCustomFont, requestMicrophonePermission } from '../utils/utils';
 import { DEFAULT_API_BASE_URL, validateApiBaseUrl, testApiBaseUrl as testApiBaseUrlRequest } from '@/utils/apiBaseUrl';
 import { useSettingsConfig } from '@/config/settings';
 import { ONBOARDING_GUIDE_EVENT } from '@/config/onboardingGuide';
@@ -222,13 +248,16 @@ const selectedSettings = ref(createSelectedSettings(settingSections.value));
 const isSelectionOpen = ref(false);
 const currentHelpLink = ref('');
 const selectionType = ref('');
-const fontUrlInput = ref('');
-const fontFamilyInput = ref('');
+const fontOptions = ref([]);
+const fontOptionsLoading = ref(false);
+const fontSearch = ref('');
 
 const showRefreshHint = ref({});
 
 const audioOutputDeviceOptions = ref([]);
 const audioOutputDevicesLoading = ref(false);
+
+const isFontSelection = (type = selectionType.value) => ['font', 'desktopLyricsFont'].includes(type);
 
 const updateAudioOutputDeviceDisplayText = async (deviceId) => {
     if (!deviceId || deviceId === 'default') {
@@ -284,6 +313,48 @@ const loadAudioOutputDevices = async () => {
     }
 };
 
+const loadLocalFonts = async () => {
+    fontOptionsLoading.value = true;
+
+    try {
+        if (!window.queryLocalFonts) {
+            fontOptions.value = [];
+            return;
+        }
+
+        const fonts = await window.queryLocalFonts();
+        const familyMap = new Map();
+        for (const font of fonts) {
+            const family = font.family;
+            const name = font.fullName;
+            if (!family || !name) continue;
+
+            if (!familyMap.has(family) || name.length < familyMap.get(family).name.length) {
+                familyMap.set(family, {
+                    // 如果 fullName 太长了那就说明是变体名，直接用字族名代替
+                    name: name.length > family.length? family: name,
+                    family
+                });
+            }
+        }
+
+        const families = [...familyMap.values()].sort((a, b) =>
+            a.family.localeCompare(b.family)
+        );
+        fontOptions.value = [
+            { displayText: t('mo-ren-zi-ti'), value: '' },
+            ...families.map(f => ({
+                displayText: f.name === f.family? f.family: `${f.name} (${f.family})`,
+                value: f.family
+            }))
+        ];
+    } catch {
+        fontOptions.value = [];
+    } finally {
+        fontOptionsLoading.value = false;
+    }
+};
+
 const openSelection = (type, helpLink) => {
     isSelectionOpen.value = true;
     selectionType.value = type;
@@ -293,10 +364,7 @@ const openSelection = (type, helpLink) => {
         dpiScale.value = parseFloat(selectedSettings.value.dpiScale?.value || '1.0');
     }
 
-    if (type === 'font') {
-        fontUrlInput.value = selectedSettings.value.fontUrl?.value || '';
-        fontFamilyInput.value = selectedSettings.value.font?.value || '';
-    }
+    if (isFontSelection(type)) void loadLocalFonts();
 
     if (type === 'proxy') {
         proxyForm.url = selectedSettings.value.proxyUrl?.value || '';
@@ -332,6 +400,27 @@ const getSettingItem = (key) => {
 };
 
 const getVisibleItems = (section) => section.items.filter(item => !item.hidden && !getUnavailableSettingText(item));
+
+const isToggleItem = (item) => {
+    if (!item?.options || item.options.length !== 2) return false;
+    const values = item.options.map(option => option.value);
+    return values.includes('on') && values.includes('off');
+};
+
+const isToggleEnabled = (item) => selectedSettings.value[item.key]?.value === 'on';
+
+const handleCardClick = (item) => {
+    if (item.action) {
+        item.action(item.helpLink);
+        return;
+    }
+
+    if (isToggleItem(item)) {
+        return;
+    }
+
+    openSelection(item.key);
+};
 
 const markRefreshHint = (key) => {
     if (getSettingItem(key)?.showRefreshHint) {
@@ -437,6 +526,17 @@ const runSelectAction = async (item, option) => {
     await selectActions[item.selectAction]?.(option);
 };
 
+const toggleSetting = async (item) => {
+    const currentValue = selectedSettings.value[item.key]?.value;
+    const nextOption = item.options.find(option => option.value === (currentValue === 'on' ? 'off' : 'on'));
+    if (!nextOption) return;
+
+    selectedSettings.value[item.key] = { ...nextOption };
+    await runSelectAction(item, nextOption);
+    saveSettings();
+    markRefreshHint(item.key);
+};
+
 const selectOption = async (option) => {
     const settingItem = getSettingItem(selectionType.value);
     const unavailableText = getUnavailableSettingText(settingItem);
@@ -451,19 +551,16 @@ const selectOption = async (option) => {
     markRefreshHint(selectionType.value);
 };
 
-const updateFontSetting = () => {
-    const fontUrl = fontUrlInput.value || '';
-    const font = fontFamilyInput.value || '';
-    selectedSettings.value.fontUrl = { displayText: fontUrl || t('mo-ren-zi-ti'), value: fontUrl };
-    selectedSettings.value.font = { displayText: font || t('mo-ren-zi-ti'), value: font };
+const selectFontOption = (option) => {
+    const key = selectionType.value;
+    selectedSettings.value[key] = {
+        displayText: option.displayText,
+        value: option.value
+    };
+    if (key === 'font') applyCustomFont(option.value);
     saveSettings();
-    markRefreshHint('font');
-};
-
-const handleFontFocusOut = async (e) => {
-    const container = e.currentTarget;
-    if (container && e.relatedTarget && container.contains(e.relatedTarget)) return;
-    updateFontSetting();
+    closeSelection();
+    markRefreshHint(key);
 };
 
 const isElectron = () => {
@@ -475,6 +572,9 @@ const saveSettings = () => {
     );
     settingsToSave.shortcuts = shortcuts.value;
     localStorage.setItem('settings', JSON.stringify(settingsToSave));
+    window.dispatchEvent(new CustomEvent('settings-change', {
+        detail: { settings: settingsToSave }
+    }));
     isElectron() && window.electron.ipcRenderer.send('save-settings', JSON.parse(JSON.stringify(settingsToSave)));
 };
 
@@ -517,7 +617,7 @@ onMounted(() => {
                 selectedSettings.value[key] = { displayText: value, value: value };
                 continue;
             }
-            if (key === 'font' || key === 'fontUrl') {
+            if (isFontSelection(key)) {
                 const value = savedSettings[key] || '';
                 selectedSettings.value[key] = {
                     displayText: value || t('mo-ren-zi-ti'),
@@ -950,15 +1050,25 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
 
 .settings-page {
     display: flex;
-    height: 100vh;
+    height: var(--settings-page-height, calc(100vh - 160px));
+    min-height: 0;
     overflow: hidden;
     box-shadow: 0 0 30px $shadow-light;
     border-radius: 8px;
-    margin-bottom: -80px;
+}
+
+:global(main.app-main-scroll:has(.settings-page)) {
+    --settings-page-height: calc(100vh - 160px);
+    padding-bottom: 80px;
+}
+
+:global(main.side-navigation-main-content:has(.settings-page)) {
+    --settings-page-height: calc(100vh - 132px);
 }
 
 .settings-sidebar {
     width: 220px;
+    flex: 0 0 220px;
     box-shadow: 0 0 10px $shadow-light;
     padding: 20px 0;
     overflow-y: auto;
@@ -993,6 +1103,8 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
 
 .settings-content {
     flex: 1;
+    min-width: 0;
+    min-height: 0;
     padding: 20px;
     overflow-y: auto;
 }
@@ -1011,7 +1123,7 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
 
 .settings-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
     gap: 16px;
 
     .setting-card-header i {
@@ -1020,6 +1132,8 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
 }
 
 .setting-card {
+    min-width: 0;
+    box-sizing: border-box;
     border-radius: 12px;
     padding: 16px;
     box-shadow: 0 4px 16px $shadow-light;
@@ -1033,20 +1147,16 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
 
     &-header {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: space-between;
         margin-bottom: 12px;
-
-        i {
-            color: $primary;
-            margin-right: 10px;
-            font-size: 16px;
-        }
     }
 
     &-value {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        min-width: 0;
         padding: 8px 12px;
         border-radius: 6px;
         font-size: 14px;
@@ -1055,8 +1165,96 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
         i {
             color: #999;
             font-size: 12px;
+            flex: 0 0 auto;
+        }
+
+        span {
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
+
+    &--toggle {
+        .setting-card-value {
+            gap: 12px;
+            min-height: 38px;
+            padding: 4px 12px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.setting-card-title {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+
+    i {
+        color: $primary;
+        margin-right: 10px;
+        font-size: 16px;
+        flex: 0 0 auto;
+    }
+
+    > span {
+        min-width: 0;
+        word-break: break-word;
+    }
+}
+
+.card-help-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    margin-left: 12px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: $primary;
+    cursor: pointer;
+    flex: 0 0 auto;
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+.setting-switch {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    border: 0;
+    border-radius: 999px;
+    background: #d9d9d9;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s ease;
+    flex: 0 0 auto;
+
+    &.active {
+        background: $primary;
+    }
+}
+
+.setting-switch-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.setting-switch.active .setting-switch-thumb {
+    transform: translateX(18px);
 }
 
 .refresh-hint {
@@ -1076,7 +1274,7 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
     align-items: center;
     justify-content: center;
     animation: fadeIn 0.3s ease-in-out;
-    z-index: 9;
+    z-index: 999;
 }
 
 .modal-content {
@@ -1089,20 +1287,37 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     animation: slideIn 0.3s ease-in-out;
     position: relative;
-    max-height: 80%;
-    overflow-y: auto;
+    max-height: 50vh;
+    overflow: hidden;
     overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
 
     h3 {
+        flex: 0 0 auto;
         font-size: 20px;
         margin-bottom: 20px;
         color: #333;
     }
 
+    .font-search {
+        padding: 12px;
+        margin: 6px 0;
+        outline: 0;
+        border: 0;
+        border-radius: 8px;
+        font-size: 1em;
+    }
+
     ul {
+        flex: 1 1 auto;
+        min-height: 0;
+        max-height: 46vh;
+        overflow-y: auto;
         list-style: none;
-        padding: 0;
+        padding: 0 4px 0 0;
         margin: 0;
+        overscroll-behavior: contain;
     }
 
     li {
@@ -1119,6 +1334,7 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
     }
 
     button {
+        flex: 0 0 auto;
         margin-top: 20px;
         padding: 10px 20px;
         background-color: $primary;
@@ -1132,6 +1348,11 @@ $shadow-medium: rgba(0, 0, 0, 0.18);
         &:hover {
             background-color: $primary;
         }
+    }
+
+    > button {
+        align-self: center;
+        min-width: 96px;
     }
 }
 

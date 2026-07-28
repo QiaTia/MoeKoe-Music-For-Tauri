@@ -47,13 +47,17 @@
 - 🔴 Авторизация через аккаунт Kugou (QR-код/телефон/логин)
 - 📃 Отображение текстов песен
 - 📻 Ежедневные рекомендации
-- 🚫🤝 Никаких социальных функций
-- 🔗 Прямое подключение к официальным серверам, без сторонних API
-- ✔️ Автоматическое получение VIP ежедневно
+- 🔕 Никаких социальных функций
+- 🔗 Прямое подключение к официальным серверам
+- ✔️ Автоматическое получение VIP ежедневно, после входа вы VIP
 - 🎨 Переключение цветовых тем
 - 👋 Приветствие при запуске
 - ⚙️ Поддержка нескольких платформ
-- 🛠 Больше функций в разработке
+- 🧩 Суперсистема плагинов
+- 🧭 Персонализация макета
+- 🥚 Скрытые функции и система пасхалок
+- 🚀 система направляющих новичков
+- ✨ Больше возможностей для самостоятельного открытия
 
 ## 📢 Список задач
 - [x] 📺 Поддержка воспроизведения MV
@@ -66,7 +70,7 @@
 - [x] ⚙️ Оптимизация архитектуры
 - [x] 🎶 Добавление/удаление песен и плейлистов в избранное
 
-История изменений: [Commits](https://github.com/iAJue/MoeKoeMusic/commits/main/)
+[Посмотреть журнал изменений](http://music.moekoe.cn/changelog.html)
 
 ## 📦️ Установка
 
@@ -292,8 +296,10 @@ npm run build
 ![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/6.png)
 ![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/7.png)
 ![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/8.png)
-
+![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/9.png)
+![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/10.png)
+![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/11.png)
 
 ## 🗓️ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=iAJue/MoeKoeMusic&type=Date)](https://www.star-history.com/#iAJue/MoeKoeMusic&Date)
+[![Star History Chart](https://api.star-history.com/chart?repos=MoeKoeMusic/MoeKoeMusic&type=date&legend=top-left&sealed_token=unIw8k8CbengL1CW5XVoW-psSsTQHjp7X6Hchrr9WiEh4baeFZXunI95J9V8nnY8XTWrT8UuvRBXScevzXLRlhTID0-_V200iw9TFChclu1-28maCH3NutInvRl6nQ1jDMXpInpefFixeHYDr8BCn9fYqiNtZAoK30Vi46s7QPQQU80mJstgjgeqWjXf)](https://www.star-history.com/#iAJue/MoeKoeMusic&Date)

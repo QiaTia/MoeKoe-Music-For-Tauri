@@ -47,13 +47,17 @@
 - 🔴 クールドッグアカウント登録(スキャン/携帯/アカウント登録)
 - 📃 歌詞表示のサポート
 - 📻 毎日のおすすめ曲
-- 🚫🤝 ソーシャル機能なし
-- 🔗 サードパーティ製APIなしの公式サーバ直結
-- ✔️ VIPは毎日自動で受け取り、ログインするとVIPになります
+- 🔕 ソーシャル機能なし
+- 🔗 公式サーバー直結
+- ✔️ 毎日VIPを自動受け取り、ログインするとVIPになります
 - 🎨 テーマカラー切り替え
 - 👋 開始の挨拶
 - ⚙️ マルチプラットフォームサポート
-- 🛠 その他の機能開発中
+- 🧩 スーパーPluginシステム
+- 🧭 レイアウト個人設定
+- 🥚 隠し機能とイースターエッグシステム
+- 🚀 初心者誘導システム
+- ✨ その他の機能はあなたが探索
 
 ## 📢 Todo List
 - [x] 📺 MV再生をサポート
@@ -66,7 +70,7 @@
 - [x] ⚙️ システムアーキテクチャの最適化
 - [x] 🎶 曲、歌/コレクション、キャンセル
 
-更新ログは[Commits](https://github.com/iAJue/MoeKoeMusic/commits/main/)
+[更新履歴を見る](http://music.moekoe.cn/changelog.html)
 
 ## 📦️ インストール
 
@@ -298,8 +302,10 @@ APIソースコードは[MakcRe/KuGouMusicApi](https://github.com/MakcRe/KuGouMu
 ![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/6.png)
 ![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/7.png)
 ![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/8.png)
-
+![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/9.png)
+![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/10.png)
+![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/11.png)
 
 ## 🗓️ スター履歴
 
-[![Star History Chart](https://api.star-history.com/svg?repos=iAJue/MoeKoeMusic&type=Date)](https://www.star-history.com/#iAJue/MoeKoeMusic&Date)
+[![Star History Chart](https://api.star-history.com/chart?repos=MoeKoeMusic/MoeKoeMusic&type=date&legend=top-left&sealed_token=unIw8k8CbengL1CW5XVoW-psSsTQHjp7X6Hchrr9WiEh4baeFZXunI95J9V8nnY8XTWrT8UuvRBXScevzXLRlhTID0-_V200iw9TFChclu1-28maCH3NutInvRl6nQ1jDMXpInpefFixeHYDr8BCn9fYqiNtZAoK30Vi46s7QPQQU80mJstgjgeqWjXf)](https://www.star-history.com/#iAJue/MoeKoeMusic&Date)

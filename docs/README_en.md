@@ -48,13 +48,17 @@ I said on my personal introduction page that I particularly enjoy listening to m
 -  🔴  KuGou account login (scan code/phone/account login)
 -  📃  Support lyric display
 -  📻  Daily recommended songs
--  🚫🤝  No social function
--  🔗  Official server direct connection, without any third-party APIs
+-  🔕  No social function
+-  🔗  Official server direct connection
 -  ✔️  Automatically claim VIP every day, log in to become VIP
 -  🎨  Theme color switching
 -  👋  Initiate greetings
 -  ⚙️  Multi platform support
--  🛠  More features under development
+-  🧩  Super plugin system
+-  🧭  Personalized layout settings
+-  🥚  Hidden features and easter egg system
+-  🚀  Novice guide system
+-  ✨  More features are yours to explore
 
 ## 📢 Todo List
 - [x]  📺  Support MV playback
@@ -67,7 +71,7 @@ I said on my personal introduction page that I particularly enjoy listening to m
 - [x]  ⚙️  System architecture optimization
 - [x]  🎶  Songs, playlists/favorites, cancellation
 
-Please check the  for the update log [Commits](https://github.com/iAJue/MoeKoeMusic/commits/main/)
+[View changelog](http://music.moekoe.cn/changelog.html)
 
 ## 📦️ Installation
 
@@ -299,7 +303,10 @@ The API source code comes from [MakcRe/KuGouMusicApi](https://github.com/MakcRe/
 ![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/6.png)
 ![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/7.png)
 ![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/8.png)
+![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/9.png)
+![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/10.png)
+![image](https://github.com/iAJue/MoeKoeMusic/raw/main/images/11.png)
 
 ## 🗓️ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=iAJue/MoeKoeMusic&type=Date)](https://www.star-history.com/#iAJue/MoeKoeMusic&Date)
+[![Star History Chart](https://api.star-history.com/chart?repos=MoeKoeMusic/MoeKoeMusic&type=date&legend=top-left&sealed_token=unIw8k8CbengL1CW5XVoW-psSsTQHjp7X6Hchrr9WiEh4baeFZXunI95J9V8nnY8XTWrT8UuvRBXScevzXLRlhTID0-_V200iw9TFChclu1-28maCH3NutInvRl6nQ1jDMXpInpefFixeHYDr8BCn9fYqiNtZAoK30Vi46s7QPQQU80mJstgjgeqWjXf)](https://www.star-history.com/#iAJue/MoeKoeMusic&Date)

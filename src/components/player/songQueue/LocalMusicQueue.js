@@ -7,13 +7,19 @@ const getLocalSongHash = (item) => {
     return `local_${item.name}_${item.file.size}_${item.file.lastModified}`;
 };
 
-const getLocalSongCover = (item) => item.cover || item.img || './assets/images/ico.png';
+const isLocalFile = (file) => typeof Blob !== 'undefined' && toRaw(file) instanceof Blob;
+
+const getLocalSongCover = (item) => {
+    const coverBlob = toRaw(item.coverBlob);
+    if (isLocalFile(coverBlob) && coverBlob.size > 0) {
+        return URL.createObjectURL(coverBlob);
+    }
+    return item.cover || item.img || './assets/images/ico.png';
+};
 
 const LOCAL_MUSIC_DB_NAME = 'LocalMusicDB';
 const LOCAL_MUSIC_STORE_NAME = 'folderHandles';
 const LOCAL_SONG_KEY_PREFIX = 'localSong:';
-
-const isLocalFile = (file) => typeof Blob !== 'undefined' && toRaw(file) instanceof Blob;
 
 const openLocalMusicDB = () => {
     return new Promise((resolve, reject) => {
@@ -24,7 +30,11 @@ const openLocalMusicDB = () => {
 
         const request = indexedDB.open(LOCAL_MUSIC_DB_NAME);
         request.onerror = () => reject(request.error);
-        request.onsuccess = () => resolve(request.result);
+        request.onsuccess = () => {
+            const db = request.result;
+            db.onversionchange = () => db.close();
+            resolve(db);
+        };
         request.onupgradeneeded = (event) => {
             const db = event.target.result;
             if (!db.objectStoreNames.contains(LOCAL_MUSIC_STORE_NAME)) {
@@ -147,7 +157,10 @@ export default function useLocalMusicQueue(t, musicQueueStore, currentSong, time
             const localFile = await resolveLocalSongFile(localItem, localHash);
             if (!localFile) return { error: true };
             await saveLocalSongHandle(localHash, localItem);
-            const localCover = hasCurrentFile ? getLocalSongCover(localItem) : await readLocalSongCover(localFile);
+            const hasCachedCover = isLocalFile(localItem.coverBlob) || localItem.coverState === 'none';
+            const localCover = hasCurrentFile || hasCachedCover
+                ? getLocalSongCover(localItem)
+                : await readLocalSongCover(localFile);
             
             // 设置当前歌曲信息
             currentSong.value.author = localItem.author || '未知艺术家';
@@ -203,7 +216,7 @@ export default function useLocalMusicQueue(t, musicQueueStore, currentSong, time
             return { song };
         } catch (error) {
             console.error('[SongQueue] 获取本地音乐地址出错:', error);
-            currentSong.value.author = currentSong.value.name = t('huo-qu-ben-di-yin-le-di-zhi-shi-bai');
+            currentSong.value.author = currentSong.value.name = '获取本地音乐失败';
             // if (musicQueueStore.queue.length === 0) return { error: true };
             currentSong.value.author = t('3-miao-hou-zi-dong-qie-huan-xia-yi-shou');
 
@@ -224,17 +237,19 @@ export default function useLocalMusicQueue(t, musicQueueStore, currentSong, time
                 queueSongs = [...musicQueueStore.queue];
             }
             
+            const addedHashes = new Set(queueSongs.map(song => song.hash));
             const newSongs = [];
-            for (const [index, item] of localSongs.entries()) {
+            for (const item of localSongs) {
                 const localHash = getLocalSongHash(item);
-                if (!localHash) continue;
+                if (!localHash || addedHashes.has(localHash)) continue;
+                addedHashes.add(localHash);
 
                 const localFile = await resolveLocalSongFile(item, localHash);
                 if (!localFile) continue;
                 await saveLocalSongHandle(localHash, item);
 
                 const localSong = {
-                    id: queueSongs.length + index + 1,
+                    id: queueSongs.length + newSongs.length + 1,
                     hash: localHash,
                     name: item.displayName || item.name,
                     author: item.author || '未知艺术家',
