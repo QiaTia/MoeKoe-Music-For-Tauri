@@ -1,3 +1,8 @@
+### MoeKoe Music for Tauri
+
+原项目：[https://github.com/iAJue/MoeKoeMusic](https://github.com/iAJue/MoeKoeMusic) , 本项目只做了Tauri兼容、服务迁移到rust，前端无其他处理
+
+
 <br />
 <p align="center">
     <img src="https://github.com/iAJue/MoeKoeMusic/raw/main/images/hero.png" alt="hero" width="250" height="250">
