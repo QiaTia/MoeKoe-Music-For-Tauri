@@ -36,6 +36,9 @@
     "resources": {
       "../public/assets/sound/": "assets/sound/"
     },
+    "macOS": {
+      "infoPlist": "Info.plist"
+    },
     "windows": {
       "nsis": {
         "languages": [

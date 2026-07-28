@@ -1,0 +1,5 @@
+# 关闭 TLS 证书吊销检查，避免 Windows schannel 在校企/企业网络下
+# 因无法连接 OCSP/CRL 服务器而中断 crates.io 依赖下载。
+# 仅影响吊销列表校验���不影响证书本身的有效性校验。
+[http]
+check-revoke = false

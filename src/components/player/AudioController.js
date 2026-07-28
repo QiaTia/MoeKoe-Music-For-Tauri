@@ -2,8 +2,10 @@ import { ref } from 'vue';
 
 export default function useAudioController({ onSongEnd, updateCurrentTime }) {
     const audio = new Audio();
-    // 设置 crossOrigin 以支持 Web Audio API 跨域访问
-    audio.crossOrigin = 'anonymous';
+    // 注意：不要在创建时无条件设置 crossOrigin='anonymous'。
+    // 该属性会强制媒体以 CORS 模式加载，若音频服务器（如酷狗 CDN）未返回
+    // Access-Control-Allow-Origin 头，媒体会直接加载失败、播放报错。
+    // 仅在启用响度规格化（需要 Web Audio 处理音频）时才在 initAudio 中设置。
 
     const playing = ref(false);
     const isMuted = ref(false);
@@ -223,6 +225,10 @@ export default function useAudioController({ onSongEnd, updateCurrentTime }) {
         const savedSettings = JSON.parse(localStorage.getItem('settings') || '{}');
         const savedNormalization = savedSettings.loudnessNormalization || 'off';
         loudnessNormalizationEnabled.value = savedNormalization === 'on';
+
+        // 仅在启用响度规格化时才设置 crossOrigin（Web Audio 需跨域处理音频）。
+        // 默认不设置：否则跨域音频服务器若无 CORS 头，媒体加载会失败并播放报错。
+        audio.crossOrigin = loudnessNormalizationEnabled.value ? 'anonymous' : null;
 
         audio.addEventListener('ended', onSongEnd);
         audio.addEventListener('pause', handleAudioEvent);
