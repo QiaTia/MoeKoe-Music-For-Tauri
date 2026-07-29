@@ -77,7 +77,10 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
             let settings = arg(&args, 0);
             let auto_start = settings.get("autoStart").and_then(|v| v.as_str()).map(|s| s.to_string());
             let api_mode_on = settings.get("apiMode").and_then(|v| v.as_str()) == Some("on");
+            // 记录切换前的托盘菜单模式，用于判断是否需要重建托盘
+            let old_tray_mode = ctx.settings.setting_str("customTrayMenu");
             ctx.settings.set("settings", settings);
+            let new_tray_mode = ctx.settings.setting_str("customTrayMenu");
 
             // 开机自启（对齐 setLoginItemSettings）
             if let Some(auto) = auto_start {
@@ -94,6 +97,11 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
                 ctx.ws.start(app.clone());
             } else if !api_mode_on && ctx.ws.is_running() {
                 ctx.ws.stop();
+            }
+
+            // 托盘菜单模式变更：热重建（原生 ↔ 高级）
+            if old_tray_mode != new_tray_mode {
+                let _ = crate::tray::rebuild_tray(&app);
             }
         }
         "clear-settings" => {

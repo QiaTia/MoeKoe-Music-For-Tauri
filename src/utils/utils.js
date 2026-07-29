@@ -338,3 +338,35 @@ export const share = (songName, id, type = 0, songDesc = '') => {
         i18n.global.t('kou-ling-yi-fu-zhi,kuai-ba-ge-qu-fen-xiang-gei-peng-you-ba')
     );
 };
+
+/**
+ * @description 日期时间格式化函数
+ * @param { Date } t DateT对象
+ * @return { string }
+ */
+export function formatDateTime(t = new Date(), format = 'yyyy-MM-dd HH:mm:ss') {
+  const o = {
+    'M+': t.getMonth() + 1,
+    'd+': t.getDate(),
+    'h+': t.getHours() % 12 === 0 ? 12 : t.getHours() % 12, // 小时
+    'H+': t.getHours(), // 小时
+    'm+': t.getMinutes(), // 分
+    's+': t.getSeconds(), // 秒
+    'q+': Math.floor((t.getMonth() + 3) / 3), // 季度
+    S: t.getMilliseconds(), // 毫秒
+    a: t.getHours() < 12 ? '上午' : '下午', // 上午/下午
+    A: t.getHours() < 12 ? 'AM' : 'PM', // AM/PM
+  };
+  if (/(y+)/.test(format)) {
+    format = format.replace(RegExp.$1, (t.getFullYear() + '').substr(4 - RegExp.$1.length));
+  }
+  for (const k in o) {
+    if (new RegExp('(' + k + ')').test(format)) {
+      format = format.replace(
+        RegExp.$1,
+        RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length),
+      );
+    }
+  }
+  return format;
+}

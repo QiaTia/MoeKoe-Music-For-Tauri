@@ -261,20 +261,47 @@ pub fn move_lyrics_window(
 }
 
 /// 创建 MV 窗口加载指定 URL
+///
+/// 修复：
+/// - `.decorations(true)` 恢复原生标题栏 → macOS/Windows 上有原生关闭按钮（之前 frameless 导致 Mac 无法关闭）
+/// - `.transparent(false)` → 之前 transparent=true 在 WebView2 播放视频后关闭会产生透明黑框残留
+/// 从 MV 内部路由 URL 的 fragment query 中解析视频标题，例如
+/// `http://localhost:8080/#/video?hash=..&title=视频名`。
+/// 解析失败则回退到固定标题，避免原生标题栏为空。
+fn mv_window_title(url: &str) -> String {
+    url::Url::parse(url)
+        .ok()
+        .and_then(|u| u.fragment().map(|f| f.to_string()))
+        .and_then(|f| url::Url::parse(&format!("http://localhost/{f}")).ok())
+        .and_then(|u| {
+            u.query_pairs()
+                .find(|(k, _)| k == "title")
+                .map(|(_, v)| v.to_string())
+        })
+        .filter(|t| !t.is_empty())
+        .unwrap_or_else(|| "MoeKoe MV".to_string())
+}
+
+/// - 已存在窗口改用 `navigate` 而非 close+rebuild，避免同一 label 旧窗口未释放完就建新的导致竞态残影
 pub fn create_mv_window(app: &AppHandle, url: &str) -> Result<(), String> {
-    // 已存在则复用导航
+    let parsed: url::Url = url.parse().map_err(|e| format!("invalid url: {e}"))?;
+    let title = mv_window_title(url);
+
+    // 已存在则就地导航并聚焦（避免 close+rebuild 的销毁竞态）
     if let Some(win) = app.get_webview_window(MV) {
-        let _ = win.close();
+        let _ = win.navigate(parsed);
+        let _ = win.set_title(&title);
+        let _ = win.set_focus();
+        return Ok(());
     }
 
-    let parsed: url::Url = url.parse().map_err(|e| format!("invalid url: {e}"))?;
     let (screen_w, screen_h) = primary_work_area(app);
 
     let builder = WebviewWindowBuilder::new(app, MV, WebviewUrl::External(parsed))
         .title("MoeKoe MV")
         .inner_size((screen_w * 0.8).min(1280.0), (screen_h * 0.8).min(720.0))
-        .decorations(false)
-        .transparent(true)
+        .decorations(true)
+        .transparent(false)
         .center();
 
     // Windows WebView2: 允许混合内容
@@ -283,6 +310,7 @@ pub fn create_mv_window(app: &AppHandle, url: &str) -> Result<(), String> {
 
     let window = builder.build().map_err(|e| e.to_string())?;
 
+    let _ = window.set_title(&title);
     let _ = window.show();
     Ok(())
 }

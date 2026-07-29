@@ -168,7 +168,7 @@
 <script setup>
 import { computed, ref, onMounted } from 'vue';
 import { get } from '../utils/request';
-import { getProfileBgColor, ensureHttps } from '../utils/utils';
+import { getProfileBgColor, ensureHttps, formatDateTime } from '../utils/utils';
 import { MoeAuthStore } from '../stores/store';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
@@ -415,7 +415,7 @@ const signIn = async () => {
 }
 const getVip = async () => {
     try {
-        const todayKey = new Date().toLocaleDateString().split('T')[0];
+        const todayKey = formatDateTime(new Date(), 'yyyy-MM-dd');
         const vipResponse = await get('/youth/day/vip', {
             receive_day: todayKey
         });

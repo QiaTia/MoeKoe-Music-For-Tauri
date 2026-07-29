@@ -1,0 +1,48 @@
+{
+  // 项目根目录下的 JS 智能提示与别名配置（JSONC，支持注释）
+  // 别名需与 vite.config.js 中的 resolve.alias 保持一致
+  "compilerOptions": {
+    // ── 模块解析 / 路径别名 ──────────────────────────────
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    // ── 语言与模块目标（与 Vite 7 匹配）──────────────────
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "preserve",
+    "types": ["vite/client", "node"],
+
+    // ── 允许解析 JSON 与模块化 ───────────────────────────
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+
+    // ── JS 支持 ─────────────────────────────────────────
+    "allowJs": true,
+
+    // 粗略检测 JS 错误：
+    //  - 开启语法检查 + 基础语义检查（未声明变量、重复声明等明显错误）
+    //  - checkJs 设为 false，不做完整类型推导，避免大量类型误报
+    //  - 若希望同时捕获类型错误，把 checkJs 改为 true
+    "checkJs": false,
+    "noSemanticValidation": false,
+    "noSyntaxValidation": false
+  },
+
+  // 纳入语言服务的源码范围
+  "include": ["src/**/*", "scripts/**/*"],
+
+  // 排除构建产物、依赖与本地 Rust 编译目录，避免误报与卡顿
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src-tauri",
+    "rust-api",
+    "**/target"
+  ]
+}
