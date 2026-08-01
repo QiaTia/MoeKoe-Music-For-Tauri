@@ -1,6 +1,7 @@
 import { ref } from 'vue';
 import { get } from '../../utils/request';
 import { MoeAuthStore } from '../../stores/store';
+import { formatDateTime } from '@/utils/utils';
 
 
 export function useHelpers(t) {
@@ -79,7 +80,7 @@ export function useHelpers(t) {
     const MoeAuth = MoeAuthStore();
     if (!MoeAuth.isAuthenticated) return;
 
-    const todayKey = new Date().toISOString().split('T')[0];
+    const todayKey = formatDateTime(new Date(), 'yyyy-MM-dd');
     const lastVipDate = localStorage.getItem('lastVipRequestDate');
 
     if (lastVipDate === todayKey) {

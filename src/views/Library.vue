@@ -10,7 +10,7 @@
                 <div class="profile-background-bottom"></div>
                 <div class="profile-background-right"></div>
                 <div class="profile-info">
-                    <img class="profile-pic" :src="user.pic" :alt="$t('yong-hu-tou-xiang')" />
+                    <img class="profile-pic" :src="ensureHttps(user.pic)" :alt="$t('yong-hu-tou-xiang')" />
                     <div class="user-details">
                         <div class="user-name-row">
                             <h2 class="user-name">{{ user.nickname }}</h2>
@@ -144,7 +144,7 @@
                 v-for="(artist, index) in (selectedCategory === 3 ? followedArtists : selectedCategory === 4 ? collectedFriends : [])"
                 :key="index" @click="goToArtistDetail(artist)">
                 <div class="album-image-wrap">
-                    <img :src="artist.pic" class="album-image" />
+                    <img :src="ensureHttps(artist.pic)" class="album-image" />
                 </div>
                 <div class="album-info">
                     <h3>{{ artist.nickname }}</h3>
@@ -168,7 +168,7 @@
 <script setup>
 import { computed, ref, onMounted } from 'vue';
 import { get } from '../utils/request';
-import { getProfileBgColor } from '../utils/utils';
+import { getProfileBgColor, ensureHttps, formatDateTime } from '../utils/utils';
 import { MoeAuthStore } from '../stores/store';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
@@ -415,7 +415,7 @@ const signIn = async () => {
 }
 const getVip = async () => {
     try {
-        const todayKey = new Date().toISOString().split('T')[0];
+        const todayKey = formatDateTime(new Date(), 'yyyy-MM-dd');
         const vipResponse = await get('/youth/day/vip', {
             receive_day: todayKey
         });

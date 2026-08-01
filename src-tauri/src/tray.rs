@@ -1,11 +1,11 @@
 //! 系统托盘：菜单 + 点击行为，对齐 electron/appServices.js createTray。
 
-use crate::settings::t;
+use crate::settings::{t, SettingsStore};
 use crate::windows::MAIN;
 use tauri::{
-    menu::{MenuBuilder, MenuItemBuilder},
+    menu::{Menu, MenuBuilder, MenuItem, MenuItemBuilder},
     tray::{MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent},
-    AppHandle, Emitter, Manager,
+    AppHandle, Emitter, Manager, Runtime,
 };
 use tauri_plugin_opener::OpenerExt;
 
@@ -38,21 +38,7 @@ pub fn create_tray(app: &AppHandle) -> tauri::Result<()> {
     let ctx = app.state::<crate::AppCtx>();
     let store = &ctx.settings;
 
-    let item = |id: &str, key: &str| MenuItemBuilder::with_id(id, t(store, key)).build(app);
-
-    let menu = MenuBuilder::new(app)
-        .item(&item("home", "project-home")?)
-        .item(&item("bug", "report-bug")?)
-        .separator()
-        .item(&item("prev", "prev-track")?)
-        .item(&item("pause", "pause")?)
-        .item(&item("next", "next-track")?)
-        .separator()
-        .item(&item("update", "check-updates")?)
-        .item(&item("restart", "restart-app")?)
-        .item(&item("showhide", "show-hide")?)
-        .item(&item("quit", "quit")?)
-        .build()?;
+    let menu = build_tray_menu(app, store)?;
 
     let mut builder = TrayIconBuilder::with_id(TRAY_ID)
         .menu(&menu)
@@ -133,7 +119,54 @@ pub fn create_tray(app: &AppHandle) -> tauri::Result<()> {
     Ok(())
 }
 
-/// set-tray-title：更新托盘 tooltip + 主窗口标题
+/// 依据 `customTrayMenu` 设置构建托盘菜单：
+/// - "custom"（高级）：完整菜单（主页/反馈 · 播放控制 · 更新/重启/显示隐藏/退出）
+/// - 其它（原生）：精简菜单（主页/反馈 · 显示隐藏/退出）
+///
+/// 说明：Tauri 在 Windows/Linux 下没有"系统原生托盘菜单"概念，托盘菜单本就是应用自定义的，
+/// 这里的「原生」理解为精简菜单，而非调用系统菜单。
+pub fn build_tray_menu<R: Runtime>(
+    app: &AppHandle<R>,
+    store: &SettingsStore,
+) -> tauri::Result<Menu<R>> {
+    let item = |id: &str, key: &str| -> tauri::Result<MenuItem<R>> {
+        MenuItemBuilder::with_id(id, t(store, key)).build(app)
+    };
+
+    let mut builder = MenuBuilder::new(app);
+    if store.setting_str("customTrayMenu").as_deref() == Some("custom") {
+        builder = builder
+            .item(&item("home", "project-home")?)
+            .item(&item("bug", "report-bug")?)
+            .separator()
+            .item(&item("prev", "prev-track")?)
+            .item(&item("pause", "pause")?)
+            .item(&item("next", "next-track")?)
+            .separator()
+            .item(&item("update", "check-updates")?)
+            .item(&item("restart", "restart-app")?)
+            .item(&item("showhide", "show-hide")?)
+            .item(&item("quit", "quit")?);
+    } else {
+        builder = builder
+            .item(&item("home", "project-home")?)
+            .item(&item("bug", "report-bug")?)
+            .separator()
+            .item(&item("showhide", "show-hide")?)
+            .item(&item("quit", "quit")?);
+    }
+    builder.build()
+}
+
+/// 设置项 `customTrayMenu` 变更后，用新菜单热替换托盘菜单（点击/图标事件处理器保持不变）。
+pub fn rebuild_tray<R: Runtime>(app: &AppHandle<R>) -> tauri::Result<()> {
+    let ctx = app.state::<crate::AppCtx>();
+    let menu = build_tray_menu(app, &ctx.settings)?;
+    if let Some(tray) = app.tray_by_id(TRAY_ID) {
+        tray.set_menu(Some(menu))?;
+    }
+    Ok(())
+}
 pub fn set_tray_title(app: &AppHandle, title: &str) {
     let ctx = app.state::<crate::AppCtx>();
     let tooltip = format!("{}{}", t(&ctx.settings, "now-playing"), title);

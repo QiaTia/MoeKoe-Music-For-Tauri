@@ -101,6 +101,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
+import { ensureHttps } from '@/utils/utils';
 import AlbumGrid from './AlbumGrid.vue';
 import PlaylistGrid from './PlaylistGrid.vue';
 import ArtistGrid from './ArtistGrid.vue';
@@ -171,7 +172,7 @@ const visibleSectionCount = computed(() => {
 
 const getImage = (url, size) => {
     if (!url) return './assets/images/ico.png';
-    return url.replace('{size}', size);
+    return ensureHttps(url.replace('{size}', size));
 };
 
 const getSingerNames = (singers = []) => {

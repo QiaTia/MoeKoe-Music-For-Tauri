@@ -87,9 +87,19 @@ export const applyColorTheme = (theme) => {
 };
 
 
+/**
+ * 将 HTTP 图片 URL 升级为 HTTPS，避免 Tauri 生产环境下
+ * 被混合内容策略 / macOS ATS 拦截导致图片无法展示。
+ */
+export const ensureHttps = (url) => {
+    if (typeof url !== 'string' || !url) return url;
+    // 仅对 http:// 开头的远程资源 URL 做升级（排除 data: / blob: / 相对路径）
+    return url.replace(/^http:\/\//, 'https://');
+};
+
 export const getCover = (coverUrl, size) => {
     if (!coverUrl) return './assets/images/ico.png';
-    return coverUrl.replace("{size}", size);
+    return ensureHttps(coverUrl.replace("{size}", size));
 };
 
 export const getProfileBgColor = (src, tone = 0.52) => new Promise((resolve, reject) => {
@@ -176,6 +186,13 @@ export const formatTimestampToAgo = (timestamp) => {
 
 export const requestMicrophonePermission = async () => {
     if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) return false;
+
+    // Tauri WebView (macOS WKWebView / Windows WebView2) 不支持 getUserMedia 的
+    // 媒体捕获权限弹窗，调用会静默失败。在 Tauri 环境下跳过权限申请，
+    // 直接返回 true —— enumerateDevices 本身不需要麦克风权限即可列出设备。
+    if (typeof window !== 'undefined' && window.__TAURI_INTERNALS__) {
+        return true;
+    }
 
     try {
         if (navigator.permissions?.query) {
@@ -321,3 +338,35 @@ export const share = (songName, id, type = 0, songDesc = '') => {
         i18n.global.t('kou-ling-yi-fu-zhi,kuai-ba-ge-qu-fen-xiang-gei-peng-you-ba')
     );
 };
+
+/**
+ * @description 日期时间格式化函数
+ * @param { Date } t DateT对象
+ * @return { string }
+ */
+export function formatDateTime(t = new Date(), format = 'yyyy-MM-dd HH:mm:ss') {
+  const o = {
+    'M+': t.getMonth() + 1,
+    'd+': t.getDate(),
+    'h+': t.getHours() % 12 === 0 ? 12 : t.getHours() % 12, // 小时
+    'H+': t.getHours(), // 小时
+    'm+': t.getMinutes(), // 分
+    's+': t.getSeconds(), // 秒
+    'q+': Math.floor((t.getMonth() + 3) / 3), // 季度
+    S: t.getMilliseconds(), // 毫秒
+    a: t.getHours() < 12 ? '上午' : '下午', // 上午/下午
+    A: t.getHours() < 12 ? 'AM' : 'PM', // AM/PM
+  };
+  if (/(y+)/.test(format)) {
+    format = format.replace(RegExp.$1, (t.getFullYear() + '').substr(4 - RegExp.$1.length));
+  }
+  for (const k in o) {
+    if (new RegExp('(' + k + ')').test(format)) {
+      format = format.replace(
+        RegExp.$1,
+        RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length),
+      );
+    }
+  }
+  return format;
+}

@@ -32,6 +32,23 @@ export function installTauriShim() {
 
     const platform = detectPlatform();
 
+    // ---- 屏蔽 WebView 原生右键菜单与资源拖拽 ----
+    // 用 capture 阶段全局拦截默认行为；不影响 Vue 的 @contextmenu 自绘菜单
+    // （preventDefault 只阻止浏览器默认动作，不阻断事件传播，Vue 监听器照常运行）。
+    // 应用内无 drag-and-drop 代码，dragstart 全局拦截安全。
+    if (typeof document !== 'undefined') {
+        document.addEventListener(
+            'contextmenu',
+            (e) => e.preventDefault(),
+            { capture: true }
+        );
+        document.addEventListener(
+            'dragstart',
+            (e) => e.preventDefault(),
+            { capture: true }
+        );
+    }
+
     // ---- 事件桥 ----
     // channel → Map<原始listener, { unlisten: Promise<fn>, once: boolean }>
     const listenerRegistry = new Map();

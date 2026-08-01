@@ -1,5 +1,6 @@
 <template>
     <header class="app-header">
+        <div class="header-drag-region" data-tauri-drag-region></div>
         <nav class="navigation">
             <div class="navigation">
                 <button class="nav-arrow" @click="goBack" :disabled="!canGoBack">
@@ -29,7 +30,7 @@
                     >
                 </div>
                 <div class="profile" @click="toggleProfile">
-                    <img :src="MoeAuth.UserInfo ? MoeAuth.UserInfo.pic : './assets/images/profile.jpg'" alt="Profile Picture">
+                    <img :src="MoeAuth.UserInfo ? ensureHttps(MoeAuth.UserInfo.pic) : './assets/images/profile.jpg'" alt="Profile Picture">
                     <div v-if="showProfile" class="profile-menu">
                         <ul>
                             <li>
@@ -76,6 +77,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { MoeAuthStore } from '../stores/store';
+import { ensureHttps } from '../utils/utils';
 import { useI18n } from 'vue-i18n';
 import AppUpdateDialog from './AppUpdateDialog.vue';
 import { ABOUT_DISCLAIMER_KEYS, DISCLAIMER_BANNER_SRC } from '../config/disclaimer';
@@ -220,6 +222,12 @@ const handleUpdateEntryClick = () => {
         --header-nav-disabled: #4a4a4a;
         --header-nav-hover-bg: rgba(255, 255, 255, 0.08);
     }
+}
+
+.header-drag-region {
+    position: absolute;
+    inset: 0 120px 0 0;
+    z-index: 0;
 }
 
 .navigation {

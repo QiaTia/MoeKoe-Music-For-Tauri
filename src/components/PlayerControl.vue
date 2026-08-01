@@ -13,7 +13,7 @@
         </div>
         <div class="player-bar">
             <div class="album-art" @click="toggleLyrics(currentSong.hash, currentTime)">
-                <img v-if="currentSong.img" :src="currentSong.img" alt="Album Art" />
+                <img v-if="currentSong.img" :src="ensureHttps(currentSong.img)" alt="Album Art" />
                 <i v-else class="fas fa-music"></i>
                 <span class="album-art-hover-indicator" aria-hidden="true">
                     <i class="fas fa-angle-double-up"></i>
@@ -155,14 +155,14 @@
                             <div v-if="coverMode === 'vinyl'" key="vinyl" class="vinyl-player">
                                 <!-- 唱片播放器模式 -->
                                 <div class="vinyl-disc" :class="{ 'rotating': playing }">
-                                    <img :src="currentSong?.img || './assets/images/!.png'" alt="Album Art" class="vinyl-cover" />
+                                    <img :src="ensureHttps(currentSong?.img || './assets/images/!.png')" alt="Album Art" class="vinyl-cover" />
                                 </div>
                                 <div class="tonearm" :class="{ 'playing': playing }"></div>
                             </div>
                             <div v-else key="square" class="album-art-large">
                                 <!-- 普通封面模式 -->
                                 <img v-if="easterEggImage" :src="easterEggImage.src" :class="easterEggClass" alt="Easter Egg" />
-                                <img :src="currentSong?.img || './assets/images/!.png'" alt="Album Art" />
+                                <img :src="ensureHttps(currentSong?.img || './assets/images/!.png')" alt="Album Art" />
                             </div>
                         </transition>
                     </div>
@@ -280,7 +280,7 @@ import PlaylistSelectModal from './PlaylistSelectModal.vue';
 import QueueList from './QueueList.vue';
 import FullscreenLyricsSettings from './FullscreenLyricsSettings.vue';
 import { useRouter } from 'vue-router';
-import { getCover, getAudioOutputDeviceSignature, share } from '../utils/utils';
+import { getCover, ensureHttps, getAudioOutputDeviceSignature, share } from '../utils/utils';
 import { get } from '../utils/request';
 
 // 从统一入口导入所有模块
@@ -324,7 +324,7 @@ const lyricsAlign = computed(() => fullscreenLyricsSettings.value.align);
 const lyricsBackground = computed(() => fullscreenLyricsSettings.value.background);
 const lyricsHighlightMode = computed(() => fullscreenLyricsSettings.value.highlightMode || 'char');
 const lyricsDisplayMode = computed(() => fullscreenLyricsSettings.value.displayMode || 'scroll');
-const lyricsDefaultBackgroundImage = computed(() => currentSong.value?.img || 'https://random.MoeJue.cn/randbg');
+const lyricsDefaultBackgroundImage = computed(() => ensureHttps(currentSong.value?.img) || 'https://random.MoeJue.cn/randbg');
 const lyricsCoverImages = ref([]);
 const lyricsBackgroundImageIndex = ref(0);
 const lyricsBackgroundImages = computed(() => {
@@ -583,7 +583,7 @@ let lyricsCoverImagesRequestId = 0;
 
 const normalizeLyricsCoverImageUrl = (url) => {
     if (typeof url !== 'string' || !/^https?:\/\//.test(url)) return '';
-    return url.replace(/\{size\}/g, '1080');
+    return ensureHttps(url.replace(/\{size\}/g, '1080'));
 };
 
 const collectLyricsCoverImageUrls = (imgs) => {
@@ -1474,7 +1474,13 @@ const setAudioOutputDeviceWatcherEnabled = (enabled) => {
 
 let audioOutputDeviceWatchChangeHandler = null;
 
-const applyAudioOutputDevice = async (deviceId) => {
+const applyAudioOutputDevice = async (deviceId, { silent = false } = {}) => {
+    // Tauri WebView (WKWebView / WebView2) 下 setSinkId 不可用或不生效，直接跳过
+    if (typeof window !== 'undefined' && window.__TAURI_INTERNALS__) {
+        console.log('[PlayerControl] Tauri 环境不支持切换音频输出设备，已跳过');
+        return false;
+    }
+
     if (typeof audio?.setSinkId !== 'function') {
         console.warn('[PlayerControl] 当前环境不支持切换音频输出设备（setSinkId不可用）');
         return false;
@@ -1487,7 +1493,9 @@ const applyAudioOutputDevice = async (deviceId) => {
         return true;
     } catch (error) {
         console.warn('[PlayerControl] 切换音频输出设备失败:', error);
-        window.$modal.alert('切换音频输出设备失败,请刷新页面后重试');
+        if (!silent) {
+            window.$modal.alert('切换音频输出设备失败,请刷新页面后重试');
+        }
         return false;
     }
 };
@@ -1552,7 +1560,7 @@ onMounted(() => {
     const savedSettings = JSON.parse(localStorage.getItem('settings') || '{}');
     syncDesktopLyricsFont(savedSettings);
     setAudioOutputDeviceWatcherEnabled(savedSettings.pauseOnAudioOutputChange === 'on');
-    void applyAudioOutputDevice(savedSettings.audioOutputDevice);
+    void applyAudioOutputDevice(savedSettings.audioOutputDevice, { silent: true });
 
     audioOutputDeviceWatchChangeHandler = (event) => {
         const enabled = !!event?.detail?.enabled;

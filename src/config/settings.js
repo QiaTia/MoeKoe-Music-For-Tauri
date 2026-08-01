@@ -92,7 +92,7 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
                     { displayText: t('da-kai'), value: 'on' },
                     { displayText: t('guan-bi'), value: 'off' }
                 ],
-                available: 'client',
+                available: 'win32',
                 label: t('native-title-bar'),
                 showRefreshHint: true,
                 refreshHintText: t('zhong-qi-hou-sheng-xiao')

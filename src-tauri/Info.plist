@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict>
-    <!--
-      允许 WebView 加载非 HTTPS（HTTP）资源。
-      macOS 的 App Transport Security (ATS) 在 release 构建中会拦截
-      所有 HTTP 请求，导致酷狗 CDN 返回的 http:// 封面/头像/音频
-      在 macOS 包中无法加载。这里放开限制以兼容第三方接口的 HTTP 资源。
-      注意：此设置仅影响非 App Store 分发的 .dmg（Developer ID 公证），
-      若日后上架 Mac App Store 需改为 NSExceptionDomains 精确放行。
-    -->
-    <key>NSAppTransportSecurity</key>
-    <dict>
-      <key>NSAllowsArbitraryLoads</key>
-      <true/>
-    </dict>
-  </dict>
+<dict>
+	<!--
+	  允许 WebView 加载非 HTTPS（HTTP）资源。
+	  macOS 的 App Transport Security (ATS) 在 release 构建中会拦截
+	  所有 HTTP 请求，导致酷狗 CDN 返回的 http:// 封面/头像/音频
+	  在 macOS 包中无法加载。这里放开限制以兼容第三方接口的 HTTP 资源。
+	  注意：此设置仅影响非 App Store 分发的 .dmg（Developer ID 公证），
+	  若日后上架 Mac App Store 需改为 NSExceptionDomains 精确放行。
+	-->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>MoeKoe Music 需要访问麦克风以检测音频输出设备变化</string>
+</dict>
 </plist>

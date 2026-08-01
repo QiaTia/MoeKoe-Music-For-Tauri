@@ -1,14 +1,6 @@
 <template>
     <div class="video-player-page">
         <div class="video-container">
-            <div class="video-header">
-                <button class="back-btn" @click="handleBackAction">
-                    <i class="fas" :class="{ 'fa-xmark': shouldCloseWindow, 'fa-arrow-left': !shouldCloseWindow }"></i>
-                    {{ shouldCloseWindow ? '关闭' : '返回' }}
-                </button>
-                <h2 class="video-title">{{ videoTitle }}</h2>
-            </div>
-
             <div class="video-wrapper" v-if="videoUrl">
                 <video ref="videoPlayer" class="video-element" :src="videoUrl" controls autoplay
                     @error="handleVideoError" @loadedmetadata="handleVideoLoaded">
@@ -45,9 +37,6 @@ const videoUrl = ref('');
 const videoTitle = ref('视频播放');
 const loading = ref(true);
 const error = ref('');
-
-const isElectron = !!window.electron;
-const shouldCloseWindow = isElectron || !!window.opener || window.history.length <= 1;
 
 const mvhash = ref(route.query.hash || '');
 
@@ -107,25 +96,6 @@ const handleVideoError = () => {
     error.value = '视频播放失败，可能是视频格式不支持或网络问题';
 };
 
-const goBack = () => {
-    router.back();
-};
-
-const closeWindow = () => {
-    window.close();
-};
-
-const handleBackAction = () => {
-    if (shouldCloseWindow) {
-        closeWindow();
-        if (!window.closed && !window.opener && !isElectron) {
-            router.push('/');
-        }
-        return;
-    }
-    goBack();
-};
-
 onMounted(() => {
     fetchVideoUrl();
 });
@@ -153,36 +123,6 @@ onBeforeUnmount(() => {
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.video-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.back-btn {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-}
-
-.video-title {
-    color: white;
-    font-size: 18px;
-    margin: 0;
-    flex: 1;
 }
 
 .video-wrapper {
