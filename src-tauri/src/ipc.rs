@@ -77,10 +77,16 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
             let settings = arg(&args, 0);
             let auto_start = settings.get("autoStart").and_then(|v| v.as_str()).map(|s| s.to_string());
             let api_mode_on = settings.get("apiMode").and_then(|v| v.as_str()) == Some("on");
+            // 菜单栏歌词被关闭时，移除系统状态栏项
+            let statusbar_lyrics_on =
+                settings.get("statusBarLyrics").and_then(|v| v.as_str()) == Some("on");
             // 记录切换前的托盘菜单模式，用于判断是否需要重建托盘
             let old_tray_mode = ctx.settings.setting_str("customTrayMenu");
             ctx.settings.set("settings", settings);
             let new_tray_mode = ctx.settings.setting_str("customTrayMenu");
+            if !statusbar_lyrics_on {
+                crate::statusbar::remove_statusbar(&app);
+            }
 
             // 开机自启（对齐 setLoginItemSettings）
             if let Some(auto) = auto_start {
@@ -122,6 +128,10 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
         "lyrics-data" => {
             // 主窗口 → 桌面歌词窗
             let _ = app.emit_to(LYRICS, "lyrics-data", arg(&args, 0));
+            // 菜单栏歌词：把当前行文本回发给主窗口的 StatusBarLyrics 渲染成图片
+            if let Some(text) = arg(&args, 0).get("currentLyric").and_then(|v| v.as_str()) {
+                let _ = app.emit_to(MAIN, "generate-statusbar-image", text.to_string());
+            }
         }
         "server-lyrics" => {
             ctx.ws.update_lyrics(arg(&args, 0));
@@ -207,8 +217,14 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
             }
         }
 
-        // mac 状态栏歌词（Tauri 版暂不支持，静默忽略）
-        "update-statusbar-image" | "update-current-lyrics" => {}
+        // mac 状态栏歌词：前端 Canvas 图片（PNG dataURL）→ 系统状态栏 tray 图标
+        "update-statusbar-image" => {
+            if let Some(data) = arg(&args, 0).as_str() {
+                crate::statusbar::set_statusbar_image(&app, data);
+            }
+        }
+        // touchBar 通道（仅 macOS Touch Bar 硬件，已无对应设备，静默忽略）
+        "update-current-lyrics" => {}
 
         other => {
             eprintln!("[ipc] 未知通道: {other}");

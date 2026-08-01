@@ -264,9 +264,20 @@ const initStatusBar = (logoSrc, settings) => {
     };
 };
 
+// 清理：通知原生侧移除系统状态栏项（如退出应用），再清空本地滚动状态
+const cleanupStatusBar = () => {
+    try {
+        if (window.electron?.ipcRenderer) {
+            // 发送 "clear" 哨兵，Rust 侧据此移除状态栏 tray
+            window.electron.ipcRenderer.send('update-statusbar-image', 'clear');
+        }
+    } catch (e) { /* ignore */ }
+    clearScrollState();
+};
+
 defineExpose({
     initStatusBar,
-    cleanupStatusBar: clearScrollState,
+    cleanupStatusBar,
 });
 </script>
 

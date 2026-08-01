@@ -2458,6 +2458,7 @@ name = "moekoemusic"
 version = "1.6.5"
 dependencies = [
  "axum",
+ "base64 0.22.1",
  "futures-util",
  "kugoumusicapi",
  "reqwest 0.12.28",

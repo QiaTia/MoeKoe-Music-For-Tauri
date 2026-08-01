@@ -22,6 +22,7 @@ tauri-plugin-autostart = "2"
 tauri-plugin-notification = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["preserve_order"] }
+base64 = "0.22"
 tokio = { version = "1", features = ["full"] }
 
 # WS 远程控制服务(6520)，复用 api/rust 已编译的 axum

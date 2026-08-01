@@ -7,6 +7,7 @@
 mod ipc;
 mod settings;
 mod shortcuts;
+mod statusbar;
 mod tray;
 mod updater;
 mod windows;
