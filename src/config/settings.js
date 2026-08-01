@@ -205,7 +205,7 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
             },
             {
                 key: 'greetings',
-                defaultValue: 'on',
+                defaultValue: 'off',
                 itemIcon: 'fas fa-comment',
                 selectionTitle: t('qi-dong-wen-hou-yu'),
                 options: [
@@ -290,11 +290,11 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
             }
         ]
     },
-    {
-        title: t('cha-jian'),
-        icon: 'fas fa-puzzle-piece',
-        items: []
-    },
+    // {
+    //     title: t('cha-jian'),
+    //     icon: 'fas fa-puzzle-piece',
+    //     items: []
+    // },
     {
         title: t('xi-tong'),
         icon: 'fas fa-cog',

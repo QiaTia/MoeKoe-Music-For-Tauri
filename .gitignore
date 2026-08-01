@@ -36,7 +36,6 @@ test
 bin/*
 
 # ---- 编辑器 / IDE ----
-.vscode/*
 !.vscode/extensions.json
 .idea
 .history

@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Frontend (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///./src/*": "${webRoot}/*",
+        "webpack:///src/*": "${webRoot}/*",
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///*": "${webRoot}/*"
+      },
+      "runtimeArgs": ["--remote-debugging-port=9222"],
+      "userDataDir": false
+    },
+    {
+      "name": "Rust Backend",
+      "type": "lldb",
+      "request": "launch",
+      "cargo": {
+        "args": [
+          "build",
+          "--manifest-path=${workspaceFolder}/src-tauri/Cargo.toml",
+          "--features=devtools"
+        ]
+      },
+      "executable": "${workspaceFolder}/src-tauri/target/debug/moekoemusic",
+      "preLaunchTask": "tauri:serve",
+      "args": [],
+      "cwd": "${workspaceFolder}/src-tauri"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Dev (Frontend + Rust)",
+      "preLaunchTask": "tauri:dev",
+      "configurations": ["Frontend (Chrome)", "Rust Backend"],
+      "stopAll": true
+    }
+  ]
+}

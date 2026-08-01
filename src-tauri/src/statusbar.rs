@@ -8,6 +8,8 @@
 
 pub const STATUSBAR_TRAY_ID: &str = "statusbar-lyrics";
 
+use tauri::AppHandle;
+
 #[cfg(target_os = "macos")]
 mod imp {
     use super::STATUSBAR_TRAY_ID;

@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      // 启动 Vite dev server（前端热更新）
+      "label": "tauri:serve",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "serve"],
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "tauri-dev"
+      }
+    },
+    {
+      // 启动完整的 tauri dev（前端 + Rust 后端编译）
+      "label": "tauri:dev",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "tauri:dev"],
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "tauri-dev"
+      }
+    }
+  ]
+}
