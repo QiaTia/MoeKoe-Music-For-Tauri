@@ -82,6 +82,8 @@
                         class="fas fa-add"></i></button>
                 <button class="extra-btn" :title="t('fen-xiang-ge-qu')" @click="share(currentSong.name, currentSong.hash)"><i
                         class="fas fa-share"></i></button>
+                <button class="extra-btn" :title="'小屏模式'" @click="openMiniPlayer"><i
+                        class="fas fa-compress"></i></button>
                 <div class="playback-mode">
                     <button class="extra-btn" @click="togglePlaybackMode">
                         <i v-if="currentPlaybackModeIndex != '2'" :class="currentPlaybackMode.icon"
@@ -300,6 +302,42 @@ const playlistSelect = ref(null);
 const qualityMenuOpen = ref(false);
 const { t } = useI18n();
 const router = useRouter();
+// 打开小屏播放器（独立 mini 窗口，加载 /mini 路由）
+const openMiniPlayer = () => {
+    if (!isElectron()) return;
+    window.electron.ipcRenderer.send('mini-window-control', 'open');
+    // 打开后立即向小窗补发一次当前播放状态，避免时序问题导致首次不同步
+    broadcastMiniPlayerState();
+};
+
+// 向小屏播放器广播当前完整播放状态（歌曲信息 + 播放进度 + 当前歌词行）
+const broadcastMiniPlayerState = () => {
+    if (!isElectron()) return;
+    const hasLyricsData = Array.isArray(lyricsData.value) && lyricsData.value.length > 0;
+    window.electron.ipcRenderer.send('player-state', {
+        currentTime: audio.currentTime || 0,
+        duration: audio.duration || 0,
+        playing: playing.value,
+        currentSongHash: currentSong.value?.hash || '',
+        currentLyric: hasLyricsData ? getCurrentLineText(audio.currentTime) : ''
+    });
+    const meta = currentSong.value ? JSON.parse(JSON.stringify(currentSong.value)) : null;
+    window.electron.ipcRenderer.send('player-meta', meta);
+};
+
+// 播放过程中轻量周期同步：仅发 player-state（含当前歌词行 + 进度），
+// 保证小屏播放器歌词/进度实时跟随，避免只在切歌/开关时同步一次。
+const syncMiniProgress = () => {
+    if (!isElectron()) return;
+    const hasLyricsData = Array.isArray(lyricsData.value) && lyricsData.value.length > 0;
+    window.electron.ipcRenderer.send('player-state', {
+        currentTime: audio.currentTime || 0,
+        duration: audio.duration || 0,
+        playing: playing.value,
+        currentSongHash: currentSong.value?.hash || '',
+        currentLyric: hasLyricsData ? getCurrentLineText(audio.currentTime) : ''
+    });
+};
 const musicQueueStore = useMusicQueueStore();
 const playlists = ref([]);
 const currentTime = ref(0);
@@ -453,6 +491,17 @@ const updateCurrentTime = throttle(() => {
     const statusBarLyricsEnabled = savedConfig?.statusBarLyrics === 'on';
     const desktopLyricsEnabled = savedConfig?.desktopLyrics === 'on';
 
+    // 周期广播精简播放状态给小屏播放器（Rust 侧仅在 mini 窗口存在时转发）
+    if (isElectron() && audio.src) {
+        window.electron.ipcRenderer.send('player-state', {
+            currentTime: audio.currentTime,
+            duration: audio.duration || 0,
+            playing: playing.value,
+            currentSongHash: currentSong.value?.hash || '',
+            currentLyric: hasLyricsData ? getCurrentLineText(audio.currentTime) : ''
+        });
+    }
+
     if (audio) {
         if (hasLyricsData) {
             highlightCurrentChar(audio.currentTime, !lyricsFlag.value);
@@ -579,6 +628,7 @@ const songQueue = useSongQueue(t, musicQueueStore, queueList);
 const { currentSong, NextSong, addSongToQueue, addCloudMusicToQueue, addLocalMusicToQueue, addLocalPlaylistToQueue, addToNext, getPlaylistAllSongs, addPlaylistToQueue, addCloudPlaylistToQueue, restoreLocalSongCover } = songQueue;
 
 let lyricsBackgroundCarouselTimer = null;
+let miniSyncTimer = null;
 let lyricsCoverImagesRequestId = 0;
 
 const normalizeLyricsCoverImageUrl = (url) => {
@@ -1708,7 +1758,28 @@ onMounted(() => {
     });
 
     console.log('[PlayerControl] 音频初始化完成');
+
+    // 小屏播放器打开时请求立即同步完整播放状态
+    window.electron.ipcRenderer.on('request-player-state-sync', () => {
+        if (!isElectron()) return;
+        broadcastMiniPlayerState();
+    });
+
+    // 播放过程中每 1s 轻量同步一次，保证小屏歌词/进度实时跟随
+    if (isElectron()) {
+        miniSyncTimer = setInterval(() => {
+            if (playing.value) syncMiniProgress();
+        }, 1000);
+    }
 });
+
+// 切歌时向小屏播放器广播完整歌曲信息（Rust 侧按需转发到 mini 窗口）
+watch(currentSong, (song) => {
+    if (isElectron()) {
+        const payload = song ? JSON.parse(JSON.stringify(song)) : null;
+        window.electron.ipcRenderer.send('player-meta', payload);
+    }
+}, { immediate: true });
 
 // 监听歌词数据变化，同步歌词到当前播放进度
 watch(lyricsData, (newLyrics) => {
@@ -1725,6 +1796,10 @@ onUnmounted(() => {
     // 清除自动切换定时器
     clearAutoSwitchTimer();
     stopLyricsBackgroundCarousel();
+    if (miniSyncTimer) {
+        clearInterval(miniSyncTimer);
+        miniSyncTimer = null;
+    }
 
     if (audioOutputDeviceWatchChangeHandler) {
         window.removeEventListener('audio-output-device-watch-change', audioOutputDeviceWatchChangeHandler);
@@ -1759,6 +1834,7 @@ onUnmounted(() => {
         window.electron.ipcRenderer.removeAllListeners('toggle-mute');
         window.electron.ipcRenderer.removeAllListeners('toggle-like');
         window.electron.ipcRenderer.removeAllListeners('toggle-mode');
+        window.electron.ipcRenderer.removeAllListeners('request-player-state-sync');
     }
 
     // 清理键盘事件

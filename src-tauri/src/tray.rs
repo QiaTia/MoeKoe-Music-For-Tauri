@@ -81,6 +81,10 @@ pub fn create_tray(app: &AppHandle) -> tauri::Result<()> {
                     crate::windows::save_main_window_state(app, &ctx.settings);
                     app.restart();
                 }
+                "mini" => {
+                    let ctx = app.state::<crate::AppCtx>();
+                    let _ = crate::windows::create_mini_window(app, &ctx.settings);
+                }
                 "showhide" => toggle_main_window(app),
                 "quit" => quit_app(app),
                 _ => {}
@@ -142,6 +146,7 @@ pub fn build_tray_menu<R: Runtime>(
             .item(&item("prev", "prev-track")?)
             .item(&item("pause", "pause")?)
             .item(&item("next", "next-track")?)
+            .item(&MenuItemBuilder::with_id("mini", "小屏播放器").build(app)?)
             .separator()
             .item(&item("update", "check-updates")?)
             .item(&item("restart", "restart-app")?)

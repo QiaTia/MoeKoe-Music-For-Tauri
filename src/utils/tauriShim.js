@@ -72,7 +72,8 @@ export function installTauriShim() {
             } catch (e) {
                 console.error(`[tauriShim] listener error on '${channel}':`, e);
             }
-        }).then((un) => { entry.unlisten = un; return un; });
+        }).then((un) => { entry.unlisten = un; return un; })
+          .catch((err) => { console.error(`[tauriShim] listen('${channel}') failed (ACL?):`, err); });
         channelMap.set(listener, entry);
 
         // 补发启动阶段缓存的事件（version / show-disclaimer / url-params）

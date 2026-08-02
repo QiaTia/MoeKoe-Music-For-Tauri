@@ -1,8 +1,8 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
-  "description": "主窗口/歌词窗/MV窗默认能力",
-  "windows": ["main", "lyrics", "mv"],
+  "description": "主窗口/歌词窗/MV窗/小屏播放器默认能力",
+  "windows": ["main", "lyrics", "mv", "mini"],
   "permissions": [
     "core:default",
     "core:window:allow-start-dragging",

@@ -30,6 +30,7 @@ pub struct WsService {
     inner: Mutex<Option<WsRuntime>>,
     lyrics: Arc<Mutex<Value>>,
     playing: Arc<Mutex<(bool, f64)>>,
+    current_song: Arc<Mutex<Value>>,
     clients: Arc<Mutex<HashMap<u64, UnboundedSender<String>>>>,
 }
 
@@ -43,6 +44,7 @@ impl WsService {
             inner: Mutex::new(None),
             lyrics: Arc::new(Mutex::new(Value::Null)),
             playing: Arc::new(Mutex::new((false, 0.0))),
+            current_song: Arc::new(Mutex::new(Value::Null)),
             clients: Arc::new(Mutex::new(HashMap::new())),
         }
     }
@@ -121,6 +123,21 @@ impl WsService {
             "type": "playerState",
             "data": { "isPlaying": is_playing, "currentTime": current_time }
         }));
+    }
+
+    /// 主窗 → 记录当前歌曲信息（供小屏播放器初始同步）
+    pub fn update_current_song(&self, song: Value) {
+        if let Ok(mut g) = self.current_song.lock() {
+            *g = song.clone();
+        }
+    }
+
+    /// 取当前播放状态快照（歌曲信息 + 播放态 + 歌词），用于小屏播放器初始同步
+    pub fn snapshot(&self) -> (Value, (bool, f64), Value) {
+        let song = self.current_song.lock().map(|g| g.clone()).unwrap_or(Value::Null);
+        let playing = self.playing.lock().map(|g| *g).unwrap_or((false, 0.0));
+        let lyrics = self.lyrics.lock().map(|g| g.clone()).unwrap_or(Value::Null);
+        (song, playing, lyrics)
     }
 }
 

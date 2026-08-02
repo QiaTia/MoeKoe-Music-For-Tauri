@@ -314,3 +314,333 @@ pub fn create_mv_window(app: &AppHandle, url: &str) -> Result<(), String> {
     let _ = window.show();
     Ok(())
 }
+
+/// ─────────────────────────── 小屏/迷你播放器窗口 ───────────────────────────
+/// 方案 A（独立小窗）：加载 /mini 路由，无边框、透明、置顶、跳过任务栏。
+/// 与桌面歌词窗机制一致，但承载完整播放控制与增强功能（歌词浮层/取色背景/边缘吸附）。
+
+pub const MINI: &str = "mini";
+pub const MINI_MODE_NORMAL: &str = "normal";
+pub const MINI_MODE_COMPACT: &str = "compact";
+
+/// 不同形态对应的窗口尺寸（逻辑像素）
+fn mini_size_for_mode(mode: &str) -> (f64, f64) {
+    match mode {
+        MINI_MODE_COMPACT => (320.0, 80.0),
+        _ => (320.0, 460.0),
+    }
+}
+
+/// 合并写入 miniWindowState 的部分字段（避免整体替换丢失其它字段）
+fn patch_mini_window_state(store: &SettingsStore, patch: serde_json::Value) {
+    let mut state = store.get("miniWindowState");
+    if !state.is_object() {
+        state = json!({});
+    }
+    if let Some(obj) = state.as_object_mut() {
+        if let Some(p) = patch.as_object() {
+            for (k, v) in p {
+                obj.insert(k.clone(), v.clone());
+            }
+        }
+    }
+    store.set("miniWindowState", state);
+}
+
+/// 边缘吸附阈值：窗口任一边距屏幕工作区边缘小于该值（逻辑像素）即吸附。
+const MINI_SNAP_THRESHOLD: f64 = 16.0;
+/// 吸附后窗口边缘距屏幕工作区边缘的留白。
+const MINI_EDGE_MARGIN: f64 = 12.0;
+/// 防止 `set_position` 触发的二次 `Moved` 重入造成抖动/死循环。
+static MINI_SNAPPING: AtomicBool = AtomicBool::new(false);
+
+/// 边缘吸附增强：小窗松手（WindowEvent::Moved）后，若任一边距当前显示器工作区边缘
+/// 小于阈值，则把该边吸附到边缘（留 `MINI_EDGE_MARGIN`）。水平/竖直方向独立判定，
+/// 因此可吸附到屏幕角。窗口已离开边缘（>阈值）时不吸附，避免误触。
+/// 多显示器下使用窗口所在显示器的 work_area（避开任务栏），否则回退主屏。
+fn snap_mini_window_if_needed(app: &AppHandle, win: &WebviewWindow) {
+    // 已是重入（本函数 set_position 触发的二次 Moved）：放行但不再吸附
+    if MINI_SNAPPING.swap(true, Ordering::SeqCst) {
+        MINI_SNAPPING.store(false, Ordering::SeqCst);
+        return;
+    }
+
+    let scale = win.scale_factor().unwrap_or(1.0);
+    let pos = match win.outer_position() {
+        Ok(p) => p.to_logical::<f64>(scale),
+        Err(_) => {
+            MINI_SNAPPING.store(false, Ordering::SeqCst);
+            return;
+        }
+    };
+    let size = match win.inner_size() {
+        Ok(s) => s.to_logical::<f64>(scale),
+        Err(_) => {
+            MINI_SNAPPING.store(false, Ordering::SeqCst);
+            return;
+        }
+    };
+
+    // 工作区（含多屏全局偏移）：优先窗口所在显示器，回退主屏
+    let (work_x, work_y, work_w, work_h) = match win.current_monitor() {
+        Ok(Some(m)) => {
+            let ms = m.scale_factor();
+            let wa = m.work_area();
+            let wp = wa.position.to_logical::<f64>(ms);
+            let ws = wa.size.to_logical::<f64>(ms);
+            (wp.x, wp.y, ws.width, ws.height)
+        }
+        _ => {
+            let (w, h) = primary_work_area(app);
+            (0.0, 0.0, w, h)
+        }
+    };
+
+    let wx = pos.x;
+    let wy = pos.y;
+    let w = size.width;
+    let h = size.height;
+
+    let left = wx - work_x;
+    let right = (work_x + work_w) - (wx + w);
+    let top = wy - work_y;
+    let bottom = (work_y + work_h) - (wy + h);
+
+    let mut nx = wx;
+    let mut ny = wy;
+
+    // 水平方向：吸附到更近的一侧
+    if left < MINI_SNAP_THRESHOLD && left <= right {
+        nx = work_x + MINI_EDGE_MARGIN;
+    } else if right < MINI_SNAP_THRESHOLD {
+        nx = work_x + work_w - w - MINI_EDGE_MARGIN;
+    }
+    // 竖直方向：吸附到更近的一侧
+    if top < MINI_SNAP_THRESHOLD && top <= bottom {
+        ny = work_y + MINI_EDGE_MARGIN;
+    } else if bottom < MINI_SNAP_THRESHOLD {
+        ny = work_y + work_h - h - MINI_EDGE_MARGIN;
+    }
+
+    // 夹紧到工作区内，保证窗口至少部分可见（多屏拖出时拉回）
+    nx = nx.clamp(work_x, (work_x + work_w - w).max(work_x));
+    ny = ny.clamp(work_y, (work_y + work_h - h).max(work_y));
+
+    if (nx, ny) != (wx, wy) {
+        let _ = win.set_position(LogicalPosition::new(nx, ny));
+        let ctx = app.state::<crate::AppCtx>();
+        let store = &ctx.settings;
+        patch_mini_window_state(store, json!({ "x": nx, "y": ny }));
+    }
+
+    MINI_SNAPPING.store(false, Ordering::SeqCst);
+}
+
+pub fn create_mini_window(app: &AppHandle, store: &SettingsStore) -> tauri::Result<WebviewWindow> {
+    // 已存在则聚焦，避免重复创建
+    if let Some(existing) = app.get_webview_window(MINI) {
+        let _ = existing.show();
+        let _ = existing.set_focus();
+        // 小屏模式始终隐藏主窗口
+        if let Some(main) = app.get_webview_window(MAIN) {
+            let _ = main.hide();
+        }
+        // 直接向小窗推送当前播放状态（避免主窗往返的时序问题）
+        push_mini_state(app);
+        return Ok(existing);
+    }
+
+    let (screen_w, screen_h) = primary_work_area(app);
+    let state = store.get("miniWindowState");
+    // 读取持久化记忆（Rust 端在 toggle/set_mode 时已写入 miniWindowState.mode）：
+    // 打开时沿用上一次关闭时的 normal/compact，而不是每次都强制成固定形态。
+    // 仅当字段缺失或非法（既非 normal 也非 compact）时回退 normal，避免历史污染。
+    let mode = state
+        .get("mode")
+        .and_then(|v| v.as_str())
+        .filter(|m| *m == MINI_MODE_NORMAL || *m == MINI_MODE_COMPACT)
+        .unwrap_or(MINI_MODE_NORMAL);
+    let (width, height) = mini_size_for_mode(mode);
+
+    // 默认位置：屏幕右下角，避免与主窗口重叠
+    let x = state
+        .get("x")
+        .and_then(|v| v.as_f64())
+        .unwrap_or(screen_w - width - 24.0);
+    let y = state
+        .get("y")
+        .and_then(|v| v.as_f64())
+        .unwrap_or(screen_h - height - 24.0);
+
+    // 把当前持久化形态带进 URL query，前端可在首屏同步渲染出正确布局（消除事件到达前的闪烁）
+    let mini_url = format!("index.html#/mini?mode={}", mode);
+    let mut builder = WebviewWindowBuilder::new(app, MINI, WebviewUrl::App(mini_url.into()))
+        .title("MoeKoe Mini")
+        .inner_size(width, height)
+        .min_inner_size(280.0, 60.0)
+        .max_inner_size(400.0, 460.0)
+        .position(x, y)
+        .decorations(false)
+        .transparent(true)
+        .skip_taskbar(true)
+        .always_on_top(true)
+        .resizable(false)
+        .visible(true);
+
+    // macOS 用原生阴影更精致；Windows 透明窗 + 阴影会出现黑色矩形光晕，故关闭
+    #[cfg(target_os = "macos")]
+    {
+        builder = builder.shadow(true);
+    }
+    #[cfg(not(target_os = "macos"))]
+    {
+        builder = builder.shadow(false);
+    }
+
+    #[cfg(target_os = "windows")]
+    {
+        builder = builder.additional_browser_args("--allow-mixed-content");
+    }
+
+    let window = builder.build()?;
+
+    // 创建后立即把当前播放状态直接推给小窗（从应用状态读取，不依赖主窗往返）
+    push_mini_state(app);
+
+    // 同步当前形态/位置给小窗，避免只靠 request-mini-state 的时序竞态导致页面与窗口尺寸错配
+    let _ = app.emit_to(MINI, "mini-state", store.get("miniWindowState"));
+
+    // 兜底：上面那条 mini-state 在 Webview 首次挂载时经常因竞态漏收，
+    // 延迟 ~250ms 再推一次，确保小窗布局与窗口尺寸在首屏就一致。
+    let app_delayed = app.clone();
+    let mini_state_snapshot = store.get("miniWindowState");
+    std::thread::spawn(move || {
+        std::thread::sleep(std::time::Duration::from_millis(250));
+        let _ = app_delayed.emit_to(MINI, "mini-state", mini_state_snapshot);
+    });
+
+    // 打开小屏模式后自动隐藏主窗口（网易云小屏模式行为）
+    if let Some(main) = app.get_webview_window(MAIN) {
+        let _ = main.hide();
+    }
+
+    // 主动触发一次状态同步请求，让小窗在创建后立即拿到当前播放信息
+    let _ = app.emit_to(MAIN, "request-player-state-sync", ());
+
+    // 拖拽移动 / 形态切换导致的尺寸变化持久化
+    {
+        let app = app.clone();
+        let win = window.clone();
+        window.on_window_event(move |event| match event {
+            // 原生拖拽由系统处理；窗口移动结束后先做边缘吸附（可能微调位置），
+            // 再持久化最终位置（吸附后的实际坐标）
+            tauri::WindowEvent::Moved(pos) => {
+                let scale = win.scale_factor().unwrap_or(1.0);
+                let logical = pos.to_logical::<f64>(scale);
+                let ctx = app.state::<crate::AppCtx>();
+                let store = &ctx.settings;
+                snap_mini_window_if_needed(&app, &win);
+                // 读取吸附后的实际位置持久化（吸附已落盘时此处为冗余覆盖，安全）
+                if let Ok(p) = win.outer_position() {
+                    let lp = p.to_logical::<f64>(scale);
+                    patch_mini_window_state(store, json!({ "x": lp.x, "y": lp.y }));
+                } else {
+                    patch_mini_window_state(store, json!({ "x": logical.x, "y": logical.y }));
+                }
+            }
+            tauri::WindowEvent::Resized(_) => {
+                let ctx = app.state::<crate::AppCtx>();
+                let store = &ctx.settings;
+                if let Ok(size) = win.inner_size() {
+                    let scale = win.scale_factor().unwrap_or(1.0);
+                    let logical = size.to_logical::<f64>(scale);
+                    // 窗口关闭/最小化/透明窗过渡时可能产生 0x0 等异常尺寸，跳过避免污染持久化
+                    if logical.width <= 1.0 || logical.height <= 1.0 {
+                        return;
+                    }
+                    // 形态(mode)由 toggle/set_mode 写入，不再按高度反推，
+                    // 防止过渡态把 mode 误写成 compact，导致下次打开窗口与页面对不上。
+                    patch_mini_window_state(
+                        store,
+                        json!({ "width": logical.width, "height": logical.height }),
+                    );
+                    let _ = app.emit_to(MINI, "mini-state", store.get("miniWindowState"));
+                }
+            }
+            _ => {}
+        });
+    }
+
+    Ok(window)
+}
+
+/// 在两种形态间切换 normal <-> compact
+pub fn toggle_mini_mode(app: &AppHandle, store: &SettingsStore) {
+    let Some(win) = app.get_webview_window(MINI) else {
+        return;
+    };
+    let state = store.get("miniWindowState");
+    let current = state
+        .get("mode")
+        .and_then(|v| v.as_str())
+        .unwrap_or(MINI_MODE_NORMAL);
+    let next = if current == MINI_MODE_COMPACT {
+        MINI_MODE_NORMAL
+    } else {
+        MINI_MODE_COMPACT
+    };
+    let (w, h) = mini_size_for_mode(next);
+    let _ = win.set_size(LogicalSize::new(w, h));
+    patch_mini_window_state(store, json!({ "mode": next }));
+    // 切完形态立即通知前端，保持状态同步
+    let _ = app.emit_to(MINI, "mini-state", store.get("miniWindowState"));
+}
+
+/// 显式设置形态（前端按钮直接指定）
+pub fn set_mini_mode(app: &AppHandle, store: &SettingsStore, mode: &str) {
+    let Some(win) = app.get_webview_window(MINI) else {
+        return;
+    };
+    let (w, h) = mini_size_for_mode(mode);
+    let _ = win.set_size(LogicalSize::new(w, h));
+    patch_mini_window_state(store, json!({ "mode": mode }));
+    let _ = app.emit_to(MINI, "mini-state", store.get("miniWindowState"));
+}
+
+pub fn close_mini_window(app: &AppHandle) -> bool {
+    if let Some(win) = app.get_webview_window(MINI) {
+        let _ = win.close();
+        // 关闭小屏窗口后恢复主窗口
+        if let Some(main) = app.get_webview_window(MAIN) {
+            let _ = main.show();
+            let _ = main.set_focus();
+        }
+        true
+    } else {
+        false
+    }
+}
+
+/// 小屏播放器创建 / 请求同步时，直接从应用状态把当前播放信息推给小窗。
+/// 不依赖「小窗 → 主窗 → 小窗」的往返，规避时序与事件丢失问题。
+pub fn push_mini_state(app: &AppHandle) {
+    if let Some(_win) = app.get_webview_window(MINI) {
+        let ws = &app.state::<crate::AppCtx>().ws;
+        let (song, playing, lyrics) = ws.snapshot();
+        // 定向推送给小窗（避免无谓地广播到主窗）
+        let _ = app.emit_to(
+            MINI,
+            "player-state",
+            json!({
+                "currentTime": playing.1,
+                "duration": 0.0,
+                "playing": playing.0,
+                "currentSongHash": song.get("hash").and_then(|v| v.as_str()).unwrap_or(""),
+            }),
+        );
+        let _ = app.emit_to(MINI, "player-meta", song);
+        if !lyrics.is_null() {
+            let _ = app.emit_to(MINI, "lyrics-data", lyrics);
+        }
+    }
+}

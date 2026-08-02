@@ -160,6 +160,13 @@ pub fn register_all(app: &AppHandle) {
         };
 
         let action = *action;
+        // 防御：若本进程内该组合键仍被占用（极端情况下 unregister_all 未覆盖，例如
+        // setup 阶段主线程派发顺序），先单独注销再注册，保证幂等、不产生冲突报错。
+        // 注意：unregister_all 只能清「本进程」注册的快捷键，无法释放「其他进程」
+        // 在 OS 层面占用的热键——那种情况需先退出占用进程再启动本程序。
+        if gs.is_registered(converted.as_str()) {
+            let _ = gs.unregister(converted.as_str());
+        }
         let result = gs.on_shortcut(converted.as_str(), move |app, _shortcut, event| {
             if event.state() == ShortcutState::Pressed {
                 run_action(app, action);

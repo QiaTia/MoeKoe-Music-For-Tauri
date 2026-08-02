@@ -1,9 +1,9 @@
 <template>
     <div id="app">
-        <TitleBar v-if="showTitleBar && !isLyricsRoute" />
+        <TitleBar v-if="showTitleBar && !isLyricsRoute && !isMiniRoute" />
         <RouterView />
-        <Disclaimer v-if="!isLyricsRoute" />
-        <StatusBarLyrics v-if="!isLyricsRoute" ref="statusBarLyricsRef" />
+        <Disclaimer v-if="!isLyricsRoute && !isMiniRoute" />
+        <StatusBarLyrics v-if="!isLyricsRoute && !isMiniRoute" ref="statusBarLyricsRef" />
     </div>
 </template>
 
@@ -18,6 +18,7 @@ import logoImageSrc from '@/assets/images/tray/tray-icon@2x.png?url';
 
 const route = useRoute();
 const isLyricsRoute = computed(() => route.path === '/lyrics');
+const isMiniRoute = computed(() => route.path === '/mini');
 
 // 状态栏歌词逻辑
 const statusBarLyricsRef = ref(null);
@@ -33,7 +34,7 @@ onMounted(async () => {
     const MoeAuth = MoeAuthStore();
     await MoeAuth.initDevice();
 
-    // 初始化状态栏歌词
+    // 初始化状态栏歌词（小屏模式下不渲染该组件，?. 安全跳过）
     cleanupStatusBarIPC = statusBarLyricsRef.value?.initStatusBar(logoImageSrc, settings);
 });
 

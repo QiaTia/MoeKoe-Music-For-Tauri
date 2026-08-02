@@ -1,7 +1,7 @@
 //! IPC 兼容层：承接前端 `window.electron.ipcRenderer.send(...)` 的全部通道，
 //! 以及 `window.electronAPI.*` 的 invoke 型调用。
 
-use crate::windows::{LYRICS, MAIN};
+use crate::windows::{LYRICS, MAIN, MINI};
 use serde_json::{json, Value};
 use tauri::{AppHandle, Emitter, LogicalSize, Manager};
 use tauri_plugin_autostart::ManagerExt as AutostartExt;
@@ -128,6 +128,8 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
         "lyrics-data" => {
             // 主窗口 → 桌面歌词窗
             let _ = app.emit_to(LYRICS, "lyrics-data", arg(&args, 0));
+            // 小屏播放器歌词浮层
+            let _ = app.emit_to(MINI, "lyrics-data", arg(&args, 0));
             // 菜单栏歌词：把当前行文本回发给主窗口的 StatusBarLyrics 渲染成图片
             if let Some(text) = arg(&args, 0).get("currentLyric").and_then(|v| v.as_str()) {
                 let _ = app.emit_to(MAIN, "generate-statusbar-image", text.to_string());
@@ -203,6 +205,62 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
             let current_time = arg(&args, 1).as_f64().unwrap_or(0.0);
             let _ = app.emit_to(LYRICS, "playing-status", playing);
             ctx.ws.update_player_state(playing, current_time);
+        }
+
+        // ── 小屏/迷你播放器（独立窗）状态同步 ──────────────────
+        "player-state" => {
+            // 主窗口周期广播的精简播放状态（currentTime/duration/playing/hash）
+            // 仅当迷你窗存在时转发，避免无谓的跨窗口事件
+            if app.get_webview_window(MINI).is_some() {
+                let _ = app.emit_to(MINI, "player-state", arg(&args, 0));
+            }
+        }
+        "player-meta" => {
+            // 记录当前歌曲信息，供小窗初始同步直接读取
+            ctx.ws.update_current_song(arg(&args, 0).clone());
+            // 切歌时广播的完整 currentSong 对象（name/author/img/hash/quality 等）
+            if app.get_webview_window(MINI).is_some() {
+                let _ = app.emit_to(MINI, "player-meta", arg(&args, 0));
+            }
+        }
+        "request-player-state-sync" => {
+            // 迷你窗打开时请求主窗立即补发一次完整状态
+            let _ = app.emit_to(MAIN, "request-player-state-sync", ());
+            // 同时直接从应用状态推送，避免主窗往返丢失
+            crate::windows::push_mini_state(&app);
+        }
+        "request-mini-state" => {
+            // 迷你窗初始化时获取当前窗口状态（含 mode），用于对齐本地布局
+            let _ = app.emit_to(MINI, "mini-state", ctx.settings.get("miniWindowState"));
+        }
+
+        // ── 小屏播放器窗口控制 ────────────────────────────────
+        "mini-window-control" => {
+            let action_val = arg(&args, 0);
+            let action = action_val.as_str().unwrap_or("");
+            match action {
+                "open" => {
+                    let _ = crate::windows::create_mini_window(&app, &ctx.settings);
+                }
+                "close" => {
+                    crate::windows::close_mini_window(&app);
+                }
+                "toggle" => {
+                    crate::windows::toggle_mini_mode(&app, &ctx.settings);
+                }
+                "set-mode" => {
+                    let mode_val = arg(&args, 1);
+                    let mode = mode_val.as_str().unwrap_or("normal");
+                    crate::windows::set_mini_mode(&app, &ctx.settings, mode);
+                }
+                _ => {}
+            }
+        }
+        "mini-window-drag" => {
+            // 把拖拽交给系统原生处理：前端 mousedown 时直接调用，消除 IPC 往返抖动
+            if let Some(win) = app.get_webview_window(crate::windows::MINI) {
+                let _ = win.start_dragging();
+            }
         }
 
         // ── 杂项 ─────────────────────────────────────────────────

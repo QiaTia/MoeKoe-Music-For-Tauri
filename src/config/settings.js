@@ -276,6 +276,18 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
                 refreshHintText: t('zhong-qi-hou-sheng-xiao')
             },
             {
+                key: 'miniPlayer',
+                defaultValue: 'off',
+                itemIcon: 'fas fa-compress',
+                selectionTitle: '小屏播放器（随启动打开）',
+                options: [
+                    { displayText: '打开', value: 'on' },
+                    { displayText: '关闭', value: 'off' }
+                ],
+                available: 'client',
+                label: '小屏播放器'
+            },
+            {
                 key: 'lyricsTranslation',
                 defaultValue: 'on',
                 itemIcon: 'fas fa-language',
