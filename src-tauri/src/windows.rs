@@ -436,11 +436,136 @@ fn snap_mini_window_if_needed(app: &AppHandle, win: &WebviewWindow) {
     MINI_SNAPPING.store(false, Ordering::SeqCst);
 }
 
+/// 所有显示器的「安全工作区」矩形（逻辑像素，含多屏全局偏移）。
+/// 优先用 work_area（避开任务栏/Dock），无显示器信息时回退主屏。
+fn visible_monitor_rects(app: &AppHandle) -> Vec<(f64, f64, f64, f64)> {
+    let mut rects = Vec::new();
+    if let Ok(monitors) = app.available_monitors() {
+        for m in monitors {
+            let scale = m.scale_factor();
+            let wa = m.work_area();
+            let p = wa.position.to_logical::<f64>(scale);
+            let s = wa.size.to_logical::<f64>(scale);
+            rects.push((p.x, p.y, s.width, s.height));
+        }
+    }
+    if rects.is_empty() {
+        let (w, h) = primary_work_area(app);
+        rects.push((0.0, 0.0, w, h));
+    }
+    rects
+}
+
+/// 显示器配置指纹：任一显示器插拔/分辨率/缩放变更都会改变它，用于检测变化。
+fn monitor_signature(app: &AppHandle) -> String {
+    let mut parts = Vec::new();
+    if let Ok(monitors) = app.available_monitors() {
+        for m in monitors {
+            let scale = m.scale_factor();
+            let p = m.position().to_logical::<f64>(scale);
+            let s = m.size().to_logical::<f64>(scale);
+            parts.push(format!(
+                "{:.2},{:.2},{:.2},{:.2},{:.2}",
+                p.x, p.y, s.width, s.height, scale
+            ));
+        }
+    }
+    parts.sort();
+    parts.join("|")
+}
+
+/// 求「离 (x,y) 最近、且能使窗口整体落在某显示器内」的安全位置。
+/// 若窗口已整体在某显示器内，直接返回原位置（不打扰用户）。
+fn nearest_safe_position(
+    rects: &[(f64, f64, f64, f64)],
+    x: f64,
+    y: f64,
+    w: f64,
+    h: f64,
+) -> (f64, f64) {
+    for &(mx, my, mw, mh) in rects {
+        if x >= mx && y >= my && x + w <= mx + mw && y + h <= my + mh {
+            return (x, y);
+        }
+    }
+    let mut best: Option<((f64, f64), f64)> = None;
+    for &(mx, my, mw, mh) in rects {
+        let (nx, ny) = if mw >= w && mh >= h {
+            (
+                x.clamp(mx, (mx + mw - w).max(mx)),
+                y.clamp(my, (my + mh - h).max(my)),
+            )
+        } else {
+            // 窗口比显示器还大：尽量居中兜底
+            (
+                mx + (mw - w).max(0.0) / 2.0,
+                my + (mh - h).max(0.0) / 2.0,
+            )
+        };
+        let dist = ((nx - x).powi(2) + (ny - y).powi(2)).sqrt();
+        if best.as_ref().map_or(true, |(_, d)| dist < *d) {
+            best = Some(((nx, ny), dist));
+        }
+    }
+    best.map(|(p, _)| p).unwrap_or((x, y))
+}
+
+/// 安全校正：把小窗位置拉回最近的安全可见区域（仅当窗口整体已不可见时才移动），
+/// 并在确有移动时持久化新坐标，避免下次又从越界位置打开。
+fn ensure_mini_visible(app: &AppHandle, win: &WebviewWindow) {
+    let scale = win.scale_factor().unwrap_or(1.0);
+    if let (Ok(pos), Ok(size)) = (win.outer_position(), win.inner_size()) {
+        let pos = pos.to_logical::<f64>(scale);
+        let size = size.to_logical::<f64>(scale);
+        let rects = visible_monitor_rects(app);
+        let (nx, ny) = nearest_safe_position(&rects, pos.x, pos.y, size.width, size.height);
+        if (nx, ny) != (pos.x, pos.y) {
+            let _ = win.set_position(LogicalPosition::new(nx, ny));
+            let ctx = app.state::<crate::AppCtx>();
+            let store = &ctx.settings;
+            patch_mini_window_state(store, json!({ "x": nx, "y": ny }));
+        }
+    }
+}
+
+/// 显示器配置变化监控（单例线程）：分辨率变更 / 拔出副屏后，
+/// 若小窗被甩到屏幕外，自动拉回最近的安全区域。小窗关闭即退出，下次打开再拉起。
+static MINI_MONITOR_WATCH: AtomicBool = AtomicBool::new(false);
+
+fn start_mini_monitor_watch(app: &AppHandle) {
+    if MINI_MONITOR_WATCH
+        .compare_exchange(false, true, Ordering::SeqCst, Ordering::SeqCst)
+        .is_err()
+    {
+        return; // 已有监控线程在跑
+    }
+    let app = app.clone();
+    std::thread::spawn(move || {
+        let mut last_sig = monitor_signature(&app);
+        loop {
+            std::thread::sleep(std::time::Duration::from_millis(1000));
+            // 小窗暂时关闭：保持监控待命，等待它再次出现。
+            // 不退出线程，避免「关闭→立刻重开」的竞态导致重开后丢失监控。
+            let Some(win) = app.get_webview_window(MINI) else {
+                continue;
+            };
+            let sig = monitor_signature(&app);
+            if sig != last_sig {
+                last_sig = sig;
+                ensure_mini_visible(&app, &win);
+            }
+        }
+    });
+}
+
 pub fn create_mini_window(app: &AppHandle, store: &SettingsStore) -> tauri::Result<WebviewWindow> {
     // 已存在则聚焦，避免重复创建
     if let Some(existing) = app.get_webview_window(MINI) {
         let _ = existing.show();
         let _ = existing.set_focus();
+        // 显示器变化可能使已存在的小窗落到屏外，打开时先校正一次
+        ensure_mini_visible(app, &existing);
+        start_mini_monitor_watch(app);
         // 小屏模式始终隐藏主窗口
         if let Some(main) = app.get_webview_window(MAIN) {
             let _ = main.hide();
@@ -503,6 +628,12 @@ pub fn create_mini_window(app: &AppHandle, store: &SettingsStore) -> tauri::Resu
     }
 
     let window = builder.build()?;
+
+    // 安全校正：持久化位置可能因显示器插拔/分辨率变更而落在屏幕外，
+    // 打开即校正到最近的安全可见区域（已可见则不动）。
+    ensure_mini_visible(app, &window);
+    // 启动显示器变化监控（单例），变更后自动把小窗拉回可见区域
+    start_mini_monitor_watch(app);
 
     // 创建后立即把当前播放状态直接推给小窗（从应用状态读取，不依赖主窗往返）
     push_mini_state(app);

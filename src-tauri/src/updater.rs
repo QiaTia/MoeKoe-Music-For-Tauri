@@ -5,7 +5,7 @@ use serde_json::{json, Value};
 use tauri::{AppHandle, Emitter, Manager};
 use tauri_plugin_opener::OpenerExt;
 
-const RELEASE_API: &str = "https://api.github.com/repos/iAJue/MoeKoeMusic/releases/latest";
+const RELEASE_API: &str = "https://api.github.com/repos/qiatia/MoeKoe-Music-For-Tauri/releases/latest";
 
 fn version_parts(v: &str) -> Vec<u64> {
     v.trim_start_matches('v')
