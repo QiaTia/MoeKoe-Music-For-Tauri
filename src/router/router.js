@@ -14,6 +14,7 @@ import CloudDrive from '@/views/CloudDrive.vue';
 import LocalMusic from '@/views/LocalMusic.vue';
 import VideoPlayer from '@/views/VideoPlayer.vue';
 import MiniPlayer from '@/views/MiniPlayer.vue';
+import Recognize from '@/views/Recognize.vue';
 import { MoeAuthStore } from '@/stores/store';
 
 
@@ -34,6 +35,7 @@ const routes = [
             { path: '/ranking', name: 'Ranking', component: Ranking },
             { path: '/CloudDrive', name: 'CloudDrive', component: CloudDrive },
             { path: '/LocalMusic', name: 'LocalMusic', component: LocalMusic },
+            { path: '/recognize', name: 'Recognize', component: Recognize },
         ],
     },
     { path: '/lyrics', name: 'Lyrics', component: Lyrics },

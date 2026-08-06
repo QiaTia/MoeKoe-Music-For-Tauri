@@ -1,4 +1,4 @@
-import { post } from './request';
+import { invoke } from '@tauri-apps/api/core';
 import { ensureHttps } from './utils';
 
 const pick = (record, ...keys) => {
@@ -39,11 +39,16 @@ const mapRecognizeMatch = (item) => {
 };
 
 export const recognizeAudio = async (pcm) => {
-    const response = await post('/audio/match', new Uint8Array(pcm), {
-        headers: { 'Content-Type': 'application/octet-stream' },
-        params: { t: Date.now() },
-        timeout: 30000,
-    });
+    // 二进制 PCM 无法走通用 api_request（JSON 序列化会破坏原始字节），
+    // 故走独立 Tauri 命令 recognize_audio，由 Rust 侧以 octet-stream 直传酷狗指纹服务。
+    const pcmBytes = pcm instanceof Uint8Array ? pcm : new Uint8Array(pcm);
+    let response;
+    try {
+        response = await invoke('recognize_audio', { pcm: pcmBytes });
+    } catch (error) {
+        console.error('识曲请求失败:', error);
+        return [];
+    }
 
     if (response?.status !== 1 || !Array.isArray(response.data)) return [];
     return response.data

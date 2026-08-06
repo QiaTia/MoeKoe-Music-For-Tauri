@@ -6,6 +6,8 @@ use serde_json::{Map, Value};
 use crate::config::{is_lite, use_appid, use_clientver};
 use crate::crypto::crypto_md5;
 use crate::jsval::{js_to_string, sign_value_android};
+use md5::{Digest as Md5Digest, Md5};
+use hex;
 
 /// 签名加密类型（对应 createRequest 的 options.encryptType）
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
@@ -43,6 +45,28 @@ pub fn signature_android(params: &Map<String, Value>, data: &str) -> String {
         .collect::<Vec<_>>()
         .join("");
     crypto_md5(&format!("{}{}{}{}", s, ps, data, s))
+}
+
+/// android 版签名（二进制 body 场景）：`secret + sorted(k=v) + data_bytes + secret` 的流式 MD5。
+///
+/// 对应 KuGouMusicApi util/helper.js 的 `signatureAndroidParams` 二进制分支：
+/// `MD5(str + paramsString + Buffer + str)`，`str` 固定为非 lite 密钥 `OIlwieks28dk2k092lksi2UIkp`。
+/// 与普通 android 签名不同，此处密钥**不随 platform=lite 切换**，与参考实现保持一致。
+pub fn signature_android_binary(params: &Map<String, Value>, data: &[u8]) -> String {
+    let s = "OIlwieks28dk2k092lksi2UIkp";
+    let mut keys: Vec<&String> = params.keys().collect();
+    keys.sort();
+    let ps: String = keys
+        .iter()
+        .map(|k| format!("{}={}", k, sign_value_android(&params[*k])))
+        .collect::<Vec<_>>()
+        .join("");
+    let mut h = Md5::new();
+    h.update(s.as_bytes());
+    h.update(ps.as_bytes());
+    h.update(data);
+    h.update(s.as_bytes());
+    hex::encode(h.finalize())
 }
 
 /// register 版 signature：只对 value 排序（死代码，仍实现以备用）

@@ -109,6 +109,30 @@ fn api_clear_cookies(state: tauri::State<'_, AppCtx>) {
     }
 }
 
+/// 听歌识曲：接收前端录制的原始 PCM（16bit）音频，调用酷狗指纹服务识别歌曲。
+/// 二进制 body 无法走通用 `api_request`（JSON 序列化会破坏原始字节），故独立实现：
+/// 复用进程内 cookie jar，直接调用 `create_request` 并以 `sign_binary` 注入流式 Android 签名。
+#[tauri::command]
+async fn recognize_audio(
+    state: tauri::State<'_, AppCtx>,
+    pcm: Vec<u8>,
+) -> Result<Value, String> {
+    // 复用与 api_request 同一套鉴权上下文（含登录态 cookie）
+    let jar = state.dispatcher.export_jar();
+    let mut cookie: serde_json::Map<String, Value> = serde_json::Map::new();
+    for (k, v) in jar {
+        cookie.insert(k, Value::String(v));
+    }
+    let opts = kugoumusicapi::modules::build_audio_match_options(pcm, cookie);
+    let resp = kugoumusicapi::request::create_request(opts).await;
+    // 无论成功或将被拒，都取回 body 透传给前端（前端按 {status, data} 解析）
+    let body = match resp {
+        Ok(r) => r.body,
+        Err(r) => r.body,
+    };
+    Ok(body)
+}
+
 // ─────────────────────────── 深链处理 ───────────────────────────
 
 /// moekoe://share?hash=..&listid=.. → {hash, listid, urlPath}
@@ -266,6 +290,7 @@ pub fn run() {
             api_request,
             api_export_cookies,
             api_clear_cookies,
+            recognize_audio,
             ipc::ipc_send,
             ipc::app_boot_info,
             ipc::open_mv_window,

@@ -1107,6 +1107,42 @@ fn m_audio_related(query: Value, use_axios: UseAxios) -> ModuleFuture {
     })
 }
 
+/// /audio/match —— 听歌识曲（酷狗指纹服务，二进制 PCM 直传，流式 Android 签名）
+///
+/// 对应 KuGouMusicApi `module/audio_match.js`：
+/// POST /fingerprint.service/v1/music_trackid_mulit，Content-Type: application/octet-stream，
+/// body = 原始 PCM（16bit），签名 = MD5(secret + paramsString + pcm_bytes + secret)。
+/// 因签名需纳入二进制 body，故不走通用 api_request 的 JSON body 通道，
+/// 由 Tauri 命令 `recognize_audio` 直接调用 `create_request` 并注入 `sign_binary`。
+pub fn build_audio_match_options(pcm: Vec<u8>, cookie: Map<String, Value>) -> RequestOptions {
+    let useid = cookie
+        .get("userid")
+        .and_then(|v| match v {
+            Value::String(s) => s.parse::<i64>().ok(),
+            Value::Number(n) => n.as_i64(),
+            _ => None,
+        })
+        .unwrap_or(0);
+    let params = obj(vec![
+        ("fpid", Value::from(now_ms())),
+        ("area_code", Value::from(1)),
+        ("include_unpublish", Value::from(1)),
+        ("useid", Value::from(useid)),
+        ("multi_result", Value::from(1)),
+    ]);
+    RequestOptions {
+        url: "/fingerprint.service/v1/music_trackid_mulit".into(),
+        method: "POST".into(),
+        params,
+        data_binary: Some(pcm.clone()),
+        sign_binary: Some(pcm),
+        encrypt_type: EncryptType::Android,
+        cookie,
+        headers: str_map(&[("Content-Type", "application/octet-stream")]),
+        ..Default::default()
+    }
+}
+
 /// /brush
 fn m_brush(query: Value, use_axios: UseAxios) -> ModuleFuture {
     Box::pin(async move {

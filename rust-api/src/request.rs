@@ -44,6 +44,10 @@ pub struct RequestOptions {
     /// 注意：使用 data_binary 的模块（user_cloud）均为 not_signature=true，
     /// 因此该二进制不参与签名计算。
     pub data_binary: Option<Vec<u8>>,
+    /// 二进制签名负载（对应酷狗 Android 流式 MD5：`secret + paramsString + bytes + secret`）。
+    /// 仅当 encrypt_type == Android 且本字段为 Some 时生效，覆盖普通 signature_android。
+    /// 听歌识曲（audio_match）等需要把原始音频字节纳入签名的场景使用。
+    pub sign_binary: Option<Vec<u8>>,
     pub headers: Map<String, Value>,
     pub encrypt_type: EncryptType,
     pub cookie: Map<String, Value>,
@@ -64,6 +68,7 @@ impl Default for RequestOptions {
             params: Map::new(),
             data: None,
             data_binary: None,
+            sign_binary: None,
             headers: Map::new(),
             encrypt_type: EncryptType::Android,
             cookie: Map::new(),
@@ -245,10 +250,12 @@ pub async fn create_request(options: RequestOptions) -> Result<Response, Respons
                 );
             }
             EncryptType::Android => {
-                params.insert(
-                    "signature".into(),
-                    Value::String(sign::signature_android(&params, &data_str)),
-                );
+                let sig = if let Some(bin) = &options.sign_binary {
+                    sign::signature_android_binary(&params, bin)
+                } else {
+                    sign::signature_android(&params, &data_str)
+                };
+                params.insert("signature".into(), Value::String(sig));
             }
         }
     }

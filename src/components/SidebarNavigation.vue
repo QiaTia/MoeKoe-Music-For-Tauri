@@ -181,6 +181,7 @@ const removeAfterEach = router.afterEach(() => {
 const mainLinks = [
     { path: '/', icon: 'fas fa-home', label: t('shou-ye') },
     { path: '/discover', icon: 'fas fa-compass', label: t('fa-xian') },
+    { path: '/recognize', icon: 'fas fa-microphone-alt', label: t('ting-ge-shi-qu') },
     { path: '/library', icon: 'fas fa-music', label: t('yin-le-ku') }
 ];
 
