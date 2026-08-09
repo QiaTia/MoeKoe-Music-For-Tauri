@@ -566,6 +566,7 @@ pub fn create_mini_window(app: &AppHandle, store: &SettingsStore) -> tauri::Resu
         // 显示器变化可能使已存在的小窗落到屏外，打开时先校正一次
         ensure_mini_visible(app, &existing);
         start_mini_monitor_watch(app);
+        start_mini_sync_timer(app);
         // 小屏模式始终隐藏主窗口
         if let Some(main) = app.get_webview_window(MAIN) {
             let _ = main.hide();
@@ -634,6 +635,9 @@ pub fn create_mini_window(app: &AppHandle, store: &SettingsStore) -> tauri::Resu
     ensure_mini_visible(app, &window);
     // 启动显示器变化监控（单例），变更后自动把小窗拉回可见区域
     start_mini_monitor_watch(app);
+    // 启动 Rust 端周期状态推送（macOS 主窗口 hide 后 WKWebView 会被挂起，
+    // 主窗口的 setInterval 不会触发，需要 Rust 端代为推送）
+    start_mini_sync_timer(app);
 
     // 创建后立即把当前播放状态直接推给小窗（从应用状态读取，不依赖主窗往返）
     push_mini_state(app);
@@ -764,7 +768,7 @@ pub fn push_mini_state(app: &AppHandle) {
             "player-state",
             json!({
                 "currentTime": playing.1,
-                "duration": 0.0,
+                "duration": playing.2,
                 "playing": playing.0,
                 "currentSongHash": song.get("hash").and_then(|v| v.as_str()).unwrap_or(""),
             }),
@@ -774,4 +778,56 @@ pub fn push_mini_state(app: &AppHandle) {
             let _ = app.emit_to(MINI, "lyrics-data", lyrics);
         }
     }
+}
+
+/// 乐观推送：toggle-play 时，先从 Rust 缓存读取当前 playing 状态并翻转，
+/// 立即推给 Mini 窗口（用户无需等待主窗口 WebView 响应）。
+/// 后续由延迟的 push_mini_state 或主窗口 player-state 事件覆盖为真实值。
+pub fn push_mini_state_optimistic(app: &AppHandle, toggle: bool) {
+    if let Some(_win) = app.get_webview_window(MINI) {
+        let ws = &app.state::<crate::AppCtx>().ws;
+        let (song, playing, lyrics) = ws.snapshot();
+        let optimistic_playing = if toggle { !playing.0 } else { playing.0 };
+        let _ = app.emit_to(
+            MINI,
+            "player-state",
+            json!({
+                "currentTime": playing.1,
+                "duration": playing.2,
+                "playing": optimistic_playing,
+                "currentSongHash": song.get("hash").and_then(|v| v.as_str()).unwrap_or(""),
+            }),
+        );
+        if !lyrics.is_null() {
+            let _ = app.emit_to(MINI, "lyrics-data", lyrics);
+        }
+    }
+}
+
+/// Mini 窗口专用周期状态推送定时器。
+/// macOS 主窗口 hide 后 WKWebView 会被系统挂起，主窗口的 setInterval / timeupdate 不会触发，
+/// 导致 player-state 事件停止推送到 Mini 窗口。此定时器在 Rust 端直接运行，
+/// 不依赖主窗口 WebView，确保 Mini 窗口进度/歌词持续更新。
+static MINI_SYNC_RUNNING: AtomicBool = AtomicBool::new(false);
+
+pub fn start_mini_sync_timer(app: &AppHandle) {
+    if MINI_SYNC_RUNNING
+        .compare_exchange(false, true, Ordering::SeqCst, Ordering::SeqCst)
+        .is_err()
+    {
+        return; // 已有定时器在跑
+    }
+    let app = app.clone();
+    std::thread::spawn(move || {
+        loop {
+            std::thread::sleep(std::time::Duration::from_millis(500));
+            // Mini 窗口不存在时保持线程待命，但不推送
+            if app.get_webview_window(MINI).is_none() {
+                continue;
+            }
+            push_mini_state(&app);
+        }
+        // 理论上不会到这里，线程随进程退出
+        // MINI_SYNC_RUNNING.store(false, Ordering::SeqCst);
+    });
 }

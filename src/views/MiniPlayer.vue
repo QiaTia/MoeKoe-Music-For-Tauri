@@ -140,9 +140,16 @@ const progressPercent = computed(() =>
 );
 
 // ── 播放控制（复用 desktop-lyrics-action 通道，由主窗口执行） ──
+// macOS 主窗口 hide 后 WKWebView 会被系统挂起，emit_to(MAIN) 可能延迟，
+// 因此前端做乐观更新（先翻转 playing），Rust 端也会主动推送翻转状态，
+// 后续 player-state 事件会覆盖为真实值。
 const prev = () => sendAction('previous-song');
 const next = () => sendAction('next-song');
-const togglePlay = () => sendAction('toggle-play');
+const togglePlay = () => {
+  // 乐观翻转：不等主窗口回传，立即更新 UI
+  playing.value = !playing.value;
+  sendAction('toggle-play');
+};
 const sendAction = (action) => {
   if (window.electron) {
     window.electron.ipcRenderer.send('desktop-lyrics-action', action);

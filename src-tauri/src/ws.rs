@@ -21,7 +21,7 @@ struct WsShared {
     app: AppHandle,
     clients: Arc<Mutex<HashMap<u64, UnboundedSender<String>>>>,
     lyrics: Arc<Mutex<Value>>,
-    playing: Arc<Mutex<(bool, f64)>>, // (isPlaying, currentTime)
+    playing: Arc<Mutex<(bool, f64, f64)>>, // (isPlaying, currentTime, duration)
     next_id: Arc<AtomicU64>,
 }
 
@@ -29,7 +29,7 @@ struct WsShared {
 pub struct WsService {
     inner: Mutex<Option<WsRuntime>>,
     lyrics: Arc<Mutex<Value>>,
-    playing: Arc<Mutex<(bool, f64)>>,
+    playing: Arc<Mutex<(bool, f64, f64)>>,
     current_song: Arc<Mutex<Value>>,
     clients: Arc<Mutex<HashMap<u64, UnboundedSender<String>>>>,
 }
@@ -43,7 +43,7 @@ impl WsService {
         WsService {
             inner: Mutex::new(None),
             lyrics: Arc::new(Mutex::new(Value::Null)),
-            playing: Arc::new(Mutex::new((false, 0.0))),
+            playing: Arc::new(Mutex::new((false, 0.0, 0.0))),
             current_song: Arc::new(Mutex::new(Value::Null)),
             clients: Arc::new(Mutex::new(HashMap::new())),
         }
@@ -117,11 +117,23 @@ impl WsService {
     /// play-pause-action → 记录并广播播放状态
     pub fn update_player_state(&self, is_playing: bool, current_time: f64) {
         if let Ok(mut g) = self.playing.lock() {
-            *g = (is_playing, current_time);
+            // 保留已有的 duration，仅更新 is_playing 和 current_time
+            *g = (is_playing, current_time, g.2);
         }
         self.broadcast(&json!({
             "type": "playerState",
             "data": { "isPlaying": is_playing, "currentTime": current_time }
+        }));
+    }
+
+    /// player-state → 记录完整播放状态（含 duration）
+    pub fn update_player_full_state(&self, is_playing: bool, current_time: f64, duration: f64) {
+        if let Ok(mut g) = self.playing.lock() {
+            *g = (is_playing, current_time, duration);
+        }
+        self.broadcast(&json!({
+            "type": "playerState",
+            "data": { "isPlaying": is_playing, "currentTime": current_time, "duration": duration }
         }));
     }
 
@@ -133,9 +145,9 @@ impl WsService {
     }
 
     /// 取当前播放状态快照（歌曲信息 + 播放态 + 歌词），用于小屏播放器初始同步
-    pub fn snapshot(&self) -> (Value, (bool, f64), Value) {
+    pub fn snapshot(&self) -> (Value, (bool, f64, f64), Value) {
         let song = self.current_song.lock().map(|g| g.clone()).unwrap_or(Value::Null);
-        let playing = self.playing.lock().map(|g| *g).unwrap_or((false, 0.0));
+        let playing = self.playing.lock().map(|g| *g).unwrap_or((false, 0.0, 0.0));
         let lyrics = self.lyrics.lock().map(|g| g.clone()).unwrap_or(Value::Null);
         (song, playing, lyrics)
     }
@@ -167,7 +179,7 @@ async fn handle_socket(socket: WebSocket, shared: WsShared) {
         let _ = tx.send(
             json!({
                 "type": "playerState",
-                "data": { "isPlaying": playing.0, "currentTime": playing.1 }
+                "data": { "isPlaying": playing.0, "currentTime": playing.1, "duration": playing.2 }
             })
             .to_string(),
         );

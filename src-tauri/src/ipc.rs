@@ -143,12 +143,32 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
             match action.as_str().unwrap_or("") {
                 "previous-song" => {
                     let _ = app.emit_to(MAIN, "play-previous-track", ());
+                    // macOS 主窗口 hide 后 WKWebView 会被系统挂起，emit_to(MAIN) 可能延迟甚至丢失，
+                    // 延迟推送一次 Rust 缓存状态，让 Mini 窗口无需等待主窗 WebView 响应
+                    let app_delayed = app.clone();
+                    std::thread::spawn(move || {
+                        std::thread::sleep(std::time::Duration::from_millis(300));
+                        crate::windows::push_mini_state(&app_delayed);
+                    });
                 }
                 "next-song" => {
                     let _ = app.emit_to(MAIN, "play-next-track", ());
+                    let app_delayed = app.clone();
+                    std::thread::spawn(move || {
+                        std::thread::sleep(std::time::Duration::from_millis(300));
+                        crate::windows::push_mini_state(&app_delayed);
+                    });
                 }
                 "toggle-play" => {
                     let _ = app.emit_to(MAIN, "toggle-play-pause", ());
+                    // macOS 主窗口 hide 后 WKWebView 被挂起：play-pause-action 可能无法及时发出，
+                    // 先从 Rust 缓存乐观推送翻转后的状态，再延迟补推真实状态
+                    crate::windows::push_mini_state_optimistic(&app, true);
+                    let app_delayed = app.clone();
+                    std::thread::spawn(move || {
+                        std::thread::sleep(std::time::Duration::from_millis(500));
+                        crate::windows::push_mini_state(&app_delayed);
+                    });
                 }
                 "close-lyrics" => {
                     if crate::windows::close_lyrics_window(&app) {
@@ -212,7 +232,13 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
             // 主窗口周期广播的精简播放状态（currentTime/duration/playing/hash）
             // 仅当迷你窗存在时转发，避免无谓的跨窗口事件
             if app.get_webview_window(MINI).is_some() {
-                let _ = app.emit_to(MINI, "player-state", arg(&args, 0));
+                let payload = arg(&args, 0);
+                // 同步更新 Rust 端缓存（含 duration），供 push_mini_state 使用
+                let is_playing = payload.get("playing").and_then(|v| v.as_bool()).unwrap_or(false);
+                let current_time = payload.get("currentTime").and_then(|v| v.as_f64()).unwrap_or(0.0);
+                let duration = payload.get("duration").and_then(|v| v.as_f64()).unwrap_or(0.0);
+                ctx.ws.update_player_full_state(is_playing, current_time, duration);
+                let _ = app.emit_to(MINI, "player-state", payload);
             }
         }
         "player-meta" => {
