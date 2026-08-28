@@ -22,7 +22,7 @@ $shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.12);
     justify-content: center;
     padding: 20px;
     border-radius: $radius-lg;
-    margin-top: clamp(48px, 10vh, 80px);
+    margin-top: clamp(12px, 4vh, 32px);
     position: relative;
     width: 60%;
     min-width: 0;
@@ -46,6 +46,14 @@ $shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.12);
     white-space: pre-wrap;
     color: $text-muted;
     transition: transform 0.6s ease;
+    width: 100%;
+    min-width: 0;
+
+    &.lyrics-align-left {
+        .line {
+            margin-right: auto;
+        }
+    }
 }
 
 .single-lyrics {
@@ -89,18 +97,19 @@ $shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.12);
 
 .line-group {
     margin-bottom: 12px;
-    transform: translateY(0) scale(1);
+    font-size: 1em;
     transform-origin: center;
     transition:
-        transform 0.42s cubic-bezier(0.18, 1.35, 0.28, 1),
+        font-size 0.42s cubic-bezier(0.18, 1.35, 0.28, 1),
         filter 0.32s ease;
-    will-change: transform;
+    will-change: font-size;
 }
 
 .line-group.current-line-group {
     position: relative;
     z-index: 1;
-    transform: translateY(0px) scale(1.25);
+    // 用 font-size 放大而非 transform: scale，让放大参与布局、按真实尺寸重新折行，避免长歌词溢出裁切
+    font-size: 1.25em;
     filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.16));
 }
 
@@ -544,6 +553,50 @@ $shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.12);
         font-size: 18px;
         color: $text-muted;
         cursor: pointer;
+    }
+}
+
+.volume-slider-wrap {
+    position: relative;
+    width: 100px;
+
+    .volume-control:hover &,
+    &.show-volume-value {
+        .volume-value {
+            opacity: 1;
+            transform: translate(var(--volume-value-offset), -8px);
+        }
+    }
+
+    .volume-value {
+        position: absolute;
+        bottom: 100%;
+        min-width: 32px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: $white;
+        font-size: 12px;
+        line-height: 1.4;
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+        transform: translate(var(--volume-value-offset), 0);
+        transition: opacity 0.15s ease, transform 0.15s ease;
+        z-index: 2;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: var(--volume-arrow-offset);
+            bottom: -4px;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid rgba(0, 0, 0, 0.7);
+            transform: translateX(-50%);
+        }
     }
 }
 

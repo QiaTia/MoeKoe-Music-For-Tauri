@@ -135,7 +135,7 @@ async fn recognize_audio(
 
 // ─────────────────────────── 深链处理 ───────────────────────────
 
-/// moekoe://share?hash=..&listid=.. → {hash, listid, urlPath}
+/// moekoe://share?hash=..&listid=.. | moekoe://team/join?code=.. → {hash, listid, teamcode, urlPath}
 fn parse_deep_link(url_str: &str) -> Option<Value> {
     let url = url::Url::parse(url_str).ok()?;
     if url.scheme() != "moekoe" {
@@ -143,19 +143,24 @@ fn parse_deep_link(url_str: &str) -> Option<Value> {
     }
     let mut hash = String::new();
     let mut listid = String::new();
+    let mut teamcode = String::new();
     for (k, v) in url.query_pairs() {
         match k.as_ref() {
             "hash" => hash = v.to_string(),
             "listid" => listid = v.to_string(),
+            "code" => teamcode = v.to_string(),
             _ => {}
         }
     }
-    // Electron: urlPath = pathname 去掉前导斜杠；冷启动回放时固定为 share
+    // Electron: urlPath = pathname 去掉前导斜杠；冷启动回放时固定为 share（组队为 join）
     let mut url_path = url.path().trim_start_matches('/').to_string();
     if url_path.is_empty() {
-        url_path = url.host_str().unwrap_or("share").to_string();
+        url_path = url
+            .host_str()
+            .unwrap_or(if teamcode.is_empty() { "share" } else { "join" })
+            .to_string();
     }
-    Some(json!({ "hash": hash, "listid": listid, "urlPath": url_path }))
+    Some(json!({ "hash": hash, "listid": listid, "teamcode": teamcode, "urlPath": url_path }))
 }
 
 fn handle_deep_link(app: &tauri::AppHandle, url_str: &str, cold_start: bool) {

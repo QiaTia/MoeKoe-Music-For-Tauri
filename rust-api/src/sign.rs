@@ -30,6 +30,22 @@ pub fn signature_web(params: &Map<String, Value>) -> String {
     crypto_md5(&format!("{}{}{}", s, ps, s))
 }
 
+/// web 版带请求体 signature（对应 KuGouMusicApi 组队模块内联的 `signatureWebParamsWithBody`）：
+/// `sort(keys).map(k=>"k=v").join('')` + bodyStr，盐值同 web 版（NVPh5oo...），body 夹中间。
+/// 与 `signature_web` 的区别：① 先排序 key 再拼（而非先拼 k=v 再排序字符串）；② 夹入 bodyStr。
+/// 用于组队活动 create_team / join_team 两个 POST 端点。
+pub fn signature_web_with_body(params: &Map<String, Value>, body: &str) -> String {
+    let s = "NVPh5oo715z5DIWAeQlhMDsWXXQV4hwt";
+    let mut keys: Vec<&String> = params.keys().collect();
+    keys.sort();
+    let ps: String = keys
+        .iter()
+        .map(|k| format!("{}={}", k, js_to_string(&params[*k])))
+        .collect::<Vec<_>>()
+        .join("");
+    crypto_md5(&format!("{}{}{}{}", s, ps, body, s))
+}
+
 /// android 版 signature：`sort(keys).map(k=>"k="+val).join('')` —— **先排序 key 再拼**，data 夹中间
 pub fn signature_android(params: &Map<String, Value>, data: &str) -> String {
     let s = if is_lite() {
@@ -156,6 +172,22 @@ mod tests {
             "NVPh5oo715z5DIWAeQlhMDsWXXQV4hwt", "a=1b=2", "NVPh5oo715z5DIWAeQlhMDsWXXQV4hwt"
         ));
         assert_eq!(sig, expect);
+    }
+
+    #[test]
+    fn test_signature_web_with_body_vector() {
+        // 与 Node signatureWebParamsWithBody 对拍的绝对值：
+        // sort(keys) -> "a=1b=2"，salt + ps + "BODY" + salt 的 md5。
+        let params = map(json!({"b": 2, "a": 1}));
+        assert_eq!(
+            signature_web_with_body(&params, "BODY"),
+            "0e64c8443f569e85fb6f405fe8be2798"
+        );
+        // 与无 body 的 signature_web 结果必须不同（body 参与了签名）
+        assert_ne!(
+            signature_web_with_body(&params, "BODY"),
+            signature_web(&params)
+        );
     }
 
     #[test]

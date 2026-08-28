@@ -5622,6 +5622,183 @@ fn m_login_wx_create(query: Value, _use_axios: UseAxios) -> ModuleFuture {
     })
 }
 
+// ---------------- 组队活动（team，v1.7.0 移植自 KuGouMusicApi module/team_*.js） ----------------
+//
+// 共性：token 经「原始无填充 RSA（lite 公钥）」加密；GET 端点用 signature_web，
+// 两个 POST 端点（create/join）用 signature_web_with_body（body 夹入签名）。
+// 模块预置 signature，请求层（request.rs）检测到既有 signature 即跳过重签。
+
+/// 组队 token：`h5` + RSA无填充加密('moc.uoguk.59::'+rawToken 右补零至128B) 大写hex。
+/// 固定使用 lite 公钥（对应 Node `publicLiteRasKey`，不随 platform 切换）。
+fn team_token(q: &Value) -> String {
+    let raw = token_of(q);
+    let input = format!("moc.uoguk.59::{}", raw);
+    let enc = crypto_rsa_encrypt(&input, Some(crate::crypto::PUBLIC_LITE_RSA_KEY)).to_uppercase();
+    format!("h5{}", enc)
+}
+
+/// 组队公共参数（srcappid/clientver/clienttime/mid/uuid/dfid/appid/userid/token）。
+/// 取值顺序严格对齐 Node：
+///   mid  = cookie.KUGOU_API_MID || params.mid || ''
+///   dfid = params.dfid || cookie.dfid || '-'
+///   uuid = params.uuid || cookie.uuid || '-'
+fn team_base_params(q: &Value) -> Map<String, Value> {
+    let mid = {
+        let m = ck_str(q, "KUGOU_API_MID");
+        if !m.is_empty() { m } else { q_str(q, "mid") }
+    };
+    let dfid = {
+        let d = q_str(q, "dfid");
+        if !d.is_empty() {
+            d
+        } else {
+            let c = ck_str(q, "dfid");
+            if c.is_empty() { "-".to_string() } else { c }
+        }
+    };
+    let uuid = {
+        let u = q_str(q, "uuid");
+        if !u.is_empty() {
+            u
+        } else {
+            let c = ck_str(q, "uuid");
+            if c.is_empty() { "-".to_string() } else { c }
+        }
+    };
+    let mut m = Map::new();
+    m.insert("srcappid".into(), Value::from(config::CONFIG.srcappid));
+    m.insert("clientver".into(), Value::from(use_clientver()));
+    m.insert("clienttime".into(), Value::from(now_ms()));
+    m.insert("mid".into(), Value::String(mid));
+    m.insert("uuid".into(), Value::String(uuid));
+    m.insert("dfid".into(), Value::String(dfid));
+    m.insert("appid".into(), Value::from(use_appid()));
+    m.insert("userid".into(), Value::from(userid_of(q)));
+    m.insert("token".into(), Value::String(team_token(q)));
+    m
+}
+
+/// /team/period/info —— 获取本期组队活动状态（GET -> /youth/v1/ut/get_period_info）
+fn m_team_period_info(query: Value, use_axios: UseAxios) -> ModuleFuture {
+    Box::pin(async move {
+        let mut params = team_base_params(&query);
+        let signature = sign::signature_web(&params);
+        params.insert("signature".into(), Value::String(signature));
+        let opts = RequestOptions {
+            url: "/youth/v1/ut/get_period_info".into(),
+            method: "GET".into(),
+            params,
+            headers: str_map(&[("Host", "gateway.kugou.com")]),
+            cookie: cookie_of(&query),
+            ..Default::default()
+        };
+        use_axios(opts).await
+    })
+}
+
+/// /team/my/status —— 获取我的组队状态（GET -> /youth/v1/ut/get_user_status）
+fn m_team_my_status(query: Value, use_axios: UseAxios) -> ModuleFuture {
+    Box::pin(async move {
+        let mut params = team_base_params(&query);
+        params.insert(
+            "period_id".into(),
+            query.get("period_id").cloned().unwrap_or(Value::Null),
+        );
+        let signature = sign::signature_web(&params);
+        params.insert("signature".into(), Value::String(signature));
+        let opts = RequestOptions {
+            url: "/youth/v1/ut/get_user_status".into(),
+            method: "GET".into(),
+            params,
+            headers: str_map(&[("Host", "gateway.kugou.com")]),
+            cookie: cookie_of(&query),
+            ..Default::default()
+        };
+        use_axios(opts).await
+    })
+}
+
+/// /team/my/info —— 获取我的队伍信息（GET -> /youth/v1/ut/get_my_team_info）
+fn m_team_my_info(query: Value, use_axios: UseAxios) -> ModuleFuture {
+    Box::pin(async move {
+        let mut params = team_base_params(&query);
+        params.insert(
+            "period_id".into(),
+            query.get("period_id").cloned().unwrap_or(Value::Null),
+        );
+        let signature = sign::signature_web(&params);
+        params.insert("signature".into(), Value::String(signature));
+        let opts = RequestOptions {
+            url: "/youth/v1/ut/get_my_team_info".into(),
+            method: "GET".into(),
+            params,
+            headers: str_map(&[("Host", "gateway.kugou.com")]),
+            cookie: cookie_of(&query),
+            ..Default::default()
+        };
+        use_axios(opts).await
+    })
+}
+
+/// /team/my —— 创建我的队伍（前端 GET 带 period_id；KuGou 侧 POST /youth/v1/ut/create_team）
+fn m_team_my(query: Value, use_axios: UseAxios) -> ModuleFuture {
+    Box::pin(async move {
+        let params = team_base_params(&query);
+        let mut data_map = Map::new();
+        data_map.insert(
+            "period_id".into(),
+            query.get("period_id").cloned().unwrap_or(Value::Null),
+        );
+        let data_val = Value::Object(data_map);
+        let data_str = serde_json::to_string(&data_val).unwrap_or_default();
+        let signature = sign::signature_web_with_body(&params, &data_str);
+        let mut final_params = params;
+        final_params.insert("signature".into(), Value::String(signature));
+        let opts = RequestOptions {
+            url: "/youth/v1/ut/create_team".into(),
+            method: "POST".into(),
+            params: final_params,
+            data: Some(data_val),
+            headers: str_map(&[("Host", "gateway.kugou.com")]),
+            cookie: cookie_of(&query),
+            ..Default::default()
+        };
+        use_axios(opts).await
+    })
+}
+
+/// /team/join —— 加入队伍（前端 POST body {team_code}；KuGou 侧 POST /youth/v1/ut/join_team）
+fn m_team_join(query: Value, use_axios: UseAxios) -> ModuleFuture {
+    Box::pin(async move {
+        let params = team_base_params(&query);
+        // team_code 由前端 POST body 传入，dispatch 将其嵌于 query.body；兼容顶层 params
+        let team_code = query
+            .get("body")
+            .and_then(|b| b.get("team_code"))
+            .cloned()
+            .filter(|v| !v.is_null())
+            .or_else(|| query.get("team_code").cloned())
+            .unwrap_or(Value::Null);
+        let mut data_map = Map::new();
+        data_map.insert("team_code".into(), team_code);
+        let data_val = Value::Object(data_map);
+        let data_str = serde_json::to_string(&data_val).unwrap_or_default();
+        let signature = sign::signature_web_with_body(&params, &data_str);
+        let mut final_params = params;
+        final_params.insert("signature".into(), Value::String(signature));
+        let opts = RequestOptions {
+            url: "/youth/v1/ut/join_team".into(),
+            method: "POST".into(),
+            params: final_params,
+            data: Some(data_val),
+            headers: str_map(&[("Host", "gateway.kugou.com")]),
+            cookie: cookie_of(&query),
+            ..Default::default()
+        };
+        use_axios(opts).await
+    })
+}
+
 // ---------------- 工具 ----------------
 
 fn str_map(pairs: &[(&str, &str)]) -> Map<String, Value> {
@@ -5784,6 +5961,12 @@ pub fn registry() -> Vec<ModuleDef> {
         ModuleDef { route: "/theme/music/detail", handler: Arc::new(|q, u| m_theme_music_detail(q, u)) },
         ModuleDef { route: "/theme/playlist", handler: Arc::new(|q, u| m_theme_playlist(q, u)) },
         ModuleDef { route: "/theme/playlist/track", handler: Arc::new(|q, u| m_theme_playlist_track(q, u)) },
+        // —— 组队活动（team，v1.7.0） ——
+        ModuleDef { route: "/team/period/info", handler: Arc::new(|q, u| m_team_period_info(q, u)) },
+        ModuleDef { route: "/team/my/status", handler: Arc::new(|q, u| m_team_my_status(q, u)) },
+        ModuleDef { route: "/team/my/info", handler: Arc::new(|q, u| m_team_my_info(q, u)) },
+        ModuleDef { route: "/team/my", handler: Arc::new(|q, u| m_team_my(q, u)) },
+        ModuleDef { route: "/team/join", handler: Arc::new(|q, u| m_team_join(q, u)) },
         // —— 批次 9（youth 系列） ——
         ModuleDef { route: "/youth/channel/all", handler: Arc::new(|q, u| m_youth_channel_all(q, u)) },
         ModuleDef { route: "/youth/channel/amway", handler: Arc::new(|q, u| m_youth_channel_amway(q, u)) },
