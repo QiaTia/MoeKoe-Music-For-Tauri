@@ -354,6 +354,47 @@ const MINI_EDGE_MARGIN: f64 = 12.0;
 /// 防止 `set_position` 触发的二次 `Moved` 重入造成抖动/死循环。
 static MINI_SNAPPING: AtomicBool = AtomicBool::new(false);
 
+/// 纯计算：给定窗口当前位置/尺寸与所在显示器工作区，返回吸附后的位置（不触碰窗口）。
+/// 被 `snap_mini_window_if_needed` 调用，独立抽出便于单元测试（无需真实窗口/显示器）。
+/// 水平/竖直方向独立判定，因此可吸附到屏幕角；结果夹紧到工作区保证至少部分可见。
+fn compute_snap_position(
+    wx: f64,
+    wy: f64,
+    w: f64,
+    h: f64,
+    work_x: f64,
+    work_y: f64,
+    work_w: f64,
+    work_h: f64,
+) -> (f64, f64) {
+    let left = wx - work_x;
+    let right = (work_x + work_w) - (wx + w);
+    let top = wy - work_y;
+    let bottom = (work_y + work_h) - (wy + h);
+
+    let mut nx = wx;
+    let mut ny = wy;
+
+    // 水平方向：吸附到更近的一侧
+    if left < MINI_SNAP_THRESHOLD && left <= right {
+        nx = work_x + MINI_EDGE_MARGIN;
+    } else if right < MINI_SNAP_THRESHOLD {
+        nx = work_x + work_w - w - MINI_EDGE_MARGIN;
+    }
+    // 竖直方向：吸附到更近的一侧
+    if top < MINI_SNAP_THRESHOLD && top <= bottom {
+        ny = work_y + MINI_EDGE_MARGIN;
+    } else if bottom < MINI_SNAP_THRESHOLD {
+        ny = work_y + work_h - h - MINI_EDGE_MARGIN;
+    }
+
+    // 夹紧到工作区内，保证窗口至少部分可见（多屏拖出时拉回）
+    nx = nx.clamp(work_x, (work_x + work_w - w).max(work_x));
+    ny = ny.clamp(work_y, (work_y + work_h - h).max(work_y));
+
+    (nx, ny)
+}
+
 /// 边缘吸附增强：小窗松手（WindowEvent::Moved）后，若任一边距当前显示器工作区边缘
 /// 小于阈值，则把该边吸附到边缘（留 `MINI_EDGE_MARGIN`）。水平/竖直方向独立判定，
 /// 因此可吸附到屏幕角。窗口已离开边缘（>阈值）时不吸附，避免误触。
@@ -401,30 +442,7 @@ fn snap_mini_window_if_needed(app: &AppHandle, win: &WebviewWindow) {
     let w = size.width;
     let h = size.height;
 
-    let left = wx - work_x;
-    let right = (work_x + work_w) - (wx + w);
-    let top = wy - work_y;
-    let bottom = (work_y + work_h) - (wy + h);
-
-    let mut nx = wx;
-    let mut ny = wy;
-
-    // 水平方向：吸附到更近的一侧
-    if left < MINI_SNAP_THRESHOLD && left <= right {
-        nx = work_x + MINI_EDGE_MARGIN;
-    } else if right < MINI_SNAP_THRESHOLD {
-        nx = work_x + work_w - w - MINI_EDGE_MARGIN;
-    }
-    // 竖直方向：吸附到更近的一侧
-    if top < MINI_SNAP_THRESHOLD && top <= bottom {
-        ny = work_y + MINI_EDGE_MARGIN;
-    } else if bottom < MINI_SNAP_THRESHOLD {
-        ny = work_y + work_h - h - MINI_EDGE_MARGIN;
-    }
-
-    // 夹紧到工作区内，保证窗口至少部分可见（多屏拖出时拉回）
-    nx = nx.clamp(work_x, (work_x + work_w - w).max(work_x));
-    ny = ny.clamp(work_y, (work_y + work_h - h).max(work_y));
+    let (nx, ny) = compute_snap_position(wx, wy, w, h, work_x, work_y, work_w, work_h);
 
     if (nx, ny) != (wx, wy) {
         let _ = win.set_position(LogicalPosition::new(nx, ny));
@@ -830,4 +848,117 @@ pub fn start_mini_sync_timer(app: &AppHandle) {
         // 理论上不会到这里，线程随进程退出
         // MINI_SYNC_RUNNING.store(false, Ordering::SeqCst);
     });
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    // ── mini_size_for_mode ──
+    #[test]
+    fn test_mini_size_for_mode_compact() {
+        assert_eq!(mini_size_for_mode(MINI_MODE_COMPACT), (320.0, 80.0));
+    }
+
+    #[test]
+    fn test_mini_size_for_mode_normal_and_fallback() {
+        // 任何非 compact 字符串都按 normal 处理（含拼写错误的防御）
+        assert_eq!(mini_size_for_mode(MINI_MODE_NORMAL), (320.0, 460.0));
+        assert_eq!(mini_size_for_mode("weird"), (320.0, 460.0));
+        assert_eq!(mini_size_for_mode(""), (320.0, 460.0));
+    }
+
+    // ── patch_mini_window_state：合并而非整体替换 ──
+    #[test]
+    fn test_patch_mini_window_state_merges() {
+        let store = SettingsStore::new();
+        // 内存态即可，无需落盘
+        store.set("miniWindowState", json!({ "mode": "normal", "x": 100.0 }));
+        patch_mini_window_state(&store, json!({ "y": 200.0 }));
+        let s = store.get("miniWindowState");
+        assert_eq!(s.get("mode").and_then(|v| v.as_str()), Some("normal"));
+        assert_eq!(s.get("x").and_then(|v| v.as_f64()), Some(100.0));
+        assert_eq!(s.get("y").and_then(|v| v.as_f64()), Some(200.0));
+    }
+
+    #[test]
+    fn test_patch_mini_window_state_initializes_when_missing() {
+        let store = SettingsStore::new();
+        patch_mini_window_state(&store, json!({ "mode": "compact" }));
+        let s = store.get("miniWindowState");
+        assert_eq!(s.get("mode").and_then(|v| v.as_str()), Some("compact"));
+    }
+
+    // ── compute_snap_position：纯几何判定（无需真实窗口） ──
+    // 工作区：从 (0,0) 起，1920x1080。窗口 320x80。
+    const WX: f64 = 0.0;
+    const WY: f64 = 0.0;
+    const WW: f64 = 1920.0;
+    const WH: f64 = 1080.0;
+    const WIN_W: f64 = 320.0;
+    const WIN_H: f64 = 80.0;
+
+    #[test]
+    fn test_snap_noop_when_far_from_edges() {
+        // 居中放置，远离任何边缘 → 不吸附
+        let (nx, ny) = compute_snap_position(800.0, 500.0, WIN_W, WIN_H, WX, WY, WW, WH);
+        assert_eq!((nx, ny), (800.0, 500.0));
+    }
+
+    #[test]
+    fn test_snap_to_left() {
+        // 左边缘 10px < 阈值16 → 吸附到 work_x + 留白12
+        let (nx, ny) = compute_snap_position(10.0, 500.0, WIN_W, WIN_H, WX, WY, WW, WH);
+        assert_eq!(nx, WX + MINI_EDGE_MARGIN);
+        assert_eq!(ny, 500.0);
+    }
+
+    #[test]
+    fn test_snap_to_right() {
+        // 右边缘间隙 = 1920 - (1890+320) = 10 < 阈值 → 吸附右侧
+        let (nx, ny) = compute_snap_position(1890.0, 500.0, WIN_W, WIN_H, WX, WY, WW, WH);
+        assert_eq!(nx, WX + WW - WIN_W - MINI_EDGE_MARGIN);
+        assert_eq!(ny, 500.0);
+    }
+
+    #[test]
+    fn test_snap_to_top() {
+        let (nx, ny) = compute_snap_position(800.0, 8.0, WIN_W, WIN_H, WX, WY, WW, WH);
+        assert_eq!(ny, WY + MINI_EDGE_MARGIN);
+        assert_eq!(nx, 800.0);
+    }
+
+    #[test]
+    fn test_snap_to_bottom() {
+        let (nx, ny) = compute_snap_position(800.0, 1000.0, WIN_W, WIN_H, WX, WY, WW, WH);
+        assert_eq!(ny, WY + WH - WIN_H - MINI_EDGE_MARGIN);
+        assert_eq!(nx, 800.0);
+    }
+
+    #[test]
+    fn test_snap_to_top_left_corner() {
+        // 同时靠近左上 → 吸附到左上角
+        let (nx, ny) = compute_snap_position(5.0, 5.0, WIN_W, WIN_H, WX, WY, WW, WH);
+        assert_eq!(nx, WX + MINI_EDGE_MARGIN);
+        assert_eq!(ny, WY + MINI_EDGE_MARGIN);
+    }
+
+    #[test]
+    fn test_snap_near_corner_prefers_closer_side() {
+        // 左上都很近但右间隙更大时，水平应吸左、竖直应吸上
+        let (nx, ny) = compute_snap_position(3.0, 3.0, WIN_W, WIN_H, WX, WY, WW, WH);
+        assert_eq!((nx, ny), (WX + MINI_EDGE_MARGIN, WY + MINI_EDGE_MARGIN));
+    }
+
+    #[test]
+    fn test_snap_clamps_out_of_bounds() {
+        // 完全拖出工作区（负坐标）→ 夹紧到最小可见位置
+        let (nx, ny) = compute_snap_position(-500.0, -200.0, WIN_W, WIN_H, WX, WY, WW, WH);
+        assert!(nx >= WX);
+        assert!(ny >= WY);
+        // 拖到远超右下 → 夹紧到右下方（至少部分可见）
+        let (rx, ry) = compute_snap_position(5000.0, 5000.0, WIN_W, WIN_H, WX, WY, WW, WH);
+        assert!(rx <= WX + WW - WIN_W);
+        assert!(ry <= WY + WH - WIN_H);
+    }
 }
