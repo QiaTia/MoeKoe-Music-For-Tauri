@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sleep 60 && tail -20 /tmp/tauri-dev.log 2>&1)",
+      "Read(//private/tmp/**)",
+      "Bash(sleep 12 && tail -15 /tmp/tauri-dev.log 2>&1)",
+      "Bash(npm run *)"
+    ],
+    "additionalDirectories": [
+      "/private/tmp"
+    ]
+  }
+}

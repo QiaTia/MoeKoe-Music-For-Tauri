@@ -7,7 +7,7 @@ vi.mock('../../stores/store', () => ({
 }));
 
 import { ref } from 'vue';
-import useHelpers from '@/components/player/Helpers';
+import { useHelpers } from '@/components/player/Helpers';
 
 const identity = (k) => k;
 

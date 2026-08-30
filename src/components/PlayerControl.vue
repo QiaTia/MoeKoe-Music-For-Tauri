@@ -876,6 +876,13 @@ watch(() => [lyricsBackground.value, showLyrics.value], () => {
     stopLyricsBackgroundCarousel();
 });
 
+// 全屏歌词沉浸：macOS 原生标题栏在打开时切到 Overlay（红绿灯保留、内容延伸到标题栏背后），
+// 关闭时恢复 Visible。仅 electron/Tauri 环境生效；非 mac 平台由 Rust 端忽略。
+watch(showLyrics, (open) => {
+    if (!isElectron()) return;
+    window.electron.ipcRenderer.send('main-window-immersive', !!open);
+});
+
 // 判断是否有多种歌词模式（同时有翻译和音译）
 const hasMultiLyricsMode = computed(() => {
     if (!lyricsData.value || lyricsData.value.length === 0) return false;

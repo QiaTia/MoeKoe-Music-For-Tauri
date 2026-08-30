@@ -41,6 +41,24 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
         }
 
         // ── 窗口控制（自绘标题栏） ────────────────────────────────
+        "main-window-immersive" => {
+            // 全屏歌词沉浸：macOS 原生标题栏切 Overlay（红绿灯保留、内容延伸到标题栏背后）。
+            // 仅 macOS 生效，其它平台 set_title_bar_style 为空操作。
+            let immersive = arg(&args, 0).as_bool().unwrap_or(false);
+            #[cfg(target_os = "macos")]
+            if let Some(win) = app.get_webview_window(MAIN) {
+                let style = if immersive {
+                    tauri::TitleBarStyle::Overlay
+                } else {
+                    tauri::TitleBarStyle::Visible
+                };
+                let _ = win.set_title_bar_style(style);
+            }
+            #[cfg(not(target_os = "macos"))]
+            {
+                let _ = immersive;
+            }
+        }
         "window-control" => {
             let action = arg(&args, 0);
             let action = action.as_str().unwrap_or("");
