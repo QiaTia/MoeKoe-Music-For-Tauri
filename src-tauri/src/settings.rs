@@ -230,3 +230,99 @@ pub fn t(store: &SettingsStore, key: &str) -> String {
         .map(|(_, v)| v.to_string())
         .unwrap_or_else(|| key.to_string())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::io::Write;
+    use std::sync::atomic::{AtomicU64, Ordering};
+
+    static TEST_DIR_SEQ: AtomicU64 = AtomicU64::new(0);
+
+    /// 用临时目录的 store.json 隔离测试，避免污染真实用户数据。
+    /// 每次调用生成独立目录（带自增序号），防止同进程内多个测试复用同一路径互相污染。
+    fn temp_store() -> (SettingsStore, std::path::PathBuf) {
+        let seq = TEST_DIR_SEQ.fetch_add(1, Ordering::SeqCst);
+        let dir = std::env::temp_dir().join(format!(
+            "moekoe_test_store_{}_{}",
+            std::process::id(),
+            seq
+        ));
+        let _ = std::fs::create_dir_all(&dir);
+        let path = dir.join("store.json");
+        let store = SettingsStore::new();
+        store.init(path.clone());
+        (store, path)
+    }
+
+    #[test]
+    fn test_get_default_null_when_empty() {
+        let (store, _p) = temp_store();
+        assert!(store.get("nonexistent").is_null());
+        assert!(store.settings().is_null());
+        assert_eq!(store.setting_str("language"), None);
+        assert!(!store.setting_on("desktopLyrics"));
+    }
+
+    #[test]
+    fn test_set_get_roundtrip_and_persist() {
+        let (store, path) = temp_store();
+        store.set("settings", json!({ "language": "en", "desktopLyrics": "on" }));
+        // 落盘校验
+        let raw = std::fs::read_to_string(&path).unwrap();
+        let on_disk: Value = serde_json::from_str(&raw).unwrap();
+        assert_eq!(on_disk["settings"]["language"], "en");
+        assert!(store.setting_on("desktopLyrics"));
+        assert_eq!(store.setting_str("language").as_deref(), Some("en"));
+        let _ = std::fs::remove_file(&path);
+    }
+
+    #[test]
+    fn test_merge_setting_preserves_others() {
+        let (store, path) = temp_store();
+        store.set("settings", json!({ "language": "zh-CN", "theme": "pink" }));
+        store.merge_setting("desktopLyrics", json!("on"));
+        let s = store.settings();
+        assert_eq!(s["language"], "zh-CN");
+        assert_eq!(s["theme"], "pink");
+        assert_eq!(s["desktopLyrics"], "on");
+        let _ = std::fs::remove_file(&path);
+    }
+
+    #[test]
+    fn test_init_loads_existing_file() {
+        let dir = std::env::temp_dir().join(format!("moekoe_test_load_{}", std::process::id()));
+        let _ = std::fs::create_dir_all(&dir);
+        let path = dir.join("store.json");
+        let mut f = std::fs::File::create(&path).unwrap();
+        f.write_all(b"{\"settings\":{\"language\":\"ja\"}}").unwrap();
+        drop(f);
+
+        let store = SettingsStore::new();
+        store.init(path.clone());
+        assert_eq!(store.setting_str("language").as_deref(), Some("ja"));
+        let _ = std::fs::remove_file(&path);
+    }
+
+    #[test]
+    fn test_clear_removes_file() {
+        let (store, path) = temp_store();
+        store.set("settings", json!({ "a": 1 }));
+        assert!(path.exists());
+        store.clear();
+        assert!(store.get("settings").is_null());
+        assert!(!path.exists());
+    }
+
+    #[test]
+    fn test_t_language_fallback() {
+        // 无法可靠控制 sys_locale，至少验证已知 key 命中
+        let store = SettingsStore::new();
+        store.init(std::env::temp_dir().join(format!("x_{}.json", std::process::id())));
+        store.set("settings", json!({ "language": "en" }));
+        assert_eq!(t(&store, "play"), "Play");
+        assert_eq!(t(&store, "quit"), "Quit");
+        // 未知 key 原样返回
+        assert_eq!(t(&store, "no-such-key"), "no-such-key");
+    }
+}

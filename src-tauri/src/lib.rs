@@ -163,6 +163,48 @@ fn parse_deep_link(url_str: &str) -> Option<Value> {
     Some(json!({ "hash": hash, "listid": listid, "teamcode": teamcode, "urlPath": url_path }))
 }
 
+#[cfg(test)]
+mod tests {
+    use super::parse_deep_link;
+
+    #[test]
+    fn test_deep_link_share_with_hash_and_listid() {
+        let v = parse_deep_link("moekoe://share?hash=abc123&listid=list999").unwrap();
+        assert_eq!(v["hash"], "abc123");
+        assert_eq!(v["listid"], "list999");
+        assert_eq!(v["urlPath"], "share");
+    }
+
+    #[test]
+    fn test_deep_link_ignores_unknown_query() {
+        let v = parse_deep_link("moekoe://share?foo=bar&hash=h1").unwrap();
+        assert_eq!(v["hash"], "h1");
+        assert_eq!(v["listid"], "");
+    }
+
+    #[test]
+    fn test_deep_link_custom_host_path() {
+        // host 段用作回放 urlPath（对齐 Electron 冷启动回放逻辑）
+        let v = parse_deep_link("moekoe://song?hash=xyz").unwrap();
+        assert_eq!(v["urlPath"], "song");
+        assert_eq!(v["hash"], "xyz");
+    }
+
+    #[test]
+    fn test_deep_link_rejects_non_moekoe_scheme() {
+        assert!(parse_deep_link("https://example.com/share?hash=1").is_none());
+        assert!(parse_deep_link("not-a-url").is_none());
+    }
+
+    #[test]
+    fn test_deep_link_empty_query_ok() {
+        let v = parse_deep_link("moekoe://share").unwrap();
+        assert_eq!(v["hash"], "");
+        assert_eq!(v["listid"], "");
+        assert_eq!(v["urlPath"], "share");
+    }
+}
+
 fn handle_deep_link(app: &tauri::AppHandle, url_str: &str, cold_start: bool) {
     let Some(params) = parse_deep_link(url_str) else {
         return;
