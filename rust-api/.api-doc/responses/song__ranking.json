@@ -1,0 +1,46 @@
+{
+  "errcode": 0,
+  "errmsg": "",
+  "data": {
+    "album_audio_id": 317568292,
+    "info": [
+      {
+        "platform": 1,
+        "platform_name": "酷狗音乐",
+        "platform_logo": "https://mobileservicebssdl.kugou.com/63d7e2a9cae12efb85275cea40615244.png",
+        "last_time": "2026-08-26",
+        "ranking_num": 10,
+        "ranking_times": 3250
+      },
+      {
+        "platform": 2,
+        "platform_name": "QQ音乐",
+        "platform_logo": "https://mobileservicebssdl.kugou.com/be36e7470c90a346f2e76b08dd6323bb.png",
+        "last_time": "2026-03-07",
+        "ranking_num": 4,
+        "ranking_times": 1584
+      },
+      {
+        "platform": 3,
+        "platform_name": "酷我音乐",
+        "platform_logo": "https://mobileservicebssdl.kugou.com/f20ff36b92eacb1b35a75c490b13dca6.png",
+        "last_time": "2026-09-04",
+        "ranking_num": 5,
+        "ranking_times": 1668
+      },
+      {
+        "platform": 15,
+        "platform_name": "iTunes",
+        "platform_logo": "http://mobileservicebssdl.kugou.com/5b59c284cdc22961046c7d514d990043.png",
+        "last_time": "2024-06-06",
+        "ranking_num": 2,
+        "ranking_times": 2
+      }
+    ],
+    "platform_num": 4,
+    "platform_total": 17,
+    "title1": "已上榜 4/17",
+    "title2": "收录全球海内外17个音乐平台上榜信息，该歌曲上榜4个"
+  },
+  "status": 1
+}

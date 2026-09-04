@@ -1,0 +1,113 @@
+{
+  "data": {
+    "img_url": "http://imge.kugou.com/quickentry/20211012/20211012172540588497.jpg",
+    "total": 9,
+    "name": "经典钢琴曲",
+    "opern_list": [],
+    "author_avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg",
+    "author": "第三方",
+    "info": "",
+    "collection_type": 1,
+    "view_num": 55282,
+    "userid": 520032960,
+    "song_list": [
+      {
+        "is_publish": 1,
+        "pic": "http://imge.kugou.com/stdmusic/{size}/20241118/20241118143502768505.jpg",
+        "hash": "3E6D534A58AED5BCDAB1F38C1A0B4496",
+        "audio_id": 312591,
+        "album_audio_id": 32080691,
+        "author": "张信哲",
+        "song_name": "爱就一个字",
+        "view_num": 6448
+      },
+      {
+        "is_publish": 1,
+        "pic": "http://imge.kugou.com/stdmusic/{size}/20250125/20250125121625606416.jpg",
+        "hash": "BA9D67DAB59FA6DCE243F4B6B70ACA95",
+        "audio_id": 246787,
+        "album_audio_id": 32105156,
+        "author": "林忆莲",
+        "song_name": "至少还有你",
+        "view_num": 6663
+      },
+      {
+        "is_publish": 1,
+        "pic": "http://imge.kugou.com/stdmusic/{size}/20250516/20250516175502439257.jpg",
+        "hash": "407277CFBF937723C231EB2516F3C8C6",
+        "audio_id": 57540,
+        "album_audio_id": 32137411,
+        "author": "李健",
+        "song_name": "贝加尔湖畔",
+        "view_num": 21799
+      },
+      {
+        "is_publish": 1,
+        "pic": "http://imge.kugou.com/stdmusic/{size}/20250125/20250125121726584286.jpg",
+        "hash": "3B343C47D4605A53A605BDA51CE1666D",
+        "audio_id": 345056,
+        "album_audio_id": 32139781,
+        "author": "李健",
+        "song_name": "传奇",
+        "view_num": 5594
+      },
+      {
+        "is_publish": 1,
+        "pic": "http://imge.kugou.com/stdmusic/{size}/20250221/20250221180749399778.jpg",
+        "hash": "BFA193790D3A21638EBC787ECC975FEE",
+        "audio_id": 330104,
+        "album_audio_id": 32148811,
+        "author": "周传雄",
+        "song_name": "我的心太乱",
+        "view_num": 1779
+      },
+      {
+        "is_publish": 1,
+        "pic": "http://imge.kugou.com/stdmusic/{size}/20250812/20250812210402419543.jpg",
+        "hash": "518B9C5F6E7725619DA6C6B478C56179",
+        "audio_id": 273990,
+        "album_audio_id": 32183579,
+        "author": "刘德华",
+        "song_name": "男人哭吧不是罪",
+        "view_num": 1099
+      },
+      {
+        "is_publish": 1,
+        "pic": "http://imge.kugou.com/stdmusic/{size}/20250811/20250811131523172295.jpg",
+        "hash": "04615ACEA3D78B29E140A9C25CF95EDC",
+        "audio_id": 340133,
+        "album_audio_id": 32233356,
+        "author": "刘德华",
+        "song_name": "忘情水",
+        "view_num": 2304
+      },
+      {
+        "is_publish": 1,
+        "pic": "http://imge.kugou.com/stdmusic/{size}/20251114/20251114044031114515.jpg",
+        "hash": "B9DDEE64202DD593B75103C34DD6D00C",
+        "audio_id": 339102,
+        "album_audio_id": 32243475,
+        "author": "张宇",
+        "song_name": "雨一直下",
+        "view_num": 3348
+      },
+      {
+        "is_publish": 1,
+        "pic": "http://imge.kugou.com/stdmusic/{size}/20210810/20210810191411432368.jpg",
+        "hash": "9A34AA59AD6324A7A2F218ED33B38DC1",
+        "audio_id": 116267262,
+        "album_audio_id": 331286373,
+        "author": "王小帅",
+        "song_name": "怨苍天变了心 (吉他版)",
+        "view_num": 6248
+      }
+    ],
+    "tag_list": [
+      "钢琴"
+    ],
+    "opern_type": 1
+  },
+  "errcode": 0,
+  "status": 1,
+  "error": ""
+}

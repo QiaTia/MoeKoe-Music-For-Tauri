@@ -1,0 +1,5833 @@
+{
+  "total": 500,
+  "error_code": 0,
+  "data": {
+    "total": 500,
+    "songlist": [
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "0D94287D8E062EAB8424F4E239983D1A",
+            "id": "15758336"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20260414/20260414101321856856.jpg",
+            "is_publish": 1,
+            "author_id": 21321931,
+            "author_name": "阿图表妹"
+          }
+        ],
+        "author_name": "阿图表妹",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 571484095,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "谈柒柒",
+            "type": 5
+          }
+        ],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_hash": "5B663FCD882D5A913BBE6ACA478A7FBF",
+          "provider": 5,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260604/20260604164021847508.jpg",
+          "ogg_320_filesize": 9460902,
+          "qualitymap": {
+            "bits": "8fffe0db411fefebf3be474",
+            "attr0": 1060889716,
+            "attr1": 1747189245
+          },
+          "is_original": 2,
+          "ogg_128_filesize": 2869682,
+          "cid": 596195117,
+          "ogg_128_hash": "23D32B626052A74430229EE7DB6FC719",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "hash_offset": {
+            "clip_hash": "11588236770AEC2A2FC449F28B6447EF",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960143,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "F4CEA74FD41857D8227BB4EEB02BA6BA"
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "D078EF8B1D887B7245BFD73F25119DBB",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "你有没有真的爱过我",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 879490214,
+        "audio_info": {
+          "filesize_flac": 29346496,
+          "bitrate": 128,
+          "duration_flac": 243000,
+          "duration_128": 243000,
+          "duration_320": 243000,
+          "hash_320": "E7C44199E3EBE0463E6DA3E191E8E9CA",
+          "bitrate_high": 1773,
+          "duration_high": 243000,
+          "hash_flac": "812E245664DC60B31EB8C82BC62B8493",
+          "filesize_128": 3899779,
+          "filesize_super": 0,
+          "hash_128": "FE39668F68770C3FB3BE57A3E86CCC10",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 963,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "616882B2426694D0D20B8CA5870D70F6",
+          "extname": "mp3",
+          "filesize_320": 9749118,
+          "filesize_high": 54033593
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 190170015,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260604/20260604164021847508.jpg",
+          "album_name": "你有没有真的爱过我"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 2,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 1,
+          "rank_count": 104,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "阿图表妹 - 你有没有真的爱过我",
+          "sort": 1,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "谈柒柒",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 2
+        },
+        "deprecated": {
+          "hash": "FE39668F68770C3FB3BE57A3E86CCC10",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 571484095,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 243000,
+          "type_flac": "audio",
+          "cid": 596195117,
+          "pkg_price": 1,
+          "filesize": 3899779,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "18AB2E2485BBB9983CACCEA75E4DE73A",
+            "id": "17520476"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20260720/20260720102233246467.jpg",
+            "is_publish": 1,
+            "author_id": 1133,
+            "author_name": "欢子"
+          }
+        ],
+        "author_name": "欢子",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 1107983808,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "free_limited": 1,
+          "cpy_attr0": 58720256,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "provider": 2,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260830/20260830122759607455.jpg",
+          "qualitymap": {
+            "bits": "800000db41080003f3be474",
+            "attr0": 1060889716,
+            "attr1": 1746993152
+          },
+          "ogg_320_filesize": 9331357,
+          "ogg_320_hash": "7D5D80D44DC79918F32FA20E97FF3AB3",
+          "cid": 657873681,
+          "ogg_128_filesize": 2717262,
+          "ogg_128_hash": "C0F931B8A9630CF900D0565B8DB74815",
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "appid_block": "3124",
+          "pay_block_tpl": 1,
+          "hash_multitrack": "545C4EC94F6EBEE1CB181FBE867715F0",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "思念漫过海岸线",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 954533843,
+        "audio_info": {
+          "filesize_flac": 26010990,
+          "bitrate": 128,
+          "duration_flac": 233000,
+          "duration_128": 233000,
+          "duration_320": 233000,
+          "hash_320": "88F56BD847E294E9CF2B8AD17514DD36",
+          "bitrate_high": 1712,
+          "duration_high": 233000,
+          "hash_flac": "CB50F69A3EFDCEF5AC9BF864DBD24D4D",
+          "filesize_128": 3735091,
+          "filesize_super": 0,
+          "hash_128": "8D2C6FA2B7F281E87E967DDB3B7A95DB",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 892,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "DC62C2735C3B5B3C3CA8B56F70AEF66F",
+          "extname": "mp3",
+          "filesize_320": 9337416,
+          "filesize_high": 49920424
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 205286218,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260830/20260830122759607455.jpg",
+          "album_name": "思念漫过海岸线"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 1,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 2,
+          "rank_count": 6,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "欢子 - 思念漫过海岸线",
+          "sort": 2,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 1
+        },
+        "deprecated": {
+          "hash": "8D2C6FA2B7F281E87E967DDB3B7A95DB",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 1107983808,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 233000,
+          "type_flac": "audio",
+          "cid": 657873681,
+          "pkg_price": 1,
+          "filesize": 3735091,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "F805B3B2936D32F2FB4DA9EA1A67B07F",
+            "id": "17047749"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20240325/20240325235418500691.jpg",
+            "is_publish": 1,
+            "author_id": 83922,
+            "author_name": "李佳薇"
+          }
+        ],
+        "author_name": "李佳薇",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 1106816298,
+        "video_info": {
+          "video_id": 17047749,
+          "video_track": 3,
+          "video_timelength": 211000,
+          "video_filesize": 29692871,
+          "video_hash": "E1F82F5E4BA3F0DC0924A46422DB3C54"
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 6,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58727552,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_hash": "AADBE8C156AAE33432CB3A59F0CD6C36",
+          "provider": 1,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260630/20260630202952972321.jpg",
+          "ogg_320_filesize": 8077097,
+          "qualitymap": {
+            "bits": "8fffc0db4107efeb710c034",
+            "attr0": 923844660,
+            "attr1": 1746992637
+          },
+          "is_original": 1,
+          "ogg_128_filesize": 2381028,
+          "cid": 631764754,
+          "ogg_128_hash": "B7FE963FFAC22A30FFFCA732E72E7024",
+          "ipmap": {
+            "attr0": 138546253824
+          },
+          "songname_suffix": "(你我怎么两清)",
+          "hash_offset": {
+            "clip_hash": "982A1895B1B774BE6733FDE71A5E02E8",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960121,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "E4E7CCC39220F49A1CBD2124A4F86AFD"
+          },
+          "hash_multitrack": "BE8DCB2CEB2B76D8A121B31F04DC4578",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 1,
+          "status_super": 1
+        },
+        "songname": "甲乙丙丁 (你我怎么两清)",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 0,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 0,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 920474385,
+        "audio_info": {
+          "filesize_flac": 23193434,
+          "bitrate": 128,
+          "duration_flac": 210000,
+          "duration_128": 210000,
+          "duration_320": 210000,
+          "hash_320": "B7AC734C6806EFF90C22C74F1AFFA156",
+          "bitrate_high": 0,
+          "duration_high": 0,
+          "hash_flac": "85479C21FADC65A7C495989D6FE9396D",
+          "filesize_128": 3368531,
+          "filesize_super": 0,
+          "hash_128": "213D580CA0BDCC28A5FDBA995FFDA106",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 881,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "",
+          "extname": "mp3",
+          "filesize_320": 8420641,
+          "filesize_high": 0
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 197648995,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260630/20260630202952972321.jpg",
+          "album_name": "甲乙丙丁"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 3,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 3,
+          "rank_count": 62,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "李佳薇 - 甲乙丙丁 (你我怎么两清)",
+          "sort": 3,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 3
+        },
+        "deprecated": {
+          "hash": "213D580CA0BDCC28A5FDBA995FFDA106",
+          "pkg_price_high": 0,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 1106816298,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 0,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 0,
+          "duration": 210000,
+          "type_flac": "audio",
+          "cid": 631764754,
+          "pkg_price": 1,
+          "filesize": 3368531,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "8044CBEE4214997FE6C888A7C70B5933",
+            "id": "16809461"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20240410/20240410135012474951.jpg",
+            "is_publish": 1,
+            "author_id": 171318,
+            "author_name": "万海东"
+          }
+        ],
+        "author_name": "万海东",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 627136989,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58727552,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_hash": "F1F5B2FA70CC21A44A0DBE4E601E5E76",
+          "provider": 5,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260727/20260727114241535084.jpg",
+          "ogg_320_filesize": 8555870,
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf10e474",
+            "attr0": 1058071668,
+            "attr1": 1747189245
+          },
+          "is_original": 1,
+          "ogg_128_filesize": 2447033,
+          "cid": 645413127,
+          "ogg_128_hash": "A7B0EF375B3DB1A027C879AD25564B36",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "hash_offset": {
+            "clip_hash": "B676E3942DC897A74970B91B7C94395C",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960133,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "7B63042E024FD35645E95D7384A2FD6E"
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "C64B739FD0DE222CDC7E87C7758AAF8A",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "山风山风等等我",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 935764415,
+        "audio_info": {
+          "filesize_flac": 25224272,
+          "bitrate": 128,
+          "duration_flac": 209000,
+          "duration_128": 209000,
+          "duration_320": 209000,
+          "hash_320": "3A8A1974E80B557A856E3C1755EDB938",
+          "bitrate_high": 1784,
+          "duration_high": 209000,
+          "hash_flac": "28A0B296A66AA7F9EB9CF176A942D537",
+          "filesize_128": 3350988,
+          "filesize_super": 0,
+          "hash_128": "CE256D96F1F025D60468D8F0BC9EE64B",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 964,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "0D2B09CBA5B8437502AC7BBFE67546DD",
+          "extname": "mp3",
+          "filesize_320": 8377157,
+          "filesize_high": 46661139
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 200106963,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260727/20260727114241535084.jpg",
+          "album_name": "山风山风等等我"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 4,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 4,
+          "rank_count": 42,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "万海东 - 山风山风等等我",
+          "sort": 4,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 4
+        },
+        "deprecated": {
+          "hash": "CE256D96F1F025D60468D8F0BC9EE64B",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 627136989,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 209000,
+          "type_flac": "audio",
+          "cid": 645413127,
+          "pkg_price": 1,
+          "filesize": 3350988,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "D6C3C0150674831E116D7AC4172C90ED",
+            "id": "50492"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20241015/20241015154004457027.jpg",
+            "is_publish": 1,
+            "author_id": 5826,
+            "author_name": "孙燕姿"
+          }
+        ],
+        "author_name": "孙燕姿",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 284977,
+        "video_info": {
+          "video_id": 50492,
+          "video_track": 3,
+          "video_timelength": 332274,
+          "video_filesize": 26067264,
+          "video_hash": "578CF283D47FBF2408CCF1AA735BDF17"
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "最硬核的嘴硬",
+            "type": 15
+          }
+        ],
+        "trans_param": {
+          "ogg_128_hash": "2EEA0C973256E6239B2F40851657E51E",
+          "classmap": {
+            "attr0": 234885128
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 32,
+          "display_rate": 1,
+          "cpy_map": "2",
+          "ogg_320_filesize": 12719489,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250624/20250624174203375937.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411ffffbf3fc074",
+            "attr0": 1061142644,
+            "attr1": 1747189759
+          },
+          "is_original": 1,
+          "ogg_320_hash": "DE2469A09E65DA06DA607FFF6B508609",
+          "cid": 2457488,
+          "ogg_128_filesize": 3653998,
+          "cpy_grade": 6,
+          "ipmap": {
+            "attr0": 2200130555904
+          },
+          "hash_offset": {
+            "clip_hash": "D83DC486D6D792F1AD334FDA6E8356BE",
+            "start_byte": 0,
+            "end_ms": 121200,
+            "end_byte": 1939397,
+            "file_type": 0,
+            "start_ms": 61200,
+            "offset_hash": "DBCCB18A371C35A43560EEA0CB22DF1B"
+          },
+          "hash_multitrack": "00293FDFD0C5874C5531D02CFCF6BD72",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "我不难过",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 32092078,
+        "audio_info": {
+          "filesize_flac": 35801703,
+          "bitrate": 128,
+          "duration_flac": 320400,
+          "duration_128": 320444,
+          "duration_320": 320444,
+          "hash_320": "C4F5F3EAB5EDDA7E150A02BBE9D4D2E3",
+          "bitrate_high": 911,
+          "duration_high": 320400,
+          "hash_flac": "40652F6D57A19CC77E9E2416A5A4F8EE",
+          "filesize_128": 5127719,
+          "filesize_super": 0,
+          "hash_128": "3FD7E1EC51122C745C637735C8BDE716",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 893,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "BBB4612A8CDADC66379213532AD01EAB",
+          "extname": "mp3",
+          "filesize_320": 12819004,
+          "filesize_high": 36507181
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 965883,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250624/20250624174203375937.jpg",
+          "album_name": "未完成"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 5,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 5,
+          "rank_count": 128,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "孙燕姿 - 我不难过",
+          "sort": 5,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "最硬核的嘴硬",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 5
+        },
+        "deprecated": {
+          "hash": "3FD7E1EC51122C745C637735C8BDE716",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 284977,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 320444,
+          "type_flac": "audio",
+          "cid": 2457488,
+          "pkg_price": 1,
+          "filesize": 5127719,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250409/20250409195633584344.jpg",
+            "is_publish": 1,
+            "author_id": 1070714,
+            "author_name": "刘纯"
+          }
+        ],
+        "author_name": "刘纯",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 639910129,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "provider": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260814/20260814141504430922.jpg",
+          "cpy_map": "2",
+          "ogg_320_filesize": 7632967,
+          "ogg_320_hash": "79CFDC9BCEBC2B7A17E8C91A28AB4059",
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf3be474",
+            "attr0": 1060889716,
+            "attr1": 1747189245
+          },
+          "ogg_128_filesize": 2248158,
+          "ogg_128_hash": "B28D266E205511026C41ADE3E45C3B84",
+          "cid": 653952353,
+          "songname_suffix": "(遗憾)",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "hash_offset": {
+            "clip_hash": "3DED44704E499A1BD016D6164A532DE8",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960565,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "54F45B8B0909FB3EB98B6D8C8DA2A05D"
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "905B8205C68DFFEF24B1288A58D88AC7",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "如果回到那从前 (遗憾)",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 949129498,
+        "audio_info": {
+          "filesize_flac": 20612008,
+          "bitrate": 128,
+          "duration_flac": 198000,
+          "duration_128": 198000,
+          "duration_320": 198000,
+          "hash_320": "92F32A54E5D42CA5D23AD07E60D380EB",
+          "bitrate_high": 1640,
+          "duration_high": 198000,
+          "hash_flac": "38342903587394090F5BA8AEC2B6B4B5",
+          "filesize_128": 3176295,
+          "filesize_super": 0,
+          "hash_128": "0B2478BA6332B6F0E791CC7A2DA9ECBA",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 831,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "169FA0ABC2CA2AB740978AFF4A233E27",
+          "extname": "mp3",
+          "filesize_320": 7940403,
+          "filesize_high": 40657123
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 203722456,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260814/20260814141504430922.jpg",
+          "album_name": "如果回到那从前（遗憾）"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 6,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 6,
+          "rank_count": 9,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "刘纯 - 如果回到那从前 (遗憾)",
+          "sort": 6,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 6
+        },
+        "deprecated": {
+          "hash": "0B2478BA6332B6F0E791CC7A2DA9ECBA",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 639910129,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 198000,
+          "type_flac": "audio",
+          "cid": 653952353,
+          "pkg_price": 1,
+          "filesize": 3176295,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "3C50A331B2AFDCA86A898AF454A7C43F",
+            "id": "17486626"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20240930/20240930145230285826.jpg",
+            "is_publish": 1,
+            "author_id": 13885964,
+            "author_name": "灯叔"
+          },
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230722/20230722061210800136.jpg",
+            "is_publish": 1,
+            "author_id": 1132476,
+            "author_name": "方大树"
+          }
+        ],
+        "author_name": "灯叔、方大树",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 645979863,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "ogg_128_hash": "A67C9B9302FD02981E3E984F0BD4D021",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58720256,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 6614207,
+          "cpy_map": "2",
+          "provider": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260831/20260831143001651684.jpg",
+          "qualitymap": {
+            "bits": "801fc0db410807ebd00e474",
+            "attr0": 1023468660,
+            "attr1": 1746993405
+          },
+          "is_original": 1,
+          "ogg_320_hash": "71F045053E88DB497D687153B3BE2B60",
+          "cid": 658232233,
+          "ogg_128_filesize": 1941773,
+          "cpy_grade": 5,
+          "ipmap": {
+            "attr0": 33554432
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "52341F4E3E66D782B3E970E1B3D3F5B0",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "说文解字",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 955518530,
+        "audio_info": {
+          "filesize_flac": 18631924,
+          "bitrate": 128,
+          "duration_flac": 164000,
+          "duration_128": 164000,
+          "duration_320": 164000,
+          "hash_320": "3A905F8264FC960F08FD5B5D0B7D6425",
+          "bitrate_high": 1719,
+          "duration_high": 164000,
+          "hash_flac": "8C7F78453AEA755B3BBD70E64EDF8521",
+          "filesize_128": 2640034,
+          "filesize_super": 0,
+          "hash_128": "8E1C8E7914488017C3BCCCB5C26E579C",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 904,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "29A16F413A4FBFE9C590E4F52A6BBBF0",
+          "extname": "mp3",
+          "filesize_320": 6599641,
+          "filesize_high": 35433336
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 205506790,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260831/20260831143001651684.jpg",
+          "album_name": "说文解字"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 8,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 7,
+          "rank_count": 4,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "灯叔、方大树 - 说文解字",
+          "sort": 7,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 8
+        },
+        "deprecated": {
+          "hash": "8E1C8E7914488017C3BCCCB5C26E579C",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 645979863,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 164000,
+          "type_flac": "audio",
+          "cid": 658232233,
+          "pkg_price": 1,
+          "filesize": 2640034,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "4D2FCAFB6E7BD04A2ABB5D433E4E4C39",
+            "id": "17495995"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20241213/20241213195409416556.jpg",
+            "is_publish": 1,
+            "author_id": 3956,
+            "author_name": "A-Lin"
+          }
+        ],
+        "author_name": "A-Lin",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 1107998737,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "汪苏泷概念创作集《联名2》作品",
+            "type": 6
+          },
+          {
+            "rel_album_audio_id": 0,
+            "remark": "视频号二创赢签名",
+            "type": 15
+          }
+        ],
+        "trans_param": {
+          "init_pub_day": 30,
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "free_limited": 1,
+          "cpy_attr0": 41943072,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 9602448,
+          "cpy_map": "2",
+          "provider": 2,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260901/20260901110104441525.jpg",
+          "qualitymap": {
+            "bits": "801fc0db410807ebd00e474",
+            "attr0": 1023468660,
+            "attr1": 1746993405
+          },
+          "is_original": 1,
+          "ogg_320_hash": "FD93B7C751B4C3C89802F2C12DB5BB4D",
+          "cid": 658034287,
+          "ogg_128_filesize": 2807668,
+          "ogg_128_hash": "19D9375A73C37C6B33C8B0D539EABFC7",
+          "hash_multitrack": "13AF1C1A5F3A0CD19092DEE46A36619E",
+          "appid_block": "3124",
+          "ipmap": {
+            "attr0": 138546253824
+          },
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "删了一百遍",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 955074076,
+        "audio_info": {
+          "filesize_flac": 25804804,
+          "bitrate": 128,
+          "duration_flac": 253000,
+          "duration_128": 253000,
+          "duration_320": 253000,
+          "hash_320": "E796771820F6E8E73F1C4CAF1B3864DD",
+          "bitrate_high": 2678,
+          "duration_high": 253000,
+          "hash_flac": "6E01AFAA06279F3702D9832FCF6470D1",
+          "filesize_128": 4052320,
+          "filesize_super": 0,
+          "hash_128": "F1B456AC628510A355F002777A0F1B19",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 816,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "A82C95E1FB35BC98DAA45EA6B2EA9D33",
+          "extname": "mp3",
+          "filesize_320": 10130491,
+          "filesize_high": 84741252
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 205415784,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260901/20260901110104441525.jpg",
+          "album_name": "删了一百遍"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 20,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 8,
+          "rank_count": 2,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "A-Lin - 删了一百遍",
+          "sort": 8,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "汪苏泷概念创作集《联名2》作品",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 20
+        },
+        "deprecated": {
+          "hash": "F1B456AC628510A355F002777A0F1B19",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 1107998737,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 253000,
+          "type_flac": "audio",
+          "cid": 658034287,
+          "pkg_price": 1,
+          "filesize": 4052320,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "9C21064F8301257F8C9D7B9EC568FB3D",
+            "id": "11874874"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230728/20230728144004588746.jpg",
+            "is_publish": 1,
+            "author_id": 6330,
+            "author_name": "许茹芸"
+          }
+        ],
+        "author_name": "许茹芸",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 222935,
+        "video_info": {
+          "video_id": 11874874,
+          "video_track": 3,
+          "video_timelength": 310120,
+          "video_filesize": 43609968,
+          "video_hash": "7DCEA6B67B30A201035476469440570C"
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 6,
+          "classmap": {
+            "attr0": 234885128
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 32,
+          "display_rate": 1,
+          "ogg_320_hash": "72BFA42F4519703360F19C3A945E6D9B",
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250221/20250221180741827113.jpg",
+          "ogg_320_filesize": 10881460,
+          "qualitymap": {
+            "bits": "800000db4100000773fec34",
+            "attr0": 2000677940,
+            "attr1": 1746927616
+          },
+          "is_original": 1,
+          "ogg_128_filesize": 3378267,
+          "cid": 7346973,
+          "ogg_128_hash": "BAEDFF0685406AE8F946450A2AE632DE",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 2200130555904
+          },
+          "hash_offset": {
+            "clip_hash": "6EB6AD01D0360CBE4DABAB811122820C",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960113,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "FB18F274BED9B19CB55CD6A714243E5E"
+          },
+          "appid_block": "2906,3124",
+          "hash_multitrack": "5F1C85E270911CAF04A88283CA538B3C",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 1,
+          "status_super": 1
+        },
+        "songname": "泪海",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 0,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 0,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 32174484,
+        "audio_info": {
+          "filesize_flac": 25923988,
+          "bitrate": 128,
+          "duration_flac": 298000,
+          "duration_128": 298031,
+          "duration_320": 298031,
+          "hash_320": "F2118A710E3F49ECFCBDE1F83262E0AC",
+          "bitrate_high": 0,
+          "duration_high": 0,
+          "hash_flac": "89799B7D07910FB27B6438A9DD9AC689",
+          "filesize_128": 4769104,
+          "filesize_super": 0,
+          "hash_128": "FBC174E7C22B9AF471B7B93A61751E1B",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 695,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "",
+          "extname": "mp3",
+          "filesize_320": 11922475,
+          "filesize_high": 0
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 975212,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250221/20250221180741827113.jpg",
+          "album_name": "泪海"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 9,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 9,
+          "rank_count": 54,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "许茹芸 - 泪海",
+          "sort": 9,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 9
+        },
+        "deprecated": {
+          "hash": "FBC174E7C22B9AF471B7B93A61751E1B",
+          "pkg_price_high": 0,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 222935,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 0,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 0,
+          "duration": 298031,
+          "type_flac": "audio",
+          "cid": 7346973,
+          "pkg_price": 1,
+          "filesize": 4769104,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "C40A3E9D40C4DE2A94F4C65E61139864",
+            "id": "10252454"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230802/20230802173509809.jpg",
+            "is_publish": 1,
+            "author_id": 8588,
+            "author_name": "Sweety"
+          }
+        ],
+        "author_name": "Sweety",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 256293,
+        "video_info": {
+          "video_id": 10252454,
+          "video_track": 3,
+          "video_timelength": 285248,
+          "video_filesize": 39884290,
+          "video_hash": "DB3588DBFBD04D94FEEEC85EA4B0D22C"
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "ogg_128_hash": "4518EC18E3F3C6FF487E1712C493282C",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 10750621,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260610/20260610172641662788.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411ffffbf3fc075",
+            "attr0": 1061142645,
+            "attr1": 1747189759
+          },
+          "is_original": 1,
+          "ogg_320_hash": "2DE8F95E72C7BCBA15CDF765BD1BD3A0",
+          "cid": 4988902,
+          "ogg_128_filesize": 3191231,
+          "cpy_grade": 6,
+          "ipmap": {
+            "attr0": 2200130555904
+          },
+          "hash_offset": {
+            "clip_hash": "624DDC84B8CA0EEF150606A2A6ADAA05",
+            "start_byte": 0,
+            "end_ms": 130485,
+            "end_byte": 2088209,
+            "file_type": 0,
+            "start_ms": 70485,
+            "offset_hash": "5458A57D9CBC52309A67880767BB303B"
+          },
+          "hash_multitrack": "B38E92CB990276DF6EB80DEFD4E73E2A",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "樱花草",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 27165285,
+        "audio_info": {
+          "filesize_flac": 32728050,
+          "bitrate": 128,
+          "duration_flac": 283826,
+          "duration_128": 283872,
+          "duration_320": 283872,
+          "hash_320": "EE49BAFCCE2C1ED4FB148B2050FEEF16",
+          "bitrate_high": 950,
+          "duration_high": 283826,
+          "hash_flac": "EF4325560D6FBF87965F6CA945B21678",
+          "filesize_128": 4542594,
+          "filesize_super": 0,
+          "hash_128": "F0B01830164E4974A2AC9E85DD446D45",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 922,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "9447DF652F6EA91D3EB673DB9AD2DD60",
+          "extname": "mp3",
+          "filesize_320": 11355966,
+          "filesize_high": 33739893
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 507451,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260610/20260610172641662788.jpg",
+          "album_name": "花言巧语"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 7,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 10,
+          "rank_count": 145,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "Sweety - 樱花草",
+          "sort": 10,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 7
+        },
+        "deprecated": {
+          "hash": "F0B01830164E4974A2AC9E85DD446D45",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 256293,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 283872,
+          "type_flac": "audio",
+          "cid": 4988902,
+          "pkg_price": 1,
+          "filesize": 4542594,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "5C884762A122078E185C874BE32CCE1C",
+            "id": "14887202"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230512/20230512180101702313.jpg",
+            "is_publish": 1,
+            "author_id": 185839,
+            "author_name": "白小白"
+          }
+        ],
+        "author_name": "白小白",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 548404459,
+        "video_info": {
+          "video_id": 14887202,
+          "video_track": 3,
+          "video_timelength": 231733,
+          "video_filesize": 32588579,
+          "video_hash": "F8C326D90327283F75AA6BB78E6049D1"
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "春季现象级金曲",
+            "type": 15
+          },
+          {
+            "rel_album_audio_id": 0,
+            "remark": "感我此言良久立",
+            "type": 15
+          }
+        ],
+        "trans_param": {
+          "ogg_128_hash": "666FE6E1869A2FD9F00DFF79CD4DC7F2",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 9537521,
+          "cpy_map": "2",
+          "provider": 2,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260326/20260326182610525334.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf3bc074",
+            "attr0": 1060880500,
+            "attr1": 1747189245
+          },
+          "is_original": 1,
+          "ogg_320_hash": "905A55FC90C7A30B11A0B680B9099F60",
+          "cid": 579960912,
+          "ogg_128_filesize": 2674484,
+          "cpy_grade": 6,
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "hash_offset": {
+            "clip_hash": "52A780902A5F59DFCAA44471005334AA",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960125,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "EFCEE79E33BE8C537918942ABA719CF2"
+          },
+          "hash_multitrack": "61BDB1018FA239E6261813732A20D368",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "人生路漫漫",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 855779725,
+        "audio_info": {
+          "filesize_flac": 26246487,
+          "bitrate": 128,
+          "duration_flac": 235000,
+          "duration_128": 235000,
+          "duration_320": 235000,
+          "hash_320": "AB74B9584F71FDBC59656C06CD101A16",
+          "bitrate_high": 1705,
+          "duration_high": 235000,
+          "hash_flac": "7B889606DA82E5C2EDA67912CD2BF1FD",
+          "filesize_128": 3764342,
+          "filesize_super": 0,
+          "hash_128": "B8CA573A69DB5050C7EE0C1AB79144E5",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 892,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "1A8212B217FE68C8D042B49BD5940DDF",
+          "extname": "mp3",
+          "filesize_320": 9410553,
+          "filesize_high": 50160561
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 179917533,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260326/20260326182610525334.jpg",
+          "album_name": "人生路漫漫"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 17,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 11,
+          "rank_count": 168,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "白小白 - 人生路漫漫",
+          "sort": 11,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "春季现象级金曲",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 17
+        },
+        "deprecated": {
+          "hash": "B8CA573A69DB5050C7EE0C1AB79144E5",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 548404459,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 235000,
+          "type_flac": "audio",
+          "cid": 579960912,
+          "pkg_price": 1,
+          "filesize": 3764342,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "7E83CEE5F4AC4B3E26693CC9AC739A81",
+            "id": "17354751"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20260602/20260602175111374282.jpg",
+            "is_publish": 1,
+            "author_id": 21912869,
+            "author_name": "李婷雪"
+          }
+        ],
+        "author_name": "李婷雪",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 640396234,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "ogg_128_hash": "C4723C82060A661EB64B73C5181281FC",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58720256,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "provider": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260902/20260902165220427735.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db4107efeb73be434",
+            "attr0": 926671924,
+            "attr1": 1746992637
+          },
+          "ogg_320_filesize": 7502124,
+          "ogg_320_hash": "C161D594CF41F3ED5451966F09180458",
+          "cid": 654320553,
+          "ogg_128_filesize": 2468813,
+          "cpy_grade": 5,
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "hash_offset": {
+            "clip_hash": "04547E6A9C01EBB0132480A309C35527",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960133,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "C1741E769F7C7B401B374941A394E718"
+          },
+          "hash_multitrack": "262EBD7131B57DC08E487C67D7962F0A",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 1,
+          "status_super": 1
+        },
+        "songname": "你不该权衡利弊",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 0,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 0,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 949622353,
+        "audio_info": {
+          "filesize_flac": 23231895,
+          "bitrate": 128,
+          "duration_flac": 229000,
+          "duration_128": 229000,
+          "duration_320": 229000,
+          "hash_320": "E80ACB92189DA5CC8FBED0D6CCCF66AB",
+          "bitrate_high": 0,
+          "duration_high": 0,
+          "hash_flac": "4B386D16917097519D91109D9DC6DDC4",
+          "filesize_128": 3666130,
+          "filesize_super": 0,
+          "hash_128": "B4EE7D20EADA2A043636B4E560663F29",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 812,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "",
+          "extname": "mp3",
+          "filesize_320": 9165010,
+          "filesize_high": 0
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 203889405,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260902/20260902165220427735.jpg",
+          "album_name": "你不该权衡利弊"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 13,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 12,
+          "rank_count": 14,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "李婷雪 - 你不该权衡利弊",
+          "sort": 12,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 13
+        },
+        "deprecated": {
+          "hash": "B4EE7D20EADA2A043636B4E560663F29",
+          "pkg_price_high": 0,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 640396234,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 0,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 0,
+          "duration": 229000,
+          "type_flac": "audio",
+          "cid": 654320553,
+          "pkg_price": 1,
+          "filesize": 3666130,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20251225/20251225171959718922.jpg",
+            "is_publish": 1,
+            "author_id": 800156,
+            "author_name": "刘宇宁"
+          }
+        ],
+        "author_name": "刘宇宁",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 1107887482,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "《早春晴朗》电视剧栾念人物曲&片头曲",
+            "type": 13
+          }
+        ],
+        "trans_param": {
+          "ogg_128_hash": "4C1534E2F737B286E0883B9E91AF2ABC",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "free_limited": 1,
+          "cpy_attr0": 58720256,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260825/20260825141953818086.jpeg",
+          "provider": 2,
+          "qualitymap": {
+            "bits": "801fc0db410807ebf3bc074",
+            "attr0": 1060880500,
+            "attr1": 1746993405
+          },
+          "is_original": 1,
+          "ogg_320_filesize": 8909756,
+          "cid": 655768013,
+          "ogg_320_hash": "854EA492E05D572151E74CA0DB5EB131",
+          "ogg_128_filesize": 2634355,
+          "ipmap": {
+            "attr0": 138546253824
+          },
+          "cpy_grade": 5,
+          "pay_block_tpl": 1,
+          "hash_multitrack": "DB540FEFD08FEB239754EC5714A78996",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "她",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 951656022,
+        "audio_info": {
+          "filesize_flac": 25123083,
+          "bitrate": 128,
+          "duration_flac": 221000,
+          "duration_128": 221000,
+          "duration_320": 221000,
+          "hash_320": "EAA55D31F07DA27EF33B528EAC23002A",
+          "bitrate_high": 1712,
+          "duration_high": 221000,
+          "hash_flac": "2B3851680BB55C1094E5FB7BBB75E44D",
+          "filesize_128": 3547823,
+          "filesize_super": 0,
+          "hash_128": "A46200A65547E5A267D10B1F32C6A3B1",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 907,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "7CC835971E313F5B09A4C5165E96B65B",
+          "extname": "mp3",
+          "filesize_320": 8869280,
+          "filesize_high": 47417356
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 204979963,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260825/20260825143721652550.jpg",
+          "album_name": "早春晴朗 影视原声带"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 18,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 13,
+          "rank_count": 9,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "刘宇宁 - 她",
+          "sort": 13,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "《早春晴朗》电视剧栾念人物曲&片头曲",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 18
+        },
+        "deprecated": {
+          "hash": "A46200A65547E5A267D10B1F32C6A3B1",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 1107887482,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 221000,
+          "type_flac": "audio",
+          "cid": 655768013,
+          "pkg_price": 1,
+          "filesize": 3547823,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "2C8AD98B98C8BC4D8F188C623836AC15",
+            "id": "14470285"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230928/20230928142245767827.jpg",
+            "is_publish": 1,
+            "author_id": 792453,
+            "author_name": "郑浩"
+          },
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20231122/20231122161832851154.jpg",
+            "is_publish": 1,
+            "author_id": 11523603,
+            "author_name": "冰洁"
+          }
+        ],
+        "author_name": "郑浩、冰洁",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 519737894,
+        "video_info": {
+          "video_id": 14470285,
+          "video_track": 3,
+          "video_timelength": 23260,
+          "video_filesize": 3297536,
+          "video_hash": "DEE20BAFF023705D27460E3F7A06AF9E"
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "ogg_128_hash": "C2F8C30606FCE6E1CF124BE6BF61A4D8",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 9836794,
+          "cpy_map": "2",
+          "provider": 1,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260326/20260326181841360691.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf14c074",
+            "attr0": 1058324596,
+            "attr1": 1747189245
+          },
+          "is_original": 1,
+          "ogg_320_hash": "2C8F5A6C5613A3D2FB70ABD314594587",
+          "cid": 556665880,
+          "ogg_128_filesize": 2769551,
+          "cpy_grade": 5,
+          "ipmap": {
+            "attr0": 154719490048
+          },
+          "hash_offset": {
+            "clip_hash": "57F5633A8FF62A00D28F1A31C546D9BA",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960121,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "489EF100914109D19E8F3AD6374916D0"
+          },
+          "hash_multitrack": "3A03649737474C8D25514622E2219882",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "琵琶曲",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 826210270,
+        "audio_info": {
+          "filesize_flac": 27230759,
+          "bitrate": 128,
+          "duration_flac": 235000,
+          "duration_128": 235000,
+          "duration_320": 235000,
+          "hash_320": "36EB72D5CCB7A5F54DDBADB782075619",
+          "bitrate_high": 1733,
+          "duration_high": 235000,
+          "hash_flac": "4855892F2DD45CABDB2FACFBD90404C4",
+          "filesize_128": 3776877,
+          "filesize_super": 0,
+          "hash_128": "244A022D6CB3FDE50B24E76402053EB3",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 922,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "0A6FD752039B756352DAED09D98BD18D",
+          "extname": "mp3",
+          "filesize_320": 9441896,
+          "filesize_high": 51150165
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 180917343,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260326/20260326181841360691.jpg",
+          "album_name": "琵琶曲"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 39,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 14,
+          "rank_count": 143,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "郑浩、冰洁 - 琵琶曲",
+          "sort": 14,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 39
+        },
+        "deprecated": {
+          "hash": "244A022D6CB3FDE50B24E76402053EB3",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 519737894,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 235000,
+          "type_flac": "audio",
+          "cid": 556665880,
+          "pkg_price": 1,
+          "filesize": 3776877,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "1F93A31AFC5A4F2D81C435AD894806BA",
+            "id": "16589975"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250319/20250319042815189371.jpg",
+            "is_publish": 1,
+            "author_id": 719271,
+            "author_name": "巴扎黑"
+          }
+        ],
+        "author_name": "巴扎黑",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 618417595,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "吹吹山顶的风",
+            "type": 7
+          }
+        ],
+        "trans_param": {
+          "ogg_128_hash": "2507929FF07EF81142768CB82B470091",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 7733073,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260721/20260721104743915578.png",
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf10e474",
+            "attr0": 1058071668,
+            "attr1": 1747189245
+          },
+          "is_original": 1,
+          "ogg_320_hash": "BE40A3E394633B52BC73FA665C3DD3BF",
+          "cid": 637091236,
+          "ogg_128_filesize": 2078536,
+          "cpy_grade": 5,
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "hash_offset": {
+            "clip_hash": "A66D76D1710EF76FE914F38A4AE8D12E",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960129,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "31F0C3B7BFAC89CB7D305B7BB1BEAF3C"
+          },
+          "hash_multitrack": "A1AE77592C91891D0C00607ED2142EFB",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "吹吹山顶的风",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 926231530,
+        "audio_info": {
+          "filesize_flac": 20326995,
+          "bitrate": 128,
+          "duration_flac": 179000,
+          "duration_128": 179000,
+          "duration_320": 179000,
+          "hash_320": "B227A702317D2D84DDB63FF0E3AED465",
+          "bitrate_high": 1713,
+          "duration_high": 179000,
+          "hash_flac": "7E736B86A574F0AB7A188A67FA338582",
+          "filesize_128": 2879944,
+          "filesize_super": 0,
+          "hash_128": "87311B26EDEE637CA1448E14230BCB68",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 903,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "58066BF15A37CC10F2DEBB34CB29B28D",
+          "extname": "mp3",
+          "filesize_320": 7199553,
+          "filesize_high": 38542561
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 198304563,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260721/20260721104743915578.png",
+          "album_name": "吹吹山顶的风"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 14,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 15,
+          "rank_count": 58,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "巴扎黑 - 吹吹山顶的风",
+          "sort": 15,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "吹吹山顶的风",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 14
+        },
+        "deprecated": {
+          "hash": "87311B26EDEE637CA1448E14230BCB68",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 618417595,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 179000,
+          "type_flac": "audio",
+          "cid": 637091236,
+          "pkg_price": 1,
+          "filesize": 2879944,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "2B4E9589A1842FDAD8853C9B21F2DDD3",
+            "id": "17251243"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20260824/20260824040441247897.jpg",
+            "is_publish": 1,
+            "author_id": 17144200,
+            "author_name": "酷酷里"
+          },
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420224446937451.jpg",
+            "is_publish": 1,
+            "author_id": 8197353,
+            "author_name": "面妹孔佳奇"
+          }
+        ],
+        "author_name": "酷酷里、面妹孔佳奇",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 639695299,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 20,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "free_for_ad": 32,
+          "language": "国语",
+          "cpy_attr0": 41943040,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260824/20260824121655550570.jpg",
+          "ogg_320_filesize": 9707356,
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf3be474",
+            "attr0": 1060889716,
+            "attr1": 1747189245
+          },
+          "ogg_320_hash": "BFBF1117C42D204BF9655C99B9094D38",
+          "ogg_128_filesize": 2807276,
+          "cid": 653789090,
+          "ogg_128_hash": "3EFA9701BB279DBD8E4E2ED95330BE7D",
+          "songname_suffix": "(少年版)",
+          "ipmap": {
+            "attr0": 17221816320
+          },
+          "hash_offset": {
+            "clip_hash": "416624B8726EE96C00CF9148D272EA12",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960149,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "4A31CDFD142B96DC662DEE187C2297DC"
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "91EF2AF1FE595DC506DB5AFEF685A06D",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "如果累了就回故乡 (少年版)",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 948909540,
+        "audio_info": {
+          "filesize_flac": 29080621,
+          "bitrate": 128,
+          "duration_flac": 233000,
+          "duration_128": 233000,
+          "duration_320": 233000,
+          "hash_320": "63A3777C4F1F24759B68028CE7B5E76D",
+          "bitrate_high": 1703,
+          "duration_high": 233000,
+          "hash_flac": "BC4408D1CB9BCD0BEA5F963DF0D74EC4",
+          "filesize_128": 3734691,
+          "filesize_super": 0,
+          "hash_128": "CDCB078226FF05314C211CCBED7F99FF",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 998,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "15412A9620B8A671A00E10C930DFC699",
+          "extname": "mp3",
+          "filesize_320": 9335965,
+          "filesize_high": 49649577
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 203339346,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260824/20260824121655550570.jpg",
+          "album_name": "如果累了就回故乡"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 11,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 16,
+          "rank_count": 17,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "酷酷里、面妹孔佳奇 - 如果累了就回故乡 (少年版)",
+          "sort": 16,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 11
+        },
+        "deprecated": {
+          "hash": "CDCB078226FF05314C211CCBED7F99FF",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 639695299,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 233000,
+          "type_flac": "audio",
+          "cid": 653789090,
+          "pkg_price": 1,
+          "filesize": 3734691,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "FF43C5D2D3B3BA70ACD9885FCAE652AB",
+            "id": "17380463"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20260809/20260809125441377877.jpg",
+            "is_publish": 1,
+            "author_id": 17946072,
+            "author_name": "乡野低频"
+          }
+        ],
+        "author_name": "乡野低频",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 638800784,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "ogg_128_hash": "B4909000EEEAA1D146DCD2F6D145F12A",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58728448,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "provider": 1,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260815/20260815060024636547.jpg",
+          "qualitymap": {
+            "bits": "801fc0db410807ebf10c074",
+            "attr0": 1058062452,
+            "attr1": 1746993405
+          },
+          "ogg_320_filesize": 6552446,
+          "ogg_320_hash": "D5264F242E522AC75526CDB98D4D4FD4",
+          "cid": 653217596,
+          "ogg_128_filesize": 1983622,
+          "cpy_grade": 5,
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "C64D0CC02FC4958C8392DDD720282B55",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "莫忙",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 947974849,
+        "audio_info": {
+          "filesize_flac": 20704864,
+          "bitrate": 128,
+          "duration_flac": 180000,
+          "duration_128": 180000,
+          "duration_320": 180000,
+          "hash_320": "F6CF1A181B49229ED2740EEA636FDEEF",
+          "bitrate_high": 921,
+          "duration_high": 180000,
+          "hash_flac": "0A5D1914A6DC87FB8B9C84BEEE58F990",
+          "filesize_128": 2892469,
+          "filesize_super": 0,
+          "hash_128": "CF77A3DEE3D707DD355FC0CA3F78FBE5",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 917,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "453E4516AE77DD7597A402FFC987A4FF",
+          "extname": "mp3",
+          "filesize_320": 7230886,
+          "filesize_high": 20784550
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 203395383,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260815/20260815060024636547.jpg",
+          "album_name": "莫忙"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 15,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 17,
+          "rank_count": 13,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "乡野低频 - 莫忙",
+          "sort": 17,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 15
+        },
+        "deprecated": {
+          "hash": "CF77A3DEE3D707DD355FC0CA3F78FBE5",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 638800784,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 180000,
+          "type_flac": "audio",
+          "cid": 653217596,
+          "pkg_price": 1,
+          "filesize": 2892469,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "0BCC01B2AE64BC8831E6F80432542DCC",
+            "id": "653848"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420152007165811.jpg",
+            "is_publish": 1,
+            "author_id": 3801,
+            "author_name": "赵雷"
+          }
+        ],
+        "author_name": "赵雷",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 19863164,
+        "video_info": {
+          "video_id": 653848,
+          "video_track": 3,
+          "video_timelength": 163400,
+          "video_filesize": 22685711,
+          "video_hash": "03A19FABC6DD8511697E0D7871B5FE17"
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "九月你好",
+            "type": 12
+          }
+        ],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_hash": "32E8D8F88C2B2C7005B15DD7285B7CEE",
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20200620/20200620110640853878.jpg",
+          "ogg_320_filesize": 12802874,
+          "qualitymap": {
+            "bits": "8fffc0db411ffffff38e475",
+            "attr0": 2134434933,
+            "attr1": 1747189759
+          },
+          "is_original": 1,
+          "ogg_128_filesize": 3558175,
+          "cid": 5973272,
+          "ogg_128_hash": "40BDE999C8F8B0F59B057621A75CA9D4",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 33554560
+          },
+          "hash_offset": {
+            "clip_hash": "8A7A1F379A08A5DEC22B8B6F7E627AC8",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960111,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "C30B3725E1565A4E34377FC823D301E2"
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "425D305E16764F8882ADABF462C45305",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "成都",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 40118502,
+        "audio_info": {
+          "filesize_flac": 32270434,
+          "bitrate": 128,
+          "duration_flac": 328362,
+          "duration_128": 328411,
+          "duration_320": 328411,
+          "hash_320": "54B4D11BEE97EF4E262D04134B6CC7B6",
+          "bitrate_high": 800,
+          "duration_high": 328362,
+          "hash_flac": "F59F43F5F730D7B83FF6400788CA9893",
+          "filesize_128": 5255188,
+          "filesize_super": 0,
+          "hash_128": "A06B033B356BFC974C5245D0195086A5",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 786,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "078C99EDBD6B87E68076EBCE4F538D41",
+          "extname": "mp3",
+          "filesize_320": 13137690,
+          "filesize_high": 32850956
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 1802652,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20200620/20200620110640853878.jpg",
+          "album_name": "成都"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 19,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 18,
+          "rank_count": 1382,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "赵雷 - 成都",
+          "sort": 18,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "九月你好",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 19
+        },
+        "deprecated": {
+          "hash": "A06B033B356BFC974C5245D0195086A5",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 19863164,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 328411,
+          "type_flac": "audio",
+          "cid": 5973272,
+          "pkg_price": 1,
+          "filesize": 5255188,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "F87A5EEE168C8E723D53F7AA227824C9",
+            "id": "11596658"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420214718562437.jpg",
+            "is_publish": 1,
+            "author_id": 724764,
+            "author_name": "队长"
+          }
+        ],
+        "author_name": "队长",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 295072162,
+        "video_info": {
+          "video_id": 11596658,
+          "video_track": 3,
+          "video_timelength": 9520,
+          "video_filesize": 1350655,
+          "video_hash": "D53C065D98A9486155CFF4203DB56325"
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "ogg_128_hash": "DF6F9A93D1EDB735A0E533A4BD3E88E8",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 5538613,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20231107/20231107223800767836.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411ffffff3fc074",
+            "attr0": 2134884468,
+            "attr1": 1747189759
+          },
+          "is_original": 1,
+          "ogg_320_hash": "1C661312629762FBDA4D11E4F2F2849E",
+          "cid": 329730839,
+          "ogg_128_filesize": 1567640,
+          "cpy_grade": 5,
+          "ipmap": {
+            "attr0": 18287169536
+          },
+          "hash_offset": {
+            "clip_hash": "8EE5CFC5E7B59D94AB338519A2AAC05A",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960115,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "FA80223ED632D392CBE35ABE9C3E05BA"
+          },
+          "hash_multitrack": "33D3535C27FCA4FE1178C1502B1113F8",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "碎碎念",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 569907613,
+        "audio_info": {
+          "filesize_flac": 14721173,
+          "bitrate": 128,
+          "duration_flac": 132000,
+          "duration_128": 132728,
+          "duration_320": 132728,
+          "hash_320": "B215588C3AF31DEB69EC7A5ABC5874F2",
+          "bitrate_high": 1686,
+          "duration_high": 132682,
+          "hash_flac": "07A44563E96F8FF1C3585B3112AA133B",
+          "filesize_128": 2124260,
+          "filesize_super": 0,
+          "hash_128": "A823AE8D84854FD2EB5B8E599D1263FA",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 887,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "BDF90ACB98CEAC9D975280960A49C83B",
+          "extname": "mp3",
+          "filesize_320": 5310363,
+          "filesize_high": 27981921
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 79831015,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20231107/20231107223800767836.jpg",
+          "album_name": "碎碎念"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 16,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 19,
+          "rank_count": 306,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "队长 - 碎碎念",
+          "sort": 19,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 16
+        },
+        "deprecated": {
+          "hash": "A823AE8D84854FD2EB5B8E599D1263FA",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 295072162,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 132728,
+          "type_flac": "audio",
+          "cid": 329730839,
+          "pkg_price": 1,
+          "filesize": 2124260,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250421/20250421180735972843.jpg",
+            "is_publish": 1,
+            "author_id": 12086947,
+            "author_name": "草原兄弟"
+          }
+        ],
+        "author_name": "草原兄弟",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 646826815,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 50331648,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_hash": "DA78D749F77A221A9457BB7C5331CA0E",
+          "provider": 5,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260831/20260831154327727967.jpg",
+          "ogg_320_filesize": 9624940,
+          "qualitymap": {
+            "bits": "800000db41080003d00e474",
+            "attr0": 1023468660,
+            "attr1": 1746993152
+          },
+          "is_original": 1,
+          "ogg_128_filesize": 2684350,
+          "cid": 658861900,
+          "ogg_128_hash": "3E74343CB828E7AABA44B281D5C560F6",
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "songname_suffix": "(我为难自己)",
+          "appid_block": "3124",
+          "hash_multitrack": "36380B584E8108B6244F11248F819094",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "绝口不提 (我为难自己)",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 956523612,
+        "audio_info": {
+          "filesize_flac": 26953885,
+          "bitrate": 128,
+          "duration_flac": 216000,
+          "duration_128": 216000,
+          "duration_320": 216000,
+          "hash_320": "143F9DBE730DB7DC20BA99C36CFFEE99",
+          "bitrate_high": 1819,
+          "duration_high": 216000,
+          "hash_flac": "D96E85283C8A6BFBBAB91AD0DA0335A8",
+          "filesize_128": 3458812,
+          "filesize_super": 0,
+          "hash_128": "05A7B97FE8AB17949BB449E7B175A52F",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 998,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "076850D94B63905A56933DEBC23980FE",
+          "extname": "mp3",
+          "filesize_320": 8646710,
+          "filesize_high": 49113848
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 205763072,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260831/20260831154327727967.jpg",
+          "album_name": "绝口不提 (我为难自己)"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 86,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 20,
+          "rank_count": 1,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "草原兄弟 - 绝口不提 (我为难自己)",
+          "sort": 20,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 86
+        },
+        "deprecated": {
+          "hash": "05A7B97FE8AB17949BB449E7B175A52F",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 646826815,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 216000,
+          "type_flac": "audio",
+          "cid": 658861900,
+          "pkg_price": 1,
+          "filesize": 3458812,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "859A8514C9CB2D9404553D198EC05E0C",
+            "id": "17246943"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20241216/20241216154224814140.jpg",
+            "is_publish": 1,
+            "author_id": 844258,
+            "author_name": "黄静美"
+          }
+        ],
+        "author_name": "黄静美",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 636101544,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58720256,
+          "ogg_128_filesize": 1810631,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "provider": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260811/20260811102407588612.jpg",
+          "cpy_map": "2",
+          "ogg_320_filesize": 5940160,
+          "ogg_320_hash": "2DABAF8AED7D49F494A03D8C3BA68F4E",
+          "qualitymap": {
+            "bits": "8fffc0db4107efeb73be434",
+            "attr0": 926671924,
+            "attr1": 1746992637
+          },
+          "is_original": 6,
+          "ogg_128_hash": "B0862EC9C1332D825242617382B6779E",
+          "cid": 651302957,
+          "songname_suffix": "(花开又花谢花满天)",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 137472540672
+          },
+          "hash_offset": {
+            "clip_hash": "D5BD0629D26137545A5898FE86ACFD6D",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960563,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "4C0EAFEB5355498841320BF1639C9E12"
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "C819BCF5F9E11421929E5AA281017723",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 1,
+          "status_super": 1
+        },
+        "songname": "今生劫换来生缘 (花开又花谢花满天)",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 0,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 0,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 945194248,
+        "audio_info": {
+          "filesize_flac": 19355405,
+          "bitrate": 128,
+          "duration_flac": 152000,
+          "duration_128": 152000,
+          "duration_320": 152000,
+          "hash_320": "D0D61BBEB5B818EBF568081D900717FF",
+          "bitrate_high": 0,
+          "duration_high": 0,
+          "hash_flac": "3E1016A59DB0439A93B38A8A4E801057",
+          "filesize_128": 2439431,
+          "filesize_super": 0,
+          "hash_128": "0EC832D2791A7AD5F6B76135F2D2313E",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 1017,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "",
+          "extname": "mp3",
+          "filesize_320": 6097828,
+          "filesize_high": 0
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 202565327,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260811/20260811102407588612.jpg",
+          "album_name": "今生劫换来生缘（花开又花谢花满天）"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 26,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 21,
+          "rank_count": 19,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "黄静美 - 今生劫换来生缘 (花开又花谢花满天)",
+          "sort": 21,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 26
+        },
+        "deprecated": {
+          "hash": "0EC832D2791A7AD5F6B76135F2D2313E",
+          "pkg_price_high": 0,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 636101544,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 0,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 0,
+          "duration": 152000,
+          "type_flac": "audio",
+          "cid": 651302957,
+          "pkg_price": 1,
+          "filesize": 2439431,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "DEF921C7F0B384EF50608AD589C53E9B",
+            "id": "17339681"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250508/20250508230349308456.jpg",
+            "is_publish": 1,
+            "author_id": 1109314,
+            "author_name": "郭芊彤"
+          }
+        ],
+        "author_name": "郭芊彤",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 630490326,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58720256,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_hash": "19AC77C2CECCCED858CA2388DA6AFBB6",
+          "provider": 5,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260826/20260826102011763062.jpg",
+          "ogg_320_filesize": 11457829,
+          "qualitymap": {
+            "bits": "8fffc0db4107efeb710e434",
+            "attr0": 923853876,
+            "attr1": 1746992637
+          },
+          "is_original": 1,
+          "ogg_128_filesize": 3194531,
+          "cid": 647873215,
+          "ogg_128_hash": "20C7A914128F5D61DA009017129B2CFD",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 33554432
+          },
+          "hash_offset": {
+            "clip_hash": "B0EBB9F3B2839F5DB8D04842B615346B",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960129,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "458B4B4CAA2AC901135F5E4BB5ED8D72"
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "6939E5D3E56E150843F6B5EE907E1724",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 1,
+          "status_super": 1
+        },
+        "songname": "时光你等等我",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 0,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 0,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 939287501,
+        "audio_info": {
+          "filesize_flac": 33213783,
+          "bitrate": 128,
+          "duration_flac": 259000,
+          "duration_128": 259000,
+          "duration_320": 259000,
+          "hash_320": "8980B49A479D46CF2CA83EBCD592ECB1",
+          "bitrate_high": 0,
+          "duration_high": 0,
+          "hash_flac": "8A6322D41FA617F1C5302C2028E49A89",
+          "filesize_128": 4159317,
+          "filesize_super": 0,
+          "hash_128": "35752B1309268B40355A1CEE7821EDEE",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 1023,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "",
+          "extname": "mp3",
+          "filesize_320": 10397615,
+          "filesize_high": 0
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 201198246,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260826/20260826102011763062.jpg",
+          "album_name": "时光你等等我"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 23,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 22,
+          "rank_count": 13,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "郭芊彤 - 时光你等等我",
+          "sort": 22,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:00",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 23
+        },
+        "deprecated": {
+          "hash": "35752B1309268B40355A1CEE7821EDEE",
+          "pkg_price_high": 0,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 630490326,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 0,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 0,
+          "duration": 259000,
+          "type_flac": "audio",
+          "cid": 647873215,
+          "pkg_price": 1,
+          "filesize": 4159317,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "9C6AADD7929A7AD27643BC36AD664BDF",
+            "id": "606477"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20231212/20231212110015681067.jpg",
+            "is_publish": 1,
+            "author_id": 8569,
+            "author_name": "苏打绿"
+          }
+        ],
+        "author_name": "苏打绿",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 715210,
+        "video_info": {
+          "video_id": 606477,
+          "video_track": 3,
+          "video_timelength": 325544,
+          "video_filesize": 45576944,
+          "video_hash": "14452E241B4F16E6AD2E705B8D6118E1"
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 6,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_hash": "BB0A7816A6D042E90C2547CFEBEAD96A",
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20241015/20241015172611551162.jpg",
+          "ogg_320_filesize": 12698402,
+          "qualitymap": {
+            "bits": "800000db41180007f3fc075",
+            "attr0": 2134884469,
+            "attr1": 1747124224
+          },
+          "is_original": 1,
+          "ogg_128_filesize": 3766632,
+          "cid": 2456703,
+          "ogg_128_hash": "E4155A29D0788CED38EFAD590601BCC5",
+          "ipmap": {
+            "attr0": 2200130555904
+          },
+          "songname_suffix": "(苏打绿版)",
+          "hash_offset": {
+            "clip_hash": "59217C33EED4F70F726F831910088170",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960153,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "D4D8165EE5BFA610014178F732916195"
+          },
+          "hash_multitrack": "EBE21DB91EAD05E82D05E29948774637",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "我好想你 (苏打绿版)",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 64528854,
+        "audio_info": {
+          "filesize_flac": 35518770,
+          "bitrate": 128,
+          "duration_flac": 329000,
+          "duration_128": 329247,
+          "duration_320": 329247,
+          "hash_320": "AE06FC8D6FD5FBFB292AB1DC85D00D8B",
+          "bitrate_high": 1673,
+          "duration_high": 329206,
+          "hash_flac": "044F3BAFE86AB5B7D8CD2A89C1B4822D",
+          "filesize_128": 5268605,
+          "filesize_super": 0,
+          "hash_128": "55FEA1927AC4D460F6EB3B9262AC9981",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 862,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "D9F05CEC3DF3D3CF9287D26DBDE05FBD",
+          "extname": "mp3",
+          "filesize_320": 13171168,
+          "filesize_high": 68894264
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 108011230,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20241015/20241015172611551162.jpg",
+          "album_name": "秋：故事（苏打绿版）"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 22,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 23,
+          "rank_count": 36,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "苏打绿 - 我好想你 (苏打绿版)",
+          "sort": 23,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:01",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 22
+        },
+        "deprecated": {
+          "hash": "55FEA1927AC4D460F6EB3B9262AC9981",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 715210,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 329247,
+          "type_flac": "audio",
+          "cid": 2456703,
+          "pkg_price": 1,
+          "filesize": 5268605,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "B114D5899B2E94A0865850D6025B09EC",
+            "id": "677145"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20241213/20241213201943429484.jpg",
+            "is_publish": 1,
+            "author_id": 6822,
+            "author_name": "张芸京"
+          }
+        ],
+        "author_name": "张芸京",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 907824,
+        "video_info": {
+          "video_id": 677145,
+          "video_track": 3,
+          "video_timelength": 212080,
+          "video_filesize": 28987891,
+          "video_hash": "29C407EC156B3D10ACC19DB0B304321C"
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "《歌手2026》第七期表演曲目原曲",
+            "type": 6
+          }
+        ],
+        "trans_param": {
+          "ogg_128_hash": "176D089A06029A8F3144EDB6D5C2DF27",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 8426613,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20221125/20221125063514484979.jpg",
+          "qualitymap": {
+            "bits": "e00000db411ffffff3ffc75",
+            "attr0": 2134899829,
+            "attr1": 1747189759
+          },
+          "is_original": 1,
+          "ogg_320_hash": "3B10FCAADBA5B82F5587F15CC96D05A9",
+          "cid": 2456922,
+          "ogg_128_filesize": 2443284,
+          "cpy_grade": 5,
+          "ipmap": {
+            "attr0": 2200130555904
+          },
+          "hash_offset": {
+            "clip_hash": "EC92BCB776E385840ADA00C07C4AE43B",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960115,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "32AAF062B7299F8C9B0EE5E666C44103"
+          },
+          "hash_multitrack": "6C1407751823922C8CC945834B5DA927",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "偏爱",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 32118015,
+        "audio_info": {
+          "filesize_flac": 25365281,
+          "bitrate": 128,
+          "duration_flac": 212906,
+          "duration_128": 212950,
+          "duration_320": 212950,
+          "hash_320": "F69A2F14885BF1A3B6E236584045D1B2",
+          "bitrate_high": 976,
+          "duration_high": 212906,
+          "hash_flac": "29EE08103A33AD6707E71FD5F1CC239A",
+          "filesize_128": 3407813,
+          "filesize_super": 0,
+          "hash_128": "4A544525C1F78DBDF25361DB0E255495",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 952,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "27B39645A74D5A47F793E9207BBD97AE",
+          "extname": "mp3",
+          "filesize_320": 8519245,
+          "filesize_high": 25997874
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 968788,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20221125/20221125063514484979.jpg",
+          "album_name": "破天荒"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 28,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 24,
+          "rank_count": 2721,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "张芸京 - 偏爱",
+          "sort": 24,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "《歌手2026》第七期表演曲目原曲",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:01",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 28
+        },
+        "deprecated": {
+          "hash": "4A544525C1F78DBDF25361DB0E255495",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 907824,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 212950,
+          "type_flac": "audio",
+          "cid": 2456922,
+          "pkg_price": 1,
+          "filesize": 3407813,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "F11A015C1359CDA3E3FD6319E09A686F",
+            "id": "16270947"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20251125/20251125143549126825.jpg",
+            "is_publish": 1,
+            "author_id": 17905249,
+            "author_name": "河南三妹5233"
+          }
+        ],
+        "author_name": "河南三妹5233",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 575927110,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 20,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "free_for_ad": 32,
+          "language": "国语",
+          "cpy_attr0": 41958528,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260528/20260528212904938023.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf3be474",
+            "attr0": 1060889716,
+            "attr1": 1747189245
+          },
+          "ogg_320_filesize": 10555283,
+          "ogg_320_hash": "478D00ABF9E50B7A984C76E8E443F2D1",
+          "cid": 600156789,
+          "ogg_128_filesize": 2936400,
+          "ogg_128_hash": "D5C6EEC5366077413C81BCD0B22BF56B",
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "hash_offset": {
+            "clip_hash": "60879FF872D1324708BE9993198A6D67",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960143,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "F64F114519DCC23942663E2910161E20"
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "8E32C189DE51A146470D2DDA91064D93",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "岁月如笔写春秋",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 883499837,
+        "audio_info": {
+          "filesize_flac": 30546457,
+          "bitrate": 128,
+          "duration_flac": 251000,
+          "duration_128": 251000,
+          "duration_320": 251000,
+          "hash_320": "66B6541D79E4A2C34E22547F11B37BBF",
+          "bitrate_high": 1673,
+          "duration_high": 251000,
+          "hash_flac": "F7592F5B19F93301A42875EFCAA2C89A",
+          "filesize_128": 4027674,
+          "filesize_super": 0,
+          "hash_128": "5D4C2F9D994E5BECDC9BA0FBC6BD3DD8",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 970,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "522ACEF014CF5F856D18AF604CE4DC0A",
+          "extname": "mp3",
+          "filesize_320": 10068856,
+          "filesize_high": 52647182
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 191576482,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260528/20260528212904938023.jpg",
+          "album_name": "岁月如笔写春秋"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 31,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 25,
+          "rank_count": 102,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "河南三妹5233 - 岁月如笔写春秋",
+          "sort": 25,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:01",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 31
+        },
+        "deprecated": {
+          "hash": "5D4C2F9D994E5BECDC9BA0FBC6BD3DD8",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 575927110,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 251000,
+          "type_flac": "audio",
+          "cid": 600156789,
+          "pkg_price": 1,
+          "filesize": 4027674,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "8570A1BD191B193A6478574688E89A41",
+            "id": "21417"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230512/20230512202235551.jpg",
+            "is_publish": 1,
+            "author_id": 3540,
+            "author_name": "郑中基"
+          }
+        ],
+        "author_name": "郑中基",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 162706,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "《가만히 눈을 감고》粤语版",
+            "type": 8
+          },
+          {
+            "rel_album_audio_id": 0,
+            "remark": "《我可以》粤语版",
+            "type": 8
+          },
+          {
+            "rel_album_audio_id": 0,
+            "remark": "《瞳をとじて》粤语版",
+            "type": 8
+          },
+          {
+            "rel_album_audio_id": 0,
+            "remark": "《close my eyes》粤语版",
+            "type": 8
+          },
+          {
+            "rel_album_audio_id": 0,
+            "remark": "平井堅 - 瞳をとじて",
+            "type": 4
+          }
+        ],
+        "trans_param": {
+          "ogg_128_hash": "DC8442A9668D114CFEB4ADD25E16EA35",
+          "classmap": {
+            "attr0": 234885128
+          },
+          "language": "粤语",
+          "cpy_attr0": 59784320,
+          "musicpack_advance": 1,
+          "display": 32,
+          "display_rate": 1,
+          "cpy_map": "2",
+          "ogg_320_filesize": 8813995,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20241206/20241206175532471957.jpg",
+          "qualitymap": {
+            "bits": "fffc01b411ffffbf3fc074",
+            "attr0": 1061142644,
+            "attr1": 1747189759
+          },
+          "is_original": 1,
+          "ogg_320_hash": "CA2A6203D042E3E5F7614B1FF89DDFFF",
+          "cid": 5111040,
+          "ogg_128_filesize": 2453950,
+          "cpy_grade": 6,
+          "ipmap": {
+            "attr0": 2200097263616
+          },
+          "hash_offset": {
+            "clip_hash": "3FF2F5A98F5EE0C9E3FF4CEDDB4497E9",
+            "start_byte": 0,
+            "end_ms": 129400,
+            "end_byte": 2070654,
+            "file_type": 0,
+            "start_ms": 69400,
+            "offset_hash": "BA25EA088CBE2D70AD7369E2396D303D"
+          },
+          "hash_multitrack": "D7E91F5A09194716F92A4DB33FB0672A",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "闭目入神",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 101837362,
+        "audio_info": {
+          "filesize_flac": 23752556,
+          "bitrate": 128,
+          "duration_flac": 216093,
+          "duration_128": 216137,
+          "duration_320": 216137,
+          "hash_320": "E40F65EA27EC7594939AC27AE00721E0",
+          "bitrate_high": 910,
+          "duration_high": 216093,
+          "hash_flac": "58BCCAB0FBFF1B4B45AFDBDA798A4A31",
+          "filesize_128": 3458826,
+          "filesize_super": 0,
+          "hash_128": "386EF80136EFD753F8C9CD75D18159C3",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 879,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "E06411E53C686F50D1AD1A8BB767C3E4",
+          "extname": "mp3",
+          "filesize_320": 8646744,
+          "filesize_high": 24606170
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 7547818,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20241206/20241206175532471957.jpg",
+          "album_name": "Before After"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 21,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 26,
+          "rank_count": 19,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "郑中基 - 闭目入神",
+          "sort": 26,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "《가만히 눈을 감고》粤语版",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:01",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 21
+        },
+        "deprecated": {
+          "hash": "386EF80136EFD753F8C9CD75D18159C3",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 162706,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 216137,
+          "type_flac": "audio",
+          "cid": 5111040,
+          "pkg_price": 1,
+          "filesize": 3458826,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "06888E113436F9B0F5B85B8303DCE99C",
+            "id": "596401"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250312/20250312193702440379.jpg",
+            "is_publish": 1,
+            "author_id": 5546,
+            "author_name": "莫文蔚"
+          }
+        ],
+        "author_name": "莫文蔚",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 301315251,
+        "video_info": {
+          "video_id": 596401,
+          "video_track": 3,
+          "video_timelength": 265665,
+          "video_filesize": 36197795,
+          "video_hash": "7CD6EBAEC179328D6EDB4A1897917697"
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "《北极光》国语版",
+            "type": 8
+          },
+          {
+            "rel_album_audio_id": 0,
+            "remark": "《 水色》国语版",
+            "type": 8
+          },
+          {
+            "rel_album_audio_id": 0,
+            "remark": "UA - 水色",
+            "type": 4
+          }
+        ],
+        "trans_param": {
+          "cpy_grade": 6,
+          "classmap": {
+            "attr0": 235012104
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 8,
+          "display_rate": 2,
+          "ogg_320_hash": "72C9C50D4CA25B0FE2BC361573F8750E",
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250221/20250221180820211739.jpg",
+          "ogg_320_filesize": 9430265,
+          "qualitymap": {
+            "bits": "8fffc0db411ffffff3fc074",
+            "attr0": 2134884468,
+            "attr1": 1747189759
+          },
+          "is_original": 4,
+          "ogg_128_filesize": 2774879,
+          "cid": 22127979,
+          "ogg_128_hash": "275B35084C1FB6ECD00B23F7B176D281",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 2200130555904
+          },
+          "hash_offset": {
+            "clip_hash": "713911B9B005AA0D4C8563BBB019F5BE",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960133,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "26CE597354DA16F8627E03430DBC39FA"
+          },
+          "appid_block": "2910",
+          "hash_multitrack": "5571A0BF4F83221CBF98A0E3450C5AA6",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 0,
+          "status_super": 1
+        },
+        "songname": "盛夏的果实",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 4,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 10,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 32203639,
+        "audio_info": {
+          "filesize_flac": 24593463,
+          "bitrate": 128,
+          "duration_flac": 250795,
+          "duration_128": 250827,
+          "duration_320": 250827,
+          "hash_320": "BCF00BDDA1B91EBC63F0C7DB702EB4AB",
+          "bitrate_high": 816,
+          "duration_high": 250795,
+          "hash_flac": "9FDC0CB7204A6AC102581523A2D1022D",
+          "filesize_128": 4013872,
+          "filesize_super": 0,
+          "hash_128": "1C86CBC64AE9A6C3539A36CAADDF1A59",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 784,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "DBB7A3A921BCA86504C449CFE34664DF",
+          "extname": "mp3",
+          "filesize_320": 10034365,
+          "filesize_high": 25593195
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 978378,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250221/20250221180820211739.jpg",
+          "album_name": "含情莫莫 全精选辑"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 27,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 27,
+          "rank_count": 278,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "莫文蔚 - 盛夏的果实",
+          "sort": 27,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "《北极光》国语版",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:01",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 27
+        },
+        "deprecated": {
+          "hash": "1C86CBC64AE9A6C3539A36CAADDF1A59",
+          "pkg_price_high": 1,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 301315251,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "audio",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 3,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 200,
+          "duration": 250827,
+          "type_flac": "audio",
+          "cid": 22127979,
+          "pkg_price": 1,
+          "filesize": 4013872,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "4195F8E0482384C3349BED3C02819592",
+            "id": "14615928"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20260803/20260803200411376040.jpg",
+            "is_publish": 1,
+            "author_id": 96787,
+            "author_name": "Suki刘舒妤"
+          }
+        ],
+        "author_name": "Suki刘舒妤",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 1099164186,
+        "video_info": {
+          "video_id": 14615928,
+          "video_track": 3,
+          "video_timelength": 97934,
+          "video_filesize": 13691347,
+          "video_hash": "B5339C5CB45C65E7309D3282139F2E9A"
+        },
+        "musical": {},
+        "remarks": [
+          {
+            "rel_album_audio_id": 0,
+            "remark": "春季现象级金曲",
+            "type": 15
+          }
+        ],
+        "trans_param": {
+          "ogg_128_hash": "2928B1E33A05694C2883E6D8A45F9C4C",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 7134778,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260415/20260415190622329436.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db4107efeb714c034",
+            "attr0": 924106804,
+            "attr1": 1746992637
+          },
+          "is_original": 1,
+          "ogg_320_hash": "0E7FB56447FC44DA28345511F8250B84",
+          "cid": 51643472,
+          "ogg_128_filesize": 2256986,
+          "cpy_grade": 5,
+          "ipmap": {
+            "attr0": 2353675636736
+          },
+          "hash_offset": {
+            "clip_hash": "39907931CD35DE007A799E36E0FEBDF5",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960141,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "9267654032C9B5AF0C09C01EBA4FBB26"
+          },
+          "hash_multitrack": "09FE66DE4A1DFB27DCBDD73B548F72B2",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 1,
+          "status_super": 1
+        },
+        "songname": "失眠",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 0,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 0,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 29383287,
+        "audio_info": {
+          "filesize_flac": 17967294,
+          "bitrate": 128,
+          "duration_flac": 211000,
+          "duration_128": 211000,
+          "duration_320": 211000,
+          "hash_320": "0F027DFC57447BA46C85FC067B2E7ED6",
+          "bitrate_high": 0,
+          "duration_high": 0,
+          "hash_flac": "D570E0994720DAA789BA710021955ADA",
+          "filesize_128": 3381089,
+          "filesize_super": 0,
+          "hash_128": "EC476A2009EF5DCAC13EDCD11870DF55",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 680,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "",
+          "extname": "mp3",
+          "filesize_320": 8452397,
+          "filesize_high": 0
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 671621,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260415/20260415190622329436.jpg",
+          "album_name": "Ladies Night"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 24,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 28,
+          "rank_count": 249,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "Suki刘舒妤 - 失眠",
+          "sort": 28,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "春季现象级金曲",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:01",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 24
+        },
+        "deprecated": {
+          "hash": "EC476A2009EF5DCAC13EDCD11870DF55",
+          "pkg_price_high": 0,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 1099164186,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 0,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 0,
+          "duration": 211000,
+          "type_flac": "audio",
+          "cid": 51643472,
+          "pkg_price": 1,
+          "filesize": 3381089,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [
+          {
+            "typ": 0,
+            "trk": "3",
+            "hash": "0AF6025F5ABE315D6459DAD974FAF969",
+            "id": "1142454"
+          }
+        ],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230512/20230512172744460.jpg",
+            "is_publish": 1,
+            "author_id": 573674,
+            "author_name": "大壮"
+          }
+        ],
+        "author_name": "大壮",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 31967349,
+        "video_info": {
+          "video_id": 1142454,
+          "video_track": 3,
+          "video_timelength": 234104,
+          "video_filesize": 31754955,
+          "video_hash": "AC8EC5B4DB296166C64E5A3ACAB45C0F"
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_hash": "D06EF822149B3ACF03D0A1A3A291D499",
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20171110/20171110174258282426.jpg",
+          "ogg_320_filesize": 10270854,
+          "qualitymap": {
+            "bits": "8fffc0db4107ffff73fc035",
+            "attr0": 2000666677,
+            "attr1": 1746993151
+          },
+          "is_original": 1,
+          "ogg_128_filesize": 2875957,
+          "cid": 27762423,
+          "ogg_128_hash": "F25C68B62EFC052F3844D746406B25F2",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "hash_offset": {
+            "clip_hash": "F5496B1C2FB58A5E0B0E5E8ADCD1A8F7",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960115,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "DB34505F4A1E94B7215773622B9C4EBA"
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "653756467FEE0034E14A93E0F09FCE8E",
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 1,
+          "status_super": 1
+        },
+        "songname": "差一步",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 0,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 10,
+          "privilege_high": 0,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 10
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 96507463,
+        "audio_info": {
+          "filesize_flac": 29428494,
+          "bitrate": 128,
+          "duration_flac": 245600,
+          "duration_128": 245655,
+          "duration_320": 245655,
+          "hash_320": "60581E9FFE3A9D5131FEA43EAF4A71B7",
+          "bitrate_high": 0,
+          "duration_high": 0,
+          "hash_flac": "BD0C659C2C2E765627A2EA39BA558DDC",
+          "filesize_128": 3931098,
+          "filesize_super": 0,
+          "hash_128": "08C2E4AF2BDDB11D36E2B04A51DA30CE",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 958,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "",
+          "extname": "mp3",
+          "filesize_320": 9827457,
+          "filesize_high": 0
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 6194568,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20171110/20171110174258282426.jpg",
+          "album_name": "差一步"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 25,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 29,
+          "rank_count": 446,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "大壮 - 差一步",
+          "sort": 29,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 0,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:01",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 25
+        },
+        "deprecated": {
+          "hash": "08C2E4AF2BDDB11D36E2B04A51DA30CE",
+          "pkg_price_high": 0,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 31967349,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 0,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 0,
+          "duration": 245655,
+          "type_flac": "audio",
+          "cid": 27762423,
+          "pkg_price": 1,
+          "filesize": 3931098,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      },
+      {
+        "mvdata": [],
+        "authors": [
+          {
+            "sizable_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20260201/20260201155432754958.jpg",
+            "is_publish": 1,
+            "author_id": 17991590,
+            "author_name": "南歌"
+          }
+        ],
+        "author_name": "南歌",
+        "copyright": {
+          "old_hide": 1
+        },
+        "audio_id": 642235656,
+        "video_info": {
+          "video_id": 0,
+          "video_track": 0,
+          "video_timelength": 0,
+          "video_filesize": 0,
+          "video_hash": ""
+        },
+        "musical": {},
+        "remarks": [],
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58728448,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "provider": 5,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260903/20260903185721690632.jpg",
+          "ogg_320_filesize": 6761592,
+          "qualitymap": {
+            "bits": "801fc0db410007eb500e434",
+            "attr0": 889250868,
+            "attr1": 1746927869
+          },
+          "ogg_320_hash": "CE6D1BB6E72979A151ACC6C49A27351B",
+          "ogg_128_filesize": 2162930,
+          "cid": 658047448,
+          "ogg_128_hash": "B43ADBD21921D253A4196A648967B672",
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "songname_suffix": "(风往北刮)",
+          "appid_block": "3124",
+          "hash_multitrack": "43E9364B798A262C682DD8613E2EF9AC",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "is_publish": 1,
+        "user_download": {
+          "status_320": 0,
+          "status_128": 0,
+          "status_flac": 0,
+          "status_high": 1,
+          "status_super": 1
+        },
+        "songname": "你往南走 (风往北刮)",
+        "has_obbligato": 1,
+        "privilege_download": {
+          "fail_process_128": 4,
+          "fail_process_320": 4,
+          "fail_process_high": 0,
+          "privilege_flac": 10,
+          "fail_process": 4,
+          "fail_process_super": 0,
+          "fail_process_flac": 4,
+          "privilege": 8,
+          "privilege_high": 0,
+          "privilege_320": 10,
+          "privilege_super": 0,
+          "privilege_128": 8
+        },
+        "zone": "tx6_gz_kmr",
+        "album_audio_id": 955090745,
+        "audio_info": {
+          "filesize_flac": 18431701,
+          "bitrate": 128,
+          "duration_flac": 198000,
+          "duration_128": 198000,
+          "duration_320": 198000,
+          "hash_320": "7669658D3E73DA0B704ACC7163AAE871",
+          "bitrate_high": 0,
+          "duration_high": 0,
+          "hash_flac": "96D61234661B5DE3B109654785C652EE",
+          "filesize_128": 3184627,
+          "filesize_super": 0,
+          "hash_128": "1FC3B465CD5ACA8654A64BE5DE4E9A12",
+          "extname_super": "",
+          "bitrate_super": 0,
+          "bitrate_flac": 742,
+          "duration_super": 0,
+          "hash_super": "",
+          "hash_high": "",
+          "extname": "mp3",
+          "filesize_320": 7961273,
+          "filesize_high": 0
+        },
+        "goods_info": {
+          "album_sale_url": ""
+        },
+        "album_id": 205420335,
+        "album_info": {
+          "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260903/20260903185721690632.jpg",
+          "album_name": "你往南走"
+        },
+        "trans_obj": {
+          "rank_show_sort": 1
+        },
+        "business": {
+          "last_sort": 106,
+          "buy_count": "0",
+          "level": 2,
+          "original_index": 30,
+          "rank_count": 1,
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "extern": "",
+          "filename": "南歌 - 你往南走 (风往北刮)",
+          "sort": 30,
+          "max_sort": 0,
+          "exclusive": 0,
+          "issue": "247",
+          "recommend_reason": "",
+          "album_audio_remark": "",
+          "is_recent_year": 1,
+          "offset": 0,
+          "addtime": "2026-09-04 08:30:01",
+          "rank_id": "126025",
+          "parent_id": "8888",
+          "last_original_index": 106
+        },
+        "deprecated": {
+          "hash": "1FC3B465CD5ACA8654A64BE5DE4E9A12",
+          "pkg_price_high": 0,
+          "status": 0,
+          "bitrate": 128,
+          "price_128": 200,
+          "type_320": "audio",
+          "pay_type_320": 3,
+          "pay_type_128": 3,
+          "cd_url": "",
+          "pay_type_flac": 3,
+          "price_flac": 200,
+          "type": "audio",
+          "id": 642235656,
+          "type_super": "",
+          "old_cpy": 0,
+          "type_high": "",
+          "pkg_price_super": 0,
+          "type_128": "audio",
+          "pkg_price_320": 1,
+          "topic_remark": "",
+          "pay_type_high": 0,
+          "price": 200,
+          "price_320": 200,
+          "price_super": 0,
+          "price_high": 0,
+          "duration": 198000,
+          "type_flac": "audio",
+          "cid": 658047448,
+          "pkg_price": 1,
+          "filesize": 3184627,
+          "extname": "mp3",
+          "pkg_price_flac": 1,
+          "pay_type": 3,
+          "pay_type_super": 0,
+          "pkg_price_128": 1
+        },
+        "rank_cid": 126025
+      }
+    ]
+  },
+  "extra": {
+    "resp": {
+      "scheduled_release_conf": {
+        "scheduled_release_time": "10:00:00",
+        "latest_rank_cid": 126025,
+        "latest_rank_cid_publish_date": "2026-09-04 08:30:00"
+      },
+      "five_year_total": 181,
+      "new_total": 10,
+      "enjoy_total": 0,
+      "recent_year_total": 123,
+      "follow_total": 0,
+      "all_total": 500,
+      "vip_total": 0,
+      "rank_tag": [
+        {
+          "desc": "有10首上新",
+          "type": 3
+        }
+      ]
+    }
+  },
+  "status": 1,
+  "errmsg": ""
+}

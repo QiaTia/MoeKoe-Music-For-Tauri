@@ -1,0 +1,13 @@
+{
+  "error_msg": "",
+  "error_code": 0,
+  "timestamp": 1788516896,
+  "activity_status": 1,
+  "status": 1,
+  "data": [
+    {
+      "audit": 3,
+      "global_collection_id": "2550343002"
+    }
+  ]
+}

@@ -1,0 +1,6063 @@
+{
+  "data": {
+    "creation_date": "20260904",
+    "mid": "",
+    "bi_biz": "rcmd_evd",
+    "sign": "4436e899dd0ee45ec3d7f987895eec43",
+    "song_list_size": 29,
+    "OlexpIds": "30,2218,2264,2270,2304,2316,2358,2866,2908,2910,2952,2954,2966,2968,2992,2994,6917,6919,7693,7695,7697,7699,7789,7791,7813,7815,7849,7851,8129,8133,8159,8161,8181,8281,8283,8297,8299,8345,8347,8383,8385,8513,8525,8527,8599,8601,8625,8627,8791,8793,8855,8857,9191,9575,9577,10621,10623",
+    "client_playlist_flag": 0,
+    "is_guarantee_rec": 0,
+    "song_list": [
+      {
+        "filesize_flac": 24075342,
+        "official_songname": "",
+        "ori_audio_name": "黑桃A",
+        "hash_192": "",
+        "hash_flac": "64BB4E6998E2CE48F78E2B25D29B319A",
+        "songname": "黑桃A",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "48003029",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "DJ小鱼儿 - 黑桃A",
+        "cid": 0,
+        "scid": 116726216,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "319125ECD143520FB32829DD7FE19EFB",
+        "hash": "095C509C195C92EEA0E52369A25EF91A",
+        "author_name": "DJ小鱼儿",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1706",
+            "parent_id": "4",
+            "tag_name": "动感节拍"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1806",
+            "parent_id": "6",
+            "tag_name": "爱情"
+          },
+          {
+            "tag_id": "1818",
+            "parent_id": "1806",
+            "tag_name": "未细分爱情"
+          },
+          {
+            "tag_id": "1871",
+            "parent_id": "4",
+            "tag_name": "热情兴奋"
+          },
+          {
+            "tag_id": "1886",
+            "parent_id": "1885",
+            "tag_name": "跑步&骑行"
+          },
+          {
+            "tag_id": "1945",
+            "parent_id": "578",
+            "tag_name": "出租车"
+          },
+          {
+            "tag_id": "3052",
+            "parent_id": "3021",
+            "tag_name": "情歌对唱（DJ垂类）"
+          },
+          {
+            "tag_id": "3189",
+            "parent_id": "0",
+            "tag_name": "2021"
+          },
+          {
+            "tag_id": "3194",
+            "parent_id": "1919",
+            "tag_name": "抖音版（Q音同步）"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "rank_label": "“直接燃起来了”",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 2882862,
+        "album_name": "黑桃A",
+        "ztc_mark": "t_1185_1_116726216_332041189_10",
+        "climax_end_time": 72954,
+        "songid": 171760697,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2021-08-19",
+        "file_size": 2882862,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 7206859,
+        "level": 2,
+        "time_length": 180,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "rec_label_prefix": "M_PHARSE_",
+        "hash_128": "095C509C195C92EEA0E52369A25EF91A",
+        "hash_320": "18174DA4BEB79BB1D0B11DA05902565D",
+        "relate_goods": {},
+        "mixsongid": "332041189",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210815/20210815212852202638.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 7,
+        "singerinfo": [
+          {
+            "name": "DJ小鱼儿",
+            "is_publish": "1",
+            "id": "190597"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "BCBDBF45E5831F8BC93FDCD67A9CB934",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210815/20210815212852202638.jpg",
+          "free_for_ad": 32,
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 2167527,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 7831797,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "qualitymap": {
+            "bits": "8fffc0db4107ffff73fe434",
+            "attr0": 2000675892,
+            "attr1": 1746993151
+          },
+          "is_original": 1,
+          "display": 0,
+          "cid": 165199818,
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "ogg_320_hash": "9E5A30662328FF67AD6A52ECCD5495AF",
+          "hash_multitrack": "2CDF913EE8ED207EDA37F332D91AE0A8",
+          "hash_offset": {
+            "clip_hash": "9BBD16C3DAFEC5363F95317D615E1FA5",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960121,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "C311901EB3EF0F1B0CE75A1BB037EE54"
+          },
+          "pay_block_tpl": 1,
+          "cpy_grade": 20,
+          "cpy_level": 1
+        },
+        "timelength_320": 180,
+        "album_audio_remark": "",
+        "album_audio_id": "332041189",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "评论1w+",
+            "ip_id": "97197",
+            "pid": "96649"
+          },
+          {
+            "name": "上周评论top1W",
+            "ip_id": "97201",
+            "pid": "96649"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 56454,
+        "climax_timelength": 16500,
+        "is_publish": 1,
+        "rec_sub_copy_write": "本周红心破万"
+      },
+      {
+        "filesize_flac": 18431701,
+        "official_songname": "",
+        "ori_audio_name": "你往南走",
+        "hash_192": "",
+        "hash_flac": "96D61234661B5DE3B109654785C652EE",
+        "songname": "你往南走 (风往北刮)",
+        "music_trac": 1,
+        "is_original": 0,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "205420335",
+        "remark": "风往北刮",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "南歌 - 你往南走",
+        "cid": 0,
+        "scid": 642235656,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "",
+        "hash": "1FC3B465CD5ACA8654A64BE5DE4E9A12",
+        "author_name": "南歌",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1810",
+            "parent_id": "6",
+            "tag_name": "人生与理想"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "rank_label": "昨日热播10w+",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3184627,
+        "album_name": "你往南走",
+        "ztc_mark": "t_1185_1_642235656_955090745_8",
+        "climax_end_time": 58230,
+        "songid": 688945424,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2026-08-21",
+        "file_size": 3184627,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 198,
+        "filesize_320": 7961273,
+        "old_cpy": 0,
+        "rec_copy_write_id": "2",
+        "hash_128": "1FC3B465CD5ACA8654A64BE5DE4E9A12",
+        "hash_320": "7669658D3E73DA0B704ACC7163AAE871",
+        "relate_goods": {},
+        "mixsongid": "955090745",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260903/20260903185721690632.jpg",
+        "mv_type": 0,
+        "publish_time": 1,
+        "filesize_ape": 0,
+        "rec_label_type": 3,
+        "singerinfo": [
+          {
+            "name": "南歌",
+            "is_publish": "1",
+            "id": "17991590"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "B43ADBD21921D253A4196A648967B672",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "provider": 5,
+          "cpy_attr0": 58728448,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2162930,
+          "display_rate": 0,
+          "ogg_320_filesize": 6761592,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260903/20260903185721690632.jpg",
+          "cpy_grade": 5,
+          "qualitymap": {
+            "bits": "801fc0db410007eb500e434",
+            "attr0": 889250868,
+            "attr1": 1746927869
+          },
+          "hash_multitrack": "43E9364B798A262C682DD8613E2EF9AC",
+          "ogg_320_hash": "CE6D1BB6E72979A151ACC6C49A27351B",
+          "cid": 658047448,
+          "display": 0,
+          "songname_suffix": "(风往北刮)",
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "appid_block": "3124",
+          "pay_block_tpl": 1,
+          "language": "国语",
+          "cpy_level": 1
+        },
+        "timelength_320": 198,
+        "album_audio_remark": "",
+        "album_audio_id": "955090745",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周评论top1W",
+            "ip_id": "97201",
+            "pid": "96649"
+          },
+          {
+            "name": "上周评论top10W",
+            "ip_id": "97202",
+            "pid": "96649"
+          },
+          {
+            "name": "昨日万人收藏",
+            "ip_id": "97204",
+            "pid": "96650"
+          }
+        ],
+        "privilege": 8,
+        "fail_process": 4,
+        "climax_start_time": 39620,
+        "climax_timelength": 18610,
+        "is_publish": 1
+      },
+      {
+        "filesize_flac": 27230759,
+        "official_songname": "",
+        "ori_audio_name": "琵琶曲",
+        "hash_192": "",
+        "hash_flac": "4855892F2DD45CABDB2FACFBD90404C4",
+        "songname": "琵琶曲",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "180917343",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "郑浩、冰洁 - 琵琶曲",
+        "cid": 0,
+        "scid": 519737894,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "4F7A99B0A1097115B89267E327894B54",
+        "hash": "244A022D6CB3FDE50B24E76402053EB3",
+        "author_name": "郑浩、冰洁",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1622",
+            "parent_id": "1621",
+            "tag_name": "未细分国风音乐"
+          },
+          {
+            "tag_id": "1698",
+            "parent_id": "4",
+            "tag_name": "轻快休闲"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1818",
+            "parent_id": "1806",
+            "tag_name": "未细分爱情"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3276",
+            "parent_id": "0",
+            "tag_name": "迷人音色"
+          },
+          {
+            "tag_id": "3300",
+            "parent_id": "3297",
+            "tag_name": "男女声唱"
+          }
+        ],
+        "rank_label": "“两个声线的碰撞”",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 3776877,
+        "album_name": "琵琶曲",
+        "ztc_mark": "t_1185_1_519737894_826210270_10",
+        "climax_end_time": 97100,
+        "songid": 579305205,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2026-02-27",
+        "file_size": 3776877,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 9441896,
+        "level": 2,
+        "time_length": 235,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "rec_label_prefix": "M_PHARSE_",
+        "hash_128": "244A022D6CB3FDE50B24E76402053EB3",
+        "hash_320": "36EB72D5CCB7A5F54DDBADB782075619",
+        "relate_goods": {},
+        "mixsongid": "826210270",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260326/20260326181841360691.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 7,
+        "singerinfo": [
+          {
+            "name": "郑浩",
+            "is_publish": "1",
+            "id": "792453"
+          },
+          {
+            "name": "冰洁",
+            "is_publish": "1",
+            "id": "11523603"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "C2F8C30606FCE6E1CF124BE6BF61A4D8",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 2769551,
+          "display_rate": 0,
+          "ogg_320_filesize": 9836794,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260326/20260326181841360691.jpg",
+          "display": 0,
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf14c074",
+            "attr0": 1058324596,
+            "attr1": 1747189245
+          },
+          "is_original": 1,
+          "provider": 1,
+          "cid": 556665880,
+          "ogg_320_hash": "2C8F5A6C5613A3D2FB70ABD314594587",
+          "cpy_grade": 5,
+          "ipmap": {
+            "attr0": 154719490048
+          },
+          "hash_offset": {
+            "clip_hash": "57F5633A8FF62A00D28F1A31C546D9BA",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960121,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "489EF100914109D19E8F3AD6374916D0"
+          },
+          "hash_multitrack": "3A03649737474C8D25514622E2219882",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "timelength_320": 235,
+        "album_audio_remark": "",
+        "album_audio_id": "826210270",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "评论999+",
+            "ip_id": "97196",
+            "pid": "96649"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 72700,
+        "climax_timelength": 24400,
+        "is_publish": 1
+      },
+      {
+        "filesize_flac": 24726744,
+        "official_songname": "",
+        "ori_audio_name": "酒醉的蝴蝶",
+        "hash_192": "",
+        "hash_flac": "D5684FA88AB6BF5F741B37D6D915B3CF",
+        "songname": "酒醉的蝴蝶",
+        "music_trac": 1,
+        "is_original": 2,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "157444780",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "黑大婶回乡带娃 - 酒醉的蝴蝶",
+        "cid": 0,
+        "scid": 482809803,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "4D3F3283C0044D74D6E4C06C6E3CBEF1",
+        "hash": "99215447AB9478FE0B7CE7C481CDB0CE",
+        "author_name": "黑大婶回乡带娃",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1818",
+            "parent_id": "1806",
+            "tag_name": "未细分爱情"
+          },
+          {
+            "tag_id": "1886",
+            "parent_id": "1885",
+            "tag_name": "跑步&骑行"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3320059,
+        "album_name": "酒醉的蝴蝶",
+        "ztc_mark": "t_1185_1_482809803_782456025_10",
+        "climax_end_time": 88100,
+        "songid": 547349046,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2025-08-15",
+        "file_size": 3320059,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 207,
+        "old_cpy": 0,
+        "filesize_320": 8299834,
+        "rec_copy_write_id": "2",
+        "hash_320": "423F57CD58109BE54B8F9CCAF049D139",
+        "relate_goods": {},
+        "mixsongid": "782456025",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260321/20260321164911570049.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "99215447AB9478FE0B7CE7C481CDB0CE",
+        "singerinfo": [
+          {
+            "name": "黑大婶回乡带娃",
+            "is_publish": "1",
+            "id": "13388153"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "A37E39B48228A68CA32B83347234F1D2",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 9012319,
+          "cpy_map": "2",
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260321/20260321164911570049.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db4107efef714e434",
+            "attr0": 1997857844,
+            "attr1": 1746992637
+          },
+          "is_original": 2,
+          "hash_offset": {
+            "clip_hash": "82B8E9F1A4BF370FB774309C62560495",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960133,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "1733BDBCBECDE67359BF63C9ACF25884"
+          },
+          "cid": 525490384,
+          "ogg_320_hash": "51E0E0BBB1E2EFEB8F8AF77E8003A8F4",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "3330AC7C65026DCBDCBE5B5042218B42",
+          "ogg_128_filesize": 2514425,
+          "cpy_level": 1
+        },
+        "timelength_320": 207,
+        "album_audio_remark": "",
+        "album_audio_id": "782456025",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日千人播放",
+            "ip_id": "96592",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "上周收藏top10W",
+            "ip_id": "97209",
+            "pid": "96650"
+          },
+          {
+            "name": "上周搜播top10W",
+            "ip_id": "97216",
+            "pid": "96651"
+          },
+          {
+            "name": "昨日万人播放",
+            "ip_id": "97393",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 60100,
+        "climax_timelength": 28000,
+        "is_publish": 1,
+        "rec_sub_copy_write": "昨日万人收听"
+      },
+      {
+        "filesize_flac": 21317217,
+        "official_songname": "",
+        "ori_audio_name": "可能",
+        "hash_192": "",
+        "hash_flac": "7B669E87EF7B7B2CCBC6718C59E8765F",
+        "songname": "可能",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "57727291",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "程响 - 可能",
+        "cid": 0,
+        "scid": 166441522,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "86E04F197EA2B9A63E78F4A6A4435EFC",
+        "hash": "38B234C1135A5E9A4C98D55C058A4894",
+        "author_name": "程响",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1810",
+            "parent_id": "6",
+            "tag_name": "人生与理想"
+          },
+          {
+            "tag_id": "1857",
+            "parent_id": "6",
+            "tag_name": "特别主题"
+          },
+          {
+            "tag_id": "3190",
+            "parent_id": "0",
+            "tag_name": "2022"
+          },
+          {
+            "tag_id": "3192",
+            "parent_id": "0",
+            "tag_name": "歌曲性别声音白名单-女"
+          },
+          {
+            "tag_id": "3194",
+            "parent_id": "1919",
+            "tag_name": "抖音版（Q音同步）"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 3489311,
+        "album_name": "可能",
+        "ztc_mark": "t_1185_1_166441522_412819125_10",
+        "climax_end_time": 93800,
+        "songid": 237968111,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2022-05-26",
+        "file_size": 3489311,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 8722996,
+        "level": 2,
+        "time_length": 217,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "hash_128": "38B234C1135A5E9A4C98D55C058A4894",
+        "hash_320": "F17F932F0148AAFF0E5A835439CECC78",
+        "relate_goods": {},
+        "mixsongid": "412819125",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20230626/20230626120701823800.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "singerinfo": [
+          {
+            "name": "程响",
+            "is_publish": "1",
+            "id": "4442"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58752128,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 8248920,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20230626/20230626120701823800.jpg",
+          "qualitymap": {
+            "bits": "800000db4118f8fff3fc075",
+            "attr0": 2134884469,
+            "attr1": 1747132191
+          },
+          "is_original": 1,
+          "ogg_128_hash": "CBC7CE578AAACD6A5F34782EEEF7D2E9",
+          "cid": 212433635,
+          "ogg_128_filesize": 2446104,
+          "ogg_320_hash": "5DCA7AD5AA824AD5550C8008D6EBDE9F",
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "hash_offset": {
+            "clip_hash": "7E2F0A5CCECA415A44ACC6DA48D9E418",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960111,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "A57C9D4FBA9CFF2B0D9982E5AA34EF6D"
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "7D160BA02EF79AFB319349EBFD0BFD12",
+          "cpy_level": 1
+        },
+        "timelength_320": 217,
+        "album_audio_remark": "",
+        "album_audio_id": "412819125",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "评论10w+",
+            "ip_id": "97198",
+            "pid": "96649"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 70400,
+        "climax_timelength": 23400,
+        "is_publish": 1
+      },
+      {
+        "filesize_flac": 27330567,
+        "official_songname": "",
+        "ori_audio_name": "我曾像傻子一样爱你",
+        "hash_192": "",
+        "hash_flac": "1BB1F042AF68CFCC862F50307BFE32C5",
+        "songname": "我曾像傻子一样爱你",
+        "music_trac": 1,
+        "is_original": 0,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "171871018",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "任夏 - 我曾像傻子一样爱你",
+        "cid": 0,
+        "scid": 521735778,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "21F59EF5EB2DC367462006745D7F7D68",
+        "hash": "019C0921394DEA57337A44C533CC37C7",
+        "author_name": "任夏",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "rank_label": "“温暖的灵魂终将相遇”",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 3696057,
+        "album_name": "我曾像傻子一样爱你",
+        "ztc_mark": "t_1185_1_521735778_828294492_10",
+        "climax_end_time": 80900,
+        "songid": 581073684,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2025-12-26",
+        "file_size": 3696057,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 9240076,
+        "level": 2,
+        "time_length": 230,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "rec_label_prefix": "M_PHARSE_",
+        "hash_128": "019C0921394DEA57337A44C533CC37C7",
+        "hash_320": "559A4DE353C862CC87EB0C590F2DB0D0",
+        "relate_goods": {},
+        "mixsongid": "828294492",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20251226/20251226211022103932.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 7,
+        "singerinfo": [
+          {
+            "name": "任夏",
+            "is_publish": "1",
+            "id": "859630"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "provider": 5,
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 2681582,
+          "display_rate": 0,
+          "ogg_320_filesize": 8872612,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20251226/20251226211022103932.jpg",
+          "cpy_grade": 5,
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf14e474",
+            "attr0": 1058333812,
+            "attr1": 1747189245
+          },
+          "hash_offset": {
+            "clip_hash": "2C04FDD8921ECC804099E790DCBA0D3A",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960931,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "54E988FF23458296F33EE896136D8595"
+          },
+          "ogg_320_hash": "6E451F52229D40CF5021F5031A7112DA",
+          "cid": 558577983,
+          "display": 0,
+          "ogg_128_hash": "BE31CBA6D27F6D06915DDB7B64CE69AC",
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "C6BC4E77191DECD902F74D8CA819FEBF",
+          "language": "国语",
+          "cpy_level": 1
+        },
+        "timelength_320": 230,
+        "album_audio_remark": "",
+        "album_audio_id": "828294492",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 50200,
+        "climax_timelength": 30700,
+        "is_publish": 1,
+        "rec_sub_copy_write": "本周超万人收藏"
+      },
+      {
+        "filesize_flac": 24581167,
+        "official_songname": "",
+        "ori_audio_name": "只要有你",
+        "hash_192": "",
+        "hash_flac": "C4DEB58EE27B7C89B91957FB94ED8F0B",
+        "songname": "只要有你",
+        "music_trac": 1,
+        "is_original": 2,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "162146055",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "赵乃吉 - 只要有你",
+        "cid": 0,
+        "scid": 494621941,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "2CACF83F51B307EBDB3FD9CC687B6BD8",
+        "hash": "C82CB16429C16576706E18ABE8234552",
+        "author_name": "赵乃吉",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1815",
+            "parent_id": "1806",
+            "tag_name": "暗恋"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "rank_label": "“声音太有辨识度了”",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3575002,
+        "album_name": "只要有你",
+        "ztc_mark": "t_1185_1_494621941_795099938_8",
+        "climax_end_time": 104700,
+        "songid": 389609501,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2025-09-21",
+        "file_size": 3575002,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 8937210,
+        "level": 2,
+        "time_length": 223,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "rec_label_prefix": "M_PHARSE_",
+        "hash_128": "C82CB16429C16576706E18ABE8234552",
+        "hash_320": "C7DB430121A2AFAE51F025037514A040",
+        "relate_goods": {},
+        "mixsongid": "795099938",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250921/20250921185305882638.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 7,
+        "singerinfo": [
+          {
+            "name": "赵乃吉",
+            "is_publish": "1",
+            "id": "173618"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "cpy_grade": 20,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "free_for_ad": 32,
+          "language": "国语",
+          "cpy_attr0": 58728448,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2620065,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 8852368,
+          "qualitymap": {
+            "bits": "8fffc0db411fefeff14e474",
+            "attr0": 2132075636,
+            "attr1": 1747189245
+          },
+          "is_original": 2,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250921/20250921185305882638.jpg",
+          "cid": 535402295,
+          "display": 0,
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "hash_multitrack": "D07E10153CF02833F48E6F24F174C940",
+          "ogg_320_hash": "EE91885F507A1362B403FD0398CE9E5C",
+          "pay_block_tpl": 1,
+          "ogg_128_hash": "9D6C008865050F6AFB3431AF87DCED11",
+          "cpy_level": 1
+        },
+        "timelength_320": 223,
+        "album_audio_remark": "",
+        "album_audio_id": "795099938",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "上周收藏top1W",
+            "ip_id": "97208",
+            "pid": "96650"
+          },
+          {
+            "name": "上周收藏top10W",
+            "ip_id": "97209",
+            "pid": "96650"
+          }
+        ],
+        "privilege": 8,
+        "fail_process": 4,
+        "climax_start_time": 58000,
+        "climax_timelength": 46700,
+        "is_publish": 1,
+        "rec_sub_copy_write": "一周超十万播放"
+      },
+      {
+        "filesize_flac": 24414408,
+        "official_songname": "",
+        "ori_audio_name": "心墙",
+        "hash_192": "",
+        "hash_flac": "A765AE4F3D2B3D7C38D1C566B6C9EC62",
+        "songname": "心墙 (甜美版)",
+        "music_trac": 1,
+        "is_original": 2,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "148868600",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "奶酪ovo - 心墙",
+        "cid": 0,
+        "scid": 463062799,
+        "suffix_audio_name": "甜美版",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "F1D42BD074BF43C9EAA6EE597E5F9C55",
+        "hash": "741E69BF633960579C53038D35312C83",
+        "author_name": "奶酪ovo",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "rank_label": "万人收藏",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3809892,
+        "album_name": "心墙",
+        "ztc_mark": "t_1185_1_463062799_760266218_10",
+        "climax_end_time": 109000,
+        "songid": 508915974,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2025-05-30",
+        "file_size": 3809892,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 238,
+        "filesize_320": 9524439,
+        "old_cpy": 0,
+        "rec_copy_write_id": "2",
+        "hash_128": "741E69BF633960579C53038D35312C83",
+        "hash_320": "9255C957024C289D0FEF4838A5865A87",
+        "relate_goods": {},
+        "mixsongid": "760266218",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260102/20260102063311651436.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 3,
+        "singerinfo": [
+          {
+            "name": "奶酪ovo",
+            "is_publish": "1",
+            "id": "13437155"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "18B6B33D53ED0DF216D68801E9953851",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 2697079,
+          "display_rate": 0,
+          "ogg_320_filesize": 9014177,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260102/20260102063311651436.jpg",
+          "cpy_map": "2",
+          "cpy_grade": 5,
+          "hash_offset": {
+            "clip_hash": "0014BD29E5FDC55554AF292CF96D4913",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960117,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "9D9A4998299BBA540404BFB019A345DE"
+          },
+          "qualitymap": {
+            "bits": "1b411fefeff16c074",
+            "attr0": 2132197492,
+            "attr1": 1747189245
+          },
+          "is_original": 2,
+          "ogg_320_hash": "463377E9B29BDB61E9522E9C57830E29",
+          "cid": 507129057,
+          "songname_suffix": "(甜美版)",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 33554432
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "BF00AB362E2A48B4B42F1FDE0EDF0EAE",
+          "display": 0,
+          "cpy_level": 1
+        },
+        "timelength_320": 238,
+        "album_audio_remark": "",
+        "album_audio_id": "760266218",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日千人播放",
+            "ip_id": "96592",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "上周搜播top10W",
+            "ip_id": "97216",
+            "pid": "96651"
+          },
+          {
+            "name": "昨日破千播放",
+            "ip_id": "97392",
+            "pid": "96647"
+          },
+          {
+            "name": "万人收藏",
+            "ip_id": "97544",
+            "pid": "96650"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 75700,
+        "climax_timelength": 33300,
+        "is_publish": 1,
+        "rec_sub_copy_write": "昨日超千人播放"
+      },
+      {
+        "filesize_flac": 28729042,
+        "official_songname": "",
+        "ori_audio_name": "孤勇者",
+        "hash_192": "",
+        "hash_flac": "DAB4992FD972479813EA2678ED2DAE65",
+        "songname": "孤勇者",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "50223611",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "陈奕迅 - 孤勇者",
+        "cid": 0,
+        "scid": 127845904,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "F8508E03DD70A08F03AED057C2F9CAAC",
+        "hash": "64B39A6828913E58E1ED1F7F6061A380",
+        "author_name": "陈奕迅",
+        "tags": [
+          {
+            "tag_id": "77",
+            "parent_id": "3",
+            "tag_name": "ACG"
+          },
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "983",
+            "parent_id": "1541",
+            "tag_name": "国语流行"
+          },
+          {
+            "tag_id": "983",
+            "parent_id": "0",
+            "tag_name": "2025年优秀歌单达人"
+          },
+          {
+            "tag_id": "1277",
+            "parent_id": "77",
+            "tag_name": "动漫"
+          },
+          {
+            "tag_id": "1541",
+            "parent_id": "882",
+            "tag_name": "华语流行"
+          },
+          {
+            "tag_id": "1707",
+            "parent_id": "4",
+            "tag_name": "鼓舞励志"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1810",
+            "parent_id": "6",
+            "tag_name": "人生与理想"
+          },
+          {
+            "tag_id": "1857",
+            "parent_id": "6",
+            "tag_name": "特别主题"
+          },
+          {
+            "tag_id": "1877",
+            "parent_id": "1774",
+            "tag_name": "KTV"
+          },
+          {
+            "tag_id": "3189",
+            "parent_id": "0",
+            "tag_name": "2021"
+          },
+          {
+            "tag_id": "3191",
+            "parent_id": "0",
+            "tag_name": "歌曲性别声音白名单-男"
+          },
+          {
+            "tag_id": "3194",
+            "parent_id": "1919",
+            "tag_name": "抖音版（Q音同步）"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 4097029,
+        "album_name": "孤勇者",
+        "ztc_mark": "t_1185_1_127845904_348254775_10",
+        "climax_end_time": 115600,
+        "songid": 184786261,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2021-11-08",
+        "file_size": 4097029,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 10242283,
+        "level": 2,
+        "time_length": 256,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "hash_128": "64B39A6828913E58E1ED1F7F6061A380",
+        "hash_320": "82F0FCF0C8A5527741EF5849261C3A15",
+        "relate_goods": {},
+        "mixsongid": "348254775",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20211108/20211108095904355171.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "singerinfo": [
+          {
+            "name": "陈奕迅",
+            "is_publish": "1",
+            "id": "420"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "179B980BB968713ECF29E9764CBEBC89",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 2888227,
+          "display_rate": 0,
+          "cpy_level": 1,
+          "cpy_map": "2",
+          "hash_multitrack": "EDA3A97CA2CEC05A7D651F9FC551855F",
+          "appid_block": "2906,3124",
+          "qualitymap": {
+            "bits": "800000db41180007f3fc075",
+            "attr0": 2134884469,
+            "attr1": 1747124224
+          },
+          "is_original": 1,
+          "display": 0,
+          "cid": 179077578,
+          "ipmap": {
+            "attr0": 1107300356
+          },
+          "pay_block_tpl": 1,
+          "ogg_320_hash": "2AC42D9CF9A251CED6A0201C0E94B71B",
+          "hash_offset": {
+            "clip_hash": "1435265BF5C7C9A4202C40BE74CF42E7",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960117,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "C5B99EE1C1F77A3C18D3ABB102A40B09"
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20211108/20211108095904355171.jpg",
+          "cpy_grade": 5,
+          "ogg_320_filesize": 10416700
+        },
+        "timelength_320": 256,
+        "album_audio_remark": "",
+        "album_audio_id": "348254775",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 80500,
+        "climax_timelength": 35100,
+        "is_publish": 1,
+        "rec_sub_copy_write": "昨日收藏破千"
+      },
+      {
+        "filesize_flac": 19639578,
+        "official_songname": "",
+        "ori_audio_name": "无人之岛",
+        "hash_192": "",
+        "hash_flac": "77BFAA5D3EA0EEF6D6BD40DB2DF0AAA0",
+        "songname": "无人之岛 (我不会怪你的)",
+        "music_trac": 1,
+        "is_original": 0,
+        "pay_type": 3,
+        "song_type": "5",
+        "album_id": "193733992",
+        "remark": "我不会怪你的",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=1;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "DJ寒 - 无人之岛",
+        "rank_id": "24971",
+        "cid": 0,
+        "scid": 584434594,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "84A81CDEB14F809CD1962F89B4D64F1E",
+        "hash": "5288CCB5E7EF10D9428A58AC96F58E5E",
+        "author_name": "DJ寒",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1706",
+            "parent_id": "4",
+            "tag_name": "动感节拍"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "1945",
+            "parent_id": "578",
+            "tag_name": "出租车"
+          },
+          {
+            "tag_id": "1973",
+            "parent_id": "1496",
+            "tag_name": "华语remix"
+          },
+          {
+            "tag_id": "3065",
+            "parent_id": "0",
+            "tag_name": "DJ男声"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 2470784,
+        "album_name": "无人之岛（我不会怪你的）",
+        "ztc_mark": "t_1185_1_584434594_892293338_8",
+        "climax_end_time": 136000,
+        "songid": 632560543,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2026-06-01",
+        "file_size": 2470784,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 154,
+        "filesize_320": 6176620,
+        "old_cpy": 0,
+        "rec_copy_write_id": "2",
+        "hash_128": "5288CCB5E7EF10D9428A58AC96F58E5E",
+        "hash_320": "558891E5749AC1AAC3249D15D88F5BB0",
+        "relate_goods": {},
+        "mixsongid": "892293338",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260601/20260601194552529381.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "singerinfo": [
+          {
+            "name": "DJ寒",
+            "is_publish": "1",
+            "id": "21899931"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "B698938770D1C9A1B3ADD0CC6B2E7C8E",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "provider": 5,
+          "cpy_attr0": 33554432,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1896405,
+          "display_rate": 0,
+          "ogg_320_filesize": 6762200,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260601/20260601194552529381.jpg",
+          "cpy_grade": 5,
+          "qualitymap": {
+            "bits": "800000db41180003f3bc074",
+            "attr0": 1060880500,
+            "attr1": 1747124224
+          },
+          "hash_multitrack": "71F6DE2772E6DA06A227B86E18A7113B",
+          "ogg_320_hash": "DEC9D293A88386C3604CB762A615FCFA",
+          "cid": 606342340,
+          "display": 0,
+          "songname_suffix": "(我不会怪你的)",
+          "ipmap": {
+            "attr0": 137472540672
+          },
+          "appid_block": "3124",
+          "pay_block_tpl": 1,
+          "language": "国语",
+          "cpy_level": 1
+        },
+        "timelength_320": 154,
+        "album_audio_remark": "",
+        "album_audio_id": "892293338",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 8,
+        "fail_process": 4,
+        "climax_start_time": 81000,
+        "climax_timelength": 55000,
+        "is_publish": 1
+      },
+      {
+        "filesize_flac": 21096604,
+        "official_songname": "",
+        "ori_audio_name": "Fast Cars & Superstars",
+        "hash_192": "",
+        "hash_flac": "C5A39169F0DCB4A1AE8C2E7A51BC30ED",
+        "songname": "Fast Cars & Superstars",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "81561846",
+        "remark": "",
+        "language": "英语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "Cristian Marchi、Reverend Haus - Fast Cars & Superstars",
+        "cid": 0,
+        "scid": 307370065,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "5DB98E7A09BD620829DC8AC66900EDA2",
+        "hash": "9EA177A8A77A9E31B164F6BDA20D4776",
+        "author_name": "Cristian Marchi、Reverend Haus",
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "595",
+            "parent_id": "3",
+            "tag_name": "电子"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "985",
+            "parent_id": "882",
+            "tag_name": "欧美流行"
+          },
+          {
+            "tag_id": "1112",
+            "parent_id": "595",
+            "tag_name": "电子舞曲 EDM"
+          },
+          {
+            "tag_id": "1151",
+            "parent_id": "595",
+            "tag_name": "浩室舞曲"
+          },
+          {
+            "tag_id": "1706",
+            "parent_id": "4",
+            "tag_name": "动感节拍"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1806",
+            "parent_id": "6",
+            "tag_name": "爱情"
+          },
+          {
+            "tag_id": "1818",
+            "parent_id": "1806",
+            "tag_name": "未细分爱情"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "1784",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1886",
+            "parent_id": "1885",
+            "tag_name": "跑步&骑行"
+          },
+          {
+            "tag_id": "1909",
+            "parent_id": "1893",
+            "tag_name": "节奏电子"
+          },
+          {
+            "tag_id": "1941",
+            "parent_id": "1886",
+            "tag_name": "未细分跑步骑行"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3273",
+            "parent_id": "0",
+            "tag_name": "临场环绕"
+          },
+          {
+            "tag_id": "3298",
+            "parent_id": "3297",
+            "tag_name": "男声唱"
+          }
+        ],
+        "rank_label": "“和秦彻适配度好高”",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 2768883,
+        "album_name": "Fast Cars & Superstars",
+        "ztc_mark": "t_1185_1_307370065_581423467_10",
+        "climax_end_time": 127300,
+        "songid": 377146773,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2023-12-22",
+        "file_size": 2768883,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 6921726,
+        "level": 2,
+        "time_length": 172,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "rec_label_prefix": "M_PHARSE_",
+        "hash_128": "9EA177A8A77A9E31B164F6BDA20D4776",
+        "hash_320": "9A3448846BAF99C8300F1C30543B54CD",
+        "relate_goods": {},
+        "mixsongid": "581423467",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260805/20260805180304695699.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 7,
+        "singerinfo": [
+          {
+            "name": "Cristian Marchi",
+            "is_publish": "1",
+            "id": "13280553"
+          },
+          {
+            "name": "Reverend Haus",
+            "is_publish": "1",
+            "id": "8108129"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "cpy_grade": 6,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "英语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 8064015,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260805/20260805180304695699.jpg",
+          "qualitymap": {
+            "bits": "800000db41180007f3bc074",
+            "attr0": 2134622324,
+            "attr1": 1747124224
+          },
+          "is_original": 1,
+          "ogg_128_hash": "47DE99C263E3F08D17BB77A1972B3421",
+          "cid": 339817444,
+          "ogg_128_filesize": 2304078,
+          "ogg_320_hash": "C978579BCF11BE7B1E3C246111EE5D4E",
+          "ipmap": {
+            "attr0": 8606716928
+          },
+          "hash_offset": {
+            "clip_hash": "B4A472F0A98A5CF8326E6D0043E0182B",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960245,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "29F819D945A107303EEF14647905C8EA"
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "6B1895E2FC3A013C4C479F3EA55D03D2",
+          "cpy_level": 1
+        },
+        "timelength_320": 172,
+        "album_audio_remark": "",
+        "album_audio_id": "581423467",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 96400,
+        "climax_timelength": 30900,
+        "is_publish": 1
+      },
+      {
+        "filesize_flac": 31856493,
+        "official_songname": "",
+        "ori_audio_name": "街角的晚风",
+        "hash_192": "",
+        "hash_flac": "0CE78D40AF04E9FFD28EC2D0BD6117D6",
+        "songname": "街角的晚风",
+        "music_trac": 1,
+        "is_original": 2,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "169830039",
+        "remark": "",
+        "language": "粤语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "陈小春 - 街角的晚风",
+        "cid": 0,
+        "scid": 515103833,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "A91E820FB74C0EC7A7CE8462051D67C6",
+        "hash": "18B89D66950B7856EABB131BB6273F6E",
+        "author_name": "陈小春",
+        "tags": [
+          {
+            "tag_id": "19",
+            "parent_id": "7",
+            "tag_name": "粤语"
+          },
+          {
+            "tag_id": "984",
+            "parent_id": "1541",
+            "tag_name": "粤语流行"
+          },
+          {
+            "tag_id": "1706",
+            "parent_id": "4",
+            "tag_name": "动感节拍"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "rank_label": "“春哥的声音质感无敌”",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3841246,
+        "album_name": "街角的晚风",
+        "ztc_mark": "t_1185_1_515103833_821387254_10",
+        "climax_end_time": 45400,
+        "songid": 575320714,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2025-12-07",
+        "file_size": 3841246,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 9602814,
+        "level": 2,
+        "time_length": 240,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "rec_label_prefix": "M_PHARSE_",
+        "hash_128": "18B89D66950B7856EABB131BB6273F6E",
+        "hash_320": "DC4FB75CE17D1A18FE6F0BDF49ACCBE4",
+        "relate_goods": {},
+        "mixsongid": "821387254",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20251205/20251205134231782648.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 7,
+        "singerinfo": [
+          {
+            "name": "陈小春",
+            "is_publish": "1",
+            "id": "423"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "粤语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 10326958,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20251205/20251205134231782648.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf14e474",
+            "attr0": 1058333812,
+            "attr1": 1747189245
+          },
+          "is_original": 2,
+          "ogg_128_hash": "020C8ADF622EF0CDA1964E4B6231DFAA",
+          "cid": 552420047,
+          "ogg_128_filesize": 2841599,
+          "ogg_320_hash": "2FB64A0B28E46516E38FA79C0ADFE696",
+          "ipmap": {
+            "attr0": 138512961536
+          },
+          "hash_offset": {
+            "clip_hash": "EF2ABD04FFDFDBF3F1B2D36AE959542C",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960125,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "F67E6A604211AF26904FDD3940E18293"
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "9762571A403D9176A93FA794A6E016BC",
+          "cpy_level": 1
+        },
+        "timelength_320": 240,
+        "album_audio_remark": "",
+        "album_audio_id": "821387254",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top100",
+            "ip_id": "97192",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 24000,
+        "climax_timelength": 21400,
+        "is_publish": 1
+      },
+      {
+        "filesize_flac": 25224272,
+        "official_songname": "",
+        "ori_audio_name": "山风山风等等我",
+        "hash_192": "",
+        "hash_flac": "28A0B296A66AA7F9EB9CF176A942D537",
+        "songname": "山风山风等等我",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "200106963",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=1;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "万海东 - 山风山风等等我",
+        "rank_id": "8888",
+        "cid": 0,
+        "scid": 627136989,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "9CCA296C91E7CB4AD3B564AEC1B4F6DA",
+        "hash": "CE256D96F1F025D60468D8F0BC9EE64B",
+        "author_name": "万海东",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1810",
+            "parent_id": "6",
+            "tag_name": "人生与理想"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "rank_label": "TOP500榜第4名",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 3350988,
+        "album_name": "山风山风等等我",
+        "ztc_mark": "t_1185_1_627136989_935764415_10",
+        "climax_end_time": 104100,
+        "songid": 678005082,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2026-07-20",
+        "file_size": 3350988,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 209,
+        "filesize_320": 8377157,
+        "old_cpy": 0,
+        "rec_copy_write_id": "2",
+        "hash_128": "CE256D96F1F025D60468D8F0BC9EE64B",
+        "hash_320": "3A8A1974E80B557A856E3C1755EDB938",
+        "relate_goods": {},
+        "mixsongid": "935764415",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260727/20260727114241535084.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 2,
+        "singerinfo": [
+          {
+            "name": "万海东",
+            "is_publish": "1",
+            "id": "171318"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58727552,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 8555870,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260727/20260727114241535084.jpg",
+          "cpy_map": "2",
+          "provider": 5,
+          "hash_offset": {
+            "clip_hash": "B676E3942DC897A74970B91B7C94395C",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960133,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "7B63042E024FD35645E95D7384A2FD6E"
+          },
+          "qualitymap": {
+            "bits": "8fffc0db411fefebf10e474",
+            "attr0": 1058071668,
+            "attr1": 1747189245
+          },
+          "is_original": 1,
+          "ogg_320_hash": "F1F5B2FA70CC21A44A0DBE4E601E5E76",
+          "cid": 645413127,
+          "ogg_128_hash": "A7B0EF375B3DB1A027C879AD25564B36",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "C64B739FD0DE222CDC7E87C7758AAF8A",
+          "ogg_128_filesize": 2447033,
+          "cpy_level": 1
+        },
+        "timelength_320": 209,
+        "album_audio_remark": "",
+        "album_audio_id": "935764415",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日超100w播放",
+            "ip_id": "97191",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top100",
+            "ip_id": "97192",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 61700,
+        "climax_timelength": 42400,
+        "is_publish": 1
+      },
+      {
+        "filesize_flac": 20703584,
+        "official_songname": "",
+        "ori_audio_name": "我是真的爱上你",
+        "hash_192": "",
+        "hash_flac": "E4A6B7EE0478A038ACB8B47402225720",
+        "songname": "我是真的爱上你 (偷偷的爱上你)",
+        "music_trac": 1,
+        "is_original": 2,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "166605247",
+        "remark": "偷偷的爱上你",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "何欢浪 - 我是真的爱上你",
+        "cid": 0,
+        "scid": 506228701,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "55D3FD725E12A136BAD4E7B604D7FADC",
+        "hash": "A19A9BC1EEF8F2CC34A18C1EEFA20E05",
+        "author_name": "何欢浪",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1815",
+            "parent_id": "1806",
+            "tag_name": "暗恋"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3099413,
+        "album_name": "我是真的爱上你 (偷偷的爱上你)",
+        "ztc_mark": "t_1185_1_506228701_808147061_10",
+        "climax_end_time": 114020,
+        "songid": 568166634,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2025-11-04",
+        "file_size": 3099413,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 193,
+        "filesize_320": 7748161,
+        "old_cpy": 0,
+        "rec_copy_write_id": "2",
+        "hash_128": "A19A9BC1EEF8F2CC34A18C1EEFA20E05",
+        "hash_320": "0CCB408638EB002452B68413D46BD2BE",
+        "relate_goods": {},
+        "mixsongid": "808147061",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20251104/20251104165111167306.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "singerinfo": [
+          {
+            "name": "何欢浪",
+            "is_publish": "1",
+            "id": "12925282"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "provider": 5,
+          "cpy_attr0": 41958528,
+          "ogg_320_filesize": 8159722,
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 2227478,
+          "display_rate": 0,
+          "cpy_grade": 5,
+          "language": "国语",
+          "cpy_map": "2",
+          "hash_offset": {
+            "clip_hash": "FCF439BE721BAFD34D0C2847E0A27285",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960169,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "0DC78208DAE417F501ADEBD9522AB89B"
+          },
+          "ogg_320_hash": "D003B6D8E99986175B5D4AB3B865C0A0",
+          "qualitymap": {
+            "bits": "1b411fefebf14e474",
+            "attr0": 1058333812,
+            "attr1": 1747189245
+          },
+          "is_original": 2,
+          "display": 0,
+          "cid": 544794207,
+          "songname_suffix": "(偷偷的爱上你)",
+          "hash_multitrack": "6B227E3FCD83C7482A3C33D5368BD8B2",
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "appid_block": "3124",
+          "ogg_128_hash": "88172885C52EB9E522A33846DF4E0084",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20251104/20251104165111167306.jpg",
+          "cpy_level": 1
+        },
+        "timelength_320": 193,
+        "album_audio_remark": "",
+        "album_audio_id": "808147061",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日千人播放",
+            "ip_id": "96592",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "上周收藏top10W",
+            "ip_id": "97209",
+            "pid": "96650"
+          },
+          {
+            "name": "昨日破千播放",
+            "ip_id": "97392",
+            "pid": "96647"
+          },
+          {
+            "name": "万人收藏",
+            "ip_id": "97544",
+            "pid": "96650"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 80720,
+        "climax_timelength": 33300,
+        "is_publish": 1,
+        "rec_sub_copy_write": "本周万人收听"
+      },
+      {
+        "filesize_flac": 36006060,
+        "official_songname": "",
+        "ori_audio_name": "你什么都不懂",
+        "hash_192": "",
+        "hash_flac": "9E32E2ACC1F17B3A3CB186E93238510D",
+        "songname": "你什么都不懂",
+        "music_trac": 1,
+        "is_original": 0,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "153946192",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "余火火 - 你什么都不懂",
+        "cid": 0,
+        "scid": 473685867,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "227FF910D6046700D8EA6C08BB6C939F",
+        "hash": "E2FBF933BD60AB11F350659EEF62A1BF",
+        "author_name": "余火火",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 5083843,
+        "album_name": "你什么都不懂",
+        "ztc_mark": "t_1185_1_473685867_771633586_10",
+        "climax_end_time": 98000,
+        "songid": 538980499,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2025-07-11",
+        "file_size": 5083843,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 317,
+        "old_cpy": 0,
+        "filesize_320": 12709300,
+        "rec_copy_write_id": "2",
+        "hash_320": "DC629D8634E98E61A42F26E0A104C6B2",
+        "relate_goods": {},
+        "mixsongid": "771633586",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250711/20250711185611523326.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "E2FBF933BD60AB11F350659EEF62A1BF",
+        "singerinfo": [
+          {
+            "name": "余火火",
+            "is_publish": "1",
+            "id": "9050666"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250711/20250711185611523326.jpg",
+          "language": "国语",
+          "cpy_attr0": 41958528,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 12664318,
+          "qualitymap": {
+            "bits": "8fffc0db411fefeff10e474",
+            "attr0": 2131813492,
+            "attr1": 1747189245
+          },
+          "ogg_128_hash": "7602F047A77DF4A844EE9CA131D94A5E",
+          "ogg_320_hash": "8EFFA7D4ECCDA47078CCA4C0C236FED8",
+          "cid": 516273189,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "ogg_128_filesize": 3737108,
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "hash_offset": {
+            "clip_hash": "EDD95F99927843706C0D14851C96404E",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960129,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "3C2808E66E1EE68BDE1B1897E9C15545"
+          },
+          "hash_multitrack": "D1A4D84F93D8A3CAC46BD4553024DE18",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "timelength_320": 317,
+        "album_audio_remark": "",
+        "album_audio_id": "771633586",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "上周收藏top10W",
+            "ip_id": "97209",
+            "pid": "96650"
+          },
+          {
+            "name": "上周搜播top10W",
+            "ip_id": "97216",
+            "pid": "96651"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 78000,
+        "climax_timelength": 20000,
+        "is_publish": 1,
+        "rec_sub_copy_write": "本周超千人收藏"
+      },
+      {
+        "filesize_flac": 23003236,
+        "official_songname": "",
+        "ori_audio_name": "你这坏坏的扑街仔",
+        "hash_192": "",
+        "hash_flac": "A6D613B7B908B3BAB7065C5E50F62A2E",
+        "songname": "你这坏坏的扑街仔 (偏偏爱上你这笨脑袋)(对唱版)",
+        "music_trac": 1,
+        "is_original": 0,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "203511794",
+        "remark": "偏偏爱上你这笨脑袋",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "马耀火、金禾安 - 你这坏坏的扑街仔",
+        "cid": 0,
+        "scid": 639235989,
+        "suffix_audio_name": "对唱版",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "D8D823043B6C86F62005FCE0A853B61E",
+        "hash": "4C04BB8F9C9F93D4E0325BF625F11BEC",
+        "author_name": "马耀火、金禾安",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "1886",
+            "parent_id": "1885",
+            "tag_name": "跑步&骑行"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3300",
+            "parent_id": "3297",
+            "tag_name": "男女声唱"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 2925528,
+        "album_name": "你这坏坏的扑街仔（对唱版）",
+        "ztc_mark": "t_1185_1_639235989_948430973_8",
+        "climax_end_time": 87100,
+        "songid": 686706342,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2026-08-14",
+        "file_size": 2925528,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 182,
+        "old_cpy": 0,
+        "filesize_320": 7313473,
+        "rec_copy_write_id": "2",
+        "hash_320": "1C14B2531A4848C775C58E708C4D5C1D",
+        "relate_goods": {},
+        "mixsongid": "948430973",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260814/20260814114241279569.jpg",
+        "mv_type": 0,
+        "publish_time": 1,
+        "filesize_ape": 0,
+        "hash_128": "4C04BB8F9C9F93D4E0325BF625F11BEC",
+        "singerinfo": [
+          {
+            "name": "马耀火",
+            "is_publish": "1",
+            "id": "22316928"
+          },
+          {
+            "name": "金禾安",
+            "is_publish": "1",
+            "id": "22178279"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "35637CC727909F6DDBC9A8A1E93E9626",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "provider": 5,
+          "cpy_attr0": 41943040,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2067309,
+          "display_rate": 0,
+          "ogg_320_filesize": 6480851,
+          "cpy_map": "2",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260814/20260814114241279569.jpg",
+          "cpy_grade": 5,
+          "qualitymap": {
+            "bits": "801fc0db410007eb73be434",
+            "attr0": 926671924,
+            "attr1": 1746927869
+          },
+          "hash_multitrack": "8A02B756764C6A0780236F459E6FBF29",
+          "ogg_320_hash": "46EB5FC2C867BA92D7B170B087F7B8E6",
+          "cid": 653500166,
+          "display": 0,
+          "songname_suffix": "(偏偏爱上你这笨脑袋)(对唱版)",
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "appid_block": "3124",
+          "pay_block_tpl": 1,
+          "language": "国语",
+          "cpy_level": 1
+        },
+        "timelength_320": 182,
+        "album_audio_remark": "",
+        "album_audio_id": "948430973",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 8,
+        "fail_process": 4,
+        "climax_start_time": 47600,
+        "climax_timelength": 39500,
+        "is_publish": 1
+      },
+      {
+        "filesize_flac": 22659484,
+        "official_songname": "",
+        "ori_audio_name": "恋人心",
+        "hash_192": "",
+        "hash_flac": "D1A9824D6053C640C351CC745E130B90",
+        "songname": "恋人心",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "577707",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "魏新雨 - 恋人心",
+        "cid": 0,
+        "scid": 18679921,
+        "suffix_audio_name": "",
+        "mv_hash": "1A950F3C1F34594282FB90477EDF260B",
+        "hash": "3FFF0AFC4F9A1DA29AF945B38C888B48",
+        "author_name": "魏新雨",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "124",
+            "parent_id": "0",
+            "tag_name": "2014"
+          },
+          {
+            "tag_id": "578",
+            "parent_id": "5",
+            "tag_name": "车载"
+          },
+          {
+            "tag_id": "593",
+            "parent_id": "1621",
+            "tag_name": "中国风"
+          },
+          {
+            "tag_id": "594",
+            "parent_id": "1621",
+            "tag_name": "古风"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "983",
+            "parent_id": "1541",
+            "tag_name": "国语流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1621",
+            "parent_id": "3",
+            "tag_name": "国风"
+          },
+          {
+            "tag_id": "1622",
+            "parent_id": "1621",
+            "tag_name": "未细分国风音乐"
+          },
+          {
+            "tag_id": "1641",
+            "parent_id": "988",
+            "tag_name": "网络-中国风"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1719",
+            "parent_id": "988",
+            "tag_name": "质量较好"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1729",
+            "parent_id": "4",
+            "tag_name": "美好深情"
+          },
+          {
+            "tag_id": "1750",
+            "parent_id": "1743",
+            "tag_name": "老年版国风"
+          },
+          {
+            "tag_id": "1751",
+            "parent_id": "1743",
+            "tag_name": "老年版抖音"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1806",
+            "parent_id": "6",
+            "tag_name": "爱情"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "1818",
+            "parent_id": "1806",
+            "tag_name": "未细分爱情"
+          },
+          {
+            "tag_id": "1857",
+            "parent_id": "6",
+            "tag_name": "特别主题"
+          },
+          {
+            "tag_id": "1860",
+            "parent_id": "1857",
+            "tag_name": "K歌"
+          },
+          {
+            "tag_id": "1861",
+            "parent_id": "1857",
+            "tag_name": "成名曲"
+          },
+          {
+            "tag_id": "3015",
+            "parent_id": "2960",
+            "tag_name": "语言（DJ垂类）"
+          },
+          {
+            "tag_id": "3021",
+            "parent_id": "2960",
+            "tag_name": "热门（DJ垂类）"
+          },
+          {
+            "tag_id": "3022",
+            "parent_id": "3015",
+            "tag_name": "国语（DJ垂类）"
+          },
+          {
+            "tag_id": "3049",
+            "parent_id": "3021",
+            "tag_name": "流行金曲（DJ垂类）"
+          },
+          {
+            "tag_id": "3186",
+            "parent_id": "1919",
+            "tag_name": "抖音版（中央同步）"
+          },
+          {
+            "tag_id": "3194",
+            "parent_id": "1919",
+            "tag_name": "抖音版（Q音同步）"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 3299563,
+        "album_name": "恋人心",
+        "ztc_mark": "t_1185_1_18679921_28393313_8",
+        "climax_end_time": 75500,
+        "songid": 1284843,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2014-06-16",
+        "file_size": 3299563,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 206,
+        "old_cpy": 0,
+        "hash_320": "EC011FD42CA68AEC68183A89516D02D8",
+        "relate_goods": {},
+        "mixsongid": "28393313",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250207/20250207161218945836.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "3FFF0AFC4F9A1DA29AF945B38C888B48",
+        "singerinfo": [
+          {
+            "name": "魏新雨",
+            "is_publish": "1",
+            "id": "85963"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58728448,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 7847329,
+          "qualitymap": {
+            "bits": "800000db4118f8fff3fc075",
+            "attr0": 2134884469,
+            "attr1": 1747132191
+          },
+          "is_original": 1,
+          "ogg_128_hash": "5DA04D1003EDE26CE32632FC16941323",
+          "cid": 21539148,
+          "ogg_320_hash": "5ADFAC688F1803F0E6EB4319DEB820BE",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250207/20250207161218945836.jpg",
+          "ipmap": {
+            "attr0": 2217377534464
+          },
+          "ogg_128_filesize": 2393179,
+          "cpy_grade": 5,
+          "hash_multitrack": "12764FE4EB89789686E5811A85C19916",
+          "cpy_level": 1
+        },
+        "timelength_320": 206,
+        "album_audio_remark": "",
+        "album_audio_id": "28393313",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 8,
+        "fail_process": 4,
+        "climax_start_time": 51700,
+        "climax_timelength": 23800,
+        "is_publish": 1,
+        "filesize_320": 8362036
+      },
+      {
+        "filesize_flac": 33467284,
+        "official_songname": "",
+        "ori_audio_name": "我在红尘中遇见你",
+        "hash_192": "",
+        "hash_flac": "70AB4D5E74A463C73F7CD94D08621F8E",
+        "songname": "我在红尘中遇见你",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "2562053",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "冷漠、张冬玲 - 我在红尘中遇见你",
+        "cid": 0,
+        "scid": 2688011,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "E0EAB0D5AE9FE387EA555FD42D05FD9B",
+        "hash": "8EDB6F1CF056169B3FED83AB0612284F",
+        "author_name": "冷漠、张冬玲",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "124",
+            "parent_id": "0",
+            "tag_name": "2014"
+          },
+          {
+            "tag_id": "578",
+            "parent_id": "5",
+            "tag_name": "车载"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1729",
+            "parent_id": "4",
+            "tag_name": "美好深情"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1774",
+            "parent_id": "5",
+            "tag_name": "场所"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1806",
+            "parent_id": "6",
+            "tag_name": "爱情"
+          },
+          {
+            "tag_id": "1818",
+            "parent_id": "1806",
+            "tag_name": "未细分爱情"
+          },
+          {
+            "tag_id": "1857",
+            "parent_id": "6",
+            "tag_name": "特别主题"
+          },
+          {
+            "tag_id": "1860",
+            "parent_id": "1857",
+            "tag_name": "K歌"
+          },
+          {
+            "tag_id": "1877",
+            "parent_id": "1774",
+            "tag_name": "KTV"
+          },
+          {
+            "tag_id": "1884",
+            "parent_id": "0",
+            "tag_name": "热门情歌对唱"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3300",
+            "parent_id": "3297",
+            "tag_name": "男女声唱"
+          }
+        ],
+        "rank_label": "“张冬玲桑音好纯”",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 4428497,
+        "album_name": "我在红尘中遇见你",
+        "ztc_mark": "t_1185_1_2688011_63955796_10",
+        "climax_end_time": 114700,
+        "songid": 1280337,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2014-07-10",
+        "file_size": 4428497,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 11070914,
+        "level": 2,
+        "time_length": 276,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "rec_label_prefix": "M_PHARSE_",
+        "hash_128": "8EDB6F1CF056169B3FED83AB0612284F",
+        "hash_320": "193F0F32CC1F4219C38204A92CA19A34",
+        "relate_goods": {},
+        "mixsongid": "63955796",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210114/20210114023429533554.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 7,
+        "singerinfo": [
+          {
+            "name": "冷漠",
+            "is_publish": "1",
+            "id": "1900"
+          },
+          {
+            "name": "张冬玲",
+            "is_publish": "1",
+            "id": "7083"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "233863281A3280E33FA372AA3DE09F55",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 11372984,
+          "cpy_map": "2",
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210114/20210114023429533554.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411ffffff3fe475",
+            "attr0": 2134893685,
+            "attr1": 1747189759
+          },
+          "is_original": 1,
+          "hash_offset": {
+            "clip_hash": "4E3124807B6A41B9808215470D1161C8",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960143,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "06BE0B792E49C5276FABACB7981F4C67"
+          },
+          "cid": 22781884,
+          "ogg_320_hash": "F88B7EDA685B764156629026848E40EB",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 2491114590208
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "D6A85B8F4ECC599542A44553B94BE6C7",
+          "ogg_128_filesize": 3201499,
+          "cpy_level": 1
+        },
+        "timelength_320": 276,
+        "album_audio_remark": "",
+        "album_audio_id": "63955796",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "评论1w+",
+            "ip_id": "97197",
+            "pid": "96649"
+          },
+          {
+            "name": "上周评论top10W",
+            "ip_id": "97202",
+            "pid": "96649"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 69500,
+        "climax_timelength": 45200,
+        "is_publish": 1,
+        "rec_sub_copy_write": "本周超千人收藏"
+      },
+      {
+        "filesize_flac": 33778170,
+        "official_songname": "",
+        "ori_audio_name": "我们这样的男人",
+        "hash_192": "",
+        "hash_flac": "7BA9EA621899214B604E7535AC7485BB",
+        "songname": "我们这样的男人",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "56646432",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "云南烟嗓子 - 我们这样的男人",
+        "cid": 0,
+        "scid": 158750593,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "422B17B7A043F56E354656718EC7FE48",
+        "hash": "30982F84D46EF38D8DFEF5791355FF5B",
+        "author_name": "云南烟嗓子",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1810",
+            "parent_id": "6",
+            "tag_name": "人生与理想"
+          },
+          {
+            "tag_id": "3190",
+            "parent_id": "0",
+            "tag_name": "2022"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 4280116,
+        "album_name": "我们这样的男人",
+        "ztc_mark": "t_1185_1_158750593_402867256_10",
+        "climax_end_time": 137100,
+        "songid": 228396205,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2022-04-13",
+        "file_size": 4280116,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 267,
+        "old_cpy": 0,
+        "filesize_320": 10699969,
+        "rec_copy_write_id": "2",
+        "hash_320": "25BE2131F2E949ED81364DC24D85F94C",
+        "relate_goods": {},
+        "mixsongid": "402867256",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250101/20250101170952284169.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "30982F84D46EF38D8DFEF5791355FF5B",
+        "singerinfo": [
+          {
+            "name": "云南烟嗓子",
+            "is_publish": "1",
+            "id": "5592714"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "ECB386F4B4D0608496F75B895745FE5C",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 50347136,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 12048380,
+          "cpy_map": "2",
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250101/20250101170952284169.jpg",
+          "qualitymap": {
+            "bits": "1b41000007710c034",
+            "attr0": 1997586484,
+            "attr1": 1746927616
+          },
+          "is_original": 1,
+          "hash_offset": {
+            "clip_hash": "DAAC0C178E88688100ADF5B22F18A8DB",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960137,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "80F2AC787CF65CC4F9D4B2F33E2F453B"
+          },
+          "cid": 206769237,
+          "ogg_320_hash": "02B337FF6026F1564B57850C90E2E19E",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "318D7315A973F97DC3C07A17CCA00BE5",
+          "ogg_128_filesize": 3317899,
+          "cpy_level": 1
+        },
+        "timelength_320": 267,
+        "album_audio_remark": "",
+        "album_audio_id": "402867256",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日千人播放",
+            "ip_id": "96592",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日破千播放",
+            "ip_id": "97392",
+            "pid": "96647"
+          },
+          {
+            "name": "偏年龄大受众",
+            "ip_id": "99078",
+            "pid": "108044"
+          },
+          {
+            "name": "80后爱听",
+            "ip_id": "99654",
+            "pid": "108042"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 81800,
+        "climax_timelength": 55300,
+        "is_publish": 1,
+        "rec_sub_copy_write": "昨日收听破千"
+      },
+      {
+        "filesize_flac": 25319994,
+        "official_songname": "",
+        "ori_audio_name": "Jar Of Love",
+        "hash_192": "",
+        "hash_flac": "30100E0ED08A4016EBBDF2D6C27405EB",
+        "songname": "Jar Of Love",
+        "music_trac": 1,
+        "is_original": 2,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "95711667",
+        "remark": "",
+        "language": "英语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "云汐 - Jar Of Love",
+        "cid": 0,
+        "scid": 358685547,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "FB94A9F06DCBF21E62A3443731C8070E",
+        "hash": "F2A91961DC9F57A9856F8055CE539AA7",
+        "author_name": "云汐",
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1698",
+            "parent_id": "4",
+            "tag_name": "轻快休闲"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1806",
+            "parent_id": "6",
+            "tag_name": "爱情"
+          },
+          {
+            "tag_id": "1818",
+            "parent_id": "1806",
+            "tag_name": "未细分爱情"
+          },
+          {
+            "tag_id": "1886",
+            "parent_id": "1885",
+            "tag_name": "跑步&骑行"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3060103,
+        "album_name": "Jar Of Love",
+        "ztc_mark": "t_1185_1_358685547_639214161_10",
+        "climax_end_time": 52500,
+        "songid": 425199632,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2024-06-07",
+        "file_size": 3060103,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 191,
+        "old_cpy": 0,
+        "filesize_320": 7649922,
+        "rec_copy_write_id": "2",
+        "hash_320": "E03824059690EA5F7E3ABF003C316CC1",
+        "relate_goods": {},
+        "mixsongid": "639214161",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250328/20250328182952486043.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "F2A91961DC9F57A9856F8055CE539AA7",
+        "singerinfo": [
+          {
+            "name": "云汐",
+            "is_publish": "1",
+            "id": "6515172"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "AEF3CF2D67CC58A9014F6291BE522F1B",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "英语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 8291903,
+          "cpy_map": "2",
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250328/20250328182952486043.jpg",
+          "qualitymap": {
+            "bits": "800000db41180007f3fe474",
+            "attr0": 2134893684,
+            "attr1": 1747124224
+          },
+          "is_original": 2,
+          "hash_offset": {
+            "clip_hash": "24BAF4CFE57E977F25502D20534A788F",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960147,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "D8DBDFC07FD7177B9CE6AD04C439A9B1"
+          },
+          "cid": 396858406,
+          "ogg_320_hash": "292B400F6DFE86920239DEE0DCF05112",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 17196650496
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "2DD67B160967AFFB9F97C69ED107C5E7",
+          "ogg_128_filesize": 2184663,
+          "cpy_level": 1
+        },
+        "timelength_320": 191,
+        "album_audio_remark": "",
+        "album_audio_id": "639214161",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日千人播放",
+            "ip_id": "96592",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "收藏10w+",
+            "ip_id": "97205",
+            "pid": "96650"
+          },
+          {
+            "name": "上周收藏top10W",
+            "ip_id": "97209",
+            "pid": "96650"
+          },
+          {
+            "name": "上周搜播top10W",
+            "ip_id": "97216",
+            "pid": "96651"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 30700,
+        "climax_timelength": 21800,
+        "is_publish": 1,
+        "rec_sub_copy_write": "昨日千人收听"
+      },
+      {
+        "filesize_flac": 21319594,
+        "official_songname": "",
+        "ori_audio_name": "不如",
+        "hash_192": "",
+        "hash_flac": "9F5D073D1E5D4D4B4CA9504FDF982D1E",
+        "songname": "不如 (我们拥抱后分手)",
+        "music_trac": 1,
+        "is_original": 2,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "154193609",
+        "remark": "我们拥抱后分手",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "范茹 - 不如",
+        "cid": 0,
+        "scid": 475325304,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "F39E1FD4791D33FB44605ADB3FEF96C1",
+        "hash": "CD14C054F165C7359EEE95A1B8B4E3D6",
+        "author_name": "范茹",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 2888743,
+        "album_name": "不如 (我们拥抱后分手)",
+        "ztc_mark": "t_1185_1_475325304_772354067_10",
+        "climax_end_time": 63000,
+        "songid": 216876967,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2025-07-14",
+        "file_size": 2888743,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 180,
+        "old_cpy": 0,
+        "filesize_320": 7221175,
+        "rec_copy_write_id": "2",
+        "hash_320": "E4968C27E2F96E8945C0D3B4FF44EB19",
+        "relate_goods": {},
+        "mixsongid": "772354067",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260317/20260317031410901280.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "CD14C054F165C7359EEE95A1B8B4E3D6",
+        "singerinfo": [
+          {
+            "name": "范茹",
+            "is_publish": "1",
+            "id": "314299"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "BFC7147E9A9ED18A74E425B65AA26F2F",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 7106215,
+          "cpy_map": "2",
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260317/20260317031410901280.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411fefeff10e474",
+            "attr0": 2131813492,
+            "attr1": 1747189245
+          },
+          "is_original": 2,
+          "pay_block_tpl": 1,
+          "cid": 516931252,
+          "ogg_320_hash": "EFFB10FAEE6CDF309CC30A56C6AE44CA",
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "songname_suffix": "(我们拥抱后分手)",
+          "hash_offset": {
+            "clip_hash": "221565116C8B7F9E169EC366562CB958",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960151,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "40DA560926EAF9015C35823AE6957FDC"
+          },
+          "ogg_128_filesize": 2119835,
+          "hash_multitrack": "A0FF28031D8E7F251698A5136E574930",
+          "cpy_level": 1
+        },
+        "timelength_320": 180,
+        "album_audio_remark": "",
+        "album_audio_id": "772354067",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日千人播放",
+            "ip_id": "96592",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "上周收藏top10W",
+            "ip_id": "97209",
+            "pid": "96650"
+          },
+          {
+            "name": "昨日破千播放",
+            "ip_id": "97392",
+            "pid": "96647"
+          },
+          {
+            "name": "万人收藏",
+            "ip_id": "97544",
+            "pid": "96650"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 37600,
+        "climax_timelength": 25400,
+        "is_publish": 1,
+        "rec_sub_copy_write": "昨日千人收听"
+      },
+      {
+        "filesize_flac": 37202719,
+        "official_songname": "",
+        "ori_audio_name": "One and Only Story",
+        "hash_192": "",
+        "hash_flac": "573E6223727887EA2F6922B84DF5B870",
+        "songname": "One and Only Story",
+        "music_trac": 1,
+        "is_original": 0,
+        "pay_type": 0,
+        "song_type": "1",
+        "album_id": "4076875",
+        "remark": "",
+        "language": "日语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "petit milady - One and Only Story",
+        "cid": 0,
+        "scid": 28914327,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "",
+        "hash": "4D35C7B3D2C6FBBF542215216218D500",
+        "author_name": "petit milady",
+        "tags": [
+          {
+            "tag_id": "21",
+            "parent_id": "7",
+            "tag_name": "日语"
+          },
+          {
+            "tag_id": "77",
+            "parent_id": "3",
+            "tag_name": "ACG"
+          },
+          {
+            "tag_id": "847",
+            "parent_id": "0",
+            "tag_name": "2017"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "1277",
+            "parent_id": "77",
+            "tag_name": "动漫"
+          },
+          {
+            "tag_id": "1886",
+            "parent_id": "1885",
+            "tag_name": "跑步&骑行"
+          },
+          {
+            "tag_id": "3056",
+            "parent_id": "0",
+            "tag_name": "潮玩"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3299",
+            "parent_id": "3297",
+            "tag_name": "女声唱"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 4346201,
+        "album_name": "petit miretta",
+        "ztc_mark": "t_1185_1_28914327_88968050_0",
+        "climax_end_time": 175320,
+        "songid": 9576984,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2017-09-20",
+        "file_size": 4346201,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 271,
+        "old_cpy": 1,
+        "filesize_320": 10865111,
+        "rec_copy_write_id": "2",
+        "hash_320": "42AED939DE212DCF7BCFED0B6BB8915C",
+        "relate_goods": {},
+        "mixsongid": "88968050",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20170923/20170923020117436883.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "4D35C7B3D2C6FBBF542215216218D500",
+        "singerinfo": [
+          {
+            "name": "petit milady",
+            "is_publish": "1",
+            "id": "151198"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "cpy_map": "2",
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "cid": -1,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20170923/20170923020117436883.jpg",
+          "language": "日语",
+          "ipmap": {
+            "attr0": 1052676
+          },
+          "cpy_attr0": 33554432,
+          "hash_multitrack": "1A54D288C30E29015743E83134427780",
+          "qualitymap": {
+            "bits": "1b41080003f14c074",
+            "attr0": 1058324596,
+            "attr1": 1746993152
+          },
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "timelength_320": 271,
+        "album_audio_remark": "",
+        "album_audio_id": "88968050",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日千人播放",
+            "ip_id": "96592",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日万人播放",
+            "ip_id": "97393",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播歌曲汇总",
+            "ip_id": "99069",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 0,
+        "fail_process": 0,
+        "climax_start_time": 135620,
+        "climax_timelength": 39700,
+        "is_publish": 1,
+        "rec_sub_copy_write": "昨日超万人播放"
+      },
+      {
+        "filesize_flac": 27041815,
+        "official_songname": "",
+        "ori_audio_name": "你的答案",
+        "hash_192": "",
+        "hash_flac": "DC5331120D2ECCD7A1A3216D50FCB441",
+        "songname": "你的答案",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "32440418",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;b=7;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "阿冗 - 你的答案",
+        "cid": 0,
+        "scid": 62298943,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "1005608F00F55354CCBE5A4DB9833C28",
+        "hash": "BB78D58530D2F7979E65A064C9E6BB90",
+        "author_name": "阿冗",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "969",
+            "parent_id": "0",
+            "tag_name": "2019"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1707",
+            "parent_id": "4",
+            "tag_name": "鼓舞励志"
+          },
+          {
+            "tag_id": "1719",
+            "parent_id": "988",
+            "tag_name": "质量较好"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1810",
+            "parent_id": "6",
+            "tag_name": "人生与理想"
+          },
+          {
+            "tag_id": "1857",
+            "parent_id": "6",
+            "tag_name": "特别主题"
+          },
+          {
+            "tag_id": "1860",
+            "parent_id": "1857",
+            "tag_name": "K歌"
+          },
+          {
+            "tag_id": "3186",
+            "parent_id": "1919",
+            "tag_name": "抖音版（中央同步）"
+          },
+          {
+            "tag_id": "3194",
+            "parent_id": "1919",
+            "tag_name": "抖音版（Q音同步）"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "rank_label": "“旋律振奋人心”",
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 3519412,
+        "album_name": "你的答案",
+        "ztc_mark": "t_1185_1_62298943_228489373_10",
+        "climax_end_time": 92200,
+        "songid": 95308246,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2019-10-31",
+        "file_size": 3519412,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "filesize_320": 8798237,
+        "level": 2,
+        "time_length": 219,
+        "rec_copy_write_id": "2",
+        "old_cpy": 0,
+        "rec_label_prefix": "M_PHARSE_",
+        "hash_128": "BB78D58530D2F7979E65A064C9E6BB90",
+        "hash_320": "32E983BB0454FBE666E67BC52A151E48",
+        "relate_goods": {},
+        "mixsongid": "228489373",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250221/20250221114624612617.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "rec_label_type": 7,
+        "singerinfo": [
+          {
+            "name": "阿冗",
+            "is_publish": "1",
+            "id": "808675"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "8F5CE329EDDA8247B9C354C890D57ADF",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 8979345,
+          "cpy_map": "2",
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250221/20250221114624612617.jpg",
+          "qualitymap": {
+            "bits": "800000db41180007f3fc075",
+            "attr0": 2134884469,
+            "attr1": 1747124224
+          },
+          "is_original": 1,
+          "hash_offset": {
+            "clip_hash": "41FA4043021214A99CE505771BB8248C",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960119,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "BF862402058174DCF8D1C27B87F8FD1D"
+          },
+          "cid": 80096277,
+          "ogg_320_hash": "16FEF8E73D0CC619C132A8EBDB214FE6",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "appid_block": "2906,3124",
+          "hash_multitrack": "4115105DEB1A79348F7C92EBAF697411",
+          "ogg_128_filesize": 2535620,
+          "cpy_level": 1
+        },
+        "timelength_320": 219,
+        "album_audio_remark": "",
+        "album_audio_id": "228489373",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 66600,
+        "climax_timelength": 25600,
+        "is_publish": 1,
+        "rec_sub_copy_write": "一周超百万播放"
+      },
+      {
+        "filesize_flac": 29887115,
+        "official_songname": "",
+        "ori_audio_name": "一半疯了一半算了",
+        "hash_192": "",
+        "hash_flac": "FB115C91AFBFB2576F55E1D684098372",
+        "songname": "一半疯了一半算了",
+        "music_trac": 1,
+        "is_original": 2,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "60299974",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "小匆匆 - 一半疯了一半算了",
+        "cid": 0,
+        "scid": 227459429,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "A58F2FD79226DD4C3309919C2A659283",
+        "hash": "41E015E5E2A8B33CC19DDEC4C2EA5500",
+        "author_name": "小匆匆",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1810",
+            "parent_id": "6",
+            "tag_name": "人生与理想"
+          },
+          {
+            "tag_id": "3190",
+            "parent_id": "0",
+            "tag_name": "2022"
+          },
+          {
+            "tag_id": "3194",
+            "parent_id": "1919",
+            "tag_name": "抖音版（Q音同步）"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3985454,
+        "album_name": "小匆匆的经典翻唱",
+        "ztc_mark": "t_1185_1_227459429_490619599_10",
+        "climax_end_time": 90100,
+        "songid": 292097828,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2022-09-01",
+        "file_size": 3985454,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 249,
+        "old_cpy": 0,
+        "filesize_320": 9963316,
+        "rec_copy_write_id": "2",
+        "hash_320": "051E741EA222360681F1260CADA88A45",
+        "relate_goods": {},
+        "mixsongid": "490619599",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220901/20220901111724372881.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "41E015E5E2A8B33CC19DDEC4C2EA5500",
+        "singerinfo": [
+          {
+            "name": "小匆匆",
+            "is_publish": "1",
+            "id": "952895"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "8871B81243BA86F5BFEA05F2AE8E7FEB",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 25181312,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "ogg_320_filesize": 10398091,
+          "cpy_map": "2",
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220901/20220901111724372881.jpg",
+          "qualitymap": {
+            "bits": "8fdf80db411ffffff3fe475",
+            "attr0": 2134893685,
+            "attr1": 1747189759
+          },
+          "is_original": 2,
+          "hash_offset": {
+            "clip_hash": "D94EACB1F6D3ABAB20C517164ECFD23F",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960137,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "8983D1E58A2E8AF17033F03C36852181"
+          },
+          "cid": 256911324,
+          "ogg_320_hash": "A74434BB87B9A33F157485A9D6A6764A",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "DD6C844094F103FA653DD963F8CD254B",
+          "ogg_128_filesize": 2980136,
+          "cpy_level": 1
+        },
+        "timelength_320": 249,
+        "album_audio_remark": "",
+        "album_audio_id": "490619599",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "上周收藏top10W",
+            "ip_id": "97209",
+            "pid": "96650"
+          },
+          {
+            "name": "上周搜播top10W",
+            "ip_id": "97216",
+            "pid": "96651"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 39800,
+        "climax_timelength": 50300,
+        "is_publish": 1,
+        "rec_sub_copy_write": "一周红心破千"
+      },
+      {
+        "filesize_flac": 19375238,
+        "official_songname": "",
+        "ori_audio_name": "一别两宽",
+        "hash_192": "",
+        "hash_flac": "D1E4A95B54EA9DF2177F7AA7F29FDDCE",
+        "songname": "一别两宽 (人走茶凉)",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "167356264",
+        "remark": "人走茶凉",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "全幺九 - 一别两宽",
+        "cid": 0,
+        "scid": 508138471,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "5C0F4A40F351C2E946C5334A4019360F",
+        "hash": "1B1C5C1869AF696CDEBEFEAD102500AE",
+        "author_name": "全幺九",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 2945034,
+        "album_name": "一别两宽（人走茶凉）",
+        "ztc_mark": "t_1185_1_508138471_810423783_10",
+        "climax_end_time": 74600,
+        "songid": 569711423,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2025-11-12",
+        "file_size": 2945034,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 184,
+        "old_cpy": 0,
+        "filesize_320": 7362261,
+        "rec_copy_write_id": "2",
+        "hash_320": "D34F7C0C7C461DD0EAB9B6C0DF374246",
+        "relate_goods": {},
+        "mixsongid": "810423783",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20251126/20251126151653484136.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "1B1C5C1869AF696CDEBEFEAD102500AE",
+        "singerinfo": [
+          {
+            "name": "全幺九",
+            "is_publish": "1",
+            "id": "971818"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "provider": 5,
+          "cpy_attr0": 58735744,
+          "ogg_320_filesize": 8308265,
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 2143948,
+          "display_rate": 0,
+          "cpy_grade": 5,
+          "language": "国语",
+          "cpy_map": "2",
+          "hash_offset": {
+            "clip_hash": "BD29D9B57528ACFFB15E3A345E446A99",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960981,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "FFAC91967AF6801C8BBD8BE658CF464A"
+          },
+          "ogg_320_hash": "A02CB132142ED1622F1F27869A058728",
+          "qualitymap": {
+            "bits": "800000db411fefebf10e474",
+            "attr0": 1058071668,
+            "attr1": 1747189245
+          },
+          "is_original": 1,
+          "display": 0,
+          "cid": 546430675,
+          "songname_suffix": "(人走茶凉)",
+          "hash_multitrack": "B465F22281DD38EA68326FE86A4AA1B4",
+          "ipmap": {
+            "attr0": 154652381184
+          },
+          "appid_block": "3124",
+          "ogg_128_hash": "6C952F0C9ADC17DDB78101B9B447B61C",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20251126/20251126151653484136.jpg",
+          "cpy_level": 1
+        },
+        "timelength_320": 184,
+        "album_audio_remark": "",
+        "album_audio_id": "810423783",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日千人播放",
+            "ip_id": "96592",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          },
+          {
+            "name": "上周收藏top10W",
+            "ip_id": "97209",
+            "pid": "96650"
+          },
+          {
+            "name": "昨日破千播放",
+            "ip_id": "97392",
+            "pid": "96647"
+          },
+          {
+            "name": "万人收藏",
+            "ip_id": "97544",
+            "pid": "96650"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 46700,
+        "climax_timelength": 27900,
+        "is_publish": 1,
+        "rec_sub_copy_write": "一周收听破万"
+      },
+      {
+        "filesize_flac": 30757431,
+        "official_songname": "",
+        "ori_audio_name": "健康是个宝",
+        "hash_192": "",
+        "hash_flac": "387791D8F90F4E1185BED5957D192BD2",
+        "songname": "健康是个宝 (DJ何鹏版)",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "5",
+        "album_id": "38913425",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "王莎莎 - 健康是个宝",
+        "cid": 0,
+        "scid": 80123889,
+        "suffix_audio_name": "DJ何鹏版",
+        "mv_hash": "3987FCCA9E2D349F673EB1B13E4338BB",
+        "hash": "B19D0D1D87CB30CC50348B43BF884803",
+        "author_name": "王莎莎",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "961",
+            "parent_id": "3",
+            "tag_name": "DJ"
+          },
+          {
+            "tag_id": "1495",
+            "parent_id": "961",
+            "tag_name": "未细分DJ"
+          },
+          {
+            "tag_id": "1496",
+            "parent_id": "961",
+            "tag_name": "DJ舞曲"
+          },
+          {
+            "tag_id": "1706",
+            "parent_id": "4",
+            "tag_name": "动感节拍"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1810",
+            "parent_id": "6",
+            "tag_name": "人生与理想"
+          },
+          {
+            "tag_id": "1918",
+            "parent_id": "0",
+            "tag_name": "2020"
+          },
+          {
+            "tag_id": "1945",
+            "parent_id": "578",
+            "tag_name": "出租车"
+          },
+          {
+            "tag_id": "3015",
+            "parent_id": "2960",
+            "tag_name": "语言（DJ垂类）"
+          },
+          {
+            "tag_id": "3019",
+            "parent_id": "2960",
+            "tag_name": "主题（DJ垂类）"
+          },
+          {
+            "tag_id": "3020",
+            "parent_id": "2960",
+            "tag_name": "场合（DJ垂类）"
+          },
+          {
+            "tag_id": "3022",
+            "parent_id": "3015",
+            "tag_name": "国语（DJ垂类）"
+          },
+          {
+            "tag_id": "3043",
+            "parent_id": "3019",
+            "tag_name": "人生（DJ垂类）"
+          },
+          {
+            "tag_id": "3046",
+            "parent_id": "3020",
+            "tag_name": "车载（DJ垂类）"
+          },
+          {
+            "tag_id": "3064",
+            "parent_id": "0",
+            "tag_name": "DJ女声"
+          },
+          {
+            "tag_id": "3258",
+            "parent_id": "961",
+            "tag_name": "可疑DJ"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3712947,
+        "album_name": "健康是个宝(DJ何鹏版)",
+        "ztc_mark": "t_1185_1_80123889_271078399_8",
+        "climax_end_time": 89200,
+        "songid": 120726892,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2020-08-19",
+        "file_size": 3712947,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 232,
+        "old_cpy": 0,
+        "hash_320": "080C88E14D9E1FBF69BC364163DD0869",
+        "relate_goods": {},
+        "mixsongid": "271078399",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20260206/20260206190123232818.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "B19D0D1D87CB30CC50348B43BF884803",
+        "singerinfo": [
+          {
+            "name": "王莎莎",
+            "is_publish": "1",
+            "id": "947557"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260206/20260206190123232818.jpg",
+          "free_for_ad": 32,
+          "language": "国语",
+          "cpy_attr0": 58728448,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2820670,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 10238227,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "qualitymap": {
+            "bits": "1b41000003730c034",
+            "attr0": 925941812,
+            "attr1": 1746927616
+          },
+          "is_original": 1,
+          "display": 0,
+          "cid": 111038238,
+          "ogg_128_hash": "089EB9AE18182DAD72314A2875E03882",
+          "ogg_320_hash": "96B78C5960C1359D2157657113D35F2D",
+          "ipmap": {
+            "attr0": 33587200
+          },
+          "songname_suffix": "(DJ何鹏版)",
+          "cpy_grade": 22,
+          "hash_multitrack": "F514A77FF665096F302DA43447315923",
+          "cpy_level": 1
+        },
+        "timelength_320": 231,
+        "album_audio_remark": "",
+        "album_audio_id": "271078399",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "万人收藏",
+            "ip_id": "97544",
+            "pid": "96650"
+          },
+          {
+            "name": "70后爱听",
+            "ip_id": "99655",
+            "pid": "108042"
+          },
+          {
+            "name": "蝰蛇万人收藏",
+            "ip_id": "106921",
+            "pid": "107970"
+          },
+          {
+            "name": "30-40岁偏爱DJ",
+            "ip_id": "108046",
+            "pid": "108045"
+          },
+          {
+            "name": "限免歌曲",
+            "ip_id": "108574",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 8,
+        "fail_process": 4,
+        "climax_start_time": 53800,
+        "climax_timelength": 35400,
+        "is_publish": 1,
+        "filesize_320": 9282044
+      },
+      {
+        "filesize_flac": 25382300,
+        "official_songname": "",
+        "ori_audio_name": "慢慢",
+        "hash_192": "",
+        "hash_flac": "C7C221926C47FCD1D3829EA348DD901E",
+        "songname": "慢慢",
+        "music_trac": 1,
+        "is_original": 2,
+        "pay_type": 1,
+        "song_type": "1",
+        "album_id": "39594752",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "小乐哥（王唯乐） - 慢慢",
+        "cid": 0,
+        "scid": 84093440,
+        "suffix_audio_name": "",
+        "rec_copy_write": "圈友推荐",
+        "mv_hash": "F7548854DE4F063BFB6172AE5EE22FD6",
+        "hash": "636BE0A3769C4271973F9C4A253DC292",
+        "author_name": "小乐哥（王唯乐）",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "983",
+            "parent_id": "1541",
+            "tag_name": "国语流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1806",
+            "parent_id": "6",
+            "tag_name": "爱情"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "1872",
+            "parent_id": "0",
+            "tag_name": "泛翻唱"
+          },
+          {
+            "tag_id": "1918",
+            "parent_id": "0",
+            "tag_name": "2020"
+          },
+          {
+            "tag_id": "3186",
+            "parent_id": "1919",
+            "tag_name": "抖音版（中央同步）"
+          },
+          {
+            "tag_id": "3194",
+            "parent_id": "1919",
+            "tag_name": "抖音版（Q音同步）"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 0,
+        "filesize_128": 3801110,
+        "album_name": "慢慢",
+        "ztc_mark": "t_1185_1_84093440_277405057_10",
+        "climax_end_time": 91100,
+        "songid": 193636452,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2020-10-16",
+        "file_size": 3801110,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 237,
+        "old_cpy": 0,
+        "filesize_320": 9502492,
+        "rec_copy_write_id": "3",
+        "hash_320": "BA5DAEB711ACB723F08F0918BE7600A8",
+        "relate_goods": {},
+        "mixsongid": "277405057",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250509/20250509175653481957.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "636BE0A3769C4271973F9C4A253DC292",
+        "singerinfo": [
+          {
+            "name": "小乐哥（王唯乐）",
+            "is_publish": "1",
+            "id": "823674"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 2690979,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "pay_block_tpl": 1,
+          "qualitymap": {
+            "bits": "800000db411ffffff3fe475",
+            "attr0": 2134893685,
+            "attr1": 1747189759
+          },
+          "is_original": 2,
+          "hash_multitrack": "817DAD5CA890E50064D981492B06888D",
+          "cid": 118205898,
+          "display": 0,
+          "ipmap": {
+            "attr0": 18287169536
+          },
+          "ogg_320_hash": "80397601208C54AD426A74781FA70701",
+          "hash_offset": {
+            "clip_hash": "CFE43833815E440781BAC2D94F06A616",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960113,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "658A15B0661F09771EC953FDF9920BA4"
+          },
+          "ogg_128_hash": "2DCCD6DFE485007913140AB373596206",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250509/20250509175653481957.jpg",
+          "ogg_320_filesize": 9305735
+        },
+        "timelength_320": 237,
+        "album_audio_remark": "",
+        "album_audio_id": "277405057",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 61100,
+        "climax_timelength": 30000,
+        "is_publish": 1,
+        "rec_sub_copy_write": "男生唱出来的是治愈"
+      },
+      {
+        "filesize_flac": 26775743,
+        "official_songname": "",
+        "ori_audio_name": "蒲公英的约定",
+        "hash_192": "",
+        "hash_flac": "40A35CEFB4A773090B79E69C6FCFEE82",
+        "songname": "蒲公英的约定",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 3,
+        "song_type": "1",
+        "album_id": "979856",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "周杰伦 - 蒲公英的约定",
+        "cid": 0,
+        "scid": 832771,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "299890F5431D8BD9253CB81051476DFD",
+        "hash": "A14373681262867AB43FEF5467F4CC1D",
+        "author_name": "周杰伦",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "983",
+            "parent_id": "1541",
+            "tag_name": "国语流行"
+          },
+          {
+            "tag_id": "983",
+            "parent_id": "0",
+            "tag_name": "2025年优秀歌单达人"
+          },
+          {
+            "tag_id": "1541",
+            "parent_id": "882",
+            "tag_name": "华语流行"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1806",
+            "parent_id": "6",
+            "tag_name": "爱情"
+          },
+          {
+            "tag_id": "1815",
+            "parent_id": "1806",
+            "tag_name": "暗恋"
+          },
+          {
+            "tag_id": "1857",
+            "parent_id": "6",
+            "tag_name": "特别主题"
+          },
+          {
+            "tag_id": "1860",
+            "parent_id": "1857",
+            "tag_name": "K歌"
+          },
+          {
+            "tag_id": "1877",
+            "parent_id": "1774",
+            "tag_name": "KTV"
+          },
+          {
+            "tag_id": "3186",
+            "parent_id": "1919",
+            "tag_name": "抖音版（中央同步）"
+          },
+          {
+            "tag_id": "3194",
+            "parent_id": "1919",
+            "tag_name": "抖音版（Q音同步）"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3276",
+            "parent_id": "0",
+            "tag_name": "迷人音色"
+          },
+          {
+            "tag_id": "3279",
+            "parent_id": "3252",
+            "tag_name": "男声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 3956601,
+        "album_name": "我很忙",
+        "ztc_mark": "t_1185_1_832771_32218354_10",
+        "climax_end_time": 114500,
+        "songid": 318,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2007-11-02",
+        "file_size": 3956601,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 247,
+        "old_cpy": 0,
+        "filesize_320": 9891204,
+        "rec_copy_write_id": "2",
+        "hash_320": "9671532B11BEBE1D9140CE5C7C13ADFE",
+        "relate_goods": {},
+        "mixsongid": "32218354",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220705/20220705143006989099.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "A14373681262867AB43FEF5467F4CC1D",
+        "singerinfo": [
+          {
+            "name": "周杰伦",
+            "is_publish": "1",
+            "id": "3520"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "ogg_128_hash": "CD85DE0983B8477A027EAA18EED91121",
+          "classmap": {
+            "attr0": 234885128
+          },
+          "language": "国语",
+          "cpy_attr0": 58727552,
+          "musicpack_advance": 1,
+          "display": 32,
+          "display_rate": 1,
+          "ogg_320_filesize": 9295357,
+          "cpy_map": "2",
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220705/20220705143006989099.jpg",
+          "qualitymap": {
+            "bits": "800000db4107ffff73fc035",
+            "attr0": 2000666677,
+            "attr1": 1746993151
+          },
+          "is_original": 1,
+          "hash_offset": {
+            "clip_hash": "F6610B6137FB39B58DE1D0EDF2CA55FF",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960123,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "09BEF2D5980BD1B80F85F20AA79C587C"
+          },
+          "cid": 2556438,
+          "ogg_320_hash": "9DEDB6063F252182D3D41B7F4174011C",
+          "pay_block_tpl": 1,
+          "ipmap": {
+            "attr0": 2200130555904
+          },
+          "appid_block": "3124",
+          "hash_multitrack": "BC3C7B77E070EC3AB08A8FBBB9EC96AC",
+          "ogg_128_filesize": 2765478,
+          "cpy_level": 1
+        },
+        "timelength_320": 247,
+        "album_audio_remark": "",
+        "album_audio_id": "32218354",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top100",
+            "ip_id": "97192",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 85300,
+        "climax_timelength": 29200,
+        "is_publish": 1
+      },
+      {
+        "filesize_flac": 30547312,
+        "official_songname": "",
+        "ori_audio_name": "从前说",
+        "hash_192": "",
+        "hash_flac": "B8569616584FA572549216753E28A657",
+        "songname": "从前说",
+        "music_trac": 1,
+        "is_original": 1,
+        "pay_type": 1,
+        "song_type": "1",
+        "album_id": "51858164",
+        "remark": "",
+        "language": "国语",
+        "is_file_head_320": 100,
+        "alg_path": "t=1788516863;recall_v2_alg=citid=18143eaa-ba72-aece-8c97-5445e53a3242,de14ee17-9fae-52f4-ce2b-3f67b33dd737,e3759e9b-f7ea-c3f2-da9e-4a4c349e613e,931aeb3a-6145-ee87-3dbc-eeac48d24332,472de6f3-3c5c-2ea1-3983-6aa1f6a2fa67,eeec232c-aced-a,crn=go_server;itid=ac3932d7-cdce-5cad-27aa-8327e574ec54",
+        "is_file_head": 100,
+        "filename": "小阿七 - 从前说",
+        "cid": 0,
+        "scid": 137817599,
+        "suffix_audio_name": "",
+        "rec_copy_write": "人气歌曲推荐",
+        "mv_hash": "7B1BE584C023C10F1E9905F5E2574591",
+        "hash": "56851B29C26109489361B0021A4FDD9E",
+        "author_name": "小阿七",
+        "tags": [
+          {
+            "tag_id": "84",
+            "parent_id": "7",
+            "tag_name": "国语"
+          },
+          {
+            "tag_id": "882",
+            "parent_id": "3",
+            "tag_name": "流行"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1534",
+            "parent_id": "988",
+            "tag_name": "未细分网络流行"
+          },
+          {
+            "tag_id": "1698",
+            "parent_id": "4",
+            "tag_name": "轻快休闲"
+          },
+          {
+            "tag_id": "1720",
+            "parent_id": "988",
+            "tag_name": "质量一般"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1780",
+            "parent_id": "1773",
+            "tag_name": "在路上"
+          },
+          {
+            "tag_id": "1806",
+            "parent_id": "6",
+            "tag_name": "爱情"
+          },
+          {
+            "tag_id": "1817",
+            "parent_id": "1806",
+            "tag_name": "失恋"
+          },
+          {
+            "tag_id": "1861",
+            "parent_id": "1857",
+            "tag_name": "成名曲"
+          },
+          {
+            "tag_id": "2547",
+            "parent_id": "882",
+            "tag_name": "社交媒体流行 Social Media Pop"
+          },
+          {
+            "tag_id": "3189",
+            "parent_id": "0",
+            "tag_name": "2021"
+          },
+          {
+            "tag_id": "3194",
+            "parent_id": "1919",
+            "tag_name": "抖音版（Q音同步）"
+          },
+          {
+            "tag_id": "3233",
+            "parent_id": "0",
+            "tag_name": "单曲"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3278",
+            "parent_id": "3252",
+            "tag_name": "女声版"
+          }
+        ],
+        "bitrate": 128,
+        "is_mv_file_head": 1,
+        "has_accompany": 1,
+        "filesize_128": 4025141,
+        "album_name": "从前说",
+        "ztc_mark": "t_1185_1_137817599_362498769_10",
+        "climax_end_time": 113000,
+        "songid": 197023712,
+        "quality_level": 3,
+        "filesize_192": 0,
+        "publish_date": "2021-12-29",
+        "file_size": 4025141,
+        "has_album": 0,
+        "extname": "mp3",
+        "type": "audio",
+        "level": 2,
+        "time_length": 251,
+        "old_cpy": 0,
+        "filesize_320": 10062561,
+        "rec_copy_write_id": "2",
+        "hash_320": "6699FA67573F84843A234AA5D37CA359",
+        "relate_goods": {},
+        "mixsongid": "362498769",
+        "hash_other": "",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20250721/20250721151751248354.jpg",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filesize_ape": 0,
+        "hash_128": "56851B29C26109489361B0021A4FDD9E",
+        "singerinfo": [
+          {
+            "name": "小阿七",
+            "is_publish": "1",
+            "id": "821555"
+          }
+        ],
+        "hash_ape": "",
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "国语",
+          "cpy_attr0": 58735744,
+          "musicpack_advance": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "ogg_320_filesize": 9857345,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250721/20250721151751248354.jpg",
+          "qualitymap": {
+            "bits": "8fffc0db411ffffff3fe475",
+            "attr0": 2134893685,
+            "attr1": 1747189759
+          },
+          "is_original": 1,
+          "ogg_128_hash": "8A17366D9959E2DD36A43A555191CDCE",
+          "cid": 188429906,
+          "ogg_128_filesize": 2814346,
+          "ogg_320_hash": "3F78B88FC3F047C19AD3980CE5BB7788",
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "hash_offset": {
+            "clip_hash": "078D251AA0AB0F482A2337EFF4294DBB",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960117,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "F9A5194E4BA0668CB2ECB805DD93FDFC"
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "E824877948585A6833C87BFC703E21E3",
+          "cpy_level": 1
+        },
+        "timelength_320": 251,
+        "album_audio_remark": "",
+        "album_audio_id": "362498769",
+        "filesize_other": 0,
+        "ips_tags": [
+          {
+            "name": "昨日超万人播放",
+            "ip_id": "96593",
+            "pid": "96647"
+          },
+          {
+            "name": "昨日热播10w+",
+            "ip_id": "97190",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1K",
+            "ip_id": "97193",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top1W",
+            "ip_id": "97194",
+            "pid": "96647"
+          },
+          {
+            "name": "上周播放top10W",
+            "ip_id": "97195",
+            "pid": "96647"
+          }
+        ],
+        "privilege": 10,
+        "fail_process": 4,
+        "climax_start_time": 73500,
+        "climax_timelength": 39500,
+        "is_publish": 1
+      }
+    ],
+    "sub_title": "",
+    "cover_img_url": "http://imge.kugou.com/commendpic/20241029/20241029180223658719.jpg"
+  },
+  "status": 1,
+  "error_code": 0
+}

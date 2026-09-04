@@ -1,0 +1,1 @@
+"<html>\r\n<head><title>500 Internal Server Error</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>500 Internal Server Error</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n"

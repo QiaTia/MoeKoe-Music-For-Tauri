@@ -1,0 +1,27 @@
+{
+  "status": 1,
+  "err_code": 0,
+  "msg": "success",
+  "message": "success",
+  "childrenid": "92351310",
+  "count": 0,
+  "combine_count": 0,
+  "current_page": 1,
+  "list": null,
+  "config": {
+    "canUploadImg": 0,
+    "closeCmt": 0,
+    "emptyTip": "还没有人评论，快来抢沙发吧！",
+    "input_hint": "说点什么吧？",
+    "numOpusUserMax": 3,
+    "numOpusUserMaxSVIP": 1,
+    "numOpusUserMaxYVIP": 3,
+    "tipOfNoUploadImg": "该功能仅对部分用户开放",
+    "tip_noupload_video": "该功能仅对部分用户开放",
+    "toastBgOpus": "http://imge.kugou.com/commendpic/20190403/20190403110105584375.png",
+    "urlOfNoUploadImg": "https://h5.kugou.com/requirement/v-c1f295e9/index.html",
+    "url_noupload_video": "http://www2.kugou.kugou.com/apps/commentBlackHouse/msg.html?tid=126797095",
+    "canUploadVoice": 0
+  },
+  "photo_list_style": 1
+}

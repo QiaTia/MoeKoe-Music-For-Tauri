@@ -1,0 +1,57 @@
+{
+  "status": 200,
+  "info": "OK",
+  "errcode": 200,
+  "errmsg": "OK",
+  "keyword": "周杰伦",
+  "proposal": "61641844",
+  "has_complete_right": 0,
+  "companys": "",
+  "ugc": 0,
+  "ugccount": 0,
+  "expire": 7200,
+  "candidates": [
+    {
+      "id": "61641844",
+      "product_from": "ugc",
+      "accesskey": "A73A863722BB52E47E3175CF3B8C7F28",
+      "can_score": true,
+      "singer": "周杰伦",
+      "song": "周杰伦",
+      "duration": 32626,
+      "uid": "928165386",
+      "nickname": "妖怪",
+      "origiuid": "0",
+      "transuid": "0",
+      "sounduid": "0",
+      "originame": "",
+      "transname": "",
+      "soundname": "",
+      "parinfo": [
+        [
+          928165386,
+          "妖怪",
+          "2021/12/11 15:11",
+          "http://imge.kugou.com/kugouicon/165/20230608/20230608162228517118.jpg"
+        ]
+      ],
+      "parinfoExt": [
+        {
+          "entry": "0"
+        }
+      ],
+      "language": "",
+      "krctype": 2,
+      "hitlayer": 7,
+      "hitcasemask": 12,
+      "adjust": 0,
+      "score": 60,
+      "contenttype": 0,
+      "content_format": 1,
+      "download_id": "61641844"
+    }
+  ],
+  "ugccandidates": [],
+  "artists": [],
+  "ai_candidates": []
+}

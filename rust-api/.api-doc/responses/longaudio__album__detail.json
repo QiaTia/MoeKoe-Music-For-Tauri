@@ -1,0 +1,25 @@
+{
+  "status": 1,
+  "error_code": 0,
+  "errcode": 0,
+  "errmsg": "",
+  "data": [
+    {
+      "album_name": "",
+      "author_name": "",
+      "trans_param": {},
+      "album_tag": [],
+      "play_times": 0,
+      "full_intro": "",
+      "mix_intro": "",
+      "album_id": "",
+      "cover": "",
+      "authors": [],
+      "sizable_cover": "",
+      "intro": "",
+      "category": "",
+      "language": "",
+      "publish_company": ""
+    }
+  ]
+}

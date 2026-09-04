@@ -1,0 +1,190 @@
+{
+  "status": 1,
+  "error_code": 0,
+  "error_msg": "",
+  "data": {
+    "pagesize": 3,
+    "page": 1,
+    "from": 0,
+    "size": 3,
+    "total": 500,
+    "correctiontype": 0,
+    "correctionforce": 0,
+    "correctiontip": "",
+    "lists": [
+      {
+        "albumid": 45305792,
+        "albumname": "一路生花",
+        "singer": "温奕心",
+        "singerid": "0",
+        "grade": 0,
+        "grade_int": "",
+        "img": "http://imge.kugou.com/stdmusic/240/20251016/20251016152611214074.jpg",
+        "intro": "",
+        "grade_float": "",
+        "company": "",
+        "quality": 2,
+        "title": "一路生花 - 温奕心",
+        "collect_count": 0,
+        "publish_time": "2021-01-19",
+        "language": "华语",
+        "privilege": 0,
+        "oldhide": 0,
+        "buyercount": 0,
+        "songcount": 6,
+        "newquality": 1,
+        "cd_url": "",
+        "isfirst": 0,
+        "category": 1,
+        "short_intro": "",
+        "ostremark": "",
+        "auxiliary": "",
+        "chapter_name": "",
+        "play_times": 0,
+        "program_inner": 0,
+        "alg_path": "",
+        "program_def_songs": [],
+        "tag_str": "",
+        "album_aux": "",
+        "play_count": 0,
+        "isouter": 0,
+        "outerdata": {},
+        "trans_param": {
+          "special_tag": "54607872"
+        },
+        "special_tag": "54607872",
+        "singerids": [
+          532327
+        ],
+        "singers": [
+          {
+            "name": "温奕心",
+            "id": 532327
+          }
+        ],
+        "rec_tag": {
+          "desc": "",
+          "type": 0
+        },
+        "jump_url": ""
+      },
+      {
+        "albumid": 133733376,
+        "albumname": "一路生花 (爷爷版)",
+        "singer": "陈彼得、张双利",
+        "singerid": "0",
+        "grade": 0,
+        "grade_int": "",
+        "img": "http://imge.kugou.com/stdmusic/240/20260109/20260109104210976787.jpg",
+        "intro": "",
+        "grade_float": "",
+        "company": "",
+        "quality": 3,
+        "title": "一路生花 (爷爷版) - 陈彼得、张双利",
+        "collect_count": 0,
+        "publish_time": "2025-01-01",
+        "language": "华语",
+        "privilege": 0,
+        "oldhide": 0,
+        "buyercount": 0,
+        "songcount": 1,
+        "newquality": 1,
+        "cd_url": "",
+        "isfirst": 0,
+        "category": 1,
+        "short_intro": "",
+        "ostremark": "",
+        "auxiliary": "",
+        "chapter_name": "",
+        "play_times": 0,
+        "program_inner": 0,
+        "alg_path": "",
+        "program_def_songs": [],
+        "tag_str": "",
+        "album_aux": "",
+        "play_count": 0,
+        "isouter": 0,
+        "outerdata": {},
+        "trans_param": {
+          "special_tag": "65392640"
+        },
+        "special_tag": "65392640",
+        "singerids": [
+          479,
+          2252242
+        ],
+        "singers": [
+          {
+            "name": "陈彼得",
+            "id": 479
+          },
+          {
+            "name": "张双利",
+            "id": 2252242
+          }
+        ],
+        "rec_tag": {
+          "desc": "",
+          "type": 0
+        },
+        "jump_url": ""
+      },
+      {
+        "albumid": 88991514,
+        "albumname": "一路生花(2024特别版）",
+        "singer": "温奕心",
+        "singerid": "0",
+        "grade": 0,
+        "grade_int": "",
+        "img": "http://imge.kugou.com/stdmusic/240/20260525/20260525174612980702.jpg",
+        "intro": "",
+        "grade_float": "",
+        "company": "",
+        "quality": 3,
+        "title": "一路生花(2024特别版） - 温奕心",
+        "collect_count": 0,
+        "publish_time": "2024-03-10",
+        "language": "华语",
+        "privilege": 0,
+        "oldhide": 0,
+        "buyercount": 0,
+        "songcount": 2,
+        "newquality": 1,
+        "cd_url": "",
+        "isfirst": 0,
+        "category": 1,
+        "short_intro": "",
+        "ostremark": "",
+        "auxiliary": "",
+        "chapter_name": "",
+        "play_times": 0,
+        "program_inner": 0,
+        "alg_path": "",
+        "program_def_songs": [],
+        "tag_str": "",
+        "album_aux": "",
+        "play_count": 0,
+        "isouter": 0,
+        "outerdata": {},
+        "trans_param": {
+          "special_tag": "62963712"
+        },
+        "special_tag": "62963712",
+        "singerids": [
+          532327
+        ],
+        "singers": [
+          {
+            "name": "温奕心",
+            "id": 532327
+          }
+        ],
+        "rec_tag": {
+          "desc": "",
+          "type": 0
+        },
+        "jump_url": ""
+      }
+    ]
+  }
+}

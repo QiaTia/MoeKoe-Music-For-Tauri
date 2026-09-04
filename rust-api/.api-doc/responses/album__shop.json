@@ -1,0 +1,132 @@
+{
+  "error_code": 0,
+  "err_msg": "success",
+  "data": {
+    "title": "最新上架",
+    "has_more": 1,
+    "album_list": [
+      {
+        "album_name": "CLICK",
+        "intro_en": "zj446545",
+        "buy_num": 5631,
+        "topic_id": 446545,
+        "media_id": 205741080,
+        "type": 2,
+        "singer_name": "JISOO",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446545.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1788407856/zj446545/album_cover.png",
+        "price": 400
+      },
+      {
+        "album_name": "SaWaDiKa",
+        "intro_en": "zj446547",
+        "buy_num": 0,
+        "topic_id": 446547,
+        "media_id": 205994129,
+        "type": 2,
+        "singer_name": "LISA",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446547.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1788450145/zj446547/album_cover.png",
+        "price": 400
+      },
+      {
+        "album_name": "Fallen Angel (Digital EP) [Explicit]",
+        "intro_en": "zj446535",
+        "buy_num": 7487,
+        "topic_id": 446535,
+        "media_id": 204983824,
+        "type": 2,
+        "singer_name": "JENNIE",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446535.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1787890662/zj446535/album_cover.png",
+        "price": 1200
+      },
+      {
+        "album_name": "BLINGY - The 7th Album",
+        "intro_en": "zj446490",
+        "buy_num": 0,
+        "topic_id": 446490,
+        "media_id": 204130228,
+        "type": 2,
+        "singer_name": "NCT 127",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446490.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1787563544/zj446490/album_cover.png",
+        "price": 2400
+      },
+      {
+        "album_name": "UNBREAKABLE : 少年BEAST",
+        "intro_en": "zj446487",
+        "buy_num": 0,
+        "topic_id": 446487,
+        "media_id": 203885398,
+        "type": 2,
+        "singer_name": "ALPHA DRIVE ONE",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446487.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1787563310/zj446487/album_cover.png",
+        "price": 1500
+      },
+      {
+        "album_name": "THE SIN : BLISS",
+        "intro_en": "zj446486",
+        "buy_num": 0,
+        "topic_id": 446486,
+        "media_id": 204153500,
+        "type": 2,
+        "singer_name": "ENHYPEN",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446486.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1787715725/zj446486/album_cover.png",
+        "price": 1800
+      },
+      {
+        "album_name": "BiiiG",
+        "intro_en": "zj446482",
+        "buy_num": 20437,
+        "topic_id": 446482,
+        "media_id": 203883863,
+        "type": 2,
+        "singer_name": "BIGBANG",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446482.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1788158092/zj446482/album_cover.png",
+        "price": 400
+      },
+      {
+        "album_name": "Vision Wings - The 8th Mini Album",
+        "intro_en": "zj446461",
+        "buy_num": 0,
+        "topic_id": 446461,
+        "media_id": 202149916,
+        "type": 2,
+        "singer_name": "威神V(WayV)",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446461.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1787283473/zj446461/album_cover.png",
+        "price": 2000
+      },
+      {
+        "album_name": "纯粹",
+        "intro_en": "zj446460",
+        "buy_num": 0,
+        "topic_id": 446460,
+        "media_id": 202263138,
+        "type": 2,
+        "singer_name": "刘萧旭",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446460.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1786097153/zj446460/album_cover.png",
+        "price": 1200
+      },
+      {
+        "album_name": "THIS & THAT",
+        "intro_en": "zj446462",
+        "buy_num": 0,
+        "topic_id": 446462,
+        "media_id": 201446923,
+        "type": 2,
+        "singer_name": "Stray Kids",
+        "sale_page_url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446462.html?is_go=1&hreffrom=45",
+        "pic": "https://ep.kugou.com/static/images/commonchargeV3/1786615024/zj446462/album_cover.png",
+        "price": 2000
+      }
+    ]
+  },
+  "status": 1,
+  "err_code": 0
+}

@@ -1,0 +1,1659 @@
+{
+  "data": {
+    "has_next": 1,
+    "total": 2673,
+    "info": [
+      {
+        "list_create_listid": 9,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20231031/20231031140018557326.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "我很庆幸曾经能够走到你的身边，和你有过那么多美好的回忆；但也很遗憾，终究没能走进你的心里，成为你生命中那个最重要的人。",
+        "list_create_userid": 2159648969,
+        "update_time": 1786693251,
+        "list_ver": 282,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 571,
+            "tag_name": "00后",
+            "parent_id": 7
+          }
+        ],
+        "list_create_gid": "collection_3_2159648969_9_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "深夜emo歌曲：很遗憾没能走进你的心里",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 156,
+        "pic": "http://c1.kgimg.com/custom/{size}/20231201/20231201113708239990.jpg",
+        "list_create_username": "鹿明明",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2159648969_9_0",
+        "heat": 33405841,
+        "type": 0
+      },
+      {
+        "list_create_listid": 89,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20240628/20240628194704701794.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "这部歌单聚焦于现代都市的伤感情绪与回忆，带你穿梭在独处时光和欢乐场合之间。无论是KTV的必点曲目还是通勤路上的良伴，这些歌曲都以细腻入微的情感描绘，陪伴你度过每一个平凡又不凡的瞬间。",
+        "list_create_userid": 1838053086,
+        "update_time": 1788501148,
+        "list_ver": 213,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1104,
+            "tag_name": "通勤",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_1838053086_89_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音近期最火的流行热歌｜首首精选",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 180,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250805/20250805155833603970.jpg",
+        "list_create_username": "明天见",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1838053086_89_0",
+        "heat": 192622223,
+        "type": 0
+      },
+      {
+        "list_create_listid": 28,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20240213/20240213011800386073.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "民谣像是一个港湾，让你卸下疲惫，背起行囊，在音乐声中重拾勇气，奔赴那诗与远方，去寻找内心的宁静与向往的美好。",
+        "list_create_userid": 2176675137,
+        "update_time": 1787839187,
+        "list_ver": 37,
+        "musiclib_tags": [
+          {
+            "tag_id": 83,
+            "tag_name": "民谣",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 585,
+            "tag_name": "旅途",
+            "parent_id": 5
+          },
+          {
+            "tag_id": 780,
+            "tag_name": "治愈",
+            "parent_id": 4
+          }
+        ],
+        "list_create_gid": "collection_3_2176675137_28_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "民谣小酒馆：背起行囊，追逐诗与远方",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 85,
+        "pic": "http://c1.kgimg.com/custom/{size}/20240908/20240908140916211432.jpg",
+        "list_create_username": "白榆",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2176675137_28_0",
+        "heat": 14055714,
+        "type": 0
+      },
+      {
+        "list_create_listid": 438,
+        "deleted_or_404": 0,
+        "attribute_bit": 1,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20240710/20240710231336744186.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "这段R&B失恋绝响，以细腻的情感讲述着一段段悲伤的爱情故事。无论是独自一人时的忧伤，还是路上偶遇时的期待，每一首歌都仿佛在诉说着逝去的爱与无奈。曲折的情节中透出淡淡的忧伤和不失温暖的希望，适合在夜晚聆听，体会那份与心情不期而遇的美好。",
+        "list_create_userid": 967574434,
+        "update_time": 1787171166,
+        "list_ver": 489,
+        "musiclib_tags": [
+          {
+            "tag_id": 30,
+            "tag_name": "R&B",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 84,
+            "tag_name": "国语",
+            "parent_id": 2
+          },
+          {
+            "tag_id": 571,
+            "tag_name": "00后",
+            "parent_id": 7
+          }
+        ],
+        "list_create_gid": "collection_3_967574434_438_0",
+        "trans_param": {
+          "is_mutual": 1,
+          "special_tag": 0,
+          "trans_flag": 1,
+          "iden": 0
+        },
+        "name": "抖音热歌「感受R&B失恋绝响」",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 779,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260408/20260408002852148233.jpg",
+        "list_create_username": "泽",
+        "pub_type": 2,
+        "sound": {
+          "id": "725",
+          "type": 3,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_967574434_438_0",
+        "heat": 983376,
+        "type": 0
+      },
+      {
+        "list_create_listid": 1745,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20260903/20260903103421816180.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "当熟悉的旋律遇上慵懒的R&B节奏，经典翻唱为你重塑深夜听觉。让疲惫在温柔的转音中融化，让孤独在微醺的律动里消散。",
+        "list_create_userid": 2206556596,
+        "update_time": 1788514748,
+        "list_ver": 79,
+        "musiclib_tags": [
+          {
+            "tag_id": 30,
+            "tag_name": "R&B",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 638,
+            "tag_name": "翻唱",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 780,
+            "tag_name": "治愈",
+            "parent_id": 4
+          }
+        ],
+        "list_create_gid": "collection_3_2206556596_1745_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "深夜微醺｜R&B翻唱版温柔治愈每个孤独的灵魂",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 141,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260529/20260529152250872234.jpg",
+        "list_create_username": "雨过天青",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2206556596_1745_0",
+        "heat": 359056,
+        "type": 0
+      },
+      {
+        "list_create_listid": 690,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20251220/20251220213236442642.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "这是一份专为驾车时设计的动感车友曲目。充满活力的旋律搭配加速版演绎，激发路途中无限活力与激情，无论是展示个性还是享受旅程，都能让每一次转动的方向盘都伴随着动感的心跳。",
+        "list_create_userid": 2445285834,
+        "update_time": 1788332400,
+        "list_ver": 6,
+        "musiclib_tags": [
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 50,
+            "tag_name": "兴奋",
+            "parent_id": 4
+          },
+          {
+            "tag_id": 63,
+            "tag_name": "车载",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_2445285834_690_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "好听的车载DJ丨方向盘跟着一起晃～",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 82,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260317/20260317142318266719.jpg",
+        "list_create_username": "冰糖雪梨",
+        "pub_type": 2,
+        "sound": {
+          "id": "A2",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2445285834_690_0",
+        "heat": 1736503,
+        "type": 0
+      },
+      {
+        "list_create_listid": 313,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20241009/20241009150238343406.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "收录当下抖音刷屏的超燃车载DJ热碟，重低音节奏冲击力十足，夜间行车沉闷一扫而空，动感旋律强力提神醒脑，陪伴整段旅途肆意驰骋。",
+        "list_create_userid": 1830643571,
+        "update_time": 1788513614,
+        "list_ver": 45,
+        "musiclib_tags": [
+          {
+            "tag_id": 10,
+            "tag_name": "舞曲",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 63,
+            "tag_name": "车载",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_1830643571_313_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音超燃劲爆车载D j 热碟 | 醒脑必备",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 120,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260709/20260709220130584576.jpg",
+        "list_create_username": "Happy",
+        "pub_type": 2,
+        "sound": {
+          "id": "A2",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1830643571_313_0",
+        "heat": 49982055,
+        "type": 0
+      },
+      {
+        "list_create_listid": 247,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20230711/20230711144807938830.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "这是一张专为车载空间打造的动感DJ音乐歌单，集结了多首以舞曲和DJ热碟为主的热辣曲目。无论是在高速驰骋的公路上，还是在周末出租车上，都能让你感受到无尽的活力与激情，让你的心情随着节奏一起跳跃。",
+        "list_create_userid": 2126841222,
+        "update_time": 1788335792,
+        "list_ver": 16,
+        "musiclib_tags": [
+          {
+            "tag_id": 10,
+            "tag_name": "舞曲",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 63,
+            "tag_name": "车载",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_2126841222_247_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026车载重低音DJ｜动感节奏，燃爆全程！",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 124,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260228/20260228162414191891.jpg",
+        "list_create_username": "夏日蜜橘",
+        "pub_type": 2,
+        "sound": {
+          "args": "",
+          "id": "A2",
+          "type": 1
+        },
+        "global_collection_id": "collection_3_2126841222_247_0",
+        "heat": 680355,
+        "type": 0
+      },
+      {
+        "list_create_listid": 63,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20230523/20230523095109566349.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "一键收听，深夜伤感emo天花板，抖音热歌。",
+        "list_create_userid": 2034670504,
+        "update_time": 1787502651,
+        "list_ver": 42,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 571,
+            "tag_name": "00后",
+            "parent_id": 7
+          }
+        ],
+        "list_create_gid": "collection_3_2034670504_63_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "深夜伤感emo天花板｜抖音热歌",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 132,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250805/20250805161434676032.jpg",
+        "list_create_username": "提子不酸",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2034670504_63_0",
+        "heat": 63529111,
+        "type": 0
+      },
+      {
+        "list_create_listid": 36,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20190421/20190421124340123104.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "车载DJ高潮部分听到醉",
+        "list_create_userid": 55962300,
+        "update_time": 1788451381,
+        "list_ver": 476,
+        "musiclib_tags": [
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 63,
+            "tag_name": "车载",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_55962300_36_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1,
+          "skin": {
+            "id": "113"
+          }
+        },
+        "name": "听伤感DJ做优质男人",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 376,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250716/20250716202536236954.jpg",
+        "list_create_username": "平庸",
+        "pub_type": 2,
+        "sound": {
+          "id": "A2",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_55962300_36_0",
+        "heat": 4470338,
+        "type": 0
+      },
+      {
+        "list_create_listid": 124,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20240504/20240504171703127958.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "2026抖音近期爆火的走心网络热歌大盘点，全网千万收藏的宝藏BGM一次性整理完毕。",
+        "list_create_userid": 2206892414,
+        "update_time": 1788172605,
+        "list_ver": 28,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1104,
+            "tag_name": "通勤",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_2206892414_124_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音近日最爆红的网络热歌｜年度走心BGM合集",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 109,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260715/20260715173437681862.jpg",
+        "list_create_username": "蓝莓汁",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2206892414_124_0",
+        "heat": 1096724,
+        "type": 0
+      },
+      {
+        "list_create_listid": 557,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20240626/20240626134209385772.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "欢迎收听，2026抖音当下最火的网络热歌100首",
+        "list_create_userid": 1169474257,
+        "update_time": 1788501338,
+        "list_ver": 33,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1104,
+            "tag_name": "通勤",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_1169474257_557_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音当下最火的网络热歌100首",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 115,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260816/20260816230023853888.jpg",
+        "list_create_username": "春庭雪",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1169474257_557_0",
+        "heat": 12390322,
+        "type": 0
+      },
+      {
+        "list_create_listid": 242,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20260206/20260206032022727506.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "欢迎收听，2026抖音当下超火的爆款网络热歌100首",
+        "list_create_userid": 2249193819,
+        "update_time": 1785609744,
+        "list_ver": 109,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1104,
+            "tag_name": "通勤",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_2249193819_242_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音当下超火的爆款网络热歌100首",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 97,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260513/20260513231403484875.jpg",
+        "list_create_username": "漫小南",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2249193819_242_0",
+        "heat": 11961737,
+        "type": 0
+      },
+      {
+        "list_create_listid": 479,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20230829/20230829213035918611.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "时光倒带，唤醒青春记忆！这份8090经典老歌歌单，珍藏着华语乐坛最黄金年代的声音，每一首歌都承载着无数人的青春故事，藏着课间哼唱的青涩、磁带机里的循环、路灯下的漫步回忆。",
+        "list_create_userid": 2145643787,
+        "update_time": 1787736565,
+        "list_ver": 8,
+        "musiclib_tags": [
+          {
+            "tag_id": 12,
+            "tag_name": "经典",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 84,
+            "tag_name": "国语",
+            "parent_id": 2
+          },
+          {
+            "tag_id": 1107,
+            "tag_name": "怀旧",
+            "parent_id": 4
+          }
+        ],
+        "list_create_gid": "collection_3_2145643787_479_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "经典老歌300首大全 | 重温8090华语黄金年代",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 344,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250701/20250701160217122433.jpg",
+        "list_create_username": "纳福",
+        "pub_type": 2,
+        "sound": {
+          "id": "A7",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2145643787_479_0",
+        "heat": 2485747,
+        "type": 0
+      },
+      {
+        "list_create_listid": 118,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20251031/20251031193006278791.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "欢迎大家收听，2026抖音最新爆红的流行网络热歌100首",
+        "list_create_userid": 1651757044,
+        "update_time": 1787818440,
+        "list_ver": 56,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1104,
+            "tag_name": "通勤",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_1651757044_118_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音最新爆红的流行网络热歌100首",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 116,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260720/20260720160926746383.jpg",
+        "list_create_username": "冬虫",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1651757044_118_0",
+        "heat": 3015096,
+        "type": 0
+      },
+      {
+        "list_create_listid": 305,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20260109/20260109141219437847.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "这款歌单充满动感节拍，适合派对狂欢，将你带入万人大蹦迪的氛围中，震耳欲聋的鼓点和强劲的低音让你心跳加速。",
+        "list_create_userid": 2444042426,
+        "update_time": 1788317808,
+        "list_ver": 15,
+        "musiclib_tags": [
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 63,
+            "tag_name": "车载",
+            "parent_id": 5
+          },
+          {
+            "tag_id": 64,
+            "tag_name": "夜店",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_2444042426_305_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "巨型鼓点万人蹦迪丨超燃重低音震碎心跳！",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 100,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260127/20260127131201658441.jpg",
+        "list_create_username": "不到三岁",
+        "pub_type": 2,
+        "sound": {
+          "id": "A2",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2444042426_305_0",
+        "heat": 63773,
+        "type": 0
+      },
+      {
+        "list_create_listid": 422,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20241007/20241007162318272521.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "集结承载80、90后青春的怀旧金曲，每一段旋律都封存年少点滴。无论是婉转粤语情歌，还是热血国语老歌，熟悉曲调一响起，旧日画面尽数浮现，闲暇聆听或是好友相聚合唱，都能拾起岁月里珍贵难忘的温柔回忆。",
+        "list_create_userid": 1740702906,
+        "update_time": 1788320042,
+        "list_ver": 31,
+        "musiclib_tags": [
+          {
+            "tag_id": 12,
+            "tag_name": "经典",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 72,
+            "tag_name": "KTV",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1107,
+            "tag_name": "怀旧",
+            "parent_id": 4
+          }
+        ],
+        "list_create_gid": "collection_3_1740702906_422_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "8090后经典老歌400首 | 重温青春里的宝贵回忆",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 420,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260720/20260720162441282106.jpg",
+        "list_create_username": "小薯条",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1740702906_422_0",
+        "heat": 10438102,
+        "type": 0
+      },
+      {
+        "list_create_listid": 1243,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20220518/20220518062052430188.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "此歌单收录了跑步运动 快乐健身曲，2026全网最新流行歌曲dj。欢迎收藏和聆听。#运动#跑步歌曲dj",
+        "list_create_userid": 1950038445,
+        "update_time": 1788395049,
+        "list_ver": 7,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 69,
+            "tag_name": "运动",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_1950038445_1243_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "跑步运动 快乐健身曲｜2026全网最新流行歌曲dj",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 115,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260901/20260901222716130879.jpg",
+        "list_create_username": "火星姐姐在地球",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1950038445_1243_0",
+        "heat": 5479,
+        "type": 0
+      },
+      {
+        "list_create_listid": 5187,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20260202/20260202114434665543.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "这段歌单流淌着时光的印记，每一首都仿佛是触动心弦的私语。从伤感的爱情绝唱到轻快的告别，再到深情的回忆与期盼，让每一次聆听都成为一次心灵之旅。",
+        "list_create_userid": 1134858279,
+        "update_time": 1788315989,
+        "list_ver": 7054,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1104,
+            "tag_name": "通勤",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_1_1134858279_378394_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "抖音歌曲最火的歌2026：抖音热歌榜流行歌曲",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 114,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260902/20260902041222212812.jpg",
+        "list_create_username": "无殇少侠",
+        "pub_type": 1,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_1_1134858279_378394_0",
+        "heat": 3711436453,
+        "type": 0
+      },
+      {
+        "list_create_listid": 581,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20250708/20250708085639683134.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "是谁的青春DNA狠狠动了？这100首经典网络歌曲，是90后青春的BGM。那些年，MP3里循环播放的旋律，课间哼唱的歌词，藏着青涩爱恋、懵懂梦想 。熟悉前奏一响，回忆瞬间如潮水般涌来，快来一起找回热血又纯真的旧时光。",
+        "list_create_userid": 1955608724,
+        "update_time": 1788355083,
+        "list_ver": 710,
+        "musiclib_tags": [
+          {
+            "tag_id": 12,
+            "tag_name": "经典",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 76,
+            "tag_name": "90后",
+            "parent_id": 7
+          }
+        ],
+        "list_create_gid": "collection_3_1955608724_581_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "90后回忆杀：100首经典网络歌曲",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 160,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250805/20250805161133822997.jpg",
+        "list_create_username": "yulianna",
+        "pub_type": 2,
+        "sound": {
+          "id": "A11",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1955608724_581_0",
+        "heat": 125851243,
+        "type": 0
+      },
+      {
+        "list_create_listid": 149,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20240731/20240731163702101340.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "这首首的爱情伤感主打歌单，捕捉了失恋情深与内心挣扎的情感，适合通勤路上聆听。旋律中弥漫着淡淡的忧伤，讲述着生活不易与遗憾，每一首都让你在孤单时刻找到共鸣。",
+        "list_create_userid": 2235294048,
+        "update_time": 1788506594,
+        "list_ver": 68,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1104,
+            "tag_name": "通勤",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_2235294048_149_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音近来热搜爆红的网络热歌100首",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 126,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260826/20260826155003645330.jpg",
+        "list_create_username": "空气感",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2235294048_149_0",
+        "heat": 35616753,
+        "type": 0
+      },
+      {
+        "list_create_listid": 76,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20240423/20240423074525896771.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "哥哥结婚给他找的 分享出来希望也可以帮到大家 还有祝你们新婚快乐",
+        "list_create_userid": 1128027583,
+        "update_time": 1753119495,
+        "list_ver": 30,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 47,
+            "tag_name": "甜蜜",
+            "parent_id": 4
+          },
+          {
+            "tag_id": 88,
+            "tag_name": "婚礼",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_1128027583_76_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "婚礼暖场音乐歌单",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 67,
+        "pic": "http://c1.kgimg.com/custom/{size}/20240120/20240120194929433955.jpg",
+        "list_create_username": "星满窗",
+        "pub_type": 2,
+        "sound": {
+          "id": "A11",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1128027583_76_0",
+        "heat": 2817266,
+        "type": 0
+      },
+      {
+        "list_create_listid": 88,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20250327/20250327141925441932.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "搭乘这台由8090后金曲组成的时光机，穿越回80、90年代，感受那时候的纯真与美好，唤醒沉睡在心底的青春记忆。",
+        "list_create_userid": 1987601020,
+        "update_time": 1788256172,
+        "list_ver": 60,
+        "musiclib_tags": [
+          {
+            "tag_id": 12,
+            "tag_name": "经典",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 14,
+            "tag_name": "80后",
+            "parent_id": 7
+          },
+          {
+            "tag_id": 76,
+            "tag_name": "90后",
+            "parent_id": 7
+          }
+        ],
+        "list_create_gid": "collection_3_1987601020_88_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "8090经典音乐丨怀旧金曲伴你回忆往昔",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 189,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250817/20250817232524641624.jpg",
+        "list_create_username": "菇菇",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1987601020_88_0",
+        "heat": 19652365,
+        "type": 0
+      },
+      {
+        "list_create_listid": 316,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20230722/20230722094047324288.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "收集全网抖音爆款热歌，循环不断的洗脑旋律，刷到的bgm全都在这里，碎片化时间治愈所有坏情绪，单曲循环根本停不下来。",
+        "list_create_userid": 2126442625,
+        "update_time": 1788510169,
+        "list_ver": 42,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1104,
+            "tag_name": "通勤",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_2126442625_316_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音近期超爆火的网络热歌 | 首首必听",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 108,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260710/20260710165206375792.jpg",
+        "list_create_username": "古巷",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2126442625_316_0",
+        "heat": 6827982,
+        "type": 0
+      },
+      {
+        "list_create_listid": 11,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20260111/20260111220924184728.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "欢迎收听，2026抖音近期最新最红网络热歌100首",
+        "list_create_userid": 620249071,
+        "update_time": 1787840274,
+        "list_ver": 21,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 35,
+            "tag_name": "网络",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 1104,
+            "tag_name": "通勤",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_620249071_11_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音近期最新最红网络热歌100首",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 108,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260727/20260727235431729357.jpg",
+        "list_create_username": "舅金山",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_620249071_11_0",
+        "heat": 1557038,
+        "type": 0
+      },
+      {
+        "list_create_listid": 106,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122204254596170.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "这是一份专为DJ广场舞定制的歌单，旋律动感十足，适合在出租车和各种活动中播放，让人随音乐忘却烦恼，点燃激情。这里有失恋的伤感与爱情的甜蜜，也有对未来的憧憬与希望，百听不厌的华语remix与DJ版交织，让人沉浸于不同的情感世界之中。",
+        "list_create_userid": 1248951614,
+        "update_time": 1787297577,
+        "list_ver": 500,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 14,
+            "tag_name": "80后",
+            "parent_id": 7
+          },
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          }
+        ],
+        "list_create_gid": "collection_3_1248951614_106_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 8,
+          "trans_flag": 1
+        },
+        "name": "中文DJ广场舞专属",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 58,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250724/20250724192005816139.jpg",
+        "list_create_username": "小严",
+        "pub_type": 2,
+        "sound": {
+          "id": "A2",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_1248951614_106_0",
+        "heat": 642585,
+        "type": 0
+      },
+      {
+        "list_create_listid": 159,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20250117/20250117234726851049.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "搭载2026年的电子脉搏，这列激情的音符列车飞驰而来，带你穿梭在失恋的遗憾与人生的挑战之间，无论是在繁忙的都市出租车里，还是狂欢的夜店派对中，或是在朋友圈中寻找共鸣，每首DJ热碟都诉说着爱情的故事，让人热血沸腾。",
+        "list_create_userid": 2275944443,
+        "update_time": 1788074810,
+        "list_ver": 356,
+        "musiclib_tags": [
+          {
+            "tag_id": 10,
+            "tag_name": "舞曲",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 63,
+            "tag_name": "车载",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_2275944443_159_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "2026抖音最火车载DJ热碟 | 劲爆节奏 狂嗨上头",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 115,
+        "pic": "http://c1.kgimg.com/custom/{size}/20260804/20260804170717598886.jpg",
+        "list_create_username": "雯雯",
+        "pub_type": 2,
+        "sound": {
+          "id": "A2",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2275944443_159_0",
+        "heat": 8109009,
+        "type": 0
+      },
+      {
+        "list_create_listid": 147,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20230208/20230208114926823494.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "精选抖音热门爆款DJ，硬核旋律搭配冲击力十足的重鼓节拍，节奏强劲上头。车载、派对都适配，沉浸式动感音浪席卷全场，跟着律动尽情躁动，驱散沉闷，时刻保持热血嗨感。",
+        "list_create_userid": 2079056428,
+        "update_time": 1788169592,
+        "list_ver": 70,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 10,
+            "tag_name": "舞曲",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          }
+        ],
+        "list_create_gid": "collection_3_2079056428_147_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "抖音热搜DJ旋律：硬核鼓点，躁动全场",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 114,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250805/20250805161524685435.jpg",
+        "list_create_username": "甜心小羊",
+        "pub_type": 2,
+        "sound": {
+          "id": "6347",
+          "type": 5,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2079056428_147_0",
+        "heat": 168250535,
+        "type": 0
+      },
+      {
+        "list_create_listid": 28,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20260806/20260806174320196219.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "五颜六色的生活，不能乱七八糟的过",
+        "list_create_userid": 2065724092,
+        "update_time": 1786394903,
+        "list_ver": 64,
+        "musiclib_tags": [
+          {
+            "tag_id": 34,
+            "tag_name": "轻音乐",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 44,
+            "tag_name": "安静",
+            "parent_id": 4
+          },
+          {
+            "tag_id": 1105,
+            "tag_name": "夜晚",
+            "parent_id": 5
+          }
+        ],
+        "list_create_gid": "collection_3_2065724092_28_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "睡不着来听听治愈系吧",
+        "auditinfo": {
+          "review_status": 2,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 54,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250810/20250810102915319089.jpg",
+        "list_create_username": "厌",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2065724092_28_0",
+        "heat": 253240,
+        "type": 0
+      },
+      {
+        "list_create_listid": 252,
+        "deleted_or_404": 0,
+        "attribute_bit": 0,
+        "create_user_pic": "http://imge.kugou.com/kugouicon/165/20240520/20240520093833507018.jpg",
+        "is_pri": 0,
+        "special_tag": 0,
+        "source": 1,
+        "intro": "当节奏响起，身体就开始不由自主地摇摆！这是专属于抖音热歌DJ的魔力。每一个鼓点，都像是心跳的加速器，让你瞬间热血沸腾",
+        "list_create_userid": 2201433198,
+        "update_time": 1788096669,
+        "list_ver": 43,
+        "musiclib_tags": [
+          {
+            "tag_id": 9,
+            "tag_name": "流行",
+            "parent_id": 8
+          },
+          {
+            "tag_id": 10,
+            "tag_name": "舞曲",
+            "parent_id": 1
+          },
+          {
+            "tag_id": 17,
+            "tag_name": "DJ热碟",
+            "parent_id": 1
+          }
+        ],
+        "list_create_gid": "collection_3_2201433198_252_0",
+        "trans_param": {
+          "special_tag": 0,
+          "iden": 0,
+          "trans_flag": 1
+        },
+        "name": "抖音热歌DJ：顶级提神，上头狂嗨！",
+        "auditinfo": {
+          "review_status": 1,
+          "status": 1,
+          "is_drop": 0
+        },
+        "plist": {},
+        "count": 118,
+        "pic": "http://c1.kgimg.com/custom/{size}/20250513/20250513193000361595.jpg",
+        "list_create_username": "六便士",
+        "pub_type": 2,
+        "sound": {
+          "id": "A1",
+          "type": 1,
+          "args": ""
+        },
+        "global_collection_id": "collection_3_2201433198_252_0",
+        "heat": 1991423,
+        "type": 0
+      }
+    ]
+  },
+  "status": 1,
+  "error_code": 0
+}

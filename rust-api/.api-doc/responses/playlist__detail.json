@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "tags": "流行,日语,游戏,ACG",
+      "status": 1,
+      "create_user_pic": "http://imge.kugou.com/kugouicon/165/20161103/20161103181052105.jpg",
+      "is_pri": 0,
+      "pub_new": 0,
+      "is_drop": 0,
+      "list_create_userid": 509005933,
+      "is_publish": 1,
+      "musiclib_tags": [
+        {
+          "tag_id": 9,
+          "parent_id": 8,
+          "tag_name": "流行"
+        },
+        {
+          "tag_id": 21,
+          "parent_id": 2,
+          "tag_name": "日语"
+        },
+        {
+          "tag_id": 74,
+          "parent_id": 1,
+          "tag_name": "游戏"
+        },
+        {
+          "tag_id": 77,
+          "parent_id": 1,
+          "tag_name": "ACG"
+        }
+      ],
+      "pub_type": 1,
+      "is_featured": 0,
+      "publish_date": "2020-09-01",
+      "collect_total": 0,
+      "list_ver": 2,
+      "intro": "天空燃尽如灰，繁星烧毁似尘，那些音乐所带来的力量，化作为光，将引领着我们前行！",
+      "type": 0,
+      "list_create_listid": 33,
+      "specialid": 2927982,
+      "radio_id": 0,
+      "source": 1,
+      "trans_param": {
+        "iden": 0
+      },
+      "listid": 33,
+      "is_def": 0,
+      "parent_global_collection_id": "collection_1_509005933_2927982_0",
+      "sound_quality": "",
+      "per_count": 0,
+      "plist": [],
+      "kq_talent": 0,
+      "create_time": 1598926530,
+      "is_per": 0,
+      "is_edit": 1,
+      "update_time": 1735836959,
+      "code": 1,
+      "count": 232,
+      "sort": 0,
+      "is_mine": 0,
+      "musiclib_id": 0,
+      "per_num": 0,
+      "create_user_gender": 0,
+      "number": 0,
+      "pic": "http://imge.kugou.com/soft/collection/{size}/20190123/20190123112145904886.jpg",
+      "list_create_username": "仗剑啸红尘",
+      "name": "[打游戏必备]感受这场听觉盛宴!",
+      "is_custom_pic": 1,
+      "global_collection_id": "collection_1_509005933_2927982_0",
+      "heat": 0,
+      "list_create_gid": "collection_1_509005933_2927982_0"
+    }
+  ],
+  "status": 1,
+  "error_code": 0
+}

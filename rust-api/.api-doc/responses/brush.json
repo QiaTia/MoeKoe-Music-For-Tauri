@@ -1,0 +1,276 @@
+{
+  "timestamp": 1788516840,
+  "status": 1,
+  "errcode": 0,
+  "data": {
+    "list": [
+      {
+        "song": {
+          "wide_audio_id": 60601056,
+          "is_publish": 1,
+          "author_name": "Bvrnout、AXYL",
+          "audio_id": 60601056,
+          "author_cover": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250319/20250319072337487676.jpg",
+          "album_audio_id": 220716723,
+          "album_id": 30210059,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20230115/20230115083002412303.jpg",
+          "songname": "Silhouette"
+        },
+        "hp_mv_info": {
+          "play_info": {
+            "expire_time": 1788603240,
+            "src_file": {
+              "h265": {
+                "backup_url": [],
+                "play_url": "http://explorebssdlbig.kugou.com/202609041814/29c43ee2703e8ceab011381b8386544e/f0370cb81a6dc2e936355a28b571b06e.mp4"
+              },
+              "h264": {
+                "backup_url": [],
+                "play_url": "http://explorebssdlbig.kugou.com/202609041814/c8e9fea637e4e480b06ae999e9dcc4f6/1c1c33cbdbde7f1659344adbd332a09d.mp4"
+              }
+            }
+          },
+          "mv_info": {
+            "is_show": 1,
+            "theme_id": 62,
+            "video_list": [
+              {
+                "video_id": "55c7eb809d81ada37955dd541fe2968d",
+                "e_time": 209,
+                "likes": 0,
+                "video_bss_second_img": "",
+                "s_time": 0,
+                "views": 0,
+                "video_bss_img": "https://coolimgbssdl.kugou.com/f06fb39a9956796e04ce636beafea76a.jpg",
+                "slice_id": "09054fec2b016443d6758a4e6610abed_0",
+                "video_status": 1
+              }
+            ],
+            "is_longvideo": 1,
+            "vstr_status": 1,
+            "mixsongid": 220716723,
+            "show_type": 1,
+            "play_type": 0,
+            "video_theme_id": 99,
+            "views": 17860,
+            "userid": 1546840979,
+            "vstr_id": "7013689608549163008",
+            "play_rate": 944,
+            "likes": 51,
+            "preview": {
+              "url": "http://coolvideoandroidbssdlbig.kugou.com/202609041814/1f13f7588a0360bd7aa3fc5db931f785/d11aac511dbf4bc8970f29157aa987f2.mp4",
+              "backup_url": "http://coolvideoandroidbssdlbig.tx.kugou.com/202609041814/884a280d8dbdb1b09fa993347171ec11/d11aac511dbf4bc8970f29157aa987f2.mp4"
+            },
+            "album_id": 30210059,
+            "vstr_type": 1,
+            "need_recommend": 999,
+            "video_custom_img": "https://coolimgbssdl.kugou.com/89e49d8e24716b4224d0841a71eb7e67.jpg",
+            "is_nicevideo": 0,
+            "treads": 0
+          },
+          "cover_info": {
+            "first_frame_img": "https://exploreimgbssdl.kugou.com/4ec3c7e1e8e8cff9dc6345bab43aae7b.png",
+            "first_frame_img_30s": "https://exploreimgbssdl.kugou.com/4ec3c7e1e8e8cff9dc6345bab43aae7b.png"
+          },
+          "type": 1
+        },
+        "tags": [],
+        "released_at": "",
+        "style": 5,
+        "userid": 1546840979,
+        "content_ver": 4,
+        "pics": [],
+        "src": 4,
+        "song_extra": {
+          "audio_info": {
+            "timelength_super": 0,
+            "filesize_flac": 26590746,
+            "bitrate": 128,
+            "filesize_320": 8336436,
+            "timelength_high": 0,
+            "bitrate_flac": 1020,
+            "hash_320": "925FA5EFBA0E01D11ABF808C5D48BF74",
+            "hash": "E15F4D489A1C055432525F48882384CD",
+            "filesize_high": 0,
+            "timelength_flac": 208333,
+            "extname_super": "",
+            "bitrate_super": 0,
+            "bitrate_high": 0,
+            "timelength": 208378,
+            "hash_flac": "78DDEF40ACE88F3EB12A7BC46698E19D",
+            "filesize": 3334718,
+            "hash_super": "",
+            "filesize_super": 0,
+            "extname": "mp3",
+            "hash_high": "",
+            "timelength_320": 208378
+          },
+          "authors": [
+            {
+              "identity": 1,
+              "sisp": 1,
+              "base": {
+                "birthday": "",
+                "is_publish": 1,
+                "author_name": "Bvrnout",
+                "author_id": 721677,
+                "language": "欧美",
+                "identity": 1,
+                "country": "欧美",
+                "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250319/20250319072337487676.jpg",
+                "type": 1
+              }
+            },
+            {
+              "identity": 1,
+              "sisp": 1,
+              "base": {
+                "birthday": "",
+                "is_publish": 1,
+                "author_name": "AXYL",
+                "author_id": 1130461,
+                "language": "其他",
+                "identity": 1,
+                "country": "其他",
+                "avatar": "",
+                "type": 15
+              }
+            }
+          ],
+          "base_info": {
+            "wide_audio_id": 60601056,
+            "author_name": "Bvrnout、AXYL",
+            "final_id": 0,
+            "audio_id": 60601056,
+            "language": "英语",
+            "big_pack_id": 7042996,
+            "_raw_publish": 1,
+            "songname": "Silhouette",
+            "album_name": "Silhouette",
+            "is_publish": 1,
+            "is_hot": 1,
+            "version": 1,
+            "publish_date": "2019-10-18",
+            "album_id": 30210059,
+            "audio_group_id": 90840042,
+            "album_audio_id": 220716723,
+            "similar_audio_id": 60601056,
+            "provider": 0
+          },
+          "climax_info": {
+            "timelength": "27000",
+            "start_time": "65000",
+            "end_time": "92000",
+            "audio_id": "60601056"
+          },
+          "copyright": {
+            "qualities": {
+              "flac": {
+                "sale_mode": {
+                  "raw_play": 0,
+                  "download": 4,
+                  "raw_download": 0,
+                  "play": 12
+                },
+                "privilege": 10,
+                "raw_privilege": 0,
+                "level": 5
+              },
+              "320": {
+                "sale_mode": {
+                  "raw_play": 0,
+                  "download": 4,
+                  "raw_download": 0,
+                  "play": 12
+                },
+                "privilege": 10,
+                "raw_privilege": 0,
+                "level": 4
+              },
+              "128": {
+                "sale_mode": {
+                  "raw_play": 0,
+                  "download": 4,
+                  "raw_download": 0,
+                  "play": 0
+                },
+                "privilege": 8,
+                "raw_privilege": 0,
+                "level": 2
+              }
+            },
+            "audio_pay_type": 3,
+            "trans_param": {
+              "cpy_map": "2",
+              "pay_block_tpl": 1,
+              "ogg_128_hash": "C4B3CF1AEC182570B5E8A00D09C0DCA9",
+              "classmap": {
+                "attr0": 234881032
+              },
+              "is_original": 1,
+              "union_cover": "http://imge.kugou.com/stdmusic/{size}/20230115/20230115083002412303.jpg",
+              "language": "英语",
+              "hash_multitrack": "E7BDD8F7FD5DD0D0DEF5E1B335244453",
+              "cpy_attr0": 50339840,
+              "ipmap": {
+                "attr0": 8606716928
+              },
+              "ogg_320_hash": "E85C5AB048BC91E00105FE948F722F47",
+              "qualitymap": {
+                "bits": "1b4100000773fc034",
+                "attr0": 2000666676,
+                "attr1": 1746927616
+              },
+              "ogg_128_filesize": 2490274,
+              "ogg_320_filesize": 8918630
+            }
+          }
+        },
+        "comment_total": 0,
+        "id": "7013689608549163008",
+        "text": "",
+        "g_user": {
+          "userid": 1546840979,
+          "nickname": "",
+          "avatar": ""
+        },
+        "extra": {
+          "rec_info": {
+            "rec_desc": "根据你的听歌偏好推荐"
+          },
+          "src_comment_id": "",
+          "mv_like_infos": {
+            "count": 51,
+            "is_like": 0
+          },
+          "tracker_info": {
+            "auth": "c9d411db9cbb8f15d7e7895114549b8b",
+            "module_id": 11,
+            "open_time": "1788603240"
+          },
+          "src_comment_code": "",
+          "mv_comment_infos": {
+            "count": 2543
+          },
+          "src_like_code": ""
+        },
+        "like_total": 0,
+        "haslike": 0
+      }
+    ],
+    "total": 0,
+    "pool_type": 1,
+    "user_tags": [],
+    "has_next": 1,
+    "paging": {
+      "b_page": 0,
+      "last_id": "",
+      "v_page": 0,
+      "last_released_at": "",
+      "last_created_at": "",
+      "r_page": 1
+    },
+    "next_page": 1
+  },
+  "error": ""
+}

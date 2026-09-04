@@ -1,0 +1,55 @@
+{
+  "status": 1,
+  "err_code": 0,
+  "msg": "success",
+  "message": "success",
+  "childrenid": "2550343002",
+  "count": 0,
+  "combine_count": 0,
+  "current_page": 1,
+  "hasRcmd": false,
+  "song_score": {
+    "score_user_count": 0,
+    "score_list_url": "",
+    "user_simple_song_scor": 0,
+    "is_show": 0,
+    "user_cmtid": "",
+    "special_child_id": "",
+    "special_child_name": "",
+    "user_score_status": 0,
+    "song_score": 0,
+    "user_song_score": 0
+  },
+  "captcha": 0,
+  "has_filter_risk_user": 0,
+  "artCmtConfig": {
+    "tipOfNoUseArtCmt": "该功能仅对部分用户开放",
+    "wayToEdit": 1,
+    "canUseArtCmt": 0,
+    "urlOfNoUseArtCmt": "",
+    "h5EditorUrl": "",
+    "canUploadImg": 0
+  },
+  "cache_time": 0,
+  "config": {
+    "canUploadImg": 0,
+    "closeCmt": 0,
+    "emptyTip": "还没有人评论，快来抢沙发吧！",
+    "input_hint": "这首歌让你想到什么？",
+    "numOpusUserMax": 3,
+    "numOpusUserMaxSVIP": 1,
+    "numOpusUserMaxYVIP": 3,
+    "tipOfNoUploadImg": "该功能仅对部分用户开放",
+    "tip_noupload_video": "该功能仅对部分用户开放",
+    "toastBgOpus": "http://imge.kugou.com/commendpic/20190403/20190403110105584375.png",
+    "urlOfNoUploadImg": "https://h5.kugou.com/requirement/v-c1f295e9/index.html",
+    "url_noupload_video": "http://www2.kugou.kugou.com/apps/commentBlackHouse/msg.html?tid=126797095",
+    "canUploadVoice": 0
+  },
+  "song_like_num": 0,
+  "event_info": {
+    "event_url": "",
+    "user_vote": 0,
+    "options": null
+  }
+}

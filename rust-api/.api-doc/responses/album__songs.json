@@ -1,0 +1,822 @@
+{
+  "total": 8,
+  "error_code": 0,
+  "data": {
+    "total": 8,
+    "songs": [
+      {
+        "mvdata": [],
+        "extend": {
+          "has_obbligato": 0,
+          "cd_name": "",
+          "disc": 1,
+          "sort": 1
+        },
+        "trans_param": {
+          "cpy_map": "2",
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg",
+          "cid": -1,
+          "language": "英语",
+          "cpy_attr0": 0,
+          "ipmap": {
+            "attr0": 137455730752
+          },
+          "qualitymap": {
+            "bits": "14",
+            "attr0": 20,
+            "attr1": 0
+          },
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "copyright": {
+          "privilege_flac": 0,
+          "sale_mode_128_download": 0,
+          "viponly_tag": 0,
+          "privilege_128": 0,
+          "album_sale_url": "",
+          "privilege": 0,
+          "sale_mode_flac_download": 0,
+          "privilege_320": 0,
+          "sale_mode_320_download": 0,
+          "sale_mode_download": 0
+        },
+        "audio_info": {
+          "hash": "E269A1688E444BA73C733611ABAAFA7F",
+          "bitrate": 128,
+          "duration_flac": 0,
+          "filesize_320": 8392747,
+          "filesize_flac": 0,
+          "duration_320": 210000,
+          "filesize_high": 0,
+          "hash_320": "91778813F7D80BDD5544C70E67BCFF0E",
+          "duration": 209789,
+          "duration_high": 0,
+          "hash_high": "",
+          "hash_super": "",
+          "filesize": 3357314,
+          "hash_128": "E269A1688E444BA73C733611ABAAFA7F",
+          "bitrate_high": 0,
+          "hash_flac": "",
+          "filesize_128": 3357314,
+          "duration_super": 0,
+          "bitrate_super": 0,
+          "filesize_super": 0,
+          "extname": "mp3",
+          "duration_128": 209789,
+          "extname_super": ""
+        },
+        "base": {
+          "is_publish": 1,
+          "album_id": 1289478,
+          "author_name": "Blackbird Harmony",
+          "audio_id": 17349944,
+          "audio_name": "Hardwood Exits",
+          "album_audio_id": 35774270
+        },
+        "album_info": {
+          "album_name": "Hardwood Exits",
+          "cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg"
+        },
+        "extra": {
+          "remark": ""
+        },
+        "deprecated": {
+          "pay_block_tpl": 1,
+          "video_hash": "",
+          "old_cpy": 1,
+          "pay_type": 0,
+          "cid": -1,
+          "price": 0,
+          "pkg_price": 0,
+          "type": "audio",
+          "display": 0,
+          "display_rate": 0
+        },
+        "authors": [
+          {
+            "author_name": "Blackbird Harmony",
+            "author_id": 509922
+          }
+        ]
+      },
+      {
+        "mvdata": [],
+        "extend": {
+          "has_obbligato": 0,
+          "cd_name": "",
+          "disc": 1,
+          "sort": 2
+        },
+        "trans_param": {
+          "cpy_map": "2",
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg",
+          "cid": -1,
+          "language": "英语",
+          "cpy_attr0": 0,
+          "ipmap": {
+            "attr0": 137455730752
+          },
+          "qualitymap": {
+            "bits": "14",
+            "attr0": 20,
+            "attr1": 0
+          },
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "copyright": {
+          "privilege_flac": 0,
+          "sale_mode_128_download": 0,
+          "viponly_tag": 0,
+          "privilege_128": 0,
+          "album_sale_url": "",
+          "privilege": 0,
+          "sale_mode_flac_download": 0,
+          "privilege_320": 0,
+          "sale_mode_320_download": 0,
+          "sale_mode_download": 0
+        },
+        "audio_info": {
+          "hash": "87E18ED2B25827B494EAB709D92F04C6",
+          "bitrate": 128,
+          "duration_flac": 0,
+          "filesize_320": 6880780,
+          "filesize_flac": 0,
+          "duration_320": 172000,
+          "filesize_high": 0,
+          "hash_320": "F33D6575D4F8E365CECED9D3233A5133",
+          "duration": 171990,
+          "duration_high": 0,
+          "hash_high": "",
+          "hash_super": "",
+          "filesize": 2752535,
+          "hash_128": "87E18ED2B25827B494EAB709D92F04C6",
+          "bitrate_high": 0,
+          "hash_flac": "",
+          "filesize_128": 2752535,
+          "duration_super": 0,
+          "bitrate_super": 0,
+          "filesize_super": 0,
+          "extname": "mp3",
+          "duration_128": 171990,
+          "extname_super": ""
+        },
+        "base": {
+          "is_publish": 1,
+          "album_id": 1289478,
+          "author_name": "Blackbird Harmony",
+          "audio_id": 17650329,
+          "audio_name": "Caution & Dispatch",
+          "album_audio_id": 35774271
+        },
+        "album_info": {
+          "album_name": "Hardwood Exits",
+          "cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg"
+        },
+        "extra": {
+          "remark": ""
+        },
+        "deprecated": {
+          "pay_block_tpl": 1,
+          "video_hash": "",
+          "old_cpy": 1,
+          "pay_type": 0,
+          "cid": -1,
+          "price": 0,
+          "pkg_price": 0,
+          "type": "audio",
+          "display": 0,
+          "display_rate": 0
+        },
+        "authors": [
+          {
+            "author_name": "Blackbird Harmony",
+            "author_id": 509922
+          }
+        ]
+      },
+      {
+        "mvdata": [],
+        "extend": {
+          "has_obbligato": 0,
+          "cd_name": "",
+          "disc": 1,
+          "sort": 3
+        },
+        "trans_param": {
+          "cpy_map": "2",
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg",
+          "cid": -1,
+          "language": "英语",
+          "cpy_attr0": 0,
+          "ipmap": {
+            "attr0": 137455730752
+          },
+          "qualitymap": {
+            "bits": "14",
+            "attr0": 20,
+            "attr1": 0
+          },
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "copyright": {
+          "privilege_flac": 0,
+          "sale_mode_128_download": 0,
+          "viponly_tag": 0,
+          "privilege_128": 0,
+          "album_sale_url": "",
+          "privilege": 0,
+          "sale_mode_flac_download": 0,
+          "privilege_320": 0,
+          "sale_mode_320_download": 0,
+          "sale_mode_download": 0
+        },
+        "audio_info": {
+          "hash": "7BAA8BE82CA933F28C71827991E57BA3",
+          "bitrate": 128,
+          "duration_flac": 0,
+          "filesize_320": 8996829,
+          "filesize_flac": 0,
+          "duration_320": 224888,
+          "filesize_high": 0,
+          "hash_320": "838A1F6A57A7A4A880A99F33870B5DBF",
+          "duration": 224888,
+          "duration_high": 0,
+          "hash_high": "",
+          "hash_super": "",
+          "filesize": 3598886,
+          "hash_128": "7BAA8BE82CA933F28C71827991E57BA3",
+          "bitrate_high": 0,
+          "hash_flac": "",
+          "filesize_128": 3598886,
+          "duration_super": 0,
+          "bitrate_super": 0,
+          "filesize_super": 0,
+          "extname": "mp3",
+          "duration_128": 224888,
+          "extname_super": ""
+        },
+        "base": {
+          "is_publish": 1,
+          "album_id": 1289478,
+          "author_name": "Blackbird Harmony",
+          "audio_id": 17645831,
+          "audio_name": "Samaritans",
+          "album_audio_id": 35774272
+        },
+        "album_info": {
+          "album_name": "Hardwood Exits",
+          "cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg"
+        },
+        "extra": {
+          "remark": ""
+        },
+        "deprecated": {
+          "pay_block_tpl": 1,
+          "video_hash": "",
+          "old_cpy": 1,
+          "pay_type": 0,
+          "cid": -1,
+          "price": 0,
+          "pkg_price": 0,
+          "type": "audio",
+          "display": 0,
+          "display_rate": 0
+        },
+        "authors": [
+          {
+            "author_name": "Blackbird Harmony",
+            "author_id": 509922
+          }
+        ]
+      },
+      {
+        "mvdata": [],
+        "extend": {
+          "has_obbligato": 0,
+          "cd_name": "",
+          "disc": 1,
+          "sort": 4
+        },
+        "trans_param": {
+          "cpy_map": "2",
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg",
+          "cid": -1,
+          "language": "英语",
+          "cpy_attr0": 0,
+          "ipmap": {
+            "attr0": 137455730752
+          },
+          "qualitymap": {
+            "bits": "14",
+            "attr0": 20,
+            "attr1": 0
+          },
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "copyright": {
+          "privilege_flac": 0,
+          "sale_mode_128_download": 0,
+          "viponly_tag": 0,
+          "privilege_128": 0,
+          "album_sale_url": "",
+          "privilege": 0,
+          "sale_mode_flac_download": 0,
+          "privilege_320": 0,
+          "sale_mode_320_download": 0,
+          "sale_mode_download": 0
+        },
+        "audio_info": {
+          "hash": "212029699D674FC7BA8C7CB778EB569C",
+          "bitrate": 128,
+          "duration_flac": 0,
+          "filesize_320": 5199539,
+          "filesize_flac": 0,
+          "duration_320": 130000,
+          "filesize_high": 0,
+          "hash_320": "C508181B985274DBB3FDA9C101B70FC7",
+          "duration": 129959,
+          "duration_high": 0,
+          "hash_high": "",
+          "hash_super": "",
+          "filesize": 2080022,
+          "hash_128": "212029699D674FC7BA8C7CB778EB569C",
+          "bitrate_high": 0,
+          "hash_flac": "",
+          "filesize_128": 2080022,
+          "duration_super": 0,
+          "bitrate_super": 0,
+          "filesize_super": 0,
+          "extname": "mp3",
+          "duration_128": 129959,
+          "extname_super": ""
+        },
+        "base": {
+          "is_publish": 1,
+          "album_id": 1289478,
+          "author_name": "Blackbird Harmony",
+          "audio_id": 17161364,
+          "audio_name": "Turpentine",
+          "album_audio_id": 35774273
+        },
+        "album_info": {
+          "album_name": "Hardwood Exits",
+          "cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg"
+        },
+        "extra": {
+          "remark": ""
+        },
+        "deprecated": {
+          "pay_block_tpl": 1,
+          "video_hash": "",
+          "old_cpy": 1,
+          "pay_type": 0,
+          "cid": -1,
+          "price": 0,
+          "pkg_price": 0,
+          "type": "audio",
+          "display": 0,
+          "display_rate": 0
+        },
+        "authors": [
+          {
+            "author_name": "Blackbird Harmony",
+            "author_id": 509922
+          }
+        ]
+      },
+      {
+        "mvdata": [],
+        "extend": {
+          "has_obbligato": 0,
+          "cd_name": "",
+          "disc": 1,
+          "sort": 5
+        },
+        "trans_param": {
+          "cpy_map": "2",
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg",
+          "cid": -1,
+          "language": "英语",
+          "cpy_attr0": 33554432,
+          "ipmap": {
+            "attr0": 137455730752
+          },
+          "qualitymap": {
+            "bits": "14",
+            "attr0": 20,
+            "attr1": 0
+          },
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "copyright": {
+          "privilege_flac": 0,
+          "sale_mode_128_download": 0,
+          "viponly_tag": 0,
+          "privilege_128": 0,
+          "album_sale_url": "",
+          "privilege": 0,
+          "sale_mode_flac_download": 0,
+          "privilege_320": 0,
+          "sale_mode_320_download": 0,
+          "sale_mode_download": 0
+        },
+        "audio_info": {
+          "hash": "65C87A324D46950E8B008A57754429D3",
+          "bitrate": 128,
+          "duration_flac": 0,
+          "filesize_320": 8987429,
+          "filesize_flac": 0,
+          "duration_320": 224653,
+          "filesize_high": 0,
+          "hash_320": "81B652635DF1BBB3491149177B3B8E52",
+          "duration": 224653,
+          "duration_high": 0,
+          "hash_high": "",
+          "hash_super": "",
+          "filesize": 3595129,
+          "hash_128": "65C87A324D46950E8B008A57754429D3",
+          "bitrate_high": 0,
+          "hash_flac": "",
+          "filesize_128": 3595129,
+          "duration_super": 0,
+          "bitrate_super": 0,
+          "filesize_super": 0,
+          "extname": "mp3",
+          "duration_128": 224653,
+          "extname_super": ""
+        },
+        "base": {
+          "is_publish": 1,
+          "album_id": 1289478,
+          "author_name": "Blackbird Harmony",
+          "audio_id": 17646533,
+          "audio_name": "Searchlights",
+          "album_audio_id": 35774274
+        },
+        "album_info": {
+          "album_name": "Hardwood Exits",
+          "cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg"
+        },
+        "extra": {
+          "remark": ""
+        },
+        "deprecated": {
+          "pay_block_tpl": 1,
+          "video_hash": "",
+          "old_cpy": 1,
+          "pay_type": 0,
+          "cid": -1,
+          "price": 0,
+          "pkg_price": 0,
+          "type": "audio",
+          "display": 0,
+          "display_rate": 0
+        },
+        "authors": [
+          {
+            "author_name": "Blackbird Harmony",
+            "author_id": 509922
+          }
+        ]
+      },
+      {
+        "mvdata": [],
+        "extend": {
+          "has_obbligato": 0,
+          "cd_name": "",
+          "disc": 1,
+          "sort": 6
+        },
+        "trans_param": {
+          "cpy_map": "2",
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg",
+          "cid": -1,
+          "language": "英语",
+          "cpy_attr0": 0,
+          "ipmap": {
+            "attr0": 137455730752
+          },
+          "qualitymap": {
+            "bits": "14",
+            "attr0": 20,
+            "attr1": 0
+          },
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "copyright": {
+          "privilege_flac": 0,
+          "sale_mode_128_download": 0,
+          "viponly_tag": 0,
+          "privilege_128": 0,
+          "album_sale_url": "",
+          "privilege": 0,
+          "sale_mode_flac_download": 0,
+          "privilege_320": 0,
+          "sale_mode_320_download": 0,
+          "sale_mode_download": 0
+        },
+        "audio_info": {
+          "hash": "B2515FDF55A0862CBA43E80060A2B424",
+          "bitrate": 128,
+          "duration_flac": 0,
+          "filesize_320": 7288290,
+          "filesize_flac": 0,
+          "duration_320": 182000,
+          "filesize_high": 0,
+          "hash_320": "2DD9751EB0D0810DC554B2F29A8A8A65",
+          "duration": 182177,
+          "duration_high": 0,
+          "hash_high": "",
+          "hash_super": "",
+          "filesize": 2915531,
+          "hash_128": "B2515FDF55A0862CBA43E80060A2B424",
+          "bitrate_high": 0,
+          "hash_flac": "",
+          "filesize_128": 2915531,
+          "duration_super": 0,
+          "bitrate_super": 0,
+          "filesize_super": 0,
+          "extname": "mp3",
+          "duration_128": 182177,
+          "extname_super": ""
+        },
+        "base": {
+          "is_publish": 1,
+          "album_id": 1289478,
+          "author_name": "Blackbird Harmony",
+          "audio_id": 17650062,
+          "audio_name": "Picture of You",
+          "album_audio_id": 35774275
+        },
+        "album_info": {
+          "album_name": "Hardwood Exits",
+          "cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg"
+        },
+        "extra": {
+          "remark": ""
+        },
+        "deprecated": {
+          "pay_block_tpl": 1,
+          "video_hash": "",
+          "old_cpy": 1,
+          "pay_type": 0,
+          "cid": -1,
+          "price": 0,
+          "pkg_price": 0,
+          "type": "audio",
+          "display": 0,
+          "display_rate": 0
+        },
+        "authors": [
+          {
+            "author_name": "Blackbird Harmony",
+            "author_id": 509922
+          }
+        ]
+      },
+      {
+        "mvdata": [],
+        "extend": {
+          "has_obbligato": 0,
+          "cd_name": "",
+          "disc": 1,
+          "sort": 7
+        },
+        "trans_param": {
+          "cpy_map": "2",
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg",
+          "cid": -1,
+          "language": "英语",
+          "cpy_attr0": 0,
+          "ipmap": {
+            "attr0": 137455730752
+          },
+          "qualitymap": {
+            "bits": "14",
+            "attr0": 20,
+            "attr1": 0
+          },
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "copyright": {
+          "privilege_flac": 0,
+          "sale_mode_128_download": 0,
+          "viponly_tag": 0,
+          "privilege_128": 0,
+          "album_sale_url": "",
+          "privilege": 0,
+          "sale_mode_flac_download": 0,
+          "privilege_320": 0,
+          "sale_mode_320_download": 0,
+          "sale_mode_download": 0
+        },
+        "audio_info": {
+          "hash": "4CC5500E976F638E5093F721F4C8FD29",
+          "bitrate": 128,
+          "duration_flac": 0,
+          "filesize_320": 6541188,
+          "filesize_flac": 0,
+          "duration_320": 164000,
+          "filesize_high": 0,
+          "hash_320": "6ED7A7B27050B8F75C88BFA298F55D8F",
+          "duration": 163500,
+          "duration_high": 0,
+          "hash_high": "",
+          "hash_super": "",
+          "filesize": 2616746,
+          "hash_128": "4CC5500E976F638E5093F721F4C8FD29",
+          "bitrate_high": 0,
+          "hash_flac": "",
+          "filesize_128": 2616746,
+          "duration_super": 0,
+          "bitrate_super": 0,
+          "filesize_super": 0,
+          "extname": "mp3",
+          "duration_128": 163500,
+          "extname_super": ""
+        },
+        "base": {
+          "is_publish": 1,
+          "album_id": 1289478,
+          "author_name": "Blackbird Harmony",
+          "audio_id": 17637995,
+          "audio_name": "Tonight... If it's the Last Time I See You",
+          "album_audio_id": 35774276
+        },
+        "album_info": {
+          "album_name": "Hardwood Exits",
+          "cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg"
+        },
+        "extra": {
+          "remark": ""
+        },
+        "deprecated": {
+          "pay_block_tpl": 1,
+          "video_hash": "",
+          "old_cpy": 1,
+          "pay_type": 0,
+          "cid": -1,
+          "price": 0,
+          "pkg_price": 0,
+          "type": "audio",
+          "display": 0,
+          "display_rate": 0
+        },
+        "authors": [
+          {
+            "author_name": "Blackbird Harmony",
+            "author_id": 509922
+          }
+        ]
+      },
+      {
+        "mvdata": [],
+        "extend": {
+          "has_obbligato": 0,
+          "cd_name": "",
+          "disc": 1,
+          "sort": 8
+        },
+        "trans_param": {
+          "cpy_map": "2",
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg",
+          "cid": -1,
+          "language": "英语",
+          "cpy_attr0": 0,
+          "ipmap": {
+            "attr0": 137455730752
+          },
+          "qualitymap": {
+            "bits": "14",
+            "attr0": 20,
+            "attr1": 0
+          },
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "copyright": {
+          "privilege_flac": 0,
+          "sale_mode_128_download": 0,
+          "viponly_tag": 0,
+          "privilege_128": 0,
+          "album_sale_url": "",
+          "privilege": 0,
+          "sale_mode_flac_download": 0,
+          "privilege_320": 0,
+          "sale_mode_320_download": 0,
+          "sale_mode_download": 0
+        },
+        "audio_info": {
+          "hash": "D1497B31E4D4181A3E39B7C521BD95A2",
+          "bitrate": 128,
+          "duration_flac": 0,
+          "filesize_320": 5950821,
+          "filesize_flac": 0,
+          "duration_320": 148000,
+          "filesize_high": 0,
+          "hash_320": "B81FB470417AA4C406CA29A8CADA1FB4",
+          "duration": 148741,
+          "duration_high": 0,
+          "hash_high": "",
+          "hash_super": "",
+          "filesize": 2380531,
+          "hash_128": "D1497B31E4D4181A3E39B7C521BD95A2",
+          "bitrate_high": 0,
+          "hash_flac": "",
+          "filesize_128": 2380531,
+          "duration_super": 0,
+          "bitrate_super": 0,
+          "filesize_super": 0,
+          "extname": "mp3",
+          "duration_128": 148741,
+          "extname_super": ""
+        },
+        "base": {
+          "is_publish": 1,
+          "album_id": 1289478,
+          "author_name": "Blackbird Harmony",
+          "audio_id": 17650520,
+          "audio_name": "Blankets",
+          "album_audio_id": 35774277
+        },
+        "album_info": {
+          "album_name": "Hardwood Exits",
+          "cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg"
+        },
+        "extra": {
+          "remark": ""
+        },
+        "deprecated": {
+          "pay_block_tpl": 1,
+          "video_hash": "",
+          "old_cpy": 1,
+          "pay_type": 0,
+          "cid": -1,
+          "price": 0,
+          "pkg_price": 0,
+          "type": "audio",
+          "display": 0,
+          "display_rate": 0
+        },
+        "authors": [
+          {
+            "author_name": "Blackbird Harmony",
+            "author_id": 509922
+          }
+        ]
+      }
+    ]
+  },
+  "extra": {
+    "disc_cnt": 1
+  },
+  "status": 1,
+  "errmsg": ""
+}

@@ -1,0 +1,4400 @@
+{
+  "data": {
+    "timestamp": 1788516889,
+    "info": {
+      "song": [
+        {
+          "320hash": "88CBCD445BB27D9591E25EE67F844D2C",
+          "hash": "14ECD0A2A68CD70111C773430BEFBEF7",
+          "sqfilesize": 27836360,
+          "sqprivilege": 10,
+          "bitrate": 128,
+          "singername": "周深",
+          "320filesize": 9671771,
+          "feetype": 0,
+          "songname": "我们不散",
+          "filename": "周深 - 我们不散",
+          "trans_param": {
+            "init_pub_day": 3,
+            "ogg_128_hash": "1C5AFD34EF0A3062EB219D0811D96071",
+            "classmap": {
+              "attr0": 234881032
+            },
+            "language": "国语",
+            "free_limited": 1,
+            "cpy_attr0": 25174048,
+            "musicpack_advance": 0,
+            "display": 0,
+            "display_rate": 0,
+            "cpy_map": "2",
+            "cpy_level": 1,
+            "cpy_grade": 5,
+            "qualitymap": {
+              "bits": "800000db41080003d00c074",
+              "attr0": 1023459444,
+              "attr1": 1746993152
+            },
+            "is_original": 1,
+            "pay_block_tpl": 1,
+            "cid": 658997051,
+            "hash_multitrack": "95393BC336036E15373E94EF26F425E9",
+            "ipmap": {
+              "attr0": 138546253824
+            },
+            "ogg_320_hash": "2637E49EF05B794D584F326D7DCC21F6",
+            "ogg_128_filesize": 2911294,
+            "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260831/20260831191511251408.jpg",
+            "provider": 2,
+            "ogg_320_filesize": 10181520
+          },
+          "Accompany": 1,
+          "singerimgurl": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230531/20230531155603291987.jpg",
+          "sqhash": "EE7BD5300BACE7AC8911927BD8764A32",
+          "extname": "mp3",
+          "m4afilesize": 0,
+          "addtime": "2021-12-25 22:00:00",
+          "duration": 241,
+          "filesize": 3868826,
+          "isfirst": 0,
+          "mvhash": "3B82337027B25E6D96C34CFD074FB82C",
+          "320privilege": 10,
+          "intro": "",
+          "privilege": 8
+        }
+      ],
+      "topic": [],
+      "video": [
+        {
+          "authors": [
+            {
+              "singername": "Gareth.T",
+              "singerid": 6096141,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20251120/20251120112122428969.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "145",
+              "parent_id": "142",
+              "tag_name": "英语"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "41",
+              "parent_id": "35",
+              "tag_name": "港台"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "60",
+              "parent_id": "58",
+              "tag_name": "男艺人"
+            }
+          ],
+          "playcount": 316,
+          "comment": 3,
+          "sd_hash": "D009102375E421D97C43F23DE4308F1E",
+          "userid": 0,
+          "videoname": "tunnel vision",
+          "img_v20": "",
+          "fhd_bitrate": 4102858,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 0,
+          "username": "",
+          "ad_id": 472269,
+          "mvhash": "5e5e6daa0acc3a7b95b625a4810808aa",
+          "duration": 262120,
+          "hd_bitrate": 2114590,
+          "remark": "",
+          "fhd_hash": "16094346DDE770D2DE4B1878D418AEC1",
+          "singername": "Gareth.T",
+          "likecount": 18,
+          "hd_filesize": 69291421,
+          "description": "",
+          "sd_filesize": 20311934,
+          "useravatar": "",
+          "ld_bitrate": 520313,
+          "qhd_filesize": 36669424,
+          "qhd_hash": "D407B79BA2DE26500616C7B2856A0641",
+          "hd_hash": "17D4E060206F7EE0E144C0611F8518A5",
+          "collect_count": 0,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20260831/20260831141521349415.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20260903/20260903160619985734.jpg.webp",
+          "qhd_bitrate": 1119053,
+          "album_audio_id": "957354078",
+          "ld_filesize": 17049774,
+          "title": "Gareth.T - tunnel vision",
+          "is_ugc": 0,
+          "fhd_filesize": 134443506,
+          "ld_hash": "7C0722799CBF5ED7B9AA6FED58DF9C6F",
+          "publish": "2026-09-03 00:00:00",
+          "sd_bitrate": 619866,
+          "videoid": "17560962"
+        },
+        {
+          "authors": [
+            {
+              "singername": "展轩",
+              "singerid": 15323492,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250703/20250703152701248162.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "143",
+              "parent_id": "142",
+              "tag_name": "国语"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "40",
+              "parent_id": "35",
+              "tag_name": "内地"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "60",
+              "parent_id": "58",
+              "tag_name": "男艺人"
+            }
+          ],
+          "playcount": 3781,
+          "comment": 88,
+          "sd_hash": "0924E89F697853C3DEF5DDF695495DB4",
+          "userid": 0,
+          "videoname": "VIBE",
+          "img_v20": "",
+          "fhd_bitrate": 4138033,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 10,
+          "username": "",
+          "ad_id": 466935,
+          "mvhash": "011ddba90c4f4ebd312c218f32c760c7",
+          "duration": 196440,
+          "hd_bitrate": 2136623,
+          "remark": "",
+          "fhd_hash": "4573E098756897AC4C17E287A721385C",
+          "singername": "展轩",
+          "likecount": 166,
+          "hd_filesize": 52475739,
+          "description": "",
+          "sd_filesize": 15623830,
+          "useravatar": "",
+          "ld_bitrate": 535821,
+          "qhd_filesize": 27915094,
+          "qhd_hash": "1A0FFA3285EA1190BF05280A1A8C2A89",
+          "hd_hash": "B8C9AE2853D42CBC8F9CD8F2A83E018E",
+          "collect_count": 38,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20260825/20260825141903640789.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20260903/20260903095742461314.jpg.webp",
+          "qhd_bitrate": 1136602,
+          "album_audio_id": "953297563",
+          "ld_filesize": 13159840,
+          "title": "展轩 - VIBE",
+          "is_ugc": 0,
+          "fhd_filesize": 101630618,
+          "ld_hash": "3C94879BE2F899ECC521AB8B35DF68C1",
+          "publish": "2026-09-02 00:00:00",
+          "sd_bitrate": 636146,
+          "videoid": "17514199"
+        },
+        {
+          "authors": [
+            {
+              "singername": "周深",
+              "singerid": 169967,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230531/20230531155603291987.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "46",
+              "parent_id": "122",
+              "tag_name": "影视"
+            },
+            {
+              "tag_id": "444",
+              "parent_id": "122",
+              "tag_name": "电视剧"
+            },
+            {
+              "tag_id": "143",
+              "parent_id": "142",
+              "tag_name": "国语"
+            },
+            {
+              "tag_id": "40",
+              "parent_id": "35",
+              "tag_name": "内地"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "60",
+              "parent_id": "58",
+              "tag_name": "男艺人"
+            },
+            {
+              "tag_id": "443",
+              "parent_id": "42253",
+              "tag_name": "国产剧"
+            },
+            {
+              "tag_id": "41303",
+              "parent_id": "42252",
+              "tag_name": "OST相关"
+            }
+          ],
+          "playcount": 5468,
+          "comment": 37,
+          "sd_hash": "A9754CF97255E9757A0FCA3EB7E4CA0F",
+          "userid": 0,
+          "videoname": "我们不散",
+          "img_v20": "",
+          "fhd_bitrate": 4154221,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 0,
+          "username": "",
+          "ad_id": 470909,
+          "mvhash": "9fbc34558fd3d4cf1c9c36d4ade410a6",
+          "duration": 50280,
+          "hd_bitrate": 2142143,
+          "remark": "《生逢其时》电视剧主题曲/片尾曲",
+          "fhd_hash": "79EDEF9A97BDF8F4C7B45EDAB85F0FDB",
+          "singername": "周深",
+          "likecount": 537,
+          "hd_filesize": 13473278,
+          "description": "",
+          "sd_filesize": 4012484,
+          "useravatar": "",
+          "ld_bitrate": 536874,
+          "qhd_filesize": 7166027,
+          "qhd_hash": "C2470C0D5F0E2AA523B45B13AAB17DE5",
+          "hd_hash": "0DF27E4330AB33E1D2FA82714B5E4BA8",
+          "collect_count": 0,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20260831/20260831191511251408.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20260903/20260903111319890746.jpg.webp",
+          "qhd_bitrate": 1139340,
+          "album_audio_id": "956680083",
+          "ld_filesize": 3376737,
+          "title": "周深 - 我们不散",
+          "is_ugc": 0,
+          "fhd_filesize": 26128496,
+          "ld_hash": "B990A67F5805DDF221FD85966E8861EF",
+          "publish": "2026-09-03 10:30:00",
+          "sd_bitrate": 637952,
+          "videoid": "17553234"
+        },
+        {
+          "authors": [
+            {
+              "singername": "肖战",
+              "singerid": 281886,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20241111/20241111113505763031.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "42042",
+              "parent_id": "4",
+              "tag_name": "流行音乐"
+            },
+            {
+              "tag_id": "9",
+              "parent_id": "2",
+              "tag_name": "新歌推荐"
+            },
+            {
+              "tag_id": "13",
+              "parent_id": "2",
+              "tag_name": "华语精选"
+            },
+            {
+              "tag_id": "143",
+              "parent_id": "142",
+              "tag_name": "国语"
+            },
+            {
+              "tag_id": "40",
+              "parent_id": "35",
+              "tag_name": "内地"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "60",
+              "parent_id": "58",
+              "tag_name": "男艺人"
+            },
+            {
+              "tag_id": "374",
+              "parent_id": "42042",
+              "tag_name": "流行"
+            },
+            {
+              "tag_id": "1613",
+              "parent_id": "42042",
+              "tag_name": "华语流行"
+            },
+            {
+              "tag_id": "1614",
+              "parent_id": "42042",
+              "tag_name": "国语流行"
+            }
+          ],
+          "playcount": 1090628,
+          "comment": 1254,
+          "sd_hash": "FF55BCB069D87A750E2837923DA50AE3",
+          "userid": 0,
+          "videoname": "灯塔",
+          "img_v20": "",
+          "fhd_bitrate": 4143426,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 6760,
+          "username": "",
+          "ad_id": 0,
+          "mvhash": "69a47d7932076f15b111198034472770",
+          "duration": 270120,
+          "hd_bitrate": 2139501,
+          "remark": "纯享版",
+          "fhd_hash": "713875E0237D50B081B0F9B9E8D45710",
+          "singername": "肖战",
+          "likecount": 12249,
+          "hd_filesize": 72246969,
+          "description": "",
+          "sd_filesize": 21457794,
+          "useravatar": "",
+          "ld_bitrate": 535116,
+          "qhd_filesize": 38376509,
+          "qhd_hash": "761780692CA8BAADCBB6CD2016BC4934",
+          "hd_hash": "895A302E3DBBF88B0C082D42A2384E20",
+          "collect_count": 8004,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20241112/20241112095943920917.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20250916/20250916135258900997.jpg.webp",
+          "qhd_bitrate": 1136471,
+          "album_audio_id": "694573430",
+          "ld_filesize": 18069866,
+          "title": "肖战 - 灯塔",
+          "is_ugc": 0,
+          "fhd_filesize": 139915757,
+          "ld_hash": "2F7531484CE5EDDE0128672097CE1E69",
+          "publish": "2024-11-22 00:00:00",
+          "sd_bitrate": 635445,
+          "videoid": "13086500"
+        },
+        {
+          "authors": [
+            {
+              "singername": "周传雄",
+              "singerid": 3534,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20260416/20260416183451584277.jpg"
+            },
+            {
+              "singername": "杨和苏KeyNG",
+              "singerid": 636393,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250808/20250808234902848145.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "42042",
+              "parent_id": "4",
+              "tag_name": "流行音乐"
+            },
+            {
+              "tag_id": "9",
+              "parent_id": "2",
+              "tag_name": "新歌推荐"
+            },
+            {
+              "tag_id": "13",
+              "parent_id": "2",
+              "tag_name": "华语精选"
+            },
+            {
+              "tag_id": "143",
+              "parent_id": "142",
+              "tag_name": "国语"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "305",
+              "parent_id": "3",
+              "tag_name": "竖版"
+            },
+            {
+              "tag_id": "63",
+              "parent_id": "58",
+              "tag_name": "合唱歌手"
+            },
+            {
+              "tag_id": "374",
+              "parent_id": "42042",
+              "tag_name": "流行"
+            },
+            {
+              "tag_id": "1613",
+              "parent_id": "42042",
+              "tag_name": "华语流行"
+            },
+            {
+              "tag_id": "1614",
+              "parent_id": "42042",
+              "tag_name": "国语流行"
+            }
+          ],
+          "playcount": 863061,
+          "comment": 39,
+          "sd_hash": "53D8BF27A1BB51B837C5197A072FA142",
+          "userid": 0,
+          "videoname": "没有一杯茶解决不了的事 (feat. 杨和苏KeyNG)",
+          "img_v20": "",
+          "fhd_bitrate": 4136983,
+          "video_scale": {
+            "width": "270",
+            "height": "480"
+          },
+          "download_count": 1414,
+          "username": "",
+          "ad_id": 0,
+          "mvhash": "1a1fa9aab3e24e77765eb9200dfcaf73",
+          "duration": 226349,
+          "hd_bitrate": 2137203,
+          "remark": "",
+          "fhd_hash": "56C411F58E8BF7160D622DC03A3D4E8C",
+          "singername": "周传雄、杨和苏KeyNG",
+          "likecount": 710,
+          "hd_filesize": 60475384,
+          "description": "",
+          "sd_filesize": 18014176,
+          "useravatar": "",
+          "ld_bitrate": 536334,
+          "qhd_filesize": 32182041,
+          "qhd_hash": "95A41A0931DEC3A8F9188CC91B5BE3E6",
+          "hd_hash": "3A1882A508943B6E78783D6A66786C5B",
+          "collect_count": 285,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20241203/20241203153403278077.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20241121/20241121010224233771.jpg.webp",
+          "qhd_bitrate": 1137315,
+          "album_audio_id": "697957243",
+          "ld_filesize": 15176396,
+          "title": "周传雄、杨和苏KeyNG - 没有一杯茶解决不了的事 (feat. 杨和苏KeyNG)",
+          "is_ugc": 0,
+          "fhd_filesize": 117062154,
+          "ld_hash": "DD03A8FE18F153BB5EB6620814FBA95B",
+          "publish": "2024-11-21 11:00:00",
+          "sd_bitrate": 636622,
+          "videoid": "13073551"
+        },
+        {
+          "authors": [
+            {
+              "singername": "肖战",
+              "singerid": 281886,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20241111/20241111113505763031.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "42042",
+              "parent_id": "4",
+              "tag_name": "流行音乐"
+            },
+            {
+              "tag_id": "9",
+              "parent_id": "2",
+              "tag_name": "新歌推荐"
+            },
+            {
+              "tag_id": "13",
+              "parent_id": "2",
+              "tag_name": "华语精选"
+            },
+            {
+              "tag_id": "143",
+              "parent_id": "142",
+              "tag_name": "国语"
+            },
+            {
+              "tag_id": "40",
+              "parent_id": "35",
+              "tag_name": "内地"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "60",
+              "parent_id": "58",
+              "tag_name": "男艺人"
+            },
+            {
+              "tag_id": "374",
+              "parent_id": "42042",
+              "tag_name": "流行"
+            },
+            {
+              "tag_id": "1613",
+              "parent_id": "42042",
+              "tag_name": "华语流行"
+            },
+            {
+              "tag_id": "1614",
+              "parent_id": "42042",
+              "tag_name": "国语流行"
+            }
+          ],
+          "playcount": 397463,
+          "comment": 7613,
+          "sd_hash": "9D72D947A479965A9E7D9ED42FAAB573",
+          "userid": 0,
+          "videoname": "漂流",
+          "img_v20": "",
+          "fhd_bitrate": 4129812,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 9044,
+          "username": "",
+          "ad_id": 0,
+          "mvhash": "e678fda90a25cf7827dde0194e2413a2",
+          "duration": 329520,
+          "hd_bitrate": 2134174,
+          "remark": "",
+          "fhd_hash": "82AEC25BFF1D22F5DF68339483FA86EE",
+          "singername": "肖战",
+          "likecount": 23062,
+          "hd_filesize": 87913034,
+          "description": "",
+          "sd_filesize": 26189286,
+          "useravatar": "",
+          "ld_bitrate": 535524,
+          "qhd_filesize": 46779479,
+          "qhd_hash": "23EE79AFC0C4C22E5548FF6679D8D503",
+          "hd_hash": "CBB53300170CC3E9DF228D96E9BD16A0",
+          "collect_count": 16724,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20241112/20241112095943920917.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20241120/20241120092418299031.jpg.webp",
+          "qhd_bitrate": 1135617,
+          "album_audio_id": "694573431",
+          "ld_filesize": 22059877,
+          "title": "肖战 - 漂流",
+          "is_ugc": 0,
+          "fhd_filesize": 170119377,
+          "ld_hash": "FE5D61E8ABB4A51E052729E4A97699D4",
+          "publish": "2024-11-20 10:00:00",
+          "sd_bitrate": 635770,
+          "videoid": "13071497"
+        },
+        {
+          "authors": [
+            {
+              "singername": "曾轶可",
+              "singerid": 7001,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420155849196630.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "42042",
+              "parent_id": "4",
+              "tag_name": "流行音乐"
+            },
+            {
+              "tag_id": "9",
+              "parent_id": "2",
+              "tag_name": "新歌推荐"
+            },
+            {
+              "tag_id": "13",
+              "parent_id": "2",
+              "tag_name": "华语精选"
+            },
+            {
+              "tag_id": "143",
+              "parent_id": "142",
+              "tag_name": "国语"
+            },
+            {
+              "tag_id": "40",
+              "parent_id": "35",
+              "tag_name": "内地"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "61",
+              "parent_id": "58",
+              "tag_name": "女艺人"
+            },
+            {
+              "tag_id": "374",
+              "parent_id": "42042",
+              "tag_name": "流行"
+            },
+            {
+              "tag_id": "1613",
+              "parent_id": "42042",
+              "tag_name": "华语流行"
+            },
+            {
+              "tag_id": "1614",
+              "parent_id": "42042",
+              "tag_name": "国语流行"
+            }
+          ],
+          "playcount": 35789,
+          "comment": 4,
+          "sd_hash": "DF09D75E98B89FACDB6555EFFBA68281",
+          "userid": 0,
+          "videoname": "别Gender",
+          "img_v20": "",
+          "fhd_bitrate": 4126058,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 434,
+          "username": "",
+          "ad_id": 0,
+          "mvhash": "9eab4081bda90d3a711016eef67e3f93",
+          "duration": 217667,
+          "hd_bitrate": 2118439,
+          "remark": "",
+          "fhd_hash": "ACE62EEE6D841648BC1B3BE52A0BD7C8",
+          "singername": "曾轶可",
+          "likecount": 177,
+          "hd_filesize": 57645399,
+          "description": "",
+          "sd_filesize": 16994938,
+          "useravatar": "",
+          "ld_bitrate": 523966,
+          "qhd_filesize": 30572516,
+          "qhd_hash": "7A86C54FC32E836BA838CE5EC424946E",
+          "hd_hash": "E0D5692349EF95ED55D4B3E059F4B6D1",
+          "collect_count": 55,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20241113/20241113185702976728.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20241120/20241120101750435643.jpg.webp",
+          "qhd_bitrate": 1123524,
+          "album_audio_id": "695870069",
+          "ld_filesize": 14257786,
+          "title": "曾轶可 - 别Gender",
+          "is_ugc": 0,
+          "fhd_filesize": 112275213,
+          "ld_hash": "FFBD770F3AC9B4012E59F9A414CE43AA",
+          "publish": "2024-11-20 10:00:00",
+          "sd_bitrate": 624555,
+          "videoid": "13070247"
+        },
+        {
+          "authors": [
+            {
+              "singername": "薛之谦",
+              "singerid": 3060,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20251211/20251211160051447265.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "42042",
+              "parent_id": "4",
+              "tag_name": "流行音乐"
+            },
+            {
+              "tag_id": "9",
+              "parent_id": "2",
+              "tag_name": "新歌推荐"
+            },
+            {
+              "tag_id": "13",
+              "parent_id": "2",
+              "tag_name": "华语精选"
+            },
+            {
+              "tag_id": "145",
+              "parent_id": "142",
+              "tag_name": "英语"
+            },
+            {
+              "tag_id": "40",
+              "parent_id": "35",
+              "tag_name": "内地"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "60",
+              "parent_id": "58",
+              "tag_name": "男艺人"
+            },
+            {
+              "tag_id": "374",
+              "parent_id": "42042",
+              "tag_name": "流行"
+            }
+          ],
+          "playcount": 376055,
+          "comment": 528,
+          "sd_hash": "C7C709CFA1F6BDC912E1FE13A79C79B4",
+          "userid": 0,
+          "videoname": "Nothing",
+          "img_v20": "",
+          "fhd_bitrate": 4124977,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 1980,
+          "username": "",
+          "ad_id": 0,
+          "mvhash": "a25ad0c51b1fbf07eee3f8824f13403d",
+          "duration": 239823,
+          "hd_bitrate": 2130325,
+          "remark": "",
+          "fhd_hash": "EADF50A3F49B931F31D23197A626D531",
+          "singername": "薛之谦",
+          "likecount": 4028,
+          "hd_filesize": 63870632,
+          "description": "",
+          "sd_filesize": 18957945,
+          "useravatar": "",
+          "ld_bitrate": 532875,
+          "qhd_filesize": 33930212,
+          "qhd_hash": "98FC714CE7DC3691E5F65669C2783B3C",
+          "hd_hash": "EC5C46F2361806512CAC68A08634E880",
+          "collect_count": 774,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20250417/20250417120100615629.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20241119/20241119020521119478.jpg.webp",
+          "qhd_bitrate": 1131700,
+          "album_audio_id": "506826049",
+          "ld_filesize": 15976482,
+          "title": "薛之谦 - Nothing",
+          "is_ugc": 0,
+          "fhd_filesize": 123673525,
+          "ld_hash": "60D75DBC0FE5570239B888873062D010",
+          "publish": "2024-11-19 12:00:00",
+          "sd_bitrate": 632318,
+          "videoid": "13065152"
+        },
+        {
+          "authors": [
+            {
+              "singername": "时代少年团",
+              "singerid": 962931,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20251201/20251201175141718779.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "42042",
+              "parent_id": "4",
+              "tag_name": "流行音乐"
+            },
+            {
+              "tag_id": "9",
+              "parent_id": "2",
+              "tag_name": "新歌推荐"
+            },
+            {
+              "tag_id": "13",
+              "parent_id": "2",
+              "tag_name": "华语精选"
+            },
+            {
+              "tag_id": "143",
+              "parent_id": "142",
+              "tag_name": "国语"
+            },
+            {
+              "tag_id": "40",
+              "parent_id": "35",
+              "tag_name": "内地"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "62",
+              "parent_id": "58",
+              "tag_name": "乐队组合"
+            },
+            {
+              "tag_id": "374",
+              "parent_id": "42042",
+              "tag_name": "流行"
+            },
+            {
+              "tag_id": "1613",
+              "parent_id": "42042",
+              "tag_name": "华语流行"
+            },
+            {
+              "tag_id": "1614",
+              "parent_id": "42042",
+              "tag_name": "国语流行"
+            }
+          ],
+          "playcount": 1094465,
+          "comment": 577,
+          "sd_hash": "87186A61BCC97006F9776EF3EDD5E7E1",
+          "userid": 0,
+          "videoname": "月夜狂想曲",
+          "img_v20": "",
+          "fhd_bitrate": 4147113,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 6182,
+          "username": "",
+          "ad_id": 0,
+          "mvhash": "db9df270f283e8668e46c2da2ab8e579",
+          "duration": 235600,
+          "hd_bitrate": 2139961,
+          "remark": "",
+          "fhd_hash": "8DB06673AE5824316720A48BF978351F",
+          "singername": "时代少年团",
+          "likecount": 16466,
+          "hd_filesize": 63029632,
+          "description": "",
+          "sd_filesize": 18749064,
+          "useravatar": "",
+          "ld_bitrate": 536220,
+          "qhd_filesize": 33498817,
+          "qhd_hash": "9A91CFFA84A3B3D9A88854DF000067FF",
+          "hd_hash": "2DB271583E121D6206163E3F104159DA",
+          "collect_count": 7872,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20250211/20250211161404721069.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20241118/20241118114614457653.jpg.webp",
+          "qhd_bitrate": 1137341,
+          "album_audio_id": "696940852",
+          "ld_filesize": 15793623,
+          "title": "时代少年团 - 月夜狂想曲",
+          "is_ugc": 0,
+          "fhd_filesize": 122147514,
+          "ld_hash": "F8416B4A0DED3D8DF6129CFA5D870D47",
+          "publish": "2024-11-18 14:00:00",
+          "sd_bitrate": 636562,
+          "videoid": "13063677"
+        },
+        {
+          "authors": [
+            {
+              "singername": "曾轶可",
+              "singerid": 7001,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420155849196630.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "42042",
+              "parent_id": "4",
+              "tag_name": "流行音乐"
+            },
+            {
+              "tag_id": "9",
+              "parent_id": "2",
+              "tag_name": "新歌推荐"
+            },
+            {
+              "tag_id": "13",
+              "parent_id": "2",
+              "tag_name": "华语精选"
+            },
+            {
+              "tag_id": "143",
+              "parent_id": "142",
+              "tag_name": "国语"
+            },
+            {
+              "tag_id": "40",
+              "parent_id": "35",
+              "tag_name": "内地"
+            },
+            {
+              "tag_id": "213",
+              "parent_id": "35",
+              "tag_name": "华语"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "61",
+              "parent_id": "58",
+              "tag_name": "女艺人"
+            },
+            {
+              "tag_id": "374",
+              "parent_id": "42042",
+              "tag_name": "流行"
+            },
+            {
+              "tag_id": "1613",
+              "parent_id": "42042",
+              "tag_name": "华语流行"
+            },
+            {
+              "tag_id": "1614",
+              "parent_id": "42042",
+              "tag_name": "国语流行"
+            }
+          ],
+          "playcount": 50034,
+          "comment": 4,
+          "sd_hash": "5215873681D33EBB4353A6DBD9B376F5",
+          "userid": 0,
+          "videoname": "天空之外Above The Rooftop",
+          "img_v20": "",
+          "fhd_bitrate": 4129047,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 476,
+          "username": "",
+          "ad_id": 0,
+          "mvhash": "3aa51a856c2c30519e6eae47e38825bb",
+          "duration": 388640,
+          "hd_bitrate": 2127032,
+          "remark": "",
+          "fhd_hash": "E2787D7E8DFF3703126135CB1F04C92D",
+          "singername": "曾轶可",
+          "likecount": 46,
+          "hd_filesize": 103337633,
+          "description": "",
+          "sd_filesize": 30779915,
+          "useravatar": "",
+          "ld_bitrate": 533719,
+          "qhd_filesize": 55097997,
+          "qhd_hash": "2C0F93C278B73419EAA2A1CFFCD013B8",
+          "hd_hash": "29591D1042CB3DA4E2825C70A1C66696",
+          "collect_count": 18,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20241113/20241113185702976728.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20241118/20241118020531333158.jpg.webp",
+          "qhd_bitrate": 1134100,
+          "album_audio_id": "695870066",
+          "ld_filesize": 25929696,
+          "title": "曾轶可 - 天空之外Above The Rooftop",
+          "is_ugc": 0,
+          "fhd_filesize": 200601515,
+          "ld_hash": "F279F438DA346F0E035853CB2F7C5EB7",
+          "publish": "2024-11-18 10:00:00",
+          "sd_bitrate": 633553,
+          "videoid": "13062294"
+        },
+        {
+          "authors": [
+            {
+              "singername": "ROSÉ",
+              "singerid": 633567,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250711/20250711131433255831.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "42042",
+              "parent_id": "4",
+              "tag_name": "流行音乐"
+            },
+            {
+              "tag_id": "9",
+              "parent_id": "2",
+              "tag_name": "新歌推荐"
+            },
+            {
+              "tag_id": "17",
+              "parent_id": "2",
+              "tag_name": "日韩精选"
+            },
+            {
+              "tag_id": "145",
+              "parent_id": "142",
+              "tag_name": "英语"
+            },
+            {
+              "tag_id": "43",
+              "parent_id": "35",
+              "tag_name": "韩国"
+            },
+            {
+              "tag_id": "214",
+              "parent_id": "35",
+              "tag_name": "日韩"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "61",
+              "parent_id": "58",
+              "tag_name": "女艺人"
+            },
+            {
+              "tag_id": "307",
+              "parent_id": "271",
+              "tag_name": "YG"
+            },
+            {
+              "tag_id": "374",
+              "parent_id": "42042",
+              "tag_name": "流行"
+            }
+          ],
+          "playcount": 332147,
+          "comment": 279,
+          "sd_hash": "C5A3D7D8A002DEFA584C3AAD8A6136A0",
+          "userid": 0,
+          "videoname": "number one girl",
+          "img_v20": "",
+          "fhd_bitrate": 0,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 3612,
+          "username": "",
+          "ad_id": 0,
+          "mvhash": "0b467f72663d78208a5cdad321a36593",
+          "duration": 217571,
+          "hd_bitrate": 0,
+          "remark": "",
+          "fhd_hash": "",
+          "singername": "ROSÉ",
+          "likecount": 9630,
+          "hd_filesize": 0,
+          "description": "",
+          "sd_filesize": 17309362,
+          "useravatar": "",
+          "ld_bitrate": 535936,
+          "qhd_filesize": 0,
+          "qhd_hash": "",
+          "hd_hash": "",
+          "collect_count": 2691,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20241205/20241205151216728328.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20241204/20241204133402959499.jpg.webp",
+          "qhd_bitrate": 0,
+          "album_audio_id": "693426781",
+          "ld_filesize": 14577149,
+          "title": "ROSÉ - number one girl",
+          "is_ugc": 0,
+          "fhd_filesize": 0,
+          "ld_hash": "29563232EDC0F5A0BDFB7C64BB3A9FA1",
+          "publish": "2024-11-22 13:00:00",
+          "sd_bitrate": 636388,
+          "videoid": "13086642"
+        },
+        {
+          "authors": [
+            {
+              "singername": "Coldplay",
+              "singerid": 84037,
+              "singeravatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20251127/20251127104330114196.jpg"
+            }
+          ],
+          "userdesc": "",
+          "tags": [
+            {
+              "tag_id": "42044",
+              "parent_id": "4",
+              "tag_name": "摇滚音乐"
+            },
+            {
+              "tag_id": "9",
+              "parent_id": "2",
+              "tag_name": "新歌推荐"
+            },
+            {
+              "tag_id": "16",
+              "parent_id": "2",
+              "tag_name": "欧美精选"
+            },
+            {
+              "tag_id": "145",
+              "parent_id": "142",
+              "tag_name": "英语"
+            },
+            {
+              "tag_id": "44",
+              "parent_id": "35",
+              "tag_name": "欧美"
+            },
+            {
+              "tag_id": "18",
+              "parent_id": "3",
+              "tag_name": "官方版"
+            },
+            {
+              "tag_id": "62",
+              "parent_id": "58",
+              "tag_name": "乐队组合"
+            },
+            {
+              "tag_id": "297",
+              "parent_id": "42044",
+              "tag_name": "摇滚"
+            }
+          ],
+          "playcount": 49751,
+          "comment": 6,
+          "sd_hash": "2CA3D5888F2C98A0E5329CD90F943D7C",
+          "userid": 0,
+          "videoname": "The Karate Kid",
+          "img_v20": "",
+          "fhd_bitrate": 4127983,
+          "video_scale": {
+            "width": "480",
+            "height": "270"
+          },
+          "download_count": 133,
+          "username": "",
+          "ad_id": 0,
+          "mvhash": "e8229d8ceb443ae232d370277ecabba7",
+          "duration": 204462,
+          "hd_bitrate": 2133110,
+          "remark": "",
+          "fhd_hash": "2FD09D6E7C39091CDB88EF3DC3BBF3FD",
+          "singername": "Coldplay",
+          "likecount": 117,
+          "hd_filesize": 54522842,
+          "description": "",
+          "sd_filesize": 16204434,
+          "useravatar": "",
+          "ld_bitrate": 534407,
+          "qhd_filesize": 28991603,
+          "qhd_hash": "D295D87BEDEBCA8C245D0236726BB97A",
+          "hd_hash": "F6D2A258720F33480E8B33F1460BEAB6",
+          "collect_count": 36,
+          "album_cover": "http://imge.kugou.com/stdmusic/{size}/20241004/20241004174405517053.jpg",
+          "is_short": 0,
+          "img": "http://imge.kugou.com/mvhdpic/{size}/20241122/20241122102817576804.jpg.webp",
+          "qhd_bitrate": 1134245,
+          "album_audio_id": "679248450",
+          "ld_filesize": 13659588,
+          "title": "Coldplay - The Karate Kid",
+          "is_ugc": 0,
+          "fhd_filesize": 105512303,
+          "ld_hash": "4CD9F74417D3D4DD025BBB807EF46CF1",
+          "publish": "2024-11-19 00:00:00",
+          "sd_bitrate": 633970,
+          "videoid": "13067908"
+        }
+      ],
+      "vip_music": {
+        "list": [
+          {
+            "hash": "737E92C11702105901356872304E71B7",
+            "sqfilesize": 24122223,
+            "sqprivilege": 10,
+            "pay_type_sq": 3,
+            "audio_id": 38727945,
+            "pkg_price_sq": 1,
+            "has_accompany": 0,
+            "singer_name": "鹿晗、Fabian Mazur",
+            "pay_type_320": 3,
+            "sqhash": "AD6960D6A818539162B9CD3DAD9248A2",
+            "fail_process": 4,
+            "pkg_price": 1,
+            "rp_type": "audio",
+            "album_id": 8719489,
+            "duration": 183484,
+            "topic_url_sq": "",
+            "320hash": "9B9F4BEE6181CABDE039F4D002CC85C8",
+            "price_sq": 200,
+            "old_cpy": 0,
+            "bitrate": 128,
+            "old_cpy_sq": 0,
+            "album_cover": "http://imge.kugou.com/stdmusic/{size}/20201104/20201104101645369003.jpg.webp",
+            "pay_type": 3,
+            "320filesize": 7340694,
+            "pkg_price_320": 1,
+            "topic_url_320": "",
+            "filesize": 2936449,
+            "price": 200,
+            "filename": "鹿晗、Fabian Mazur - 超级冠军 Football Gang  [Feat.Fabian Mazur] (Remix)",
+            "singer_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250319/20250319000233882039.jpg",
+            "extname": "mp3",
+            "fail_process_320": 4,
+            "trans_param": {
+              "pay_block_tpl": 1,
+              "classmap": {
+                "attr0": 234881032
+              },
+              "language": "英语",
+              "cpy_attr0": 34618496,
+              "musicpack_advance": 1,
+              "ogg_128_filesize": 2202356,
+              "display_rate": 0,
+              "cpy_map": "2",
+              "ogg_320_filesize": 7713913,
+              "ogg_320_hash": "589FE2532994BF4D2FBFCF6602B043D2",
+              "qualitymap": {
+                "bits": "1b41180007f3fc074",
+                "attr0": 2134884468,
+                "attr1": 1747124224
+              },
+              "is_original": 4,
+              "union_cover": "http://imge.kugou.com/stdmusic/{size}/20201104/20201104101645369003.jpg",
+              "cid": 35512021,
+              "display": 0,
+              "ipmap": {
+                "attr0": 16782336
+              },
+              "songname_suffix": "(Remix)",
+              "ogg_128_hash": "B33B8477F5737DFAE1C8F99C73B8A8D6",
+              "hash_multitrack": "25D2D916DECAB8932AFBE9F20D42BF5E",
+              "cpy_grade": 5,
+              "cpy_level": 1
+            },
+            "topic_url": "",
+            "remark": "「Re：Play」",
+            "album_audio_id": 109582201,
+            "singer_id": 255972,
+            "rp_publish": 1,
+            "privilege": 10,
+            "album_name": "「Re：Play」",
+            "price_320": 200,
+            "320privilege": 10,
+            "old_cpy_320": 0,
+            "fail_process_sq": 4
+          },
+          {
+            "hash": "F95C9BE8A9FB2C25C3BDDF30B651CB10",
+            "sqfilesize": 27853385,
+            "sqprivilege": 10,
+            "pay_type_sq": 3,
+            "audio_id": 38849656,
+            "pkg_price_sq": 1,
+            "has_accompany": 1,
+            "singer_name": "徐佳莹",
+            "pay_type_320": 3,
+            "sqhash": "6ECB7F14538DA137F9717495C9907D78",
+            "fail_process": 4,
+            "pkg_price": 1,
+            "rp_type": "audio",
+            "album_id": 8628448,
+            "duration": 262243,
+            "topic_url_sq": "",
+            "320hash": "D78683D430B37BD28FAD8D9CA8B08905",
+            "price_sq": 200,
+            "old_cpy": 0,
+            "bitrate": 128,
+            "old_cpy_sq": 0,
+            "album_cover": "http://imge.kugou.com/stdmusic/{size}/20250217/20250217144524766103.jpg.webp",
+            "pay_type": 3,
+            "320filesize": 10490973,
+            "pkg_price_320": 1,
+            "topic_url_320": "",
+            "filesize": 4196508,
+            "price": 200,
+            "filename": "徐佳莹 - 一爱难求",
+            "singer_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20251229/20251229180442374003.jpg",
+            "extname": "mp3",
+            "fail_process_320": 4,
+            "trans_param": {
+              "pay_block_tpl": 1,
+              "classmap": {
+                "attr0": 234881032
+              },
+              "language": "国语",
+              "cpy_attr0": 58735744,
+              "musicpack_advance": 1,
+              "display": 0,
+              "display_rate": 0,
+              "cpy_map": "2",
+              "ogg_320_filesize": 9697352,
+              "qualitymap": {
+                "bits": "8fffc0db411ffffbf3fc075",
+                "attr0": 1061142645,
+                "attr1": 1747189759
+              },
+              "is_original": 1,
+              "ogg_128_hash": "837F7152DFA199ABB98DC2F0E4CBFEBD",
+              "cid": 35552869,
+              "ogg_320_hash": "83A79F3A2C58C5D27043E4C093E01142",
+              "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250217/20250217144524766103.jpg",
+              "ipmap": {
+                "attr0": 1174409216
+              },
+              "ogg_128_filesize": 2917779,
+              "cpy_grade": 6,
+              "hash_multitrack": "DEE1866510792A761E36F6F828024A4B",
+              "cpy_level": 1
+            },
+            "topic_url": "",
+            "remark": "一爱难求",
+            "album_audio_id": 108773750,
+            "singer_id": 6335,
+            "rp_publish": 1,
+            "privilege": 10,
+            "album_name": "一爱难求",
+            "price_320": 200,
+            "320privilege": 10,
+            "old_cpy_320": 0,
+            "fail_process_sq": 4
+          },
+          {
+            "hash": "3AD62DAF346FA994B4728CFCB49C8F69",
+            "sqfilesize": 27273773,
+            "sqprivilege": 10,
+            "pay_type_sq": 3,
+            "audio_id": 16140226,
+            "pkg_price_sq": 1,
+            "has_accompany": 0,
+            "singer_name": "陈奕迅",
+            "pay_type_320": 3,
+            "sqhash": "2DE995FDCAC18BF5E4633F6228DBD307",
+            "fail_process": 4,
+            "pkg_price": 1,
+            "rp_type": "audio",
+            "album_id": 549552,
+            "duration": 250853,
+            "topic_url_sq": "",
+            "320hash": "2BC43939DE7CD0670DE0271BFBA5A7E8",
+            "price_sq": 200,
+            "old_cpy": 0,
+            "bitrate": 128,
+            "old_cpy_sq": 0,
+            "album_cover": "http://imge.kugou.com/stdmusic/{size}/20241118/20241118143502661355.jpg.webp",
+            "pay_type": 3,
+            "320filesize": 10152455,
+            "pkg_price_320": 1,
+            "topic_url_320": "",
+            "filesize": 4014283,
+            "price": 200,
+            "filename": "陈奕迅 - 起点·终站",
+            "singer_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20231028/20231028131805823273.jpg",
+            "extname": "mp3",
+            "fail_process_320": 4,
+            "trans_param": {
+              "cpy_grade": 6,
+              "classmap": {
+                "attr0": 234881032
+              },
+              "language": "粤语",
+              "cpy_attr0": 51395712,
+              "musicpack_advance": 1,
+              "display": 0,
+              "display_rate": 0,
+              "cpy_map": "2",
+              "ogg_320_filesize": 9887678,
+              "union_cover": "http://imge.kugou.com/stdmusic/{size}/20241118/20241118143502661355.jpg",
+              "qualitymap": {
+                "bits": "1b41180007f10c074",
+                "attr0": 2131804276,
+                "attr1": 1747124224
+              },
+              "is_original": 1,
+              "ogg_128_hash": "47468A8D068B851077B52026ABA3D21C",
+              "cid": 7243793,
+              "ogg_128_filesize": 2845512,
+              "ogg_320_hash": "9EA1FCD8A46002491ED7E695E6AD8E54",
+              "ipmap": {
+                "attr0": 275951915008
+              },
+              "appid_block": "2906,3124",
+              "pay_block_tpl": 1,
+              "hash_multitrack": "DF28C919381DDD5B5BD072388F13E612",
+              "cpy_level": 1
+            },
+            "topic_url": "",
+            "remark": "准备中",
+            "album_audio_id": 28028637,
+            "singer_id": 420,
+            "rp_publish": 1,
+            "privilege": 10,
+            "album_name": "准备中",
+            "price_320": 200,
+            "320privilege": 10,
+            "old_cpy_320": 0,
+            "fail_process_sq": 4
+          },
+          {
+            "hash": "8F5955E33E35D258A4ED4759E6110526",
+            "sqfilesize": 25784156,
+            "sqprivilege": 10,
+            "pay_type_sq": 3,
+            "audio_id": 36909311,
+            "pkg_price_sq": 1,
+            "has_accompany": 1,
+            "singer_name": "X玖少年团",
+            "pay_type_320": 3,
+            "sqhash": "2756951977A3F8E68E7F16B700851B83",
+            "fail_process": 4,
+            "pkg_price": 1,
+            "rp_type": "audio",
+            "album_id": 8342031,
+            "duration": 255921,
+            "topic_url_sq": "",
+            "320hash": "02BDC497484E56918472A2DDFDB9A580",
+            "price_sq": 200,
+            "old_cpy": 0,
+            "bitrate": 128,
+            "old_cpy_sq": 0,
+            "album_cover": "http://imge.kugou.com/stdmusic/{size}/20241227/20241227182221708489.jpg.webp",
+            "pay_type": 3,
+            "320filesize": 10238152,
+            "pkg_price_320": 1,
+            "topic_url_320": "",
+            "filesize": 4095406,
+            "price": 200,
+            "filename": "X玖少年团 - 永不下线的，才算爱吗",
+            "singer_avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20180208/20180208163718555.jpg",
+            "extname": "mp3",
+            "fail_process_320": 4,
+            "trans_param": {
+              "pay_block_tpl": 1,
+              "classmap": {
+                "attr0": 234881032
+              },
+              "language": "国语",
+              "cpy_attr0": 51395712,
+              "musicpack_advance": 1,
+              "display": 0,
+              "display_rate": 0,
+              "cpy_map": "2",
+              "ogg_320_filesize": 9439101,
+              "qualitymap": {
+                "bits": "341180001330c074",
+                "attr0": 321962100,
+                "attr1": 1747124224
+              },
+              "is_original": 1,
+              "ogg_128_hash": "52EBB1E4EAC42F295091494AE2CC585E",
+              "cid": 32661952,
+              "ogg_320_hash": "781961BB62C9937D36227F70ECC8838D",
+              "union_cover": "http://imge.kugou.com/stdmusic/{size}/20241227/20241227182221708489.jpg",
+              "ipmap": {
+                "attr0": 275985207296
+              },
+              "ogg_128_filesize": 2869857,
+              "cpy_grade": 5,
+              "hash_multitrack": "79E7CFD1DBE978CCAF162400632CA9B8",
+              "cpy_level": 1
+            },
+            "topic_url": "",
+            "remark": "Keep Online YES版",
+            "album_audio_id": 106217443,
+            "singer_id": 564415,
+            "rp_publish": 1,
+            "privilege": 10,
+            "album_name": "Keep Online YES版",
+            "price_320": 200,
+            "320privilege": 10,
+            "old_cpy_320": 0,
+            "fail_process_sq": 4
+          }
+        ],
+        "total": 26353
+      },
+      "category_area": [
+        {
+          "skip_type": "歌单播放",
+          "area_id": "1",
+          "id": "1",
+          "content": "每日精选热辣DJ，根本停不下来！",
+          "name": "DJ专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:30:41",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f1",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175334313725.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 325855,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240229/20240229142755476555.jpg",
+              "extend": "2.0千万",
+              "module_type": "135",
+              "images": "http://imge.kugou.com/soft/collection/240/20240229/20240229142755476555.jpg",
+              "content": "",
+              "data_num": "20227136",
+              "area": "1",
+              "addtime": "2024-03-04 16:30:47",
+              "mark": "7436541",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005839_37_0",
+              "name": "伤感华语DJ：爱的够重，伤的就痛",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 325285,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240223/20240223135156519470.jpg",
+              "extend": "790.0万",
+              "module_type": "135",
+              "images": "http://imge.kugou.com/soft/collection/240/20240223/20240223135156519470.jpg",
+              "content": "",
+              "data_num": "7900155",
+              "area": "1",
+              "addtime": "2024-02-26 10:18:04",
+              "mark": "7424209",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004177_34_0",
+              "name": "夜店DJ舞曲！舞池焦点速成宝典",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 325853,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240229/20240229145407476866.jpg",
+              "extend": "1.2千万",
+              "module_type": "135",
+              "images": "http://imge.kugou.com/soft/collection/240/20240229/20240229145407476866.jpg",
+              "content": "",
+              "data_num": "12288888",
+              "area": "1",
+              "addtime": "2024-03-04 16:30:31",
+              "mark": "7436591",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005789_32_0",
+              "name": "DJ经典老歌：时光荏苒，情怀依旧",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "0",
+          "mark": "1855280"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "269",
+          "id": "269",
+          "content": "关于青春的记忆，全都被放在了歌里~",
+          "name": "青春专区",
+          "adduser": "羊介平",
+          "addtime": "2021-09-18 13:52:53",
+          "area_url": "https://activity.kugou.com/youngZone/v-fdc6d642/index.html",
+          "images": "https://imgessl.kugou.com/quickentry/20220507/20220507122307361033.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 320779,
+              "is_update": "0",
+              "sortid": "0",
+              "data_img": "http://c1.kgimg.com/custom/240/20231227/20231227144217716518.jpg",
+              "extend": "18.0万",
+              "module_type": "3173",
+              "images": "http://c1.kgimg.com/custom/240/20231227/20231227144217716518.jpg",
+              "content": "",
+              "data_num": "179913",
+              "area": "269",
+              "addtime": "2023-12-29 12:04:10",
+              "mark": "7292373",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_520024721_11_0",
+              "name": "2024【青春之歌】跨年演唱会",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 310827,
+              "is_update": "0",
+              "sortid": "0",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20190611/20190611182307715215.jpg",
+              "extend": "70.3万",
+              "module_type": "3173",
+              "images": "http://imge.kugou.com/soft/collection/240/20190611/20190611182307715215.jpg",
+              "content": "",
+              "data_num": "702874",
+              "area": "269",
+              "addtime": "2023-09-28 17:28:20",
+              "mark": "704955",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_1_588918409_704955_0",
+              "name": "欧美流行乐·假期车旅常备轻快音乐",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 310835,
+              "is_update": "0",
+              "sortid": "0",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20180929/20180929213803378166.jpg",
+              "extend": "76.9万",
+              "module_type": "3173",
+              "images": "http://imge.kugou.com/soft/collection/240/20180929/20180929213803378166.jpg",
+              "content": "",
+              "data_num": "769273",
+              "area": "269",
+              "addtime": "2023-09-28 17:34:54",
+              "mark": "538048",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_1_489493105_538048_0",
+              "name": "小长假，为你准备了一份旅行计划",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "39",
+          "mark": "4217533"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "37",
+          "id": "37",
+          "content": "超人气综艺，一键追更！",
+          "name": "综艺专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:43:52",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=230&path=%2Findex.html%3FisHideTitleBar%3D1%26ip_id%3D89714",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175729970544.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 308365,
+              "is_update": "0",
+              "sortid": "0",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230816/20230816103107915303.jpg",
+              "extend": "63.0万",
+              "module_type": "1697",
+              "images": "http://imge.kugou.com/soft/collection/240/20230816/20230816103107915303.jpg",
+              "content": "",
+              "data_num": "629782",
+              "area": "37",
+              "addtime": "2023-09-06 15:52:05",
+              "mark": "6966529",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_520033117_15_0",
+              "name": "《乐队的夏天3》杜比全景声版",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 308367,
+              "is_update": "0",
+              "sortid": "0",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230825/20230825122550510013.jpg",
+              "extend": "170.3万",
+              "module_type": "1697",
+              "images": "http://imge.kugou.com/soft/collection/240/20230825/20230825122550510013.jpg",
+              "content": "",
+              "data_num": "1702793",
+              "area": "37",
+              "addtime": "2023-09-06 15:52:16",
+              "mark": "7007914",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_520033117_17_0",
+              "name": "《披荆斩棘3》live现场",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 304637,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230728/20230728175507744357.jpg",
+              "extend": "96.3万",
+              "module_type": "1697",
+              "images": "http://imge.kugou.com/soft/collection/240/20230728/20230728175507744357.jpg",
+              "content": "",
+              "data_num": "962854",
+              "area": "37",
+              "addtime": "2023-07-29 19:08:05",
+              "mark": "6926347",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_520033117_13_0",
+              "name": "舞台2023",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "41",
+          "mark": "3161817"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "33",
+          "id": "33",
+          "content": "有态度，有梦想，爆款流行一网打尽",
+          "name": "音乐人专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:42:26",
+          "area_url": "https://y.tencentmusic.com/zone/home?platformType=kugou",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175926259503.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 121355,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://c1.kgimg.com/custom/240/20210705/20210705224931756611.jpg",
+              "extend": "660.9万",
+              "module_type": "2495",
+              "images": "http://c1.kgimg.com/custom/240/20210705/20210705224931756611.jpg",
+              "content": "",
+              "data_num": "6608740",
+              "area": "33",
+              "addtime": "1970-01-01 08:00:00",
+              "mark": "3958709",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_520032069_82_0",
+              "name": "情歌小天后：王靖雯不胖精选集",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 120735,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20200714/20200714182430105426.jpg",
+              "extend": "218.4万",
+              "module_type": "2495",
+              "images": "http://imge.kugou.com/soft/collection/240/20200714/20200714182430105426.jpg",
+              "content": "",
+              "data_num": "2183830",
+              "area": "33",
+              "addtime": "1970-01-01 08:00:00",
+              "mark": "2772656",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_1595690048_38_0",
+              "name": "星曜计划·精选合辑",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 120739,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://c1.kgimg.com/custom/240/20210707/20210707164210324105.jpg",
+              "extend": "32.2万",
+              "module_type": "2495",
+              "images": "http://c1.kgimg.com/custom/240/20210707/20210707164210324105.jpg",
+              "content": "",
+              "data_num": "322446",
+              "area": "33",
+              "addtime": "1970-01-01 08:00:00",
+              "mark": "3958746",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_520032069_81_0",
+              "name": "国风新语：2021年优质推荐歌曲",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "46",
+          "mark": "213465"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "3",
+          "id": "3",
+          "content": "宝宝最爱的音乐都在这里！",
+          "name": "儿童专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:31:48",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f3",
+          "images": "https://imgessl.kugou.com/quickentry/20220408/20220408151344470950.png.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 83623,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20260318/20260318161901269558.jpg",
+              "extend": "26.9千万",
+              "module_type": "541",
+              "images": "http://imge.kugou.com/soft/collection/240/20260318/20260318161901269558.jpg",
+              "content": "",
+              "data_num": "268866180",
+              "area": "3",
+              "addtime": "1970-01-01 08:00:00",
+              "mark": "2365291",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_1161594453_198_0",
+              "name": "2020-2023全网好听儿歌【持续更新】",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 83625,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20260318/20260318154755200454.jpg",
+              "extend": "45.9千万",
+              "module_type": "541",
+              "images": "http://imge.kugou.com/soft/collection/240/20260318/20260318154755200454.jpg",
+              "content": "",
+              "data_num": "458867462",
+              "area": "3",
+              "addtime": "1970-01-01 08:00:00",
+              "mark": "585374",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_1161594453_55_0",
+              "name": "『热门儿歌』宝宝都爱听（含你笑起来真好看）",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 83627,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20210721/20210721164648504442.jpg",
+              "extend": "29.9千万",
+              "module_type": "541",
+              "images": "http://imge.kugou.com/soft/collection/240/20210721/20210721164648504442.jpg",
+              "content": "",
+              "data_num": "298578296",
+              "area": "3",
+              "addtime": "1970-01-01 08:00:00",
+              "mark": "634289",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005494_32_0",
+              "name": "抖音热门儿歌（含赢在江湖、宝贝宝贝）",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "65",
+          "mark": "2664188"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "9",
+          "id": "9",
+          "content": "让最好听的汽车音乐，和您一起出发！",
+          "name": "车载专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:34:29",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f9",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175519734610.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 325849,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240301/20240301135629697314.jpg",
+              "extend": "288.1万",
+              "module_type": "593",
+              "images": "http://imge.kugou.com/soft/collection/240/20240301/20240301135629697314.jpg",
+              "content": "",
+              "data_num": "2881055",
+              "area": "9",
+              "addtime": "2024-03-04 16:28:53",
+              "mark": "7438219",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004160_37_0",
+              "name": "车载劲歌：出街压迫感MAX！",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 325847,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240301/20240301140324660864.jpg",
+              "extend": "52.9万",
+              "module_type": "593",
+              "images": "http://imge.kugou.com/soft/collection/240/20240301/20240301140324660864.jpg",
+              "content": "",
+              "data_num": "528853",
+              "area": "9",
+              "addtime": "2024-03-04 16:28:39",
+              "mark": "7438381",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005998_34_0",
+              "name": "华语车载系：音乐伴你一路前行",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 325851,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240223/20240223164059131078.jpg",
+              "extend": "119.2万",
+              "module_type": "593",
+              "images": "http://imge.kugou.com/soft/collection/240/20240223/20240223164059131078.jpg",
+              "content": "",
+              "data_num": "1192056",
+              "area": "9",
+              "addtime": "2024-03-04 16:29:10",
+              "mark": "7424946",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005440_36_0",
+              "name": "怀旧粤语车载：致我们回不去的青春",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "66",
+          "mark": "642307"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "51",
+          "id": "51",
+          "content": "经典老歌回忆录，触动你心弦",
+          "name": "经典老歌专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-10-11 16:08:40",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f51",
+          "images": "https://imgessl.kugou.com/quickentry/20220314/20220314163456915406.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 314633,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221222/20221222155951166265.jpg",
+              "extend": "774.7万",
+              "module_type": "599",
+              "images": "http://imge.kugou.com/soft/collection/240/20221222/20221222155951166265.jpg",
+              "content": "",
+              "data_num": "7747138",
+              "area": "51",
+              "addtime": "2023-11-03 15:39:01",
+              "mark": "6331670",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005263_33_0",
+              "name": "欧美老歌：时间在变，唯经典永恒",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 311399,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220713/20220713145706964696.jpg",
+              "extend": "3.9千万",
+              "module_type": "599",
+              "images": "http://imge.kugou.com/soft/collection/240/20220713/20220713145706964696.jpg",
+              "content": "",
+              "data_num": "38648705",
+              "area": "51",
+              "addtime": "2023-10-08 16:58:53",
+              "mark": "5776678",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004532_34_0",
+              "name": "80后经典：旧时光里的温暖回忆",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 307867,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221110/20221110174720665436.jpg",
+              "extend": "593.7万",
+              "module_type": "599",
+              "images": "http://imge.kugou.com/soft/collection/240/20221110/20221110174720665436.jpg",
+              "content": "",
+              "data_num": "5936833",
+              "area": "51",
+              "addtime": "2023-09-01 12:00:48",
+              "mark": "6223262",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005725_40_0",
+              "name": "经典闽南语 | 情深情浅全在歌里",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "67",
+          "mark": "5"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "11",
+          "id": "11",
+          "content": "广场好歌伴你翩翩起舞，今夜不停歇",
+          "name": "广场舞专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:35:21",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f11",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175256776534.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 326003,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240306/20240306134353838580.jpg",
+              "extend": "70.2万",
+              "module_type": "1667",
+              "images": "http://imge.kugou.com/soft/collection/240/20240306/20240306134353838580.jpg",
+              "content": "",
+              "data_num": "701833",
+              "area": "11",
+              "addtime": "2024-03-06 14:16:27",
+              "mark": "7449992",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004381_29_0",
+              "name": "草原风广场舞丨草原韵律，如诗如画",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 325857,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240229/20240229181655874125.jpg",
+              "extend": "35.9万",
+              "module_type": "1667",
+              "images": "http://imge.kugou.com/soft/collection/240/20240229/20240229181655874125.jpg",
+              "content": "",
+              "data_num": "358646",
+              "area": "11",
+              "addtime": "2024-03-04 16:33:52",
+              "mark": "7437005",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005375_40_0",
+              "name": "广场舞三步踩：跳出快乐，跳出健康",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 325859,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240219/20240219153237818481.jpg",
+              "extend": "59.1万",
+              "module_type": "1667",
+              "images": "http://imge.kugou.com/soft/collection/240/20240219/20240219153237818481.jpg",
+              "content": "",
+              "data_num": "590830",
+              "area": "11",
+              "addtime": "2024-03-04 16:34:18",
+              "mark": "7414846",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005545_38_0",
+              "name": "广场舞热曲：跟着节奏跳，下一任舞王就是你",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "68",
+          "mark": "656988"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "15",
+          "id": "15",
+          "content": "海量原声好歌，陪伴你的追剧时光",
+          "name": "影视专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:38:00",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f15",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175842661701.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 303397,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220921/20220921140948260698.jpg",
+              "extend": "483.4万",
+              "module_type": "3",
+              "images": "http://imge.kugou.com/soft/collection/240/20220921/20220921140948260698.jpg",
+              "content": "",
+              "data_num": "4833524",
+              "area": "15",
+              "addtime": "2023-07-19 15:33:56",
+              "mark": "6056526",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004544_35_0",
+              "name": "高糖甜宠ost：是怦然心动的声音啊！",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 301765,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220909/20220909093257202691.jpg",
+              "extend": "448.0万",
+              "module_type": "3",
+              "images": "http://imge.kugou.com/soft/collection/240/20220909/20220909093257202691.jpg",
+              "content": "",
+              "data_num": "4480184",
+              "area": "15",
+              "addtime": "2023-07-05 16:15:27",
+              "mark": "6015022",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509006069_32_0",
+              "name": "射雕三部曲 | 做一场江湖武侠梦",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 299813,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230621/20230621172727290964.jpg",
+              "extend": "222.6万",
+              "module_type": "3",
+              "images": "http://imge.kugou.com/soft/collection/240/20230621/20230621172727290964.jpg",
+              "content": "",
+              "data_num": "2225662",
+              "area": "15",
+              "addtime": "2023-06-21 18:24:00",
+              "mark": "6826854",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005831_35_0",
+              "name": "古装剧ost：追剧人的音乐陪伴",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "71",
+          "mark": "2691923"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "71",
+          "id": "71",
+          "content": "激燃BGM，助力游戏五杀",
+          "name": "游戏专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-12-26 17:14:43",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f71",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175829824319.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 303393,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230128/20230128150527984095.jpg",
+              "extend": "156.9万",
+              "module_type": "921",
+              "images": "http://imge.kugou.com/soft/collection/240/20230128/20230128150527984095.jpg",
+              "content": "",
+              "data_num": "1568611",
+              "area": "71",
+              "addtime": "2023-07-19 15:28:12",
+              "mark": "6457028",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005842_36_0",
+              "name": "愉快打游戏，试试这些放松小曲",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 301761,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220523/20220523180516272259.jpg",
+              "extend": "144.0万",
+              "module_type": "921",
+              "images": "http://imge.kugou.com/soft/collection/240/20220523/20220523180516272259.jpg",
+              "content": "",
+              "data_num": "1440418",
+              "area": "71",
+              "addtime": "2023-07-05 16:10:24",
+              "mark": "5562013",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005305_31_0",
+              "name": "输出必备！燃烧你的游戏小宇宙！",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 300949,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230630/20230630132942164650.jpg",
+              "extend": "32.9万",
+              "module_type": "921",
+              "images": "http://imge.kugou.com/soft/collection/240/20230630/20230630132942164650.jpg",
+              "content": "",
+              "data_num": "329039",
+              "area": "71",
+              "addtime": "2023-06-30 13:37:41",
+              "mark": "6847916",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004758_35_0",
+              "name": "游戏控：与音乐一起享受欢乐时光",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "72",
+          "mark": "122844"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "31",
+          "id": "31",
+          "content": "新鲜热辣的韩流音乐，全在这里！",
+          "name": "韩流专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:41:58",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f31",
+          "images": "https://imgessl.kugou.com/quickentry/20230315/20230315130338669896.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 316013,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230611/20230611162211127349.jpg",
+              "extend": "88.4万",
+              "module_type": "1365",
+              "images": "http://imge.kugou.com/soft/collection/240/20230611/20230611162211127349.jpg",
+              "content": "",
+              "data_num": "884287",
+              "area": "31",
+              "addtime": "2023-11-13 14:35:53",
+              "mark": "6802834",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005863_43_0",
+              "name": "「旋律控」那些令人心动的韩剧插曲",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 313991,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230209/20230209113214525725.jpg",
+              "extend": "766.5万",
+              "module_type": "1365",
+              "images": "http://imge.kugou.com/soft/collection/240/20230209/20230209113214525725.jpg",
+              "content": "",
+              "data_num": "7664796",
+              "area": "31",
+              "addtime": "2023-10-30 14:11:08",
+              "mark": "6493106",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005746_39_0",
+              "name": "韩语时光：清新小调，满满好心情",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 312493,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221008/20221008152936963306.jpg",
+              "extend": "63.3万",
+              "module_type": "1365",
+              "images": "http://imge.kugou.com/soft/collection/240/20221008/20221008152936963306.jpg",
+              "content": "",
+              "data_num": "632970",
+              "area": "31",
+              "addtime": "2023-10-16 11:57:06",
+              "mark": "6114222",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004819_39_0",
+              "name": "伤感韩语：你的离开 让我痛彻心扉",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "73",
+          "mark": "2685910"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "27",
+          "id": "27",
+          "content": "释放无限能量，来参加电子乐迷的狂欢趴",
+          "name": "电音专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:41:00",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f27",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175752922363.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 317079,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230215/20230215175006821275.jpg",
+              "extend": "72.8万",
+              "module_type": "5079",
+              "images": "http://imge.kugou.com/soft/collection/240/20230215/20230215175006821275.jpg",
+              "content": "",
+              "data_num": "728400",
+              "area": "27",
+              "addtime": "2023-11-22 10:56:25",
+              "mark": "6509984",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004859_40_0",
+              "name": "燃系电子：助推燃料已加入！",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 315259,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://c1.kgimg.com/custom/240/20231101/20231101153102643803.jpg",
+              "extend": "25.3万",
+              "module_type": "5079",
+              "images": "http://c1.kgimg.com/custom/240/20231101/20231101153102643803.jpg",
+              "content": "",
+              "data_num": "253477",
+              "area": "27",
+              "addtime": "2023-11-08 17:58:04",
+              "mark": "7160345",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_1930105773_62_0",
+              "name": "S厂出品：爷青回集结经典之音",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 313489,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221109/20221109144031232129.jpg",
+              "extend": "91.3万",
+              "module_type": "5079",
+              "images": "http://imge.kugou.com/soft/collection/240/20221109/20221109144031232129.jpg",
+              "content": "",
+              "data_num": "913321",
+              "area": "27",
+              "addtime": "2023-10-25 14:59:11",
+              "mark": "6219805",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005183_33_0",
+              "name": "活力电子丨清音入耳，灵魂治愈",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "107",
+          "mark": "5739162"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "45",
+          "id": "45",
+          "content": "你想找的短视频热歌都在这里！",
+          "name": "抖音专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:45:09",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f45",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175423238960.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 325841,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240228/20240228120926273554.jpg",
+              "extend": "242.1万",
+              "module_type": "591",
+              "images": "http://imge.kugou.com/soft/collection/240/20240228/20240228120926273554.jpg",
+              "content": "",
+              "data_num": "2420799",
+              "area": "45",
+              "addtime": "2024-03-04 16:22:21",
+              "mark": "7434446",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005935_34_0",
+              "name": "抖音情歌丨总有一首歌，唱进你心里",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 325291,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20240204/20240204151013487847.jpg",
+              "extend": "588.7万",
+              "module_type": "591",
+              "images": "http://imge.kugou.com/soft/collection/240/20240204/20240204151013487847.jpg",
+              "content": "",
+              "data_num": "5887105",
+              "area": "45",
+              "addtime": "2024-02-26 10:30:10",
+              "mark": "7386822",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005583_32_0",
+              "name": "抖音精选：萦绕在耳边的熟悉旋律",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 291349,
+              "is_update": "0",
+              "sortid": "5",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20230428/20230428173952840352.jpg",
+              "extend": "7.6千万",
+              "module_type": "615",
+              "images": "http://imge.kugou.com/soft/collection/240/20230428/20230428173952840352.jpg",
+              "content": "",
+              "data_num": "76225906",
+              "area": "45",
+              "addtime": "2023-05-04 09:54:37",
+              "mark": "6693261",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005491_40_0",
+              "name": "2023年4月抖音热歌盘点",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "181",
+          "mark": "2692099"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "17",
+          "id": "17",
+          "content": "送给你最贴心的唯美纯音",
+          "name": "纯音乐专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:38:25",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f17",
+          "images": "https://imgessl.kugou.com/quickentry/20230404/20230404134740383783.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 316009,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220724/20220724092918396908.jpg",
+              "extend": "303.0万",
+              "module_type": "261",
+              "images": "http://imge.kugou.com/soft/collection/240/20220724/20220724092918396908.jpg",
+              "content": "",
+              "data_num": "3030494",
+              "area": "17",
+              "addtime": "2023-11-13 14:25:51",
+              "mark": "5786870",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004335_32_0",
+              "name": "开启学霸模式：柔和静心的轻音乐",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 313997,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221230/20221230221427907263.jpg",
+              "extend": "795.5万",
+              "module_type": "261",
+              "images": "http://imge.kugou.com/soft/collection/240/20221230/20221230221427907263.jpg",
+              "content": "",
+              "data_num": "7955211",
+              "area": "17",
+              "addtime": "2023-10-30 14:17:30",
+              "mark": "6376433",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004477_32_0",
+              "name": "惬意午后，有舒缓轻音相伴",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 312487,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220729/20220729135151836561.jpg",
+              "extend": "911.9万",
+              "module_type": "261",
+              "images": "http://imge.kugou.com/soft/collection/240/20220729/20220729135151836561.jpg",
+              "content": "",
+              "data_num": "9119469",
+              "area": "17",
+              "addtime": "2023-10-16 11:53:03",
+              "mark": "5846578",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004597_37_0",
+              "name": "治愈纯音：天气明朗，万物可爱",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "185",
+          "mark": "642395"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "19",
+          "id": "19",
+          "content": "有没有一首情歌，唱出了你的心事",
+          "name": "情歌专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:38:53",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f19",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175433341788.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 316681,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://c1.kgimg.com/v2/custom/8c1136f4bc8772c5f01fddbf76f8c145.png",
+              "extend": "99.0万",
+              "module_type": "25",
+              "images": "http://c1.kgimg.com/v2/custom/8c1136f4bc8772c5f01fddbf76f8c145.png",
+              "content": "",
+              "data_num": "990070",
+              "area": "19",
+              "addtime": "2023-11-17 15:04:30",
+              "mark": "7141601",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_1612136108_114_0",
+              "name": "「遗憾」爱意随风起，风止意难平",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 314629,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221018/20221018103026108194.jpg",
+              "extend": "144.1万",
+              "module_type": "25",
+              "images": "http://imge.kugou.com/soft/collection/240/20221018/20221018103026108194.jpg",
+              "content": "",
+              "data_num": "1440761",
+              "area": "19",
+              "addtime": "2023-11-03 15:33:00",
+              "mark": "6144934",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509006092_36_0",
+              "name": "异地恋：人海相识，终将归还于人海",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 313181,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://c1.kgimg.com/custom/240/20231008/20231008160319820136.jpg",
+              "extend": "54.8万",
+              "module_type": "25",
+              "images": "http://c1.kgimg.com/custom/240/20231008/20231008160319820136.jpg",
+              "content": "",
+              "data_num": "547763",
+              "area": "19",
+              "addtime": "2023-10-20 14:35:53",
+              "mark": "7111564",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_1500191516_264_0",
+              "name": "爱心发射biu～只想甜甜恋爱❤",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "186",
+          "mark": "2302270"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "29",
+          "id": "29",
+          "content": "新单热单一网打尽，资深欧美粉集合！",
+          "name": "欧美专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:41:21",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f29",
+          "images": "https://imgessl.kugou.com/quickentry/20230404/20230404135154891018.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 306101,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221110/20221110163100163743.jpg",
+              "extend": "444.2万",
+              "module_type": "429",
+              "images": "http://imge.kugou.com/soft/collection/240/20221110/20221110163100163743.jpg",
+              "content": "",
+              "data_num": "4442418",
+              "area": "29",
+              "addtime": "2023-08-11 17:25:13",
+              "mark": "6223066",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005921_33_0",
+              "name": "英语私藏：你一定会沉沦的欧美好歌",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 316675,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221208/20221208174639105810.jpg",
+              "extend": "350.0万",
+              "module_type": "429",
+              "images": "http://imge.kugou.com/soft/collection/240/20221208/20221208174639105810.jpg",
+              "content": "",
+              "data_num": "3499998",
+              "area": "29",
+              "addtime": "2023-11-17 14:55:10",
+              "mark": "6311857",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005085_41_0",
+              "name": "英语微醺：慵懒时光，有歌相伴",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 308513,
+              "is_update": "0",
+              "sortid": "5",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221008/20221008150617810060.jpg",
+              "extend": "140.3万",
+              "module_type": "429",
+              "images": "http://imge.kugou.com/soft/collection/240/20221008/20221008150617810060.jpg",
+              "content": "",
+              "data_num": "1402550",
+              "area": "29",
+              "addtime": "2023-09-08 16:46:41",
+              "mark": "6114169",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004872_39_0",
+              "name": "深夜emo：我茫然无措，早已失魂落魄",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "192",
+          "mark": "5739213"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "7",
+          "id": "7",
+          "content": "一入国风深似海，从此流行是路人。",
+          "name": "国风专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:33:31",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f7",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175813297516.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 316005,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220725/20220725110157923325.jpg",
+              "extend": "83.4万",
+              "module_type": "387",
+              "images": "http://imge.kugou.com/soft/collection/240/20220725/20220725110157923325.jpg",
+              "content": "",
+              "data_num": "833646",
+              "area": "7",
+              "addtime": "2023-11-13 14:18:23",
+              "mark": "5827908",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005277_34_0",
+              "name": "轻快国风：音符跳跃，童趣盎然",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 314001,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221223/20221223142605724217.jpg",
+              "extend": "46.1万",
+              "module_type": "387",
+              "images": "http://imge.kugou.com/soft/collection/240/20221223/20221223142605724217.jpg",
+              "content": "",
+              "data_num": "460812",
+              "area": "7",
+              "addtime": "2023-10-30 14:37:21",
+              "mark": "6354429",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004492_40_0",
+              "name": "国风美丨给自然风光写一首诗",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 312483,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220629/20220629185951689759.jpg",
+              "extend": "62.9万",
+              "module_type": "387",
+              "images": "http://imge.kugou.com/soft/collection/240/20220629/20220629185951689759.jpg",
+              "content": "",
+              "data_num": "629287",
+              "area": "7",
+              "addtime": "2023-10-16 11:45:00",
+              "mark": "5716934",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004306_33_0",
+              "name": "古风相思：云中谁寄锦书来",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "193",
+          "mark": "530870"
+        },
+        {
+          "skip_type": "歌单播放",
+          "area_id": "5",
+          "id": "5",
+          "content": "请感受来自二次元的耳畔魅力",
+          "name": "二次元专区",
+          "adduser": "石婧颖",
+          "addtime": "2019-09-05 14:32:12",
+          "area_url": "https://miniapp.kugou.com/node/v2?type=1&id=74&path=%2findex.html%23%2fmobile%2fhome%2f5",
+          "images": "https://imgessl.kugou.com/quickentry/20220310/20220310175650705775.jpg.webp",
+          "song_list": [
+            {
+              "skip_type": "歌单",
+              "id": 317069,
+              "is_update": "0",
+              "sortid": "1",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220608/20220608171902204900.jpg",
+              "extend": "47.1万",
+              "module_type": "151",
+              "images": "http://imge.kugou.com/soft/collection/240/20220608/20220608171902204900.jpg",
+              "content": "",
+              "data_num": "471455",
+              "area": "5",
+              "addtime": "2023-11-22 10:46:40",
+              "mark": "5629896",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509005388_34_0",
+              "name": "中二回忆录 | 打小有个拯救世界的梦想",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 315261,
+              "is_update": "0",
+              "sortid": "2",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20220815/20220815170135135218.jpg",
+              "extend": "17.8万",
+              "module_type": "151",
+              "images": "http://imge.kugou.com/soft/collection/240/20220815/20220815170135135218.jpg",
+              "content": "",
+              "data_num": "177502",
+              "area": "5",
+              "addtime": "2023-11-08 18:21:31",
+              "mark": "5920726",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004412_33_0",
+              "name": "燃系战斗曲：出击吧！沉默的少年！",
+              "is_recommend": 1
+            },
+            {
+              "skip_type": "歌单",
+              "id": 313491,
+              "is_update": "0",
+              "sortid": "3",
+              "data_img": "http://imge.kugou.com/soft/collection/240/20221124/20221124114103225040.jpg",
+              "extend": "2.4万",
+              "module_type": "151",
+              "images": "http://imge.kugou.com/soft/collection/240/20221124/20221124114103225040.jpg",
+              "content": "",
+              "data_num": "23860",
+              "area": "5",
+              "addtime": "2023-10-25 15:01:53",
+              "mark": "6266007",
+              "percount": 0,
+              "type": 0,
+              "global_specialid": "collection_3_509004958_39_0",
+              "name": "甜歌派对丨给生活蘸一点蜜糖",
+              "is_recommend": 1
+            }
+          ],
+          "sort": "287",
+          "mark": "2637020"
+        }
+      ],
+      "magazine": [
+        {
+          "nickname": "夏娃子",
+          "quality": 1,
+          "song_num": 5,
+          "collect_num": 0,
+          "ip_area": "",
+          "status": 1,
+          "magazine_id": "ea969f0e783ae40f743e30836a3793b9",
+          "title": "元气补给站！治愈你的疲惫心灵",
+          "cover_ratio": 81,
+          "cover_url": "http://webimg.bssdl.kugou.com/0d320052600a75697de5cb94b0fc85f5.jpg",
+          "userid": 1358802688,
+          "header": "http://p3.fx.kgimg.com//v2/kugouicon/20210406060225702870.jpg",
+          "scan_num": 1942,
+          "is_collect": 0
+        },
+        {
+          "nickname": "小鹿开课了",
+          "quality": 1,
+          "song_num": 5,
+          "collect_num": 1,
+          "ip_area": "",
+          "status": 1,
+          "magazine_id": "02dc2d5393e3be6a106783e5f1588e09",
+          "title": "2021不将就：共创美好家园",
+          "cover_ratio": 74,
+          "cover_url": "http://webimg.bssdl.kugou.com/05a2dd87d72415eb30e1f7be2a870a97.jpg",
+          "userid": 1495086127,
+          "header": "http://imge.kugou.com/kugouicon/165/20221122/20221122202326163823.jpg",
+          "scan_num": 611,
+          "is_collect": 0
+        },
+        {
+          "nickname": "夏娃子",
+          "quality": 1,
+          "song_num": 5,
+          "collect_num": 0,
+          "ip_area": "",
+          "status": 1,
+          "magazine_id": "ee059ee156aa6d18a25c00ec4c1eee66",
+          "title": "当努力成了人生常态，生活就充满希望",
+          "cover_ratio": 75,
+          "cover_url": "http://webimg.bssdl.kugou.com/766bad944255d363365d856816bed520.jpg",
+          "userid": 1358802688,
+          "header": "http://p3.fx.kgimg.com//v2/kugouicon/20210406060225702870.jpg",
+          "scan_num": 839,
+          "is_collect": 0
+        },
+        {
+          "nickname": "小猪动画",
+          "quality": 1,
+          "song_num": 5,
+          "collect_num": 0,
+          "ip_area": "",
+          "status": 1,
+          "magazine_id": "fab42c75614554dff67d389096cff8ae",
+          "title": "不如约定一下，今年我们一起去看海",
+          "cover_ratio": 74,
+          "cover_url": "http://webimg.bssdl.kugou.com/161bf8bf587510ab976f48b8fe16e9d5.jpg",
+          "userid": 438391366,
+          "header": "http://imge.kugou.com/kugouicon/165/20230512/20230512160954252802.jpg",
+          "scan_num": 1027,
+          "is_collect": 0
+        },
+        {
+          "nickname": "夏娃子",
+          "quality": 1,
+          "song_num": 5,
+          "collect_num": 1,
+          "ip_area": "",
+          "status": 1,
+          "magazine_id": "05374a5cd6d31f262acfb8e15ac9570b",
+          "title": "无论身在何处，我都愿意活得生机勃勃",
+          "cover_ratio": 74,
+          "cover_url": "http://webimg.bssdl.kugou.com/01d1fb32aafca31ebd34181e89a22c4d.jpg",
+          "userid": 1358802688,
+          "header": "http://p3.fx.kgimg.com//v2/kugouicon/20210406060225702870.jpg",
+          "scan_num": 589,
+          "is_collect": 0
+        },
+        {
+          "nickname": "凤凰未归何长忆",
+          "quality": 1,
+          "song_num": 5,
+          "collect_num": 0,
+          "ip_area": "",
+          "status": 1,
+          "magazine_id": "f4b6f0d33fc2370021627bc42efc4ca3",
+          "title": "伤感：爱于此生，余生各别两宽",
+          "cover_ratio": 78,
+          "cover_url": "http://webimg.bssdl.kugou.com/410e6df13146de36b244a63c93f4a59b.jpg",
+          "userid": 1026960920,
+          "header": "http://p3.fx.kgimg.com//v2/kugouicon/20220325174413590478.jpg",
+          "scan_num": 1744,
+          "is_collect": 0
+        }
+      ],
+      "entry": [
+        {
+          "extra": {
+            "innerurl": "https://activity.kugou.com/music-area/dist/#/mobile/index"
+          },
+          "title": "专区",
+          "imgurl": "http://imge.kugou.com/quickentry/20160330/20160330114622814737.png",
+          "type": 4
+        },
+        {
+          "extra": null,
+          "title": "MV",
+          "imgurl": "http://imge.kugou.com/quickentry/20160325/20160325095053203269.png",
+          "type": 8
+        },
+        {
+          "extra": null,
+          "title": "专题",
+          "imgurl": "http://imge.kugou.com/quickentry/20160418/20160418164539193695.png",
+          "type": 3
+        },
+        {
+          "extra": null,
+          "title": "电台",
+          "imgurl": "http://imge.kugou.com/quickentry/20160418/20160418164515212880.png",
+          "type": 7
+        }
+      ],
+      "vlist": [
+        {
+          "des": "想减脂塑形又没有时间去健身房？那就让小哑铃来帮忙吧！",
+          "title": "酷狗运动音乐 · 小哑铃课程精选",
+          "mobile_banner": "",
+          "public_time": "2021/09/27",
+          "vid": 430548,
+          "cate": "特别策划",
+          "hot_num": 0
+        },
+        {
+          "des": "恭喜你！发现一个宝藏→__→这里是酷狗独家的明星快问快答栏目，专业揭开明星的 “另一面”。",
+          "title": "酷狗大咖说？有点意思！",
+          "mobile_banner": "",
+          "public_time": "2021/06/21",
+          "vid": 404654,
+          "cate": "特别策划",
+          "hot_num": 0
+        },
+        {
+          "des": "和你们手牵手，一起走到2020的最后！张惠妹「UTOPIA EAST」线上演唱会惊喜来袭！用歌声、焰火和爱，与你一起迎接2021的到来。",
+          "title": "TME live 张惠妹20/21 UTOPIA EAST线上演唱会",
+          "mobile_banner": "http://imge.kugou.com/commendpic/20210102/20210102094214131980.jpg",
+          "public_time": "2020/12/31",
+          "vid": 360514,
+          "cate": "特别策划",
+          "hot_num": 0
+        },
+        {
+          "des": "A-Lin「I'm A-Lin音乐会」与你诚意相约，为你献上多首必听爆单，重温人生旅途中的每一场相遇~",
+          "title": "I'm A-Lin音乐会 现场回顾",
+          "mobile_banner": "http://imge.kugou.com/commendpic/20200411/20200411195711799812.jpg",
+          "public_time": "2020/04/11",
+          "vid": 282864,
+          "cate": "特别策划",
+          "hot_num": 0
+        }
+      ],
+      "rank": [
+        {
+          "children": [],
+          "base_img": "",
+          "video_ending": "http://imge.kugou.com/mcommon/{size}/20240313/20240313142811662716.jpg",
+          "rankname": "TOP500",
+          "new_cycle": 1800,
+          "banner_9": "http://imge.kugou.com/mcommon/{size}/20220112/20220112175202472916.png.webp",
+          "album_img_9": "http://imge.kugou.com/stdmusic/{size}/20260604/20260604164021847508.jpg.webp",
+          "rank_id_publish_date": "2026-09-04 08:30:00",
+          "update_frequency_type": 1,
+          "play_times": 11297979,
+          "img_9": "http://imge.kugou.com/mcommon/{size}/20241219/20241219164221229666.png.webp",
+          "is_city_rank": 0,
+          "classify": 1,
+          "img_cover": "http://imge.kugou.com/mcommon/{size}/20241219/20241219164226731176.png.webp",
+          "intro": "数据来源：全曲库歌曲\r\n排序方式：按歌曲喜爱用户数的总量排序\r\n更新频率：每天",
+          "album_cover_color": "#3d4c64",
+          "share_bg": "http://imge.kugou.com/mcommon/{size}/20240505/20240505213952649412.png",
+          "id": 2,
+          "jump_url": "",
+          "share_logo": "http://imge.kugou.com/mcommon/{size}/20240311/20240311161212168226.png",
+          "bannerurl": "http://imge.kugou.com/mcommonbanner/{size}/20181019/20181019122517263545.jpg.webp",
+          "rankid": 8888,
+          "show_play_count": 1,
+          "isvol": 1,
+          "ranktype": 2,
+          "issue": 247,
+          "count_down": 1800,
+          "custom_type": 0,
+          "zone": "tx6_gz_kmr",
+          "rank_cid": 126025,
+          "update_frequency": "每天",
+          "show_play_button": 0,
+          "banner7url": "http://imge.kugou.com/mcommon/{size}/20241219/20241219164215715999.png.webp",
+          "songinfo": [
+            {
+              "songname": "阿图表妹 - 你有没有真的爱过我",
+              "trans_param": {
+                "cpy_grade": 5,
+                "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260604/20260604164021847508.jpg",
+                "language": "国语",
+                "cpy_attr0": 58735744,
+                "musicpack_advance": 1,
+                "display": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "ogg_128_filesize": 2869682,
+                "cpy_map": "2",
+                "hash_multitrack": "D078EF8B1D887B7245BFD73F25119DBB",
+                "appid_block": "3124",
+                "qualitymap": {
+                  "bits": "8fffe0db411fefebf3be474",
+                  "attr0": 1060889716,
+                  "attr1": 1747189245
+                },
+                "is_original": 2,
+                "ipmap": {
+                  "attr0": 17213427712
+                },
+                "cid": 596195117,
+                "pay_block_tpl": 1,
+                "ogg_128_hash": "23D32B626052A74430229EE7DB6FC719",
+                "ogg_320_hash": "5B663FCD882D5A913BBE6ACA478A7FBF",
+                "hash_offset": {
+                  "clip_hash": "11588236770AEC2A2FC449F28B6447EF",
+                  "start_byte": 0,
+                  "end_ms": 60000,
+                  "end_byte": 960143,
+                  "file_type": 0,
+                  "start_ms": 0,
+                  "offset_hash": "F4CEA74FD41857D8227BB4EEB02BA6BA"
+                },
+                "classmap": {
+                  "attr0": 234881032
+                },
+                "provider": 5,
+                "ogg_320_filesize": 9460902
+              },
+              "name": "你有没有真的爱过我",
+              "author": "阿图表妹",
+              "album_audio_id": 879490214
+            },
+            {
+              "songname": "欢子 - 思念漫过海岸线",
+              "trans_param": {
+                "cpy_grade": 5,
+                "classmap": {
+                  "attr0": 234881032
+                },
+                "provider": 2,
+                "free_limited": 1,
+                "cpy_attr0": 58720256,
+                "musicpack_advance": 0,
+                "ogg_128_filesize": 2717262,
+                "display_rate": 0,
+                "cpy_map": "2",
+                "cpy_level": 1,
+                "hash_multitrack": "545C4EC94F6EBEE1CB181FBE867715F0",
+                "qualitymap": {
+                  "bits": "800000db41080003f3be474",
+                  "attr0": 1060889716,
+                  "attr1": 1746993152
+                },
+                "pay_block_tpl": 1,
+                "display": 0,
+                "cid": 657873681,
+                "ipmap": {
+                  "attr0": 154652381184
+                },
+                "ogg_128_hash": "C0F931B8A9630CF900D0565B8DB74815",
+                "ogg_320_hash": "7D5D80D44DC79918F32FA20E97FF3AB3",
+                "appid_block": "3124",
+                "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260830/20260830122759607455.jpg",
+                "language": "国语",
+                "ogg_320_filesize": 9331357
+              },
+              "name": "思念漫过海岸线",
+              "author": "欢子",
+              "album_audio_id": 954533843
+            },
+            {
+              "songname": "李佳薇 - 甲乙丙丁 (你我怎么两清)",
+              "trans_param": {
+                "cpy_grade": 6,
+                "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260630/20260630202952972321.jpg",
+                "language": "国语",
+                "cpy_attr0": 58727552,
+                "musicpack_advance": 1,
+                "display": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "hash_multitrack": "BE8DCB2CEB2B76D8A121B31F04DC4578",
+                "cpy_map": "2",
+                "ogg_128_filesize": 2381028,
+                "classmap": {
+                  "attr0": 234881032
+                },
+                "qualitymap": {
+                  "bits": "8fffc0db4107efeb710c034",
+                  "attr0": 923844660,
+                  "attr1": 1746992637
+                },
+                "is_original": 1,
+                "songname_suffix": "(你我怎么两清)",
+                "cid": 631764754,
+                "ipmap": {
+                  "attr0": 138546253824
+                },
+                "ogg_128_hash": "B7FE963FFAC22A30FFFCA732E72E7024",
+                "ogg_320_hash": "AADBE8C156AAE33432CB3A59F0CD6C36",
+                "hash_offset": {
+                  "clip_hash": "982A1895B1B774BE6733FDE71A5E02E8",
+                  "start_byte": 0,
+                  "end_ms": 60000,
+                  "end_byte": 960121,
+                  "file_type": 0,
+                  "start_ms": 0,
+                  "offset_hash": "E4E7CCC39220F49A1CBD2124A4F86AFD"
+                },
+                "provider": 1,
+                "pay_block_tpl": 1,
+                "ogg_320_filesize": 8077097
+              },
+              "name": "甲乙丙丁 (你我怎么两清)",
+              "author": "李佳薇",
+              "album_audio_id": 920474385
+            }
+          ],
+          "jump_title": "",
+          "is_timing": 1,
+          "haschildren": 0,
+          "extra": {
+            "resp": {
+              "scheduled_release_conf": {
+                "scheduled_release_time": "10:00:00",
+                "latest_rank_cid": 126025,
+                "latest_rank_cid_publish_date": "2026-09-04 08:30:00"
+              },
+              "five_year_total": 181,
+              "new_total": 10,
+              "enjoy_total": 0,
+              "recent_year_total": 123,
+              "follow_total": 0,
+              "all_total": 500,
+              "vip_total": 0,
+              "rank_tag": [
+                {
+                  "desc": "有10首上新",
+                  "type": 3
+                }
+              ]
+            }
+          },
+          "table_plaque": "http://imge.kugou.com/mcommon/{size}/20240311/20240311161214589894.png",
+          "imgurl": "http://imge.kugou.com/mcommon/{size}/20241219/20241219164209670219.png.webp"
+        },
+        {
+          "children": [],
+          "base_img": "",
+          "video_ending": "http://imge.kugou.com/mcommon/{size}/20240313/20240313142811662716.jpg",
+          "rankname": "国潮音乐榜",
+          "new_cycle": 0,
+          "banner_9": "http://imge.kugou.com/mcommon/{size}/20241120/20241120202656406136.png.webp",
+          "album_img_9": "http://imge.kugou.com/stdmusic/{size}/20260328/20260328134050311250.jpg.webp",
+          "rank_id_publish_date": "2026-09-04 03:00:02",
+          "update_frequency_type": 0,
+          "play_times": 17841,
+          "img_9": "http://imge.kugou.com/mcommon/{size}/20241120/20241120202652582516.jpg.webp",
+          "is_city_rank": 0,
+          "classify": 5,
+          "img_cover": "http://imge.kugou.com/mcommon/{size}/20241120/20241120202704171523.jpg.webp",
+          "intro": "酷狗音乐结合平台特色，通过播放、传播、互动等维度，结合歌曲自身播放热度等综合评估推出的全新音乐榜单",
+          "album_cover_color": "#644f3d",
+          "share_bg": "",
+          "id": 381,
+          "jump_url": "https://h5.kugou.com/rank/v-25ff3dc2/index.html?no_header=1&isHideTitleBar=1",
+          "share_logo": "http://imge.kugou.com/mcommon/{size}/20241120/20241120202714284821.png",
+          "bannerurl": "",
+          "rankid": 85897,
+          "show_play_count": 1,
+          "isvol": 1,
+          "ranktype": 1,
+          "issue": 37,
+          "count_down": 0,
+          "custom_type": 0,
+          "zone": "tx6_gz_kmr",
+          "rank_cid": 126004,
+          "update_frequency": "周五凌晨更新周榜",
+          "show_play_button": 0,
+          "banner7url": "http://imge.kugou.com/mcommon/{size}/20241120/20241120202648670370.jpg.webp",
+          "songinfo": [
+            {
+              "songname": "刀郎、奚晓天 - 大江南",
+              "trans_param": {
+                "cpy_grade": 5,
+                "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260328/20260328134050311250.jpg",
+                "language": "国语",
+                "cpy_attr0": 41958528,
+                "musicpack_advance": 1,
+                "display": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "ogg_128_filesize": 4153362,
+                "cpy_map": "2",
+                "hash_multitrack": "4B6D1E0113BF3EB95F45412ECD45A78E",
+                "appid_block": "3124",
+                "qualitymap": {
+                  "bits": "8fffc0db411fefebf3bc074",
+                  "attr0": 1060880500,
+                  "attr1": 1747189245
+                },
+                "is_original": 1,
+                "ipmap": {
+                  "attr0": 138613362688
+                },
+                "cid": 582900856,
+                "pay_block_tpl": 1,
+                "ogg_128_hash": "3BBC7047E8C1BD8D6F26D874AB53E373",
+                "ogg_320_hash": "B5E5FBA5EBFCAC7E54C13956AEB2B599",
+                "hash_offset": {
+                  "clip_hash": "52312D3DA0E547DAB046B0A9C92DB5BB",
+                  "start_byte": 0,
+                  "end_ms": 60000,
+                  "end_byte": 960115,
+                  "file_type": 0,
+                  "start_ms": 0,
+                  "offset_hash": "EBF963275D37BFAC0CCCCEEA8991A732"
+                },
+                "classmap": {
+                  "attr0": 234881032
+                },
+                "provider": 5,
+                "ogg_320_filesize": 14296952
+              },
+              "name": "大江南",
+              "author": "刀郎、奚晓天",
+              "album_audio_id": 859349668
+            },
+            {
+              "songname": "张云雷 - 洞房",
+              "trans_param": {
+                "ogg_128_hash": "C948CE82549B81D8944C9C8AB1F078CD",
+                "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260818/20260818112143938021.jpg",
+                "provider": 5,
+                "cpy_attr0": 58735744,
+                "musicpack_advance": 1,
+                "display": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "cpy_map": "2",
+                "pay_block_tpl": 1,
+                "hash_multitrack": "F4DFF706E012947AA78B1390890B6EC0",
+                "qualitymap": {
+                  "bits": "8fffc0db411fefebf10e474",
+                  "attr0": 1058071668,
+                  "attr1": 1747189245
+                },
+                "is_original": 1,
+                "classmap": {
+                  "attr0": 234881032
+                },
+                "cid": 654611938,
+                "ipmap": {
+                  "attr0": 138613362688
+                },
+                "cpy_grade": 5,
+                "ogg_320_hash": "E9CAE330EFCA88C3FBAF69FF6D0AB43C",
+                "hash_offset": {
+                  "clip_hash": "D0787E3081CE0C443919C00BC51329C7",
+                  "start_byte": 0,
+                  "end_ms": 60000,
+                  "end_byte": 960113,
+                  "file_type": 0,
+                  "start_ms": 0,
+                  "offset_hash": "B00644231C9582A2BCBB4A3A28BCA2A2"
+                },
+                "ogg_128_filesize": 2737039,
+                "language": "国语",
+                "ogg_320_filesize": 10212406
+              },
+              "name": "洞房",
+              "author": "张云雷",
+              "album_audio_id": 949999224
+            },
+            {
+              "songname": "刀郎、徐子尧、张旖旎、奚晓天 - 鸿雁于飞",
+              "trans_param": {
+                "pay_block_tpl": 1,
+                "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250812/20250812102453189751.jpg",
+                "provider": 5,
+                "cpy_attr0": 41958528,
+                "musicpack_advance": 1,
+                "display": 0,
+                "display_rate": 0,
+                "cpy_level": 1,
+                "cpy_map": "2",
+                "language": "国语",
+                "hash_multitrack": "7A811AD89FC76F9F399965EE14C887C3",
+                "qualitymap": {
+                  "bits": "8fffc0db411fefebf3bc074",
+                  "attr0": 1060880500,
+                  "attr1": 1747189245
+                },
+                "appid_block": "3124",
+                "ipmap": {
+                  "attr0": 8934706384896
+                },
+                "cid": 579841734,
+                "ogg_128_hash": "F6B376E192143DB2B8CD16FD0E24CD23",
+                "classmap": {
+                  "attr0": 234881032
+                },
+                "ogg_320_hash": "E336E646374DA9350535FD7AE8602D61",
+                "hash_offset": {
+                  "clip_hash": "083E713403AC19EDA1902EC8810907F8",
+                  "start_byte": 0,
+                  "end_ms": 60000,
+                  "end_byte": 960133,
+                  "file_type": 0,
+                  "start_ms": 0,
+                  "offset_hash": "6AA10C395A1037854A6F0F95E7AB3A27"
+                },
+                "ogg_128_filesize": 3930907,
+                "cpy_grade": 5,
+                "ogg_320_filesize": 13712093
+              },
+              "name": "鸿雁于飞",
+              "author": "刀郎、徐子尧、张旖旎、奚晓天",
+              "album_audio_id": 855641172
+            }
+          ],
+          "jump_title": "国潮音乐榜",
+          "is_timing": 0,
+          "haschildren": 0,
+          "extra": {
+            "resp": {
+              "scheduled_release_conf": {
+                "scheduled_release_time": "00:00:00",
+                "latest_rank_cid": 126004,
+                "latest_rank_cid_publish_date": "2026-09-04 03:00:02"
+              },
+              "five_year_total": 99,
+              "new_total": 5,
+              "enjoy_total": 0,
+              "recent_year_total": 39,
+              "follow_total": 0,
+              "all_total": 100,
+              "vip_total": 0,
+              "rank_tag": [
+                {
+                  "desc": "有5首上新",
+                  "type": 3
+                }
+              ]
+            }
+          },
+          "table_plaque": "",
+          "imgurl": "http://imge.kugou.com/mcommon/{size}/20241120/20241120202644296668.jpg.webp"
+        }
+      ],
+      "album": [
+        {
+          "trans_param": {
+            "special_tag": "6668288"
+          },
+          "singerid": 811890,
+          "category": 1,
+          "singername": "彭妃妃",
+          "privilege": 0,
+          "publishtime": "2026-09-04",
+          "albumid": 206223312,
+          "albumname": "十个承诺九个哄 (现场版)",
+          "intro": "内地女歌手“彭妃妃”最新单曲《十个承诺九个哄》，欢迎收听！",
+          "imgurl": "http://imge.kugou.com/stdmusic/{size}/20260903/20260903142706495461.jpg"
+        },
+        {
+          "trans_param": {
+            "special_tag": "4210688"
+          },
+          "singerid": 786970,
+          "category": 1,
+          "singername": "李英",
+          "privilege": 0,
+          "publishtime": "2026-09-04",
+          "albumid": 206223420,
+          "albumname": "没有了你心好痛（广场舞版）",
+          "intro": "没有了你心好痛 没有了你爱成空\n没有了你为爱发了疯\n是你陪了我一...",
+          "imgurl": "http://imge.kugou.com/stdmusic/{size}/20260825/20260825124835655011.jpg"
+        }
+      ],
+      "custom_special": [],
+      "recommend": [
+        {
+          "online": 1788451200,
+          "title": "火爆DJ舞曲：劲辣节奏 摇摆狂欢",
+          "id": 217517,
+          "extra": {
+            "specialid": 6655724,
+            "user_name": "王琳",
+            "songcount": 107,
+            "publishtime": "2023-04-12",
+            "slid": 141,
+            "verified": 0,
+            "collectcount": 110387,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1990193305_141_0",
+            "percount": 0,
+            "suid": 1990193305,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20250805/20250805155858341679.jpg.webp",
+            "specialname": "火爆DJ舞曲：劲辣节奏 摇摆狂欢",
+            "singername": "",
+            "play_count": 280686169,
+            "intro": "这一年的DJ热歌榜单堪称宝藏，首首上头。那些洗脑的旋律在脑海里无...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20250805/20250805155858341679.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "一听前奏，就中毒的英文歌单。",
+          "id": 217519,
+          "extra": {
+            "specialid": 3059289,
+            "user_name": "上上签",
+            "songcount": 218,
+            "publishtime": "2020-09-11",
+            "slid": 25,
+            "verified": 0,
+            "collectcount": 203135,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_169471_25_0",
+            "percount": 0,
+            "suid": 169471,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20200911/20200911124216914358.jpg.webp",
+            "specialname": "一听前奏，就中毒的英文歌单。",
+            "singername": "",
+            "play_count": 140222323,
+            "intro": "听完这236首英文歌\n世上再无好听的英文歌\n可以单曲循环一整天的...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20200911/20200911124216914358.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "欧美旋律控 · 抓耳节奏瞬间上头",
+          "id": 217521,
+          "extra": {
+            "specialid": 3428133,
+            "user_name": "樱丸小桃子",
+            "songcount": 73,
+            "publishtime": "2021-01-04",
+            "slid": 26,
+            "verified": 0,
+            "collectcount": 185874,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1530650845_26_0",
+            "percount": 0,
+            "suid": 1530650845,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20210104/20210104172505696301.jpg.webp",
+            "specialname": "欧美旋律控 · 抓耳节奏瞬间上头",
+            "singername": "",
+            "play_count": 95174868,
+            "intro": "很早以前就想做一张这个主题的歌单，因为自己在打游戏、抄作业、做运...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20210104/20210104172505696301.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "2021年9月抖音热歌盘点（每日更新）",
+          "id": 217523,
+          "extra": {
+            "specialid": 4191335,
+            "user_name": "潘多拉",
+            "songcount": 103,
+            "publishtime": "2021-09-06",
+            "slid": 32,
+            "verified": 0,
+            "collectcount": 146307,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_509004668_32_0",
+            "percount": 0,
+            "suid": 509004668,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20210906/20210906141104788475.jpg.webp",
+            "specialname": "2021年9月抖音热歌盘点（每日更新）",
+            "singername": "",
+            "play_count": 769383623,
+            "intro": "9月热歌来袭",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20210906/20210906141104788475.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "抖音车载BGM丨醉心歌声，伴你好心情",
+          "id": 217525,
+          "extra": {
+            "specialid": 6525997,
+            "user_name": "半岛铁盒",
+            "songcount": 112,
+            "publishtime": "2023-02-21",
+            "slid": 10,
+            "verified": 0,
+            "collectcount": 117405,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2083707659_10_0",
+            "percount": 0,
+            "suid": 2083707659,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20250425/20250425091752589400.jpg.webp",
+            "specialname": "抖音车载BGM丨醉心歌声，伴你好心情",
+            "singername": "",
+            "play_count": 774263071,
+            "intro": "开车路上，最需要一首能戳中情绪的歌来调和节奏。这份车载歌单，精选...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20250425/20250425091752589400.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "2026热歌合集｜百听不厌的旋律里都有一段故事",
+          "id": 217527,
+          "extra": {
+            "specialid": 3102174,
+            "user_name": "华语杂货铺",
+            "songcount": 446,
+            "publishtime": "2020-09-23",
+            "slid": 53,
+            "verified": 0,
+            "collectcount": 326046,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1085322503_53_0",
+            "percount": 0,
+            "suid": 1085322503,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20260701/20260701191303871878.jpg.webp",
+            "specialname": "2026热歌合集｜百听不厌的旋律里都有一段故事",
+            "singername": "",
+            "play_count": 878186077,
+            "intro": "通勤的拥挤地铁里，失眠的安静深夜中，独处的松弛午后，我们总习惯点...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20260701/20260701191303871878.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "2026车载DJ劲爆嗨曲｜高速夜驾必备重低音",
+          "id": 217529,
+          "extra": {
+            "specialid": 8390317,
+            "user_name": "石栗",
+            "songcount": 113,
+            "publishtime": "2025-03-18",
+            "slid": 169,
+            "verified": 0,
+            "collectcount": 4030,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2251443825_169_0",
+            "percount": 0,
+            "suid": 2251443825,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20260811/20260811101953240293.jpg.webp",
+            "specialname": "2026车载DJ劲爆嗨曲｜高速夜驾必备重低音",
+            "singername": "",
+            "play_count": 52159863,
+            "intro": "为夜行高速而准备，这首歌单充满动感节拍与深刻情感，无论是失恋后的...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20260811/20260811101953240293.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "TOP登陆少年丨前方路再远再长，至少还有你",
+          "id": 217531,
+          "extra": {
+            "specialid": 7915320,
+            "user_name": "酷狗音乐官方歌单",
+            "songcount": 66,
+            "publishtime": "2024-08-27",
+            "slid": 411,
+            "verified": 0,
+            "collectcount": 1458,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1002717860_411_0",
+            "percount": 0,
+            "suid": 1002717860,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20260828/20260828194544118386.jpg.webp",
+            "specialname": "TOP登陆少年丨前方路再远再长，至少还有你",
+            "singername": "",
+            "play_count": 144176,
+            "intro": "TOP登陆少年是北京时代峰峻于2024年8月26日推出的男子演唱...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20260828/20260828194544118386.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "翻红老歌DJ|不怕老歌没人追，就怕老歌带DJ",
+          "id": 217533,
+          "extra": {
+            "specialid": 7937371,
+            "user_name": "永不言败",
+            "songcount": 20,
+            "publishtime": "2024-09-04",
+            "slid": 36,
+            "verified": 0,
+            "collectcount": 1393,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_509004758_36_0",
+            "percount": 0,
+            "suid": 509004758,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20240904/20240904163820447037.jpg.webp",
+            "specialname": "翻红老歌DJ|不怕老歌没人追，就怕老歌带DJ",
+            "singername": "",
+            "play_count": 5522350,
+            "intro": "不怕新歌有多嗨，就怕老歌带DJ！如今越听越上头，根本停不下来！",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20240904/20240904163820447037.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "牛来！永不放弃，触底反弹顶峰再会",
+          "id": 217535,
+          "extra": {
+            "specialid": 9782536,
+            "user_name": "梗八卦",
+            "songcount": 65,
+            "publishtime": "2026-08-20",
+            "slid": 7,
+            "verified": 0,
+            "collectcount": 735,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2132041437_7_0",
+            "percount": 0,
+            "suid": 2132041437,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20260820/20260820150340335414.jpg.webp",
+            "specialname": "牛来！永不放弃，触底反弹顶峰再会",
+            "singername": "",
+            "play_count": 173672,
+            "intro": "《牛来》 不仅是一部电影的奇迹，更是中年人绝不向命运认输的史诗！...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20260820/20260820150340335414.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "2025年抖音最火的歌丨引领音乐潮流风向标",
+          "id": 217537,
+          "extra": {
+            "specialid": 6398623,
+            "user_name": "风骚猛男",
+            "songcount": 228,
+            "publishtime": "2023-01-07",
+            "slid": 186,
+            "verified": 0,
+            "collectcount": 226280,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1983677759_186_0",
+            "percount": 0,
+            "suid": 1983677759,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20230107/20230107115452629453.jpg.webp",
+            "specialname": "2025年抖音最火的歌丨引领音乐潮流风向标",
+            "singername": "",
+            "play_count": 527490389,
+            "intro": "2025年抖音以强大的影响力，让一首首歌曲火遍大街小巷，成为全民...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20230107/20230107115452629453.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "2026车载必备动感DJ丨动感热歌",
+          "id": 217539,
+          "extra": {
+            "specialid": 8304355,
+            "user_name": "好听的歌都在这儿了",
+            "songcount": 158,
+            "publishtime": "2025-02-07",
+            "slid": 391,
+            "verified": 0,
+            "collectcount": 115754,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_520032980_391_0",
+            "percount": 0,
+            "suid": 520032980,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20250206/20250206151630958952.jpg.webp",
+            "specialname": "2026车载必备动感DJ丨动感热歌",
+            "singername": "",
+            "play_count": 486774578,
+            "intro": "拒绝驾驶疲惫！消除堵车烦恼！在驾驶途中尽情摇摆！2026车载必备...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20250206/20250206151630958952.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "谢霆锋丨我们不再少年，而你是我们的青春",
+          "id": 217541,
+          "extra": {
+            "specialid": 5966807,
+            "user_name": "酷乐推荐",
+            "songcount": 42,
+            "publishtime": "2022-08-26",
+            "slid": 154,
+            "verified": 0,
+            "collectcount": 1468,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2132029040_154_0",
+            "percount": 0,
+            "suid": 2132029040,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20260828/20260828194122501344.jpg.webp",
+            "specialname": "谢霆锋丨我们不再少年，而你是我们的青春",
+            "singername": "",
+            "play_count": 1064576,
+            "intro": "谢霆锋，1980年8月29日出生于中国香港，华语流行乐男歌手、影...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20260828/20260828194122501344.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "SBTI人格歌鉴开启！看看谁和你是同款尤物~",
+          "id": 217543,
+          "extra": {
+            "specialid": 9470124,
+            "user_name": "叫我宝藏挖掘机",
+            "songcount": 157,
+            "publishtime": "2026-04-10",
+            "slid": 94,
+            "verified": 0,
+            "collectcount": 332,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1841425288_94_0",
+            "percount": 0,
+            "suid": 1841425288,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20260410/20260410114424520413.jpg.webp",
+            "specialname": "SBTI人格歌鉴开启！看看谁和你是同款尤物~",
+            "singername": "",
+            "play_count": 651524,
+            "intro": "SBTI测出来是死者、吗喽还是ATM-er？别管了。用一首歌定义...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20260410/20260410114424520413.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "抖音歌曲最火的歌2026：短视频热门BGM",
+          "id": 217545,
+          "extra": {
+            "specialid": 3435104,
+            "user_name": "咸鱼大饼干",
+            "songcount": 190,
+            "publishtime": "2021-01-07",
+            "slid": 1382,
+            "verified": 0,
+            "collectcount": 590524,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_918745899_1382_0",
+            "percount": 0,
+            "suid": 918745899,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20260715/20260715080437380608.jpg.webp",
+            "specialname": "抖音歌曲最火的歌2026：短视频热门BGM",
+            "singername": "",
+            "play_count": 1098385770,
+            "intro": "这里是2026年抖音全网刷屏的爆款热歌合集，收录了年度最具人气的...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20260715/20260715080437380608.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "抖音热歌dj｜夏日节奏，24小时不歇业",
+          "id": 217547,
+          "extra": {
+            "specialid": 6598672,
+            "user_name": "氧化氢",
+            "songcount": 108,
+            "publishtime": "2023-03-21",
+            "slid": 160,
+            "verified": 0,
+            "collectcount": 56252,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1990461179_160_0",
+            "percount": 0,
+            "suid": 1990461179,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20250805/20250805162508621601.jpg.webp",
+            "specialname": "抖音热歌dj｜夏日节奏，24小时不歇业",
+            "singername": "",
+            "play_count": 153106676,
+            "intro": "2025年抖音的DJ热歌太会拿捏听众了！旋律一响，仿佛自带魔力，...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20250805/20250805162508621601.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "抖音伤感emo歌曲｜深夜必听",
+          "id": 217549,
+          "extra": {
+            "specialid": 7307951,
+            "user_name": "蒲公英的约定",
+            "songcount": 160,
+            "publishtime": "2024-01-02",
+            "slid": 4,
+            "verified": 0,
+            "collectcount": 13078,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2171038386_4_0",
+            "percount": 0,
+            "suid": 2171038386,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20240102/20240102210819513977.jpg.webp",
+            "specialname": "抖音伤感emo歌曲｜深夜必听",
+            "singername": "",
+            "play_count": 18917714,
+            "intro": "一键收听：抖音伤感emo歌曲｜深夜必听～",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20240102/20240102210819513977.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "音综天籁图鉴：综艺舞台的封神名场面",
+          "id": 217551,
+          "extra": {
+            "specialid": 4130706,
+            "user_name": "迷醉",
+            "songcount": 205,
+            "publishtime": "2021-08-20",
+            "slid": 33,
+            "verified": 0,
+            "collectcount": 16412,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_509005328_33_0",
+            "percount": 0,
+            "suid": 509005328,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20260410/20260410224020576716.jpg.webp",
+            "specialname": "音综天籁图鉴：综艺舞台的封神名场面",
+            "singername": "",
+            "play_count": 19303076,
+            "intro": "这里有你最喜欢的现场氛围， 也有你最喜欢的歌手爱豆， 当然，这也...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20260410/20260410224020576716.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "演唱会 | 张艺兴《斗战胜佛》演唱会",
+          "id": 217553,
+          "extra": {
+            "specialid": 9777416,
+            "user_name": "酷狗站-现场看我的",
+            "songcount": 34,
+            "publishtime": "2026-08-18",
+            "slid": 793,
+            "verified": 0,
+            "collectcount": 87,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2132040296_793_0",
+            "percount": 0,
+            "suid": 2132040296,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20260827/20260827155204914935.jpg.webp",
+            "specialname": "演唱会 | 张艺兴《斗战胜佛》演唱会",
+            "singername": "",
+            "play_count": 33524,
+            "intro": "华语乐坛全能音乐人张艺兴全新专辑《斗战胜佛》澳门限定演唱会，以更...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20260827/20260827155204914935.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "粤语好歌-粤好听|耳朵都可以怀孕",
+          "id": 217555,
+          "extra": {
+            "specialid": 7232084,
+            "user_name": "沁水浅",
+            "songcount": 165,
+            "publishtime": "2023-12-04",
+            "slid": 6,
+            "verified": 0,
+            "collectcount": 11177,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1010449471_6_0",
+            "percount": 0,
+            "suid": 1010449471,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20231205/20231205021314482330.jpg.webp",
+            "specialname": "粤语好歌-粤好听|耳朵都可以怀孕",
+            "singername": "",
+            "play_count": 23009876,
+            "intro": "这个粤语情歌歌单包括了一系列动人的歌曲，每一首都充满了深情和感性...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20231205/20231205021314482330.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "「调好音响，戴好耳机」劲爆超重低音炮炸蒙你！",
+          "id": 217557,
+          "extra": {
+            "specialid": 7316974,
+            "user_name": "一笑付之",
+            "songcount": 120,
+            "publishtime": "2024-01-02",
+            "slid": 481,
+            "verified": 0,
+            "collectcount": 24692,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_789743656_481_0",
+            "percount": 0,
+            "suid": 789743656,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20240104/20240104101618608468.jpg.webp",
+            "specialname": "「调好音响，戴好耳机」劲爆超重低音炮炸蒙你！",
+            "singername": "",
+            "play_count": 21091755,
+            "intro": "「小众征集」震撼不震撼，你说了算！",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20240104/20240104101618608468.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "2026抖音热搜超爆火的网络热歌丨首首好听",
+          "id": 217559,
+          "extra": {
+            "specialid": 8266752,
+            "user_name": "芒芒豆蔻",
+            "songcount": 122,
+            "publishtime": "2025-01-15",
+            "slid": 173,
+            "verified": 0,
+            "collectcount": 3261,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2156378706_173_0",
+            "percount": 0,
+            "suid": 2156378706,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20260717/20260717144809920129.jpg.webp",
+            "specialname": "2026抖音热搜超爆火的网络热歌丨首首好听",
+            "singername": "",
+            "play_count": 25726505,
+            "intro": "2026抖音热搜爆火热歌集结，伤感走心、热血卡点、温柔治愈全曲风...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20260717/20260717144809920129.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "霉霉时代精选 | 从乡村小镇到流行之巅",
+          "id": 217561,
+          "extra": {
+            "specialid": 6326808,
+            "user_name": "欧美Ku乐",
+            "songcount": 214,
+            "publishtime": "2022-12-13",
+            "slid": 256,
+            "verified": 0,
+            "collectcount": 885,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1085322498_256_0",
+            "percount": 0,
+            "suid": 1085322498,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20221213/20221213161559784402.jpg.webp",
+            "specialname": "霉霉时代精选 | 从乡村小镇到流行之巅",
+            "singername": "",
+            "play_count": 2863473,
+            "intro": "从纳什维尔乡村小镇的弹唱少女，到横扫格莱美的流行天后，再到以独立...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20221213/20221213161559784402.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "快手热门伤感歌曲丨深夜emo必备",
+          "id": 217563,
+          "extra": {
+            "specialid": 7671650,
+            "user_name": "探险小兔",
+            "songcount": 100,
+            "publishtime": "2024-05-27",
+            "slid": 211,
+            "verified": 0,
+            "collectcount": 12972,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2024256656_211_0",
+            "percount": 0,
+            "suid": 2024256656,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20250415/20250415023249464142.jpg.webp",
+            "specialname": "快手热门伤感歌曲丨深夜emo必备",
+            "singername": "",
+            "play_count": 18863167,
+            "intro": "在深夜emo的时候，一首伤感的歌曲就像是情绪的出口，那些被压抑的...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20250415/20250415023249464142.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "抖音DJ车载｜开车必备劲爆嗨曲",
+          "id": 217565,
+          "extra": {
+            "specialid": 8710459,
+            "user_name": "爱止痛",
+            "songcount": 81,
+            "publishtime": "2025-07-06",
+            "slid": 145,
+            "verified": 0,
+            "collectcount": 15084,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2287701133_145_0",
+            "percount": 0,
+            "suid": 2287701133,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20250706/20250706114239216494.jpg.webp",
+            "specialname": "抖音DJ车载｜开车必备劲爆嗨曲",
+            "singername": "",
+            "play_count": 32235829,
+            "intro": "开车的朋友注意安全 不要超速哟～",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20250706/20250706114239216494.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "宿命感纯音乐｜抑郁·孤独·自卑",
+          "id": 217567,
+          "extra": {
+            "specialid": 8500022,
+            "user_name": "绘梦",
+            "songcount": 103,
+            "publishtime": "2025-04-26",
+            "slid": 1040,
+            "verified": 0,
+            "collectcount": 29247,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1115285462_1040_0",
+            "percount": 0,
+            "suid": 1115285462,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20250429/20250429215724992096.jpg.webp",
+            "specialname": "宿命感纯音乐｜抑郁·孤独·自卑",
+            "singername": "",
+            "play_count": 8907485,
+            "intro": "在无人的角落，心事如荒草疯长。抑郁似雾，悄然弥漫；孤独如影，形影...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20250429/20250429215724992096.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "华语经典丨聆听90后记忆中的声音",
+          "id": 217569,
+          "extra": {
+            "specialid": 3725107,
+            "user_name": "浅陌若曦",
+            "songcount": 55,
+            "publishtime": "2021-04-11",
+            "slid": 489,
+            "verified": 0,
+            "collectcount": 71719,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1393867240_489_0",
+            "percount": 0,
+            "suid": 1393867240,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20210424/20210424220741492650.jpg.webp",
+            "specialname": "华语经典丨聆听90后记忆中的声音",
+            "singername": "",
+            "play_count": 282928939,
+            "intro": "岁月无痕，别来无恙？愿时光沉淀最真的情，留住最美的人。在老去的岁...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20210424/20210424220741492650.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "2026年4月网络热歌盘点【已完结】",
+          "id": 217571,
+          "extra": {
+            "specialid": 9444584,
+            "user_name": "华语杂货铺",
+            "songcount": 49,
+            "publishtime": "2026-03-31",
+            "slid": 485,
+            "verified": 0,
+            "collectcount": 549,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1085322503_485_0",
+            "percount": 0,
+            "suid": 1085322503,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20260331/20260331160804565443.jpg.webp",
+            "specialname": "2026年4月网络热歌盘点【已完结】",
+            "singername": "",
+            "play_count": 2570925,
+            "intro": "2026 年 4 月网络热歌大盘点，每日更新不打烊～ 精选当下最...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20260331/20260331160804565443.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "深夜emo歌曲｜没有你 我该怎么释怀",
+          "id": 217573,
+          "extra": {
+            "specialid": 6893663,
+            "user_name": "凹凸曼",
+            "songcount": 112,
+            "publishtime": "2023-07-17",
+            "slid": 132,
+            "verified": 0,
+            "collectcount": 75528,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_2026346126_132_0",
+            "percount": 0,
+            "suid": 2026346126,
+            "imgurl": "http://c1.kgimg.com/custom/{size}/20240605/20240605183744447602.jpg.webp",
+            "specialname": "深夜emo歌曲｜没有你 我该怎么释怀",
+            "singername": "",
+            "play_count": 65388299,
+            "intro": "深夜emo歌曲，是我们情绪的出口，是对过去的缅怀，是对遗憾的诉说...",
+            "type": 0
+          },
+          "imgurl": "http://c1.kgimg.com/custom/150/20240605/20240605183744447602.jpg.webp",
+          "type": 1
+        },
+        {
+          "online": 1788451200,
+          "title": "林俊杰必听热歌｜确认过眼神，是行走的CD",
+          "id": 217575,
+          "extra": {
+            "specialid": 7622368,
+            "user_name": "酷狗音乐官方歌单",
+            "songcount": 111,
+            "publishtime": "2024-05-11",
+            "slid": 332,
+            "verified": 0,
+            "collectcount": 18505,
+            "trans_param": {
+              "special_tag": 0
+            },
+            "global_specialid": "collection_3_1002717860_332_0",
+            "percount": 0,
+            "suid": 1002717860,
+            "imgurl": "http://imge.kugou.com/soft/collection/{size}/20260407/20260407172106284732.jpg.webp",
+            "specialname": "林俊杰必听热歌｜确认过眼神，是行走的CD",
+            "singername": "",
+            "play_count": 11312859,
+            "intro": "我们爱的从来不是刻意的光环，是他一开口就治愈人心的嗓音，是每首作...",
+            "type": 0
+          },
+          "imgurl": "http://imge.kugou.com/soft/collection/150/20260407/20260407172106284732.jpg.webp",
+          "type": 1
+        }
+      ],
+      "record_store": [
+        {
+          "imgurl": "http://zhuanjistatic.kugou.com/static/images/commonchargeV3/1788516840/00eed03159c7a441/album_cover.png"
+        }
+      ]
+    }
+  },
+  "errcode": 0,
+  "status": 1,
+  "error": ""
+}

@@ -1,0 +1,6 @@
+{
+  "code": 2,
+  "msg": "请求的参数不符合加密要求.",
+  "times": 0,
+  "data": "{\"fileName\":[\"\"],\"isteen\":[\"0\"],\"mixId\":[\"0\"],\"appid\":[\"1005\"],\"sign\":[\"fedce0274563ab10\"],\"usemkv\":[\"1\"],\"version\":[\"12375\"],\"platform\":[\"2\"],\"hash\":[\"e291fc24c9dbe4ef3fdd9837ea3e1a9c\"]}"
+}

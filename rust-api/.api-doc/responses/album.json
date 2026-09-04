@@ -1,0 +1,43 @@
+{
+  "status": 1,
+  "error_code": 0,
+  "errcode": 0,
+  "errmsg": "",
+  "data": [
+    {
+      "trans_param": {
+        "special_tag": "65536"
+      },
+      "language": "英语",
+      "grade_count": "0",
+      "intro": "",
+      "heat": "0",
+      "category": "1",
+      "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20150902/20150902183311813340.jpg",
+      "cover": "20150902183311813340.jpg",
+      "album_name": "Hardwood Exits",
+      "type": "录音室专辑",
+      "quality": "1",
+      "publish_company": "",
+      "grade": "0",
+      "special_tag": "65536",
+      "author_name": "Blackbird Harmony",
+      "publish_date": "2008-05-13",
+      "classification": [
+        {
+          "usage": "0",
+          "status": "0",
+          "level": "0",
+          "res_type": "2",
+          "type": "17",
+          "id": "0",
+          "res_id": "1289478"
+        }
+      ],
+      "language_id": "2",
+      "album_id": "1289478",
+      "exclusive": "0",
+      "is_publish": "1"
+    }
+  ]
+}

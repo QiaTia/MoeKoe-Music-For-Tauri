@@ -1,0 +1,4153 @@
+{
+  "status": 1,
+  "error_code": 0,
+  "errmsg": "",
+  "total": 1986,
+  "extra": {
+    "page_total": 1986,
+    "original": [
+      {
+        "base": {
+          "album_audio_id": 317568292,
+          "audio_group_id": 138820721,
+          "audio_id": 92351310,
+          "album_id": 45305792,
+          "songname": "一路生花",
+          "author_name": "温奕心",
+          "album_name": "一路生花",
+          "is_publish": 1,
+          "version": 1,
+          "publish_date": "2021-01-19"
+        },
+        "extra": {
+          "is_original": 1,
+          "mixsong_type": 0
+        },
+        "audio_info": {
+          "hash": "4F18553F2AF06E355AD75A5EE6173456",
+          "filesize": 4101213,
+          "timelength": 256286,
+          "bitrate": 128,
+          "hash_320": "A2E0F7D305D5C9F778CA19335550E3E0",
+          "filesize_320": 10252736,
+          "timelength_320": 256286,
+          "hash_flac": "6980080CCFF5BC13CB515121687BFBCC",
+          "filesize_flac": 28321807,
+          "timelength_flac": 256250,
+          "bitrate_flac": 883,
+          "hash_high": "E7BC5053D50B2DA3CD039466CCB93885",
+          "filesize_high": 51245499,
+          "timelength_high": 256245,
+          "bitrate_high": 1589,
+          "hash_super": "",
+          "filesize_super": 0,
+          "timelength_super": 0,
+          "bitrate_super": 0,
+          "extname": "mp3",
+          "extname_super": ""
+        },
+        "album_info": {
+          "cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg"
+        },
+        "authors": [
+          {
+            "base": {
+              "author_id": 532327,
+              "author_name": "温奕心",
+              "is_publish": 1,
+              "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420220436886060.jpg"
+            }
+          }
+        ],
+        "landscape_mv": {
+          "video_hash": "36BB9C47F73E3BC381824BCD0F1CE4E7"
+        },
+        "obbligato": {
+          "has_obbligato": 1
+        },
+        "works": [
+          {
+            "base": {
+              "work_id": 1815537,
+              "ori_composer_work_id": 0,
+              "work_name": "一路生花"
+            }
+          }
+        ],
+        "copyright": {
+          "rp_type_flac": "audio",
+          "topic_url_320": "",
+          "rp_type_320": "audio",
+          "status_flac": 0,
+          "fail_process": 4,
+          "status_128": 0,
+          "topic_url_high": "",
+          "privilege": 10,
+          "topic_url_128": "",
+          "rp_type": "audio",
+          "rp_type_high": "audio",
+          "privilege_flac": 10,
+          "fail_process_flac": 4,
+          "old_cpy": 0,
+          "price": 200,
+          "topic_url_flac": "",
+          "privilege_320": 10,
+          "pkg_price": 1,
+          "topic_url_super": "",
+          "status_super": 1,
+          "pay_type": 3,
+          "topic_url": "",
+          "fail_process_320": 4,
+          "privilege_128": 10,
+          "status": 0,
+          "fail_process_128": 4,
+          "status_high": 0,
+          "status_320": 0,
+          "rp_type_128": "audio",
+          "topic_remark": "",
+          "rp_type_super": "",
+          "trans_param": {
+            "hash_offset": {
+              "start_byte": 0,
+              "end_byte": 960121,
+              "start_ms": 0,
+              "end_ms": 60000,
+              "offset_hash": "31485F417BBAE7ECC2BEBEE54BEBFBF1",
+              "file_type": 0,
+              "clip_hash": "2D5609140A00195D51E7247A9EA7FFA4"
+            },
+            "musicpack_advance": 1,
+            "pay_block_tpl": 1,
+            "display": 0,
+            "display_rate": 0,
+            "appid_block": "3124",
+            "cpy_grade": 5,
+            "cpy_level": 1,
+            "cid": 129843449,
+            "cpy_attr0": 58997888,
+            "cpy_map": "2",
+            "classmap": {
+              "attr0": 234881032
+            },
+            "hash_multitrack": "4908F2B29E72AEC3FC8E05D0C5FFA3BE",
+            "qualitymap": {
+              "attr0": 2134884469,
+              "attr1": 1747189759,
+              "bits": "800000db411ffffff3fc075"
+            },
+            "language": "国语",
+            "ipmap": {
+              "attr0": 18287169536
+            },
+            "ogg_128_hash": "7569727CD9A147DE1783C3B6DCEA7633",
+            "ogg_128_filesize": 2879468,
+            "ogg_320_hash": "4DD801353D9890AA10909244D674C0A0",
+            "ogg_320_filesize": 10014906,
+            "union_cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg",
+            "is_original": 1
+          }
+        },
+        "hot_flag": 1,
+        "rank_detail": {
+          "desc": "HOT"
+        }
+      }
+    ],
+    "resp": {
+      "base": {
+        "album_audio_id": 317568292,
+        "audio_group_id": 138820721,
+        "audio_id": 92351310,
+        "album_id": 45305792,
+        "songname": "一路生花",
+        "author_name": "温奕心",
+        "album_name": "一路生花",
+        "is_publish": 1,
+        "version": 1,
+        "publish_date": "2021-01-19"
+      },
+      "extra": {
+        "is_original": 1,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "4F18553F2AF06E355AD75A5EE6173456",
+        "filesize": 4101213,
+        "timelength": 256286,
+        "bitrate": 128,
+        "hash_320": "A2E0F7D305D5C9F778CA19335550E3E0",
+        "filesize_320": 10252736,
+        "timelength_320": 256286,
+        "hash_flac": "6980080CCFF5BC13CB515121687BFBCC",
+        "filesize_flac": 28321807,
+        "timelength_flac": 256250,
+        "bitrate_flac": 883,
+        "hash_high": "E7BC5053D50B2DA3CD039466CCB93885",
+        "filesize_high": 51245499,
+        "timelength_high": 256245,
+        "bitrate_high": 1589,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg"
+      },
+      "authors": [
+        {
+          "base": {
+            "author_id": 532327,
+            "author_name": "温奕心",
+            "is_publish": 1,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420220436886060.jpg"
+          }
+        }
+      ],
+      "landscape_mv": {
+        "video_hash": "36BB9C47F73E3BC381824BCD0F1CE4E7"
+      },
+      "obbligato": {
+        "has_obbligato": 1
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "audio",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 0,
+        "fail_process": 4,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 10,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "audio",
+        "privilege_flac": 10,
+        "fail_process_flac": 4,
+        "old_cpy": 0,
+        "price": 200,
+        "topic_url_flac": "",
+        "privilege_320": 10,
+        "pkg_price": 1,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 3,
+        "topic_url": "",
+        "fail_process_320": 4,
+        "privilege_128": 10,
+        "status": 0,
+        "fail_process_128": 4,
+        "status_high": 0,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "hash_offset": {
+            "start_byte": 0,
+            "end_byte": 960121,
+            "start_ms": 0,
+            "end_ms": 60000,
+            "offset_hash": "31485F417BBAE7ECC2BEBEE54BEBFBF1",
+            "file_type": 0,
+            "clip_hash": "2D5609140A00195D51E7247A9EA7FFA4"
+          },
+          "musicpack_advance": 1,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "appid_block": "3124",
+          "cpy_grade": 5,
+          "cpy_level": 1,
+          "cid": 129843449,
+          "cpy_attr0": 58997888,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "hash_multitrack": "4908F2B29E72AEC3FC8E05D0C5FFA3BE",
+          "qualitymap": {
+            "attr0": 2134884469,
+            "attr1": 1747189759,
+            "bits": "800000db411ffffff3fc075"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 18287169536
+          },
+          "ogg_128_hash": "7569727CD9A147DE1783C3B6DCEA7633",
+          "ogg_128_filesize": 2879468,
+          "ogg_320_hash": "4DD801353D9890AA10909244D674C0A0",
+          "ogg_320_filesize": 10014906,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg",
+          "is_original": 1
+        }
+      },
+      "hot_flag": 1,
+      "rank_detail": {
+        "desc": "HOT"
+      }
+    }
+  },
+  "data": [
+    {
+      "base": {
+        "album_audio_id": 611328775,
+        "audio_group_id": 138820721,
+        "audio_id": 335334182,
+        "album_id": 88991514,
+        "songname": "一路生花 (2024特别版)",
+        "author_name": "温奕心",
+        "album_name": "一路生花(2024特别版）",
+        "is_publish": 1,
+        "version": 1,
+        "publish_date": "2024-03-10"
+      },
+      "extra": {
+        "is_original": 7,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "42068D5DCBC4FC9230944B67E3AFCFF4",
+        "filesize": 3891416,
+        "timelength": 243173,
+        "bitrate": 128,
+        "hash_320": "06EE98A2E2004E914D706BD56BE304F6",
+        "filesize_320": 9728216,
+        "timelength_320": 243173,
+        "hash_flac": "6C2015AE2C9EA8C2963E20953E4E237F",
+        "filesize_flac": 28926394,
+        "timelength_flac": 243000,
+        "bitrate_flac": 951,
+        "hash_high": "210EF971232956417BA98FB605FCDC48",
+        "filesize_high": 53882826,
+        "timelength_high": 243125,
+        "bitrate_high": 1772,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260525/20260525174612980702.jpg"
+      },
+      "authors": [
+        {
+          "base": {
+            "author_id": 532327,
+            "author_name": "温奕心",
+            "is_publish": 1,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420220436886060.jpg"
+          }
+        }
+      ],
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 1
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 32269638,
+            "ori_composer_work_id": 1815537,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "audio",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 0,
+        "fail_process": 4,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 10,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "audio",
+        "privilege_flac": 10,
+        "fail_process_flac": 4,
+        "old_cpy": 0,
+        "price": 200,
+        "topic_url_flac": "",
+        "privilege_320": 10,
+        "pkg_price": 1,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 3,
+        "topic_url": "",
+        "fail_process_320": 4,
+        "privilege_128": 10,
+        "status": 0,
+        "fail_process_128": 4,
+        "status_high": 0,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "hash_offset": {
+            "start_byte": 0,
+            "end_byte": 960557,
+            "start_ms": 0,
+            "end_ms": 60000,
+            "offset_hash": "672C27E9EA3B6C6118637A55D5C1520A",
+            "file_type": 0,
+            "clip_hash": "6D57B6C7BA32F569F0B670F5F145ACE7"
+          },
+          "musicpack_advance": 1,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "appid_block": "3124",
+          "cpy_grade": 5,
+          "cpy_level": 1,
+          "cid": 364327539,
+          "cpy_attr0": 58997888,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "hash_multitrack": "7B83D95F3BA311356C01EA8F43AA4500",
+          "qualitymap": {
+            "attr0": 2134893684,
+            "attr1": 1747189759,
+            "bits": "800000db411ffffff3fe474"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 17213427712
+          },
+          "songname_suffix": "(2024特别版)",
+          "ogg_128_hash": "61A0BFE08875DA900FA37D7CE777F84A",
+          "ogg_128_filesize": 3011011,
+          "ogg_320_hash": "6B312975CDFAC8C6DAAFA662C49FA7F3",
+          "ogg_320_filesize": 10708018,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260525/20260525174612980702.jpg",
+          "is_original": 7
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 348408811,
+        "audio_group_id": 138820721,
+        "audio_id": 127957784,
+        "album_id": 45305792,
+        "songname": "一路生花 (DJ沈念版)",
+        "author_name": "温奕心",
+        "album_name": "一路生花",
+        "is_publish": 1,
+        "version": 5,
+        "publish_date": "2021-01-19"
+      },
+      "extra": {
+        "is_original": 4,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "4D12282E841E692FF56A185E3D70021A",
+        "filesize": 3585033,
+        "timelength": 224026,
+        "bitrate": 128,
+        "hash_320": "2345ABCDE7BCF35BE49386B09B4741BD",
+        "filesize_320": 8962287,
+        "timelength_320": 224026,
+        "hash_flac": "31A3667A92D475C4777955604D851060",
+        "filesize_flac": 30296482,
+        "timelength_flac": 224000,
+        "bitrate_flac": 1081,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg"
+      },
+      "authors": [
+        {
+          "base": {
+            "author_id": 532327,
+            "author_name": "温奕心",
+            "is_publish": 1,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420220436886060.jpg"
+          }
+        }
+      ],
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 1
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "audio",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 0,
+        "fail_process": 4,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 10,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 10,
+        "fail_process_flac": 4,
+        "old_cpy": 0,
+        "price": 200,
+        "topic_url_flac": "",
+        "privilege_320": 10,
+        "pkg_price": 1,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 3,
+        "topic_url": "",
+        "fail_process_320": 4,
+        "privilege_128": 10,
+        "status": 0,
+        "fail_process_128": 4,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "hash_offset": {
+            "start_byte": 0,
+            "end_byte": 960121,
+            "start_ms": 0,
+            "end_ms": 60000,
+            "offset_hash": "4DEE5EF69735C80961BF183FC85B3E40",
+            "file_type": 0,
+            "clip_hash": "49F9C619973B98C84174FA90462390E4"
+          },
+          "musicpack_advance": 1,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "appid_block": "3124",
+          "cpy_grade": 5,
+          "cpy_level": 1,
+          "cid": 179181978,
+          "cpy_attr0": 58997888,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "hash_multitrack": "537AB00FD2CED6E49F37332FC6ED2B89",
+          "qualitymap": {
+            "attr0": 2000675892,
+            "attr1": 1746993151,
+            "bits": "8fffc0db4107ffff73fe434"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 33587200
+          },
+          "songname_suffix": "(DJ沈念版)",
+          "ogg_128_hash": "9EC287462B5833783A6CBCF10463D9FD",
+          "ogg_128_filesize": 2642560,
+          "ogg_320_hash": "DDBEFE73C5AFEA92DB179C1A71A97BEA",
+          "ogg_320_filesize": 9778745,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg",
+          "is_original": 4
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 910061273,
+        "audio_group_id": 647085828,
+        "audio_id": 601834361,
+        "album_id": 195678460,
+        "songname": "一路生花",
+        "author_name": "筱般般",
+        "album_name": "一路生花",
+        "is_publish": 1,
+        "version": 1,
+        "publish_date": "2026-06-16"
+      },
+      "extra": {
+        "is_original": 2,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "438F371378F5B4EDEA02D955DDD2A466",
+        "filesize": 4101493,
+        "timelength": 256000,
+        "bitrate": 128,
+        "hash_320": "7547CB09B2C5AD170617CA2BB3CDE7A8",
+        "filesize_320": 10253038,
+        "timelength_320": 256000,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522230105466939.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 622551253,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8824815624
+          },
+          "hash_multitrack": "DC01BFF85B6F6240BCCE4984A8E94620",
+          "qualitymap": {
+            "attr0": 856735764,
+            "attr1": 136314880,
+            "bits": "800020c041000003310c014"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "src_mixid": 317568292,
+          "users": [
+            {
+              "userid": 1020537941,
+              "t_nickname": "筱般般",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20260819/20260819221158298473.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522230105466939.jpg",
+          "is_original": 2
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 416002028,
+        "audio_group_id": 240866979,
+        "audio_id": 168881853,
+        "album_id": 58051410,
+        "songname": "一路生花 (Live)",
+        "author_name": "张韶涵、周深",
+        "album_name": "天赐的声音第三季 第12期",
+        "is_publish": 1,
+        "version": 2,
+        "publish_date": "2022-06-03"
+      },
+      "extra": {
+        "is_original": 2,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "B1ACDF523FE1C7E9D79CB1EE246C94CE",
+        "filesize": 4862385,
+        "timelength": 303856,
+        "bitrate": 128,
+        "hash_320": "550E96AC57FA7A973620E2F61BD907DC",
+        "filesize_320": 12155564,
+        "timelength_320": 303856,
+        "hash_flac": "99FCA7B04D41F9853C85B795E68949E0",
+        "filesize_flac": 31896705,
+        "timelength_flac": 303816,
+        "bitrate_flac": 839,
+        "hash_high": "79F2EA0231929C59CE1F825D268AB22E",
+        "filesize_high": 60982675,
+        "timelength_high": 303816,
+        "bitrate_high": 1605,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20220602/20220602230007762871.jpg"
+      },
+      "authors": [
+        {
+          "base": {
+            "author_id": 6811,
+            "author_name": "张韶涵",
+            "is_publish": 1,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20251209/20251209153433156519.jpg"
+          }
+        },
+        {
+          "base": {
+            "author_id": 169967,
+            "author_name": "周深",
+            "is_publish": 1,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230531/20230531155603291987.jpg"
+          }
+        }
+      ],
+      "landscape_mv": {
+        "video_hash": "5F2D8854294972B2CF41A324A4CBBBDA"
+      },
+      "obbligato": {
+        "has_obbligato": 1
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "audio",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 0,
+        "fail_process": 4,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 10,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "audio",
+        "privilege_flac": 10,
+        "fail_process_flac": 4,
+        "old_cpy": 0,
+        "price": 200,
+        "topic_url_flac": "",
+        "privilege_320": 10,
+        "pkg_price": 1,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 3,
+        "topic_url": "",
+        "fail_process_320": 4,
+        "privilege_128": 10,
+        "status": 0,
+        "fail_process_128": 4,
+        "status_high": 0,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "hash_offset": {
+            "start_byte": 0,
+            "end_byte": 3379755,
+            "start_ms": 151200,
+            "end_ms": 211200,
+            "offset_hash": "6CCE49147029C2F3B18B295C75C7DEC8",
+            "file_type": 0,
+            "clip_hash": "F889FA398C27AFE9BFB22568E62263C3"
+          },
+          "musicpack_advance": 1,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 5,
+          "cpy_level": 1,
+          "cid": 213956932,
+          "cpy_attr0": 58735744,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "hash_multitrack": "E2D8F84344D93ECD94758217B76BB55D",
+          "qualitymap": {
+            "attr0": 1061142645,
+            "attr1": 1747189759,
+            "bits": "8fffc0db411ffffbf3fc075"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 1107300352
+          },
+          "songname_suffix": "(Live)",
+          "ogg_128_hash": "FD88764556A9AB518556D4D4C0A93AA4",
+          "ogg_128_filesize": 3376499,
+          "ogg_320_hash": "12CBA25BF9D1F093C7C3AB26BAAD3DB0",
+          "ogg_320_filesize": 11218444,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220602/20220602230007762871.jpg",
+          "is_original": 2
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 317568292,
+        "audio_group_id": 138820721,
+        "audio_id": 92351310,
+        "album_id": 45305792,
+        "songname": "一路生花",
+        "author_name": "温奕心",
+        "album_name": "一路生花",
+        "is_publish": 1,
+        "version": 1,
+        "publish_date": "2021-01-19"
+      },
+      "extra": {
+        "is_original": 1,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "4F18553F2AF06E355AD75A5EE6173456",
+        "filesize": 4101213,
+        "timelength": 256286,
+        "bitrate": 128,
+        "hash_320": "A2E0F7D305D5C9F778CA19335550E3E0",
+        "filesize_320": 10252736,
+        "timelength_320": 256286,
+        "hash_flac": "6980080CCFF5BC13CB515121687BFBCC",
+        "filesize_flac": 28321807,
+        "timelength_flac": 256250,
+        "bitrate_flac": 883,
+        "hash_high": "E7BC5053D50B2DA3CD039466CCB93885",
+        "filesize_high": 51245499,
+        "timelength_high": 256245,
+        "bitrate_high": 1589,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg"
+      },
+      "authors": [
+        {
+          "base": {
+            "author_id": 532327,
+            "author_name": "温奕心",
+            "is_publish": 1,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230420/20230420220436886060.jpg"
+          }
+        }
+      ],
+      "landscape_mv": {
+        "video_hash": "36BB9C47F73E3BC381824BCD0F1CE4E7"
+      },
+      "obbligato": {
+        "has_obbligato": 1
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "audio",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 0,
+        "fail_process": 4,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 10,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "audio",
+        "privilege_flac": 10,
+        "fail_process_flac": 4,
+        "old_cpy": 0,
+        "price": 200,
+        "topic_url_flac": "",
+        "privilege_320": 10,
+        "pkg_price": 1,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 3,
+        "topic_url": "",
+        "fail_process_320": 4,
+        "privilege_128": 10,
+        "status": 0,
+        "fail_process_128": 4,
+        "status_high": 0,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "hash_offset": {
+            "start_byte": 0,
+            "end_byte": 960121,
+            "start_ms": 0,
+            "end_ms": 60000,
+            "offset_hash": "31485F417BBAE7ECC2BEBEE54BEBFBF1",
+            "file_type": 0,
+            "clip_hash": "2D5609140A00195D51E7247A9EA7FFA4"
+          },
+          "musicpack_advance": 1,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "appid_block": "3124",
+          "cpy_grade": 5,
+          "cpy_level": 1,
+          "cid": 129843449,
+          "cpy_attr0": 58997888,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "hash_multitrack": "4908F2B29E72AEC3FC8E05D0C5FFA3BE",
+          "qualitymap": {
+            "attr0": 2134884469,
+            "attr1": 1747189759,
+            "bits": "800000db411ffffff3fc075"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 18287169536
+          },
+          "ogg_128_hash": "7569727CD9A147DE1783C3B6DCEA7633",
+          "ogg_128_filesize": 2879468,
+          "ogg_320_hash": "4DD801353D9890AA10909244D674C0A0",
+          "ogg_320_filesize": 10014906,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg",
+          "is_original": 1
+        }
+      },
+      "hot_flag": 1,
+      "rank_detail": {
+        "desc": "HOT"
+      }
+    },
+    {
+      "base": {
+        "album_audio_id": 649955747,
+        "audio_group_id": 434530852,
+        "audio_id": 367511979,
+        "album_id": 98632594,
+        "songname": "一路生花 - 中国队要强出征版",
+        "author_name": "韩红",
+        "album_name": "一路生花 - 中国队要强出征版",
+        "is_publish": 1,
+        "version": 1,
+        "publish_date": "2024-07-13"
+      },
+      "extra": {
+        "is_original": 7,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "D9425E6D139822383462E6B6E1BE8BAB",
+        "filesize": 3375678,
+        "timelength": 210938,
+        "bitrate": 128,
+        "hash_320": "83F0386A955C612983D4DDABB2ED2443",
+        "filesize_320": 8438836,
+        "timelength_320": 210938,
+        "hash_flac": "5BC8C5FE707888F47138478B3B5DF20E",
+        "filesize_flac": 24138431,
+        "timelength_flac": 210912,
+        "bitrate_flac": 915,
+        "hash_high": "BFB801DC812B9DF4D5E025F71F7A46A8",
+        "filesize_high": 45403746,
+        "timelength_high": 210912,
+        "bitrate_high": 1721,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20240714/20240714175804117622.jpg"
+      },
+      "authors": [
+        {
+          "base": {
+            "author_id": 4761,
+            "author_name": "韩红",
+            "is_publish": 1,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20241213/20241213195314263155.jpg"
+          }
+        }
+      ],
+      "landscape_mv": {
+        "video_hash": "146263A3DF68CC18F1779731BCE773FA"
+      },
+      "obbligato": {
+        "has_obbligato": 1
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 47172266,
+            "ori_composer_work_id": 1815537,
+            "work_name": "一路生花 - 中国队要强出征版"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "audio",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 0,
+        "fail_process": 4,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 8,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "audio",
+        "privilege_flac": 10,
+        "fail_process_flac": 4,
+        "old_cpy": 0,
+        "price": 200,
+        "topic_url_flac": "",
+        "privilege_320": 10,
+        "pkg_price": 1,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 3,
+        "topic_url": "",
+        "fail_process_320": 4,
+        "privilege_128": 8,
+        "status": 0,
+        "fail_process_128": 4,
+        "status_high": 0,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "hash_offset": {
+            "start_byte": 0,
+            "end_byte": 960163,
+            "start_ms": 0,
+            "end_ms": 60000,
+            "offset_hash": "3F14110DF7834F2639C20E9AF5D9C30F",
+            "file_type": 0,
+            "clip_hash": "19B6FCA1B92A4593EB7E91D495AC3B4E"
+          },
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 5,
+          "cpy_level": 1,
+          "cid": 406031500,
+          "cpy_attr0": 58728448,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 234881032
+          },
+          "hash_multitrack": "45C09D060151C433580B2101CF016930",
+          "qualitymap": {
+            "attr0": 2134884468,
+            "attr1": 1747189245,
+            "bits": "1b411fefeff3fc074"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 1107300352
+          },
+          "ogg_128_hash": "197E396AEFA72FFA534046AA095EB2BA",
+          "ogg_128_filesize": 2488859,
+          "ogg_320_hash": "7BB8E22394E7061D94177960683950E1",
+          "ogg_320_filesize": 8593997,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20240714/20240714175804117622.jpg",
+          "is_original": 7
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 650197830,
+        "audio_group_id": 395539145,
+        "audio_id": 366868050,
+        "album_id": 98473266,
+        "songname": "一路生花",
+        "author_name": "开心快乐",
+        "album_name": "一路生花",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-07-09"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "C4EEDD6C427DAB134DF393FE6FF6E720",
+        "filesize": 4101059,
+        "timelength": 256286,
+        "bitrate": 128,
+        "hash_320": "EDEC8FE84C5975E120859B24315A02C6",
+        "filesize_320": 10252604,
+        "timelength_320": 256286,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522233831757211.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 405446210,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "src_mixid": 317568292,
+          "users": [
+            {
+              "userid": 1580581140,
+              "t_nickname": "开心快乐",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20191113/20191113140233829486.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522233831757211.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 678159709,
+        "audio_group_id": 461641111,
+        "audio_id": 390423997,
+        "album_id": 105232559,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "小殊",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-10-01"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "DE3873A1A6CC65EBFF7C43FAB59E4103",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "262B4677C5C34818725B5C7F612E7551",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522175012697708.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 428093596,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 767470362,
+              "t_nickname": "小殊",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20231128/20231128190805421743.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522175012697708.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 710738293,
+        "audio_group_id": 625037179,
+        "audio_id": 426536532,
+        "album_id": 133768052,
+        "songname": "一路生花",
+        "author_name": "达琳",
+        "album_name": "一路生花",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-12-31"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "A047C6E44C071A7555EE9EF1E7EEE8F4",
+        "filesize": 4101059,
+        "timelength": 256286,
+        "bitrate": 128,
+        "hash_320": "76DB074431526FC944BF78A26617E90E",
+        "filesize_320": 10252604,
+        "timelength_320": 256286,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20240223/20240223152405229711.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 463818409,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "src_mixid": 317568292,
+          "users": [
+            {
+              "userid": 596191330,
+              "t_nickname": "达琳",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20250210/20250210002805335507.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20240223/20240223152405229711.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 677893062,
+        "audio_group_id": 521553266,
+        "audio_id": 390182988,
+        "album_id": 105147689,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "小洛伊",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-30"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "1FB64E791DE568F46F0475252072A6FE",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "DC5391FAA03269955F88DE24296B7EA2",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522224430713703.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 427896143,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 3123579416,
+              "t_nickname": "小洛伊",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20250430/20250430131941156033.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522224430713703.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 677424551,
+        "audio_group_id": 461127233,
+        "audio_id": 389741536,
+        "album_id": 105021678,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "sam0760",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-28"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "3BC4248D2BD59A1CED17E69F3B2D5996",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "BD476C833165D69431C1F862AF9F7600",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231954530711.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 427542952,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 700730330,
+              "t_nickname": "sam0760",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20240609/20240609180149622459.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231954530711.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 677360386,
+        "audio_group_id": 460978448,
+        "audio_id": 389683925,
+        "album_id": 105005449,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "李现5692",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-27"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "4285553F47B046A8040CDA65886D3DF8",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "F1E77C7A53E65A375B5DE4DE09FDFAC8",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223659711331.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 427468971,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 1319815692,
+              "t_nickname": "李现5692",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20190822/20190822152918521964.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223659711331.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 677649867,
+        "audio_group_id": 461290058,
+        "audio_id": 389960091,
+        "album_id": 105083958,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "肥猫",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-29"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "44269393F0FD992E53B764B5359BFD01",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "DD405A94DD0C834DE1E62C7A7B47C33B",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223631405209.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 427711969,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 628713014,
+              "t_nickname": "肥猫",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20230612/20230612203231503456.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223631405209.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 677440380,
+        "audio_group_id": 461136978,
+        "audio_id": 389766914,
+        "album_id": 105027535,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "Chagall",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-28"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "5D324D9CC94D5895047778BD915ECD42",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "B6E366A41C670BEAA8A30727B345B736",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231103742569.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 427554451,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 2163744768,
+              "t_nickname": "Chagall",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20240116/20240116223315232261.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231103742569.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 749187163,
+        "audio_group_id": 651290733,
+        "audio_id": 456116839,
+        "album_id": 145459211,
+        "songname": "一路生花 (2024特别版)",
+        "author_name": "Chris",
+        "album_name": "一路生花 (2024特别版)",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2025-05-01"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "A70DAD51E0F35B579184A940CC5E1FE0",
+        "filesize": 3891244,
+        "timelength": 243000,
+        "bitrate": 128,
+        "hash_320": "9940E4E883B08947E17E804F49C8305E",
+        "filesize_320": 9728066,
+        "timelength_320": 243000,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231118151286.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 32269638,
+            "ori_composer_work_id": 1815537,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 499550745,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(2024特别版)",
+          "src_mixid": 611328775,
+          "users": [
+            {
+              "userid": 887553082,
+              "t_nickname": "Chris",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20250522/20250522095110790786.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231118151286.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 677909234,
+        "audio_group_id": 461476973,
+        "audio_id": 390207300,
+        "album_id": 105155290,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "杜军晓",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-30"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "4BAF697F2EAB0365BD839D2BE1F22B9E",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "40B9786BAA71E0A015875716BE4DF7CC",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223411763020.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 427914423,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 2225542224,
+              "t_nickname": "杜军晓",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20240923/20240923170922997903.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223411763020.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 678093114,
+        "audio_group_id": 461602582,
+        "audio_id": 390343189,
+        "album_id": 105209387,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "nono clan",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-10-01"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "AB50093BA4896E0E6ACC6BF4E4553CB5",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "124621538CA92C4937375C0255E9B992",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231012232758.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 428047304,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 728469598,
+              "t_nickname": "nono clan",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20160130/20160130234137386996.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231012232758.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 685674717,
+        "audio_group_id": 603170942,
+        "audio_id": 397645106,
+        "album_id": 106807538,
+        "songname": "一路生花",
+        "author_name": "罗小宝",
+        "album_name": "一路生花",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-10-22"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "C4962C08055406377470BAB9B3D1D123",
+        "filesize": 4101059,
+        "timelength": 256286,
+        "bitrate": 128,
+        "hash_320": "C359C94839C12F445EF17FE92FCCE737",
+        "filesize_320": 10252604,
+        "timelength_320": 256286,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522224817545426.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 436691088,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "src_mixid": 317568292,
+          "users": [
+            {
+              "userid": 2206823858,
+              "t_nickname": "罗小宝",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20240503/20240503230433710871.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522224817545426.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 676634178,
+        "audio_group_id": 458681946,
+        "audio_id": 389030513,
+        "album_id": 104817437,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "邶鬱優傷",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-25"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "F7DD8387465B1088F3B34395097F83FD",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "69F670F40B3AE1FDCB9B2B5F0008C5AE",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20241015/20241015104509957727.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 426812416,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 1204104835,
+              "t_nickname": "邶鬱優傷",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20211020/20211020212827210418.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20241015/20241015104509957727.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 676640395,
+        "audio_group_id": 458702523,
+        "audio_id": 389036723,
+        "album_id": 104818793,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "陈家有浮生",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-25"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "E67AB3AD7CB2F242FEA24CC629BC9558",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "F62E1AC52AAA53CB56FD45F217CAF9AB",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223405909119.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 426816288,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 363244954,
+              "t_nickname": "陈家有浮生",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20240301/20240301110615805437.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223405909119.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 699516680,
+        "audio_group_id": 480810187,
+        "audio_id": 411075761,
+        "album_id": 130434826,
+        "songname": "一路生花 (温奕心合唱版)",
+        "author_name": "l&you",
+        "album_name": "一路生花(温奕心合唱版)",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-11-26"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "0C60E72A013116C4934D5E0E610C3C24",
+        "filesize": 4101059,
+        "timelength": 256286,
+        "bitrate": 128,
+        "hash_320": "45F56CD2AE76503CA1B777600429F868",
+        "filesize_320": 10252604,
+        "timelength_320": 256286,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20241127/20241127025125489037.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 452967361,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 317568292,
+          "users": [
+            {
+              "userid": 1056943663,
+              "t_nickname": "l&you",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20241127/20241127033715905600.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20241127/20241127025125489037.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 639646194,
+        "audio_group_id": 417066920,
+        "audio_id": 359031897,
+        "album_id": 95832275,
+        "songname": "一路生花",
+        "author_name": "潇洒依旧",
+        "album_name": "一路生花",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-06-08"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "6B04FBDAC11D72EA3109E42222DC6639",
+        "filesize": 4101059,
+        "timelength": 256286,
+        "bitrate": 128,
+        "hash_320": "4951579FF532A6BCB48D586853A54168",
+        "filesize_320": 10252604,
+        "timelength_320": 256286,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223355955719.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 397236728,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "src_mixid": 317568292,
+          "users": [
+            {
+              "userid": 478632596,
+              "t_nickname": "潇洒依旧",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20200426/20200426132441510969.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522223355955719.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 676627542,
+        "audio_group_id": 458667232,
+        "audio_id": 389025388,
+        "album_id": 104816359,
+        "songname": "同心同行",
+        "author_name": "WANGQI",
+        "album_name": "同心同行",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-25"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "0787829947E4FD14C96191E22CCCAB77",
+        "filesize": 4040873,
+        "timelength": 252525,
+        "bitrate": 128,
+        "hash_320": "AADDF476164B28A88260D02B7458BCFB",
+        "filesize_320": 10102139,
+        "timelength_320": 252525,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231240473010.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 426807985,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 1566925326,
+              "t_nickname": "WANGQI",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20230629/20230629161143592212.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231240473010.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 676585554,
+        "audio_group_id": 458540437,
+        "audio_id": 388985773,
+        "album_id": 104805097,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "阿伟",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-25"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "F60D80FDA9770483DA81F522E641D749",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "4E5F8F8D78C75C41A200B3A642DCEE35",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20240925/20240925214807750060.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 426769715,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 600779073,
+              "t_nickname": "阿伟",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20250313/20250313112631169796.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20240925/20240925214807750060.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 677644439,
+        "audio_group_id": 562068930,
+        "audio_id": 389946729,
+        "album_id": 105082651,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "健健大王是无敌的",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-29"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "9B51DC0739B4CE8424D4AA377B4FD0CD",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "1C86375F92CC2C461F80D474CBF44889",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231513919748.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 427708204,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 2012389028,
+              "t_nickname": "健健大王是无敌的",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20251229/20251229154010170239.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231513919748.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 701066399,
+        "audio_group_id": 481916588,
+        "audio_id": 412374189,
+        "album_id": 130859499,
+        "songname": "一路生花 (-2调版)",
+        "author_name": "小家伙",
+        "album_name": "一路生花",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-12-01"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "2886C7BC300375AE2590995368E0D8E3",
+        "filesize": 4101059,
+        "timelength": 256286,
+        "bitrate": 128,
+        "hash_320": "CB009B9371ABA77792258EA3EC14E82D",
+        "filesize_320": 10252604,
+        "timelength_320": 256286,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522225517562766.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 454262204,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(-2调版)",
+          "src_mixid": 317568292,
+          "users": [
+            {
+              "userid": 1032646872,
+              "t_nickname": "小家伙",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20240920/20240920190046275874.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522225517562766.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 698916303,
+        "audio_group_id": 480267418,
+        "audio_id": 410516619,
+        "album_id": 130235522,
+        "songname": "一路生花 (10种方言版)",
+        "author_name": "阿亮",
+        "album_name": "一路生花(10种方言版)",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-11-24"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "22E7A93B38B3CEACD8D6F05F381FBF69",
+        "filesize": 4071802,
+        "timelength": 254458,
+        "bitrate": 128,
+        "hash_320": "8FCF887CDBEE1CDA7891802ED0BC1397",
+        "filesize_320": 10179462,
+        "timelength_320": 254458,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522224805925791.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 1815537,
+            "ori_composer_work_id": 0,
+            "work_name": "一路生花"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 452384806,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(10种方言版)",
+          "src_mixid": 317568292,
+          "users": [
+            {
+              "userid": 1930934220,
+              "t_nickname": "阿亮",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20220116/20220116104214676534.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522224805925791.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 677504500,
+        "audio_group_id": 461183047,
+        "audio_id": 389816582,
+        "album_id": 105048302,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "铭牌曲奇",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-28"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "70BC471E4A0802425B08427DB21C4D8A",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "1BFDC7C27254E90F2414CB9A7C66E2FB",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20240928/20240928215822905339.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 427608945,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 1713254086,
+              "t_nickname": "铭牌曲奇",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20241107/20241107171555738466.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20240928/20240928215822905339.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 676813980,
+        "audio_group_id": 459501924,
+        "audio_id": 389242930,
+        "album_id": 104856749,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "达不劉",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-26"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "67A96124CBE15EA2561392350BB29B2E",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "BFE001593A3B422258CD2B3473C389A2",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231738993534.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 426989829,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 2098722779,
+              "t_nickname": "达不劉",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20230403/20230403010706421958.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231738993534.jpg"
+        }
+      },
+      "hot_flag": 0
+    },
+    {
+      "base": {
+        "album_audio_id": 676583503,
+        "audio_group_id": 458535414,
+        "audio_id": 388983960,
+        "album_id": 104804498,
+        "songname": "同心同行 (温奕心合唱版)",
+        "author_name": "琦琦",
+        "album_name": "同心同行（温奕心合唱版）",
+        "is_publish": 1,
+        "version": 0,
+        "publish_date": "2024-09-25"
+      },
+      "extra": {
+        "is_original": 0,
+        "mixsong_type": 0
+      },
+      "audio_info": {
+        "hash": "C5F8316CFA49B5DDF843C7E6F164767C",
+        "filesize": 3983613,
+        "timelength": 248946,
+        "bitrate": 128,
+        "hash_320": "BEED63687D7BB67125759376A9C97FD9",
+        "filesize_320": 9958988,
+        "timelength_320": 248946,
+        "hash_flac": "",
+        "filesize_flac": 0,
+        "timelength_flac": 0,
+        "bitrate_flac": 0,
+        "hash_high": "",
+        "filesize_high": 0,
+        "timelength_high": 0,
+        "bitrate_high": 0,
+        "hash_super": "",
+        "filesize_super": 0,
+        "timelength_super": 0,
+        "bitrate_super": 0,
+        "extname": "mp3",
+        "extname_super": ""
+      },
+      "album_info": {
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231800973140.jpg"
+      },
+      "landscape_mv": {
+        "video_hash": ""
+      },
+      "obbligato": {
+        "has_obbligato": 0
+      },
+      "works": [
+        {
+          "base": {
+            "work_id": 49202104,
+            "ori_composer_work_id": 1815537,
+            "work_name": "同心同行"
+          }
+        }
+      ],
+      "copyright": {
+        "rp_type_flac": "",
+        "topic_url_320": "",
+        "rp_type_320": "audio",
+        "status_flac": 1,
+        "fail_process": 0,
+        "status_128": 0,
+        "topic_url_high": "",
+        "privilege": 4,
+        "topic_url_128": "",
+        "rp_type": "audio",
+        "rp_type_high": "",
+        "privilege_flac": 0,
+        "fail_process_flac": 0,
+        "old_cpy": 1,
+        "price": 0,
+        "topic_url_flac": "",
+        "privilege_320": 4,
+        "pkg_price": 0,
+        "topic_url_super": "",
+        "status_super": 1,
+        "pay_type": 0,
+        "topic_url": "",
+        "fail_process_320": 0,
+        "privilege_128": 4,
+        "status": 0,
+        "fail_process_128": 0,
+        "status_high": 1,
+        "status_320": 0,
+        "rp_type_128": "audio",
+        "topic_remark": "",
+        "rp_type_super": "",
+        "trans_param": {
+          "musicpack_advance": 0,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_grade": 40,
+          "cid": 426767348,
+          "cpy_attr0": 0,
+          "cpy_map": "2",
+          "classmap": {
+            "attr0": 8690597896
+          },
+          "qualitymap": {
+            "attr0": 20,
+            "attr1": 0,
+            "bits": "14"
+          },
+          "language": "国语",
+          "ipmap": {
+            "attr0": 549797756928
+          },
+          "songname_suffix": "(温奕心合唱版)",
+          "src_mixid": 676310911,
+          "users": [
+            {
+              "userid": 1500027380,
+              "t_nickname": "琦琦",
+              "t_pic": "http://imge.kugou.com/kugouicon/165/20190718/20190718064231508545.jpg"
+            }
+          ],
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20260522/20260522231800973140.jpg"
+        }
+      },
+      "hot_flag": 0
+    }
+  ]
+}

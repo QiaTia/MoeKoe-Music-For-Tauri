@@ -1,0 +1,596 @@
+{
+  "data": {
+    "song": {
+      "is_publish": 1,
+      "hash": "4F18553F2AF06E355AD75A5EE6173456",
+      "author_name": "温奕心",
+      "album_audio_id": 317568292,
+      "album_id": 45305792,
+      "audio_length": 256286,
+      "album_cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg",
+      "audio_id": 92351310,
+      "ori_audio_id": 92351310,
+      "songname": "一路生花"
+    },
+    "total": 17,
+    "list": [
+      {
+        "opern_tune": "",
+        "id": "317568292_5_4",
+        "version_info": "智能尤克里里谱",
+        "ai_origin_tune": "",
+        "third": {
+          "qmusic_songmid": "004AxmlM3YihD2",
+          "preview_url": "https://y.qq.com/m/client/guitar_community/smart_guitar.html?songMid=004AxmlM3YihD2&noLoginMode=1",
+          "sheet_data_type": "1"
+        },
+        "avg_score": 0,
+        "jump_type": 5,
+        "userid": 520033058,
+        "opern_type": 4,
+        "created_at": "",
+        "collection_source": 16,
+        "pics": [],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 3,
+        "g_stats": {
+          "display_count": 0
+        },
+        "released_at": "",
+        "report_opern_type": 9,
+        "g_user": {
+          "userid": 520033058,
+          "nickname": "曲谱助手",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20230426/20230426104456726952.jpg"
+        },
+        "source": 5,
+        "is_released": 1
+      },
+      {
+        "opern_tune": "",
+        "id": "317568292_5_1",
+        "version_info": "智能钢琴谱",
+        "ai_origin_tune": "",
+        "third": {
+          "qmusic_songmid": "004AxmlM3YihD2",
+          "preview_url": "https://y.qq.com/m/client/guitar_community/smart_guitar.html?songMid=004AxmlM3YihD2&noLoginMode=1",
+          "sheet_data_type": "1"
+        },
+        "avg_score": 0,
+        "jump_type": 5,
+        "userid": 520033058,
+        "opern_type": 1,
+        "created_at": "",
+        "collection_source": 16,
+        "pics": [],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 3,
+        "g_stats": {
+          "display_count": 0
+        },
+        "released_at": "",
+        "report_opern_type": 7,
+        "g_user": {
+          "userid": 520033058,
+          "nickname": "曲谱助手",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20230426/20230426104456726952.jpg"
+        },
+        "source": 5,
+        "is_released": 1
+      },
+      {
+        "opern_tune": "",
+        "id": "317568292_5_2",
+        "version_info": "智能吉他谱",
+        "ai_origin_tune": "",
+        "third": {
+          "qmusic_songmid": "004AxmlM3YihD2",
+          "preview_url": "https://y.qq.com/m/client/guitar_community/smart_guitar.html?songMid=004AxmlM3YihD2&noLoginMode=1",
+          "sheet_data_type": "1"
+        },
+        "avg_score": 0,
+        "jump_type": 5,
+        "userid": 520033058,
+        "opern_type": 2,
+        "created_at": "",
+        "collection_source": 16,
+        "pics": [],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 3,
+        "g_stats": {
+          "display_count": 0
+        },
+        "released_at": "",
+        "report_opern_type": 8,
+        "g_user": {
+          "userid": 520033058,
+          "nickname": "曲谱助手",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20230426/20230426104456726952.jpg"
+        },
+        "source": 5,
+        "is_released": 1
+      },
+      {
+        "opern_tune": "",
+        "id": "317568292_5_100",
+        "version_info": "智能钢琴简谱",
+        "ai_origin_tune": "",
+        "third": {
+          "qmusic_songmid": "004AxmlM3YihD2",
+          "preview_url": "https://y.qq.com/m/client/guitar_community/smart_guitar.html?songMid=004AxmlM3YihD2&noLoginMode=1",
+          "sheet_data_type": "1"
+        },
+        "avg_score": 0,
+        "jump_type": 5,
+        "userid": 520033058,
+        "opern_type": 100,
+        "created_at": "",
+        "collection_source": 16,
+        "pics": [],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 3,
+        "g_stats": {
+          "display_count": 0
+        },
+        "released_at": "",
+        "report_opern_type": 11,
+        "g_user": {
+          "userid": 520033058,
+          "nickname": "曲谱助手",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20230426/20230426104456726952.jpg"
+        },
+        "source": 5,
+        "is_released": 1
+      },
+      {
+        "opern_tune": "",
+        "id": "317568292_5_98",
+        "version_info": "智能简谱",
+        "ai_origin_tune": "",
+        "third": {
+          "qmusic_songmid": "004AxmlM3YihD2",
+          "preview_url": "https://y.qq.com/m/client/guitar_community/smart_guitar.html?songMid=004AxmlM3YihD2&noLoginMode=1",
+          "sheet_data_type": "1"
+        },
+        "avg_score": 0,
+        "jump_type": 5,
+        "userid": 520033058,
+        "opern_type": 98,
+        "created_at": "",
+        "collection_source": 16,
+        "pics": [],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 3,
+        "g_stats": {
+          "display_count": 0
+        },
+        "released_at": "",
+        "report_opern_type": 10,
+        "g_user": {
+          "userid": 520033058,
+          "nickname": "曲谱助手",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20230426/20230426104456726952.jpg"
+        },
+        "source": 5,
+        "is_released": 1
+      },
+      {
+        "opern_tune": "C",
+        "source": 1,
+        "version_info": "钢琴独奏版",
+        "ai_origin_tune": "",
+        "avg_score": 4.7,
+        "jump_type": 3,
+        "userid": 520032960,
+        "ai_opern": [],
+        "opern_type": 1,
+        "created_at": "2021-11-09 18:25:22",
+        "collection_source": 10,
+        "pics": [
+          "https://webimg.kgimg.com/b032a605ea0384fc6b7f98fe82513d83.jpg",
+          "https://webimg.kgimg.com/0a51d08191452d5328565e0b24374d59.jpg",
+          "https://webimg.kgimg.com/3d42956fd56ab4d08ebad1017be32ffe.jpg",
+          "https://webimg.kgimg.com/38127dcbc54960adf64d2fb361abcfd5.jpg"
+        ],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 1,
+        "g_stats": {
+          "display_count": 537
+        },
+        "is_released": 1,
+        "released_at": "2021-11-09 18:28:22",
+        "g_user": {
+          "userid": 520032960,
+          "nickname": "第三方",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg"
+        },
+        "id": "911562864464171444"
+      },
+      {
+        "opern_tune": "G",
+        "source": 1,
+        "version_info": "简谱",
+        "ai_origin_tune": "",
+        "avg_score": 4.7,
+        "jump_type": 3,
+        "userid": 520032960,
+        "ai_opern": [],
+        "opern_type": 98,
+        "created_at": "2021-12-01 17:58:33",
+        "collection_source": 10,
+        "pics": [
+          "https://webimg.kgimg.com/ba7dd891057eb9f4e7f9707988204546.jpg",
+          "https://webimg.kgimg.com/13dfd435e5577e6b8cb037035ded4ca9.jpg"
+        ],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 1,
+        "g_stats": {
+          "display_count": 1538
+        },
+        "is_released": 1,
+        "released_at": "2021-12-01 18:37:23",
+        "g_user": {
+          "userid": 520032960,
+          "nickname": "第三方",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg"
+        },
+        "id": "919528648695939084"
+      },
+      {
+        "opern_tune": "G",
+        "source": 1,
+        "version_info": "吉他弹唱谱",
+        "ai_origin_tune": "",
+        "avg_score": 4.5,
+        "jump_type": 3,
+        "userid": 454963021,
+        "ai_opern": [
+          {
+            "xml_file": "",
+            "tune": "",
+            "audio_file": "",
+            "delay": 0,
+            "preview_xml_file": ""
+          }
+        ],
+        "opern_type": 2,
+        "created_at": "2022-04-02 10:44:44",
+        "collection_source": 10,
+        "pics": [
+          "https://webimg.kgimg.com/6e36138acc4638039cbe710c75afd1f7.jpg",
+          "https://webimg.kgimg.com/731442f57eeeea93dab1bee25641f605.jpg",
+          "https://webimg.kgimg.com/979ee5dbc94da05c928766488be0a098.jpg"
+        ],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 1,
+        "g_stats": {
+          "display_count": 391
+        },
+        "is_released": 1,
+        "released_at": "2022-04-06 10:10:25",
+        "g_user": {
+          "userid": 454963021,
+          "nickname": "清风戏扬柳",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20260331/20260331211501566375.jpg"
+        },
+        "id": "963630794634838383"
+      },
+      {
+        "opern_tune": "",
+        "id": "111606016518389761",
+        "version_info": "《一路生花》吉他谱_温奕心_G调完整版_吉他弹唱谱_二宏音乐",
+        "released_at": "2022-05-10 15:10:52",
+        "third": {
+          "id": "1024038"
+        },
+        "audio_id": 92351310,
+        "avg_score": 4.5,
+        "jump_type": 2,
+        "userid": 520033059,
+        "ai_opern": null,
+        "opern_type": 2,
+        "created_at": "2022-05-10 15:10:52",
+        "collection_source": 13,
+        "pics": [],
+        "is_released": 1,
+        "pay_type": 1,
+        "score_type": 2,
+        "g_stats": {
+          "display_count": 251
+        },
+        "ai_origin_tune": "",
+        "g_user": {
+          "userid": 520033059,
+          "nickname": "虫虫吉他",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg"
+        },
+        "source": 3,
+        "is_blocked": 0
+      },
+      {
+        "opern_tune": "",
+        "id": "111984748275957763",
+        "version_info": "一路生花 温奕心 吉他谱",
+        "released_at": "2022-05-12 17:20:35",
+        "third": {
+          "id": "1009940"
+        },
+        "audio_id": 92351310,
+        "avg_score": 4.5,
+        "jump_type": 2,
+        "userid": 520033059,
+        "ai_opern": null,
+        "opern_type": 2,
+        "created_at": "2022-05-12 17:20:35",
+        "collection_source": 13,
+        "pics": [],
+        "is_released": 1,
+        "pay_type": 1,
+        "score_type": 2,
+        "g_stats": {
+          "display_count": 160
+        },
+        "ai_origin_tune": "",
+        "g_user": {
+          "userid": 520033059,
+          "nickname": "虫虫吉他",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg"
+        },
+        "source": 3,
+        "is_blocked": 0
+      },
+      {
+        "opern_tune": "G",
+        "source": 1,
+        "version_info": "吉他弹唱谱",
+        "ai_origin_tune": "",
+        "avg_score": 4.4,
+        "jump_type": 3,
+        "userid": 520032960,
+        "ai_opern": [],
+        "opern_type": 2,
+        "created_at": "2021-11-17 19:29:59",
+        "collection_source": 10,
+        "pics": [
+          "https://webimg.kgimg.com/2ec594e940395de918cd01cd0496fd2a.jpg",
+          "https://webimg.kgimg.com/1c52e51806a5b15999912c8cba6cb505.jpg",
+          "https://webimg.kgimg.com/59d059c60ce88b8437c6b12d76ffa8fa.jpg",
+          "https://webimg.kgimg.com/0dd391c0bc4cee83ba803e5f3452e820.jpg",
+          "https://webimg.kgimg.com/eb952dd8907c2751b305fad5913d72c8.jpg"
+        ],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 1,
+        "g_stats": {
+          "display_count": 273
+        },
+        "is_released": 1,
+        "released_at": "2021-11-17 19:33:51",
+        "g_user": {
+          "userid": 520032960,
+          "nickname": "第三方",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg"
+        },
+        "id": "914478227493605503"
+      },
+      {
+        "opern_tune": "",
+        "id": "111984756171735043",
+        "version_info": "温奕心《一路生花》吉他谱",
+        "released_at": "2022-05-12 17:20:35",
+        "third": {
+          "id": "1009253"
+        },
+        "audio_id": 92351310,
+        "avg_score": 4.3,
+        "jump_type": 2,
+        "userid": 520033059,
+        "ai_opern": null,
+        "opern_type": 2,
+        "created_at": "2022-05-12 17:20:35",
+        "collection_source": 13,
+        "pics": [],
+        "is_released": 1,
+        "pay_type": 1,
+        "score_type": 2,
+        "g_stats": {
+          "display_count": 102
+        },
+        "ai_origin_tune": "",
+        "g_user": {
+          "userid": 520033059,
+          "nickname": "虫虫吉他",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg"
+        },
+        "source": 3,
+        "is_blocked": 0
+      },
+      {
+        "opern_tune": "C",
+        "source": 1,
+        "version_info": "高级",
+        "ai_origin_tune": "",
+        "avg_score": 4.3,
+        "jump_type": 3,
+        "userid": 659133763,
+        "ai_opern": [
+          {
+            "xml_file": "",
+            "tune": "",
+            "audio_file": "",
+            "delay": 0,
+            "preview_xml_file": ""
+          }
+        ],
+        "opern_type": 3,
+        "created_at": "2022-12-05 11:53:58",
+        "collection_source": 10,
+        "pics": [
+          "https://webimg.kgimg.com/be6a188476654099beafafbc3ab8d66f.jpg",
+          "https://webimg.kgimg.com/5f65c0f384d4eff04d2ed8345a45a357.jpg",
+          "https://webimg.kgimg.com/adc46df091df0d1aeb3157fbb65acfe4.jpg"
+        ],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 1,
+        "g_stats": {
+          "display_count": 555
+        },
+        "is_released": 1,
+        "released_at": "2022-12-13 16:27:43",
+        "g_user": {
+          "userid": 659133763,
+          "nickname": "申宇",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20221125/20221125211029790328.jpg"
+        },
+        "id": "1053158018702091674"
+      },
+      {
+        "opern_tune": "♭A",
+        "source": 1,
+        "version_info": "一路生花 简谱",
+        "ai_origin_tune": "",
+        "avg_score": 4.3,
+        "jump_type": 3,
+        "userid": 1349652080,
+        "ai_opern": [
+          {
+            "xml_file": "",
+            "tune": "",
+            "audio_file": "",
+            "delay": 0,
+            "preview_xml_file": ""
+          }
+        ],
+        "opern_type": 98,
+        "created_at": "2023-04-04 12:30:42",
+        "collection_source": 10,
+        "pics": [
+          "https://webimg.kgimg.com/ae7409d6b2e8136cb2485120b1153b5c.jpeg",
+          "https://webimg.kgimg.com/1c3a7380483ea1380d04563abd54ed59.jpeg"
+        ],
+        "is_blocked": 0,
+        "pay_type": 1,
+        "score_type": 1,
+        "g_stats": {
+          "display_count": 643
+        },
+        "is_released": 1,
+        "released_at": "2023-04-12 19:02:12",
+        "g_user": {
+          "userid": 1349652080,
+          "nickname": "小手鹅",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20240918/20240918012609279941.jpg"
+        },
+        "id": "1096653806555699524"
+      },
+      {
+        "opern_tune": "",
+        "id": "111984738488549379",
+        "version_info": "温奕心 一路生花 吉他谱 G调指法",
+        "released_at": "2022-05-12 17:20:35",
+        "third": {
+          "id": "1011010"
+        },
+        "audio_id": 92351310,
+        "avg_score": 4.1,
+        "jump_type": 2,
+        "userid": 520033059,
+        "ai_opern": null,
+        "opern_type": 2,
+        "created_at": "2022-05-12 17:20:35",
+        "collection_source": 13,
+        "pics": [],
+        "is_released": 1,
+        "pay_type": 1,
+        "score_type": 2,
+        "g_stats": {
+          "display_count": 74
+        },
+        "ai_origin_tune": "",
+        "g_user": {
+          "userid": 520033059,
+          "nickname": "虫虫吉他",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg"
+        },
+        "source": 3,
+        "is_blocked": 0
+      },
+      {
+        "opern_tune": "",
+        "id": "111984752633839619",
+        "version_info": "一路生花-温奕心 完美G调弹唱完整版",
+        "released_at": "2022-05-12 17:20:35",
+        "third": {
+          "id": "1009643"
+        },
+        "audio_id": 92351310,
+        "avg_score": 3.7,
+        "jump_type": 2,
+        "userid": 520033059,
+        "ai_opern": null,
+        "opern_type": 2,
+        "created_at": "2022-05-12 17:20:35",
+        "collection_source": 13,
+        "pics": [],
+        "is_released": 1,
+        "pay_type": 1,
+        "score_type": 2,
+        "g_stats": {
+          "display_count": 84
+        },
+        "ai_origin_tune": "",
+        "g_user": {
+          "userid": 520033059,
+          "nickname": "虫虫吉他",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg"
+        },
+        "source": 3,
+        "is_blocked": 0
+      },
+      {
+        "opern_tune": "",
+        "id": "111984737549025282",
+        "version_info": "一路生花",
+        "released_at": "2022-05-12 17:20:35",
+        "third": {
+          "id": "1011069"
+        },
+        "audio_id": 92351310,
+        "avg_score": 3.7,
+        "jump_type": 2,
+        "userid": 520033059,
+        "ai_opern": null,
+        "opern_type": 2,
+        "created_at": "2022-05-12 17:20:35",
+        "collection_source": 13,
+        "pics": [],
+        "is_released": 1,
+        "pay_type": 1,
+        "score_type": 2,
+        "g_stats": {
+          "display_count": 120
+        },
+        "ai_origin_tune": "",
+        "g_user": {
+          "userid": 520033059,
+          "nickname": "虫虫吉他",
+          "avatar": "http://imge.kugou.com/kugouicon/165/20160113/20160113180717663307.jpg"
+        },
+        "source": 3,
+        "is_blocked": 0
+      }
+    ]
+  },
+  "errcode": 0,
+  "status": 1,
+  "error": ""
+}

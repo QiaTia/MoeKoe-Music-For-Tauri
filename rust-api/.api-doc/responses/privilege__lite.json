@@ -1,0 +1,76 @@
+{
+  "status": 1,
+  "error_code": 0,
+  "message": "",
+  "appid_group": 1,
+  "should_cache": 1,
+  "data": [
+    {
+      "type": "audio",
+      "id": 0,
+      "album_id": "0",
+      "recommend_album_id": "0",
+      "album_audio_id": 0,
+      "hash": "E291FC24C9DBE4EF3FDD9837EA3E1A9C",
+      "name": "",
+      "singername": "",
+      "level": 0,
+      "quality": "",
+      "expire": 0,
+      "publish": 1,
+      "is_publish": 0,
+      "old_hide": 0,
+      "privilege": 0,
+      "status": 1,
+      "fail_process": 0,
+      "pay_type": 0,
+      "price": 0,
+      "pkg_price": 0,
+      "topic_url": "",
+      "topic_remark": "",
+      "info": {
+        "duration": 0,
+        "filesize": 0,
+        "bitrate": 0,
+        "extname": "",
+        "flag": 0,
+        "image": "",
+        "intro": ""
+      },
+      "discount": [],
+      "start_time": "0000-00-00",
+      "end_time": "0000-00-00",
+      "cd_url": "",
+      "cid": -1,
+      "old_cpy": 1,
+      "rebuy_pay_type": 0,
+      "is_search_top": 0,
+      "pay_block_text": "0",
+      "is_separate": 0,
+      "buy_count": 0,
+      "buy_count_vip": 0,
+      "buy_count_kubi": 0,
+      "buy_count_audios": 0,
+      "trans_param": {
+        "musicpack_advance": 0,
+        "pay_block_tpl": 1,
+        "display": 0,
+        "display_rate": 0,
+        "cid": -1,
+        "cpy_attr0": 0,
+        "cpy_map": "",
+        "classmap": {
+          "attr0": 0
+        },
+        "qualitymap": {
+          "attr0": 0,
+          "attr1": 0,
+          "bits": ""
+        }
+      },
+      "_msg": "Allow: the audio is not found.",
+      "_errno": 6,
+      "relate_goods": []
+    }
+  ]
+}

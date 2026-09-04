@@ -1,0 +1,24 @@
+{
+  "error_msg": "",
+  "data": {
+    "current_period_info": {
+      "status_name": "进行中",
+      "end_time": "2026-09-08 23:59:59",
+      "id": 286,
+      "start_time": "2026-09-02 00:00:00",
+      "status": 0,
+      "name": "第144期"
+    },
+    "last_period_info": {
+      "status_name": "已结束",
+      "end_time": "2026-09-01 23:59:59",
+      "id": 284,
+      "start_time": "2026-08-26 00:00:00",
+      "status": 2,
+      "name": "第143期"
+    },
+    "period_info": {}
+  },
+  "status": 1,
+  "error_code": 0
+}

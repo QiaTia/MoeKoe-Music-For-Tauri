@@ -1,0 +1,610 @@
+{
+  "data": {
+    "timestamp": 1788516885,
+    "list": [
+      {
+        "is_publish": 1,
+        "id": "collection_3_1789714925_7_0",
+        "specialid": 6940596,
+        "song_count": 31,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20231026/20231026013005204545.jpg",
+          "user_name": "katrina",
+          "user_id": 1789714925
+        },
+        "content_id": "collection_3_1789714925_7_0",
+        "play_count": 153928,
+        "title": "上头减脂！一起动起来",
+        "intro": "最适合健身房的歌单！大佬必备！",
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230803/20230803164602753012.jpg",
+        "slid": 7,
+        "create_time": 1690959796,
+        "content_type": 1,
+        "song_userid": 1789714925
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1789714925_5_0",
+        "specialid": 6940457,
+        "song_count": 29,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20231026/20231026013005204545.jpg",
+          "user_name": "katrina",
+          "user_id": 1789714925
+        },
+        "content_id": "collection_3_1789714925_5_0",
+        "play_count": 224338,
+        "title": "「节奏控」健身必备",
+        "intro": "踏着轻捷的舞步，展现出无限活力；挥舞强健...",
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230803/20230803181056718192.jpg",
+        "slid": 5,
+        "create_time": 1690957997,
+        "content_type": 1,
+        "song_userid": 1789714925
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1789714925_9_0",
+        "specialid": 6940695,
+        "song_count": 27,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20231026/20231026013005204545.jpg",
+          "user_name": "katrina",
+          "user_id": 1789714925
+        },
+        "content_id": "collection_3_1789714925_9_0",
+        "play_count": 79097,
+        "title": "健身走起！扭腰还是抖腿，听你的",
+        "intro": "想要一个好身材只需要带上耳机，有毅力 不放弃！",
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230803/20230803164540989119.jpg",
+        "slid": 9,
+        "create_time": 1690963687,
+        "content_type": 1,
+        "song_userid": 1789714925
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1789714925_8_0",
+        "specialid": 6940633,
+        "song_count": 26,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20231026/20231026013005204545.jpg",
+          "user_name": "katrina",
+          "user_id": 1789714925
+        },
+        "content_id": "collection_3_1789714925_8_0",
+        "play_count": 100016,
+        "title": "「快速减脂肪」健身运动必备音乐1",
+        "intro": "健身是心烦意乱的解药。",
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230802/20230802151024600453.jpg",
+        "slid": 8,
+        "create_time": 1690960830,
+        "content_type": 1,
+        "song_userid": 1789714925
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1789714925_4_0",
+        "specialid": 6939890,
+        "song_count": 28,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20231026/20231026013005204545.jpg",
+          "user_name": "katrina",
+          "user_id": 1789714925
+        },
+        "content_id": "collection_3_1789714925_4_0",
+        "play_count": 181411,
+        "title": "听踩点BGM，燃烧吧脂肪!",
+        "intro": "健身路上无救赎，只有上瘾的囚徒。",
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230802/20230802110218452839.jpg",
+        "slid": 4,
+        "create_time": 1690955667,
+        "content_type": 1,
+        "song_userid": 1789714925
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1789714925_11_0",
+        "specialid": 6946632,
+        "song_count": 22,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20231026/20231026013005204545.jpg",
+          "user_name": "katrina",
+          "user_id": 1789714925
+        },
+        "content_id": "collection_3_1789714925_11_0",
+        "play_count": 205802,
+        "title": "「快速减脂肪」健身运动必备音乐",
+        "intro": "",
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230804/20230804160041224854.jpg",
+        "slid": 11,
+        "create_time": 1691136484,
+        "content_type": 1,
+        "song_userid": 1789714925
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1085324644_92_0",
+        "specialid": 7055376,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122195522823900.jpg",
+          "user_name": "酷狗场景音乐官方号",
+          "user_id": 1085324644
+        },
+        "content_id": "collection_3_1085324644_92_0",
+        "play_count": 16770,
+        "title": "群星献唱 | 为亚运加油",
+        "song_count": 6,
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230920/20230920162149854280.jpg",
+        "slid": 92,
+        "create_time": 1694687497,
+        "intro": "和音乐一起，舞动激情亚运~",
+        "song_userid": 1085324644
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1085324644_90_0",
+        "specialid": 7055398,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122195522823900.jpg",
+          "user_name": "酷狗场景音乐官方号",
+          "user_id": 1085324644
+        },
+        "content_id": "collection_3_1085324644_90_0",
+        "play_count": 26885,
+        "title": "和运动健儿毅起动起来！健身运动必备单曲",
+        "song_count": 24,
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230919/20230919182426529137.jpg",
+        "slid": 90,
+        "create_time": 1694687486,
+        "intro": "喚醒多巴胺，给运动来点儿bgm~",
+        "song_userid": 1085324644
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1085324644_89_0",
+        "specialid": 7055400,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122195522823900.jpg",
+          "user_name": "酷狗场景音乐官方号",
+          "user_id": 1085324644
+        },
+        "content_id": "collection_3_1085324644_89_0",
+        "play_count": 377,
+        "title": "历届亚运会曲目",
+        "song_count": 11,
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230913/20230913171416723384.jpg",
+        "slid": 89,
+        "create_time": 1694687479,
+        "intro": "为中国亚运健儿加油呀~",
+        "song_userid": 1085324644
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1085324644_87_0",
+        "specialid": 7055411,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122195522823900.jpg",
+          "user_name": "酷狗场景音乐官方号",
+          "user_id": 1085324644
+        },
+        "content_id": "collection_3_1085324644_87_0",
+        "play_count": 103245,
+        "title": "超燃bgm | 沉浸式观赛的正确姿势",
+        "song_count": 23,
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20230922/20230922154949753257.jpg",
+        "slid": 87,
+        "create_time": 1694687456,
+        "intro": "听超燃歌曲，为健儿助力！",
+        "song_userid": 1085324644
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_520032078_18_0",
+        "specialid": 3907119,
+        "song_count": 16,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122193921850392.jpg",
+          "user_name": "夜跑老哥",
+          "user_id": 520032078
+        },
+        "content_id": "collection_3_520032078_18_0",
+        "play_count": 479147,
+        "title": "超好听的中文跑步歌单",
+        "intro": "英文歌太多了！换个口味换个节奏！随心跑",
+        "cover": "http://c1.kgimg.com/custom/{size}/20210618/20210618092005187283.jpg",
+        "slid": 18,
+        "create_time": 1623944759,
+        "content_type": 1,
+        "song_userid": 520032078
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_520032077_41_0",
+        "specialid": 4347812,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122194341372897.jpg",
+          "user_name": "怪兽Kunt",
+          "user_id": 520032077
+        },
+        "content_id": "collection_3_520032077_41_0",
+        "play_count": 993323,
+        "title": "精选丨跑步燃脂中文歌",
+        "song_count": 20,
+        "cover": "http://c1.kgimg.com/v2/custom/{size}/2e841c69e60b6fa3549f8a62ec5bd5a9.png",
+        "slid": 41,
+        "create_time": 1635230753,
+        "intro": "别找了，就听这张全中文的燃脂歌单吧！",
+        "song_userid": 520032077
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_509004243_25_0",
+        "specialid": 117857,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20161103/20161103180822642.jpg",
+          "user_name": "枫言雨诺",
+          "user_id": 509004243
+        },
+        "content_id": "collection_3_509004243_25_0",
+        "play_count": 17359830,
+        "title": "节奏跑步中文歌，一起来挑战极限！",
+        "song_count": 25,
+        "cover": "http://imge.kugou.com/soft/collection/{size}/20160822/20160822142440700311.jpg",
+        "slid": 25,
+        "create_time": 1471848449,
+        "intro": "快节奏跑步中文歌，一起挑战极限！",
+        "song_userid": 509004243
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1832720119_6_0",
+        "specialid": 4461483,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122202829787182.jpg",
+          "user_name": "98n鱼",
+          "user_id": 1832720119
+        },
+        "content_id": "collection_3_1832720119_6_0",
+        "play_count": 1729914,
+        "title": "中文热血跑步必备歌单",
+        "song_count": 21,
+        "cover": "http://c1.kgimg.com/custom/{size}/20211129/20211129221523781344.jpg",
+        "slid": 6,
+        "create_time": 1638195124,
+        "intro": "#我的运动歌单#跑步热血中文歌！",
+        "song_userid": 1832720119
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1837756133_144_0",
+        "specialid": 4008006,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122202819527383.jpg",
+          "user_name": "flesSlautrivV",
+          "user_id": 1837756133
+        },
+        "content_id": "collection_3_1837756133_144_0",
+        "play_count": 9086,
+        "title": "2021最火动感单车DJ",
+        "song_count": 22,
+        "cover": "http://c1.kgimg.com/custom/{size}/20210719/20210719144925261430.png",
+        "slid": 144,
+        "create_time": 1626677086,
+        "intro": "2021最火动感单车DJ歌单！",
+        "song_userid": 1837756133
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1837756133_153_0",
+        "specialid": 4061678,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122202819527383.jpg",
+          "user_name": "flesSlautrivV",
+          "user_id": 1837756133
+        },
+        "content_id": "collection_3_1837756133_153_0",
+        "play_count": 6321,
+        "title": "DJ健身动感单车，激发生命",
+        "song_count": 22,
+        "cover": "http://c1.kgimg.com/custom/{size}/20210802/20210802155542362105.png",
+        "slid": 153,
+        "create_time": 1627890513,
+        "intro": "健身动感单车DJ音乐，告别烦恼，运动起来。",
+        "song_userid": 1837756133
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1734573284_229_0",
+        "specialid": 4092057,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122221339485212.jpg",
+          "user_name": "酸菜鱼",
+          "user_id": 1734573284
+        },
+        "content_id": "collection_3_1734573284_229_0",
+        "play_count": 26283,
+        "title": "动感单车DJ‖dj舞曲 劲爆舞曲2021",
+        "song_count": 134,
+        "cover": "http://c1.kgimg.com/custom/{size}/20210810/20210810121521152273.jpg",
+        "slid": 229,
+        "create_time": 1628563530,
+        "intro": "此歌单收录了2021动感单车慢动作的DJ歌曲，如果你是初学动感单车的人，此歌单的歌曲很适合你练习动感单车。欢迎收藏和聆听！",
+        "song_userid": 1734573284
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1330096768_215_0",
+        "specialid": 4124303,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20260706/20260706144818274401.jpg",
+          "user_name": "邓颖",
+          "user_id": 1330096768
+        },
+        "content_id": "collection_3_1330096768_215_0",
+        "play_count": 48908,
+        "title": "健身房运动音乐DJ：跑步&动感单车",
+        "song_count": 195,
+        "cover": "http://c1.kgimg.com/custom/{size}/20210818/20210818173210772581.jpg",
+        "slid": 215,
+        "create_time": 1629275852,
+        "intro": "跑步&动感单车健身必备音乐，欢迎聆听收藏！",
+        "song_userid": 1330096768
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_381762025_131_0",
+        "specialid": 4165845,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20260302/20260302151002519979.jpg",
+          "user_name": "杨谨铭",
+          "user_id": 381762025
+        },
+        "content_id": "collection_3_381762025_131_0",
+        "play_count": 669508,
+        "title": "动感单车 | 热门劲爆dj嗨曲，根本停不下来",
+        "song_count": 135,
+        "cover": "http://c1.kgimg.com/custom/{size}/20250325/20250325223443256405.jpg",
+        "slid": 131,
+        "create_time": 1630136968,
+        "intro": "主题征集：工作之余，健身锻炼起来\n\n动感单车，英文名字（SPINNING），是由美国私人教练兼极限运动员JOHNNYG于二十世纪八十年代首创，是一种结合了音乐、视觉效果等独特的充满活力的室内自行车训练课程。\n动感单车在克服了室外行驶的一切缺点后，由于技术上的改进，使得这项运动在简单易学之余，成为一项能够使全身得到锻炼的有氧运动。\n\n让我们跟随狂炸的节奏彻底燃起来！",
+        "song_userid": 381762025
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1776492638_10_0",
+        "specialid": 4181922,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20260615/20260615081834702381.jpg",
+          "user_name": "Myself",
+          "user_id": 1776492638
+        },
+        "content_id": "collection_3_1776492638_10_0",
+        "play_count": 11201,
+        "title": "经典dj动感单车曲",
+        "song_count": 25,
+        "cover": "http://c1.kgimg.com/custom/{size}/20210902/20210902205937872826.jpg",
+        "slid": 10,
+        "create_time": 1627113666,
+        "intro": "这些是以前健身时骑单车感觉好听的DJ",
+        "song_userid": 1776492638
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1870703579_6_0",
+        "specialid": 4187847,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122194719672639.jpg",
+          "user_name": "DJ小王子",
+          "user_id": 1870703579
+        },
+        "content_id": "collection_3_1870703579_6_0",
+        "play_count": 87878,
+        "title": "2021年网红DJ神曲盘点,动感单车最爱（每月更新）",
+        "song_count": 102,
+        "cover": "http://c1.kgimg.com/custom/{size}/20210905/20210905072050502752.jpg",
+        "slid": 6,
+        "create_time": 1630764836,
+        "intro": "网红dj神曲，动感单车最爱,每一首都值得循环播放\n制作不易 ，剽窃别人劳动成果毫无意义\n请所有剽窃者要点β脸",
+        "song_userid": 1870703579
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1774591117_143_0",
+        "specialid": 4266173,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122193921999422.jpg",
+          "user_name": "那年初夏",
+          "user_id": 1774591117
+        },
+        "content_id": "collection_3_1774591117_143_0",
+        "play_count": 61929,
+        "title": "dj舞曲 劲爆舞曲抖音｜健身房动感单车必备",
+        "song_count": 96,
+        "cover": "http://c1.kgimg.com/custom/{size}/20210929/20210929192249897444.jpg",
+        "slid": 143,
+        "create_time": 1632876436,
+        "intro": "此歌单收录了劲爆DJ舞曲，适合健身房动感单车必备的歌曲。欢迎收藏和聆听！",
+        "song_userid": 1774591117
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1313929899_868_0",
+        "specialid": 0,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122195859457165.jpg",
+          "user_name": "海洋里的鲨鱼",
+          "user_id": 1313929899
+        },
+        "content_id": "collection_3_1313929899_868_0",
+        "play_count": 7952,
+        "title": "dj劲爆舞曲2021串烧动感单车专用",
+        "song_count": 113,
+        "cover": "http://c1.kgimg.com/custom/{size}/20211123/20211123141003288383.jpg",
+        "slid": 868,
+        "create_time": 1637638422,
+        "intro": "劲爆到单曲循环的dj歌曲好听不腻。",
+        "song_userid": 1313929899
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1734573284_395_0",
+        "specialid": 4500764,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122221339485212.jpg",
+          "user_name": "酸菜鱼",
+          "user_id": 1734573284
+        },
+        "content_id": "collection_3_1734573284_395_0",
+        "play_count": 31000,
+        "title": "dj舞曲 劲爆舞曲2021 ：健身房动感单车专用",
+        "song_count": 126,
+        "cover": "http://c1.kgimg.com/custom/{size}/20211210/20211210140538509499.jpg",
+        "slid": 395,
+        "create_time": 1639101980,
+        "intro": "此歌单收录了2021劲爆DJ舞曲，健身房动感单车专用歌曲。欢迎收藏和聆听！",
+        "song_userid": 1734573284
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1734573284_163_0",
+        "specialid": 3825761,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122221339485212.jpg",
+          "user_name": "酸菜鱼",
+          "user_id": 1734573284
+        },
+        "content_id": "collection_3_1734573284_163_0",
+        "play_count": 7339120,
+        "title": "dj舞曲 劲爆舞曲2021串烧 动感单车专用",
+        "song_count": 110,
+        "cover": "http://c1.kgimg.com/custom/{size}/20210519/20210519184130512662.jpg",
+        "slid": 163,
+        "create_time": 1621389986,
+        "intro": "此歌单收录2021最火的DJ劲爆舞曲，适合于动感单车专用歌曲，听着舞曲踩着单车，累并快乐着。欢迎健身宝宝们的聆听！",
+        "song_userid": 1734573284
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1814551334_683_0",
+        "specialid": 4224468,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122194347732345.jpg",
+          "user_name": "五一鸭",
+          "user_id": 1814551334
+        },
+        "content_id": "collection_3_1814551334_683_0",
+        "play_count": 1694552,
+        "title": "车载老歌D亅丨引擎轰鸣，动感单车健身必备",
+        "song_count": 65,
+        "cover": "http://c1.kgimg.com/custom/{size}/20210918/20210918155005704930.jpg",
+        "slid": 683,
+        "create_time": 1631948905,
+        "intro": "好听的歌推荐给大家，希望喜欢！欢迎收听!",
+        "song_userid": 1814551334
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1913436081_94_0",
+        "specialid": 4627891,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20211210/20211210141552697839.jpg",
+          "user_name": "猕猴桃",
+          "user_id": 1913436081
+        },
+        "content_id": "collection_3_1913436081_94_0",
+        "play_count": 2339,
+        "title": "动感单车dj|带您汗流不止，脂肪甩掉",
+        "song_count": 100,
+        "cover": "http://c1.kgimg.com/custom/{size}/20220118/20220118140551118130.jpg",
+        "slid": 94,
+        "create_time": 1641432008,
+        "intro": "动感单车歌听嗨曲，带你大汗淋漓，脂肪甩掉！",
+        "song_userid": 1913436081
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1774591117_277_0",
+        "specialid": 4776286,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20221122/20221122193921999422.jpg",
+          "user_name": "那年初夏",
+          "user_id": 1774591117
+        },
+        "content_id": "collection_3_1774591117_277_0",
+        "play_count": 1802511,
+        "title": "健身房运动音乐 ｜健身房动感单车课DJ舞曲",
+        "song_count": 123,
+        "cover": "http://c1.kgimg.com/custom/{size}/20220201/20220201193336504654.jpg",
+        "slid": 277,
+        "create_time": 1643702837,
+        "intro": "此歌单收录了健身房运动音乐，健身房动感单车课DJ舞曲。欢迎收藏和聆听！",
+        "song_userid": 1774591117
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1927671817_5_0",
+        "specialid": 4825575,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20220208/20220208152011639924.jpg",
+          "user_name": "妤",
+          "user_id": 1927671817
+        },
+        "content_id": "collection_3_1927671817_5_0",
+        "play_count": 61311,
+        "title": "动感单车音乐串烧 | dj合集",
+        "song_count": 90,
+        "cover": "http://c1.kgimg.com/custom/{size}/20220211/20220211093204521836.jpg",
+        "slid": 5,
+        "create_time": 1644543106,
+        "intro": "各大城市健身房专用低音炮dj舞曲",
+        "song_userid": 1927671817
+      },
+      {
+        "is_publish": 1,
+        "id": "collection_3_1048449899_100_0",
+        "specialid": 4935533,
+        "content_type": 1,
+        "author_info": {
+          "user_pic": "http://imge.kugou.com/kugouicon/165/20220227/20220227215602227111.jpg",
+          "user_name": "织一束月光",
+          "user_id": 1048449899
+        },
+        "content_id": "collection_3_1048449899_100_0",
+        "play_count": 600,
+        "title": "动感DJ丨动感单车 跑步 有氧运动",
+        "song_count": 28,
+        "cover": "http://c1.kgimg.com/custom/{size}/20220226/20220226233636381851.jpg",
+        "slid": 100,
+        "create_time": 1645889319,
+        "intro": "好听的歌曲推荐给大家！！！",
+        "song_userid": 1048449899
+      }
+    ]
+  },
+  "errcode": 0,
+  "status": 1,
+  "error": ""
+}

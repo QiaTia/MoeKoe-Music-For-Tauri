@@ -1,0 +1,242 @@
+{
+  "routes": [
+    {"route":"/search","params":[{"name":"keywords","type":"string","required":true,"default":"","desc":"搜索关键词"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"type","type":"string","required":false,"default":"song","desc":"搜索类型 special/lyric/song/album/author/mv"}],"needLogin":false,"sample":{"keywords":"周杰伦"}},
+    {"route":"/lyric","params":[{"name":"id","type":"string","required":true,"default":"","desc":"歌词/歌曲ID"},{"name":"accesskey","type":"string","required":false,"default":"","desc":"访问密钥"},{"name":"client","type":"string","required":false,"default":"android","desc":"客户端类型"},{"name":"fmt","type":"string","required":false,"default":"krc","desc":"歌词格式 krc/lrc"},{"name":"decode","type":"boolean","required":false,"default":"false","desc":"是否解码歌词"}],"needLogin":false,"sample":{"id":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/album/detail","params":[{"name":"id","type":"string","required":true,"default":"","desc":"专辑ID"},{"name":"is_buy","type":"number","required":false,"default":"0","desc":"是否购买"}],"needLogin":false,"sample":{"id":"1289478"}},
+    {"route":"/song/url","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"歌曲hash"},{"name":"album_id","type":"number","required":false,"default":"0","desc":"专辑ID"},{"name":"album_audio_id","type":"number","required":false,"default":"0","desc":"音频ID"},{"name":"quality","type":"string","required":false,"default":"128","desc":"音质 128/320/flac 或 magic_xxx"},{"name":"free_part","type":"boolean","required":false,"default":"false","desc":"是否试听片段"},{"name":"ppage_id","type":"string","required":false,"default":"","desc":"分页ID串"},{"name":"notSign","type":"boolean","required":false,"default":"false","desc":"拼写错误参数(原Node字段)，实际签名仍计算"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c","album_id":"1289478"}},
+    {"route":"/server/now","params":[],"needLogin":false,"sample":{}},
+    {"route":"/search/lyric","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"歌曲hash"},{"name":"keywords","type":"string","required":true,"default":"","desc":"歌词搜索关键词"},{"name":"album_audio_id","type":"number","required":false,"default":"0","desc":"音频ID"},{"name":"man","type":"string","required":false,"default":"no","desc":"是否人工"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c","keywords":"周杰伦"}},
+    {"route":"/login/qr/key","params":[{"name":"type","type":"string","required":false,"default":"android","desc":"类型 web 为网页端"}],"needLogin":false,"sample":{"type":"web"}},
+    {"route":"/login/qr/create","params":[{"name":"key","type":"string","required":true,"default":"","desc":"二维码key"},{"name":"qrimg","type":"boolean","required":false,"default":"false","desc":"是否返回二维码图片base64"}],"needLogin":false,"sample":{"key":"e291fc24c9dbe4ef3fdd9837ea3e1a9c","qrimg":false}},
+    {"route":"/ai/recommend","params":[{"name":"album_audio_id","type":"string","required":false,"default":"","desc":"推荐种子歌曲ID，逗号分隔"}],"needLogin":false,"sample":{"album_audio_id":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/album","params":[{"name":"album_id","type":"string","required":true,"default":"","desc":"专辑ID，逗号分隔"},{"name":"fields","type":"string","required":false,"default":"","desc":"返回字段"}],"needLogin":false,"sample":{"album_id":"1289478"}},
+    {"route":"/album/shop","params":[],"needLogin":false,"sample":{}},
+    {"route":"/album/songs","params":[{"name":"id","type":"string","required":true,"default":"","desc":"专辑ID"},{"name":"is_buy","type":"string","required":false,"default":"","desc":"是否购买"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"id":"1289478"}},
+    {"route":"/artist/albums","params":[{"name":"id","type":"string","required":true,"default":"","desc":"歌手ID"},{"name":"sort","type":"string","required":false,"default":"1","desc":"排序 hot=3 其他=1"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"}],"needLogin":false,"sample":{"id":"309"}},
+    {"route":"/artist/audios","params":[{"name":"id","type":"string","required":true,"default":"","desc":"歌手ID"},{"name":"sort","type":"string","required":false,"default":"2","desc":"排序 hot=1 其他=2"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"}],"needLogin":false,"sample":{"id":"309"}},
+    {"route":"/artist/detail","params":[{"name":"id","type":"string","required":true,"default":"","desc":"歌手ID"}],"needLogin":false,"sample":{"id":"309"}},
+    {"route":"/artist/follow","params":[{"name":"id","type":"number","required":true,"default":"0","desc":"歌手ID"}],"needLogin":true,"sample":{"id":"309"}},
+    {"route":"/artist/follow/newsongs","params":[{"name":"last_album_id","type":"number","required":false,"default":"0","desc":"上次专辑ID"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{}},
+    {"route":"/artist/honour","params":[{"name":"id","type":"string","required":true,"default":"","desc":"歌手ID"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"}],"needLogin":false,"sample":{"id":"309"}},
+    {"route":"/artist/lists","params":[{"name":"musician","type":"number","required":false,"default":"0","desc":"是否音乐人"},{"name":"sextypes","type":"number","required":false,"default":"0","desc":"性别类型"},{"name":"type","type":"number","required":false,"default":"0","desc":"类型"},{"name":"hotsize","type":"number","required":false,"default":"30","desc":"热门数量"}],"needLogin":false,"sample":{}},
+    {"route":"/artist/unfollow","params":[{"name":"id","type":"string","required":true,"default":"","desc":"歌手ID"}],"needLogin":true,"sample":{"id":"309"}}
+,
+    {"route":"/artist/videos","params":[{"name":"id","type":"string","required":true,"default":"","desc":"歌手ID"},{"name":"tag","type":"string","required":false,"default":"all","desc":"标签 official/live/fan/artist"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"}],"needLogin":false,"sample":{"id":"309"}},
+    {"route":"/audio","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"歌曲hash，逗号分隔"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/audio/accompany/matching","params":[{"name":"fileName","type":"string","required":false,"default":"","desc":"文件名"},{"name":"hash","type":"string","required":false,"default":"","desc":"歌曲hash"},{"name":"mixId","type":"number","required":false,"default":"0","desc":"混音ID"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/audio/ktv/total","params":[{"name":"songId","type":"number","required":false,"default":"0","desc":"歌曲ID"},{"name":"singerName","type":"string","required":false,"default":"","desc":"歌手名"},{"name":"songHash","type":"string","required":false,"default":"","desc":"歌曲hash"}],"needLogin":false,"sample":{}},
+    {"route":"/audio/related","params":[{"name":"album_audio_id","type":"number","required":false,"default":"0","desc":"音频ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"show_type","type":"number","required":false,"default":"0","desc":"显示类型"},{"name":"sort","type":"string","required":false,"default":"all","desc":"排序 all/hot/new"},{"name":"type","type":"number","required":false,"default":"0","desc":"类型"},{"name":"show_detail","type":"number","required":false,"default":"0","desc":"是否仅统计"}],"needLogin":false,"sample":{"album_audio_id":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/brush","params":[{"name":"mode","type":"string","required":false,"default":"normal","desc":"模式 normal"},{"name":"song_pool_id","type":"number","required":false,"default":"0","desc":"歌曲池ID"}],"needLogin":false,"sample":{}},
+    {"route":"/captcha/sent","params":[{"name":"mobile","type":"string","required":true,"default":"","desc":"手机号"}],"needLogin":false,"sample":{"mobile":"13800138000"}},
+    {"route":"/comment/album","params":[{"name":"id","type":"string","required":true,"default":"","desc":"专辑/评论对象ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"show_classify","type":"number","required":false,"default":"1","desc":"显示分类"},{"name":"show_hotword_list","type":"number","required":false,"default":"1","desc":"显示热词"}],"needLogin":false,"sample":{"id":"1289478"}},
+    {"route":"/comment/count","params":[{"name":"hash","type":"string","required":false,"default":"","desc":"歌曲hash(与special_id二选一)"},{"name":"special_id","type":"string","required":false,"default":"","desc":"歌单ID(与hash二选一)"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/comment/floor","params":[{"name":"special_id","type":"string","required":false,"default":"","desc":"资源ID"},{"name":"resource_type","type":"string","required":false,"default":"song","desc":"资源类型 song/playlist/album"},{"name":"code","type":"string","required":false,"default":"","desc":"签名码"},{"name":"tid","type":"string","required":false,"default":"","desc":"楼层ID"},{"name":"mixsongid","type":"string","required":false,"default":"","desc":"歌曲mixsongid"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"show_classify","type":"number","required":false,"default":"1","desc":"显示分类"},{"name":"show_hotword_list","type":"number","required":false,"default":"1","desc":"显示热词"}],"needLogin":false,"sample":{"special_id":"e291fc24c9dbe4ef3fdd9837ea3e1a9c","resource_type":"song"}}
+,
+    {"route":"/comment/music","params":[{"name":"mixsongid","type":"string","required":true,"default":"","desc":"歌曲mixsongid"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"show_classify","type":"number","required":false,"default":"1","desc":"显示分类"},{"name":"show_hotword_list","type":"number","required":false,"default":"1","desc":"显示热词"}],"needLogin":false,"sample":{"mixsongid":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/comment/music/classify","params":[{"name":"mixsongid","type":"string","required":true,"default":"","desc":"歌曲mixsongid"},{"name":"type_id","type":"string","required":false,"default":"","desc":"分类ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"sort","type":"number","required":false,"default":"1","desc":"排序方式"}],"needLogin":false,"sample":{"mixsongid":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/comment/music/hotword","params":[{"name":"mixsongid","type":"string","required":true,"default":"","desc":"歌曲mixsongid"},{"name":"hot_word","type":"string","required":false,"default":"","desc":"热词"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"mixsongid":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/comment/playlist","params":[{"name":"id","type":"string","required":true,"default":"","desc":"歌单/歌曲ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"show_classify","type":"number","required":false,"default":"1","desc":"显示分类"},{"name":"show_hotword_list","type":"number","required":false,"default":"1","desc":"显示热词"}],"needLogin":false,"sample":{"id":"2550343002"}},
+    {"route":"/everyday/friend","params":[],"needLogin":false,"sample":{}},
+    {"route":"/everyday/history","params":[{"name":"mode","type":"string","required":false,"default":"list","desc":"模式 list"},{"name":"platform","type":"string","required":false,"default":"ios","desc":"平台"},{"name":"history_name","type":"string","required":false,"default":"","desc":"历史名称"},{"name":"date","type":"string","required":false,"default":"","desc":"日期"}],"needLogin":false,"sample":{}},
+    {"route":"/everyday/recommend","params":[{"name":"platform","type":"string","required":false,"default":"ios","desc":"平台"}],"needLogin":false,"sample":{}},
+    {"route":"/everyday/style/recommend","params":[{"name":"tagids","type":"string","required":false,"default":"","desc":"风格标签ID"}],"needLogin":false,"sample":{}},
+    {"route":"/favorite/count","params":[{"name":"mixsongids","type":"string","required":true,"default":"","desc":"歌曲mixsongid列表，逗号分隔"}],"needLogin":true,"sample":{"mixsongids":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/fm/class","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/fm/image","params":[{"name":"fmid","type":"string","required":true,"default":"","desc":"FM ID，逗号分隔"}],"needLogin":false,"sample":{"fmid":"1"}},
+    {"route":"/fm/recommend","params":[],"needLogin":false,"sample":{}},
+    {"route":"/fm/songs","params":[{"name":"fmid","type":"string","required":true,"default":"","desc":"FM ID，逗号分隔"},{"name":"type","type":"number","required":false,"default":"2","desc":"fm类型"},{"name":"offset","type":"number","required":false,"default":"-1","desc":"偏移"},{"name":"size","type":"number","required":false,"default":"20","desc":"数量"}],"needLogin":false,"sample":{"fmid":"1"}},
+    {"route":"/ip","params":[{"name":"id","type":"string","required":true,"default":"","desc":"IP ID"},{"name":"type","type":"string","required":false,"default":"audios","desc":"类型 audios/albums/videos/author_list"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"id":"1"}},
+    {"route":"/ip/dateil","params":[{"name":"id","type":"string","required":true,"default":"","desc":"IP ID，逗号分隔"}],"needLogin":false,"sample":{"id":"1"}},
+    {"route":"/ip/playlist","params":[{"name":"id","type":"string","required":true,"default":"","desc":"IP ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"id":"1"}},
+    {"route":"/ip/zone","params":[],"needLogin":false,"sample":{}},
+    {"route":"/ip/zone/home","params":[{"name":"id","type":"string","required":false,"default":"","desc":"IP ID"}],"needLogin":false,"sample":{}},
+    {"route":"/kmr/audio/mv","params":[{"name":"album_audio_id","type":"string","required":true,"default":"","desc":"音频ID，逗号分隔"},{"name":"fields","type":"string","required":false,"default":"","desc":"返回字段"}],"needLogin":false,"sample":{"album_audio_id":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/krm/audio","params":[{"name":"album_audio_id","type":"string","required":true,"default":"","desc":"音频实体ID，逗号分隔"},{"name":"fields","type":"string","required":false,"default":"base","desc":"返回字段 base"}],"needLogin":false,"sample":{"album_audio_id":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}}
+,
+    {"route":"/lastest/songs/listen","params":[{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":true,"sample":{}},
+    {"route":"/longaudio/album/audios","params":[{"name":"album_id","type":"string","required":true,"default":"","desc":"长音频专辑ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"album_id":"1"}},
+    {"route":"/longaudio/album/detail","params":[{"name":"album_id","type":"string","required":true,"default":"","desc":"长音频专辑ID，逗号分隔"}],"needLogin":false,"sample":{"album_id":"1"}},
+    {"route":"/longaudio/daily/recommend","params":[{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{}},
+    {"route":"/longaudio/rank/recommend","params":[{"name":"platform","type":"string","required":false,"default":"ios","desc":"平台"}],"needLogin":false,"sample":{}},
+    {"route":"/longaudio/vip/recommend","params":[],"needLogin":false,"sample":{}},
+    {"route":"/longaudio/week/recommend","params":[],"needLogin":false,"sample":{}},
+    {"route":"/login","params":[{"name":"username","type":"string","required":false,"default":"","desc":"用户名"},{"name":"password","type":"string","required":true,"default":"","desc":"密码"}],"needLogin":false,"sample":{"password":""}},
+    {"route":"/login/cellphone","params":[{"name":"mobile","type":"string","required":true,"default":"","desc":"手机号"},{"name":"code","type":"string","required":true,"default":"","desc":"验证码"},{"name":"userid","type":"string","required":false,"default":"","desc":"用户ID"}],"needLogin":false,"sample":{"mobile":"13800138000","code":"123456"}},
+    {"route":"/login/token","params":[{"name":"token","type":"string","required":false,"default":"","desc":"登录token"},{"name":"userid","type":"string","required":false,"default":"0","desc":"用户ID"}],"needLogin":false,"sample":{"token":"","userid":"0"}}
+,
+    {"route":"/login/qr/check","params":[{"name":"key","type":"string","required":true,"default":"","desc":"二维码key"}],"needLogin":false,"sample":{"key":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/login/device","params":[],"needLogin":true,"sample":{}},
+    {"route":"/login/device/kick","params":[],"needLogin":false,"sample":{}},
+    {"route":"/images","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"图片hash，逗号分隔"},{"name":"album_id","type":"string","required":false,"default":"0","desc":"专辑ID，逗号分隔"},{"name":"album_audio_id","type":"string","required":false,"default":"0","desc":"音频ID，逗号分隔"},{"name":"count","type":"number","required":false,"default":"5","desc":"数量"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/images/audio","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"音频hash，逗号分隔"},{"name":"audio_id","type":"string","required":false,"default":"0","desc":"音频ID，逗号分隔"},{"name":"album_audio_id","type":"string","required":false,"default":"0","desc":"音频ID，逗号分隔"},{"name":"filename","type":"string","required":false,"default":"","desc":"文件名"},{"name":"count","type":"number","required":false,"default":"5","desc":"数量"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/search/complex","params":[{"name":"keywords","type":"string","required":true,"default":"","desc":"搜索关键词"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"keywords":"周杰伦"}},
+    {"route":"/search/default","params":[{"name":"vip_type","type":"number","required":false,"default":"65530","desc":"会员类型"}],"needLogin":false,"sample":{}},
+    {"route":"/search/hot","params":[],"needLogin":false,"sample":{}},
+    {"route":"/search/mixed","params":[{"name":"keyword","type":"string","required":true,"default":"","desc":"搜索关键词"}],"needLogin":false,"sample":{"keyword":"周杰伦"}},
+    {"route":"/search/suggest","params":[{"name":"keywords","type":"string","required":true,"default":"","desc":"搜索关键词"},{"name":"albumTipCount","type":"number","required":false,"default":"10","desc":"专辑提示数"},{"name":"correctTipCount","type":"number","required":false,"default":"10","desc":"纠错提示数"},{"name":"mvTipCount","type":"number","required":false,"default":"10","desc":"MV提示数"},{"name":"musicTipCount","type":"number","required":false,"default":"10","desc":"歌曲提示数"}],"needLogin":false,"sample":{"keywords":"周杰伦"}}
+,
+    {"route":"/recommend/songs","params":[{"name":"platform","type":"string","required":false,"default":"android","desc":"平台"},{"name":"userid","type":"string","required":false,"default":"0","desc":"用户ID"}],"needLogin":false,"sample":{}},
+    {"route":"/rank/audio","params":[{"name":"rankid","type":"string","required":true,"default":"","desc":"排行榜ID"},{"name":"rank_cid","type":"number","required":false,"default":"0","desc":"排行榜分类ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"rankid":"8888"}},
+    {"route":"/rank/info","params":[{"name":"rankid","type":"string","required":true,"default":"","desc":"排行榜ID"},{"name":"rank_cid","type":"number","required":false,"default":"0","desc":"排行榜分类ID"},{"name":"album_img","type":"number","required":false,"default":"1","desc":"是否含专辑图"},{"name":"zone","type":"string","required":false,"default":"","desc":"地区"}],"needLogin":false,"sample":{"rankid":"8888"}},
+    {"route":"/rank/list","params":[{"name":"withsong","type":"number","required":false,"default":"1","desc":"是否含歌曲"}],"needLogin":false,"sample":{}},
+    {"route":"/rank/top","params":[],"needLogin":false,"sample":{}},
+    {"route":"/rank/vol","params":[{"name":"rankid","type":"string","required":true,"default":"","desc":"排行榜ID"},{"name":"rank_cid","type":"number","required":false,"default":"0","desc":"排行榜分类ID"}],"needLogin":false,"sample":{"rankid":"8888"}},
+    {"route":"/singer/list","params":[{"name":"musician","type":"number","required":false,"default":"0","desc":"是否音乐人"},{"name":"sextypes","type":"number","required":false,"default":"0","desc":"性别类型"},{"name":"type","type":"number","required":false,"default":"0","desc":"类型"},{"name":"hotsize","type":"number","required":false,"default":"30","desc":"热门数量"}],"needLogin":false,"sample":{}},
+    {"route":"/song/climax","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"歌曲hash，逗号分隔"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/song/ranking","params":[{"name":"album_audio_id","type":"string","required":true,"default":"","desc":"歌曲音频ID"}],"needLogin":false,"sample":{"album_audio_id":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/song/ranking/filter","params":[{"name":"album_audio_id","type":"string","required":true,"default":"","desc":"歌曲音频ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"album_audio_id":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}}
+,
+    {"route":"/song/url/new","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"歌曲hash"},{"name":"album_audio_id","type":"string","required":false,"default":"","desc":"音频ID"},{"name":"free_part","type":"boolean","required":false,"default":"false","desc":"是否试听片段"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}},
+    {"route":"/sheet/collection","params":[{"name":"position","type":"number","required":false,"default":"2","desc":"位置"}],"needLogin":false,"sample":{}},
+    {"route":"/sheet/collection/detail","params":[{"name":"collection_id","type":"string","required":true,"default":"","desc":"乐谱合集ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"}],"needLogin":false,"sample":{"collection_id":"1"}},
+    {"route":"/sheet/detail","params":[{"name":"id","type":"string","required":true,"default":"","desc":"乐谱ID"},{"name":"source","type":"string","required":false,"default":"","desc":"来源"}],"needLogin":false,"sample":{"id":"1"}},
+    {"route":"/sheet/hot","params":[{"name":"opern_type","type":"number","required":false,"default":"1","desc":"乐谱类型"}],"needLogin":false,"sample":{}},
+    {"route":"/sheet/list","params":[{"name":"album_audio_id","type":"string","required":false,"default":"","desc":"音频ID"},{"name":"opern_type","type":"number","required":false,"default":"0","desc":"乐谱类型"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{}},
+    {"route":"/top/album","params":[{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{}},
+    {"route":"/top/card","params":[{"name":"card_id","type":"number","required":false,"default":"1","desc":"卡片ID"}],"needLogin":false,"sample":{}},
+    {"route":"/top/card/youth","params":[{"name":"tagid","type":"string","required":false,"default":"","desc":"标签ID"},{"name":"card_id","type":"number","required":false,"default":"3005","desc":"卡片ID"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{}},
+    {"route":"/top/ip","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/top/playlist","params":[{"name":"withtag","type":"number","required":false,"default":"1","desc":"是否带标签"},{"name":"withsong","type":"number","required":false,"default":"1","desc":"是否带歌曲"},{"name":"sort","type":"number","required":false,"default":"1","desc":"排序方式"},{"name":"category_id","type":"number","required":false,"default":"0","desc":"分类ID"},{"name":"module_id","type":"number","required":false,"default":"1","desc":"模块ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{}}
+,
+    {"route":"/top/song","params":[{"name":"type","type":"number","required":false,"default":"21608","desc":"榜单类型(21608新歌速递)"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{}}
+,
+    {"route":"/scene/audio/list","params":[{"name":"id","type":"string","required":true,"default":"","desc":"场景ID"},{"name":"module_id","type":"string","required":true,"default":"","desc":"模块ID"},{"name":"tag","type":"string","required":true,"default":"","desc":"标签"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"id":"1"}}
+,
+    {"route":"/scene/collection/list","params":[{"name":"tag_id","type":"string","required":true,"default":"","desc":"标签ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"tag_id":"1"}}
+,
+    {"route":"/scene/lists","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/scene/lists/v2","params":[{"name":"id","type":"string","required":true,"default":"","desc":"场景ID"},{"name":"sort","type":"string","required":false,"default":"rec","desc":"排序 rec/hot/new"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"id":"1","sort":"rec"}}
+,
+    {"route":"/scene/module","params":[{"name":"id","type":"string","required":true,"default":"","desc":"场景ID"}],"needLogin":false,"sample":{"id":"1"}}
+,
+    {"route":"/scene/module/info","params":[{"name":"id","type":"string","required":true,"default":"","desc":"场景ID"},{"name":"module_id","type":"string","required":true,"default":"","desc":"模块ID"}],"needLogin":false,"sample":{"id":"1","module_id":"1"}}
+,
+    {"route":"/scene/music","params":[{"name":"id","type":"string","required":true,"default":"","desc":"场景ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"id":"1"}}
+,
+    {"route":"/scene/video/list","params":[{"name":"tag_id","type":"string","required":true,"default":"","desc":"标签ID"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{"tag_id":"1"}}
+,
+    {"route":"/yueku","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/yueku/banner","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/yueku/fm","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/theme/music","params":[{"name":"ids","type":"string","required":true,"default":"","desc":"主题分类ID(逗号分隔)"}],"needLogin":false,"sample":{"ids":"1"}}
+,
+    {"route":"/theme/music/detail","params":[{"name":"id","type":"string","required":true,"default":"","desc":"主题分类ID"}],"needLogin":false,"sample":{"id":"1"}}
+,
+    {"route":"/theme/playlist","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/theme/playlist/track","params":[{"name":"theme_id","type":"string","required":true,"default":"","desc":"主题ID"}],"needLogin":false,"sample":{"theme_id":"1"}}
+,
+    {"route":"/team/period/info","params":[],"needLogin":true,"sample":{}}
+,
+    {"route":"/team/my/status","params":[{"name":"period_id","type":"string","required":false,"default":"","desc":"活动周期ID"}],"needLogin":true,"sample":{}}
+,
+    {"route":"/team/my/info","params":[{"name":"period_id","type":"string","required":false,"default":"","desc":"活动周期ID"}],"needLogin":true,"sample":{}}
+,
+    {"route":"/team/my","params":[{"name":"period_id","type":"string","required":false,"default":"","desc":"活动周期ID"}],"needLogin":true,"sample":{}}
+,
+    {"route":"/team/join","params":[{"name":"team_code","type":"string","required":true,"default":"","desc":"队伍码"}],"needLogin":true,"sample":{"team_code":"ABC123"}}
+,
+    {"route":"/youth/channel/all","params":[{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{}}
+,
+    {"route":"/youth/channel/amway","params":[{"name":"global_collection_id","type":"string","required":true,"default":"","desc":"合集ID"}],"needLogin":false,"sample":{"global_collection_id":"2550343002"}}
+,
+    {"route":"/youth/channel/detail","params":[{"name":"global_collection_id","type":"string","required":true,"default":"","desc":"合集ID(逗号分隔)"}],"needLogin":false,"sample":{"global_collection_id":"2550343002"}}
+,
+    {"route":"/youth/channel/similar","params":[{"name":"channel_id","type":"string","required":true,"default":"","desc":"频道ID"}],"needLogin":false,"sample":{"channel_id":"1"}}
+,
+    {"route":"/youth/channel/song","params":[{"name":"global_collection_id","type":"string","required":true,"default":"","desc":"合集ID"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"}],"needLogin":false,"sample":{"global_collection_id":"2550343002"}}
+,
+    {"route":"/youth/channel/song/detail","params":[{"name":"global_collection_id","type":"string","required":true,"default":"","desc":"合集ID"},{"name":"fileid","type":"string","required":true,"default":"","desc":"文件ID"}],"needLogin":false,"sample":{"global_collection_id":"2550343002","fileid":"1"}}
+,
+    {"route":"/youth/channel/sub","params":[{"name":"global_collection_id","type":"string","required":true,"default":"","desc":"合集ID"},{"name":"t","type":"number","required":false,"default":"1","desc":"1订阅 0取消订阅"}],"needLogin":true,"sample":{"global_collection_id":"2550343002","t":"1"}}
+,
+    {"route":"/youth/day/vip","params":[{"name":"receive_day","type":"string","required":true,"default":"","desc":"领取天数标识"}],"needLogin":true,"sample":{"receive_day":"20240101"}}
+,
+    {"route":"/youth/day/vip/upgrade","params":[],"needLogin":true,"sample":{}}
+,
+    {"route":"/youth/dynamic","params":[],"needLogin":true,"sample":{}}
+,
+    {"route":"/youth/dynamic/recent","params":[],"needLogin":true,"sample":{}}
+,
+    {"route":"/youth/listen/song","params":[{"name":"mixsongid","type":"number","required":false,"default":"666075191","desc":"歌曲mixsongid"}],"needLogin":true,"sample":{"mixsongid":666075191}}
+,
+    {"route":"/youth/month/vip/record","params":[],"needLogin":true,"sample":{}}
+,
+    {"route":"/youth/union/vip","params":[],"needLogin":true,"sample":{}}
+,
+    {"route":"/youth/user/song","params":[{"name":"userid","type":"string","required":true,"default":"","desc":"目标用户ID"},{"name":"type","type":"number","required":false,"default":"0","desc":"类型"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"}],"needLogin":false,"sample":{"userid":"309"}}
+,
+    {"route":"/youth/vip","params":[],"needLogin":true,"sample":{}}
+,
+    {"route":"/playlist/add","params":[{"name":"name","type":"string","required":true,"default":"","desc":"歌单名称"},{"name":"type","type":"number","required":false,"default":"0","desc":"类型"},{"name":"source","type":"number","required":false,"default":"1","desc":"来源"},{"name":"list_create_userid","type":"string","required":true,"default":"","desc":"原歌单创建者userid"},{"name":"list_create_listid","type":"string","required":true,"default":"","desc":"原歌单ID"},{"name":"list_create_gid","type":"string","required":true,"default":"","desc":"原歌单gid"}],"needLogin":true,"sample":{"name":"我的歌单","list_create_userid":"309","list_create_listid":"2550343002"}}
+,
+    {"route":"/playlist/del","params":[{"name":"listid","type":"number","required":true,"default":"","desc":"歌单ID"}],"needLogin":true,"sample":{"listid":2550343002}}
+,
+    {"route":"/playlist/detail","params":[{"name":"ids","type":"string","required":true,"default":"","desc":"歌单ID(逗号分隔)"}],"needLogin":false,"sample":{"ids":"2550343002"}}
+,
+    {"route":"/playlist/effect","params":[{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":false,"sample":{}}
+,
+    {"route":"/playlist/similar","params":[{"name":"ids","type":"string","required":true,"default":"","desc":"歌单ID(逗号分隔)"}],"needLogin":false,"sample":{"ids":"2550343002"}}
+,
+    {"route":"/playlist/tags","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/playlist/track/all","params":[{"name":"id","type":"string","required":true,"default":"","desc":"歌单ID"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"}],"needLogin":false,"sample":{"id":"2550343002"}}
+,
+    {"route":"/playlist/track/all/new","params":[{"name":"listid","type":"string","required":true,"default":"","desc":"歌单ID"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"},{"name":"page","type":"number","required":false,"default":"1","desc":"页码"}],"needLogin":false,"sample":{"listid":"2550343002"}}
+,
+    {"route":"/playlist/tracks/add","params":[{"name":"listid","type":"string","required":true,"default":"","desc":"歌单ID"},{"name":"data","type":"string","required":true,"default":"","desc":"歌曲数据 name|hash|album_id|mixsongid,逗号分隔"}],"needLogin":true,"sample":{"listid":"2550343002","data":"song|e291fc24c9dbe4ef3fdd9837ea3e1a9c|1289478|12345"}}
+,
+    {"route":"/playlist/tracks/del","params":[{"name":"listid","type":"string","required":true,"default":"","desc":"歌单ID"},{"name":"fileids","type":"string","required":true,"default":"","desc":"文件ID(逗号分隔)"}],"needLogin":true,"sample":{"listid":"2550343002","fileids":"123"}}
+,
+    {"route":"/login/openplat","params":[{"name":"code","type":"string","required":true,"default":"","desc":"微信授权code"}],"needLogin":false,"sample":{"code":"021xxxx"}}
+,
+    {"route":"/login/wx/check","params":[{"name":"uuid","type":"string","required":true,"default":"","desc":"扫码uuid"}],"needLogin":false,"sample":{"uuid":"xxxx"}}
+,
+    {"route":"/login/wx/create","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/pc/diantai","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/personal/fm","params":[{"name":"action","type":"string","required":false,"default":"play","desc":"动作 play/skip"},{"name":"song_pool_id","type":"string","required":false,"default":"0","desc":"歌曲池ID"},{"name":"platform","type":"string","required":false,"default":"ios","desc":"平台"},{"name":"remain_songcnt","type":"string","required":false,"default":"0","desc":"剩余歌曲数"},{"name":"mode","type":"string","required":false,"default":"normal","desc":"模式"},{"name":"is_overplay","type":"boolean","required":false,"default":"false","desc":"是否超播"},{"name":"hash","type":"string","required":false,"default":"","desc":"上一首hash"},{"name":"songid","type":"string","required":false,"default":"","desc":"上一首songid"},{"name":"playtime","type":"string","required":false,"default":"","desc":"上一首播放时长"}],"needLogin":true,"sample":{"action":"play"}}
+,
+    {"route":"/playhistory/upload","params":[{"name":"mxid","type":"number","required":true,"default":"","desc":"歌曲mixsongid"},{"name":"time","type":"number","required":false,"default":"0","desc":"播放时间(秒,默认当前)"},{"name":"pc","type":"number","required":false,"default":"1","desc":"播放次数"}],"needLogin":true,"sample":{"mxid":123,"time":1700000000}}
+,
+    {"route":"/privilege/lite","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"歌曲hash(逗号分隔)"},{"name":"album_id","type":"string","required":false,"default":"","desc":"专辑ID(逗号分隔)"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}}
+,
+    {"route":"/register/dev","params":[{"name":"availableRamSize","type":"number","required":false,"default":"4983533568","desc":"可用内存"},{"name":"availableRomSize","type":"number","required":false,"default":"48114719","desc":"可用存储"},{"name":"availableSDSize","type":"number","required":false,"default":"48114717","desc":"可用SD"},{"name":"basebandVer","type":"string","required":false,"default":"","desc":"基带版本"},{"name":"batteryLevel","type":"number","required":false,"default":"100","desc":"电量"},{"name":"batteryStatus","type":"number","required":false,"default":"3","desc":"充电状态"},{"name":"brand","type":"string","required":false,"default":"Redmi","desc":"品牌"},{"name":"buildSerial","type":"string","required":false,"default":"unknown","desc":"序列号"},{"name":"device","type":"string","required":false,"default":"marble","desc":"设备型号"},{"name":"imei","type":"string","required":false,"default":"","desc":"IMEI"},{"name":"imsi","type":"string","required":false,"default":"","desc":"IMSI"},{"name":"manufacturer","type":"string","required":false,"default":"Xiaomi","desc":"厂商"},{"name":"uuid","type":"string","required":false,"default":"","desc":"设备UUID"},{"name":"accelerometer","type":"boolean","required":false,"default":"false","desc":"加速度传感器"},{"name":"accelerometerValue","type":"string","required":false,"default":"","desc":"加速度值"},{"name":"gravity","type":"boolean","required":false,"default":"false","desc":"重力传感器"},{"name":"gravityValue","type":"string","required":false,"default":"","desc":"重力值"},{"name":"gyroscope","type":"boolean","required":false,"default":"false","desc":"陀螺仪"},{"name":"gyroscopeValue","type":"string","required":false,"default":"","desc":"陀螺仪值"},{"name":"light","type":"boolean","required":false,"default":"false","desc":"光线传感器"},{"name":"lightValue","type":"string","required":false,"default":"","desc":"光线值"},{"name":"magnetic","type":"boolean","required":false,"default":"false","desc":"磁力传感器"},{"name":"magneticValue","type":"string","required":false,"default":"","desc":"磁力值"},{"name":"orientation","type":"boolean","required":false,"default":"false","desc":"方向传感器"},{"name":"orientationValue","type":"string","required":false,"default":"","desc":"方向值"},{"name":"pressure","type":"boolean","required":false,"default":"false","desc":"压力传感器"},{"name":"pressureValue","type":"string","required":false,"default":"","desc":"压力值"},{"name":"step_counter","type":"boolean","required":false,"default":"false","desc":"计步传感器"},{"name":"step_counterValue","type":"string","required":false,"default":"","desc":"计步值"},{"name":"temperature","type":"boolean","required":false,"default":"false","desc":"温度传感器"},{"name":"temperatureValue","type":"string","required":false,"default":"","desc":"温度值"}],"needLogin":false,"sample":{}}
+,
+    {"route":"/user/cloud","params":[{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":true,"sample":{}}
+,
+    {"route":"/user/cloud/url","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"歌曲hash"},{"name":"album_audio_id","type":"number","required":false,"default":"0","desc":"音频ID"},{"name":"audio_id","type":"number","required":false,"default":"0","desc":"歌曲ID"},{"name":"name","type":"string","required":false,"default":"","desc":"歌曲名"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}}
+,
+    {"route":"/user/detail","params":[],"needLogin":true,"sample":{}}
+,
+    {"route":"/user/follow","params":[],"needLogin":true,"sample":{}}
+,
+    {"route":"/user/follow/message","params":[{"name":"id","type":"string","required":true,"default":"","desc":"消息ID"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":true,"sample":{"id":"1"}}
+,
+    {"route":"/user/history","params":[{"name":"bp","type":"string","required":false,"default":"","desc":"业务参数"}],"needLogin":true,"sample":{}}
+,
+    {"route":"/user/listen","params":[{"name":"type","type":"number","required":false,"default":"0","desc":"列表类型"}],"needLogin":true,"sample":{}}
+,
+    {"route":"/user/playlist","params":[{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":true,"sample":{}}
+,
+    {"route":"/user/video/collect","params":[{"name":"page","type":"number","required":false,"default":"1","desc":"页码"},{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":true,"sample":{}}
+,
+    {"route":"/user/video/love","params":[{"name":"pagesize","type":"number","required":false,"default":"30","desc":"每页数量"}],"needLogin":true,"sample":{}}
+,
+    {"route":"/user/vip/detail","params":[],"needLogin":false,"sample":{}}
+,
+    {"route":"/video/detail","params":[{"name":"id","type":"string","required":true,"default":"","desc":"视频ID(逗号分隔)"}],"needLogin":false,"sample":{"id":"1"}}
+,
+    {"route":"/video/privilege","params":[{"name":"hash","type":"string","required":true,"default":"","desc":"视频hash(逗号分隔)"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}}
+,
+    {"route":"/video/url","params":[{"name":"hash","type":"string","required":false,"default":"","desc":"视频hash"}],"needLogin":false,"sample":{"hash":"e291fc24c9dbe4ef3fdd9837ea3e1a9c"}}
+
+]
+}

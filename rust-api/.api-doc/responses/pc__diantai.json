@@ -1,0 +1,148 @@
+{
+  "status": 1,
+  "error_code": 0,
+  "data": {
+    "timestamp": 1788516909,
+    "config": {
+      "close_hotzone": 1
+    },
+    "data": [
+      {
+        "sort": 14,
+        "code": "http://adsfile.bssdlbig.kugou.com/d06be8970e9f8ad799abeb9ae39f0d67.jpg",
+        "id": 248396,
+        "isAd": true,
+        "jump_type": 6,
+        "title": "虚拟直播",
+        "type": 1,
+        "url": "https://fanxing.kugou.com/ether/transitPage.html?cid=30&randomNum=5",
+        "tongji": 0
+      },
+      {
+        "sort": 12,
+        "code": "http://adsfile.bssdlbig.kugou.com/eb559a3a31df15a6444be98a7c22da2d.jpg",
+        "id": 248395,
+        "isAd": true,
+        "jump_type": 6,
+        "title": "舞蹈直播",
+        "type": 1,
+        "url": "https://fanxing.kugou.com/ether/transitPage.html?cid=24&randomNum=5",
+        "tongji": 0
+      },
+      {
+        "sort": 11,
+        "code": "http://adsfile.bssdlbig.kugou.com/f3c12ebba14cf5d4842fe9f8ca4ca3a3.jpg",
+        "id": 298223,
+        "isAd": true,
+        "jump_type": 0,
+        "title": "HiFi",
+        "type": 1,
+        "url": "https://www.kugou.com/hifi/",
+        "tongji": 0
+      },
+      {
+        "sort": 10,
+        "code": "http://adsfile.bssdlbig.kugou.com/44802dda96e0c152f0badf570e911b7b.jpg",
+        "id": 248392,
+        "isAd": true,
+        "jump_type": 6,
+        "title": "游戏直播",
+        "type": 1,
+        "url": "https://fanxing.kugou.com/ether/transitPage.html?cid=6201&randomNum=15",
+        "tongji": 0
+      },
+      {
+        "sort": 10,
+        "code": "http://mdpfilebssdlbig.kugou.com/1162e87e6fb040ab2468aaa4338b1d7f.jpg",
+        "tongji": 0,
+        "classid": 0,
+        "jump_type": 1,
+        "title": "LISA《SaWaDiKa》",
+        "type_id": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446547.html?hreffrom=1",
+        "type": 1,
+        "id": 472949,
+        "url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446547.html?hreffrom=1",
+        "only_member": 0
+      },
+      {
+        "sort": 9,
+        "code": "http://mdpfilebssdlbig.kugou.com/b021853426e55dd8c4879e6fb8a2edfe.jpg",
+        "tongji": 0,
+        "classid": 204629596,
+        "jump_type": 7,
+        "title": "谭咏麟- 我在意",
+        "type_id": "204629596",
+        "type": 1,
+        "id": 472153,
+        "url": "http://www2.kugou.kugou.com/yueku/v9/album/single/204629596-91.html",
+        "only_member": 0
+      },
+      {
+        "sort": 7,
+        "code": "http://mdpfilebssdlbig.kugou.com/40cea8ed0be42a362724f77f39d70f4c.jpg",
+        "tongji": 0,
+        "classid": 206149563,
+        "jump_type": 7,
+        "title": "TEN-OUTWEST",
+        "type_id": "206149563",
+        "type": 1,
+        "id": 471501,
+        "url": "http://www2.kugou.kugou.com/yueku/v9/album/single/206149563-91.html",
+        "only_member": 0
+      },
+      {
+        "sort": 7,
+        "code": "http://mdpfilebssdlbig.kugou.com/9153d5d6ba8be0fe83aa27ffd2cf36b9.jpg",
+        "tongji": 0,
+        "classid": 0,
+        "jump_type": 1,
+        "title": "JISOO《CLICK》",
+        "type_id": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446545.html?hreffrom=1",
+        "type": 1,
+        "id": 471635,
+        "url": "https://ep.kugou.com/html/mobile_commonchargeV3/index_446545.html?hreffrom=1",
+        "only_member": 0
+      },
+      {
+        "sort": 3,
+        "code": "http://mdpfilebssdlbig.kugou.com/1f50df0e8886b6412612bc2754e49e79.jpg",
+        "tongji": 0,
+        "classid": 0,
+        "jump_type": 0,
+        "title": "每日登录免费作歌",
+        "type_id": "https://vemus-h5.tencentmusic.com/vooactivity/voo/v-b551067c/index.html?clientType=pc&hreffrom=kugou",
+        "type": 1,
+        "id": 387877,
+        "url": "https://vemus-h5.tencentmusic.com/vooactivity/voo/v-b551067c/index.html?clientType=pc&hreffrom=kugou",
+        "only_member": 0
+      },
+      {
+        "sort": 1,
+        "code": "http://mdpfilebssdlbig.kugou.com/157f9c8908fa4402cced7f74833e0073.jpg",
+        "tongji": 0,
+        "classid": 205929154,
+        "jump_type": 7,
+        "title": "姚晓棠-《破晓》",
+        "type_id": "205929154",
+        "type": 1,
+        "id": 471089,
+        "url": "http://www2.kugou.kugou.com/yueku/v9/album/single/205929154-91.html",
+        "only_member": 0
+      },
+      {
+        "sort": 1,
+        "code": "http://mdpfilebssdlbig.kugou.com/146536e925168ce777f0ca57b8db5b83.jpg",
+        "tongji": 0,
+        "classid": 206039069,
+        "jump_type": 7,
+        "title": "en王翊恩-我不难过",
+        "type_id": "206039069",
+        "type": 1,
+        "id": 472889,
+        "url": "http://www2.kugou.kugou.com/yueku/v9/album/single/206039069-91.html",
+        "only_member": 0
+      }
+    ],
+    "timing_update_interval": 3600
+  }
+}

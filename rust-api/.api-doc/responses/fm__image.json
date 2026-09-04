@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "imgUrl50": "20220128160910698183.jpg",
+      "fmid": 1,
+      "fmId": "1",
+      "imgUrl100": "http://imge.kugou.com/fmlogo/{size}/20220128160903915157.jpg",
+      "fmtype": 2,
+      "imgUrl100_size": "145,64,60"
+    }
+  ],
+  "status": 1,
+  "error_code": 0
+}

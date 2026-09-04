@@ -1,0 +1,6 @@
+{
+  "code": 2,
+  "msg": "请求的参数不符合加密要求.",
+  "times": 0,
+  "data": "{\"singerName\":[\"\"],\"isteen\":[\"0\"],\"appid\":[\"1005\"],\"sign\":[\"7aaf8e476c979331\"],\"usemkv\":[\"1\"],\"songId\":[\"0\"],\"version\":[\"12375\"],\"platform\":[\"2\"],\"songHash\":[\"\"]}"
+}

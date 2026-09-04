@@ -1,0 +1,511 @@
+{
+  "data": {
+    "list": [
+      {
+        "opern_author": "温奕心",
+        "hash": "4F18553F2AF06E355AD75A5EE6173456",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 92351310,
+        "song_name": "一路生花",
+        "opern_type": 1,
+        "opern_name": "一路生花",
+        "album_audio_id": 317568292,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1575308687008997376",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20251016/20251016152611214074.jpg",
+        "view_num": 373465
+      },
+      {
+        "opern_author": "陈奕迅",
+        "hash": "64B39A6828913E58E1ED1F7F6061A380",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 127845904,
+        "song_name": "孤勇者",
+        "opern_type": 1,
+        "opern_name": "孤勇者",
+        "album_audio_id": 348254775,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1575308753463549952",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20211108/20211108095904355171.jpg",
+        "view_num": 227781
+      },
+      {
+        "opern_type": 1,
+        "opern_author": "周杰伦",
+        "hash": "B1643F7EDAD1AE5EF306174F94C57BA6",
+        "source": 1,
+        "pay_type": 1,
+        "opern_name": "还在流浪",
+        "opern_id": "1003972908391891620",
+        "view_num": 57385,
+        "score_type": 2,
+        "song_name": "还在流浪",
+        "display_version": "",
+        "audio_id": 177850249,
+        "album_audio_id": 424968900,
+        "jump_type": 1,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20220714/20220714213006413283.jpg",
+        "third": {
+          "id": ""
+        }
+      },
+      {
+        "opern_author": "周杰伦",
+        "hash": "B3A52A7A958BF0AED0EBFBA2E9A818B7",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 20505418,
+        "song_name": "晴天",
+        "opern_type": 1,
+        "opern_name": "晴天",
+        "album_audio_id": 32100650,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1575308802608209920",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20230920/20230920142503632013.jpg",
+        "view_num": 118191
+      },
+      {
+        "opern_type": 1,
+        "opern_author": "周深",
+        "hash": "C93607590E98F82ADB9D78D8E8B45BE9",
+        "source": 1,
+        "pay_type": 1,
+        "opern_name": "萱草花 (Live)",
+        "opern_id": "1526948871812917119",
+        "view_num": 113,
+        "score_type": 1,
+        "song_name": "萱草花 (Live)",
+        "display_version": "",
+        "audio_id": 284897947,
+        "album_audio_id": 559820471,
+        "jump_type": 3,
+        "opern_cover": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230531/20230531155603291987.jpg",
+        "third": {
+          "id": ""
+        }
+      },
+      {
+        "opern_author": "TFBOYS",
+        "hash": "FE69635BF52C5C0E6CA8BAE6FE969D67",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 12090694,
+        "song_name": "样 (YOUNG)",
+        "opern_type": 1,
+        "opern_name": "样 (YOUNG)",
+        "album_audio_id": 106725356,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1561366901945544704",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20250217/20250217144339997449.jpg",
+        "view_num": 15488
+      },
+      {
+        "opern_author": "Faye 詹雯婷",
+        "hash": "64A6EA9F08B1A8E8FC1BBA9A64AC6A2F",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 182683276,
+        "song_name": "诀爱",
+        "opern_type": 1,
+        "opern_name": "诀爱",
+        "album_audio_id": 432546038,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560230716669964288",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20220808/20220808131902504239.jpg",
+        "view_num": 33696
+      },
+      {
+        "opern_author": "买辣椒也用券",
+        "hash": "5C035CBF390FEF6B536020A57749EF70",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 46341083,
+        "song_name": "起风了",
+        "opern_type": 1,
+        "opern_name": "起风了",
+        "album_audio_id": 272870365,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560234322701856768",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20220119/20220119171002204341.jpg",
+        "view_num": 77805
+      },
+      {
+        "opern_author": "周深",
+        "hash": "913EA11B77C1CB2CD11F2164D0406E2C",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 21562630,
+        "song_name": "大鱼",
+        "opern_type": 1,
+        "opern_name": "大鱼",
+        "album_audio_id": 38641536,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1562178583731122176",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20200909/20200909120403560507.jpg",
+        "view_num": 54934
+      },
+      {
+        "opern_author": "cici_",
+        "hash": "7E9BDD9E6F442397942B5E7B7916BAB7",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 157872899,
+        "song_name": "把回忆拼好给你",
+        "opern_type": 1,
+        "opern_name": "把回忆拼好给你",
+        "album_audio_id": 401701246,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560230655672201216",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20260818/20260818225241813953.jpg",
+        "view_num": 38551
+      },
+      {
+        "opern_author": "盛哲",
+        "hash": "38698C9A8BB6637CDDE413C6E210FA54",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 26521335,
+        "song_name": "在你的身边",
+        "opern_type": 1,
+        "opern_name": "在你的身边",
+        "album_audio_id": 89488966,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560231466728960000",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20210630/20210630181811872340.jpg",
+        "view_num": 26134
+      },
+      {
+        "opern_author": "Zyboy忠宇",
+        "hash": "C89B555333ED8A031812E94CEBA46798",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 165441650,
+        "song_name": "堕",
+        "opern_type": 1,
+        "opern_name": "堕",
+        "album_audio_id": 411427860,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560187116888272896",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20220518/20220518134007180510.jpg",
+        "view_num": 18578
+      },
+      {
+        "opern_author": "BEYOND",
+        "hash": "C46916711631EA28508A41C325A74E1B",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 333546,
+        "song_name": "真的爱你",
+        "opern_type": 1,
+        "opern_name": "真的爱你",
+        "album_audio_id": 32141662,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560479515724230656",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20250213/20250213091904994924.jpg",
+        "view_num": 12281
+      },
+      {
+        "opern_author": "刘宇宁",
+        "hash": "F81E2BBC2FAE3EDF599931C3C9EA0131",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 182683441,
+        "song_name": "寻一个你",
+        "opern_type": 1,
+        "opern_name": "寻一个你",
+        "album_audio_id": 432546040,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560230954537332736",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20220808/20220808131902359704.jpg",
+        "view_num": 9601
+      },
+      {
+        "opern_author": "梦然",
+        "hash": "08DF17862FAA65D4EAFF14808C2BAEFD",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 179562077,
+        "song_name": "是你",
+        "opern_type": 1,
+        "opern_name": "是你",
+        "album_audio_id": 429429296,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560216870664286208",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20220722/20220722152201175776.jpg",
+        "view_num": 16155
+      },
+      {
+        "opern_author": "告五人",
+        "hash": "D632D77FC37A7F5FEE87BAF23A0944CB",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 171867033,
+        "song_name": "给你一瓶魔法药水",
+        "opern_type": 1,
+        "opern_name": "给你一瓶魔法药水",
+        "album_audio_id": 419713847,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560231425134047232",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20250311/20250311105005995387.jpg",
+        "view_num": 17040
+      },
+      {
+        "opern_author": "G.E.M.邓紫棋",
+        "hash": "768F6FA531A3D883BE3F6C91AAF60612",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 9766807,
+        "song_name": "多远都要在一起",
+        "opern_type": 1,
+        "opern_name": "多远都要在一起",
+        "album_audio_id": 61700953,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560230860563951616",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20250630/20250630182908667830.jpg",
+        "view_num": 23517
+      },
+      {
+        "opern_author": "时代少年团",
+        "hash": "3C13EDF5ECA91C9CCBBD6B6B559D5A54",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 180213239,
+        "song_name": "绝配",
+        "opern_type": 1,
+        "opern_name": "绝配",
+        "album_audio_id": 429564977,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560236441123172352",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20221230/20221230171804186425.jpg",
+        "view_num": 13187
+      },
+      {
+        "opern_author": "蔡依林、五月天",
+        "hash": "E15178D3D1A6CAE8D7551796EF22E006",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 62566461,
+        "song_name": "玫瑰少年 (Mayday 2019 Just Rock It!!! 蓝 | BLUE-上海站)",
+        "opern_type": 1,
+        "opern_name": "玫瑰少年 (Mayday 2019 Just Rock It!!! 蓝 | BLUE-上海站)",
+        "album_audio_id": 230423024,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1570023428822540288",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250520/20250520120723125897.jpg",
+        "view_num": 23593
+      },
+      {
+        "opern_author": "安儿陈",
+        "hash": "B867BA8B9561FD68125C946511C59E77",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 169419790,
+        "song_name": "言而无信",
+        "opern_type": 1,
+        "opern_name": "言而无信",
+        "album_audio_id": 416802749,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560218802875281408",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20240809/20240809164440253293.jpg",
+        "view_num": 5106
+      },
+      {
+        "opern_author": "BEYOND",
+        "hash": "C41E80A18D1448FA47086372999C7F43",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 3261014,
+        "song_name": "海阔天空",
+        "opern_type": 1,
+        "opern_name": "海阔天空",
+        "album_audio_id": 32155307,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560234415962206208",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20240428/20240428110704635631.jpg",
+        "view_num": 21058
+      },
+      {
+        "opern_author": "柯柯柯啊",
+        "hash": "0B5A65DCECE29D862A0914B4AB437C02",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 169918892,
+        "song_name": "大海 (柯柯吉他版)",
+        "opern_type": 1,
+        "opern_name": "大海 (柯柯吉他版)",
+        "album_audio_id": 417386285,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560234053184270336",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20220614/20220614094644383071.jpg",
+        "view_num": 11098
+      },
+      {
+        "opern_author": "成龙、刘媛媛",
+        "hash": "0E0F81B1A02F6471F4006F03EEF8621A",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 258080,
+        "song_name": "国家",
+        "opern_type": 1,
+        "opern_name": "国家",
+        "album_audio_id": 28260352,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1562163338006507520",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20150717/20150717143523915172.jpg",
+        "view_num": 9664
+      },
+      {
+        "opern_author": "王富贵",
+        "hash": "26D0D89D68AABDDDB2F263466F098CA4",
+        "source": 2,
+        "third": {
+          "id": ""
+        },
+        "audio_id": 171267521,
+        "song_name": "生而平凡 (DJ京仔版)",
+        "opern_type": 1,
+        "opern_name": "生而平凡 (DJ京仔版)",
+        "album_audio_id": 419000468,
+        "score_type": 2,
+        "mark": "",
+        "opern_id": "1560233887698006016",
+        "display_version": "version1",
+        "pay_type": 1,
+        "jump_type": 4,
+        "opern_cover": "http://imge.kugou.com/stdmusic/{size}/20220809/20220809100330179564.jpg",
+        "view_num": 2335
+      }
+    ]
+  },
+  "errcode": 0,
+  "status": 1,
+  "error": ""
+}

@@ -1,0 +1,84 @@
+{
+  "data": {
+    "custom_logo": "http://imge.kugou.com/mcommon/{size}/20240109/20240109203134825852.png",
+    "count_down": 1800,
+    "rankname": "TOP500",
+    "use_custom_logo": 0,
+    "banner_9": "http://imge.kugou.com/mcommon/{size}/20220112/20220112175202472916.png",
+    "rankid": 8888,
+    "custom_logo_4": "https://mobileservicebssdl.kugou.com/6773ac3aabae60f85e9149d1956d94a6.png",
+    "table_plaque": "http://imge.kugou.com/mcommon/{size}/20240311/20240311161214589894.png",
+    "tip_jump_url": "",
+    "is_publish": 1,
+    "img_9": "http://imge.kugou.com/mcommon/{size}/20241219/20241219164221229666.png",
+    "ranktype": 2,
+    "classify": 1,
+    "tab_rank": [],
+    "intro": "数据来源：全曲库歌曲\r\n排序方式：按歌曲喜爱用户数的总量排序\r\n更新频率：每天",
+    "timestamp": 1788516864,
+    "rank_cid": 126025,
+    "share_bg": "http://imge.kugou.com/mcommon/{size}/20240505/20240505213952649412.png",
+    "custom_logo_2": "http://imge.kugou.com/mcommon/{size}/20241011/20241011161814657035.png",
+    "jump_url": "",
+    "use_custom_logo_2": 1,
+    "bannerurl": "http://imge.kugou.com/mcommonbanner/{size}/20181019/20181019122517263545.jpg",
+    "extra": {
+      "resp": {
+        "scheduled_release_conf": {
+          "scheduled_release_time": "10:00:00",
+          "latest_rank_cid": 126025,
+          "latest_rank_cid_publish_date": "2026-09-04 08:30:00"
+        },
+        "five_year_total": 181,
+        "new_total": 10,
+        "enjoy_total": 0,
+        "recent_year_total": 123,
+        "follow_total": 0,
+        "all_total": 500,
+        "vip_total": 0,
+        "rank_tag": [
+          {
+            "desc": "有10首上新",
+            "type": 3
+          }
+        ]
+      }
+    },
+    "songinfo": [
+      {
+        "album_cover": "http://imge.kugou.com/stdmusic/{size}/20260604/20260604164021847508.jpg",
+        "songname": "阿图表妹 - 你有没有真的爱过我",
+        "album_audio_id": 879490214
+      },
+      {
+        "album_cover": "http://imge.kugou.com/stdmusic/{size}/20260830/20260830122759607455.jpg",
+        "songname": "欢子 - 思念漫过海岸线",
+        "album_audio_id": 954533843
+      },
+      {
+        "album_cover": "http://imge.kugou.com/stdmusic/{size}/20260630/20260630202952972321.jpg",
+        "songname": "李佳薇 - 甲乙丙丁 (你我怎么两清)",
+        "album_audio_id": 920474385
+      }
+    ],
+    "update_video_url": "http://vmobile.bssdlbig.kugou.com/202609041814/92780ca7ad42bd5d839d2f8367af060d/005f800c53f20db1507df80ee683304f.mp4",
+    "related_rank": [],
+    "is_latest_realtime": 0,
+    "video_ending": "http://imge.kugou.com/mcommon/{size}/20240313/20240313142811662716.jpg",
+    "custom_type": 0,
+    "update_frequency_type": 1,
+    "zone": "tx6_gz_kmr",
+    "h5_jump_url": "",
+    "banner7url": "http://imge.kugou.com/mcommon/{size}/20241219/20241219164215715999.png",
+    "album_img_9": "http://imge.kugou.com/stdmusic/{size}/20260604/20260604164021847508.jpg",
+    "share_logo": "http://imge.kugou.com/mcommon/{size}/20240311/20240311161212168226.png",
+    "is_timing": 1,
+    "img_logo": "http://imge.kugou.com/mcommon/{size}/20240419/20240419190903865123.png",
+    "is_limit_view_vol": 0,
+    "new_cycle": 1800,
+    "imgurl": "http://imge.kugou.com/mcommon/{size}/20241219/20241219164209670219.png"
+  },
+  "errcode": 0,
+  "status": 1,
+  "error": ""
+}

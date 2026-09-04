@@ -1,0 +1,58 @@
+{
+  "current_hot_word": "",
+  "count": 0,
+  "tag": [
+    {
+      "url": "http://m.comment.service.kugou.com/v1/get_hot_word?",
+      "name": "热词",
+      "type": "hotword"
+    },
+    {
+      "url": "http://m.comment.service.kugou.com/v1/cmtlist?",
+      "name": "推荐",
+      "type": "default"
+    },
+    {
+      "url": "http://m.comment.service.kugou.com/r/v1/rank/topliked?",
+      "name": "最热",
+      "type": "hot"
+    },
+    {
+      "url": "http://m.comment.service.kugou.com/r/v1/rank/newest?",
+      "name": "最新",
+      "type": "newest"
+    }
+  ],
+  "childrenid": "",
+  "artCmtConfig": {
+    "tipOfNoUseArtCmt": "该功能仅对部分用户开放喔",
+    "wayToEdit": 1,
+    "canUseArtCmt": 0,
+    "urlOfNoUseArtCmt": "",
+    "h5EditorUrl": "",
+    "canUploadImg": 0
+  },
+  "err_code": 0,
+  "hot_word_list": [],
+  "msg": "success",
+  "config": {
+    "tipOfNoUploadImg": "该功能仅对部分用户开放",
+    "emptyTip": "还没有人评论，快来抢沙发吧！",
+    "urlOfNoUploadImg": "https://h5.kugou.com/requirement/v-c1f295e9/index.html",
+    "oppose_types": [],
+    "input_hint": "天青色等烟雨，而我在等你的评论",
+    "opposebutton": 1,
+    "canUploadImg": 0,
+    "toastBgOpus": "http://imge.kugou.com/commendpic/20190403/20190403110105584375.png",
+    "closeCmt": 0,
+    "numOpusUserMaxSVIP": 1,
+    "can_upload_video": 0,
+    "tip_noupload_video": "该功能仅对部分用户开放",
+    "numOpusUserMaxYVIP": 3,
+    "url_noupload_video": "http://www2.kugou.kugou.com/apps/commentBlackHouse/msg.html?tid=126797095",
+    "numOpusUserMax": 3
+  },
+  "current_page": 1,
+  "status": 1,
+  "message": "success"
+}

@@ -1,0 +1,25 @@
+{
+  "errcode": 0,
+  "errmsg": "",
+  "data": {
+    "timestamp": 1788516861,
+    "ads": [
+      {
+        "abs_pos": 2,
+        "end_time": "2026-11-01 23:59:59",
+        "id": 449561,
+        "is_preview": 0,
+        "jumpType": "EmbededPage",
+        "main_title": "免费听歌",
+        "show_times": 0,
+        "start_time": "2026-07-17 07:00:00",
+        "sub_title": "",
+        "title": "免费听歌",
+        "type": 1,
+        "unifiedUrl": "eyJjbGlja1RyYWNrIjoiIiwiZGVlcExpbmsiOiIiLCJkaXNwbGF5QmFyIjowLCJqdW1wVXJsIjoiaHR0cHM6Ly9hY3Rpdml0eS5rdWdvdS5jb20vdm9vL3YtYjU1MTA2N2MvaW5kZXguaHRtbD9jbGllbnRUeXBlPWt1Z291XHUwMDI2aHJlZmZyb209bm9mb2N1c3NlYXJjaF9zb25nIiwidGl0bGUiOiLlhY3otLnlkKzmrYwifQ=="
+      }
+    ],
+    "fallback": null
+  },
+  "status": 1
+}

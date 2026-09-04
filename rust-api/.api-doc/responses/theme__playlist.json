@@ -1,0 +1,534 @@
+{
+  "data": {
+    "theme_list": [
+      {
+        "id": 6,
+        "type": "time_scene",
+        "play_count": 0,
+        "en_title": "DRIVE",
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185254430186.jpg",
+        "show_tm": [
+          {
+            "end": "19:00",
+            "beg": "17:00"
+          }
+        ],
+        "theme_list_title": "主题歌单",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151754550899.jpg",
+        "sort_score": 10000,
+        "title": "一起去兜风",
+        "intro": "告别工作的枯燥，音乐陪你释放",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115006298161.jpg"
+      },
+      {
+        "id": 18,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103710769840.jpg",
+        "title": "华语专属订制",
+        "type": "language",
+        "play_count": 0,
+        "en_title": "CHINESE",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152016766656.jpg",
+        "intro": "华语歌曲私人个性化订制，每日更新",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115251649269.jpg"
+      },
+      {
+        "id": 17,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103657679304.jpg",
+        "title": "网络弄潮儿",
+        "type": "style",
+        "play_count": 0,
+        "en_title": "POPULAR",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152006808881.jpg",
+        "intro": "网络流行热歌，这里为你一网打尽",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115241756684.jpg"
+      },
+      {
+        "id": 19,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103722966204.jpg",
+        "title": "欧美随心听",
+        "type": "language",
+        "play_count": 0,
+        "en_title": "ENGLISH",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152025138248.jpg",
+        "intro": "欧美歌曲私人个性化订制，每日更新",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115302337720.jpg"
+      },
+      {
+        "id": 28,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104100287253.jpg",
+        "title": "突然好想你",
+        "type": "mood",
+        "play_count": 0,
+        "en_title": "SENTIMENT",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152202399157.jpg",
+        "intro": "想哭的时候，可以来这里用音乐疗伤",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115445446578.jpg"
+      },
+      {
+        "id": 9,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185323367924.jpg",
+        "title": "流行最前线",
+        "type": "style",
+        "play_count": 0,
+        "en_title": "POP MUSIC",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151826542335.jpg",
+        "intro": "流行歌曲每日更新，根据你的口味订制",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115036589027.jpg"
+      },
+      {
+        "id": 23,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103811691892.jpg",
+        "title": "宝藏00后",
+        "type": "years",
+        "play_count": 0,
+        "en_title": "‘00s",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152119561806.jpg",
+        "intro": "真香警告！专属00后的宝藏私人歌单",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923120232321502.jpg"
+      },
+      {
+        "id": 22,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103802849953.jpg",
+        "title": "粤听越有味",
+        "type": "language",
+        "play_count": 0,
+        "en_title": "CANTONESE",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152109704063.jpg",
+        "intro": "粤语歌曲私人个性化订制，每日更新",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115342243652.jpg"
+      },
+      {
+        "id": 12,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185609701548.jpg",
+        "title": "国风之韵",
+        "type": "style",
+        "play_count": 0,
+        "en_title": "ANCIENT",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151904698385.jpg",
+        "intro": "国风歌曲每日更新，根据你的口味订制",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115106797848.jpg"
+      },
+      {
+        "id": 27,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104049198112.jpg",
+        "title": "经典留声机",
+        "type": "years",
+        "play_count": 0,
+        "en_title": "CLASSIC",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152154926277.jpg",
+        "intro": "经典老歌｜属于你的个性化金曲订制",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115428444352.jpg"
+      },
+      {
+        "id": 5,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185245189866.jpg",
+        "show_tm": [
+          {
+            "end": "17:00",
+            "beg": "15:30"
+          }
+        ],
+        "en_title": "RELAX",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151729907605.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "下午茶时间",
+        "intro": "休息一下，为你的耳朵做个SPA",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923114957372681.jpg"
+      },
+      {
+        "id": 29,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104110265122.jpg",
+        "title": "心事治愈所",
+        "type": "mood",
+        "play_count": 0,
+        "en_title": "HEALING",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152214340638.jpg",
+        "intro": "治愈率100%｜唤醒你的满满元气",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115454449152.jpg"
+      },
+      {
+        "id": 8,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210924/20210924113042323818.jpg",
+        "show_tm": [
+          {
+            "end": "20:00",
+            "beg": "19:00"
+          }
+        ],
+        "en_title": "MOVE",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151816777480.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "随音乐动起来",
+        "intro": "运动健身酣畅淋漓，跟着音乐出出汗吧",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115023240529.jpg"
+      },
+      {
+        "id": 25,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103830718987.jpg",
+        "title": "90后无极限",
+        "type": "years",
+        "play_count": 0,
+        "en_title": "‘90s",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152136520837.jpg",
+        "intro": "我们是青春永不过期的少年少女",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115407589150.jpg"
+      },
+      {
+        "id": 7,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185306706663.jpg",
+        "show_tm": [
+          {
+            "end": "21:00",
+            "beg": "20:00"
+          }
+        ],
+        "en_title": "PARTY",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151803646732.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "越夜越HIGH",
+        "intro": "超high！Party Animal请一起躁起来！",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115015310017.jpg"
+      },
+      {
+        "id": 26,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103841843622.jpg",
+        "title": "青春纪念册",
+        "type": "years",
+        "play_count": 0,
+        "en_title": "YOUTH",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152144203135.jpg",
+        "intro": "不负好时光｜为你的青春点一首歌",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115418358818.jpg"
+      },
+      {
+        "id": 14,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103542334267.jpg",
+        "title": "品味小酒馆",
+        "type": "style",
+        "play_count": 0,
+        "en_title": "GOOD TASTE",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151924834254.jpg",
+        "intro": "爵士布鲁斯｜总有一首歌会击中你的心",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115143537404.jpg"
+      },
+      {
+        "id": 40,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104722701897.jpg",
+        "title": "假期偷个懒",
+        "type": "time_scene",
+        "play_count": 0,
+        "en_title": "WEEKEND",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152622883811.jpg",
+        "intro": "嘘～我还想在被子里听歌打游戏",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923120222682042.jpg"
+      },
+      {
+        "id": 32,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104139979375.jpg",
+        "title": "瑜伽冥想放松",
+        "type": "persona",
+        "play_count": 0,
+        "en_title": "YOGA",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152250107130.jpg",
+        "intro": "随音乐舒展身心，赶走焦虑提升专注",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115753433359.jpg"
+      },
+      {
+        "id": 1,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915184619661863.jpg",
+        "show_tm": [
+          {
+            "end": "23:59",
+            "beg": "22:30"
+          },
+          {
+            "end": "05:00",
+            "beg": "00:00"
+          }
+        ],
+        "en_title": "DEEP SLEEP",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151635572701.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "超深度睡眠",
+        "intro": "夜深了，让音乐轻轻为你关上床头灯",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923114854480809.jpg"
+      },
+      {
+        "id": 35,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104300475189.jpg",
+        "title": "乐队精选推荐",
+        "type": "persona",
+        "play_count": 0,
+        "en_title": "BANDS",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152319803793.jpg",
+        "intro": "魅力四射｜乐队为你唱响青春理想",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923140958687065.jpg"
+      },
+      {
+        "id": 11,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185340879365.jpg",
+        "title": "电音新浪潮",
+        "type": "style",
+        "play_count": 0,
+        "en_title": "ELECTRONIC",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151855615010.jpg",
+        "intro": "电子音乐私人订制，给自己耳朵充充电",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115055517211.jpg"
+      },
+      {
+        "id": 10,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185332259243.jpg",
+        "title": "纯音的力量",
+        "type": "style",
+        "play_count": 0,
+        "en_title": "LIGHT MUSIC",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151842392278.jpg",
+        "intro": "轻音乐可以给你无法用文字表达的心动",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115045316475.jpg"
+      },
+      {
+        "id": 3,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210924/20210924113152125470.jpg",
+        "show_tm": [
+          {
+            "end": "12:00",
+            "beg": "10:00"
+          }
+        ],
+        "en_title": "FOCUS",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151709135396.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "工作学习必备",
+        "intro": "来点背景乐，让你的工作不枯燥",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923114929146624.jpg"
+      },
+      {
+        "id": 4,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185152691595.jpg",
+        "show_tm": [
+          {
+            "end": "13:30",
+            "beg": "12:00"
+          }
+        ],
+        "en_title": "TAKE BREAK",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151719270708.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "午休充电站",
+        "intro": "闭上眼睛，感受宁静",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210924/20210924164401132971.jpg"
+      },
+      {
+        "id": 24,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103820978658.jpg",
+        "title": "怀旧录音带",
+        "type": "years",
+        "play_count": 0,
+        "en_title": "‘80s",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152128745439.jpg",
+        "intro": "80后的青春乐曲，承包你的心跳回忆",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115357788863.jpg"
+      },
+      {
+        "id": 13,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185618284076.jpg",
+        "title": "民谣乡村club",
+        "type": "style",
+        "play_count": 0,
+        "en_title": "FOLK",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151914747223.jpg",
+        "intro": "诗和远方｜陪着你的心和身体一起出发",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115117479879.jpg"
+      },
+      {
+        "id": 30,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104120312901.jpg",
+        "title": "心潮澎湃",
+        "type": "mood",
+        "play_count": 0,
+        "en_title": "PASSION",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152223300380.jpg",
+        "intro": "前方高能！每一个细胞都在因乐而跃",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115504196901.jpg"
+      },
+      {
+        "id": 33,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104237527194.jpg",
+        "title": "最美女声精选",
+        "type": "persona",
+        "play_count": 0,
+        "en_title": "DIVA",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152300302713.jpg",
+        "intro": "人美歌更美的女声精选，每日更新",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115813491758.jpg"
+      },
+      {
+        "id": 36,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104309402456.jpg",
+        "show_tm": [
+          {
+            "end": "15:30",
+            "beg": "13:30"
+          }
+        ],
+        "en_title": "SWEET",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152329762292.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "午后薄荷糖",
+        "intro": "伸个懒腰听听歌，有点清新有点甜！",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115836308924.jpg"
+      },
+      {
+        "id": 39,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104701803773.jpg",
+        "show_tm": [
+          {
+            "end": "22:30",
+            "beg": "21:00"
+          }
+        ],
+        "en_title": "NIGHT",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152614683983.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "和世界请个假",
+        "intro": "夜深了就爱胡思乱想，还好有音乐陪你",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923120213332550.jpg"
+      },
+      {
+        "id": 34,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104249797122.jpg",
+        "title": "最强男声精选",
+        "type": "persona",
+        "play_count": 0,
+        "en_title": "MALE",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152308768896.jpg",
+        "intro": "宝藏男声等你挖掘，撩动你的心",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115824919872.jpg"
+      },
+      {
+        "id": 15,
+        "type": "style",
+        "play_count": 0,
+        "title": "DJ 热辣劲曲",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151936550515.jpg",
+        "hide_on_green": true,
+        "en_title": "EXCITING",
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103552169907.jpg",
+        "intro": "最新最热的DJ劲爆歌曲，强力推荐！",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115153575245.jpg"
+      },
+      {
+        "id": 31,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104130943287.jpg",
+        "title": "嘻哈新势力",
+        "type": "style",
+        "play_count": 0,
+        "en_title": "HIP-POP",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152242249688.jpg",
+        "intro": "刺激你的肾上腺，嘻哈说唱最前线",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115647947827.jpg"
+      },
+      {
+        "id": 16,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103648911265.jpg",
+        "title": "二次元赛高",
+        "type": "style",
+        "play_count": 0,
+        "en_title": "ACG",
+        "pic": "http://imge.kugou.com/commendpic/20210923/20210923115216155540.jpg",
+        "intro": "投喂安利！ACG歌曲每日为你私人订制",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115216155540.jpg"
+      },
+      {
+        "id": 2,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915185134626195.jpg",
+        "show_tm": [
+          {
+            "end": "08:00",
+            "beg": "05:00"
+          }
+        ],
+        "en_title": "LET'S GO",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916151659274609.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "整装出发",
+        "intro": "上班路上太无聊？来首好音乐陪伴你",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923114904788319.jpg"
+      },
+      {
+        "id": 20,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103739436907.jpg",
+        "title": "日系心动订制",
+        "type": "language",
+        "play_count": 0,
+        "en_title": "JAPANESE",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152046908052.jpg",
+        "intro": "日语歌曲私人个性化订制，每日更新",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115311487140.jpg"
+      },
+      {
+        "id": 21,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916103748823286.jpg",
+        "title": "韩系流行订制",
+        "type": "language",
+        "play_count": 0,
+        "en_title": "KOREAN",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152056364371.jpg",
+        "intro": "韩语歌曲私人个性化订制，每日更新",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115333675853.jpg"
+      },
+      {
+        "singer_pic": 1,
+        "sub_id": 2,
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115929781776.jpg",
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104341925114.jpg",
+        "play_count": 0,
+        "title": "年度引爆词",
+        "en_title": "",
+        "sub_title": "斜杠青年",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152403393715.jpg",
+        "id": 38,
+        "intro": "自主、多元又有趣，这不就是我嘛",
+        "type": "issiues"
+      },
+      {
+        "id": 37,
+        "type": "time_scene",
+        "play_count": 0,
+        "pic_net_save": "http://imge.kugou.com/commendpic/20210916/20210916104318168531.jpg",
+        "show_tm": [
+          {
+            "end": "10:00",
+            "beg": "08:00"
+          }
+        ],
+        "en_title": "MORNING",
+        "pic": "http://imge.kugou.com/commendpic/20210916/20210916152337115071.jpg",
+        "theme_list_title": "主题歌单",
+        "title": "清晨好歌上新",
+        "intro": "神清气爽！让最新好歌唤醒你的活力",
+        "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923115844585485.jpg"
+      }
+    ]
+  },
+  "status": 1,
+  "error_code": 0
+}

@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "hash": "E291FC24C9DBE4EF3FDD9837EA3E1A9C",
+      "level": 0,
+      "status": 1,
+      "_msg": "Allow: the video is not found.",
+      "relate_goods": [],
+      "singer_name": "",
+      "sale_mode": 0,
+      "trans_param": [],
+      "name": "",
+      "fail_process": 0,
+      "_errno": 6,
+      "cid": -1,
+      "info": {
+        "filesize": 0,
+        "bitrate": 0
+      },
+      "privilege": 0,
+      "id": 0,
+      "prices": {
+        "rgl": 0
+      },
+      "pay_type": 0
+    }
+  ],
+  "error_code": 0,
+  "status": 1,
+  "message": ""
+}

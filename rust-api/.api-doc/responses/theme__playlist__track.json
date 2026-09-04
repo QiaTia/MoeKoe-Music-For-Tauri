@@ -1,0 +1,4712 @@
+{
+  "data": {
+    "client_playlist_flag": 0,
+    "mid": "00",
+    "collect_total": 365284,
+    "theme_detail": {
+      "id": 1,
+      "pic_net_save": "http://imge.kugou.com/commendpic/20210915/20210915184619661863.jpg",
+      "title": "超深度睡眠",
+      "play_count": 0,
+      "detail_pic": "http://imge.kugou.com/commendpic/20210923/20210923114854480809.jpg",
+      "pic": "http://imge.kugou.com/commendpic/20210916/20210916151635572701.jpg",
+      "en_title": "DEEP SLEEP",
+      "intro": "夜深了，让音乐轻轻为你关上床头灯",
+      "type": "time_scene"
+    },
+    "song_list": [
+      {
+        "mv_hash": "",
+        "hash": "1FE848C07AD92EDF859BFBEC6D604F10",
+        "singerinfo": [
+          {
+            "name": "Meditation Zen",
+            "is_publish": "1",
+            "id": "1125723"
+          },
+          {
+            "name": "Música para Relaxar Maestro",
+            "is_publish": "1",
+            "id": "1168603"
+          },
+          {
+            "name": "Nature Sounds Nature Music",
+            "is_publish": "1",
+            "id": "374066"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "955",
+            "parent_id": "0",
+            "tag_name": "2018"
+          },
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Soothing Tides",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "7D590A04C0784CB420A6E91F5C9F3FE2",
+        "filesize_128": 2465537,
+        "songname": "Soothing Tides",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=4",
+        "songid": 223855154,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2018-08-16",
+        "song_type": "9",
+        "file_size": 2465537,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "Study Music | Ambient Sounds | Sleep",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 154,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "392592605",
+        "filesize_flac": 11976303,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Meditation Zen、Música para Relaxar Maestro、Nature Sounds Nature Music - Soothing Tides",
+        "author_name": "Meditation Zen、Música para Relaxar Maestro、Nature Sounds Nature Music",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220326/20220326143202106628.jpg",
+        "timelength_320": 154,
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663812
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1696616,
+          "display_rate": 1,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "34",
+            "attr0": 52,
+            "attr1": 0
+          },
+          "cpy_level": 1,
+          "cpy_grade": 5,
+          "cid": 204937730,
+          "display": 4,
+          "ogg_320_hash": "19B54F1884F8ECBF7A359BC5DB048AEE",
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_128_hash": "4F7ECBAEEE501B69331A62C54FB2EC01",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220326/20220326143202106628.jpg",
+          "ogg_320_filesize": 5431492
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Study Music | Ambient Sounds | Sleep",
+        "filesize_ape": 0,
+        "album_id": "56087173",
+        "scid": 1046630751,
+        "privilege": 8,
+        "hash_128": "1FE848C07AD92EDF859BFBEC6D604F10",
+        "mixsongid": "392592605",
+        "hash_320": "060BC86B3D7A8715597B044604EB883A",
+        "suffix_audio_name": "",
+        "filesize_320": 6163366
+      },
+      {
+        "mv_hash": "",
+        "hash": "5581DBAD2ADCD78435DD23665C10FD05",
+        "singerinfo": [
+          {
+            "name": "Preschool Kids",
+            "is_publish": "1",
+            "id": "978751"
+          },
+          {
+            "name": "White Noise Relaxation",
+            "is_publish": "1",
+            "id": "837858"
+          },
+          {
+            "name": "Baby Sweet Dream",
+            "is_publish": "1",
+            "id": "966627"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "847",
+            "parent_id": "100",
+            "tag_name": "2017"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1777",
+            "parent_id": "1773",
+            "tag_name": "工作学习&咖啡厅"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "3163",
+            "parent_id": "960",
+            "tag_name": "新世纪纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "An Innocent Dawn",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "5298FD71F78E2C77ECC58A8BAB4AEF64",
+        "filesize_128": 3553437,
+        "songname": "An Innocent Dawn",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=40",
+        "songid": 169220327,
+        "quality_level": 3,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2018-08-13",
+        "song_type": "9",
+        "file_size": 3553437,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "Relaxation Music to Relax",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 222,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "329338410",
+        "filesize_flac": 18758666,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Preschool Kids、White Noise Relaxation、Baby Sweet Dream - An Innocent Dawn",
+        "author_name": "Preschool Kids、White Noise Relaxation、Baby Sweet Dream",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210728/20210728184901945825.jpg",
+        "timelength_320": 222,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2451238,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "3EA0A49974FFC382724F580567BCDDE0",
+          "cid": 162693941,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210728/20210728184901945825.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "7C64C5AB955CB601D7991F6A6309ED6C",
+          "ogg_128_hash": "3C2312DDC2A982441F30F023341B8058",
+          "ogg_320_filesize": 8206907
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Relaxation Music to Relax",
+        "filesize_ape": 0,
+        "album_id": "47374769",
+        "scid": 1050228178,
+        "privilege": 8,
+        "hash_128": "5581DBAD2ADCD78435DD23665C10FD05",
+        "mixsongid": "329338410",
+        "hash_320": "AC4E828FE3C55C2FD0530223910C3520",
+        "suffix_audio_name": "",
+        "filesize_320": 8883043
+      },
+      {
+        "mv_hash": "",
+        "hash": "DB3229D66E8533E72153AABBDB05A174",
+        "singerinfo": [
+          {
+            "name": "Brain Study Music Guys",
+            "is_publish": "1",
+            "id": "1124835"
+          },
+          {
+            "name": "Shakuhachi Sakano",
+            "is_publish": "1",
+            "id": "1061987"
+          },
+          {
+            "name": "Guided Meditation",
+            "is_publish": "1",
+            "id": "698977"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "969",
+            "parent_id": "100",
+            "tag_name": "2019"
+          },
+          {
+            "tag_id": "974",
+            "parent_id": "965",
+            "tag_name": "未细分轻音乐 Easy Listening"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1777",
+            "parent_id": "1773",
+            "tag_name": "工作学习&咖啡厅"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1914",
+            "parent_id": "1894",
+            "tag_name": "瑜伽练习"
+          },
+          {
+            "tag_id": "3163",
+            "parent_id": "960",
+            "tag_name": "新世纪纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Deep Focus Meditation",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "69FB4BD6AB66FDCFEFB2D3520B17B7FF",
+        "filesize_128": 2689559,
+        "songname": "Deep Focus Meditation",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=10",
+        "songid": 164442763,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2019-01-08",
+        "song_type": "9",
+        "file_size": 2689559,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "50 Steady Beats for Spa Relaxation",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 168,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "324021405",
+        "filesize_flac": 12141099,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Brain Study Music Guys、Shakuhachi Sakano、Guided Meditation - Deep Focus Meditation",
+        "author_name": "Brain Study Music Guys、Shakuhachi Sakano、Guided Meditation",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210623/20210623210603549363.jpg",
+        "timelength_320": 168,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1724597,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "8802ED14683D0C4BB3D3E919387FBF91",
+          "cid": 158181094,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210623/20210623210603549363.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "FD20303483AFA3D636510E8CF455AD29",
+          "ogg_128_hash": "4C96AE94E1590E57F3D3D6272DEBC970",
+          "ogg_320_filesize": 5245967
+        },
+        "music_trac": 0,
+        "album_audio_remark": "50 Steady Beats for Spa Relaxation",
+        "filesize_ape": 0,
+        "album_id": "46062950",
+        "scid": 1050916640,
+        "privilege": 8,
+        "hash_128": "DB3229D66E8533E72153AABBDB05A174",
+        "mixsongid": "324021405",
+        "hash_320": "C6EF27856D6692B881064C1AF8611786",
+        "suffix_audio_name": "",
+        "filesize_320": 6723289
+      },
+      {
+        "mv_hash": "",
+        "hash": "3E0AE280D11FB4363718924EB72F0CC3",
+        "author_name": "小小小磊",
+        "tags": [
+          {
+            "tag_id": "1736",
+            "parent_id": "3154",
+            "tag_name": "钢琴演奏"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1777",
+            "parent_id": "1773",
+            "tag_name": "工作学习&咖啡厅"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "3154",
+            "parent_id": "960",
+            "tag_name": "世界乐器体裁"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "is_mv_file_head": 0,
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "B935959B231A7B6D8486A54339764FB9",
+        "alg_path": "s=2;itid=;citid=;a=0;source=60",
+        "bitrate_flac": 376,
+        "songname": "细节",
+        "album_name": "温柔和期盼",
+        "singerinfo": [
+          {
+            "name": "小小小磊",
+            "is_publish": "1",
+            "id": "1034463"
+          }
+        ],
+        "level": 2,
+        "pay_type": 3,
+        "songid": 135580865,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "free_for_ad": 32,
+          "language": "纯音乐",
+          "cpy_attr0": 8192,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "is_original": 6,
+          "cid": 126246269,
+          "hash_multitrack": "9AB4E8C3C3E22AC66BB286C3B6C238A7",
+          "cpy_grade": 22,
+          "ipmap": {
+            "attr0": 536887296
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20201219/20201219121202589420.jpg",
+          "cpy_level": 1
+        },
+        "filesize_other": 0,
+        "album_id": "40687518",
+        "has_album": 1,
+        "filesize_flac": 11494370,
+        "extname": "mp3",
+        "song_type": "9",
+        "type": "audio",
+        "is_file_head": 100,
+        "remark": "",
+        "publish_date": "2020-12-19",
+        "source": 8,
+        "time_length": 243,
+        "privilege_flac": "10",
+        "old_cpy": 0,
+        "album_audio_id": "286290948",
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "hash_other": "",
+        "hash_ape": "",
+        "filesize_128": 3901693,
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "小小小磊 - 细节",
+        "album_audio_remark": "温柔和期盼",
+        "timelength_320": 243,
+        "hash_320": "28ADDDB7C314CAAD1329ADD79B651A12",
+        "timelength_flac": 243,
+        "music_trac": 0,
+        "hash_128": "3E0AE280D11FB4363718924EB72F0CC3",
+        "filesize_ape": 0,
+        "file_size": 3901693,
+        "scid": 89628140,
+        "privilege": 8,
+        "ori_audio_name": "细节",
+        "mixsongid": "286290948",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20201219/20201219121202589420.jpg",
+        "suffix_audio_name": "",
+        "filesize_320": 9754166
+      },
+      {
+        "mv_hash": "",
+        "hash": "B931E173E3A9C4BE8084F245FEF35E3D",
+        "singerinfo": [
+          {
+            "name": "Masajes Spas",
+            "is_publish": "1",
+            "id": "1746136"
+          },
+          {
+            "name": "Massagem Coleção de Músicas",
+            "is_publish": "1",
+            "id": "939427"
+          },
+          {
+            "name": "Música para Niños",
+            "is_publish": "1",
+            "id": "840534"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐 Pure Music"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Escucha Tu Alma",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "F2F85FE2D780AEBF12D1774BB72B5213",
+        "filesize_128": 2241473,
+        "songname": "Escucha Tu Alma",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=71",
+        "songid": 157498133,
+        "quality_level": 3,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2020-04-24",
+        "song_type": "9",
+        "file_size": 2241473,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "Musica Relajante",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 140,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "354719926",
+        "filesize_flac": 6087701,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Masajes Spas、Massagem Coleção de Músicas、Música para Niños - Escucha Tu Alma",
+        "author_name": "Masajes Spas、Massagem Coleção de Músicas、Música para Niños",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20211130/20211130112941611838.jpg",
+        "timelength_320": 140,
+        "trans_param": {
+          "ogg_128_hash": "C6290359A72E13CE1AE0B55933457C21",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20211130/20211130112941611838.jpg",
+          "language": "纯音乐",
+          "cpy_attr0": 8192,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1457794,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "classmap": {
+            "attr0": 100663304
+          },
+          "cid": 183370043,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "hash_multitrack": "7B1E3FAC93091E445498955A8404FC4D",
+          "appid_block": "3124",
+          "ipmap": {
+            "attr0": 536887296
+          },
+          "cpy_grade": 5,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Musica Relajante",
+        "filesize_ape": 0,
+        "album_id": "50820591",
+        "scid": 1047353294,
+        "privilege": 8,
+        "hash_128": "B931E173E3A9C4BE8084F245FEF35E3D",
+        "mixsongid": "354719926",
+        "hash_320": "E427445046EFAB783A135F1B9B754FB6",
+        "suffix_audio_name": "",
+        "filesize_320": 5603029
+      },
+      {
+        "mv_hash": "",
+        "hash": "AC18ABDCEF28DD05A45AE284D56F9086",
+        "singerinfo": [
+          {
+            "name": "Musica Relajante New Age Culture",
+            "is_publish": "1",
+            "id": "5760766"
+          },
+          {
+            "name": "Meditar Profundamente",
+            "is_publish": "1",
+            "id": "5593959"
+          },
+          {
+            "name": "Música para Niños",
+            "is_publish": "1",
+            "id": "840534"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "120",
+            "parent_id": "100",
+            "tag_name": "2001-2010"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Armonía Relajante",
+        "hash_192": "",
+        "has_accompany": 1,
+        "hash_flac": "ADC6CF2B5A23C9FE0D8D80C92A832C6A",
+        "filesize_128": 2820496,
+        "songname": "Armonía Relajante",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=32",
+        "songid": 231326298,
+        "quality_level": 3,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2001-12-16",
+        "song_type": "9",
+        "file_size": 2820496,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "40 Poderosos Sonidos Para El Sueño Profundo Y la Relajación",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 176,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "406298657",
+        "filesize_flac": 14832099,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Musica Relajante New Age Culture、Meditar Profundamente、Música para Niños - Armonía Relajante",
+        "author_name": "Musica Relajante New Age Culture、Meditar Profundamente、Música para Niños",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220424/20220424181002861517.jpg",
+        "timelength_320": 176,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1973177,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "B372880618F77B1EDA8AD37C619FDC8B",
+          "cid": 208333622,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220424/20220424181002861517.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "04CEF4C745082EAC11C3CD57C6BFA324",
+          "ogg_128_hash": "81A2272637D21FE7EDEAABB7F25137FB",
+          "ogg_320_filesize": 4741140
+        },
+        "music_trac": 0,
+        "album_audio_remark": "40 Poderosos Sonidos Para El Sueño Profundo Y la Relajación",
+        "filesize_ape": 0,
+        "album_id": "56934429",
+        "scid": 1049621307,
+        "privilege": 8,
+        "hash_128": "AC18ABDCEF28DD05A45AE284D56F9086",
+        "mixsongid": "406298657",
+        "hash_320": "1518DA7C2B49066D20C3E6C779E849B8",
+        "suffix_audio_name": "",
+        "filesize_320": 7050398
+      },
+      {
+        "mv_hash": "",
+        "hash": "4281F23107D7C35D632527F4F61CFD78",
+        "singerinfo": [
+          {
+            "name": "Piano para Dormir",
+            "is_publish": "1",
+            "id": "1127246"
+          },
+          {
+            "name": "Sonidos de la naturaleza Relajacion",
+            "is_publish": "1",
+            "id": "622029"
+          },
+          {
+            "name": "Especialistas de Musica para Dormir",
+            "is_publish": "1",
+            "id": "1171029"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "955",
+            "parent_id": "0",
+            "tag_name": "2018"
+          },
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Flores Floreciendo",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "310B92D4BC676A01EF7A8F3B597CAE16",
+        "filesize_128": 2401651,
+        "songname": "Flores Floreciendo",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=12",
+        "songid": 163620927,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2018-06-29",
+        "song_type": "9",
+        "file_size": 2401651,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "Sonidos Relajantes | Sueño Profundo Y Calma",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 150,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "322017838",
+        "filesize_flac": 12015019,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Piano para Dormir、Sonidos de la naturaleza Relajacion、Especialistas de Musica para Dormir - Flores Floreciendo",
+        "author_name": "Piano para Dormir、Sonidos de la naturaleza Relajacion、Especialistas de Musica para Dormir",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210617/20210617013908282570.jpg",
+        "timelength_320": 150,
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1672138,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "34",
+            "attr0": 52,
+            "attr1": 0
+          },
+          "cpy_level": 1,
+          "cpy_grade": 5,
+          "cid": 156130759,
+          "display": 0,
+          "ogg_320_hash": "20D83709E2B4DDCF3A5300BE98C63626",
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_128_hash": "077F68808FDF3B589D06B500C7CA29A8",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210617/20210617013908282570.jpg",
+          "ogg_320_filesize": 4289617
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Sonidos Relajantes | Sueño Profundo Y Calma",
+        "filesize_ape": 0,
+        "album_id": "45785013",
+        "scid": 1071980786,
+        "privilege": 8,
+        "hash_128": "4281F23107D7C35D632527F4F61CFD78",
+        "mixsongid": "322017838",
+        "hash_320": "2670371311E1C4DDEB2AD15C62A354C4",
+        "suffix_audio_name": "",
+        "filesize_320": 6003362
+      },
+      {
+        "mv_hash": "",
+        "hash": "1C7CFCE953595CFAD98DBBFB2CD7D7FF",
+        "singerinfo": [
+          {
+            "name": "Sonidos de la naturaleza Relajacion",
+            "is_publish": "1",
+            "id": "622029"
+          },
+          {
+            "name": "Saludo al Sol Sonido Relajante",
+            "is_publish": "1",
+            "id": "1166867"
+          },
+          {
+            "name": "Musica Relajante & Yoga",
+            "is_publish": "1",
+            "id": "1533319"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "955",
+            "parent_id": "0",
+            "tag_name": "2018"
+          },
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Rapsodia Vespertina",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "BC1E1D351C8A6019E3F2E343387D61C7",
+        "filesize_128": 2190076,
+        "songname": "Rapsodia Vespertina",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=90",
+        "songid": 232657163,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2018-08-16",
+        "song_type": "9",
+        "file_size": 2190076,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "40 Melodías de Atención Plena Para El Sueño Profundo",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 136,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "408188885",
+        "filesize_flac": 10733457,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Sonidos de la naturaleza Relajacion、Saludo al Sol Sonido Relajante、Musica Relajante & Yoga - Rapsodia Vespertina",
+        "author_name": "Sonidos de la naturaleza Relajacion、Saludo al Sol Sonido Relajante、Musica Relajante & Yoga",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220501/20220501011801264953.jpg",
+        "timelength_320": 136,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "34",
+            "attr0": 52,
+            "attr1": 0
+          },
+          "cid": 209283407,
+          "ogg_128_hash": "FBA17042125D86EE1107010FA6027219",
+          "ogg_128_filesize": 1497968,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220501/20220501011801264953.jpg",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "40 Melodías de Atención Plena Para El Sueño Profundo",
+        "filesize_ape": 0,
+        "album_id": "57125646",
+        "scid": 1045250353,
+        "privilege": 8,
+        "hash_128": "1C7CFCE953595CFAD98DBBFB2CD7D7FF",
+        "mixsongid": "408188885",
+        "hash_320": "F56E753447382D8C1D42E4C10098FBF9",
+        "suffix_audio_name": "",
+        "filesize_320": 5474718
+      },
+      {
+        "mv_hash": "",
+        "hash": "65C4DC23DF745E5C5BF82D093A82CE60",
+        "singerinfo": [
+          {
+            "name": "曾简单",
+            "is_publish": "1",
+            "id": "6466178"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "988",
+            "parent_id": "882",
+            "tag_name": "网络流行"
+          },
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1736",
+            "parent_id": "3154",
+            "tag_name": "钢琴演奏"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "1784",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "3130",
+            "parent_id": "960",
+            "tag_name": "流行器乐"
+          },
+          {
+            "tag_id": "3154",
+            "parent_id": "3154",
+            "tag_name": "世界乐器体裁"
+          },
+          {
+            "tag_id": "3154",
+            "parent_id": "960",
+            "tag_name": "纯音乐乐器"
+          },
+          {
+            "tag_id": "3189",
+            "parent_id": "0",
+            "tag_name": "2021"
+          },
+          {
+            "tag_id": "3271",
+            "parent_id": "0",
+            "tag_name": "蝰蛇全景声"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "浪漫的邂逅",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "7E3D3228A1F2B7D7F621C0E632099B44",
+        "filesize_128": 2765262,
+        "songname": "浪漫的邂逅",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=7",
+        "songid": 173317712,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2021-08-26",
+        "song_type": "9",
+        "file_size": 2765262,
+        "has_album": 1,
+        "pay_type": 3,
+        "extname": "mp3",
+        "album_name": "夏日之旅",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 172,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "333749779",
+        "filesize_flac": 8793575,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "曾简单 - 浪漫的邂逅",
+        "author_name": "曾简单",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210529/20210529104407649429.jpg",
+        "timelength_320": 172,
+        "trans_param": {
+          "cpy_grade": 20,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "free_for_ad": 32,
+          "language": "纯音乐",
+          "cpy_attr0": 8192,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1569239,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "340000001100c034",
+            "attr0": 285261876,
+            "attr1": 1744830464
+          },
+          "is_original": 6,
+          "cid": 166554241,
+          "ogg_128_hash": "24BE1450BA3340B9476106817F2C3FF2",
+          "hash_multitrack": "575B3CCD6F210CC10C2F996EEBEE4E11",
+          "ipmap": {
+            "attr0": 17716760576
+          },
+          "pay_block_tpl": 1,
+          "display": 0,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210529/20210529104407649429.jpg",
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "夏日之旅",
+        "filesize_ape": 0,
+        "album_id": "45120629",
+        "scid": 117943473,
+        "privilege": 8,
+        "hash_128": "65C4DC23DF745E5C5BF82D093A82CE60",
+        "mixsongid": "333749779",
+        "hash_320": "0852175E45A31D2FBF8758CB412EAE7B",
+        "suffix_audio_name": "",
+        "filesize_320": 6913089
+      },
+      {
+        "mv_hash": "",
+        "hash": "1DCF539860857840B00AB44F8D61E148",
+        "singerinfo": [
+          {
+            "name": "Deep Relaxation Meditation Academy",
+            "is_publish": "1",
+            "id": "1124834"
+          },
+          {
+            "name": "Ambient Music Therapy",
+            "is_publish": "1",
+            "id": "553518"
+          },
+          {
+            "name": "Easy Sleep Music",
+            "is_publish": "1",
+            "id": "1167312"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "847",
+            "parent_id": "100",
+            "tag_name": "2017"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1777",
+            "parent_id": "1773",
+            "tag_name": "工作学习&咖啡厅"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1914",
+            "parent_id": "1894",
+            "tag_name": "瑜伽练习"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Lost in Zen",
+        "hash_192": "",
+        "has_accompany": 1,
+        "hash_flac": "42B5422831F9876459853B6D60642413",
+        "filesize_128": 2647755,
+        "songname": "Lost in Zen",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=33",
+        "songid": 228227780,
+        "quality_level": 3,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2017-11-13",
+        "song_type": "9",
+        "file_size": 2647755,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "Sleepless: Massage Relaxation",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 165,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "402688264",
+        "filesize_flac": 13825693,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Deep Relaxation Meditation Academy、Ambient Music Therapy、Easy Sleep Music - Lost in Zen",
+        "author_name": "Deep Relaxation Meditation Academy、Ambient Music Therapy、Easy Sleep Music",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220411/20220411232104251854.jpg",
+        "timelength_320": 165,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663812
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1814389,
+          "display_rate": 1,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "A95CD8C45871C701DDCE77BBCFB3A0E6",
+          "cid": 206698337,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220411/20220411232104251854.jpg",
+          "display": 4,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "9A1F47926A3E3DE9590B9636D53A4269",
+          "ogg_128_hash": "0CA75A432C01DB9E731EDC85D9BF2BE3",
+          "ogg_320_filesize": 3993026
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Sleepless: Massage Relaxation",
+        "filesize_ape": 0,
+        "album_id": "56628556",
+        "scid": 1049612207,
+        "privilege": 8,
+        "hash_128": "1DCF539860857840B00AB44F8D61E148",
+        "mixsongid": "402688264",
+        "hash_320": "F3CFB81FB40DE11C7529A1AB0C183062",
+        "suffix_audio_name": "",
+        "filesize_320": 6618785
+      },
+      {
+        "mv_hash": "",
+        "hash": "CE9E6E71054BB25C07289A3BA6235441",
+        "singerinfo": [
+          {
+            "name": "Tonal Meditation Collective",
+            "is_publish": "1",
+            "id": "1140829"
+          },
+          {
+            "name": "Avslappning Sound",
+            "is_publish": "1",
+            "id": "1167107"
+          },
+          {
+            "name": "Best Relaxing Spa Music",
+            "is_publish": "1",
+            "id": "581050"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "974",
+            "parent_id": "965",
+            "tag_name": "未细分轻音乐 Easy Listening"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1703",
+            "parent_id": "4",
+            "tag_name": "静谧安宁"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1915",
+            "parent_id": "1894",
+            "tag_name": "氛围冥想"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Drop in the Bucket",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "F434E1E222E90C89A16AB337C6642BB8",
+        "filesize_128": 3250866,
+        "songname": "Drop in the Bucket",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=52",
+        "songid": 226381509,
+        "quality_level": 3,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2020-04-23",
+        "song_type": "9",
+        "file_size": 3250866,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "Romantic Music | Massage",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 203,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "400509929",
+        "filesize_flac": 14725376,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Tonal Meditation Collective、Avslappning Sound、Best Relaxing Spa Music - Drop in the Bucket",
+        "author_name": "Tonal Meditation Collective、Avslappning Sound、Best Relaxing Spa Music",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220403/20220403141206593787.jpg",
+        "timelength_320": 203,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "74",
+            "attr0": 116,
+            "attr1": 0
+          },
+          "cid": 205819054,
+          "ogg_128_hash": "836D480C52CD4313634B50275DA2C0D7",
+          "ogg_128_filesize": 2164271,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220403/20220403141206593787.jpg",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Romantic Music | Massage",
+        "filesize_ape": 0,
+        "album_id": "56365402",
+        "scid": 1050332141,
+        "privilege": 8,
+        "hash_128": "CE9E6E71054BB25C07289A3BA6235441",
+        "mixsongid": "400509929",
+        "hash_320": "D2399CEF319922BF930EAFBB1BFC9F08",
+        "suffix_audio_name": "",
+        "filesize_320": 8126569
+      },
+      {
+        "mv_hash": "",
+        "hash": "312CE36EF2261FE0C756560F8AE2E747",
+        "singerinfo": [
+          {
+            "name": "Música para Dormir Con Relajantes Sonidos de la Naturaleza",
+            "is_publish": "1",
+            "id": "685254"
+          },
+          {
+            "name": "Musica Para Dormir Profundamente",
+            "is_publish": "1",
+            "id": "768817"
+          },
+          {
+            "name": "Meditación Guiada",
+            "is_publish": "1",
+            "id": "1757894"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "3163",
+            "parent_id": "960",
+            "tag_name": "新世纪纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Piezas De Mar Calmantes",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "7900479294A0A5DA92CDA8F87DF7E156",
+        "filesize_128": 2267156,
+        "songname": "Piezas De Mar Calmantes",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=44",
+        "songid": 178305111,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2020-03-09",
+        "song_type": "9",
+        "file_size": 2267156,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "25 Piezas de Música Pacífica de Primavera Para Spa y Serenidad",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 141,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "340223491",
+        "filesize_flac": 10030443,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Música para Dormir Con Relajantes Sonidos de la Naturaleza、Musica Para Dormir Profundamente、Meditación Guiada - Piezas De Mar Calmantes",
+        "author_name": "Música para Dormir Con Relajantes Sonidos de la Naturaleza、Musica Para Dormir Profundamente、Meditación Guiada",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20211020/20211020074112660746.jpg",
+        "timelength_320": 141,
+        "trans_param": {
+          "ogg_128_hash": "4B523E887433B056B65A8249D375A064",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20211020/20211020074112660746.jpg",
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1510458,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "4074",
+            "attr0": 16500,
+            "attr1": 0
+          },
+          "classmap": {
+            "attr0": 100663304
+          },
+          "cid": 171988458,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "hash_multitrack": "3BF574EE43D9DA44B671D3536E899D05",
+          "appid_block": "3124",
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "cpy_grade": 5,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "25 Piezas de Música Pacífica de Primavera Para Spa y Serenidad",
+        "filesize_ape": 0,
+        "album_id": "49166352",
+        "scid": 1047457557,
+        "privilege": 8,
+        "hash_128": "312CE36EF2261FE0C756560F8AE2E747",
+        "mixsongid": "340223491",
+        "hash_320": "B0924F520A27FF4F62A04E132284E1D9",
+        "suffix_audio_name": "",
+        "filesize_320": 5667045
+      },
+      {
+        "mv_hash": "",
+        "hash": "BDE43AB47E8B1A56B0C33D473D7C3B38",
+        "singerinfo": [
+          {
+            "name": "Musica para Dormir Dream House",
+            "is_publish": "1",
+            "id": "836616"
+          },
+          {
+            "name": "Lluvia PQ",
+            "is_publish": "1",
+            "id": "1141874"
+          },
+          {
+            "name": "Musica Relajante & Yoga",
+            "is_publish": "1",
+            "id": "1533319"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "955",
+            "parent_id": "100",
+            "tag_name": "2018"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1777",
+            "parent_id": "1773",
+            "tag_name": "工作学习&咖啡厅"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1914",
+            "parent_id": "1894",
+            "tag_name": "瑜伽练习"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Tuned in",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "",
+        "filesize_128": 2689535,
+        "songname": "Tuned in",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=64",
+        "songid": 207450903,
+        "quality_level": 2,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2018-09-26",
+        "song_type": "9",
+        "file_size": 2689535,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "30 Calmantes Canciones Binaurales",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 168,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "401633612",
+        "filesize_flac": 0,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Musica para Dormir Dream House、Lluvia PQ、Musica Relajante & Yoga - Tuned in",
+        "author_name": "Musica para Dormir Dream House、Lluvia PQ、Musica Relajante & Yoga",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220408/20220408135302703268.jpg",
+        "timelength_320": 168,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 8192,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2017425,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "D46432E038BE851CEEC6E32068AF904B",
+          "cid": 206388775,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220408/20220408135302703268.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "F9A4C2CD3C8CBDC05482B4065F272924",
+          "ogg_128_hash": "952B175AF7D98D0234F39D9678C0A49A",
+          "ogg_320_filesize": 4856399
+        },
+        "music_trac": 0,
+        "album_audio_remark": "30 Calmantes Canciones Binaurales",
+        "filesize_ape": 0,
+        "album_id": "56492096",
+        "scid": 1046633659,
+        "privilege": 8,
+        "hash_128": "BDE43AB47E8B1A56B0C33D473D7C3B38",
+        "mixsongid": "401633612",
+        "hash_320": "520823D3CCF1132CBA4681BBE2FC051F",
+        "suffix_audio_name": "",
+        "filesize_320": 6723359
+      },
+      {
+        "mv_hash": "",
+        "hash": "CD9765A8B6ACFC1A3E844013A9A5C2B2",
+        "singerinfo": [
+          {
+            "name": "Naturaleza Sonidos",
+            "is_publish": "1",
+            "id": "5716030"
+          },
+          {
+            "name": "Meditar Profundamente",
+            "is_publish": "1",
+            "id": "5593959"
+          },
+          {
+            "name": "Lluvia PQ",
+            "is_publish": "1",
+            "id": "1141874"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "955",
+            "parent_id": "100",
+            "tag_name": "2018"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "974",
+            "parent_id": "965",
+            "tag_name": "未细分轻音乐 Easy Listening"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1777",
+            "parent_id": "1773",
+            "tag_name": "工作学习&咖啡厅"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "3163",
+            "parent_id": "960",
+            "tag_name": "新世纪纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Flores Tiernas",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "F5C01F09FC17AABE7D4A576FBF91D870",
+        "filesize_128": 2177423,
+        "songname": "Flores Tiernas",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=34",
+        "songid": 155086339,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2018-09-26",
+        "song_type": "9",
+        "file_size": 2177423,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "Melodías Relajantes De La Naturaleza | Relajación Completa",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 136,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "310026162",
+        "filesize_flac": 9254692,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Naturaleza Sonidos、Meditar Profundamente、Lluvia PQ - Flores Tiernas",
+        "author_name": "Naturaleza Sonidos、Meditar Profundamente、Lluvia PQ",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210422/20210422163801702520.jpg",
+        "timelength_320": 136,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1531927,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "AC1BE8EC6F8DEDDDC916AFFF81920F40",
+          "cid": 146473287,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210422/20210422163801702520.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "1DA2DDA70692715CE9F0F0B79B0A7531",
+          "ogg_128_hash": "AEF7C6E8F98C5D08F6DD0A3F811B5AC8",
+          "ogg_320_filesize": 3747903
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Melodías Relajantes De La Naturaleza | Relajación Completa",
+        "filesize_ape": 0,
+        "album_id": "43863756",
+        "scid": 1044142420,
+        "privilege": 8,
+        "hash_128": "CD9765A8B6ACFC1A3E844013A9A5C2B2",
+        "mixsongid": "310026162",
+        "hash_320": "B754690466808139E8FE2B1A012453C9",
+        "suffix_audio_name": "",
+        "filesize_320": 5443257
+      },
+      {
+        "mv_hash": "",
+        "hash": "F85FDC28552EC0DC7CAC0D7A0D468F83",
+        "singerinfo": [
+          {
+            "name": "Active Baby Music Workshop",
+            "is_publish": "1",
+            "id": "954128"
+          },
+          {
+            "name": "Nature Noise",
+            "is_publish": "1",
+            "id": "944976"
+          },
+          {
+            "name": "Pro Sound Effects Library",
+            "is_publish": "1",
+            "id": "792275"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Calming Rains Meditation",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "377D8403DCD93563E09ACE891D1C7BB3",
+        "filesize_128": 2873403,
+        "songname": "Calming Rains Meditation",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=83",
+        "songid": 112419156,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2004-04-26",
+        "song_type": "9",
+        "file_size": 2873403,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "2020 Ambient Rain Sounds for Chilling Out & Deep Sleep",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 179,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "259505082",
+        "filesize_flac": 11254716,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Active Baby Music Workshop、Nature Noise、Pro Sound Effects Library - Calming Rains Meditation",
+        "author_name": "Active Baby Music Workshop、Nature Noise、Pro Sound Effects Library",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20200601/20200601165205538295.jpg",
+        "timelength_320": 179,
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2238040,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "34",
+            "attr0": 52,
+            "attr1": 0
+          },
+          "cpy_level": 1,
+          "cpy_grade": 5,
+          "cid": 101648504,
+          "display": 0,
+          "ogg_320_hash": "44E297E53B9BB83DF126E01E3BB0855C",
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_128_hash": "6E8ACA42F2B8BEFC22ED4CC908B2E51B",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20200601/20200601165205538295.jpg",
+          "ogg_320_filesize": 8518217
+        },
+        "music_trac": 0,
+        "album_audio_remark": "2020 Ambient Rain Sounds for Chilling Out & Deep Sleep",
+        "filesize_ape": 0,
+        "album_id": "37867535",
+        "scid": 1045790610,
+        "privilege": 8,
+        "hash_128": "F85FDC28552EC0DC7CAC0D7A0D468F83",
+        "mixsongid": "259505082",
+        "hash_320": "EC7735D4A5B812C5A81340D2E47C8684",
+        "suffix_audio_name": "",
+        "filesize_320": 7182672
+      },
+      {
+        "mv_hash": "",
+        "hash": "23C01852C4AAB324B33846992A82224C",
+        "singerinfo": [
+          {
+            "name": "Baby Sleep",
+            "is_publish": "1",
+            "id": "358742"
+          },
+          {
+            "name": "Baby Sleep Music",
+            "is_publish": "1",
+            "id": "955145"
+          },
+          {
+            "name": "Sons da Natureza",
+            "is_publish": "1",
+            "id": "1164440"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "847",
+            "parent_id": "100",
+            "tag_name": "2017"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "974",
+            "parent_id": "965",
+            "tag_name": "未细分轻音乐 Easy Listening"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "3163",
+            "parent_id": "960",
+            "tag_name": "新世纪纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Serendipity",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "C9A50E6B1C5854A5C893B2FDA42ADB62",
+        "filesize_128": 3315686,
+        "songname": "Serendipity",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=6",
+        "songid": 164398825,
+        "quality_level": 3,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2018-08-21",
+        "song_type": "9",
+        "file_size": 3315686,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "50 Ultimate Chilling Out Music Para Relaxation",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 207,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "323966362",
+        "filesize_flac": 16490290,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Baby Sleep、Baby Sleep Music、Sons da Natureza - Serendipity",
+        "author_name": "Baby Sleep、Baby Sleep Music、Sons da Natureza",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210623/20210623143706155501.jpg",
+        "timelength_320": 207,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2321714,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "B8BF620A4ADE4C4A21C005D35EA4C224",
+          "cid": 158121709,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210623/20210623143706155501.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "A3502CC78103EF86339DB237AA4CD514",
+          "ogg_128_hash": "D1092671605BFBEE88544C3BD504F864",
+          "ogg_320_filesize": 8093212
+        },
+        "music_trac": 0,
+        "album_audio_remark": "50 Ultimate Chilling Out Music Para Relaxation",
+        "filesize_ape": 0,
+        "album_id": "46055609",
+        "scid": 1050033932,
+        "privilege": 8,
+        "hash_128": "23C01852C4AAB324B33846992A82224C",
+        "mixsongid": "323966362",
+        "hash_320": "279D7B9D8218B971C64839E26ADD9F38",
+        "suffix_audio_name": "",
+        "filesize_320": 8288444
+      },
+      {
+        "mv_hash": "",
+        "hash": "45F4EED2B4FA73BCE24D0372836C0F6B",
+        "singerinfo": [
+          {
+            "name": "Massage Music",
+            "is_publish": "1",
+            "id": "548650"
+          },
+          {
+            "name": "Sounds of Nature Relaxation",
+            "is_publish": "1",
+            "id": "952197"
+          },
+          {
+            "name": "Avslappning Sound",
+            "is_publish": "1",
+            "id": "1167107"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "1180",
+            "parent_id": "595",
+            "tag_name": "氛围类 Ambient"
+          },
+          {
+            "tag_id": "595",
+            "parent_id": "3",
+            "tag_name": "电子"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1705",
+            "parent_id": "4",
+            "tag_name": "迷幻氛围"
+          },
+          {
+            "tag_id": "1777",
+            "parent_id": "1773",
+            "tag_name": "工作学习&咖啡厅"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1914",
+            "parent_id": "1894",
+            "tag_name": "瑜伽练习"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1915",
+            "parent_id": "1894",
+            "tag_name": "氛围冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "955",
+            "parent_id": "100",
+            "tag_name": "2018"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "3158",
+            "parent_id": "960",
+            "tag_name": "电子纯音乐"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Flowers in the Wind",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "E4AC5F009D4C9789739E9E134F1505C6",
+        "filesize_128": 2399129,
+        "songname": "Flowers in the Wind",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=66",
+        "songid": 35811444,
+        "quality_level": 3,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2018-12-07",
+        "song_type": "9",
+        "file_size": 2399129,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "2018 Autumn Sleep Music Compilation for Peaceful Nights and Restful Days",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 149,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "124178589",
+        "filesize_flac": 11486697,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Massage Music、Sounds of Nature Relaxation、Avslappning Sound - Flowers in the Wind",
+        "author_name": "Massage Music、Sounds of Nature Relaxation、Avslappning Sound",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20181204/20181204030800236191.jpg",
+        "timelength_320": 149,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 8192,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "34",
+            "attr0": 52,
+            "attr1": 0
+          },
+          "cid": 53296560,
+          "ogg_128_hash": "577ABC3ED22CA35FC6B31359B1A2A6BC",
+          "ogg_128_filesize": 1670516,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20181204/20181204030800236191.jpg",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "2018 Autumn Sleep Music Compilation for Peaceful Nights and Restful Days",
+        "filesize_ape": 0,
+        "album_id": "13380274",
+        "scid": 1048734883,
+        "privilege": 8,
+        "hash_128": "45F4EED2B4FA73BCE24D0372836C0F6B",
+        "mixsongid": "124178589",
+        "hash_320": "EE6D30E5683B8D6444C78579B291B0A1",
+        "suffix_audio_name": "",
+        "filesize_320": 5998190
+      },
+      {
+        "mv_hash": "",
+        "hash": "37812A54BD7CD9C418C15754E4D5B2A1",
+        "singerinfo": [
+          {
+            "name": "Dormir Sol",
+            "is_publish": "1",
+            "id": "5756101"
+          },
+          {
+            "name": "Musica Para Meditar",
+            "is_publish": "1",
+            "id": "655776"
+          },
+          {
+            "name": "Relaxamento Sons da Natureza Ruído Branco Musicas Clube",
+            "is_publish": "1",
+            "id": "1744265"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "969",
+            "parent_id": "100",
+            "tag_name": "2019"
+          },
+          {
+            "tag_id": "974",
+            "parent_id": "965",
+            "tag_name": "未细分轻音乐 Easy Listening"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1777",
+            "parent_id": "1773",
+            "tag_name": "工作学习&咖啡厅"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1914",
+            "parent_id": "1894",
+            "tag_name": "瑜伽练习"
+          },
+          {
+            "tag_id": "3163",
+            "parent_id": "960",
+            "tag_name": "新世纪纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Enfoque Consciente",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "8A7942CEDE4EC047476AC1067CA65F87",
+        "filesize_128": 2601334,
+        "songname": "Enfoque Consciente",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=46",
+        "songid": 159826512,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2019-01-08",
+        "song_type": "9",
+        "file_size": 2601334,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "Hojas Que Caen | Hermosas Hojas Que Caen | Dormir",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 162,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "315571665",
+        "filesize_flac": 10767107,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Dormir Sol、Musica Para Meditar、Relaxamento Sons da Natureza Ruído Branco Musicas Clube - Enfoque Consciente",
+        "author_name": "Dormir Sol、Musica Para Meditar、Relaxamento Sons da Natureza Ruído Branco Musicas Clube",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210525/20210525134102480609.jpg",
+        "timelength_320": 162,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1971862,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "F9F804F159500E7E531621849E302BFB",
+          "cid": 151557244,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210525/20210525134102480609.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "04C0863967D1D327A7B8DC43323B7A3A",
+          "ogg_128_hash": "4DBA8D49E617AC8035A21357902C95A0",
+          "ogg_320_filesize": 5082333
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Hojas Que Caen | Hermosas Hojas Que Caen | Dormir",
+        "filesize_ape": 0,
+        "album_id": "44944903",
+        "scid": 1049623772,
+        "privilege": 8,
+        "hash_128": "37812A54BD7CD9C418C15754E4D5B2A1",
+        "mixsongid": "315571665",
+        "hash_320": "8B48CEBAB4196D2E0DD1673F927FD3FD",
+        "suffix_audio_name": "",
+        "filesize_320": 6502824
+      },
+      {
+        "mv_hash": "",
+        "hash": "9A4B095D2F9DF422B6B68F64EA544ECA",
+        "singerinfo": [
+          {
+            "name": "Relajación Meditar Academie",
+            "is_publish": "1",
+            "id": "5723401"
+          },
+          {
+            "name": "Piano para Relajarse",
+            "is_publish": "1",
+            "id": "811153"
+          },
+          {
+            "name": "Fabricantes De Lluvia",
+            "is_publish": "1",
+            "id": "1139680"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "847",
+            "parent_id": "100",
+            "tag_name": "2017"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1777",
+            "parent_id": "1773",
+            "tag_name": "工作学习&咖啡厅"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "3163",
+            "parent_id": "960",
+            "tag_name": "新世纪纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Un Amanecer Inocente",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "DD49218AF3490717F8BF50FB18C41CBA",
+        "filesize_128": 3553507,
+        "songname": "Un Amanecer Inocente",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=26",
+        "songid": 161207785,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2018-08-13",
+        "song_type": "9",
+        "file_size": 3553507,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "Melodías Reconfortantes De La Naturaleza",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 222,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "317190983",
+        "filesize_flac": 17193405,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Relajación Meditar Academie、Piano para Relajarse、Fabricantes De Lluvia - Un Amanecer Inocente",
+        "author_name": "Relajación Meditar Academie、Piano para Relajarse、Fabricantes De Lluvia",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210602/20210602060702890716.jpg",
+        "timelength_320": 222,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2417582,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "E1C406542008542969CD7283AE74353B",
+          "cid": 152551635,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210602/20210602060702890716.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "BE18C56F2C12BED84DC21380ECB96275",
+          "ogg_128_hash": "F52CCF6330A146D0C9AA68F103B9B6DE",
+          "ogg_320_filesize": 7417445
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Melodías Reconfortantes De La Naturaleza",
+        "filesize_ape": 0,
+        "album_id": "45248247",
+        "scid": 1050227472,
+        "privilege": 8,
+        "hash_128": "9A4B095D2F9DF422B6B68F64EA544ECA",
+        "mixsongid": "317190983",
+        "hash_320": "413EF586084477887CEB674CCBE6DF12",
+        "suffix_audio_name": "",
+        "filesize_320": 8883113
+      },
+      {
+        "mv_hash": "",
+        "hash": "EEA75BD1F9D88E3274A5E55C5BD02459",
+        "singerinfo": [
+          {
+            "name": "Echoes Of Nature",
+            "is_publish": "1",
+            "id": "199296"
+          },
+          {
+            "name": "Baby Sleep",
+            "is_publish": "1",
+            "id": "358742"
+          },
+          {
+            "name": "Music to Relax in Free Time",
+            "is_publish": "1",
+            "id": "1062006"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "974",
+            "parent_id": "965",
+            "tag_name": "未细分轻音乐 Easy Listening"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1705",
+            "parent_id": "4",
+            "tag_name": "迷幻氛围"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1846",
+            "parent_id": "960",
+            "tag_name": "冥想音乐"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1915",
+            "parent_id": "1894",
+            "tag_name": "氛围冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Gracious",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "DAE11A6C7B5EC9415B7CE5F8B4FA943C",
+        "filesize_128": 3176837,
+        "songname": "Gracious",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=27",
+        "songid": 171294434,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2020-01-11",
+        "song_type": "9",
+        "file_size": 3176837,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "Best of Asian Spa Music",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 198,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "331525848",
+        "filesize_flac": 16646748,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Echoes Of Nature、Baby Sleep、Music to Relax in Free Time - Gracious",
+        "author_name": "Echoes Of Nature、Baby Sleep、Music to Relax in Free Time",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210812/20210812094001282600.jpg",
+        "timelength_320": 198,
+        "trans_param": {
+          "ogg_128_hash": "4F89B685209DA0E78AAECCF79DF996ED",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210812/20210812094001282600.jpg",
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2274137,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "4074",
+            "attr0": 16500,
+            "attr1": 0
+          },
+          "classmap": {
+            "attr0": 100663304
+          },
+          "cid": 164692935,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "hash_multitrack": "5FCD3565BF0E8AFAC3840482470CC9E8",
+          "appid_block": "3124",
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "cpy_grade": 5,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Best of Asian Spa Music",
+        "filesize_ape": 0,
+        "album_id": "47882224",
+        "scid": 1048768534,
+        "privilege": 8,
+        "hash_128": "EEA75BD1F9D88E3274A5E55C5BD02459",
+        "mixsongid": "331525848",
+        "hash_320": "159CB31DD65750367A591C0FE3322E7F",
+        "suffix_audio_name": "",
+        "filesize_320": 7941066
+      },
+      {
+        "mv_hash": "",
+        "hash": "85A5F6B6A64A8B5BD1FF40DFBAAE4B89",
+        "singerinfo": [
+          {
+            "name": "Ruido Blanco Para Bebes",
+            "is_publish": "1",
+            "id": "973725"
+          },
+          {
+            "name": "Canciones de Cuna para Bebés Académico",
+            "is_publish": "1",
+            "id": "978134"
+          },
+          {
+            "name": "Relajación",
+            "is_publish": "1",
+            "id": "698011"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "1918",
+            "parent_id": "0",
+            "tag_name": "2020"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Fácil De Escuchar",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "EB055353189FD0F78E2BF06E66D8EA59",
+        "filesize_128": 2083891,
+        "songname": "Fácil De Escuchar",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=55",
+        "songid": 240641295,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2020-02-09",
+        "song_type": "9",
+        "file_size": 2083891,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "40 Grabaciones Del Delta Feliz",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 130,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "408481577",
+        "filesize_flac": 7228295,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Ruido Blanco Para Bebes、Canciones de Cuna para Bebés Académico、Relajación - Fácil De Escuchar",
+        "author_name": "Ruido Blanco Para Bebes、Canciones de Cuna para Bebés Académico、Relajación",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220504/20220504012410725849.jpg",
+        "timelength_320": 130,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 8192,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1277498,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "6405FAC52E0817D113B1A435AE524AE2",
+          "cid": 209513733,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220504/20220504012410725849.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "D879CFEEB9846FE3702B4928778F1517",
+          "ogg_128_hash": "E81A5861C4E74DD21BDE07908C1F9E4D",
+          "ogg_320_filesize": 4764165
+        },
+        "music_trac": 0,
+        "album_audio_remark": "40 Grabaciones Del Delta Feliz",
+        "filesize_ape": 0,
+        "album_id": "57177860",
+        "scid": 1047842717,
+        "privilege": 8,
+        "hash_128": "85A5F6B6A64A8B5BD1FF40DFBAAE4B89",
+        "mixsongid": "408481577",
+        "hash_320": "73FE0683B9AB1753693583474E90F78A",
+        "suffix_audio_name": "",
+        "filesize_320": 5208860
+      },
+      {
+        "mv_hash": "",
+        "hash": "218CACAE637897F9BE2B49DE22A4B158",
+        "singerinfo": [
+          {
+            "name": "胡小鸥",
+            "is_publish": "1",
+            "id": "548479"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "974",
+            "parent_id": "965",
+            "tag_name": "未细分轻音乐 Easy Listening"
+          },
+          {
+            "tag_id": "1409",
+            "parent_id": "960",
+            "tag_name": "配乐 BGM"
+          },
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "1701",
+            "parent_id": "4",
+            "tag_name": "抒情伤怀"
+          },
+          {
+            "tag_id": "1736",
+            "parent_id": "3154",
+            "tag_name": "钢琴演奏"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1779",
+            "parent_id": "1773",
+            "tag_name": "独处时光"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1857",
+            "parent_id": "6",
+            "tag_name": "特别主题"
+          },
+          {
+            "tag_id": "2984",
+            "parent_id": "3154",
+            "tag_name": "提琴演奏"
+          },
+          {
+            "tag_id": "3094",
+            "parent_id": "3154",
+            "tag_name": "大提琴"
+          },
+          {
+            "tag_id": "3130",
+            "parent_id": "960",
+            "tag_name": "流行器乐"
+          },
+          {
+            "tag_id": "3154",
+            "parent_id": "3154",
+            "tag_name": "世界乐器体裁"
+          },
+          {
+            "tag_id": "3154",
+            "parent_id": "960",
+            "tag_name": "纯音乐乐器"
+          },
+          {
+            "tag_id": "3190",
+            "parent_id": "0",
+            "tag_name": "2022"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "诗情",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "462E6F5D210A880F4D4C52C7C35D6D40",
+        "filesize_128": 2889141,
+        "songname": "诗情",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=97",
+        "songid": 275334512,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2022-11-22",
+        "song_type": "9",
+        "file_size": 2889141,
+        "has_album": 1,
+        "pay_type": 3,
+        "extname": "mp3",
+        "album_name": "卿卿日常 电视剧原声带",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 180,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "463425550",
+        "filesize_flac": 13803792,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "胡小鸥 - 诗情",
+        "author_name": "胡小鸥",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20221118/20221118202807693011.jpg",
+        "timelength_320": 180,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 15488,
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 1816331,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "pay_block_tpl": 1,
+          "qualitymap": {
+            "bits": "3400000051004034",
+            "attr0": 1358970932,
+            "attr1": 1744830464
+          },
+          "is_original": 1,
+          "hash_multitrack": "A3AEC0454F3C0F7A0D156BE7806E275A",
+          "cid": 243799777,
+          "display": 0,
+          "ipmap": {
+            "attr0": 536887296
+          },
+          "ogg_320_hash": "C466FCA86214FA98C3FC8BA10B2C096C",
+          "hash_offset": {
+            "clip_hash": "E5396435D6B111F6ECC7BAFE1478C808",
+            "start_byte": 0,
+            "end_ms": 60000,
+            "end_byte": 960131,
+            "file_type": 0,
+            "start_ms": 0,
+            "offset_hash": "BD818A92E9CEEF38B83081358E614B7B"
+          },
+          "ogg_128_hash": "F7F41AD5C71E07BC312F5E1DEF396B0C",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20221118/20221118202807693011.jpg",
+          "ogg_320_filesize": 6000057
+        },
+        "music_trac": 0,
+        "album_audio_remark": "卿卿日常 电视剧原声带",
+        "filesize_ape": 0,
+        "album_id": "64632245",
+        "scid": 206069263,
+        "privilege": 10,
+        "hash_128": "218CACAE637897F9BE2B49DE22A4B158",
+        "mixsongid": "463425550",
+        "hash_320": "81F1ABD30061E3EB61813127BED33CA0",
+        "suffix_audio_name": "",
+        "filesize_320": 7222542
+      },
+      {
+        "mv_hash": "",
+        "hash": "1C7859B0583AC05201067590077FA0D1",
+        "singerinfo": [
+          {
+            "name": "Relaxamento Sons da Natureza Ruído Branco Musicas Clube",
+            "is_publish": "1",
+            "id": "1744265"
+          },
+          {
+            "name": "Sons da Natureza & Relaxamento",
+            "is_publish": "1",
+            "id": "1772472"
+          },
+          {
+            "name": "Musica Relajante Para Dormir",
+            "is_publish": "1",
+            "id": "966807"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "1918",
+            "parent_id": "0",
+            "tag_name": "2020"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "El Estrés Desaparece Para Siempre",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "7D063028A1D971C3DE06B9CF1A930BD7",
+        "filesize_128": 2779370,
+        "songname": "El Estrés Desaparece Para Siempre",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=86",
+        "songid": 232800882,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2020-06-18",
+        "song_type": "9",
+        "file_size": 2779370,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "40 Canciones Pacíficas Para la Serenidad Definitiva Del Spa",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 173,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "408340186",
+        "filesize_flac": 6395450,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Relaxamento Sons da Natureza Ruído Branco Musicas Clube、Sons da Natureza & Relaxamento、Musica Relajante Para Dormir - El Estrés Desaparece Para Siempre",
+        "author_name": "Relaxamento Sons da Natureza Ruído Branco Musicas Clube、Sons da Natureza & Relaxamento、Musica Relajante Para Dormir",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20220502/20220502211302881152.jpg",
+        "timelength_320": 173,
+        "trans_param": {
+          "ogg_128_hash": "D7F23F8E722ABF92AD63C687E2B982BD",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20220502/20220502211302881152.jpg",
+          "language": "纯音乐",
+          "cpy_attr0": 8192,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1476897,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "classmap": {
+            "attr0": 100663304
+          },
+          "cid": 209393738,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "hash_multitrack": "ADD6CA5D563F2BF2ACF29122D2FEA259",
+          "appid_block": "3124",
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "cpy_grade": 5,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "40 Canciones Pacíficas Para la Serenidad Definitiva Del Spa",
+        "filesize_ape": 0,
+        "album_id": "57150367",
+        "scid": 1049934589,
+        "privilege": 8,
+        "hash_128": "1C7859B0583AC05201067590077FA0D1",
+        "mixsongid": "408340186",
+        "hash_320": "9D68C018EB7AC125AF825860934E6EEB",
+        "suffix_audio_name": "",
+        "filesize_320": 6947920
+      },
+      {
+        "mv_hash": "",
+        "hash": "0C9DE94A5CBA2E73FF1B911DE6956BDA",
+        "singerinfo": [
+          {
+            "name": "Musica para Dormir Dream House",
+            "is_publish": "1",
+            "id": "836616"
+          },
+          {
+            "name": "Academia de Música para Massagem e Relaxamento",
+            "is_publish": "1",
+            "id": "1168659"
+          },
+          {
+            "name": "Especialistas de Musica para Dormir",
+            "is_publish": "1",
+            "id": "1171029"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "20",
+            "parent_id": "7",
+            "tag_name": "英语"
+          },
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐 Pure Music"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1915",
+            "parent_id": "1894",
+            "tag_name": "氛围冥想"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "121",
+            "parent_id": "100",
+            "tag_name": "2011"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Amanecer De La Inocencia",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "100615B8A3F514245804F639861CB3B4",
+        "filesize_128": 2369914,
+        "songname": "Amanecer De La Inocencia",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=59",
+        "songid": 118653360,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2020-07-22",
+        "song_type": "9",
+        "file_size": 2369914,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "Zona de Meditación Profunda",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 148,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "268084108",
+        "filesize_flac": 12642987,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Musica para Dormir Dream House、Academia de Música para Massagem e Relaxamento、Especialistas de Musica para Dormir - Amanecer De La Inocencia",
+        "author_name": "Musica para Dormir Dream House、Academia de Música para Massagem e Relaxamento、Especialistas de Musica para Dormir",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20200721/20200721140506383036.jpg",
+        "timelength_320": 148,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1597168,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "pay_block_tpl": 1,
+          "hash_multitrack": "0F8370AA263AED11A8667B41635F0CDC",
+          "cid": 108283579,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20200721/20200721140506383036.jpg",
+          "display": 0,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "ogg_320_hash": "B118E6F1A660BC0E5ED4119592BC47DB",
+          "ogg_128_hash": "BCA4484B162047696B8A9062C0DC40C9",
+          "ogg_320_filesize": 3837764
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Zona de Meditación Profunda",
+        "filesize_ape": 0,
+        "album_id": "38586636",
+        "scid": 1050125766,
+        "privilege": 8,
+        "hash_128": "0C9DE94A5CBA2E73FF1B911DE6956BDA",
+        "mixsongid": "268084108",
+        "hash_320": "32897806FC8E830A3E2BEA7428D26AB6",
+        "suffix_audio_name": "",
+        "filesize_320": 5923868
+      },
+      {
+        "mv_hash": "",
+        "hash": "8C11B1077682506AE1C8A38B36D177CC",
+        "singerinfo": [
+          {
+            "name": "Yoga Sounds",
+            "is_publish": "1",
+            "id": "968986"
+          },
+          {
+            "name": "Yoga Workout Music",
+            "is_publish": "1",
+            "id": "830149"
+          },
+          {
+            "name": "Mindfulness Meditation World",
+            "is_publish": "1",
+            "id": "1125748"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "3163",
+            "parent_id": "960",
+            "tag_name": "新世纪纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Life",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "CF994C7D8955A35BC385FEEEBE680C67",
+        "filesize_128": 2266980,
+        "songname": "Life",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=57",
+        "songid": 184660225,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2020-03-09",
+        "song_type": "9",
+        "file_size": 2266980,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "Comforting Sounds | Relaxation and Serenity",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 141,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "347685455",
+        "filesize_flac": 10029582,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Yoga Sounds、Yoga Workout Music、Mindfulness Meditation World - Life",
+        "author_name": "Yoga Sounds、Yoga Workout Music、Mindfulness Meditation World",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20211104/20211104043906516254.jpg",
+        "timelength_320": 141,
+        "trans_param": {
+          "ogg_128_hash": "6165F27DF97E4001CCFB15CFAE3BE950",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20211104/20211104043906516254.jpg",
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1509648,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "4074",
+            "attr0": 16500,
+            "attr1": 0
+          },
+          "classmap": {
+            "attr0": 100663304
+          },
+          "cid": 178621124,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "hash_multitrack": "1B3C56AC45FB4AE5BC914C2662F52304",
+          "appid_block": "3124",
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "cpy_grade": 5,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Comforting Sounds | Relaxation and Serenity",
+        "filesize_ape": 0,
+        "album_id": "50135394",
+        "scid": 1047455098,
+        "privilege": 8,
+        "hash_128": "8C11B1077682506AE1C8A38B36D177CC",
+        "mixsongid": "347685455",
+        "hash_320": "AA052E3F796B47B2EE8ADBD2FDFFDE9D",
+        "suffix_audio_name": "",
+        "filesize_320": 5666815
+      },
+      {
+        "mv_hash": "",
+        "hash": "9144CFBAC3940A072073866D66CD4EA3",
+        "singerinfo": [
+          {
+            "name": "Musica para Estudiar",
+            "is_publish": "1",
+            "id": "442229"
+          },
+          {
+            "name": "Relajación",
+            "is_publish": "1",
+            "id": "698011"
+          },
+          {
+            "name": "Nature Recordings",
+            "is_publish": "1",
+            "id": "836498"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "119",
+            "parent_id": "100",
+            "tag_name": "1991-2000"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "974",
+            "parent_id": "965",
+            "tag_name": "未细分轻音乐 Easy Listening"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Journey to Enlightenment",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "FD2C1D5B45097E85E82339113D77ACEE",
+        "filesize_128": 2049289,
+        "songname": "Journey to Enlightenment",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=68",
+        "songid": 105129828,
+        "quality_level": 3,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2019-12-24",
+        "song_type": "0",
+        "file_size": 2049289,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "30 Zen Yoga Sounds",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 128,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "249056094",
+        "filesize_flac": 8768176,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Musica para Estudiar、Relajación、Nature Recordings - Journey to Enlightenment",
+        "author_name": "Musica para Estudiar、Relajación、Nature Recordings",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20200202/20200202202208613324.jpg",
+        "timelength_320": 128,
+        "trans_param": {
+          "pay_block_tpl": 1,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1328052,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "74",
+            "attr0": 116,
+            "attr1": 0
+          },
+          "cpy_level": 1,
+          "cpy_grade": 5,
+          "cid": 89771598,
+          "display": 0,
+          "ogg_320_hash": "283AE75DC8BBDC40F93F61E51E604ED7",
+          "ipmap": {
+            "attr0": 536870912
+          },
+          "appid_block": "3124",
+          "ogg_128_hash": "D364CD2DFC160FF10821B0EEE70B871E",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20200202/20200202202208613324.jpg",
+          "ogg_320_filesize": 4056978
+        },
+        "music_trac": 0,
+        "album_audio_remark": "30 Zen Yoga Sounds",
+        "filesize_ape": 0,
+        "album_id": "36164724",
+        "scid": 1048077016,
+        "privilege": 8,
+        "hash_128": "9144CFBAC3940A072073866D66CD4EA3",
+        "mixsongid": "249056094",
+        "hash_320": "69B0EED0F001434713199EBBBDC4A77A",
+        "suffix_audio_name": "",
+        "filesize_320": 5122161
+      },
+      {
+        "mv_hash": "",
+        "hash": "C62A298922ABD8BCD44D1158C80087D9",
+        "singerinfo": [
+          {
+            "name": "Calming Piano Chillout Relaxation",
+            "is_publish": "1",
+            "id": "1007255"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "847",
+            "parent_id": "0",
+            "tag_name": "2017"
+          },
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Growing Stronger",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "65BF438AAB11F3936994077159164F36",
+        "filesize_128": 2113579,
+        "songname": "Growing Stronger",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=43",
+        "songid": 107232430,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2017-10-30",
+        "song_type": "9",
+        "file_size": 2113579,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "Time For Yourself - Calming Soundtrack For Self Love",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 132,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "252074630",
+        "filesize_flac": 8729347,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Calming Piano Chillout Relaxation - Growing Stronger",
+        "author_name": "Calming Piano Chillout Relaxation",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20200325/20200325201017663662.jpg",
+        "timelength_320": 132,
+        "trans_param": {
+          "cpy_grade": 5,
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20200325/20200325201017663662.jpg",
+          "language": "纯音乐",
+          "cpy_attr0": 8192,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1305600,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "is_original": 6,
+          "ogg_128_hash": "7513AF0CF889C055A606DE12591DD8DB",
+          "cid": 93096005,
+          "pay_block_tpl": 1,
+          "hash_multitrack": "A61C68A817848AF6F9D7870DB414F018",
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "display": 0,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "Time For Yourself - Calming Soundtrack For Self Love",
+        "filesize_ape": 0,
+        "album_id": "36787998",
+        "scid": 1049703391,
+        "privilege": 8,
+        "hash_128": "C62A298922ABD8BCD44D1158C80087D9",
+        "mixsongid": "252074630",
+        "hash_320": "34EAE45A898A440D7D6B46FF6C8B43E9",
+        "suffix_audio_name": "",
+        "filesize_320": 5283247
+      },
+      {
+        "mv_hash": "",
+        "hash": "E73A0E4CE0D279B01329E99391C188E3",
+        "singerinfo": [
+          {
+            "name": "Tinnitus",
+            "is_publish": "1",
+            "id": "526451"
+          },
+          {
+            "name": "Spa & Spa",
+            "is_publish": "1",
+            "id": "548649"
+          },
+          {
+            "name": "Tinnitus Aid",
+            "is_publish": "1",
+            "id": "1168716"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "1846",
+            "parent_id": "960",
+            "tag_name": "冥想音乐"
+          },
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "974",
+            "parent_id": "965",
+            "tag_name": "未细分轻音乐 Easy Listening"
+          },
+          {
+            "tag_id": "965",
+            "parent_id": "960",
+            "tag_name": "轻音乐"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1705",
+            "parent_id": "4",
+            "tag_name": "迷幻氛围"
+          },
+          {
+            "tag_id": "1915",
+            "parent_id": "1894",
+            "tag_name": "氛围冥想"
+          },
+          {
+            "tag_id": "1894",
+            "parent_id": "1885",
+            "tag_name": "瑜伽冥想"
+          },
+          {
+            "tag_id": "1885",
+            "parent_id": "5",
+            "tag_name": "运动精选"
+          },
+          {
+            "tag_id": "1916",
+            "parent_id": "1894",
+            "tag_name": "舒缓纯音"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          },
+          {
+            "tag_id": "635",
+            "parent_id": "1370",
+            "tag_name": "新世纪"
+          },
+          {
+            "tag_id": "1370",
+            "parent_id": "3",
+            "tag_name": "世界音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Heaven Moods",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "D3156A9635DB4FEE0582F2656F740BC2",
+        "filesize_128": 2390656,
+        "songname": "Heaven Moods",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=19",
+        "songid": 122324131,
+        "quality_level": 3,
+        "fail_process": 0,
+        "filesize_192": 0,
+        "publish_date": "2020-09-18",
+        "song_type": "9",
+        "file_size": 2390656,
+        "has_album": 1,
+        "pay_type": 0,
+        "extname": "mp3",
+        "album_name": "#1 Beautiful Melodies to Unleash the Spirit",
+        "type": "",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 149,
+        "level": 2,
+        "old_cpy": 1,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "273263536",
+        "filesize_flac": 9520814,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "Tinnitus、Spa & Spa、Tinnitus Aid - Heaven Moods",
+        "author_name": "Tinnitus、Spa & Spa、Tinnitus Aid",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20200904/20200904163404364413.jpg",
+        "timelength_320": 149,
+        "trans_param": {
+          "ogg_128_hash": "EC5E5B468BB8619872688A5DF3E17BDF",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20200904/20200904163404364413.jpg",
+          "language": "纯音乐",
+          "cpy_attr0": 33562624,
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 1623074,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "4074",
+            "attr0": 16500,
+            "attr1": 0
+          },
+          "classmap": {
+            "attr0": 100663304
+          },
+          "cid": 113078025,
+          "pay_block_tpl": 1,
+          "display": 0,
+          "hash_multitrack": "769D70600B58507E52CFCE17DCA9DE06",
+          "appid_block": "3124",
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "cpy_grade": 5,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "#1 Beautiful Melodies to Unleash the Spirit",
+        "filesize_ape": 0,
+        "album_id": "39148708",
+        "scid": 1044027535,
+        "privilege": 8,
+        "hash_128": "E73A0E4CE0D279B01329E99391C188E3",
+        "mixsongid": "273263536",
+        "hash_320": "309B8BB438A1FABA145CD3247A86ACDC",
+        "suffix_audio_name": "",
+        "filesize_320": 5976119
+      },
+      {
+        "mv_hash": "",
+        "hash": "2A623FDB4CA4270CC119C9F905F3838C",
+        "singerinfo": [
+          {
+            "name": "The Rain Library",
+            "is_publish": "1",
+            "id": "841216"
+          },
+          {
+            "name": "White Noise For Baby Sleep",
+            "is_publish": "1",
+            "id": "944215"
+          },
+          {
+            "name": "Water Spa",
+            "is_publish": "1",
+            "id": "1572528"
+          }
+        ],
+        "tags": [
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐"
+          },
+          {
+            "tag_id": "1918",
+            "parent_id": "0",
+            "tag_name": "2020"
+          },
+          {
+            "tag_id": "3290",
+            "parent_id": "7",
+            "tag_name": "纯音乐"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "ori_audio_name": "Walking In Nature",
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "46967AFD7B1001E0AF2BCEE7DE51A680",
+        "filesize_128": 2241443,
+        "songname": "Walking In Nature",
+        "hash_other": "",
+        "alg_path": "s=2;itid=;citid=;a=0;source=42",
+        "songid": 110034130,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "publish_date": "2020-02-12",
+        "song_type": "9",
+        "file_size": 2241443,
+        "has_album": 1,
+        "pay_type": 1,
+        "extname": "mp3",
+        "album_name": "2020 Summer Peaceful Sounds of Nature for Meditation",
+        "type": "audio",
+        "is_mv_file_head": 0,
+        "remark": "",
+        "filesize_other": 0,
+        "source": 8,
+        "time_length": 140,
+        "level": 2,
+        "old_cpy": 0,
+        "is_file_head": 100,
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "album_audio_id": "256330025",
+        "filesize_flac": 7954302,
+        "hash_ape": "",
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "The Rain Library、White Noise For Baby Sleep、Water Spa - Walking In Nature",
+        "author_name": "The Rain Library、White Noise For Baby Sleep、Water Spa",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20200430/20200430095621358649.jpg",
+        "timelength_320": 140,
+        "trans_param": {
+          "cpy_grade": 5,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "language": "纯音乐",
+          "cpy_attr0": 8192,
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0,
+          "cpy_map": "2",
+          "qualitymap": {
+            "bits": "74",
+            "attr0": 116,
+            "attr1": 0
+          },
+          "cid": 98551548,
+          "ogg_128_hash": "22D46F9E2925CDEF8D63AFCD366614FF",
+          "ogg_128_filesize": 1489307,
+          "ipmap": {
+            "attr0": 137975840768
+          },
+          "appid_block": "3124",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20200430/20200430095621358649.jpg",
+          "pay_block_tpl": 1,
+          "cpy_level": 1
+        },
+        "music_trac": 0,
+        "album_audio_remark": "2020 Summer Peaceful Sounds of Nature for Meditation",
+        "filesize_ape": 0,
+        "album_id": "37434599",
+        "scid": 1046448528,
+        "privilege": 8,
+        "hash_128": "2A623FDB4CA4270CC119C9F905F3838C",
+        "mixsongid": "256330025",
+        "hash_320": "967F45231063888B509E602E4DDDF5EA",
+        "suffix_audio_name": "",
+        "filesize_320": 5602691
+      },
+      {
+        "mv_hash": "",
+        "hash": "3B8D68D32F041D1C014D3081A0D46418",
+        "author_name": "无名之辈、DJ Luo、跑调",
+        "tags": [
+          {
+            "tag_id": "960",
+            "parent_id": "3",
+            "tag_name": "纯音乐"
+          },
+          {
+            "tag_id": "1608",
+            "parent_id": "960",
+            "tag_name": "未细分纯音乐 Pure Music"
+          },
+          {
+            "tag_id": "1704",
+            "parent_id": "4",
+            "tag_name": "安静舒缓"
+          },
+          {
+            "tag_id": "1773",
+            "parent_id": "5",
+            "tag_name": "活动"
+          },
+          {
+            "tag_id": "1776",
+            "parent_id": "1773",
+            "tag_name": "哄你入睡"
+          },
+          {
+            "tag_id": "1814",
+            "parent_id": "6",
+            "tag_name": "无法判断主题"
+          }
+        ],
+        "official_songname": "",
+        "bitrate": 128,
+        "is_mv_file_head": 0,
+        "hash_192": "",
+        "has_accompany": 0,
+        "hash_flac": "3B14547BCD5B76278DECD5B9F15EDEE0",
+        "alg_path": "s=2;itid=;citid=;a=0;source=35",
+        "bitrate_flac": 605,
+        "songname": "故人",
+        "album_name": "故人",
+        "singerinfo": [
+          {
+            "name": "无名之辈",
+            "is_publish": "1",
+            "id": "1094939"
+          },
+          {
+            "name": "DJ Luo",
+            "is_publish": "1",
+            "id": "809440"
+          },
+          {
+            "name": "跑调",
+            "is_publish": "1",
+            "id": "1035239"
+          }
+        ],
+        "level": 2,
+        "pay_type": 3,
+        "songid": 233351418,
+        "quality_level": 3,
+        "fail_process": 4,
+        "filesize_192": 0,
+        "trans_param": {
+          "cpy_level": 1,
+          "qualitymap": {
+            "bits": "4034",
+            "attr0": 16436,
+            "attr1": 0
+          },
+          "cpy_map": "2",
+          "cid": 129932313,
+          "cpy_grade": 22,
+          "classmap": {
+            "attr0": 100663304
+          },
+          "pay_block_tpl": 1,
+          "free_for_ad": 32,
+          "language": "纯音乐",
+          "hash_multitrack": "847292C85D8248D4861B26FDD42C5BD9",
+          "cpy_attr0": 8192,
+          "ipmap": {
+            "attr0": 536887296
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20210119/20210119224602155700.jpg",
+          "musicpack_advance": 0,
+          "display": 0,
+          "display_rate": 0
+        },
+        "filesize_other": 0,
+        "album_id": "41188624",
+        "has_album": 1,
+        "filesize_flac": 13428155,
+        "extname": "mp3",
+        "song_type": "9",
+        "type": "audio",
+        "is_file_head": 100,
+        "remark": "",
+        "publish_date": "2021-01-20",
+        "source": 8,
+        "time_length": 177,
+        "privilege_flac": "10",
+        "old_cpy": 0,
+        "album_audio_id": "290863307",
+        "language": "纯音乐",
+        "is_file_head_320": 100,
+        "relate_goods": {},
+        "hash_other": "",
+        "hash_ape": "",
+        "filesize_128": 2837151,
+        "mv_type": 0,
+        "publish_time": 0,
+        "filename": "无名之辈、DJ Luo、跑调 - 故人",
+        "album_audio_remark": "故人",
+        "timelength_320": 177,
+        "hash_320": "25F27C4FE55B2677A4DD5CC2E2F14089",
+        "timelength_flac": 177,
+        "music_trac": 0,
+        "hash_128": "3B8D68D32F041D1C014D3081A0D46418",
+        "filesize_ape": 0,
+        "file_size": 2837151,
+        "scid": 92418348,
+        "privilege": 8,
+        "ori_audio_name": "故人",
+        "mixsongid": "290863307",
+        "sizable_cover": "http://imge.kugou.com/stdmusic/{size}/20210119/20210119224602155700.jpg",
+        "suffix_audio_name": "",
+        "filesize_320": 7092811
+      }
+    ],
+    "sign": "1e7d21d7f54282025a2df3e100aced4d",
+    "song_list_size": 30
+  },
+  "status": 1,
+  "error_code": 0
+}

@@ -1,0 +1,964 @@
+{
+  "data": {
+    "timestamp": 1788516885,
+    "is_scene_grey_user": false,
+    "list": [
+      {
+        "label": "催眠/纯音/雨声",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 595,
+          "module_sort": 1,
+          "module_extra": [
+            {
+              "quku_tag_id": 94301,
+              "sort": 1,
+              "tag_name": "快速入睡",
+              "pic": "http://mobileservice.bssdl.kugou.com/014ccd5c100b9f5f5f052bd9bafa41d7.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42907,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94457,
+              "sort": 2,
+              "tag_name": "纯音乐",
+              "pic": "http://mobileservice.bssdl.kugou.com/2e2e4e83c80b421c8b5d88469f9d6d9d.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42923,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94302,
+              "sort": 3,
+              "tag_name": "催眠脑波",
+              "pic": "http://mobileservice.bssdl.kugou.com/4c714c375f6004d3a0d19f100b13a24b.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42702,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93476,
+              "sort": 5,
+              "tag_name": "雨声",
+              "pic": "http://mobileservice.bssdl.kugou.com/2a2f3334edf2f030bb961b6b57e6a9c6.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42830,
+              "content_type": 1,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 1,
+        "title_pic": "http://mobileservicebssdl.kugou.com/9ff5560c58d9516ae913f2a52ca30897.png",
+        "intro": "",
+        "popup": "助眠",
+        "icon": "http://mobileservice.bssdl.kugou.com/c636a507bdff78e2431eed1fc041c642.png",
+        "scene_type": 1,
+        "title": "助眠专区",
+        "color": "#256688",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/8d793a52771d257ab35543c85002f6b3.jpeg",
+        "pic": "http://mobileservice.bssdl.kugou.com/e229c20d906c5f8795659e57f826cfb7.jpg",
+        "extra": {
+          "song_count": 1134,
+          "view_num": 18266723
+        },
+        "module_list": [],
+        "scene_id": 1
+      },
+      {
+        "label": "DJ/流行/嗨歌",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 675,
+          "module_sort": 1,
+          "module_extra": [
+            {
+              "quku_tag_id": 93439,
+              "sort": 1,
+              "tag_name": "DJ",
+              "pic": "http://mobileservice.bssdl.kugou.com/bd731646bf8ee62e7a9650ea34a83386.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42903,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93440,
+              "sort": 2,
+              "tag_name": "流行",
+              "pic": "http://mobileservice.bssdl.kugou.com/1ae2c6a7f50f280dd502be6f645a9661.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42916,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93438,
+              "sort": 3,
+              "tag_name": "经典",
+              "pic": "http://mobileservice.bssdl.kugou.com/278745163e2bf5d76380a568922b09ab.png",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42900,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93444,
+              "sort": 4,
+              "tag_name": "放松",
+              "pic": "http://mobileservice.bssdl.kugou.com/3f8f9ff5e5bf70208b9f157875bbb8f6.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42603,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93445,
+              "sort": 5,
+              "tag_name": "粤语",
+              "pic": "http://mobileservicebssdl.kugou.com/4a7c5a767748f47191f5c51601bb0938.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 43197,
+              "content_type": 6,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 2,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/df311be80769d6d19d4251054eebeeed.png",
+        "intro": "",
+        "popup": "车载",
+        "icon": "http://mobileservice.bssdl.kugou.com/e299049f2ea353253a7822311945d92b.png",
+        "scene_type": 1,
+        "title": "车载专区",
+        "color": "#644D96",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/c269deafd8188561b9fef413d0a0e294.jpg",
+        "pic": "http://mobileservice.bssdl.kugou.com/5aa2ce339397e4110dda78245a054483.jpg",
+        "extra": {
+          "song_count": 626783,
+          "view_num": 46378874
+        },
+        "module_list": [
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "开车必听",
+            "module_sort": 35,
+            "module_id": 158,
+            "module_intro": "",
+            "module_abtest": ""
+          }
+        ],
+        "scene_id": 17
+      },
+      {
+        "label": "开心/伤感/放松",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 712,
+          "module_sort": 1,
+          "module_extra": [
+            {
+              "quku_tag_id": 93480,
+              "sort": 1,
+              "tag_name": "悲伤",
+              "pic": "http://mobileservicebssdl.kugou.com/9325eb37a4d06dab2ab96e6bc8abdf78.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42987,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93479,
+              "sort": 2,
+              "tag_name": "超开心",
+              "pic": "http://mobileservicebssdl.kugou.com/83353f0a47150e5f6bfc0112b718a8bd.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42986,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94280,
+              "sort": 3,
+              "tag_name": "美滋滋",
+              "pic": "http://mobileservicebssdl.kugou.com/9719efaa93298c8c6f3e55d50c04c25b.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 43260,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94278,
+              "sort": 4,
+              "tag_name": "放松",
+              "pic": "http://mobileservicebssdl.kugou.com/00c36745e9a31acb9c9a2546714ce430.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42990,
+              "content_type": 6,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 3,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/20e3a58554196f4e09609f059893623c.png",
+        "intro": "",
+        "popup": "心情",
+        "icon": "http://mobileservice.bssdl.kugou.com/31258273f9e5b2235787f13519552402.png",
+        "scene_type": 1,
+        "title": "心情专区",
+        "color": "#C67C2F",
+        "bg_pic": "http://mobileservicebssdl.kugou.com/6e48520693edc8c30d9b40ea5c0061aa.jpeg",
+        "pic": "",
+        "extra": {
+          "song_count": 142919,
+          "view_num": 25441841
+        },
+        "module_list": [],
+        "scene_id": 26
+      },
+      {
+        "label": "专注/提神/励志",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 775,
+          "module_sort": 1,
+          "module_extra": [
+            {
+              "quku_tag_id": 93462,
+              "sort": 1,
+              "tag_name": "纯音乐",
+              "pic": "http://mobileservicebssdl.kugou.com/ea7b627d915798680f995ca220ae5468.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 43149,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93133,
+              "sort": 2,
+              "tag_name": "专注",
+              "pic": "http://mobileservicebssdl.kugou.com/54701a98359e9b1b0c16149c2ef8a37b.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42704,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93018,
+              "sort": 3,
+              "tag_name": "提神",
+              "pic": "http://mobileservicebssdl.kugou.com/f42999d2000ab0d472d6e2df21f89939.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42705,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93529,
+              "sort": 4,
+              "tag_name": "放松",
+              "pic": "http://mobileservicebssdl.kugou.com/0784c28fb9514a98657acfa27db8b296.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42706,
+              "content_type": 6,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 4,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/357fb5df18de20972bfe2259dfc2a597.png",
+        "intro": "",
+        "popup": "工作学习",
+        "icon": "http://mobileservice.bssdl.kugou.com/8835f2f3b1c30ff1781d90ee6b98383e.png",
+        "scene_type": 1,
+        "title": "工作学习",
+        "color": "#6D8857",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/7f5f106465fd9636e90b3cc5a822602f.jpeg",
+        "pic": "http://mobileservice.bssdl.kugou.com/c79ae464b9e7df8f70e418b4604dc41c.jpg",
+        "extra": {
+          "song_count": 23158,
+          "view_num": 11594572
+        },
+        "module_list": [],
+        "scene_id": 5
+      },
+      {
+        "label": "快速/中速/慢速",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 614,
+          "module_sort": 1,
+          "module_extra": [
+            {
+              "quku_tag_id": 94458,
+              "sort": 1,
+              "tag_name": "慢速",
+              "pic": "http://mobileservicebssdl.kugou.com/cfaca6a0a0c3aa5a64e14b6dd9c63954.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 43132,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93493,
+              "sort": 3,
+              "tag_name": "中速",
+              "pic": "http://mobileservicebssdl.kugou.com/9db5896af6af7709abb415ca0c2287a0.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 43107,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93492,
+              "sort": 5,
+              "tag_name": "快速",
+              "pic": "http://mobileservicebssdl.kugou.com/aebc7c0d61d4415f3bb869ff023a2209.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 43106,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94286,
+              "sort": 7,
+              "tag_name": "器械",
+              "pic": "http://mobileservicebssdl.kugou.com/3c4f3c0d4a9fd8bb4b843337993482ce.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 43156,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94284,
+              "sort": 9,
+              "tag_name": "骑行",
+              "pic": "http://mobileservicebssdl.kugou.com/4556f137f7b4057ec5cb3b0a40ddeee0.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42910,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93491,
+              "sort": 11,
+              "tag_name": "舒缓瑜伽",
+              "pic": "http://mobileservicebssdl.kugou.com/aa4b9bb0000c513d454ae9faf2d7fd31.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42922,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93490,
+              "sort": 13,
+              "tag_name": "跳绳",
+              "pic": "http://mobileservicebssdl.kugou.com/003f339249c3689b17ac138474b0054b.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42912,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93489,
+              "sort": 15,
+              "tag_name": "燃脂舞",
+              "pic": "http://mobileservicebssdl.kugou.com/4b87c8b7558fb05b5fad2aa1923f4c59.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42911,
+              "content_type": 6,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 5,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/061a426e760239993317cec280f6770c.png",
+        "intro": "",
+        "popup": "运动",
+        "icon": "http://mobileservice.bssdl.kugou.com/41ee742aa77499ddb29022ae7cfb027f.png",
+        "scene_type": 1,
+        "title": "运动专区",
+        "color": "#26786A",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/8f56fe3f0db56db324bfd60cef711e52.jpg",
+        "pic": "http://mobileservice.bssdl.kugou.com/78f80a96a80efc3b5d1471c194baf972.jpg",
+        "extra": {
+          "song_count": 25245,
+          "view_num": 10427598
+        },
+        "module_list": [],
+        "scene_id": 3
+      },
+      {
+        "label": "咖啡厅/服装店",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 713,
+          "module_sort": 1,
+          "module_extra": [
+            {
+              "quku_tag_id": 94455,
+              "sort": 1,
+              "tag_name": "服装店",
+              "pic": "http://mobileservice.bssdl.kugou.com/2b14fd8132b111ee6f578e2c02213307.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42834,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94294,
+              "sort": 2,
+              "tag_name": "咖啡厅",
+              "pic": "http://mobileservice.bssdl.kugou.com/27bdc1b9bf62ac3a882dae1704a5d164.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42385,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94454,
+              "sort": 3,
+              "tag_name": "奶茶店",
+              "pic": "http://mobileservice.bssdl.kugou.com/0b9febb1d985ee58a066b202b5da43d6.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42843,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94295,
+              "sort": 4,
+              "tag_name": "餐厅",
+              "pic": "http://mobileservice.bssdl.kugou.com/56335c2bdf5177fada2b16b2e71ec797.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42924,
+              "content_type": 1,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 6,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/d71e98310e7e4497a94a9d69fcfecadd.png",
+        "intro": "",
+        "popup": "店铺",
+        "icon": "http://mobileservice.bssdl.kugou.com/16667444796f6d68a142c85501dc1143.png",
+        "scene_type": 1,
+        "title": "店铺专区",
+        "color": "#C67C2F",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/f3aad37b56f7c8098f3bb54d53003295.jpg",
+        "pic": "http://mobileservice.bssdl.kugou.com/4e654360a2bd4325939e5b874089ba96.jpg",
+        "extra": {
+          "song_count": 228791,
+          "view_num": 4654739
+        },
+        "module_list": [
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "服装店",
+            "module_sort": 400,
+            "module_id": 63,
+            "module_intro": "",
+            "module_abtest": ""
+          },
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "餐饮店",
+            "module_sort": 403,
+            "module_id": 65,
+            "module_intro": "",
+            "module_abtest": ""
+          },
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "书店",
+            "module_sort": 600,
+            "module_id": 67,
+            "module_intro": "",
+            "module_abtest": ""
+          }
+        ],
+        "scene_id": 7
+      },
+      {
+        "label": "神曲/战歌/电音",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 643,
+          "module_sort": 1,
+          "module_extra": [
+            {
+              "quku_tag_id": 93485,
+              "sort": 1,
+              "tag_name": "神曲",
+              "pic": "http://mobileservice.bssdl.kugou.com/7e944efec1f386fdbe1cfaace7ee30cb.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42981,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93486,
+              "sort": 2,
+              "tag_name": "战歌",
+              "pic": "http://mobileservice.bssdl.kugou.com/c57656780a8439d86f8e20ce4fa954f6.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42982,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93487,
+              "sort": 3,
+              "tag_name": "动漫",
+              "pic": "http://mobileservice.bssdl.kugou.com/c459abeae84227043db03adb112664d8.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42983,
+              "content_type": 6,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93488,
+              "sort": 5,
+              "tag_name": "电音",
+              "pic": "http://mobileservice.bssdl.kugou.com/a0c880be44fb92ff1262461aef65f2df.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42984,
+              "content_type": 6,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 7,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/680acb0f59d6c12af6269dffacafa73c.png",
+        "intro": "",
+        "popup": "玩游戏",
+        "icon": "http://mobileservice.bssdl.kugou.com/50f8b64c322d12e951971086f039552a.png",
+        "scene_type": 1,
+        "title": "游戏专区",
+        "color": "#7C407C",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/e60a0151ced2a099bac8105342a8674d.jpeg",
+        "pic": "",
+        "extra": {
+          "song_count": 46928,
+          "view_num": 4037709
+        },
+        "module_list": [],
+        "scene_id": 29
+      },
+      {
+        "label": "草原风/吉特巴",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 901,
+          "module_sort": 1,
+          "module_extra": [
+            {
+              "quku_tag_id": 94298,
+              "sort": 1,
+              "tag_name": "吉特巴",
+              "pic": "http://mobileservicebssdl.kugou.com/c5b418d45ecc6cbc374d8ff44650ab3f.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42391,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93465,
+              "sort": 2,
+              "tag_name": "交谊舞",
+              "pic": "http://mobileservicebssdl.kugou.com/9d1f2d550e34a09ed275b305f707ca8e.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42397,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94299,
+              "sort": 3,
+              "tag_name": "三步舞",
+              "pic": "http://mobileservicebssdl.kugou.com/2085967ccccfa702c6f8fa3a3661c76a.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42393,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94300,
+              "sort": 4,
+              "tag_name": "草原风",
+              "pic": "http://mobileservicebssdl.kugou.com/8abaf75ddcfff62c6f70d8329b9e30b6.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42395,
+              "content_type": 1,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 8,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/a8ec1627d55af0d2b253e03cf26d7523.png",
+        "intro": "",
+        "popup": "广场舞",
+        "icon": "http://mobileservice.bssdl.kugou.com/d817137e51af3d03f7f2b7e2d67ec9cc.png",
+        "scene_type": 1,
+        "title": "广场舞",
+        "color": "#7C407C",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/860070b8670faa05a91f703747d9ffc0.jpg",
+        "pic": "http://mobileservice.bssdl.kugou.com/c7372a9269f266d8f475fd69f6c2525e.png",
+        "extra": {
+          "song_count": 43351,
+          "view_num": 1806988
+        },
+        "module_list": [
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "广场舞曲",
+            "module_sort": 102,
+            "module_id": 83,
+            "module_intro": "",
+            "module_abtest": ""
+          },
+          {
+            "is_publish": 1,
+            "module_type": 3,
+            "module_style": 1,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "舞蹈视频",
+            "module_sort": 103,
+            "module_id": 85,
+            "module_intro": "",
+            "module_abtest": ""
+          }
+        ],
+        "scene_id": 9
+      },
+      {
+        "label": "舒缓/专业推荐",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 540,
+          "module_sort": 61,
+          "module_extra": [
+            {
+              "quku_tag_id": 93502,
+              "sort": 999,
+              "tag_name": "赶走焦虑",
+              "pic": "",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42864,
+              "content_type": 1,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 8,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/abb202720a78f05485de70d33e538b6b.png",
+        "intro": "",
+        "popup": "疗愈",
+        "icon": "http://mobileservice.bssdl.kugou.com/bff15ec9a212205a70826a449e9cde93.png",
+        "scene_type": 0,
+        "title": "疗愈专区",
+        "color": "#26786A",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/3ca3c2d7f92d40312c2f404afe6c2d2a.jpeg",
+        "pic": "http://mobileservice.bssdl.kugou.com/64bb28b8a417cb7eae4b79381dace959.jpg",
+        "extra": {
+          "song_count": 1292,
+          "view_num": 0
+        },
+        "module_list": [],
+        "scene_id": 11
+      },
+      {
+        "label": "中式/西式/纯乐",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 174,
+          "module_sort": 1,
+          "module_extra": [
+            {
+              "quku_tag_id": 93471,
+              "sort": 2,
+              "tag_name": "华语",
+              "pic": "http://mobileservice.bssdl.kugou.com/559c696b2c0f7fccc23678f4dfdaeb7f.png",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42629,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93472,
+              "sort": 4,
+              "tag_name": "英语",
+              "pic": "http://mobileservice.bssdl.kugou.com/cef47618b9d01ce3f229a4ba1fab859c.png",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42631,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 94479,
+              "sort": 8,
+              "tag_name": "国风",
+              "pic": "http://mobileservice.bssdl.kugou.com/ffd63d49f2e84c66f73cdf778cb54ccd.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42625,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93470,
+              "sort": 999,
+              "tag_name": "纯音乐",
+              "pic": "http://mobileservice.bssdl.kugou.com/bc80642e35daf15a3476bdaa4d3bf7a8.png",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42627,
+              "content_type": 1,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 9,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/7836149be66183a5ed4cfbd15ab6a150.png",
+        "intro": "",
+        "popup": "婚礼",
+        "icon": "http://mobileservice.bssdl.kugou.com/3fc81e90dd8e8c6c002eb576f7ecec67.png",
+        "scene_type": 0,
+        "title": "婚礼专区",
+        "color": "#AF6266",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/e920ece73736e6cf880c330e926b86b5.jpeg",
+        "pic": "http://mobileservice.bssdl.kugou.com/0da8853123522fb10b7a15d289194250.jpg",
+        "extra": {
+          "song_count": 8696,
+          "view_num": 0
+        },
+        "module_list": [
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "歌单推荐",
+            "module_sort": 10,
+            "module_id": 160,
+            "module_intro": "",
+            "module_abtest": ""
+          },
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "歌单推荐",
+            "module_sort": 15,
+            "module_id": 161,
+            "module_intro": "",
+            "module_abtest": ""
+          }
+        ],
+        "scene_id": 18
+      },
+      {
+        "label": "安胎/智力开发",
+        "is_publish": 1,
+        "music_tag": {
+          "module_id": 166,
+          "module_sort": 100,
+          "module_extra": [
+            {
+              "quku_tag_id": 93525,
+              "sort": 1,
+              "tag_name": "备孕",
+              "pic": "http://mobileservice.bssdl.kugou.com/721cb4536d27d81e2f1e7d6bce4447ba.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42421,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93524,
+              "sort": 2,
+              "tag_name": "安胎",
+              "pic": "http://mobileservice.bssdl.kugou.com/04a430a206eed39ecc72c1dc1cff3d2a.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42441,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93526,
+              "sort": 3,
+              "tag_name": "胎教",
+              "pic": "http://mobileservice.bssdl.kugou.com/1aa39b741020af0a4c13f79f59f8afc9.jpg",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42639,
+              "content_type": 1,
+              "select_tag": 0
+            },
+            {
+              "quku_tag_id": 93527,
+              "sort": 5,
+              "tag_name": "智力开发",
+              "pic": "http://mobileservice.bssdl.kugou.com/2a32c04dacf03ed77dc97e116a637571.png",
+              "play_order": 2,
+              "abtest": "",
+              "tag_id": 42640,
+              "content_type": 1,
+              "select_tag": 0
+            }
+          ]
+        },
+        "sort": 10,
+        "title_pic": "http://mobileservice.bssdl.kugou.com/7902cb3f1b1280dfbf35b147ff05d090.png",
+        "intro": "医学支持：广州医科大学附属第三医院生殖医学中心；音乐处方：由鲁新华工作室提供",
+        "popup": "母婴",
+        "icon": "http://mobileservice.bssdl.kugou.com/ba85a4d42d1897c1c73d3fd6c1544c8f.png",
+        "scene_type": 0,
+        "title": "母婴专区",
+        "color": "#AF6266",
+        "bg_pic": "http://mobileservice.bssdl.kugou.com/8a27af2d957a0a6456ab30eb3cabd7b0.jpg",
+        "pic": "http://mobileservice.bssdl.kugou.com/9316b3737a437c863bc426649a44f668.jpg",
+        "extra": {
+          "song_count": 730,
+          "view_num": 0
+        },
+        "module_list": [
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "备孕",
+            "module_sort": 115,
+            "module_id": 101,
+            "module_intro": "",
+            "module_abtest": ""
+          },
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "安胎",
+            "module_sort": 120,
+            "module_id": 103,
+            "module_intro": "",
+            "module_abtest": ""
+          },
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "胎教",
+            "module_sort": 140,
+            "module_id": 89,
+            "module_intro": "",
+            "module_abtest": ""
+          },
+          {
+            "is_publish": 1,
+            "module_type": 2,
+            "module_style": 8,
+            "is_show": 1,
+            "module_label": "",
+            "need_login": 0,
+            "module_title": "新生儿智力开发",
+            "module_sort": 150,
+            "module_id": 380,
+            "module_intro": "",
+            "module_abtest": ""
+          }
+        ],
+        "scene_id": 13
+      }
+    ]
+  },
+  "errcode": 0,
+  "status": 1,
+  "error": ""
+}

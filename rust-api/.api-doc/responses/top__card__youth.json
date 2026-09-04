@@ -1,0 +1,4 @@
+{
+  "status": 0,
+  "msg": "error sending request for url (https://gateway.kugou.comyouth/v1/song/single_card_recommend?dfid=-&mid=66759400758721805038086495813949956634&uuid=-&appid=1005&clientver=20489&clienttime=1788517581&card_id=3005&area_code=1&platform=ops&module_id=1&ver=v2&pagesize=30&signature=32f2c78594e8dcd1b478be1eee593442)"
+}

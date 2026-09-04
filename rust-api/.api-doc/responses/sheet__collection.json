@@ -1,0 +1,127 @@
+{
+  "data": {
+    "good_selection": {
+      "list": [
+        {
+          "tag_list": [
+            "推荐",
+            "钢琴"
+          ],
+          "title": "宝藏推荐 | 那些有意思的独立音乐人的谱单",
+          "collection_type": 1,
+          "view_num": 486900,
+          "collection_id": "59",
+          "song_list": [
+            {
+              "song_name": "夜空中最亮的星",
+              "album_audio_id": 32054655,
+              "audio_id": 104410
+            },
+            {
+              "song_name": "南山南",
+              "album_audio_id": 32145284,
+              "audio_id": 4257452
+            },
+            {
+              "song_name": "骄傲的少年",
+              "album_audio_id": 36993945,
+              "audio_id": 21087182
+            }
+          ],
+          "info": "",
+          "icon": "http://mobileservice.bssdl.kugou.com/3905240f7ab9003c2a5cebb6c91a1207.jpg"
+        },
+        {
+          "tag_list": [
+            "推荐",
+            "吉他"
+          ],
+          "title": "吉他谱 | 华语流行热歌精选",
+          "collection_type": 1,
+          "view_num": 357641,
+          "collection_id": "69",
+          "song_list": [
+            {
+              "song_name": "最佳损友 (To My Friend Special Mix)",
+              "album_audio_id": 28139637,
+              "audio_id": 169738
+            },
+            {
+              "song_name": "夜空中最亮的星",
+              "album_audio_id": 32054655,
+              "audio_id": 104410
+            },
+            {
+              "song_name": "你就不要想起我",
+              "album_audio_id": 32089443,
+              "audio_id": 985220
+            }
+          ],
+          "info": "",
+          "icon": "http://mobileservice.bssdl.kugou.com/44cf4d140bde6e2854b02e4593e1044a.jpg"
+        },
+        {
+          "tag_list": [
+            "推荐",
+            "其他"
+          ],
+          "title": "简谱 | 初学者必弹的流行热曲",
+          "collection_type": 1,
+          "view_num": 1189172,
+          "collection_id": "58",
+          "song_list": [
+            {
+              "song_name": "可惜没如果",
+              "album_audio_id": 27783247,
+              "audio_id": 6288624
+            },
+            {
+              "song_name": "喜欢你",
+              "album_audio_id": 28139826,
+              "audio_id": 4195715
+            },
+            {
+              "song_name": "宁夏",
+              "album_audio_id": 28140119,
+              "audio_id": 272846
+            }
+          ],
+          "info": "",
+          "icon": "http://mobileservice.bssdl.kugou.com/4b5b4dd35b0f41e0c1d6a75032f98c02.jpg"
+        },
+        {
+          "tag_list": [
+            "推荐",
+            "钢琴"
+          ],
+          "title": "林俊杰-行走的CD",
+          "collection_type": 1,
+          "view_num": 74022,
+          "collection_id": "26",
+          "song_list": [
+            {
+              "song_name": "Always Online",
+              "album_audio_id": 32068125,
+              "audio_id": 423844
+            },
+            {
+              "song_name": "江南",
+              "album_audio_id": 32125113,
+              "audio_id": 328926
+            },
+            {
+              "song_name": "冻结",
+              "album_audio_id": 32138888,
+              "audio_id": 243633
+            }
+          ],
+          "info": "",
+          "icon": "http://mobileservice.bssdl.kugou.com/38838f3596ff0b6257cdbe0b592dc8e5.jpg"
+        }
+      ]
+    }
+  },
+  "errcode": 0,
+  "status": 1,
+  "error": ""
+}

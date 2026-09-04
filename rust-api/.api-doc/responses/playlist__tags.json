@@ -1,0 +1,594 @@
+{
+  "data": [
+    {
+      "parent_id": "0",
+      "sort": "1",
+      "tag_id": "5",
+      "tag_name": "场景",
+      "son": [
+        {
+          "parent_id": "5",
+          "tag_id": "587",
+          "tag_name": "学习",
+          "sort": "1"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "660",
+          "tag_name": "工作",
+          "sort": "2"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "1104",
+          "tag_name": "通勤",
+          "sort": "3"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "69",
+          "tag_name": "运动",
+          "sort": "4"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "67",
+          "tag_name": "校园",
+          "sort": "5"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "585",
+          "tag_name": "旅途",
+          "sort": "6"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "61",
+          "tag_name": "咖啡厅",
+          "sort": "7"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "581",
+          "tag_name": "店铺",
+          "sort": "8"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "668",
+          "tag_name": "清晨",
+          "sort": "9"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "670",
+          "tag_name": "下午茶",
+          "sort": "10"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "1105",
+          "tag_name": "夜晚",
+          "sort": "11"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "583",
+          "tag_name": "睡前",
+          "sort": "12"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "586",
+          "tag_name": "派对",
+          "sort": "13"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "1106",
+          "tag_name": "宅家",
+          "sort": "14"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "63",
+          "tag_name": "车载",
+          "sort": "15"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "64",
+          "tag_name": "夜店",
+          "sort": "16"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "88",
+          "tag_name": "婚礼",
+          "sort": "17"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "678",
+          "tag_name": "瑜伽",
+          "sort": "18"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "664",
+          "tag_name": "做家务",
+          "sort": "19"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "580",
+          "tag_name": "公共交通",
+          "sort": "20"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "11219",
+          "tag_name": "茶馆",
+          "sort": "21"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "11296",
+          "tag_name": "露营",
+          "sort": "22"
+        },
+        {
+          "parent_id": "5",
+          "tag_id": "11414",
+          "tag_name": "酷狗铃声",
+          "sort": "9999"
+        }
+      ]
+    },
+    {
+      "parent_id": "0",
+      "sort": "2",
+      "tag_id": "1",
+      "tag_name": "主题",
+      "son": [
+        {
+          "parent_id": "1",
+          "tag_id": "1084",
+          "tag_name": "精选",
+          "sort": "2"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "12",
+          "tag_name": "经典",
+          "sort": "3"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "35",
+          "tag_name": "网络",
+          "sort": "4"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "74",
+          "tag_name": "游戏",
+          "sort": "5"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "17",
+          "tag_name": "DJ热碟",
+          "sort": "6"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "68",
+          "tag_name": "情歌对唱",
+          "sort": "7"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "10",
+          "tag_name": "舞曲",
+          "sort": "8"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "72",
+          "tag_name": "KTV",
+          "sort": "9"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "79",
+          "tag_name": "影视",
+          "sort": "10"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "638",
+          "tag_name": "翻唱",
+          "sort": "11"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "77",
+          "tag_name": "ACG",
+          "sort": "12"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "680",
+          "tag_name": "现场",
+          "sort": "13"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "80",
+          "tag_name": "综艺",
+          "sort": "14"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "1111",
+          "tag_name": "厂牌音乐",
+          "sort": "15"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "1112",
+          "tag_name": "BGM",
+          "sort": "16"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "1110",
+          "tag_name": "儿童",
+          "sort": "17"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "682",
+          "tag_name": "器乐演奏",
+          "sort": "18"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "1085",
+          "tag_name": "官方歌单",
+          "sort": "19"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "605",
+          "tag_name": "草原风",
+          "sort": "20"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "628",
+          "tag_name": "广场舞",
+          "sort": "21"
+        },
+        {
+          "parent_id": "1",
+          "tag_id": "629",
+          "tag_name": "铃声",
+          "sort": "23"
+        }
+      ]
+    },
+    {
+      "parent_id": "0",
+      "sort": "3",
+      "tag_id": "2",
+      "tag_name": "语种",
+      "son": [
+        {
+          "parent_id": "2",
+          "tag_id": "84",
+          "tag_name": "国语",
+          "sort": "1"
+        },
+        {
+          "parent_id": "2",
+          "tag_id": "20",
+          "tag_name": "英语",
+          "sort": "2"
+        },
+        {
+          "parent_id": "2",
+          "tag_id": "19",
+          "tag_name": "粤语",
+          "sort": "3"
+        },
+        {
+          "parent_id": "2",
+          "tag_id": "21",
+          "tag_name": "日语",
+          "sort": "4"
+        },
+        {
+          "parent_id": "2",
+          "tag_id": "23",
+          "tag_name": "韩语",
+          "sort": "5"
+        },
+        {
+          "parent_id": "2",
+          "tag_id": "22",
+          "tag_name": "闽南语",
+          "sort": "6"
+        },
+        {
+          "parent_id": "2",
+          "tag_id": "24",
+          "tag_name": "小语种",
+          "sort": "7"
+        },
+        {
+          "parent_id": "2",
+          "tag_id": "570",
+          "tag_name": "法语",
+          "sort": "8"
+        }
+      ]
+    },
+    {
+      "parent_id": "0",
+      "sort": "4",
+      "tag_id": "8",
+      "tag_name": "风格",
+      "son": [
+        {
+          "parent_id": "8",
+          "tag_id": "9",
+          "tag_name": "流行",
+          "sort": "1"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "574",
+          "tag_name": "古风",
+          "sort": "2"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "33",
+          "tag_name": "电子",
+          "sort": "3"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "83",
+          "tag_name": "民谣",
+          "sort": "4"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "27",
+          "tag_name": "摇滚",
+          "sort": "5"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "31",
+          "tag_name": "说唱",
+          "sort": "6"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "1079",
+          "tag_name": "后摇",
+          "sort": "7"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "11",
+          "tag_name": "中国风",
+          "sort": "8"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "30",
+          "tag_name": "R&B",
+          "sort": "9"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "28",
+          "tag_name": "古典",
+          "sort": "10"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "15",
+          "tag_name": "乡村",
+          "sort": "11"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "32",
+          "tag_name": "爵士",
+          "sort": "12"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "650",
+          "tag_name": "新世纪",
+          "sort": "13"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "94",
+          "tag_name": "布鲁斯",
+          "sort": "14"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "1057",
+          "tag_name": "拉丁",
+          "sort": "15"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "34",
+          "tag_name": "轻音乐",
+          "sort": "16"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "1108",
+          "tag_name": "中国传统",
+          "sort": "17"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "29",
+          "tag_name": "金属",
+          "sort": "18"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "92",
+          "tag_name": "雷鬼",
+          "sort": "19"
+        },
+        {
+          "parent_id": "8",
+          "tag_id": "1078",
+          "tag_name": "另类独立",
+          "sort": "20"
+        }
+      ]
+    },
+    {
+      "parent_id": "0",
+      "sort": "5",
+      "tag_id": "4",
+      "tag_name": "心情",
+      "son": [
+        {
+          "parent_id": "4",
+          "tag_id": "1107",
+          "tag_name": "怀旧",
+          "sort": "1"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "578",
+          "tag_name": "伤感",
+          "sort": "2"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "44",
+          "tag_name": "安静",
+          "sort": "3"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "50",
+          "tag_name": "兴奋",
+          "sort": "4"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "577",
+          "tag_name": "轻松",
+          "sort": "5"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "780",
+          "tag_name": "治愈",
+          "sort": "6"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "49",
+          "tag_name": "快乐",
+          "sort": "7"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "47",
+          "tag_name": "甜蜜",
+          "sort": "8"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "42",
+          "tag_name": "寂寞",
+          "sort": "9"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "48",
+          "tag_name": "感动",
+          "sort": "10"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "642",
+          "tag_name": "小清新",
+          "sort": "11"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "81",
+          "tag_name": "励志",
+          "sort": "12"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "643",
+          "tag_name": "减压",
+          "sort": "13"
+        },
+        {
+          "parent_id": "4",
+          "tag_id": "684",
+          "tag_name": "失恋",
+          "sort": "14"
+        }
+      ]
+    },
+    {
+      "parent_id": "0",
+      "sort": "6",
+      "tag_id": "7",
+      "tag_name": "年代",
+      "son": [
+        {
+          "parent_id": "7",
+          "tag_id": "13",
+          "tag_name": "70后",
+          "sort": "1"
+        },
+        {
+          "parent_id": "7",
+          "tag_id": "14",
+          "tag_name": "80后",
+          "sort": "2"
+        },
+        {
+          "parent_id": "7",
+          "tag_id": "76",
+          "tag_name": "90后",
+          "sort": "3"
+        },
+        {
+          "parent_id": "7",
+          "tag_id": "571",
+          "tag_name": "00后",
+          "sort": "4"
+        }
+      ]
+    }
+  ],
+  "status": 1,
+  "error_code": 0
+}

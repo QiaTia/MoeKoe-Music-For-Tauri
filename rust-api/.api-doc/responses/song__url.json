@@ -1,0 +1,8 @@
+{
+  "fail_process": [
+    "pkg"
+  ],
+  "errcode": 20028,
+  "status": 2,
+  "error": "本次请求需要验证"
+}

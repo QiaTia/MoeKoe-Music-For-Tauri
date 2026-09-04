@@ -1,0 +1,623 @@
+{
+  "error_code": 0,
+  "errmsg": "",
+  "data": {
+    "begin_idx": 0,
+    "pagesize": 5,
+    "count": 232,
+    "userid": 509005933,
+    "list_info": {
+      "tags": "流行,日语,游戏,ACG",
+      "status": 1,
+      "create_user_pic": "http://imge.kugou.com/kugouicon/165/20161103/20161103181052105.jpg",
+      "is_pri": 0,
+      "pub_new": 0,
+      "is_drop": 0,
+      "list_create_userid": 509005933,
+      "is_publish": 1,
+      "musiclib_tags": [
+        {
+          "tag_id": 9,
+          "parent_id": 8,
+          "tag_name": "流行"
+        },
+        {
+          "tag_id": 21,
+          "parent_id": 2,
+          "tag_name": "日语"
+        },
+        {
+          "tag_id": 74,
+          "parent_id": 1,
+          "tag_name": "游戏"
+        },
+        {
+          "tag_id": 77,
+          "parent_id": 1,
+          "tag_name": "ACG"
+        }
+      ],
+      "pub_type": 1,
+      "is_featured": 0,
+      "publish_date": "2020-09-01",
+      "collect_total": 0,
+      "list_ver": 2,
+      "intro": "天空燃尽如灰，繁星烧毁似尘，那些音乐所带来的力量，化作为光，将引领着我们前行！",
+      "type": 0,
+      "list_create_listid": 33,
+      "specialid": 2927982,
+      "radio_id": 0,
+      "source": 1,
+      "trans_param": {
+        "iden": 0
+      },
+      "code": 1,
+      "is_def": 0,
+      "parent_global_collection_id": "collection_1_509005933_2927982_0",
+      "sound_quality": "",
+      "per_count": 0,
+      "plist": [],
+      "create_time": 1598926530,
+      "is_per": 0,
+      "is_edit": 1,
+      "update_time": 1735836959,
+      "per_num": 0,
+      "count": 232,
+      "sort": 0,
+      "listid": 33,
+      "musiclib_id": 0,
+      "kq_talent": 0,
+      "create_user_gender": 0,
+      "pic": "http://imge.kugou.com/soft/collection/{size}/20190123/20190123112145904886.jpg",
+      "list_create_username": "仗剑啸红尘",
+      "name": "[打游戏必备]感受这场听觉盛宴!",
+      "is_custom_pic": 1,
+      "global_collection_id": "collection_1_509005933_2927982_0",
+      "heat": 0,
+      "list_create_gid": "collection_1_509005933_2927982_0",
+      "abtags": [],
+      "is_mine": 0,
+      "review_status": 4
+    },
+    "songs": [
+      {
+        "hash": "4A2F45F7A66776B8F7780B6273638299",
+        "brief": "",
+        "audio_id": 39944324,
+        "mvtype": 1,
+        "size": 3100269,
+        "publish_date": "2017-10-27",
+        "name": "CHROMANCE - Wrap Me In Plastic",
+        "mvtrack": 3,
+        "bpm_type": "2",
+        "add_mixsongid": 110338374,
+        "album_id": "8824709",
+        "bpm": 89,
+        "mvhash": "3B3BE972C29F87DE486667C367FC94AE",
+        "extname": "mp3",
+        "language": "英语",
+        "collecttime": 1598926530,
+        "csong": 0,
+        "remark": "让我好好打扮",
+        "level": 1,
+        "media_old_cpy": 0,
+        "relate_goods": [
+          {
+            "hash": "4A2F45F7A66776B8F7780B6273638299",
+            "size": 3100269,
+            "bitrate": 128,
+            "privilege": 8,
+            "level": 2
+          },
+          {
+            "hash": "813F365251BF110D32EEA3AC27B15104",
+            "size": 7750274,
+            "bitrate": 320,
+            "privilege": 10,
+            "level": 4
+          },
+          {
+            "hash": "FADDC86BEEC29C2B4BC57D2E12976C1B",
+            "size": 24127801,
+            "bitrate": 996,
+            "privilege": 10,
+            "level": 5
+          },
+          {
+            "hash": "D7CC9592EB79763C728EBBB5F3E20A0D",
+            "size": 41061057,
+            "bitrate": 1695,
+            "privilege": 10,
+            "level": 6
+          }
+        ],
+        "download": [
+          {
+            "hash": "4A2F45F7A66776B8F7780B6273638299",
+            "status": 0,
+            "pay_type": 3,
+            "fail_process": 4
+          }
+        ],
+        "rcflag": 1,
+        "feetype": 0,
+        "has_obbligato": 1,
+        "timelen": 193724,
+        "sort": 0,
+        "trans_param": {
+          "cid": 38732875,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "cpy_attr0": 58728448,
+          "cpy_grade": 5,
+          "cpy_level": 1,
+          "cpy_map": "2",
+          "display": 0,
+          "display_rate": 0,
+          "hash_multitrack": "7BC46E31C3814475D1562F4B11D327AB",
+          "hash_offset": {
+            "clip_hash": "EA2D3F0B86125E07CCC8D6F70EB1944C",
+            "end_byte": 960189,
+            "end_ms": 60000,
+            "file_type": 0,
+            "offset_hash": "2E7273AC07B71F73456FD8A94CF6A61E",
+            "start_byte": 0,
+            "start_ms": 0
+          },
+          "ipmap": {
+            "attr0": 77326193664
+          },
+          "is_original": 1,
+          "language": "英语",
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2365724,
+          "ogg_128_hash": "7D52D2A673CA6063BB275CC1C5F5F9CC",
+          "ogg_320_filesize": 8654558,
+          "ogg_320_hash": "1786A57B04570F443C0F012A459B2A67",
+          "pay_block_tpl": 1,
+          "qualitymap": {
+            "attr0": 2134893684,
+            "attr1": 1747124224,
+            "bits": "800000db41180007f3fe474"
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250217/20250217144427126686.jpg"
+        },
+        "medistype": "audio",
+        "user_id": 0,
+        "albuminfo": {
+          "name": "Wrap Me In Plastic",
+          "id": 8824709,
+          "publish": 1
+        },
+        "bitrate": 128,
+        "audio_group_id": "28679214",
+        "privilege": 8,
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20250217/20250217144427126686.jpg",
+        "mixsongid": 110338374,
+        "fileid": 1,
+        "heat": 0,
+        "singerinfo": [
+          {
+            "name": "CHROMANCE",
+            "publish": 1,
+            "id": 832820,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20240229/20240229140113966.jpg",
+            "type": 1
+          }
+        ],
+        "tagmap": {
+          "genre0": 11010048
+        },
+        "mvdata": [
+          {
+            "typ": 0
+          }
+        ]
+      },
+      {
+        "hash": "54B29A464406E5110A44B258578622F2",
+        "brief": "",
+        "audio_id": 26609044,
+        "mvtype": 1,
+        "size": 2219601,
+        "publish_date": "2017-01-16",
+        "name": "Thimlife、Bibiane Z - Home (Blaze U Remix)",
+        "mvtrack": 3,
+        "bpm_type": "3",
+        "add_mixsongid": 59240686,
+        "album_id": "8975246",
+        "bpm": 127,
+        "mvhash": "69E5B30AC9DAF8387BF124324C3440AE",
+        "extname": "mp3",
+        "language": "英语",
+        "collecttime": 1598926530,
+        "csong": 0,
+        "remark": "家",
+        "level": 1,
+        "media_old_cpy": 0,
+        "relate_goods": [
+          {
+            "hash": "54B29A464406E5110A44B258578622F2",
+            "size": 2219601,
+            "bitrate": 128,
+            "privilege": 10,
+            "level": 2
+          },
+          {
+            "hash": "16609ED834D2C070ACF14033E4D28C11",
+            "size": 5547407,
+            "bitrate": 320,
+            "privilege": 10,
+            "level": 4
+          },
+          {
+            "hash": "91A5FA951F8D6FB5C73FC5DA4AEE3043",
+            "size": 16416654,
+            "bitrate": 941,
+            "privilege": 10,
+            "level": 5
+          }
+        ],
+        "download": [
+          {
+            "hash": "54B29A464406E5110A44B258578622F2",
+            "status": 0,
+            "pay_type": 3,
+            "fail_process": 4
+          }
+        ],
+        "rcflag": 1,
+        "feetype": 0,
+        "has_obbligato": 1,
+        "timelen": 138684,
+        "sort": 1,
+        "trans_param": {
+          "appid_block": "3124",
+          "cid": 50670115,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "cpy_attr0": 41958528,
+          "cpy_grade": 5,
+          "cpy_level": 1,
+          "cpy_map": "2",
+          "display": 0,
+          "display_rate": 0,
+          "hash_multitrack": "73D4A57FC1D8CC4232EFA9EFF589A715",
+          "hash_offset": {
+            "clip_hash": "488C76A3CB34AF27F30A5914023DF2E5",
+            "end_byte": 960161,
+            "end_ms": 60000,
+            "file_type": 0,
+            "offset_hash": "3F02A1CB5EFA530E2F14CC4248B15371",
+            "start_byte": 0,
+            "start_ms": 0
+          },
+          "ipmap": {
+            "attr0": 16778240
+          },
+          "is_original": 4,
+          "language": "英语",
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 1654285,
+          "ogg_128_hash": "A4E5F327F149C80AA8B53BCD2D005B90",
+          "ogg_320_filesize": 5018270,
+          "ogg_320_hash": "A6F9BECEDAA242521226A23CE347A155",
+          "pay_block_tpl": 1,
+          "qualitymap": {
+            "attr0": 2000675892,
+            "attr1": 1746927616,
+            "bits": "800000db4100000773fe434"
+          },
+          "songname_suffix": "(Blaze U Remix)",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250228/20250228160327950112.jpg"
+        },
+        "medistype": "audio",
+        "user_id": 0,
+        "albuminfo": {
+          "name": "Home (Blaze U Remix)",
+          "id": 8975246,
+          "publish": 1
+        },
+        "bitrate": 128,
+        "audio_group_id": "27591336",
+        "privilege": 10,
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20250228/20250228160327950112.jpg",
+        "mixsongid": 59240686,
+        "fileid": 2,
+        "heat": 0,
+        "singerinfo": [
+          {
+            "name": "Thimlife",
+            "publish": 1,
+            "id": 214775,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20241213/20241213204412870093.jpg",
+            "type": 1
+          },
+          {
+            "name": "Bibiane Z",
+            "publish": 1,
+            "id": 586205,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250314/20250314193212705040.jpg",
+            "type": 0
+          }
+        ],
+        "tagmap": {
+          "genre0": 2097152
+        },
+        "mvdata": [
+          {
+            "typ": 0
+          }
+        ]
+      },
+      {
+        "hash": "B5C3B20C98C3E15C04B4E03F2695CD28",
+        "brief": "",
+        "audio_id": 26332456,
+        "mvtype": 1,
+        "size": 3985898,
+        "publish_date": "2017-03-28",
+        "name": "AnDyWuMUSICLAND - Something Just Like This (Megamix)",
+        "mvtrack": 3,
+        "bpm_type": "3",
+        "add_mixsongid": 56397932,
+        "album_id": "14720223",
+        "bpm": 104,
+        "mvhash": "8CAE6F6F340E03EF246938228FB8F4E7",
+        "extname": "mp3",
+        "language": "英语",
+        "collecttime": 1598926530,
+        "csong": 0,
+        "remark": "只是想要这样的",
+        "level": 1,
+        "media_old_cpy": 1,
+        "relate_goods": [
+          {
+            "hash": "B5C3B20C98C3E15C04B4E03F2695CD28",
+            "size": 3985898,
+            "bitrate": 128,
+            "privilege": 0,
+            "level": 2
+          },
+          {
+            "hash": "672F20441323AA4050152FB7D4696AE7",
+            "size": 9964191,
+            "bitrate": 320,
+            "privilege": 0,
+            "level": 4
+          },
+          {
+            "hash": "D25BF6F88CA0364ED6246B4FF00602DD",
+            "size": 28243682,
+            "bitrate": 908,
+            "privilege": 0,
+            "level": 5
+          },
+          {
+            "hash": "97028C45179D67EA5DEE72B3E59BA182",
+            "size": 50776241,
+            "bitrate": 1618,
+            "privilege": 0,
+            "level": 6
+          }
+        ],
+        "download": [
+          {
+            "hash": "B5C3B20C98C3E15C04B4E03F2695CD28",
+            "status": 0,
+            "pay_type": 0,
+            "fail_process": 0
+          }
+        ],
+        "rcflag": 1,
+        "feetype": 0,
+        "has_obbligato": 1,
+        "timelen": 249078,
+        "sort": 2,
+        "trans_param": {
+          "cid": -1,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "cpy_attr0": 33554432,
+          "cpy_map": "2",
+          "display": 0,
+          "display_rate": 0,
+          "hash_multitrack": "C3487265075CC336118943AD9934A913",
+          "ipmap": {
+            "attr0": 8606716928
+          },
+          "is_original": 10,
+          "language": "英语",
+          "musicpack_advance": 0,
+          "ogg_128_filesize": 2718901,
+          "ogg_128_hash": "62BF954D3C46776822EAD4F5CF14F2B0",
+          "ogg_320_filesize": 10300963,
+          "ogg_320_hash": "31D05E67D5A1E4AECB1CDACB33CDCF5A",
+          "pay_block_tpl": 1,
+          "qualitymap": {
+            "attr0": 1060880500,
+            "attr1": 1746993152,
+            "bits": "800000db41080003f3bc074"
+          },
+          "songname_suffix": "(Megamix)",
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250902/20250902173732237180.jpg"
+        },
+        "medistype": "audio",
+        "user_id": 0,
+        "albuminfo": {
+          "name": "Something Just Like This (Megamix)",
+          "id": 14720223,
+          "publish": 1
+        },
+        "bitrate": 128,
+        "audio_group_id": "29819623",
+        "privilege": 0,
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20250902/20250902173732237180.jpg",
+        "mixsongid": 56397932,
+        "fileid": 3,
+        "heat": 0,
+        "singerinfo": [
+          {
+            "name": "AnDyWuMUSICLAND",
+            "publish": 1,
+            "id": 580469,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20230904/20230904160845861.jpg",
+            "type": 1
+          }
+        ],
+        "tagmap": {
+          "genre0": 2621440
+        },
+        "mvdata": [
+          {
+            "typ": 0
+          }
+        ]
+      },
+      {
+        "fileid": 4,
+        "shield": 1
+      },
+      {
+        "hash": "1B50EF82DDD8CC4F32C9EE7AF5844B5D",
+        "brief": "",
+        "audio_id": 21929224,
+        "mvtype": 1,
+        "size": 6298882,
+        "publish_date": "2015-09-16",
+        "name": "Dino Sor - Geisha",
+        "mvtrack": 3,
+        "bpm_type": "3",
+        "add_mixsongid": 57710179,
+        "album_id": "2149337",
+        "bpm": 99,
+        "mvhash": "FB2A2036956885C1CA49BFDFAFC9E82C",
+        "extname": "mp3",
+        "language": "纯音乐",
+        "collecttime": 1598926530,
+        "csong": 0,
+        "remark": "艺伎",
+        "level": 1,
+        "media_old_cpy": 0,
+        "relate_goods": [
+          {
+            "hash": "1B50EF82DDD8CC4F32C9EE7AF5844B5D",
+            "size": 6298882,
+            "bitrate": 128,
+            "privilege": 10,
+            "level": 2
+          },
+          {
+            "hash": "21FDF96FBB55D00FAAB72CC160873DE2",
+            "size": 15746850,
+            "bitrate": 320,
+            "privilege": 10,
+            "level": 4
+          },
+          {
+            "hash": "B45F743E7ED2B1CCD8C35E010C777C68",
+            "size": 46620630,
+            "bitrate": 947,
+            "privilege": 10,
+            "level": 5
+          },
+          {
+            "hash": "13FAA837E46F17575D1253492CD49CCF",
+            "size": 48320350,
+            "bitrate": 981,
+            "privilege": 10,
+            "level": 6
+          }
+        ],
+        "download": [
+          {
+            "hash": "1B50EF82DDD8CC4F32C9EE7AF5844B5D",
+            "status": 0,
+            "pay_type": 3,
+            "fail_process": 4
+          }
+        ],
+        "rcflag": 1,
+        "feetype": 0,
+        "has_obbligato": 1,
+        "timelen": 393639,
+        "sort": 4,
+        "trans_param": {
+          "cid": 11268589,
+          "classmap": {
+            "attr0": 234881032
+          },
+          "cpy_attr0": 15488,
+          "cpy_grade": 5,
+          "cpy_level": 1,
+          "cpy_map": "2",
+          "display": 0,
+          "display_rate": 0,
+          "hash_multitrack": "3DCFC7CEDD68DBB84766E46503076A52",
+          "hash_offset": {
+            "clip_hash": "0EBE428F46FE35D2B305C6DEFD32909A",
+            "end_byte": 960161,
+            "end_ms": 60000,
+            "file_type": 0,
+            "offset_hash": "8009D64D34F74384BF14BD6AEC910B69",
+            "start_byte": 0,
+            "start_ms": 0
+          },
+          "ipmap": {
+            "attr0": 536888320
+          },
+          "is_original": 1,
+          "language": "纯音乐",
+          "musicpack_advance": 1,
+          "ogg_128_filesize": 4876194,
+          "ogg_128_hash": "BB953D7FADB1FE3681C3291CC0085FBD",
+          "ogg_320_filesize": 16854769,
+          "ogg_320_hash": "9BFF0B0B94147032F4FFE22FD07CE140",
+          "pay_block_tpl": 1,
+          "qualitymap": {
+            "attr0": 1359003764,
+            "attr1": 1745027072,
+            "bits": "340180005100c074"
+          },
+          "union_cover": "http://imge.kugou.com/stdmusic/{size}/20250101/20250101103535677771.jpg"
+        },
+        "medistype": "audio",
+        "user_id": 0,
+        "albuminfo": {
+          "name": "10 Tropical House",
+          "id": 2149337,
+          "publish": 1
+        },
+        "bitrate": 128,
+        "audio_group_id": "9694435",
+        "privilege": 10,
+        "cover": "http://imge.kugou.com/stdmusic/{size}/20250101/20250101103535677771.jpg",
+        "mixsongid": 57710179,
+        "fileid": 5,
+        "heat": 0,
+        "singerinfo": [
+          {
+            "name": "Dino Sor",
+            "publish": 1,
+            "id": 435704,
+            "avatar": "http://singerimg.kugou.com/uploadpic/softhead/{size}/20250314/20250314185308871404.jpg",
+            "type": 1
+          }
+        ],
+        "tagmap": {
+          "genre0": 6291456
+        },
+        "mvdata": [
+          {
+            "typ": 0
+          }
+        ]
+      }
+    ],
+    "popularization": {}
+  },
+  "status": 1
+}

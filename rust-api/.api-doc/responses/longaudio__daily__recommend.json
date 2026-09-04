@@ -1,0 +1,818 @@
+{
+  "data": {
+    "is_end": 0,
+    "albums": [
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20240302/20240302083303887607.jpg",
+        "tag_info": {
+          "tag_name": "自然疗愈",
+          "tag_id": 3311
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 19968,
+        "album_name": "催眠下雨声，让你快速进入深度睡眠",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20240302/20240302083303887607.jpg",
+        "audio_total": 121,
+        "rec_tag": {
+          "album_id": 88314495,
+          "type": 1,
+          "tag_info": {
+            "album_id": "88314495",
+            "tag_id": 3311,
+            "p_tag_id": 1070,
+            "tag_name": "自然疗愈"
+          },
+          "rank_info": {
+            "rank_tag_id": 1070,
+            "rank_id": 1
+          },
+          "desc": "助眠解压免费 NO.33",
+          "cat_desc": "自然疗愈"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2024-03-02",
+        "album_id": 88314495,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 65832206,
+        "intro": "听着下雨的声音，快速进入深度睡眠。",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20240218/20240218141502883779.jpg",
+        "tag_info": {
+          "tag_name": "搞笑段子",
+          "tag_id": 1108
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3584,
+        "album_name": "野猪佩奇搞笑配音|（精选）",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20240218/20240218141502883779.jpg",
+        "audio_total": 291,
+        "rec_tag": {
+          "album_id": 83748610,
+          "type": 1,
+          "tag_info": {
+            "album_id": "83748610",
+            "tag_id": 1108,
+            "p_tag_id": 1100,
+            "tag_name": "搞笑段子"
+          },
+          "rank_info": {
+            "rank_tag_id": 1100,
+            "rank_id": 1
+          },
+          "desc": "娱乐调频免费 NO.6",
+          "cat_desc": "搞笑段子"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2024-02-18",
+        "album_id": 83748610,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 47268193,
+        "intro": "野猪佩奇来咯",
+        "subscribe_desc": "订阅人数1W+"
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20230912/20230912191600659911.jpg",
+        "tag_info": {
+          "tag_name": "搞笑段子",
+          "tag_id": 1108
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3584,
+        "album_name": "爆笑沙雕故事",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20230912/20230912191600659911.jpg",
+        "audio_total": 245,
+        "rec_tag": {
+          "album_id": 69911332,
+          "type": 1,
+          "tag_info": {
+            "album_id": "69911332",
+            "tag_id": 1108,
+            "p_tag_id": 1100,
+            "tag_name": "搞笑段子"
+          },
+          "rank_info": {
+            "rank_tag_id": 1100,
+            "rank_id": 1
+          },
+          "desc": "娱乐调频免费 NO.9",
+          "cat_desc": "搞笑段子"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2023-03-10",
+        "album_id": 69911332,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 21643651,
+        "intro": "每天一个沙雕故事，赶走你的不开心。",
+        "subscribe_desc": "订阅人数1W+"
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20231015/20231015193101470683.jpg",
+        "tag_info": {
+          "tag_name": "生活杂谈",
+          "tag_id": 1106
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3584,
+        "album_name": "八哥学说话【教材精选包开口】",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20231015/20231015193101470683.jpg",
+        "audio_total": 163,
+        "rec_tag": {
+          "album_id": 79344526,
+          "type": 1,
+          "tag_info": {
+            "album_id": "79344526",
+            "tag_id": 1106,
+            "p_tag_id": 1100,
+            "tag_name": "生活杂谈"
+          },
+          "rank_info": {
+            "rank_tag_id": 1100,
+            "rank_id": 1
+          },
+          "desc": "娱乐调频免费 NO.40",
+          "cat_desc": "生活杂谈"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2023-10-15",
+        "album_id": 79344526,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 14394006,
+        "intro": "【早晚各一次，30天包开口】训练鸟儿说人话最好选择在鸟儿比较兴奋的时刻。一般而言，每天早上喂食之前对鸟儿进行说话训练是最有效果的。或者，在以下两个时段训练鸟儿说人话也可以达到不错的效果：一是在天气晴朗的上午10时之前，鸟儿在阳光下非常兴奋的时候；二是在傍晚太阳落山前的一段时间里(此时鸟儿非常活跃)。",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20240417/20240417165102158904.jpg",
+        "tag_info": {
+          "tag_name": "自然疗愈",
+          "tag_id": 3311
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 4197888,
+        "album_name": "真实自采下雨声 辅助睡眠",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20240417/20240417165102158904.jpg",
+        "audio_total": 13,
+        "rec_tag": {
+          "album_id": 91740253,
+          "type": 2,
+          "tag_info": {
+            "album_id": "91740253",
+            "tag_id": 3311,
+            "p_tag_id": 1070,
+            "tag_name": "自然疗愈"
+          },
+          "rank_info": [],
+          "desc": "播放量破百万",
+          "cat_desc": "自然疗愈"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2024-04-17",
+        "album_id": 91740253,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 7914913,
+        "intro": "和失眠说拜拜，下雨天最适合睡觉了",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20241204/20241204170755712380.jpg",
+        "tag_info": {
+          "tag_name": "古代言情",
+          "tag_id": 981
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3595,
+        "album_name": "医妃惊世｜玄幻女强丨精品多人有声剧",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20241204/20241204170755712380.jpg",
+        "audio_total": 10406,
+        "rec_tag": {
+          "album_id": 80585632,
+          "type": 2,
+          "tag_info": {
+            "album_id": "80585632",
+            "tag_id": 981,
+            "p_tag_id": 906,
+            "tag_name": "古代言情"
+          },
+          "rank_info": [],
+          "desc": "播放量破千万",
+          "cat_desc": "古代言情"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2023-11-21",
+        "album_id": 80585632,
+        "source_type": 1,
+        "is_pay": 1,
+        "play_count": 15118621,
+        "intro": "她本是实力强悍，医术超群的世家家主。\n朝穿越成将军府的废柴嫡小姐，成为第一位被退婚的太子妃，人人嘲讽!\n选秀宴上，她被赐嫁给鼎鼎有名的残废王爷。",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20241216/20241216201939928696.jpg",
+        "tag_info": {
+          "tag_name": "能量颂钵",
+          "tag_id": 3305
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 4197891,
+        "album_name": "冥想 放松 解压 深度催眠 神奇钵音",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20241216/20241216201939928696.jpg",
+        "audio_total": 48,
+        "rec_tag": {
+          "album_id": 50909057,
+          "type": 1,
+          "tag_info": {
+            "album_id": "50909057",
+            "tag_id": 3305,
+            "p_tag_id": 1070,
+            "tag_name": "能量颂钵"
+          },
+          "rank_info": {
+            "rank_tag_id": 1070,
+            "rank_id": 2
+          },
+          "desc": "助眠解压飙升 NO.4",
+          "cat_desc": "能量颂钵"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2021-12-05",
+        "album_id": 50909057,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 8827535,
+        "intro": "“这个钵一震，我全身都舒服了”这是我朋友在听过这个钵的声音后的回答。是的很神奇，我第一次接触的时候也是这种感受。钵的震动很绵密，当和身体接触的时候，会感觉每个细胞都在跳动，一波一波的震动就像按摩。如果持续十来分钟，会感觉身体变轻了。加入你压力比较大，睡眠不太好，不妨来试听半小时。这对放松失眠很有效。",
+        "subscribe_desc": "订阅人数1W+"
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20220527/20220527125502489640.jpg",
+        "tag_info": {
+          "tag_name": "自然疗愈",
+          "tag_id": 3311
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 4197888,
+        "album_name": "自然声催眠 | 5分钟入睡 | 深度睡眠",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20220527/20220527125502489640.jpg",
+        "audio_total": 77,
+        "rec_tag": {
+          "album_id": 57779827,
+          "type": 2,
+          "tag_info": {
+            "album_id": "57779827",
+            "tag_id": 3311,
+            "p_tag_id": 1070,
+            "tag_name": "自然疗愈"
+          },
+          "rank_info": [],
+          "desc": "播放量破千万",
+          "cat_desc": "自然疗愈"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2022-05-27",
+        "album_id": 57779827,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 21403000,
+        "intro": "您还在为失眠而烦恼吗？自然声催眠，5分钟入睡，助你放松身心，快速进入梦乡！\n\n如果您喜欢，欢迎订阅、评论、转发，分享给更多的人！您的支持是主播前进的动力！",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20240118/20240118174101258065.jpg",
+        "tag_info": {
+          "tag_name": "搞笑段子",
+          "tag_id": 1108
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3584,
+        "album_name": "沙雕恐怖故事|民间传说故事",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20240118/20240118174101258065.jpg",
+        "audio_total": 1105,
+        "rec_tag": {
+          "album_id": 82432420,
+          "type": 1,
+          "tag_info": {
+            "album_id": "82432420",
+            "tag_id": 1108,
+            "p_tag_id": 1100,
+            "tag_name": "搞笑段子"
+          },
+          "rank_info": {
+            "rank_tag_id": 1100,
+            "rank_id": 1
+          },
+          "desc": "娱乐调频免费 NO.10",
+          "cat_desc": "搞笑段子"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2024-01-18",
+        "album_id": 82432420,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 10214120,
+        "intro": "杀掉恐怖民间故事",
+        "subscribe_desc": "订阅人数1W+"
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20250822/20250822161502244342.jpg",
+        "tag_info": {
+          "tag_name": "武侠仙侠",
+          "tag_id": 1023
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 4197889,
+        "album_name": "武破九荒｜横推万敌丨武极天下丨大陆",
+        "album_label": {
+          "label_name": "热血",
+          "label_id": 20
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20250822/20250822161502244342.jpg",
+        "audio_total": 5445,
+        "rec_tag": {
+          "album_id": 61511124,
+          "type": 2,
+          "tag_info": {
+            "album_id": "61511124",
+            "tag_id": 1023,
+            "p_tag_id": 906,
+            "tag_name": "武侠仙侠"
+          },
+          "rank_info": [],
+          "desc": "播放量破千万",
+          "cat_desc": "武侠仙侠"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2022-09-23",
+        "album_id": 61511124,
+        "source_type": 1,
+        "is_pay": 1,
+        "play_count": 27104908,
+        "intro": "真灵大陆，天骄当世，妖孽争锋，王者长啸可落星辰，皇者翻手可遮苍穹。　　出身卑微的少年萧叶，得远古传承，从此武极天下，横推万敌，战破九荒，热血澎湃的战斗燃烧九重天。　　无敌的战场，天才血如海，妖孽骨成山，萧叶步步前行，登临绝巅，一路打到世上无人敢称尊。　　吾辈武者，当宁折不屈，杀伐决断，快意恩仇，镇杀世间一切敌！",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20240803/20240803223302210134.jpg",
+        "tag_info": {
+          "tag_name": "声控福利",
+          "tag_id": 1976
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3584,
+        "album_name": "八哥学语大全（精品）",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20240803/20240803223302210134.jpg",
+        "audio_total": 29,
+        "rec_tag": {
+          "album_id": 100809704,
+          "type": 2,
+          "tag_info": {
+            "album_id": "100809704",
+            "tag_id": 1976,
+            "p_tag_id": 1933,
+            "tag_name": "声控福利"
+          },
+          "rank_info": [],
+          "desc": "播放量破百万",
+          "cat_desc": "声控福利"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2024-07-12",
+        "album_id": 100809704,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 1821601,
+        "intro": "七天包你开口 大开门绝对大开门",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20241204/20241204165840505443.jpg",
+        "tag_info": {
+          "tag_name": "玄幻异界",
+          "tag_id": 1097
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3587,
+        "album_name": "完美世界｜动漫剧情抢先听",
+        "album_label": {
+          "label_name": "热血",
+          "label_id": 20
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20241204/20241204165840505443.jpg",
+        "audio_total": 2015,
+        "rec_tag": {
+          "album_id": 46904744,
+          "type": 2,
+          "tag_info": {
+            "album_id": "46904744",
+            "tag_id": 1097,
+            "p_tag_id": 906,
+            "tag_name": "玄幻异界"
+          },
+          "rank_info": [],
+          "desc": "播放量破亿",
+          "cat_desc": "玄幻异界"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2021-07-02",
+        "album_id": 46904744,
+        "source_type": 1,
+        "is_pay": 1,
+        "play_count": 179744482,
+        "intro": "一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。\n　　群雄并起，万族林立，诸圣争霸，乱天动地。问苍茫大地，谁主沉浮？！\n　　一个少年从大荒中走出，一切从这里开始……",
+        "subscribe_desc": "订阅人数10W+"
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20241204/20241204170926659313.jpg",
+        "tag_info": {
+          "tag_name": "都市纵横",
+          "tag_id": 909
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3587,
+        "album_name": "从草根混到第一首富|精品多播",
+        "album_label": {
+          "label_name": "励志",
+          "label_id": 104
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20241204/20241204170926659313.jpg",
+        "audio_total": 1571,
+        "rec_tag": {
+          "album_id": 71394443,
+          "type": 2,
+          "tag_info": {
+            "album_id": "71394443",
+            "tag_id": 909,
+            "p_tag_id": 906,
+            "tag_name": "都市纵横"
+          },
+          "rank_info": [],
+          "desc": "播放量破千万",
+          "cat_desc": "都市纵横"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2023-04-06",
+        "album_id": 71394443,
+        "source_type": 1,
+        "is_pay": 1,
+        "play_count": 36604377,
+        "intro": "山沟沟里走出的穷小子，凭一股如野草般的韧劲，白手起家纵横商界，成为一代金融传奇！",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20220616/20220616143229293858.jpg",
+        "tag_info": {
+          "tag_name": "搞笑段子",
+          "tag_id": 1108
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3584,
+        "album_name": "脱口秀|搞笑",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20220616/20220616143229293858.jpg",
+        "audio_total": 99,
+        "rec_tag": {
+          "album_id": 58433068,
+          "type": 1,
+          "tag_info": {
+            "album_id": "58433068",
+            "tag_id": 1108,
+            "p_tag_id": 1100,
+            "tag_name": "搞笑段子"
+          },
+          "rank_info": {
+            "rank_tag_id": 1100,
+            "rank_id": 1
+          },
+          "desc": "娱乐调频免费 NO.27",
+          "cat_desc": "搞笑段子"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2022-07-18",
+        "album_id": 58433068,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 6741600,
+        "intro": "天天脱口秀，天天开心！",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20241204/20241204182445793872.jpg",
+        "tag_info": {
+          "tag_name": "玄幻女強",
+          "tag_id": 3367
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3585,
+        "album_name": "毒医娘亲萌宝宝|古言|金手指",
+        "album_label": {
+          "label_name": "穿越",
+          "label_id": 84
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20241204/20241204182445793872.jpg",
+        "audio_total": 8723,
+        "rec_tag": {
+          "album_id": 64245555,
+          "type": 2,
+          "tag_info": {
+            "album_id": "64245555",
+            "tag_id": 3367,
+            "p_tag_id": 906,
+            "tag_name": "玄幻女強"
+          },
+          "rank_info": [],
+          "desc": "播放量破千万",
+          "cat_desc": "玄幻女強"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2022-11-14",
+        "album_id": 64245555,
+        "source_type": 1,
+        "is_pay": 1,
+        "play_count": 18537245,
+        "intro": "凤舞大陆，凤天国苏王府三小姐。天生废材，颜丑，人傻，从小就被欺凌，最后被两个姐姐下药之后推下山崖致死……\r\n再次醒来，灵魂交替，当强者之魂，进入弱者之躯，凤舞大陆将会掀起怎样的波澜！\r\n修炼？她拥有逆天的体质，躺着睡觉都能吸收玄气！\r\n炼丹？带着宝宝随便在森林里逛了一圈，契约一只萌兽，吃了药草就能拉出丹药！\r\n炼器？在路上，随便救了个呆萌的路痴，竟然是炼器天才，萌萌的认他为主，只因她愿意为他带路……\r\n他，容貌妖孽，风流无双！表面上是凤天国冷酷的凤王，实际上则是神秘势力的背后主子……\r\n初见，她将他压在身下，当成了解药，却不曾看他一眼，只是顺走了他的钱，更不知他是谁？\r\n再见，她在他的赌坊，再",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20241204/20241204170522597971.jpg",
+        "tag_info": {
+          "tag_name": "玄幻异界",
+          "tag_id": 1097
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3587,
+        "album_name": "战兽之王｜多人有声剧丨绝地重生，兽王崛起",
+        "album_label": {
+          "label_name": "玄幻",
+          "label_id": 120
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20241204/20241204170522597971.jpg",
+        "audio_total": 3740,
+        "rec_tag": {
+          "album_id": 68482631,
+          "type": 2,
+          "tag_info": {
+            "album_id": "68482631",
+            "tag_id": 1097,
+            "p_tag_id": 906,
+            "tag_name": "玄幻异界"
+          },
+          "rank_info": [],
+          "desc": "播放量破千万",
+          "cat_desc": "玄幻异界"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2023-02-14",
+        "album_id": 68482631,
+        "source_type": 1,
+        "is_pay": 1,
+        "play_count": 42499613,
+        "intro": "【日更7集】天才少年重生战神大陆，意外获得兽神本源，开启全新兽修之路。众兽之神皆听我号令，一朝崛起，谁人能挡？",
+        "subscribe_desc": "订阅人数1W+"
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20210926/20210926223316595246.jpg",
+        "tag_info": {
+          "tag_name": "情感生活",
+          "tag_id": 1092
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3584,
+        "album_name": "一禅小和尚原声剧",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20210926/20210926223316595246.jpg",
+        "audio_total": 74,
+        "rec_tag": {
+          "album_id": 49154330,
+          "type": 2,
+          "tag_info": {
+            "album_id": "49154330",
+            "tag_id": 1092,
+            "p_tag_id": 1092,
+            "tag_name": "情感生活"
+          },
+          "rank_info": [],
+          "desc": "播放量破百万",
+          "cat_desc": "情感生活"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2021-08-26",
+        "album_id": 49154330,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 6946906,
+        "intro": "讲述了小和尚一禅和师父以及身边各种人和事，并从中领悟人生的道理，领会身处尘世的芸芸众生的喜怒哀乐，怨憎会爱别离与求不得。用小和尚的视角看世界，用老和尚的话语去阐述人生的各种道理。世间疾苦自有温暖。",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20220111/20220111172710252017.jpg",
+        "tag_info": {
+          "tag_name": "暖心治愈",
+          "tag_id": 1093
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 4197888,
+        "album_name": "晨曦微露电台",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20220111/20220111172710252017.jpg",
+        "audio_total": 1035,
+        "rec_tag": {
+          "album_id": 4092373,
+          "type": 1,
+          "tag_info": {
+            "album_id": "4092373",
+            "tag_id": 1093,
+            "p_tag_id": 0,
+            "tag_name": "暖心治愈"
+          },
+          "rank_info": {
+            "rank_tag_id": 1092,
+            "rank_id": 1
+          },
+          "desc": "情感生活免费 NO.53",
+          "cat_desc": "暖心治愈"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2016-12-28",
+        "album_id": 4092373,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 36283464,
+        "intro": "陪你度过孤独的温暖电台。也许偶然相遇，也许相守已久。夜深人静，听露露的暖心述说。欢迎进入晨曦微露的声音世界~",
+        "subscribe_desc": "订阅人数1W+"
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20260412/20260412004101172522.jpg",
+        "tag_info": {
+          "tag_name": "都市纵横",
+          "tag_id": 909
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3585,
+        "album_name": "女总裁的贴身高手|都市异能|保镖流【智能语音录制】",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20260412/20260412004101172522.jpg",
+        "audio_total": 4196,
+        "rec_tag": {
+          "album_id": 94038191,
+          "type": 0,
+          "tag_info": {
+            "album_id": "94038191",
+            "tag_id": 909,
+            "p_tag_id": 906,
+            "tag_name": "都市纵横"
+          },
+          "rank_info": [],
+          "desc": "",
+          "cat_desc": "都市纵横"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2024-05-17",
+        "album_id": 94038191,
+        "source_type": 1,
+        "is_pay": 1,
+        "play_count": 940928,
+        "intro": "“乖徒儿，下山去吧，师傅给你定了门亲事，是个大美女，便宜你了！”师傅卷款跑路，林辰悲愤下山找自己的未...",
+        "subscribe_desc": ""
+      },
+      {
+        "rank_tag_desc": "",
+        "sizable_cover": "https://imgessl.kugou.com/stdmusic/{size}/20241216/20241216213002789931.jpg",
+        "tag_info": {
+          "tag_name": "搞笑段子",
+          "tag_id": 1108
+        },
+        "alg_path": "recall-hot",
+        "special_tag": 3584,
+        "album_name": "东北人讲笑话|搞笑段子|笑话大全",
+        "album_label": {
+          "label_name": "",
+          "label_id": 0
+        },
+        "recommend_type": 2,
+        "sizable_cover_h5": "https://imgessl.kugou.com/stdmusic/240/20241216/20241216213002789931.jpg",
+        "audio_total": 265,
+        "rec_tag": {
+          "album_id": 63430674,
+          "type": 1,
+          "tag_info": {
+            "album_id": "63430674",
+            "tag_id": 1108,
+            "p_tag_id": 1100,
+            "tag_name": "搞笑段子"
+          },
+          "rank_info": {
+            "rank_tag_id": 1100,
+            "rank_id": 1
+          },
+          "desc": "娱乐调频免费 NO.47",
+          "cat_desc": "搞笑段子"
+        },
+        "recommend_reason": "根据大家的口味推荐",
+        "publish_date": "2022-10-31",
+        "album_id": 63430674,
+        "source_type": 1,
+        "is_pay": 0,
+        "play_count": 2636601,
+        "intro": "每天给大家带来日常快乐的笑话段子",
+        "subscribe_desc": ""
+      }
+    ],
+    "current_time": 1788516855
+  },
+  "errcode": 0,
+  "status": 1,
+  "errmsg": ""
+}
