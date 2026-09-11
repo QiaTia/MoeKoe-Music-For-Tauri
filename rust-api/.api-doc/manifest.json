@@ -167,24 +167,27 @@
   },
   {
     "route": "/artist/follow",
-    "url": "http://127.0.0.1:3222/artist/follow?id=309",
+    "url": "http://127.0.0.1:3222/artist/follow",
     "file": "artist__follow.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 20018
   },
   {
     "route": "/artist/follow/newsongs",
     "url": "http://127.0.0.1:3222/artist/follow/newsongs",
     "file": "artist__follow__newsongs.json",
-    "http_status": 502,
-    "ok": true,
+    "http_status": 200,
+    "ok": false,
     "error": null,
     "needLogin": false,
     "retry": true,
     "biz_status": 0,
-    "err_body": true
+    "err_body": true,
+    "login": true
   },
   {
     "route": "/artist/honour",
@@ -210,12 +213,14 @@
   },
   {
     "route": "/artist/unfollow",
-    "url": "http://127.0.0.1:3222/artist/unfollow?id=309",
+    "url": "http://127.0.0.1:3222/artist/unfollow",
     "file": "artist__unfollow.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 20018
   },
   {
     "route": "/artist/videos",
@@ -417,14 +422,15 @@
   },
   {
     "route": "/favorite/count",
-    "url": "http://127.0.0.1:3222/favorite/count?mixsongids=e291fc24c9dbe4ef3fdd9837ea3e1a9c",
+    "url": "http://127.0.0.1:3222/favorite/count",
     "file": "favorite__count.json",
     "http_status": 200,
     "ok": true,
     "error": null,
     "needLogin": true,
     "ms": 193,
-    "biz_status": 1
+    "biz_status": 1,
+    "login": true
   },
   {
     "route": "/fm/class",
@@ -553,10 +559,12 @@
     "route": "/lastest/songs/listen",
     "url": "http://127.0.0.1:3222/lastest/songs/listen",
     "file": "lastest__songs__listen.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": "?"
   },
   {
     "route": "/longaudio/album/audios",
@@ -666,10 +674,12 @@
     "route": "/login/device",
     "url": "http://127.0.0.1:3222/login/device",
     "file": "login__device.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/login/device/kick",
@@ -1175,55 +1185,65 @@
     "error": null,
     "needLogin": true,
     "ms": 133,
-    "biz_status": 1
+    "biz_status": 1,
+    "login": true
   },
   {
     "route": "/team/my/status",
     "url": "http://127.0.0.1:3222/team/my/status",
     "file": "team__my__status.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/team/my/info",
     "url": "http://127.0.0.1:3222/team/my/info",
     "file": "team__my__info.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/team/my",
     "url": "http://127.0.0.1:3222/team/my",
     "file": "team__my.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/team/join",
-    "url": "http://127.0.0.1:3222/team/join?team_code=ABC123",
+    "url": "http://127.0.0.1:3222/team/join",
     "file": "team__join.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/youth/channel/all",
     "url": "http://127.0.0.1:3222/youth/channel/all",
     "file": "youth__channel__all.json",
-    "http_status": 502,
-    "ok": true,
+    "http_status": 200,
+    "ok": false,
     "error": null,
     "needLogin": false,
     "retry": true,
     "biz_status": 0,
-    "err_body": true
+    "err_body": true,
+    "login": true
   },
   {
     "route": "/youth/channel/amway",
@@ -1282,78 +1302,93 @@
   },
   {
     "route": "/youth/channel/sub",
-    "url": "http://127.0.0.1:3222/youth/channel/sub?global_collection_id=2550343002&t=1",
+    "url": "http://127.0.0.1:3222/youth/channel/sub",
     "file": "youth__channel__sub.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/youth/day/vip",
-    "url": "http://127.0.0.1:3222/youth/day/vip?receive_day=20240101",
+    "url": "http://127.0.0.1:3222/youth/day/vip",
     "file": "youth__day__vip.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/youth/day/vip/upgrade",
     "url": "http://127.0.0.1:3222/youth/day/vip/upgrade",
     "file": "youth__day__vip__upgrade.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/youth/dynamic",
     "url": "http://127.0.0.1:3222/youth/dynamic",
     "file": "youth__dynamic.json",
     "http_status": 200,
-    "ok": true,
+    "ok": false,
     "error": null,
     "needLogin": true,
     "ms": 161,
-    "biz_status": 1
+    "biz_status": 0,
+    "login": true
   },
   {
     "route": "/youth/dynamic/recent",
     "url": "http://127.0.0.1:3222/youth/dynamic/recent",
     "file": "youth__dynamic__recent.json",
     "http_status": 200,
-    "ok": true,
+    "ok": false,
     "error": "'str' object has no attribute 'get'",
     "needLogin": true,
-    "ms": 240
+    "ms": 240,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/youth/listen/song",
-    "url": "http://127.0.0.1:3222/youth/listen/song?mixsongid=666075191",
+    "url": "http://127.0.0.1:3222/youth/listen/song",
     "file": "youth__listen__song.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/youth/month/vip/record",
     "url": "http://127.0.0.1:3222/youth/month/vip/record",
     "file": "youth__month__vip__record.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/youth/union/vip",
     "url": "http://127.0.0.1:3222/youth/union/vip",
     "file": "youth__union__vip.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/youth/user/song",
@@ -1370,19 +1405,23 @@
     "route": "/youth/vip",
     "url": "http://127.0.0.1:3222/youth/vip",
     "file": "youth__vip.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/playlist/add",
-    "url": "http://127.0.0.1:3222/playlist/add?name=%E6%88%91%E7%9A%84%E6%AD%8C%E5%8D%95&list_create_userid=309&list_create_listid=2550343002",
+    "url": "http://127.0.0.1:3222/playlist/add",
     "file": "playlist__add.json",
-    "http_status": null,
-    "ok": false,
+    "http_status": 200,
+    "ok": true,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/playlist/del",
@@ -1455,22 +1494,25 @@
     "route": "/playlist/track/all/new",
     "url": "http://127.0.0.1:3222/playlist/track/all/new",
     "file": "playlist__track__all__new.json",
-    "http_status": 502,
-    "ok": true,
+    "http_status": 200,
+    "ok": false,
     "error": null,
     "needLogin": false,
     "retry": true,
     "biz_status": 0,
-    "err_body": true
+    "err_body": true,
+    "login": true
   },
   {
     "route": "/playlist/tracks/add",
-    "url": "http://127.0.0.1:3222/playlist/tracks/add?listid=2550343002&data=song%7Ce291fc24c9dbe4ef3fdd9837ea3e1a9c%7C1289478%7C12345",
+    "url": "http://127.0.0.1:3222/playlist/tracks/add",
     "file": "playlist__tracks__add.json",
-    "http_status": null,
-    "ok": false,
+    "http_status": 200,
+    "ok": true,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/playlist/tracks/del",
@@ -1479,7 +1521,9 @@
     "http_status": null,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 20017
   },
   {
     "route": "/login/openplat",
@@ -1523,23 +1567,26 @@
   },
   {
     "route": "/personal/fm",
-    "url": "http://127.0.0.1:3222/personal/fm?action=play",
+    "url": "http://127.0.0.1:3222/personal/fm",
     "file": "personal__fm.json",
     "http_status": 200,
     "ok": true,
     "error": null,
     "needLogin": true,
     "ms": 330,
-    "biz_status": 1
+    "biz_status": 1,
+    "login": true
   },
   {
     "route": "/playhistory/upload",
-    "url": "http://127.0.0.1:3222/playhistory/upload?mxid=123&time=1700000000",
+    "url": "http://127.0.0.1:3222/playhistory/upload",
     "file": "playhistory__upload.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/privilege/lite",
@@ -1568,11 +1615,12 @@
     "url": "http://127.0.0.1:3222/user/cloud",
     "file": "user__cloud.json",
     "http_status": 200,
-    "ok": true,
+    "ok": false,
     "error": null,
     "needLogin": true,
     "ms": 172,
-    "biz_status": 1
+    "biz_status": 0,
+    "login": true
   },
   {
     "route": "/user/cloud/url",
@@ -1589,86 +1637,102 @@
     "route": "/user/detail",
     "url": "http://127.0.0.1:3222/user/detail",
     "file": "user__detail.json",
-    "http_status": 502,
-    "ok": true,
+    "http_status": 200,
+    "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
     "needLogin": true,
     "biz_status": 0,
-    "err_body": true
+    "err_body": true,
+    "login": true
   },
   {
     "route": "/user/follow",
     "url": "http://127.0.0.1:3222/user/follow",
     "file": "user__follow.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/user/follow/message",
-    "url": "http://127.0.0.1:3222/user/follow/message?id=1",
+    "url": "http://127.0.0.1:3222/user/follow/message",
     "file": "user__follow__message.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/user/history",
     "url": "http://127.0.0.1:3222/user/history",
     "file": "user__history.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/user/listen",
     "url": "http://127.0.0.1:3222/user/listen",
     "file": "user__listen.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/user/playlist",
     "url": "http://127.0.0.1:3222/user/playlist",
     "file": "user__playlist.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/user/video/collect",
     "url": "http://127.0.0.1:3222/user/video/collect",
     "file": "user__video__collect.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/user/video/love",
     "url": "http://127.0.0.1:3222/user/video/love",
     "file": "user__video__love.json",
-    "http_status": null,
+    "http_status": 200,
     "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
-    "needLogin": true
+    "needLogin": true,
+    "login": true,
+    "biz_status": 0
   },
   {
     "route": "/user/vip/detail",
     "url": "http://127.0.0.1:3222/user/vip/detail",
     "file": "user__vip__detail.json",
-    "http_status": 502,
-    "ok": true,
+    "http_status": 200,
+    "ok": false,
     "error": "HTTP Error 502: Bad Gateway",
     "needLogin": false,
     "biz_status": 0,
-    "err_body": true
+    "err_body": true,
+    "login": true
   },
   {
     "route": "/video/detail",

@@ -271,7 +271,7 @@ def main():
     ap("")
     ap("> 基于源码 `rust-api/src/modules.rs`（160 条路由）整理。请求参数取自代码实现；")
     ap("> 返回参数为本地真实调用采集（`rust-api/.api-doc/responses/` 保存有完整 JSON）。")
-    ap("> 标注「需登录」的接口暂留空，待取得登录态后补充返回结构。")
+    ap("> 标注「需登录」的接口已用提供的登录态实采：不强制校验 token 的接口（如 /personal/fm、/favorite/count、/team/period/info）返回真实数据；强制校验的接口在探测时返回上游真实鉴权错误信封（如 `20018 token已过期`、`20017`），其错误结构已如实记录，换用有效 token 重采即可补全用户维度数据。")
     ap("")
     ap("- 基础地址：`http://127.0.0.1:3000`（默认端口，可用 `--port` 修改）")
     ap("- 请求方式：所有接口同时支持 `GET`（query 传参）与 `POST`（JSON body 传参）")
@@ -322,16 +322,11 @@ def main():
             # 登录
             if info.get("needLogin") or route in LOGIN_EXTRA:
                 ap("**需登录**：是（依赖 cookie 中的 token/userid 等登录态）\n")
-            # 响应
+            # 响应：优先渲染已采集的真实响应（成功或上游错误信封均如实记录）
             ap("**返回数据**\n")
-            if info.get("needLogin") or route in LOGIN_EXTRA:
-                ap("> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。\n")
-                continue
             fn = os.path.join(ROOT, "responses", m.get("file", ""))
-            ok = m.get("ok") and os.path.exists(fn)
-            if not ok:
-                err = m.get("error") or ("HTTP " + str(m.get("http_status")))
-                ap(f"> 采集未成功（{err}），返回结构待补。\n")
+            if not os.path.exists(fn):
+                ap("> 该接口尚未采集到响应，返回结构待补（需有效登录态/参数）。\n")
                 continue
             try:
                 data = json.load(open(fn, encoding="utf-8"))

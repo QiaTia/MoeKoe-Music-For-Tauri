@@ -2,7 +2,7 @@
 
 > 基于源码 `rust-api/src/modules.rs`（160 条路由）整理。请求参数取自代码实现；
 > 返回参数为本地真实调用采集（`rust-api/.api-doc/responses/` 保存有完整 JSON）。
-> 标注「需登录」的接口暂留空，待取得登录态后补充返回结构。
+> 标注「需登录」的接口已用提供的登录态实采：不强制校验 token 的接口（如 /personal/fm、/favorite/count、/team/period/info）返回真实数据；强制校验的接口在探测时返回上游真实鉴权错误信封（如 `20018 token已过期`、`20017`），其错误结构已如实记录，换用有效 token 重采即可补全用户维度数据。
 
 - 基础地址：`http://127.0.0.1:3000`（默认端口，可用 `--port` 修改）
 - 请求方式：所有接口同时支持 `GET`（query 传参）与 `POST`（JSON body 传参）
@@ -2031,7 +2031,28 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: object
+  └ msg: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": {
+    "msg": "token已过期,请重新登录"
+  },
+  "status": 0,
+  "error_code": 20018
+}
+```
 
 ### /artist/follow/newsongs
 
@@ -2048,7 +2069,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+errcode: number
+status: number
+error: string
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "errcode": 20018,
+  "status": 0,
+  "error": "请先登录哦"
+}
+```
 
 ### /artist/honour
 
@@ -2184,7 +2223,28 @@ error: string
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: object
+  └ msg: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": {
+    "msg": "token已过期,请重新登录"
+  },
+  "status": 0,
+  "error_code": 20018
+}
+```
 
 ### /artist/videos
 
@@ -2400,7 +2460,23 @@ error: string
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "status": 0,
+  "error_code": 20017
+}
+```
 
 ### /playlist/del
 
@@ -2416,7 +2492,21 @@ error: string
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `None`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: string
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": ""
+}
+```
 
 ### /playlist/detail
 
@@ -2963,7 +3053,23 @@ status: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "status": 0,
+  "error_code": 20017
+}
+```
 
 ### /playlist/tracks/add
 
@@ -2980,7 +3086,23 @@ status: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "status": 0,
+  "error_code": 20017
+}
+```
 
 ### /playlist/tracks/del
 
@@ -2997,7 +3119,23 @@ status: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "status": 0,
+  "error_code": 20017
+}
+```
 
 ### /sheet/collection
 
@@ -5519,7 +5657,80 @@ data: object
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+实测返回（业务码 `status=1`）：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: object
+  └ hotsong_num: number
+  └ bi_biz: string
+  └ is_clean: number
+  └ clientver: string
+  └ filter_num: number
+  └ mark_list: string
+  └ sync_point: number
+  └ fresh_mode: number
+  └ cur_mark: number
+  └ song_list: array
+  └ algorithm_id: number
+  └ mode: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": {
+    "hotsong_num": 0,
+    "bi_biz": "rcmd_pfm",
+    "is_clean": 0,
+    "clientver": "6.1.1",
+    "filter_num": 0,
+    "mark_list": "",
+    "sync_point": 0,
+    "fresh_mode": 0,
+    "cur_mark": 99999998,
+    "song_list": [
+      {
+        "mv_hash": "",
+        "filesize_flac": 30751823,
+        "singerinfo": [
+          {
+            "is_publish": "1",
+            "name": "Atomic Kitten",
+            "id": "68033"
+          }
+        ],
+        "tracker_info": {
+          "auth": "6e86993cc1347d845484d6a4684a2cfc",
+          "module_id": 11,
+          "open_time": "1789183208"
+        },
+        "official_songname": "",
+        "collect_usercnt": 0,
+        "is_mv_file_head": 0,
+        "hash_192": "",
+        "hash_flac": "C8D81DAF53EA63D469ABAA84AA9161FA",
+        "filesize_128": 3824174,
+        "songname": "Nothing In The World",
+        "music_trac": 0,
+        "ztc_mark": "t_1169_2_3925014_63628766_10",
+        "climax_end_time": 94568,
+        "rec_song_info": {
+          "similar_desc": "高",
+          "rec_desc": "根据你的听歌口味推荐",
+          "rec_desc2": "",
+          "alg_path": "rn=9,pred_cutplay=0.028315,rank_cutplay=564.000000,rank_over9=3.000000,pred_over9=0.850391,rank_predict_score=14236.523438,p=14236.523,dpp=1,copr=1,rank_favor=0.000000,rank_favor_new=3.000000,abtid=0.0.10375.1016661052256626903_63628766_487837317_1789096808,pred_favor_new=0.114666,pred_favor=0.489381,tp1rk=0_4,crn=ky2,kyrec=1,t=1789096808,g=3,itid=11af9b76-471a-7b5d-d556-23e51821298a"
+        },
+        "songid": 17278,
+        "quality_level": 3,
+        "fail_process": 4,
+      
+  ...(已截断，完整数据见 responses/)
+```
 
 ## 推荐与首页
 
@@ -7308,7 +7519,7 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 该接口尚未采集到响应，返回结构待补（需有效登录态/参数）。
 
 ### /login/cellphone
 
@@ -7326,7 +7537,7 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 该接口尚未采集到响应，返回结构待补（需有效登录态/参数）。
 
 ### /login/device
 
@@ -7338,7 +7549,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: null
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": null,
+  "status": 0,
+  "error_code": 20018
+}
+```
 
 ### /login/device/kick
 
@@ -7350,7 +7579,7 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 该接口尚未采集到响应，返回结构待补（需有效登录态/参数）。
 
 ### /login/openplat
 
@@ -7366,7 +7595,7 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 该接口尚未采集到响应，返回结构待补（需有效登录态/参数）。
 
 ### /login/qr/check
 
@@ -7491,7 +7720,7 @@ token 登录（换票）
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 该接口尚未采集到响应，返回结构待补（需有效登录态/参数）。
 
 ### /login/wx/check
 
@@ -7507,7 +7736,7 @@ token 登录（换票）
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 该接口尚未采集到响应，返回结构待补（需有效登录态/参数）。
 
 ### /login/wx/create
 
@@ -7625,7 +7854,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": "",
+  "status": 0,
+  "error_code": 20017
+}
+```
 
 ### /user/cloud/url
 
@@ -7644,7 +7891,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+status: number
+error_code: number
+data: string
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "status": 0,
+  "error_code": 82003,
+  "data": ""
+}
+```
 
 ### /user/detail
 
@@ -7656,7 +7921,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_code: number
+status: number
+data: null
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_code": 20018,
+  "status": 0,
+  "data": null
+}
+```
 
 ### /user/follow
 
@@ -7668,7 +7951,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: null
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": null,
+  "status": 0,
+  "error_code": 20018
+}
+```
 
 ### /user/follow/message
 
@@ -7685,7 +7986,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+errcode: number
+status: number
+error: string
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "errcode": 2001,
+  "status": 0,
+  "error": "token error"
+}
+```
 
 ### /user/history
 
@@ -7701,7 +8020,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+status: number
+error_code: number
+data: null
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "status": 0,
+  "error_code": 20017,
+  "data": null
+}
+```
 
 ### /user/listen
 
@@ -7717,7 +8054,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: null
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": null,
+  "status": 0,
+  "error_code": 20018
+}
+```
 
 ### /user/playlist
 
@@ -7734,7 +8089,23 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "status": 0,
+  "error_code": 20017
+}
+```
 
 ### /user/video/collect
 
@@ -7751,7 +8122,25 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": "",
+  "status": 0,
+  "error_code": 20017
+}
+```
 
 ### /user/video/love
 
@@ -7767,7 +8156,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+err_code: number
+msg: string
+status: number
+message: string
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "err_code": 10000,
+  "msg": "未登录",
+  "status": 0,
+  "message": "未登录"
+}
+```
 
 ### /user/vip/detail
 
@@ -7779,7 +8188,28 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: object
+  └ errmsg: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": {
+    "errmsg": "params invalid"
+  },
+  "status": 0,
+  "error_code": 20017
+}
+```
 
 ## 视频
 
@@ -8373,7 +8803,27 @@ errmsg: string
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 51002
+}
+```
 
 ### /youth/channel/amway
 
@@ -8749,7 +9199,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 20001
+}
+```
 
 ### /youth/day/vip
 
@@ -8765,7 +9235,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 51002
+}
+```
 
 ### /youth/day/vip/upgrade
 
@@ -8777,7 +9267,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 51002
+}
+```
 
 ### /youth/dynamic
 
@@ -8789,7 +9299,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 51002
+}
+```
 
 ### /youth/dynamic/recent
 
@@ -8801,7 +9331,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 51002
+}
+```
 
 ### /youth/listen/song
 
@@ -8817,7 +9367,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 51002
+}
+```
 
 ### /youth/month/vip/record
 
@@ -8829,7 +9399,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 51002
+}
+```
 
 ### /youth/union/vip
 
@@ -8841,7 +9431,28 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: object
+  └ errmsg: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": {
+    "errmsg": "params invalid"
+  },
+  "status": 0,
+  "error_code": 20017
+}
+```
 
 ### /youth/user/song
 
@@ -8905,7 +9516,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 51002
+}
+```
 
 ## 组队活动
 
@@ -8923,7 +9554,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 51002
+}
+```
 
 ### /team/my
 
@@ -8939,7 +9590,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 20003
+}
+```
 
 ### /team/my/info
 
@@ -8955,7 +9626,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 20002
+}
+```
 
 ### /team/my/status
 
@@ -8971,7 +9662,27 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: string
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": "",
+  "status": 0,
+  "error_code": 20002
+}
+```
 
 ### /team/period/info
 
@@ -8983,7 +9694,48 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+实测返回（业务码 `status=1`）：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+error_msg: string
+data: object
+  └ current_period_info: object
+  └ last_period_info: object
+  └ period_info: object
+status: number
+error_code: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "error_msg": "",
+  "data": {
+    "current_period_info": {
+      "status_name": "进行中",
+      "end_time": "2026-09-15 23:59:59",
+      "id": 288,
+      "start_time": "2026-09-09 00:00:00",
+      "status": 0,
+      "name": "第145期"
+    },
+    "last_period_info": {
+      "status_name": "已结束",
+      "end_time": "2026-09-08 23:59:59",
+      "id": 286,
+      "start_time": "2026-09-02 00:00:00",
+      "status": 2,
+      "name": "第144期"
+    },
+    "period_info": {}
+  },
+  "status": 1,
+  "error_code": 0
+}
+```
 
 ## 其他
 
@@ -9001,7 +9753,36 @@ error_code: number
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+实测返回（业务码 `status=1`）：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+errcode: number
+errmsg: string
+data: object
+  └ list: array
+status: number
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "errcode": 0,
+  "errmsg": "",
+  "data": {
+    "list": [
+      {
+        "mixsongid": 666075191,
+        "count": 52910,
+        "count_text": "5w"
+      }
+    ]
+  },
+  "status": 1
+}
+```
 
 ### /ip
 
@@ -9242,7 +10023,21 @@ error: string
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `None`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+data: string
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "data": "<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n"
+}
+```
 
 ### /playhistory/upload
 
@@ -9260,7 +10055,25 @@ error: string
 
 **返回数据**
 
-> 需登录后调用，返回结构暂留空，待后续拿到登录数据补充。
+> 实测返回为业务错误（业务码 `0`），以下为上游真实错误信封；成功结构待在有效参数/环境下补充：
+
+**返回字段结构**（基于真实返回推导）
+
+```
+status: number
+error_code: number
+data: null
+```
+
+**返回示例**（截断）
+
+```json
+{
+  "status": 0,
+  "error_code": 20017,
+  "data": null
+}
+```
 
 ### /server/now
 

@@ -1,38 +1,5 @@
 {
-  "data": {
-    "type_size": {
-      "type_2": 107374182400,
-      "type_5": 1099511627776,
-      "type_4": 1099511627776,
-      "type_1": 64424509440,
-      "type_3": 64424509440,
-      "type_0": 64424509440
-    },
-    "list": [
-      {
-        "size": 10616522,
-        "hash": "5F3ACB69A00BAC4A5AD18F843F399F0F",
-        "author_name": "未知歌手",
-        "name": "未知歌手 - 眉间雪.mp3",
-        "sort_order": 0,
-        "audio_id": 0,
-        "bitrate": 3,
-        "hash_std": "",
-        "kmr_album_audio_id": 0,
-        "ext": "mp3",
-        "kv_id": 30337,
-        "album_audio_id": 0,
-        "add_time": 1788436509,
-        "timelen": 264516
-      }
-    ],
-    "used_size": 10616522,
-    "availble_size": 64413892918,
-    "user_type": 1,
-    "list_ver": 125348,
-    "list_count": 1,
-    "max_size": 64424509440
-  },
-  "status": 1,
-  "error_code": 0
+  "data": "",
+  "status": 0,
+  "error_code": 20017
 }

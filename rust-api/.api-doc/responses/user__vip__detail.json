@@ -1,7 +1,7 @@
 {
   "data": {
-    "errmsg": "request params invalid"
+    "errmsg": "params invalid"
   },
   "status": 0,
-  "error_code": 20010
+  "error_code": 20017
 }
