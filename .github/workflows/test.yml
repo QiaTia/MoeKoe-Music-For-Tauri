@@ -30,8 +30,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      # 与 release 构建一致：按 pnpm-lock.yaml 精确安装，避免 @tauri-apps/* 浮动版本与 Rust crate 不一致
+      - run: pnpm install --frozen-lockfile
       - name: Run unit tests with coverage
         run: npm run test:coverage
       - name: Upload coverage report
@@ -73,13 +76,14 @@ jobs:
           EOF
       - name: Run cargo test (lib + integration)
         working-directory: src-tauri
-        run: cargo test --all-features -- --nocapture
+        # pipefail 防止 tee 吞掉 cargo test 的非零退出码
+        run: set -o pipefail && cargo test --all-features -- --nocapture | tee ../../rust-test-output.log
       - name: Upload cargo test log
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: rust-test-output
-          path: src-tauri/target/debug/
+          path: rust-test-output.log
 
   e2e:
     name: E2E (Playwright + tauri-driver)
@@ -91,8 +95,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      # 同上：统一使用 pnpm 锁文件安装
+      - run: pnpm install --frozen-lockfile
       - uses: dtolnay/rust-toolchain@stable
       - name: Install Linux deps + tauri-driver
         run: |
