@@ -27,9 +27,11 @@ rust-api/target/
 .env.*
 !.env.example
 
-# ---- 遗留的 pnpm 文件（项目使用 npm）----
-pnpm-lock.yaml
-pnpm-workspace.yaml
+# ---- pnpm ----
+# 项目已切换到 pnpm 管理依赖（CI 使用 pnpm install --frozen-lockfile），
+# 锁文件与工作区配置必须入库，否则 CI 找不到锁文件直接失败。
+# （历史遗留：早期忽略这两个文件是因为当时主用 npm）
+node_modules/.pnpm/
 
 # ---- 测试与临时目录 ----
 test
