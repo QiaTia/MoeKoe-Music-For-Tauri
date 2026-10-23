@@ -138,6 +138,8 @@ const submitPrompt = () => {
 
 const closePrompt = () => {
     showPrompt.value = false;
+    // 取消时也必须结算 Promise，否则调用方 `await $modal.prompt()` 会永久挂起（泄漏）
+    promptResolve?.(null);
 };
 
 // Loading 方法

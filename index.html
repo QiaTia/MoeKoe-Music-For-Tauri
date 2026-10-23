@@ -20,19 +20,30 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
     <script>
-        const getBrowserLocale = () => {
-            const browserLang = navigator.language;
-            if (browserLang.startsWith('zh')) {
-                if (browserLang === 'zh-TW' || browserLang === 'zh-HK') {
-                    return 'zh-TW';
+        // 早期设置 <html lang>，避免首屏语言闪烁。
+        // 注意：内联脚本无法访问 src/utils/i18n.js 的模块作用域，支持列表必须在此显式声明
+        //（此前直接引用 messages 会抛 ReferenceError，阻断 lang 设置）。
+        (() => {
+            const SUPPORTED_LOCALES = ['en', 'ja', 'ko', 'ru', 'zh-CN', 'zh-TW'];
+            const getBrowserLocale = () => {
+                const browserLang = navigator.language || 'en';
+                if (browserLang.startsWith('zh')) {
+                    if (browserLang === 'zh-TW' || browserLang === 'zh-HK') {
+                        return 'zh-TW';
+                    }
+                    return 'zh-CN';
                 }
-                return 'zh-CN';
+                const lang = browserLang.split('-')[0];
+                return SUPPORTED_LOCALES.includes(lang) ? lang : 'ja';
+            };
+            let settings = null;
+            try {
+                settings = JSON.parse(localStorage.getItem('settings'));
+            } catch {
+                // 配置损坏时退回浏览器语言，早期脚本绝不能抛错
             }
-            const lang = browserLang.split('-')[0];
-            return Object.keys(messages).includes(lang) ? lang : 'ja';
-        };
-        const settings = JSON.parse(localStorage.getItem('settings'));
-        document.documentElement.lang = settings?.language || getBrowserLocale();
+            document.documentElement.lang = settings?.language || getBrowserLocale();
+        })();
     </script>
 </body>
 

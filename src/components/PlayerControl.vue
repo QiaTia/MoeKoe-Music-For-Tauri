@@ -1818,7 +1818,8 @@ onMounted(() => {
     console.log('[PlayerControl] 音频初始化完成');
 
     // 小屏播放器打开时请求立即同步完整播放状态
-    window.electron.ipcRenderer.on('request-player-state-sync', () => {
+    // 纯 Web 预览下无 electron 桥，注册前必须判空（回调内再判断已经太晚）
+    window.electron?.ipcRenderer?.on('request-player-state-sync', () => {
         if (!isElectron()) return;
         broadcastMiniPlayerState();
     });

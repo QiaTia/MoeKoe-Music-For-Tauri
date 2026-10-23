@@ -116,7 +116,9 @@ useActivatedWatch(() => [route.query.hash, route.query.listid], (_value, _oldVal
 const recommend = async () => {
     const response = await get('/everyday/recommend');
     if (response.status == 1) {
-        songs.value = response.data.song_list.sort(() => Math.random() - 0.5);
+        // 上游字段缺失时不能让整页崩掉（接口降级/风控空响应都会走这里）
+        const songList = response.data?.song_list;
+        songs.value = Array.isArray(songList) ? songList.sort(() => Math.random() - 0.5) : [];
     }
     isLoading.value = false;
 }
