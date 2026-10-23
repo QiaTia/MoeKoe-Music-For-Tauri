@@ -1,13 +1,21 @@
 name: Release
 
-# 推送形如 v* 的 tag（例如 v1.7.1）时，自动为 Windows / macOS / Linux 构建并发布到 Releases。
-# 也可在 GitHub 网页上手动触发（workflow_dispatch，可指定 tag 名）。
+# 推送形如 v* 的 tag（例如 v1.7.1）时自动为 Windows / macOS / Linux 构建并发布到 Releases。
+# 也可在 GitHub 网页上手动触发（workflow_dispatch，version 必填）。
+#
+# 结构：preflight（解析并校验 tag）→ gate（测试门）→ build（矩阵编译发布）
 #
 # 设计要点：
+#  - preflight：手动触发时 version 留空会**直接失败**。旧写法 `inputs.version || github.ref_name`
+#    在 ref_name 是分支名时会创建名为分支的 tag，属于隐性事故。
+#    同时校验 tag 与 package.json / tauri.conf.json / src-tauri/Cargo.toml 三处版本一致 ——
+#    Cargo.toml 的 version 需手工同步，漏改会导致安装包内版本号与 tag 不符。
+#  - gate：发布前跑一遍单测/覆盖率/E2E/Rust 测试。旧结构与 test.yml 互不依赖，
+#    Test 红灯完全拦不住发布，这是最大的结构性风险。
 #  - 每个「平台 × 架构」是独立 matrix job：某架构构建失败不会连带跳过其它架构
 #    （旧版把 macOS/Windows 两个架构串在同一 job 的 step 里，前一步失败后一步不执行）。
 #  - fail-fast: false：单平台失败不影响其余平台出包。
-#  - 所有 job 通过同一 tagName 往同一个 Release 追加产物。
+#  - 所有 job 通过 preflight 解析出的同一 tag 往同一个 Release 追加产物。
 on:
   push:
     tags:
@@ -15,16 +23,131 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Release tag 名（例如 v1.7.1），留空则使用当前 ref'
-        required: false
+        description: 'Release tag 名（例如 v1.7.1）。必填，留空会直接失败。'
+        required: true
         default: ''
 
 permissions:
   contents: write
 
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: 1
+
 jobs:
+  # ─────────────────────────────────────────────────────────────
+  # 1) 解析并校验发布版本
+  # ─────────────────────────────────────────────────────────────
+  preflight:
+    name: Resolve & verify version
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.resolve.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Resolve release tag
+        id: resolve
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            raw="${{ github.event.inputs.version }}"
+            if [ -z "$raw" ]; then
+              echo "::error::workflow_dispatch 必须填写 version（例如 v1.7.1）。留空会退化为 github.ref_name（分支名），创建错误的 tag。"
+              exit 1
+            fi
+          else
+            raw="${GITHUB_REF_NAME}"
+          fi
+          # 手动输入常见前导/尾随空格（如 " v1.7.1"），会拼出 "v v1.7.1" 这种无效 tag
+          raw="$(printf '%s' "$raw" | tr -d '[:space:]')"
+          case "$raw" in
+            v*) tag="$raw" ;;
+            *)  tag="v$raw" ;;
+          esac
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "发布 tag: $tag"
+
+      - name: Verify version consistency
+        env:
+          TAG: ${{ steps.resolve.outputs.tag }}
+        run: |
+          set -euo pipefail
+          want="${TAG#v}"
+          # Cargo.toml 的 version 需手工同步，是最容易漏的一处，因此三处一起校验
+          pkg=$(grep -m1 '"version"' package.json | sed -E 's/.*"version"[[:space:]]*:[[:space:]]*"([^"]+)".*/\1/')
+          conf=$(grep -m1 '"version"' src-tauri/tauri.conf.json | sed -E 's/.*"version"[[:space:]]*:[[:space:]]*"([^"]+)".*/\1/')
+          cargo=$(grep -m1 '^version' src-tauri/Cargo.toml | sed -E 's/.*"([^"]+)".*/\1/')
+          echo "tag        = ${want}"
+          echo "package    = ${pkg}"
+          echo "tauri.conf = ${conf}"
+          echo "Cargo.toml = ${cargo}"
+          fail=0
+          for pair in "package.json:${pkg}" "src-tauri/tauri.conf.json:${conf}" "src-tauri/Cargo.toml:${cargo}"; do
+            name="${pair%%:*}"
+            got="${pair#*:}"
+            if [ "$got" != "$want" ]; then
+              echo "::error file=${name}::版本为 ${got}，但发布 tag 是 ${TAG}（期望 ${want}）。请先统一版本再发版。"
+              fail=1
+            fi
+          done
+          exit $fail
+
+  # ─────────────────────────────────────────────────────────────
+  # 2) 测试门：不通过则不出包
+  # ─────────────────────────────────────────────────────────────
+  gate:
+    name: Test gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - run: pnpm install --frozen-lockfile
+
+      - name: Frontend unit + coverage
+        run: npm run test:coverage
+
+      - name: Install Playwright chromium
+        run: npx playwright install --with-deps chromium
+      - name: E2E web
+        run: npm run test:e2e
+
+      - name: Install system deps (Tauri Linux)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev \
+            libayatana-appindicator3-dev librsvg2-dev libsoup-3.0-dev patchelf libssl-dev
+
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            src-tauri -> target
+            rust-api -> target
+
+      - name: Rust tests (src-tauri)
+        working-directory: src-tauri
+        run: cargo test --all-features
+
+      - name: Rust tests (rust-api)
+        working-directory: rust-api
+        run: cargo test --lib
+
+  # ─────────────────────────────────────────────────────────────
+  # 3) 矩阵构建并发布
+  # ─────────────────────────────────────────────────────────────
   build:
     name: ${{ matrix.label }}
+    needs: [preflight, gate]
     strategy:
       fail-fast: false
       matrix:
@@ -108,10 +231,11 @@ jobs:
           # APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
         with:
           projectPath: 'src-tauri'
-          tagName: ${{ github.event.inputs.version || github.ref_name }}
-          releaseName: 'MoeKoe Music ${{ github.event.inputs.version || github.ref_name }}'
+          # 只用 preflight 解析并校验过的 tag，不回退到 ref_name
+          tagName: ${{ needs.preflight.outputs.tag }}
+          releaseName: 'MoeKoe Music ${{ needs.preflight.outputs.tag }}'
           releaseBody: |
-            ## MoeKoe Music ${{ github.event.inputs.version || github.ref_name }}
+            ## MoeKoe Music ${{ needs.preflight.outputs.tag }}
 
             自动构建的跨平台桌面客户端：
 
