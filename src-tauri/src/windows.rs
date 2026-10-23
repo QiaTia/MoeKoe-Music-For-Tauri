@@ -961,4 +961,88 @@ mod tests {
         assert!(rx <= WX + WW - WIN_W);
         assert!(ry <= WY + WH - WIN_H);
     }
+
+    // ── mv_window_title：从 fragment query 解析标题 ──
+    #[test]
+    fn test_mv_window_title_parses_fragment_query() {
+        // 浏览器地址栏里中文是百分号编码，query_pairs 负责解码
+        assert_eq!(
+            mv_window_title("http://localhost:8080/#/video?hash=abc&title=%E6%99%B4%E5%A4%A9"),
+            "晴天"
+        );
+        assert_eq!(
+            mv_window_title("http://localhost:8080/#/video?hash=abc&title=Live%20Show"),
+            "Live Show"
+        );
+    }
+
+    #[test]
+    fn test_mv_window_title_falls_back_to_default() {
+        // 无 title 参数
+        assert_eq!(
+            mv_window_title("http://localhost:8080/#/video?hash=abc"),
+            "MoeKoe MV"
+        );
+        // title 为空串
+        assert_eq!(
+            mv_window_title("http://localhost:8080/#/video?title="),
+            "MoeKoe MV"
+        );
+        // 无 fragment
+        assert_eq!(mv_window_title("http://localhost:8080/"), "MoeKoe MV");
+        // 非法 URL
+        assert_eq!(mv_window_title("not a url"), "MoeKoe MV");
+        assert_eq!(mv_window_title(""), "MoeKoe MV");
+    }
+
+    // ── nearest_safe_position：多显示器可见性兜底 ──
+    #[test]
+    fn test_nearest_safe_position_keeps_visible_position() {
+        let rects = vec![(0.0, 0.0, 1920.0, 1080.0)];
+        // 已完全落在屏内 → 不打扰用户
+        assert_eq!(
+            nearest_safe_position(&rects, 100.0, 100.0, 320.0, 460.0),
+            (100.0, 100.0)
+        );
+    }
+
+    #[test]
+    fn test_nearest_safe_position_clamps_into_nearest_monitor() {
+        let rects = vec![(0.0, 0.0, 1920.0, 1080.0), (1920.0, 0.0, 1920.0, 1080.0)];
+
+        // 拖到第二屏右侧外 → 拉回第二屏右边界（而不是第一屏）
+        assert_eq!(
+            nearest_safe_position(&rects, 4000.0, 100.0, 320.0, 460.0),
+            (3520.0, 100.0)
+        );
+        // 拖到第一屏左侧外 → 拉回 0
+        assert_eq!(
+            nearest_safe_position(&rects, -200.0, 50.0, 320.0, 460.0),
+            (0.0, 50.0)
+        );
+        // 拖到下方外 → y 被夹到屏底可容纳位置
+        assert_eq!(
+            nearest_safe_position(&rects, 100.0, 5000.0, 320.0, 460.0),
+            (100.0, 620.0)
+        );
+    }
+
+    #[test]
+    fn test_nearest_safe_position_centers_when_window_larger_than_monitor() {
+        // 窗口 320x460 比 200x200 的屏还大 → 居中兜底（偏移被 max(0) 钳为 0）
+        let rects = vec![(0.0, 0.0, 200.0, 200.0)];
+        assert_eq!(
+            nearest_safe_position(&rects, 500.0, 500.0, 320.0, 460.0),
+            (0.0, 0.0)
+        );
+    }
+
+    #[test]
+    fn test_nearest_safe_position_handles_empty_monitor_list() {
+        // 拿不到显示器信息时退回原位置，不能把窗口挪到 0,0
+        assert_eq!(
+            nearest_safe_position(&[], 10.0, 20.0, 320.0, 460.0),
+            (10.0, 20.0)
+        );
+    }
 }
