@@ -155,7 +155,7 @@
                         <label>
                             {{ $t('websocket-api-url-preview') }}
                             <span class="btns">
-                                <a :title="t('fu-zhi')" :aria-label="t('fu-zhi')" class="copy-button" @click="copy(apiModeUrlPreview.ws, $event.target)">
+                                <a :title="t('fu-zhi')" :aria-label="t('fu-zhi')" class="copy-button" @click="copy(apiModeUrlPreview.ws)">
                                     <i class="fas fa-clipboard"></i>
                                 </a>
                                 <a class="help-link normal" @click="openHelpLink('https://music.moekoe.cn/websocket-api.html')" :title="$t('bang-zhu')"
@@ -170,7 +170,7 @@
                         <label>
                             {{ $t('web-api-url-preview') }}
                             <span class="btns">
-                                <a :title="t('fu-zhi')" :aria-label="t('fu-zhi')" class="copy-button" @click="copy(apiModeUrlPreview.http, $event.target)">
+                                <a :title="t('fu-zhi')" :aria-label="t('fu-zhi')" class="copy-button" @click="copy(apiModeUrlPreview.http)">
                                     <i class="fas fa-clipboard"></i>
                                 </a>
                                 <a class="help-link normal" @click="openHelpLink('https://music.moekoe.cn/api-docs.html')" :title="$t('bang-zhu')"
@@ -277,18 +277,19 @@ const platform = ref('');
 const activeTab = ref(0);
 const defaultApiBaseUrl = DEFAULT_API_BASE_URL;
 
-/** @param {HTMLButtonElement | null | undefined} target */
-const copy = async (content, target = null) => {
-    if(target) target.disabled = true;
+// 防连点标志位：目标元素是 <a>，没有 disabled 语义，不能靠 target.disabled 收敛
+let copying = false;
+const copy = async (content) => {
+    if (copying) return;
+    copying = true;
     try {
         await navigator.clipboard.writeText(content);
         $message.success('复制成功');
     } catch(e) {
         $message.error('复制失败：', e.message);
+    } finally {
+        setTimeout(() => { copying = false; }, 1500);
     }
-    if(target) setTimeout(() => {
-        target.disabled = false;
-    }, 1500);
 }
 
 const {
@@ -485,7 +486,7 @@ const isPreventOpenSelectionItem = (item) =>
     (typeof item.noSelection === 'undefined' || item.noSelection === true);
 
 const isDisabledItem = (item) => {
-    const value = selectedSettings.value?.[item.key].value;
+    const value = selectedSettings.value?.[item.key]?.value;
     return value? value === 'off': false;
 }
 
@@ -680,7 +681,9 @@ const closeSelection = () => {
 
 onMounted(() => {
     /** @type {typeof defaultSettings} */
-    const savedSettings = JSON.parse(localStorage.getItem('settings') || 'null') || defaultSettings;
+    // 深拷贝：下面会就地改写 savedSettings（补 apiBaseUrlMode 等），
+    // 直接引用导入的 defaultSettings 会污染全局默认值
+    const savedSettings = JSON.parse(localStorage.getItem('settings') || 'null') || JSON.parse(JSON.stringify(defaultSettings));
 
     if (savedSettings) {
         if (savedSettings.apiBaseUrlMode === undefined) {
@@ -772,8 +775,9 @@ const shortcuts = ref({});
 const proxyForm = reactive({ url: '', testing: false, testResult: '', testStatus: '' });
 const apiModeForm = reactive({ host: '127.0.0.1', port: 6520, wsPath: '/moekoe' });
 const apiModeUrlPreview = reactive({
-    http: computed(() => `http://127.0.0.1:${apiModeForm.port}`),
-    ws: computed(() => `ws://127.0.0.1:${apiModeForm.port}${apiModeForm.wsPath}`)
+    // 用实际监听 host，不能在局域网（0.0.0.0）模式下仍显示回环地址
+    http: computed(() => `http://${apiModeForm.host}:${apiModeForm.port}`),
+    ws: computed(() => `ws://${apiModeForm.host}:${apiModeForm.port}${apiModeForm.wsPath}`)
 });
 const apiBaseUrlForm = reactive({ url: '', testing: false, testResult: '', testStatus: '' });
 

@@ -180,15 +180,40 @@ pub fn playlist_aes_decrypt(key: &str, str_b64: &str) -> serde_json::Value {
 /// 而 `from_public_key_pem` 走 RFC7468 严格解码器要求 64 列换行，会报
 /// `Base64(InvalidEncoding)`。因此这里手动剥离头尾+去空白+base64 解码，
 /// 再走 DER 解析，规避行宽限制。
-fn load_pub_key(pem: &str) -> RsaPublicKey {
+fn load_pub_key(pem: &str) -> Result<RsaPublicKey, String> {
     let body: String = pem
         .lines()
         .filter(|l| !l.starts_with("-----"))
         .flat_map(|l| l.chars())
         .filter(|c| !c.is_whitespace())
         .collect();
-    let der = B64.decode(body.as_bytes()).expect("RSA 公钥 base64 解码失败");
-    RsaPublicKey::from_public_key_der(&der).expect("RSA 公钥 DER 解析失败")
+    let der = B64
+        .decode(body.as_bytes())
+        .map_err(|e| format!("RSA 公钥 base64 解码失败: {e}"))?;
+    RsaPublicKey::from_public_key_der(&der).map_err(|e| format!("RSA 公钥 DER 解析失败: {e}"))
+}
+
+/// 解析公钥：显式传入优先，否则按 lite / 正式版内置公钥
+fn resolve_pub_key(public_key_pem: Option<&str>) -> Result<RsaPublicKey, String> {
+    load_pub_key(public_key_pem.unwrap_or(if crate::config::is_lite() {
+        PUBLIC_LITE_RSA_KEY
+    } else {
+        PUBLIC_RSA_KEY
+    }))
+}
+
+/// RSAES-PKCS1-V1_5 加密（返回原始密文字节）。
+/// `rsa_encrypt2`（hex）与 `rsa_encrypt_pkcs1_b64`（base64）的唯一实现，避免两处重复。
+fn rsa_pkcs1_encrypt(data: &str, public_key_pem: Option<&str>) -> Result<Vec<u8>, String> {
+    let key = resolve_pub_key(public_key_pem)?;
+    let mut rng = rand::thread_rng();
+    key.encrypt(&mut rng, Pkcs1v15Encrypt, data.as_bytes())
+        .map_err(|_| {
+            format!(
+                "RSA PKCS1 加密失败：明文 {} 字节超出该公钥可加密上限",
+                data.len()
+            )
+        })
 }
 
 /// 对应 cryptoRSAEncrypt —— **原始无填充 RSA**：明文右补零到 keyLen(128B)，转大整数 modPow(e,n)，hex 输出。
@@ -198,7 +223,7 @@ pub fn crypto_rsa_encrypt(data: &str, public_key_pem: Option<&str>) -> String {
     } else {
         PUBLIC_RSA_KEY
     });
-    let key = load_pub_key(pem);
+    let key = load_pub_key(pem).expect("RSA 公钥解析失败");
     let n = BigUint::from_bytes_be(&key.n().to_bytes_be());
     let e = BigUint::from_bytes_be(&key.e().to_bytes_be());
     let key_len = (key.n().bits() + 7) / 8; // 向上取整字节数
@@ -220,35 +245,23 @@ pub fn crypto_rsa_encrypt(data: &str, public_key_pem: Option<&str>) -> String {
     hexstr
 }
 
-/// 对应 rsaEncrypt2 —— RSAES-PKCS1-V1_5，hex 输出（随机填充，每次不同，与 node-forge 一致）
+/// 对应 rsaEncrypt2 —— RSAES-PKCS1-V1_5，hex 输出（随机填充，每次不同，与 node-forge 一致）。
+///
+/// 调用方传入的都是本地构造的短 JSON（远小于 1024 位密钥的 117 字节明文上限），
+/// 故此处保留 `expect`；处理服务端/用户输入的场景请改用 `rsa_encrypt_pkcs1_b64`。
 pub fn rsa_encrypt2(data: &str) -> String {
-    let pem = if crate::config::is_lite() {
-        PUBLIC_LITE_RSA_KEY
-    } else {
-        PUBLIC_RSA_KEY
-    };
-    let key = load_pub_key(pem);
-    let mut rng = rand::thread_rng();
-    let enc = key
-        .encrypt(&mut rng, Pkcs1v15Encrypt, data.as_bytes())
-        .expect("RSA PKCS1 加密失败");
-    hex::encode(enc)
+    hex::encode(rsa_pkcs1_encrypt(data, None).expect("RSA PKCS1 加密失败"))
 }
 
 /// 对应 `crypto.publicEncrypt({ key, padding: RSA_PKCS1_PADDING }).toString('base64')`。
 /// 酷狗 CSCC `/v2/gen` 会话申请需要 **base64** 形式的 PKCS1 密文（`rsa_encrypt2` 是 hex）。
-pub fn rsa_encrypt_pkcs1_b64(data: &str, public_key_pem: Option<&str>) -> String {
-    let pem = public_key_pem.unwrap_or(if crate::config::is_lite() {
-        PUBLIC_LITE_RSA_KEY
-    } else {
-        PUBLIC_RSA_KEY
-    });
-    let key = load_pub_key(pem);
-    let mut rng = rand::thread_rng();
-    let enc = key
-        .encrypt(&mut rng, Pkcs1v15Encrypt, data.as_bytes())
-        .expect("RSA PKCS1 加密失败");
-    B64.encode(enc)
+///
+/// 明文长度受 RSA 填充限制（1024 位密钥 → 117 字节），超长返回 Err 而非 panic。
+pub fn rsa_encrypt_pkcs1_b64(
+    data: &str,
+    public_key_pem: Option<&str>,
+) -> Result<String, String> {
+    rsa_pkcs1_encrypt(data, public_key_pem).map(|enc| B64.encode(enc))
 }
 
 #[cfg(test)]
@@ -299,6 +312,17 @@ mod tests {
         let enc = playlist_aes_encrypt("{\"a\":1}");
         let dec = playlist_aes_decrypt(&enc.key, &enc.str);
         assert_eq!(dec, serde_json::json!({"a":1}));
+    }
+
+    #[test]
+    fn test_rsa_pkcs1_b64_rejects_oversize_plaintext() {
+        // 1024 位密钥 + PKCS1 填充 → 明文上限 117 字节。超长必须返回 Err（不能 panic）。
+        std::env::remove_var("platform");
+        let ok = rsa_encrypt_pkcs1_b64(&"a".repeat(117), None);
+        assert!(ok.is_ok(), "117 字节应可加密");
+        assert!(!ok.unwrap().is_empty());
+        let too_long = rsa_encrypt_pkcs1_b64(&"a".repeat(118), None);
+        assert!(too_long.is_err(), "118 字节应返回 Err");
     }
 
     #[test]

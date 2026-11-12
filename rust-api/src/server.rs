@@ -46,6 +46,8 @@ pub fn build_router(state: Arc<AppState>) -> Router {
 // ---------------- 响应缓存（对应 util/apicache.js，'2 minutes'，仅缓存 200） ----------------
 
 const CACHE_DURATION_SECS: u64 = 120; // '2 minutes'
+/// 响应缓存条目上限（键含 query，需防无限增长）
+const CACHE_MAX_ENTRIES: u64 = 500;
 
 /// 缓存条目：状态码 + 全部响应头（含 set-cookie/cache-control）+ body 字节 + 存入时刻
 struct CachedEntry {
@@ -59,6 +61,8 @@ static RESPONSE_CACHE: once_cell::sync::Lazy<moka::future::Cache<String, Arc<Cac
     once_cell::sync::Lazy::new(|| {
         moka::future::Cache::builder()
             .time_to_live(std::time::Duration::from_secs(CACHE_DURATION_SECS))
+            // 键含 query（部分调用方会带 t= 时间戳防缓存），不设上限会随调用无限增长
+            .max_capacity(CACHE_MAX_ENTRIES)
             .build()
     });
 

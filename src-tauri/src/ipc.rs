@@ -121,13 +121,19 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
             let api_should_run = crate::ws::api_mode_should_start(&ctx.settings);
             if api_should_run {
                 let cfg = crate::ws::WsConfig::from_settings(&ctx.settings);
-                if ctx.ws.is_running() {
-                    if ctx.ws.current_config().as_ref() != Some(&cfg) {
-                        ctx.ws.stop();
-                        ctx.ws.start(app.clone(), cfg);
-                    }
+                let need_restart = if ctx.ws.is_running() {
+                    ctx.ws.current_config().as_ref() != Some(&cfg)
                 } else {
-                    ctx.ws.start(app.clone(), cfg);
+                    true
+                };
+                if need_restart {
+                    if ctx.ws.is_running() {
+                        ctx.ws.stop();
+                    }
+                    // bind 失败（端口占用等）只记录，不能让设置保存流程失败
+                    if let Err(e) = ctx.ws.start(app.clone(), cfg) {
+                        eprintln!("[ws] {e}");
+                    }
                 }
             } else if ctx.ws.is_running() {
                 ctx.ws.stop();

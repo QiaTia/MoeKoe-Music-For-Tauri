@@ -938,13 +938,23 @@ let listenSession = null;
 let listenReportChain = Promise.resolve();
 // 两次上报之间的最小间隔(毫秒)：酷狗 CSCC 有频控，间隔过短会返回 errcode=1203 拒绝 start
 const LISTEN_REPORT_MIN_INTERVAL = 2000;
+// 单次上报任务的最长等待（覆盖"先刷新基线 + 再上报"两次请求）
+const LISTEN_REPORT_TASK_TIMEOUT = 20000;
 let lastListenReportDoneAt = 0;
 const enqueueListenReport = (task) => {
     listenReportChain = listenReportChain.then(async () => {
         // 与上一次上报完成时间拉开最小间隔，触发频控时静默失败不重试(API 侧要求不重复上报)
         const waitMs = LISTEN_REPORT_MIN_INTERVAL - (Date.now() - lastListenReportDoneAt);
         if (waitMs > 0) await new Promise((resolve) => setTimeout(resolve, waitMs));
-        await task();
+        // 单次上报兜底超时：rust 侧请求已有 15s 上限，这里再包一层，防止任何挂起
+        // 让整条串行链永久 pending、后续事件全部堆积。
+        await Promise.race([
+            Promise.resolve().then(task),
+            new Promise((_, reject) => setTimeout(
+                () => reject(new Error(`听歌时长上报超时(${LISTEN_REPORT_TASK_TIMEOUT}ms)`)),
+                LISTEN_REPORT_TASK_TIMEOUT
+            ))
+        ]);
         lastListenReportDoneAt = Date.now();
     }).catch((error) => {
         lastListenReportDoneAt = Date.now();

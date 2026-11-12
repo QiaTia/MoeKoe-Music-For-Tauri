@@ -34,6 +34,8 @@ pub struct DispatchResponse {
 }
 
 const CACHE_DURATION_SECS: u64 = 120;
+/// 响应缓存条目上限（键含 query，需防无限增长）
+const CACHE_MAX_ENTRIES: u64 = 500;
 
 /// 进程内分发器（一个应用一个实例，由宿主托管）
 pub struct ApiDispatcher {
@@ -50,6 +52,8 @@ impl ApiDispatcher {
             jar: RwLock::new(HashMap::new()),
             cache: moka::future::Cache::builder()
                 .time_to_live(std::time::Duration::from_secs(CACHE_DURATION_SECS))
+                // 键含 query（部分调用方会带 t= 时间戳防缓存），不设上限会随调用无限增长
+                .max_capacity(CACHE_MAX_ENTRIES)
                 .build(),
         }
     }

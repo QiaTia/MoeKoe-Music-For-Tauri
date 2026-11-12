@@ -136,7 +136,11 @@ fn build_proxy() -> Option<reqwest::Proxy> {
 fn build_client() -> reqwest::Client {
     let mut builder = reqwest::Client::builder()
         .user_agent("Android15-1070-11083-46-0-DiscoveryDRADProtocol-wifi")
-        .gzip(true);
+        .gzip(true)
+        // invoke 路径不经过 axios，没有前端 10s 超时兜底，必须在此设定上限，
+        // 否则服务端挂起会把调用方（如 CSCC 串行上报队列）永久卡住。
+        .timeout(std::time::Duration::from_secs(15))
+        .connect_timeout(std::time::Duration::from_secs(5));
     if let Some(p) = build_proxy() {
         builder = builder.proxy(p);
     }
@@ -405,7 +409,10 @@ pub async fn create_request(options: RequestOptions) -> Result<Response, Respons
         }
         Err(e) => {
             answer.status = 502;
-            answer.body = serde_json::json!({ "status": 0, "msg": e.to_string() });
+            // without_url()：reqwest 默认的错误文案会带上完整 URL，
+            // 而部分上游（如 CSCC /v2/post）把 cookie/sign 放在 query 里，
+            // 这些字符串会经前端 console 落痕，故只保留错误原因。
+            answer.body = serde_json::json!({ "status": 0, "msg": e.without_url().to_string() });
             Err(answer)
         }
     }

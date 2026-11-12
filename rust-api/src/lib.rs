@@ -8,6 +8,7 @@
 pub mod cli;
 pub mod config;
 pub mod crypto;
+pub mod cscc;
 pub mod dispatch;
 pub mod jsval;
 pub mod modules;

@@ -452,6 +452,8 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
             },
             {
                 key: 'apiBaseUrlMode',
+                // Tauri 客户端同样需要该入口：一旦 apiBaseUrl 被设成失效地址，
+                // invokeBridge 会把所有请求切到该 HTTP 地址，此处是唯一的恢复途径。
                 available: 'client',
                 selectAction: 'resetApiBaseUrl',
                 defaultValue: defaultSettings.apiBaseUrlMode,
@@ -461,7 +463,6 @@ export const createSettingSections = (t, actions = {}) => computed(() => [
                     { displayText: '默认', value: 'default' },
                     { displayText: '自定义', value: 'custom' }
                 ],
-                available: 'web',
                 keepOpen: true,
                 label: 'RPC地址',
                 showRefreshHint: true,

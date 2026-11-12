@@ -327,7 +327,7 @@
   "jian-ting-zhu-ji": "监听主机",
   "websocket-jian-ting-lu-jing": "WebSocket 监听路径",
   "jian-ting-duan-kou": "监听端口",
-  "allow-lan-request": "允许来自局域网的连接",
+  "allow-lan-request": "允许来自局域网的连接（无验证，仅建议在可信网络使用）",
   "websocket-api-url-preview": "WebSocket API 终结点预览",
   "web-api-url-preview": "Web API 终结点预览",
   "zi-dong-jue-ding": "自动决定",

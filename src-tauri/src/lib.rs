@@ -308,7 +308,9 @@ pub fn run() {
             // 5. WS 远程控制（apiMode 三态；auto 在无扩展体系下等价不启动）
             if ws::api_mode_should_start(&ctx.settings) {
                 let cfg = ws::WsConfig::from_settings(&ctx.settings);
-                ctx.ws.start(handle.clone(), cfg);
+                if let Err(e) = ctx.ws.start(handle.clone(), cfg) {
+                    eprintln!("[ws] {e}");
+                }
             }
 
             // 6. 启动问候语
