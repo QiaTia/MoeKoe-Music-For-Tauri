@@ -5,6 +5,7 @@
 //! - 系统集成：托盘、全局快捷键、单实例、moekoe:// 深链、开机自启、在线更新、WS 远程控制
 
 mod ipc;
+mod netinfo;
 mod settings;
 mod shortcuts;
 mod statusbar;
@@ -356,6 +357,7 @@ pub fn run() {
             ipc::app_boot_info,
             ipc::open_mv_window,
             ipc::open_log_path,
+            ipc::local_ip,
             ipc::export_log,
             ipc::start_update_download,
             ipc::ipc_invoke,

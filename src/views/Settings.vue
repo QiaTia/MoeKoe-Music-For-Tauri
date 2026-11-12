@@ -767,6 +767,9 @@ onMounted(() => {
     if (savedSettings?.audioOutputDevice !== undefined) {
         void updateAudioOutputDeviceDisplayText(savedSettings.audioOutputDevice);
     }
+
+    // 局域网模式下预览需要真实本机 IP（0.0.0.0 是绑定地址，不可连接）
+    if (apiModeForm.host === '0.0.0.0') void refreshLocalIp();
 });
 
 const showShortcutModal = ref(false);
@@ -774,10 +777,26 @@ const recordingKey = ref('');
 const shortcuts = ref({});
 const proxyForm = reactive({ url: '', testing: false, testResult: '', testStatus: '' });
 const apiModeForm = reactive({ host: '127.0.0.1', port: 6520, wsPath: '/moekoe' });
+// 本机局域网 IPv4：局域网模式下 0.0.0.0 只是绑定地址，用户需要真实 IP 才能连接
+const localIp = ref('');
+const refreshLocalIp = async () => {
+    try {
+        const ip = await window.electronAPI?.getLocalIp?.();
+        if (typeof ip === 'string' && ip) localIp.value = ip;
+    } catch(e) {
+        // 探测失败（无默认路由）时保持原值，预览退回绑定地址
+        console.warn('[Settings] 本机 IP 探测失败:', e);
+    }
+};
+const apiModePreviewHost = computed(() => {
+    const host = apiModeForm.host === '0.0.0.0' ? (localIp.value || '0.0.0.0') : apiModeForm.host;
+    // IPv6 字面量需要方括号才是合法 URL
+    return host.includes(':') && !host.startsWith('[') ? `[${host}]` : host;
+});
 const apiModeUrlPreview = reactive({
-    // 用实际监听 host，不能在局域网（0.0.0.0）模式下仍显示回环地址
-    http: computed(() => `http://${apiModeForm.host}:${apiModeForm.port}`),
-    ws: computed(() => `ws://${apiModeForm.host}:${apiModeForm.port}${apiModeForm.wsPath}`)
+    // 用实际可连接的 host，不能在局域网模式下仍显示回环/绑定地址
+    http: computed(() => `http://${apiModePreviewHost.value}:${apiModeForm.port}`),
+    ws: computed(() => `ws://${apiModePreviewHost.value}:${apiModeForm.port}${apiModeForm.wsPath}`)
 });
 const apiBaseUrlForm = reactive({ url: '', testing: false, testResult: '', testStatus: '' });
 
@@ -787,7 +806,11 @@ const toggleLanApiMode = () => {
         deny: '127.0.0.1'
     };
     if(apiModeForm.host === hosts.allow) apiModeForm.host = hosts.deny;
-    else apiModeForm.host = hosts.allow;
+    else {
+        apiModeForm.host = hosts.allow;
+        // 首次开启局域网时补探一次，避免预览显示 0.0.0.0
+        if(!localIp.value) refreshLocalIp();
+    }
 }
 
 const validateApiModeForm = () => {

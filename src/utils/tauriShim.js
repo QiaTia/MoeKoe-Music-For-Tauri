@@ -151,6 +151,8 @@ export function installTauriShim() {
         startUpdateDownload: () => invoke('start_update_download'),
         openMvWindow: (url) => invoke('open_mv_window', { url }),
         openLogPath: () => invoke('open_log_path'),
+        // 本机局域网 IPv4（探测失败返回空字符串），供设置页替换 0.0.0.0
+        getLocalIp: () => invoke('local_ip'),
         exportLog: () => invoke('export_log'),
         // 插件/扩展体系依赖 Chromium 扩展机制，Tauri 下暂不支持 → 安全降级
         getExtensions: async () => [],

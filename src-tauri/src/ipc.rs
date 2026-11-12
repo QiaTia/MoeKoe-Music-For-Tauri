@@ -428,6 +428,16 @@ pub fn open_log_path(app: AppHandle) -> Value {
     }
 }
 
+/// 本机局域网 IPv4（探测失败返回空字符串）。
+///
+/// 设置页在「允许局域网访问」时用它把 `0.0.0.0` 换成真实可连接地址。
+#[tauri::command]
+pub fn local_ip() -> String {
+    crate::netinfo::local_ipv4()
+        .map(|ip| ip.to_string())
+        .unwrap_or_default()
+}
+
 /// 导出日志（Tauri 版：打开数据目录让用户自取）
 #[tauri::command]
 pub fn export_log(app: AppHandle) -> Value {
