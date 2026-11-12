@@ -88,13 +88,14 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
                     _ => {}
                 }
             }
+            // macOS：窗口显隐可能改变「是否还有可见应用窗口」
+            crate::windows::sync_dock_icon(&app);
         }
 
         // ── 设置 ─────────────────────────────────────────────────
         "save-settings" => {
             let settings = arg(&args, 0);
             let auto_start = settings.get("autoStart").and_then(|v| v.as_str()).map(|s| s.to_string());
-            let api_mode_on = settings.get("apiMode").and_then(|v| v.as_str()) == Some("on");
             // 菜单栏歌词被关闭时，移除系统状态栏项
             let statusbar_lyrics_on =
                 settings.get("statusBarLyrics").and_then(|v| v.as_str()) == Some("on");
@@ -116,10 +117,19 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
                 }
             }
 
-            // apiMode 热切换 WS 服务
-            if api_mode_on && !ctx.ws.is_running() {
-                ctx.ws.start(app.clone());
-            } else if !api_mode_on && ctx.ws.is_running() {
+            // apiMode 热切换 WS 服务（三态：on 启动；auto/off 停止；配置变化需重新 bind）
+            let api_should_run = crate::ws::api_mode_should_start(&ctx.settings);
+            if api_should_run {
+                let cfg = crate::ws::WsConfig::from_settings(&ctx.settings);
+                if ctx.ws.is_running() {
+                    if ctx.ws.current_config().as_ref() != Some(&cfg) {
+                        ctx.ws.stop();
+                        ctx.ws.start(app.clone(), cfg);
+                    }
+                } else {
+                    ctx.ws.start(app.clone(), cfg);
+                }
+            } else if ctx.ws.is_running() {
                 ctx.ws.stop();
             }
 
@@ -127,6 +137,9 @@ pub async fn ipc_send(app: AppHandle, channel: String, args: Value) {
             if old_tray_mode != new_tray_mode {
                 let _ = crate::tray::rebuild_tray(&app);
             }
+
+            // macOS：hideDockIcon 开关变更即时生效
+            crate::windows::sync_dock_icon(&app);
         }
         "clear-settings" => {
             ctx.settings.clear();

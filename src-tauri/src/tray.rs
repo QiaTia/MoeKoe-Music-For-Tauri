@@ -25,6 +25,8 @@ fn toggle_main_window(app: &AppHandle) {
             let _ = win.set_focus();
         }
     }
+    // macOS：显隐后同步 Dock 图标
+    crate::windows::sync_dock_icon(app);
 }
 
 pub fn quit_app(app: &AppHandle) {

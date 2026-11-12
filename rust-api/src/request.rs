@@ -53,6 +53,11 @@ pub struct RequestOptions {
     pub cookie: Map<String, Value>,
     pub encrypt_key: bool,
     pub clear_default_params: bool,
+    /// 对应 Node `clearDefaultHeaders`：为 true 时不注入 kugoumusicapi 的默认头部
+    /// （默认 UA / dfid / clienttime / mid / kg-rc / kg-thash / kg-rec / kg-rf），
+    /// 仅使用 `headers` 中显式给出的头。酷狗 CSCC 上报与听歌等级接口依赖此语义
+    /// （自带 User-Agent / KG-THash，且不接受多余默认头）。
+    pub clear_default_headers: bool,
     pub not_signature: bool,
     pub ip: Option<String>,
     pub real_ip: Option<String>,
@@ -74,6 +79,7 @@ impl Default for RequestOptions {
             cookie: Map::new(),
             encrypt_key: false,
             clear_default_params: false,
+            clear_default_headers: false,
             not_signature: false,
             ip: None,
             real_ip: None,
@@ -261,16 +267,21 @@ pub async fn create_request(options: RequestOptions) -> Result<Response, Respons
     }
 
     // headers 最终合并：默认 UA + options.headers + dfid/clienttime/mid
+    // clearDefaultHeaders 时只保留 options.headers（对应 Node 里 axios 不被 kugoumusicapi 注入默认头）
     let mut final_headers: Map<String, Value> = Map::new();
-    final_headers.insert(
-        "User-Agent".into(),
-        Value::String("Android15-1070-11083-46-0-DiscoveryDRADProtocol-wifi".into()),
-    );
+    if !options.clear_default_headers {
+        final_headers.insert(
+            "User-Agent".into(),
+            Value::String("Android15-1070-11083-46-0-DiscoveryDRADProtocol-wifi".into()),
+        );
+    }
     for (k, v) in &options.headers {
         final_headers.insert(k.clone(), v.clone());
     }
-    for (k, v) in &headers {
-        final_headers.insert(k.clone(), v.clone());
+    if !options.clear_default_headers {
+        for (k, v) in &headers {
+            final_headers.insert(k.clone(), v.clone());
+        }
     }
 
     // baseURL 默认

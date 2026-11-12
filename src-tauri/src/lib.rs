@@ -297,15 +297,18 @@ pub fn run() {
             windows::create_main_window(&handle, &ctx.settings)?;
             tray::create_tray(&handle)?;
             shortcuts::register_all(&handle);
+            // macOS：启动即隐藏（startMinimized）等场景下初始同步一次 Dock 图标
+            windows::sync_dock_icon(&handle);
 
             // 4. 桌面歌词窗（按设置恢复）
             if ctx.settings.setting_on("desktopLyrics") {
                 let _ = windows::create_lyrics_window(&handle, &ctx.settings);
             }
 
-            // 5. WS 远程控制（apiMode）
-            if ctx.settings.setting_on("apiMode") {
-                ctx.ws.start(handle.clone());
+            // 5. WS 远程控制（apiMode 三态；auto 在无扩展体系下等价不启动）
+            if ws::api_mode_should_start(&ctx.settings) {
+                let cfg = ws::WsConfig::from_settings(&ctx.settings);
+                ctx.ws.start(handle.clone(), cfg);
             }
 
             // 6. 启动问候语
@@ -324,11 +327,20 @@ pub fn run() {
                     if minimize_to_tray {
                         api.prevent_close();
                         let _ = window.hide();
+                        windows::sync_dock_icon(app);
                     } else {
                         windows::save_main_window_state(app, &ctx.settings);
                         ctx.ws.stop();
                         app.exit(0);
                     }
+                }
+                // 主窗口重新获得焦点（托盘/快捷键/深链唤起）→ 同步 Dock 图标
+                (windows::MAIN, tauri::WindowEvent::Focused(true)) => {
+                    windows::sync_dock_icon(app);
+                }
+                // MV 窗关闭 → 可能已无可见应用窗口
+                (windows::MV, tauri::WindowEvent::Destroyed) => {
+                    windows::sync_dock_icon(app);
                 }
                 _ => {}
             }

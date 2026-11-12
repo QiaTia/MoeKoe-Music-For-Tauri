@@ -39,7 +39,7 @@
                             <span class="user-gender" :title="userGenderTitle">
                                 <i :class="userGenderIcon"></i>
                             </span>
-                            <span class="user-duration">{{ formatDuration(userDetail.duration || 0) }} {{
+                            <span class="user-duration">{{ formatDuration(listenTimeMins || userDetail.duration || 0) }} {{
                                 $t('ting-ge-shi-chang') }}</span>
                             <span class="user-age">{{ formatRegTime(userDetail.rtime || 0) }}</span>
                         </div>
@@ -174,11 +174,15 @@ import { MoeAuthStore } from '../stores/store';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { createTeamEventPopup } from '@/utils/teamEvent';
+import { useListenTimeStore } from '@/stores/listenTime';
 import BirthdayEasterEgg from '../components/BirthdayEasterEgg.vue';
 import CommonSkeleton from '../components/CommonSkeleton.vue';
 const { t } = useI18n();
 const router = useRouter();
 const MoeAuth = MoeAuthStore();
+const { listenTime } = useListenTimeStore();
+// 听歌时长以秒为单位返回，资料卡按分钟展示（优先使用实时值，回退用户详情）
+const listenTimeMins = computed(() => Math.round(listenTime / 60));
 const user = ref({});
 const userPlaylists = ref([]); // 创建的歌单
 const collectedPlaylists = ref([]); // 收藏的歌单

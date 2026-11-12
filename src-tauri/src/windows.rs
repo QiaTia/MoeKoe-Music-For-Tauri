@@ -13,6 +13,40 @@ pub const MAIN: &str = "main";
 pub const LYRICS: &str = "lyrics";
 pub const MV: &str = "mv";
 
+/// macOS：按「关闭窗口后隐藏 Dock 图标」设置同步 Dock 图标。
+///
+/// 对齐 v1.7.2 `electron/appServices.js` 的 `syncDockIcon()`：
+/// - 设置非 `on` → 始终显示 Dock（覆盖「关闭开关时应用窗口恰好全部隐藏」的场景）
+/// - 设置 `on`   → 除桌面歌词悬浮窗外的应用窗口全部不可见时隐藏 Dock，任一可见即恢复
+///
+/// 非 macOS 平台为空实现（Tauri 的 `set_activation_policy` 仅 macOS 可用）。
+pub fn sync_dock_icon(app: &AppHandle) {
+    #[cfg(target_os = "macos")]
+    {
+        let ctx = app.state::<crate::AppCtx>();
+        if ctx.settings.setting_str("hideDockIcon").as_deref() != Some("on") {
+            let _ = app.set_activation_policy(tauri::ActivationPolicy::Regular);
+            return;
+        }
+        // 桌面歌词窗是悬浮窗，不计入「应用窗口」（与 Electron 版一致）
+        let any_visible = app
+            .webview_windows()
+            .into_iter()
+            .filter(|(label, _)| label != LYRICS)
+            .any(|(_, w)| w.is_visible().unwrap_or(false));
+        let policy = if any_visible {
+            tauri::ActivationPolicy::Regular
+        } else {
+            tauri::ActivationPolicy::Accessory
+        };
+        let _ = app.set_activation_policy(policy);
+    }
+    #[cfg(not(target_os = "macos"))]
+    {
+        let _ = app;
+    }
+}
+
 fn primary_work_area(app: &AppHandle) -> (f64, f64) {
     // 逻辑尺寸（DIP），与 electron screen.workAreaSize 对齐
     if let Ok(Some(monitor)) = app.primary_monitor() {

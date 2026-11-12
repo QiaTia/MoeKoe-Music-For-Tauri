@@ -45,6 +45,14 @@ pub fn crypto_sha1(data: &str) -> String {
     hex::encode(h.finalize())
 }
 
+/// 对**原始字节**取 MD5（对应 Node `crypto.createHash('md5').update(buf)`）。
+/// CSCC 上报签名需把二进制密文并入摘要，不能用字符串版本（会破坏密文）。
+pub fn crypto_md5_bytes(data: &[u8]) -> String {
+    let mut h = Md5::new();
+    h.update(data);
+    hex::encode(h.finalize())
+}
+
 // ---------------- AES-CBC/PKCS7 (key/iv 为字节串) ----------------
 
 fn aes_cbc_encrypt(key: &[u8], iv: &[u8], data: &[u8]) -> Vec<u8> {
@@ -74,6 +82,17 @@ fn aes_cbc_decrypt(key: &[u8], iv: &[u8], data: &[u8]) -> Vec<u8> {
             .decrypt_padded_vec_mut::<Pkcs7>(data),
     };
     res.unwrap_or_default()
+}
+
+/// CSCC 播放上报用：对**原始字节**做 AES-CBC/PKCS7 加密（密钥长度自适应 AES-128/192/256）。
+/// 对应 Node `crypto.createCipheriv('aes-256-cbc', key, iv)`（默认 PKCS7 填充）。
+pub fn aes_cbc_encrypt_bytes(key: &[u8], iv: &[u8], data: &[u8]) -> Vec<u8> {
+    aes_cbc_encrypt(key, iv, data)
+}
+
+/// CSCC 会话解密用：对**原始字节**做 AES-CBC/PKCS7 解密。
+pub fn aes_cbc_decrypt_bytes(key: &[u8], iv: &[u8], data: &[u8]) -> Vec<u8> {
+    aes_cbc_decrypt(key, iv, data)
 }
 
 /// 对应 cryptoAesEncrypt(data, opt)
@@ -214,6 +233,22 @@ pub fn rsa_encrypt2(data: &str) -> String {
         .encrypt(&mut rng, Pkcs1v15Encrypt, data.as_bytes())
         .expect("RSA PKCS1 加密失败");
     hex::encode(enc)
+}
+
+/// 对应 `crypto.publicEncrypt({ key, padding: RSA_PKCS1_PADDING }).toString('base64')`。
+/// 酷狗 CSCC `/v2/gen` 会话申请需要 **base64** 形式的 PKCS1 密文（`rsa_encrypt2` 是 hex）。
+pub fn rsa_encrypt_pkcs1_b64(data: &str, public_key_pem: Option<&str>) -> String {
+    let pem = public_key_pem.unwrap_or(if crate::config::is_lite() {
+        PUBLIC_LITE_RSA_KEY
+    } else {
+        PUBLIC_RSA_KEY
+    });
+    let key = load_pub_key(pem);
+    let mut rng = rand::thread_rng();
+    let enc = key
+        .encrypt(&mut rng, Pkcs1v15Encrypt, data.as_bytes())
+        .expect("RSA PKCS1 加密失败");
+    B64.encode(enc)
 }
 
 #[cfg(test)]
