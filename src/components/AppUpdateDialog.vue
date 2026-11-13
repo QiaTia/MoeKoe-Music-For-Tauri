@@ -3,25 +3,37 @@
         <div class="modal-content update-dialog" @click.stop>
             <h2>发现新版本 V{{ latestVersion }}</h2>
             <MarkdownContent class="update-log-box" :content="updateLog" :repo-url="projectRepoUrl" />
-            <div v-if="isStartingUpdate || isDownloadingUpdate || isUpdateDownloaded || updateStatusText" class="update-progress-inline">
+            <div v-if="progressVisible" class="update-progress-inline">
                 <div class="update-progress-bar">
                     <div class="update-progress-fill" :style="{ width: `${updateProgress}%` }"></div>
                 </div>
                 <span class="update-progress-percent">{{ updateProgress.toFixed(1) }}%</span>
             </div>
+            <p v-if="updateStatusText" class="update-status">{{ updateStatusText }}</p>
+            <p v-if="updateSpeedText || updateSizeText" class="update-meta">
+                <span v-if="updateSpeedText">{{ updateSpeedText }}</span>
+                <span v-if="updateSizeText">{{ updateSizeText }}</span>
+            </p>
+            <p v-if="isUpdateDownloaded && gatekeeperScript" class="update-hint">
+                若首次打开提示「已损坏」或「无法验证开发者」，在终端执行：
+                <code>{{ gatekeeperScript }}</code>
+                <a class="link-button" @click="copyGatekeeperScript">复制命令</a>
+            </p>
             <div class="update-dialog-actions">
-                <button @click="startOnlineUpdate" :disabled="isStartingUpdate || isDownloadingUpdate || isUpdateDownloaded">
-                    {{ isUpdateDownloaded ? '下载完成' : isDownloadingUpdate ? '下载中...' : isStartingUpdate ? '正在启动...' : '在线更新' }}
+                <button v-if="isStartingUpdate || isDownloadingUpdate" class="secondary-button" @click="cancelOnlineUpdate">
+                    取消下载
                 </button>
+                <button v-else-if="isUpdateDownloaded" @click="runInstaller">运行安装包</button>
+                <button v-else @click="startOnlineUpdate">在线更新</button>
                 <button @click="openManualUpdatePage">手动更新</button>
-                <button class="secondary-button" @click="closeUpdateDialog">取消更新</button>
+                <button class="secondary-button" @click="closeUpdateDialog">关闭</button>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, watch, onMounted, onUnmounted } from 'vue';
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
 import MarkdownContent from './MarkdownContent.vue';
 import { openRegisterUrl } from '../utils/utils';
 
@@ -52,6 +64,10 @@ const updateProgress = ref(0);
 const updateStatusText = ref('');
 const updateSpeedText = ref('');
 const updateSizeText = ref('');
+const updateStage = ref('');
+const gatekeeperScript = ref('');
+
+const progressVisible = computed(() => isStartingUpdate.value || isDownloadingUpdate.value || isUpdateDownloaded.value);
 
 const setShowNewBadge = (value) => {
     showNewBadge.value = value;
@@ -96,16 +112,37 @@ const getPlatformDownloadUrl = (release) => {
     return asset?.browser_download_url || release?.html_url || repoUrl;
 };
 
+const applyReleaseInfo = (info) => {
+    latestVersion.value = info.latestVersion || '';
+    updateLog.value = String(info.notes || '').trim() || '暂无更新日志';
+    downloadUrl.value = info.htmlUrl || repoUrl;
+    setShowNewBadge(!!info.available);
+};
+
 const fetchLatestVersion = async () => {
     if (!props.appVersion) {
         return;
     }
 
+    // 优先走 Rust：多源回退（直连 → 镜像）、按架构选包、与下载使用同一份清单。
+    // 此前前端直连上游仓库 releases，与后端（本 fork 仓库）版本可能不一致。
     try {
-        const response = await fetch('https://api.github.com/repos/iAJue/MoeKoeMusic/releases/latest');
+        const info = await window.electronAPI?.checkUpdate?.();
+        if (info?.success) {
+            applyReleaseInfo(info);
+            return;
+        }
+        if (info) console.warn('[更新] 检查更新失败:', info.message);
+    } catch (error) {
+        console.warn('[更新] 调用本地检查失败:', error);
+    }
+
+    // Web 环境（无 Tauri 宿主）兜底：直连 GitHub API，仅用于展示
+    try {
+        const response = await fetch('https://api.github.com/repos/qiatia/MoeKoe-Music-For-Tauri/releases/latest');
         const data = await response.json();
         downloadUrl.value = getPlatformDownloadUrl(data);
-        latestVersion.value = data.tag_name.replace(/^v/, '');
+        latestVersion.value = String(data.tag_name || '').replace(/^v/, '');
         updateLog.value = data.body?.trim() || '暂无更新日志';
         setShowNewBadge(isVersionLower(props.appVersion, latestVersion.value));
     } catch (error) {
@@ -134,7 +171,8 @@ const handleUpdateProgress = (_event, progressObj) => {
     isDownloadingUpdate.value = true;
     isUpdateDownloaded.value = false;
     updateProgress.value = Math.max(0, Math.min(100, Number(progressObj?.percent || 0)));
-    updateStatusText.value = '正在下载更新';
+    updateStage.value = progressObj?.stage || 'downloading';
+    updateStatusText.value = updateStage.value === 'verifying' ? '正在校验安装包...' : '正在下载更新包...';
     updateSpeedText.value = progressObj?.bytesPerSecond ? `${formatBytes(progressObj.bytesPerSecond)}/s` : '';
     if (progressObj?.transferred || progressObj?.total) {
         updateSizeText.value = `${formatBytes(progressObj.transferred || 0)} / ${formatBytes(progressObj.total || 0)}`;
@@ -143,22 +181,64 @@ const handleUpdateProgress = (_event, progressObj) => {
     }
 };
 
-const handleUpdateDownloaded = () => {
+const handleUpdateDownloaded = async () => {
     isStartingUpdate.value = false;
     isDownloadingUpdate.value = false;
     isUpdateDownloaded.value = true;
     updateProgress.value = 100;
-    updateStatusText.value = '更新包已下载完成，请等待安装提示';
     updateSpeedText.value = '';
+    updateStatusText.value = '更新包已下载完成，正在启动安装程序...';
+
+    // macOS 未签名/未公证时，替换后首次打开可能被 Gatekeeper 拦截，预先取好放行命令
+    if (props.platform === 'darwin') {
+        try {
+            gatekeeperScript.value = (await window.electronAPI?.updateGatekeeperScript?.()) || '';
+        } catch (error) {
+            console.warn('[更新] 获取 Gatekeeper 命令失败:', error);
+        }
+    }
 };
 
 const handleUpdateError = (_event, payload) => {
     isStartingUpdate.value = false;
     isDownloadingUpdate.value = false;
-    if (!isUpdateDownloaded.value) {
+    if (payload?.cancelled) {
+        isUpdateDownloaded.value = false;
+        updateProgress.value = 0;
+        updateStatusText.value = '已取消更新';
+    } else if (!isUpdateDownloaded.value) {
         updateStatusText.value = payload?.message || '更新失败，请稍后重试';
     }
     updateSpeedText.value = '';
+};
+
+const cancelOnlineUpdate = async () => {
+    updateStatusText.value = '正在取消下载...';
+    try {
+        await window.electronAPI?.cancelUpdate?.();
+    } catch (error) {
+        console.warn('[更新] 取消下载失败:', error);
+    }
+};
+
+const runInstaller = async () => {
+    try {
+        const result = await window.electronAPI?.installUpdate?.();
+        if (!result?.success) {
+            await window.$modal.alert(result?.message || '无法启动安装程序，请手动打开下载目录中的安装包。');
+        }
+    } catch (error) {
+        await window.$modal.alert(`无法启动安装程序：${error.message}`);
+    }
+};
+
+const copyGatekeeperScript = async () => {
+    try {
+        await navigator.clipboard.writeText(gatekeeperScript.value);
+        window.$message?.success('命令已复制');
+    } catch (error) {
+        window.$message?.error(`复制失败：${error.message}`);
+    }
 };
 
 const startOnlineUpdate = async () => {
@@ -172,14 +252,17 @@ const startOnlineUpdate = async () => {
     }
 
     isStartingUpdate.value = true;
-    updateStatusText.value = '正在启动在线更新...';
+    updateProgress.value = 0;
+    updateStatusText.value = '正在检查更新...';
     updateSpeedText.value = '';
     updateSizeText.value = '';
     try {
-        const result = await window.electronAPI.startUpdateDownload();
+        // 传入弹窗展示的版本号：若期间已发布更高版本，后端会拒绝并提示重新检查，
+        // 避免「看到 1.7.2、装成 1.7.3」这类静默不一致
+        const result = await window.electronAPI.startUpdateDownload(latestVersion.value || undefined);
         if (result?.success) {
             isDownloadingUpdate.value = true;
-            updateStatusText.value = '已开始在线更新，正在等待下载进度...';
+            updateStatusText.value = '正在下载更新包...';
             return;
         }
 
@@ -196,6 +279,13 @@ const startOnlineUpdate = async () => {
             setShowNewBadge(false);
             updateStatusText.value = '当前没有可用更新';
             await window.$modal.alert('当前没有可用更新，请前往仓库查看最新发布状态。');
+            return;
+        }
+
+        if (result?.reason === 'version-changed') {
+            latestVersion.value = result.latestVersion || latestVersion.value;
+            updateStatusText.value = result.message || '更新版本已变化，请重新检查更新';
+            await window.$modal.alert(updateStatusText.value);
             return;
         }
 
@@ -293,6 +383,48 @@ defineExpose({
         gap: 12px;
         margin-top: 18px;
         flex-wrap: wrap;
+    }
+
+    .update-status {
+        margin: 10px 0 0;
+        font-size: 13px;
+        color: #555;
+    }
+
+    .update-meta {
+        display: flex;
+        gap: 16px;
+        margin: 6px 0 0;
+        font-size: 12px;
+        color: #888;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .update-hint {
+        margin: 10px 0 0;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: #fff7e6;
+        border: 1px solid rgba(255, 152, 0, 0.3);
+        font-size: 12px;
+        line-height: 1.6;
+        color: #7a5200;
+
+        code {
+            display: block;
+            margin: 6px 0;
+            padding: 6px 8px;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.06);
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            word-break: break-all;
+        }
+    }
+
+    .link-button {
+        color: var(--primary-color);
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     .update-progress-inline {

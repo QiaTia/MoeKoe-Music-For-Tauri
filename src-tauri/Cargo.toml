@@ -31,6 +31,8 @@ futures-util = "0.3"
 
 # 在线更新下载（版本与 api/rust 对齐避免重复编译）
 reqwest = { version = "0.12", default-features = false, features = ["json", "gzip", "rustls-tls", "stream"] }
+# 安装包完整性校验（GitHub API 的 assets[].digest 为 sha256）
+sha2 = "0.10"
 
 url = "2"
 sys-locale = "0.3"

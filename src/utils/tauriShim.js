@@ -148,7 +148,13 @@ export function installTauriShim() {
     // ---- window.electronAPI ----
     const noopAsync = async () => undefined;
     window.electronAPI = {
-        startUpdateDownload: () => invoke('start_update_download'),
+        startUpdateDownload: (expectedVersion) => invoke('start_update_download', { expectedVersion }),
+        // 检查更新（多源回退 + 与下载同源，避免前后端版本不一致）
+        checkUpdate: () => invoke('check_update'),
+        cancelUpdate: () => invoke('cancel_update_download'),
+        installUpdate: () => invoke('install_update'),
+        // macOS 专用：Gatekeeper 放行命令，其它平台返回空串
+        updateGatekeeperScript: () => invoke('update_gatekeeper_script'),
         openMvWindow: (url) => invoke('open_mv_window', { url }),
         openLogPath: () => invoke('open_log_path'),
         // 本机局域网 IPv4（探测失败返回空字符串），供设置页替换 0.0.0.0

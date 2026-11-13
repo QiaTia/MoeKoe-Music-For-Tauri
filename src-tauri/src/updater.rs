@@ -1,15 +1,65 @@
-//! 在线更新：GitHub Releases 检查 + 下载（带进度事件），
-//! 事件形状对齐 electron-updater：update-progress / update-downloaded / update-error。
+//! 在线更新：多源检查 → 完整性校验 → 下载（进度 / 可取消）→ 拉起安装包。
+//!
+//! 参考 Watt-Toolkit 的自动更新实现，但沿用本项目既有的「GitHub Releases + reqwest」
+//! 方案：`tauri-plugin-updater` 要求 `createUpdaterArtifacts` + `TAURI_SIGNING_PRIVATE_KEY`
+//! 的签名链路，本项目 CI 尚未配置密钥，直接换插件会让所有更新在验签阶段失败。
+//!
+//! 关键设计：
+//! 1. **多源顺序回退**：GitHub API 直连在部分网络不可达，而 `endpoints` 数组式回退
+//!    只对非 2xx 生效、对超时/连接重置无效；这里逐个源单独请求并设短超时，失败再试下一个。
+//! 2. **下载地址同样回退**：asset 的 `browser_download_url` 指向 `github.com`，
+//!    受限网络需要加 gh-proxy 前缀才能下载。
+//! 3. **完整性校验**：GitHub API 的 `assets[].digest` 给出 `sha256:...`，
+//!    下载后必须比对，校验不通过绝不打开安装包。
+//! 4. **按架构选包**：Windows / macOS 同时发布 x64 与 arm64 安装包，
+//!    错拿会让 Apple Silicon 跑 x64 包（或反之）。
+//! 5. **走应用自身代理设置**：`proxy=on` 时用 `proxyUrl`，否则显式 `no_proxy`，
+//!    避免继承到已失效的系统代理。
+//! 6. **版本一致性**：检查与下载之间若发布了新版本，要求重新检查，
+//!    避免静默装到与弹窗展示不同的版本。
+//!
+//! 事件契约（与前端 AppUpdateDialog 保持一致，勿改名）：
+//! - `update-progress`：`{ percent, transferred, total, bytesPerSecond, stage }`
+//! - `update-downloaded`：`{ path, version }`
+//! - `update-error`：`{ message, cancelled? }`
+
+use std::path::{Path, PathBuf};
+use std::sync::atomic::{AtomicBool, Ordering};
+use std::sync::{Mutex, OnceLock};
+use std::time::{Duration, Instant};
 
 use serde_json::{json, Value};
+use sha2::{Digest, Sha256};
 use tauri::{AppHandle, Emitter, Manager};
 use tauri_plugin_opener::OpenerExt;
 
-const RELEASE_API: &str = "https://api.github.com/repos/qiatia/MoeKoe-Music-For-Tauri/releases/latest";
+/// 发布仓库（Tauri 版自身的 Releases，勿混用上游 Electron 仓库）
+const RELEASE_REPO: &str = "qiatia/MoeKoe-Music-For-Tauri";
+/// 镜像前缀：受限网络下 API 与下载都经它转发
+const MIRROR_PREFIX: &str = "https://gh-proxy.com/";
+/// 检查阶段的整体超时（单个源）
+const API_TIMEOUT: Duration = Duration::from_secs(8);
+const CONNECT_TIMEOUT: Duration = Duration::from_secs(5);
+/// 下载阶段：两次读数据之间的最长等待，避免大包慢速网络被整体超时打断
+const DOWNLOAD_READ_TIMEOUT: Duration = Duration::from_secs(90);
+/// 进度事件节流（分片回调极密集，200ms 一次足够平滑且不会造成 IPC 洪水）
+const PROGRESS_THROTTLE_MS: u128 = 200;
+
+/// 取消标志：下载循环每个分片检查一次
+static CANCEL_FLAG: AtomicBool = AtomicBool::new(false);
+/// 最近一次下载完成的安装包路径（供「重新安装」使用）
+static LAST_INSTALLER: OnceLock<Mutex<Option<PathBuf>>> = OnceLock::new();
+
+fn last_installer() -> &'static Mutex<Option<PathBuf>> {
+    LAST_INSTALLER.get_or_init(|| Mutex::new(None))
+}
+
+// ---------------- 版本比较 ----------------
 
 fn version_parts(v: &str) -> Vec<u64> {
-    v.trim_start_matches('v')
-        .split(['.', '-'])
+    v.trim()
+        .trim_start_matches('v')
+        .split(['.', '-', '+'])
         .filter_map(|p| p.parse::<u64>().ok())
         .collect()
 }
@@ -30,95 +80,362 @@ fn is_newer(current: &str, latest: &str) -> bool {
     false
 }
 
-fn pick_asset(assets: &[Value]) -> Option<(String, String)> {
-    let patterns: &[&str] = if cfg!(target_os = "windows") {
-        &[".exe", ".msi"]
-    } else if cfg!(target_os = "macos") {
-        &[".dmg", ".zip"]
-    } else {
-        &[".AppImage", ".deb", ".rpm"]
-    };
+/// 去掉 tag 前缀 `v`，前端展示与版本比对都用这个形态
+fn normalize_version(tag: &str) -> String {
+    tag.trim().trim_start_matches('v').to_string()
+}
 
-    for pat in patterns {
-        for asset in assets {
-            let name = asset.get("name").and_then(|v| v.as_str()).unwrap_or("");
-            if name.to_ascii_lowercase().ends_with(&pat.to_ascii_lowercase()) {
-                if let Some(url) = asset.get("browser_download_url").and_then(|v| v.as_str()) {
-                    return Some((name.to_string(), url.to_string()));
-                }
+// ---------------- 更新源 ----------------
+
+/// 自定义源校验：只接受 https（本机回环允许 http，便于本地测试）。
+///
+/// Releases 清单决定「装哪个包、装哪个版本」，走 http 可被中间人替换成旧版本/恶意包；
+/// 即便下载后做 sha256 比对，摘要同样来自该清单，所以传输层必须可信。
+fn normalize_endpoint(raw: &str) -> Result<String, String> {
+    let raw = raw.trim();
+    if raw.is_empty() {
+        return Err("更新源地址为空".into());
+    }
+    let url = url::Url::parse(raw).map_err(|e| format!("更新源地址非法: {e}"))?;
+    match url.scheme() {
+        "https" => Ok(url.to_string()),
+        "http" if matches!(url.host_str(), Some("localhost" | "127.0.0.1" | "::1")) => {
+            Ok(url.to_string())
+        }
+        _ => Err("更新源必须是 HTTPS（仅本机回环地址允许 http）".into()),
+    }
+}
+
+/// 候选源：自定义源 → GitHub 直连 → gh-proxy 镜像。
+fn release_sources(custom: Option<&str>) -> Vec<(&'static str, String)> {
+    let official = format!("https://api.github.com/repos/{RELEASE_REPO}/releases/latest");
+    let mirror = format!("{MIRROR_PREFIX}{official}");
+    let mut list: Vec<(&'static str, String)> = Vec::new();
+
+    if let Some(raw) = custom.map(str::trim).filter(|s| !s.is_empty()) {
+        match normalize_endpoint(raw) {
+            Ok(url) if url != official && url != mirror => list.push(("custom", url)),
+            Ok(_) => {}
+            Err(e) => eprintln!("[updater] 自定义更新源无效，忽略并回退官方源: {e}"),
+        }
+    }
+    list.push(("github", official));
+    list.push(("mirror", mirror));
+    list
+}
+
+/// 下载候选地址：原始 github.com 地址 + 镜像前缀地址。
+///
+/// 已经是镜像地址的不再二次加前缀。
+fn download_urls(asset_url: &str) -> Vec<String> {
+    let mut list = vec![asset_url.to_string()];
+    if !asset_url.starts_with(MIRROR_PREFIX) {
+        list.push(format!("{MIRROR_PREFIX}{asset_url}"));
+    }
+    list
+}
+
+// ---------------- 资产选择 ----------------
+
+#[derive(Debug, Clone, PartialEq)]
+struct UpdateAsset {
+    name: String,
+    url: String,
+    size: u64,
+    /// GitHub API 的 `digest` 字段，形如 `sha256:...`；缺失时为 None
+    digest: Option<String>,
+}
+
+fn parse_assets(raw: &[Value]) -> Vec<UpdateAsset> {
+    raw.iter()
+        .filter_map(|a| {
+            let name = a.get("name").and_then(|v| v.as_str())?.to_string();
+            let url = a.get("browser_download_url").and_then(|v| v.as_str())?.to_string();
+            Some(UpdateAsset {
+                name,
+                url,
+                size: a.get("size").and_then(|v| v.as_u64()).unwrap_or(0),
+                digest: a
+                    .get("digest")
+                    .and_then(|v| v.as_str())
+                    .filter(|s| !s.is_empty())
+                    .map(|s| s.to_string()),
+            })
+        })
+        .collect()
+}
+
+/// 各平台接受的安装包后缀，按优先级排列
+fn ext_priority(platform: &str) -> &'static [&'static str] {
+    match platform {
+        "windows" => &[".exe", ".msi"],
+        "macos" => &[".dmg", ".app.tar.gz"],
+        _ => &[".appimage", ".deb", ".rpm"],
+    }
+}
+
+/// 文件名与当前架构的匹配度：`Some(2)` 明确匹配，`Some(1)` 未标注架构（可用），`None` 明确不匹配。
+fn arch_rank(name: &str, arch: &str) -> Option<u8> {
+    let n = name.to_ascii_lowercase();
+    let is_arm = n.contains("aarch64") || n.contains("arm64");
+    let is_x64 = n.contains("x64") || n.contains("amd64") || n.contains("x86_64");
+    match (is_arm, is_x64) {
+        (true, true) => Some(1), // 罕见：两种都出现，交给顺序决定
+        (true, false) => {
+            if arch == "aarch64" {
+                Some(2)
+            } else {
+                None
             }
+        }
+        (false, true) => {
+            if arch == "aarch64" {
+                None
+            } else {
+                Some(2)
+            }
+        }
+        (false, false) => Some(1),
+    }
+}
+
+fn current_arch() -> &'static str {
+    if cfg!(target_arch = "aarch64") {
+        "aarch64"
+    } else {
+        "x64"
+    }
+}
+
+fn current_platform() -> &'static str {
+    if cfg!(target_os = "windows") {
+        "windows"
+    } else if cfg!(target_os = "macos") {
+        "macos"
+    } else {
+        "linux"
+    }
+}
+
+/// 选包：先按后缀优先级，再按架构匹配度；明确架构不匹配的直接排除。
+fn pick_from_assets(
+    assets: &[UpdateAsset],
+    platform: &str,
+    arch: &str,
+) -> Option<UpdateAsset> {
+    for ext in ext_priority(platform) {
+        let mut best: Option<(u8, &UpdateAsset)> = None;
+        for asset in assets {
+            if !asset.name.to_ascii_lowercase().ends_with(ext) {
+                continue;
+            }
+            let Some(rank) = arch_rank(&asset.name, arch) else {
+                continue;
+            };
+            if best.map(|(r, _)| rank > r).unwrap_or(true) {
+                best = Some((rank, asset));
+            }
+        }
+        if let Some((_, asset)) = best {
+            return Some(asset.clone());
         }
     }
     None
 }
 
-/// start-update-download：检查 → 下载 → 打开安装包。
-/// 立即返回 {success:true} 后台继续，进度经事件推送（对齐前端 AppUpdateDialog 预期）。
-pub async fn start_update_download(app: AppHandle) -> Value {
-    let current = app.package_info().version.to_string();
+// ---------------- HTTP 客户端 ----------------
 
-    let client = match reqwest::Client::builder()
-        .user_agent("MoeKoeMusic-Updater")
+/// 从设置里取代理：仅 `proxy=on` 且 `proxyUrl` 非空时生效
+fn proxy_from_settings(store: &crate::settings::SettingsStore) -> Option<String> {
+    if !store.setting_on("proxy") {
+        return None;
+    }
+    let raw = store.setting_str("proxyUrl")?.trim().to_string();
+    if raw.is_empty() {
+        return None;
+    }
+    if raw.contains("://") {
+        Some(raw)
+    } else {
+        Some(format!("http://{raw}"))
+    }
+}
+
+fn build_client(
+    proxy: Option<&str>,
+    total_timeout: Option<Duration>,
+) -> Result<reqwest::Client, String> {
+    let mut builder = reqwest::Client::builder()
+        .user_agent(concat!("MoeKoeMusic-Updater/", env!("CARGO_PKG_VERSION")))
+        .connect_timeout(CONNECT_TIMEOUT)
+        .read_timeout(DOWNLOAD_READ_TIMEOUT);
+    // 检查阶段限制总耗时（8s）；下载阶段不限总耗时，只靠 read_timeout 兜底，
+    // 否则 90MB 的 AppImage 会在 8 秒时被直接掐断。
+    if let Some(t) = total_timeout {
+        builder = builder.timeout(t);
+    }
+    builder = match proxy {
+        Some(p) => {
+            let parsed = reqwest::Proxy::all(p).map_err(|e| format!("代理地址无效: {e}"))?;
+            builder.proxy(parsed)
+        }
+        // 显式 no_proxy：用户系统代理可能已失效（或指向本机某个已停止的端口），
+        // 继承它会让更新请求直接失败，且错误信息极具误导性
+        None => builder.no_proxy(),
+    };
+    builder
         .build()
-    {
-        Ok(c) => c,
-        Err(e) => return json!({ "success": false, "message": e.to_string() }),
-    };
+        .map_err(|e| format!("HTTP 客户端初始化失败: {e}"))
+}
 
-    let release: Value = match client.get(RELEASE_API).send().await {
-        Ok(resp) => match resp.json().await {
-            Ok(v) => v,
-            Err(e) => return json!({ "success": false, "message": format!("解析发布信息失败: {e}") }),
-        },
-        Err(e) => return json!({ "success": false, "message": format!("检查更新失败: {e}") }),
-    };
+// ---------------- 检查 ----------------
 
-    let latest = release
-        .get("tag_name")
-        .and_then(|v| v.as_str())
-        .unwrap_or("")
-        .to_string();
-    if latest.is_empty() {
-        return json!({ "success": false, "message": "无法获取最新版本信息" });
+struct CheckedRelease {
+    version: String,
+    notes: String,
+    date: String,
+    html_url: String,
+    asset: Option<UpdateAsset>,
+}
+
+/// 逐个源请求 latest release，返回首个成功的解析结果。
+async fn fetch_latest(
+    client: &reqwest::Client,
+    custom: Option<&str>,
+) -> Result<Value, String> {
+    let mut last_err = String::from("没有可用的更新源");
+    for (label, url) in release_sources(custom) {
+        match client.get(&url).send().await {
+            Ok(resp) if resp.status().is_success() => match resp.json::<Value>().await {
+                Ok(v) => {
+                    let tag = v.get("tag_name").and_then(|x| x.as_str()).unwrap_or("");
+                    if tag.is_empty() {
+                        last_err = format!("[{label}] 发布信息缺少 tag_name");
+                        continue;
+                    }
+                    return Ok(v);
+                }
+                Err(e) => last_err = format!("[{label}] 解析发布信息失败: {e}"),
+            },
+            Ok(resp) => last_err = format!("[{label}] HTTP {}", resp.status()),
+            Err(e) => last_err = format!("[{label}] {e}"),
+        }
+        eprintln!("[updater] 更新源不可用: {last_err}");
     }
-    if !is_newer(&current, &latest) {
-        return json!({ "success": false, "reason": "not-available" });
-    }
+    Err(last_err)
+}
 
-    let assets = release
+async fn check_release(
+    client: &reqwest::Client,
+    custom: Option<&str>,
+    platform: &str,
+    arch: &str,
+) -> Result<CheckedRelease, String> {
+    let release = fetch_latest(client, custom).await?;
+    let raw_assets = release
         .get("assets")
         .and_then(|v| v.as_array())
         .cloned()
         .unwrap_or_default();
-
-    let Some((name, url)) = pick_asset(&assets) else {
-        // 没有当前平台的安装包 → 打开发布页
-        if let Some(html) = release.get("html_url").and_then(|v| v.as_str()) {
-            let _ = app.opener().open_url(html, None::<&str>);
-        }
-        return json!({ "success": false, "reason": "unsupported" });
-    };
-
-    // 后台下载
-    let app2 = app.clone();
-    tauri::async_runtime::spawn(async move {
-        if let Err(e) = download_and_open(&app2, &client, &name, &url).await {
-            let _ = app2.emit_to(
-                crate::windows::MAIN,
-                "update-error",
-                json!({ "message": e }),
-            );
-        }
-    });
-
-    json!({ "success": true })
+    let assets = parse_assets(&raw_assets);
+    Ok(CheckedRelease {
+        version: normalize_version(
+            release.get("tag_name").and_then(|v| v.as_str()).unwrap_or(""),
+        ),
+        notes: release
+            .get("body")
+            .and_then(|v| v.as_str())
+            .unwrap_or("")
+            .trim()
+            .to_string(),
+        date: release
+            .get("published_at")
+            .and_then(|v| v.as_str())
+            .unwrap_or("")
+            .to_string(),
+        html_url: release
+            .get("html_url")
+            .and_then(|v| v.as_str())
+            .unwrap_or("")
+            .to_string(),
+        asset: pick_from_assets(&assets, platform, arch),
+    })
 }
 
-async fn download_and_open(
-    app: &AppHandle,
+// ---------------- 完整性校验 ----------------
+
+fn file_sha256(path: &Path) -> Result<String, String> {
+    use std::io::Read;
+    let mut file = std::fs::File::open(path).map_err(|e| format!("读取安装包失败: {e}"))?;
+    let mut hasher = Sha256::new();
+    let mut buf = vec![0u8; 64 * 1024];
+    loop {
+        let n = file.read(&mut buf).map_err(|e| format!("读取安装包失败: {e}"))?;
+        if n == 0 {
+            break;
+        }
+        hasher.update(&buf[..n]);
+    }
+    Ok(format!("{:x}", hasher.finalize()))
+}
+
+/// 校验 `sha256:<hex>` 形式的摘要
+fn verify_sha256(path: &Path, digest: &str) -> Result<(), String> {
+    let expected = digest
+        .trim()
+        .strip_prefix("sha256:")
+        .unwrap_or(digest.trim())
+        .to_ascii_lowercase();
+    if expected.is_empty() {
+        return Ok(());
+    }
+    let actual = file_sha256(path)?;
+    if actual == expected {
+        Ok(())
+    } else {
+        Err(format!("安装包校验失败（期望 {expected}，实际 {actual}）"))
+    }
+}
+
+// ---------------- 下载 ----------------
+
+fn emit_progress(app: &AppHandle, stage: &str, transferred: u64, total: u64, bps: u64) {
+    let percent = if total > 0 {
+        (transferred as f64 / total as f64 * 100.0).clamp(0.0, 100.0)
+    } else {
+        0.0
+    };
+    let _ = app.emit_to(
+        crate::windows::MAIN,
+        "update-progress",
+        json!({
+            "percent": percent,
+            "transferred": transferred,
+            "total": total,
+            "bytesPerSecond": bps,
+            "stage": stage,
+        }),
+    );
+}
+
+fn emit_error(app: &AppHandle, message: &str, cancelled: bool) {
+    let _ = app.emit_to(
+        crate::windows::MAIN,
+        "update-error",
+        json!({ "message": message, "cancelled": cancelled }),
+    );
+}
+
+/// 进度回调：(stage, 已下载, 总量, 字节/秒)
+type ProgressFn<'a> = dyn Fn(&str, u64, u64, u64) + Send + Sync + 'a;
+
+/// 下载单个 URL 到 `part_path`，边写边回调进度。
+async fn fetch_to_file(
     client: &reqwest::Client,
-    name: &str,
     url: &str,
+    part_path: &Path,
+    expected_size: u64,
+    progress: &ProgressFn<'_>,
 ) -> Result<(), String> {
     use futures_util::StreamExt;
     use std::io::Write;
@@ -127,58 +444,553 @@ async fn download_and_open(
         .get(url)
         .send()
         .await
-        .map_err(|e| format!("下载失败: {e}"))?;
+        .map_err(|e| format!("请求失败: {e}"))?;
     if !resp.status().is_success() {
-        return Err(format!("下载失败: HTTP {}", resp.status()));
+        return Err(format!("HTTP {}", resp.status()));
     }
+    let total = resp.content_length().unwrap_or(expected_size);
 
-    let total = resp.content_length().unwrap_or(0);
+    let mut file = std::fs::File::create(part_path).map_err(|e| format!("创建临时文件失败: {e}"))?;
+    let mut stream = resp.bytes_stream();
+    let mut transferred: u64 = 0;
+    let started = Instant::now();
+    let mut last_emit = Instant::now();
+
+    while let Some(chunk) = stream.next().await {
+        if CANCEL_FLAG.load(Ordering::Relaxed) {
+            drop(file);
+            let _ = std::fs::remove_file(part_path);
+            return Err("已取消更新".into());
+        }
+        let chunk = chunk.map_err(|e| format!("下载中断: {e}"))?;
+        file.write_all(&chunk).map_err(|e| format!("写入失败: {e}"))?;
+        transferred += chunk.len() as u64;
+
+        let finished = total > 0 && transferred >= total;
+        if finished || last_emit.elapsed().as_millis() >= PROGRESS_THROTTLE_MS {
+            let elapsed = started.elapsed().as_secs_f64().max(0.001);
+            let bps = (transferred as f64 / elapsed) as u64;
+            progress("downloading", transferred, total, bps);
+            last_emit = Instant::now();
+        }
+    }
+    file.flush().map_err(|e| format!("写入失败: {e}"))?;
+    drop(file);
+
+    if let Some(expected) = (expected_size > 0).then_some(expected_size) {
+        if transferred != expected {
+            return Err(format!("下载不完整（{transferred}/{expected} 字节）"));
+        }
+    }
+    Ok(())
+}
+
+/// 下载到临时目录，逐个候选地址尝试；每个地址都做尺寸 + sha256 校验。
+async fn download_asset(
+    app: &AppHandle,
+    client: &reqwest::Client,
+    asset: &UpdateAsset,
+) -> Result<PathBuf, String> {
     let dir = app
         .path()
         .temp_dir()
         .map_err(|e| e.to_string())?
         .join("moekoe-update");
-    std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
-    let file_path = dir.join(name);
-    let mut file = std::fs::File::create(&file_path).map_err(|e| e.to_string())?;
+    std::fs::create_dir_all(&dir).map_err(|e| format!("创建下载目录失败: {e}"))?;
 
-    let mut stream = resp.bytes_stream();
-    let mut transferred: u64 = 0;
-    let started = std::time::Instant::now();
-    let mut last_emit = std::time::Instant::now();
+    let final_path = dir.join(&asset.name);
+    let part_path = dir.join(format!("{}.part", asset.name));
+    let mut last_err = String::from("没有可用的下载地址");
 
-    while let Some(chunk) = stream.next().await {
-        let chunk = chunk.map_err(|e| format!("下载中断: {e}"))?;
-        file.write_all(&chunk).map_err(|e| e.to_string())?;
-        transferred += chunk.len() as u64;
-
-        if last_emit.elapsed().as_millis() >= 300 || transferred == total {
-            let elapsed = started.elapsed().as_secs_f64().max(0.001);
-            let percent = if total > 0 {
-                transferred as f64 / total as f64 * 100.0
-            } else {
-                0.0
-            };
-            let _ = app.emit_to(
-                crate::windows::MAIN,
-                "update-progress",
-                json!({
-                    "percent": percent,
-                    "transferred": transferred,
-                    "total": total,
-                    "bytesPerSecond": (transferred as f64 / elapsed) as u64
-                }),
-            );
-            last_emit = std::time::Instant::now();
+    // 整轮下载只复位一次取消标志；换源时不再复位，否则用户在首次尝试期间点
+    // 「取消」会被下一次尝试清掉，继续下载下去。
+    CANCEL_FLAG.store(false, Ordering::Relaxed);
+    for (idx, url) in download_urls(&asset.url).into_iter().enumerate() {
+        let emit = |stage: &str, done: u64, total: u64, bps: u64| {
+            emit_progress(app, stage, done, total, bps)
+        };
+        match fetch_to_file(client, &url, &part_path, asset.size, &emit).await {
+            Ok(()) => {
+                if let Some(digest) = asset.digest.as_deref() {
+                    if let Err(e) = verify_sha256(&part_path, digest) {
+                        last_err = e;
+                        let _ = std::fs::remove_file(&part_path);
+                        continue; // 换下一个源（可能是镜像截断导致，不代表全部失败）
+                    }
+                }
+                if final_path.exists() {
+                    let _ = std::fs::remove_file(&final_path);
+                }
+                std::fs::rename(&part_path, &final_path)
+                    .map_err(|e| format!("保存安装包失败: {e}"))?;
+                return Ok(final_path);
+            }
+            Err(e) => {
+                let _ = std::fs::remove_file(&part_path);
+                if e.contains("已取消") {
+                    return Err(e);
+                }
+                eprintln!("[updater] 下载地址 {} 失败: {e}", idx + 1);
+                last_err = e;
+            }
         }
     }
-    drop(file);
+    Err(last_err)
+}
 
-    let _ = app.emit_to(crate::windows::MAIN, "update-downloaded", ());
+// ---------------- 安装 ----------------
 
-    // 打开安装包（Windows: 运行安装器；macOS: 挂载 dmg；Linux: 打开文件）
-    let _ = app
-        .opener()
-        .open_path(file_path.to_string_lossy().to_string(), None::<&str>);
-    Ok(())
+fn launch_installer(app: &AppHandle, path: &Path) -> Result<(), String> {
+    // Linux 的 AppImage 下载后没有可执行位，直接 open 会被当成文档
+    #[cfg(unix)]
+    {
+        let is_appimage = path
+            .extension()
+            .and_then(|e| e.to_str())
+            .map(|e| e.eq_ignore_ascii_case("appimage"))
+            .unwrap_or(false);
+        if is_appimage {
+            use std::os::unix::fs::PermissionsExt;
+            let meta = std::fs::metadata(path).map_err(|e| format!("读取安装包失败: {e}"))?;
+            let mut perms = meta.permissions();
+            perms.set_mode(0o755);
+            std::fs::set_permissions(path, perms)
+                .map_err(|e| format!("设置可执行权限失败: {e}"))?;
+        }
+    }
+    app.opener()
+        .open_path(path.to_string_lossy().to_string(), None::<&str>)
+        .map_err(|e| format!("无法打开安装包: {e}"))
+}
+
+// ---------------- 命令 ----------------
+
+/// 检查更新（不下载）。前端「新版本」徽标与更新弹窗都走这里，
+/// 保证与下载使用同一份 release 清单（此前前端直连上游仓库，会与后端版本不一致）。
+#[tauri::command]
+pub async fn check_update(app: AppHandle) -> Value {
+    let current = app.package_info().version.to_string();
+    let ctx = app.state::<crate::AppCtx>();
+    let proxy = proxy_from_settings(&ctx.settings);
+    let client = match build_client(proxy.as_deref(), Some(API_TIMEOUT)) {
+        Ok(c) => c,
+        Err(e) => return json!({ "success": false, "message": e }),
+    };
+
+    let custom = custom_source(&ctx);
+    match check_release(&client, custom.as_deref(), current_platform(), current_arch()).await {
+        Ok(rel) => {
+            let available = is_newer(&current, &rel.version);
+            let asset = rel.asset.as_ref();
+            json!({
+                "success": true,
+                "available": available,
+                "currentVersion": current,
+                "latestVersion": rel.version,
+                "notes": rel.notes,
+                "publishedAt": rel.date,
+                "htmlUrl": rel.html_url,
+                "assetName": asset.map(|a| a.name.clone()),
+                "assetSize": asset.map(|a| a.size).unwrap_or(0),
+                "digest": asset.and_then(|a| a.digest.clone()),
+                "viaProxy": proxy.is_some(),
+            })
+        }
+        Err(e) => json!({ "success": false, "message": e }),
+    }
+}
+
+/// 开始下载并在完成后拉起安装包。
+///
+/// `expected_version` 用于「检查 → 下载」之间的一致性校验：期间若发布更高版本，
+/// 返回错误让用户重新检查，而不是静默装成另一个版本。
+pub async fn start_update_download(app: AppHandle, expected_version: Option<String>) -> Value {
+    let current = app.package_info().version.to_string();
+    let ctx = app.state::<crate::AppCtx>();
+    let proxy = proxy_from_settings(&ctx.settings);
+    let custom = custom_source(&ctx);
+
+    let client = match build_client(proxy.as_deref(), Some(API_TIMEOUT)) {
+        Ok(c) => c,
+        Err(e) => return json!({ "success": false, "message": e }),
+    };
+
+    let rel = match check_release(&client, custom.as_deref(), current_platform(), current_arch()).await
+    {
+        Ok(r) => r,
+        Err(e) => return json!({ "success": false, "message": format!("检查更新失败: {e}") }),
+    };
+
+    if !is_newer(&current, &rel.version) {
+        return json!({ "success": false, "reason": "not-available", "latestVersion": rel.version });
+    }
+    if let Some(expected) = expected_version.as_deref().map(normalize_version) {
+        if !expected.is_empty() && expected != rel.version {
+            return json!({
+                "success": false,
+                "reason": "version-changed",
+                "message": format!("更新版本已变化（{expected} → {}），请重新检查更新", rel.version),
+                "latestVersion": rel.version,
+            });
+        }
+    }
+
+    let Some(asset) = rel.asset else {
+        // 当前平台没有对应安装包 → 打开发布页让用户手动选
+        if !rel.html_url.is_empty() {
+            let _ = app.opener().open_url(rel.html_url.clone(), None::<&str>);
+        }
+        return json!({ "success": false, "reason": "unsupported", "latestVersion": rel.version });
+    };
+
+    let version = rel.version.clone();
+    let asset_name = asset.name.clone();
+    let app2 = app.clone();
+    tauri::async_runtime::spawn(async move {
+        // 下载用独立客户端：读取超时更宽松，避免大包慢速网络被中断
+        let dl_client = match build_client(proxy_for_download(&app2).as_deref(), None) {
+            Ok(c) => c,
+            Err(e) => {
+                emit_error(&app2, &e, false);
+                return;
+            }
+        };
+        match download_asset(&app2, &dl_client, &asset).await {
+            Ok(path) => {
+                emit_progress(&app2, "verifying", asset.size, asset.size, 0);
+                if let Ok(mut slot) = last_installer().lock() {
+                    *slot = Some(path.clone());
+                }
+                let _ = app2.emit_to(
+                    crate::windows::MAIN,
+                    "update-downloaded",
+                    json!({ "path": path.to_string_lossy(), "version": version }),
+                );
+                if let Err(e) = launch_installer(&app2, &path) {
+                    emit_error(&app2, &e, false);
+                }
+            }
+            Err(e) => {
+                let cancelled = e.contains("已取消");
+                emit_error(&app2, &e, cancelled);
+            }
+        }
+    });
+
+    json!({ "success": true, "latestVersion": rel.version, "assetName": asset_name })
+}
+
+/// 自定义更新源：设置页未提供该项时支持环境变量覆盖（企业内网 / 受限网络场景）
+fn custom_source(ctx: &crate::AppCtx) -> Option<String> {
+    ctx.settings
+        .setting_str("updateSource")
+        .filter(|s| !s.trim().is_empty())
+        .or_else(|| {
+            std::env::var("MOEKOE_UPDATE_SOURCE")
+                .ok()
+                .filter(|s| !s.trim().is_empty())
+        })
+}
+
+/// 下载线程里重新读一次代理设置（设置可能在检查后被修改）
+fn proxy_for_download(app: &AppHandle) -> Option<String> {
+    let ctx = app.state::<crate::AppCtx>();
+    proxy_from_settings(&ctx.settings)
+}
+
+/// 取消进行中的下载
+#[tauri::command]
+pub fn cancel_update_download() -> Value {
+    CANCEL_FLAG.store(true, Ordering::Relaxed);
+    json!({ "success": true })
+}
+
+/// 重新拉起已下载的安装包（用户关掉安装器后可再次打开）
+#[tauri::command]
+pub fn install_update(app: AppHandle) -> Value {
+    let path = last_installer()
+        .lock()
+        .ok()
+        .and_then(|g| g.clone());
+    let Some(path) = path.filter(|p| p.exists()) else {
+        return json!({ "success": false, "message": "更新包不存在，请重新下载" });
+    };
+    match launch_installer(&app, &path) {
+        Ok(()) => json!({ "success": true }),
+        Err(e) => json!({ "success": false, "message": e }),
+    }
+}
+
+/// macOS Gatekeeper 放行脚本：清除 .app 的隔离属性。
+///
+/// 未签名/未公证的应用经自动更新替换后，首次打开可能被拦截（「已损坏」）。
+/// 路径从当前可执行文件回溯到 `.app` bundle，安装到非默认位置也准确。
+/// 非 macOS 返回空串（前端按平台决定是否展示）。
+#[tauri::command]
+pub fn update_gatekeeper_script() -> String {
+    #[cfg(target_os = "macos")]
+    {
+        let Ok(exe) = std::env::current_exe() else {
+            return String::new();
+        };
+        let mut cur = exe.as_path();
+        let bundle = loop {
+            if cur.extension().and_then(|e| e.to_str()) == Some("app") {
+                break cur;
+            }
+            match cur.parent() {
+                Some(parent) => cur = parent,
+                None => break cur,
+            }
+        };
+        // 该命令由用户手动粘贴执行：路径要按 shell 字面量处理，单引号内不做任何展开
+        let quoted = format!("'{}'", bundle.to_string_lossy().replace('\'', "'\\''"));
+        format!("sudo xattr -cr {quoted}")
+    }
+    #[cfg(not(target_os = "macos"))]
+    {
+        String::new()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn asset(name: &str, size: u64) -> UpdateAsset {
+        UpdateAsset {
+            name: name.into(),
+            url: format!("https://github.com/o/r/releases/download/v1/{name}"),
+            size,
+            digest: Some("sha256:abc".into()),
+        }
+    }
+
+    #[test]
+    fn version_compare() {
+        assert!(is_newer("1.7.1", "1.7.2"));
+        assert!(is_newer("1.7.1", "v1.8.0"));
+        assert!(is_newer("1.9.0", "1.10.0"), "1.10 必须大于 1.9");
+        assert!(!is_newer("1.7.2", "1.7.2"));
+        assert!(!is_newer("1.8.0", "1.7.9"));
+        assert!(is_newer("1.7.1", "1.7.1-1"), "同版本带尾号视为更新");
+    }
+
+    #[test]
+    fn version_normalize() {
+        assert_eq!(normalize_version("v1.7.2"), "1.7.2");
+        assert_eq!(normalize_version(" 1.7.2 "), "1.7.2");
+    }
+
+    #[test]
+    fn pick_windows_asset_by_arch() {
+        let assets = vec![
+            asset("MoeKoe.Music_1.7.1_arm64-setup.exe", 6),
+            asset("MoeKoe.Music_1.7.1_x64-setup.exe", 7),
+            asset("MoeKoe.Music_1.7.1_x64_en-US.msi", 9),
+        ];
+        assert_eq!(
+            pick_from_assets(&assets, "windows", "x64").unwrap().name,
+            "MoeKoe.Music_1.7.1_x64-setup.exe"
+        );
+        assert_eq!(
+            pick_from_assets(&assets, "windows", "aarch64").unwrap().name,
+            "MoeKoe.Music_1.7.1_arm64-setup.exe"
+        );
+    }
+
+    #[test]
+    fn pick_macos_prefers_matching_arch() {
+        let assets = vec![
+            asset("MoeKoe.Music_1.7.1_x64.dmg", 11),
+            asset("MoeKoe.Music_1.7.1_aarch64.dmg", 11),
+        ];
+        assert_eq!(
+            pick_from_assets(&assets, "macos", "aarch64").unwrap().name,
+            "MoeKoe.Music_1.7.1_aarch64.dmg"
+        );
+        assert_eq!(
+            pick_from_assets(&assets, "macos", "x64").unwrap().name,
+            "MoeKoe.Music_1.7.1_x64.dmg"
+        );
+    }
+
+    #[test]
+    fn pick_linux_prefers_appimage_over_deb() {
+        let assets = vec![
+            asset("MoeKoe.Music_1.7.1_amd64.deb", 11),
+            asset("MoeKoe.Music_1.7.1_amd64.AppImage", 89),
+        ];
+        assert_eq!(
+            pick_from_assets(&assets, "linux", "x64").unwrap().name,
+            "MoeKoe.Music_1.7.1_amd64.AppImage"
+        );
+    }
+
+    #[test]
+    fn pick_returns_none_when_only_wrong_arch() {
+        let assets = vec![asset("MoeKoe.Music_1.7.1_arm64-setup.exe", 6)];
+        assert!(pick_from_assets(&assets, "windows", "x64").is_none());
+    }
+
+    #[test]
+    fn pick_accepts_unlabeled_arch() {
+        let assets = vec![asset("MoeKoe.Music_1.7.1_setup.exe", 6)];
+        assert!(pick_from_assets(&assets, "windows", "x64").is_some());
+    }
+
+    #[test]
+    fn sources_order_and_dedup() {
+        let list = release_sources(None);
+        assert_eq!(list[0].0, "github");
+        assert_eq!(list[1].0, "mirror");
+        assert!(list[1].1.starts_with(MIRROR_PREFIX));
+
+        // 自定义源排在最前
+        let list = release_sources(Some("https://example.com/latest.json"));
+        assert_eq!(list[0].0, "custom");
+        assert_eq!(list.len(), 3);
+
+        // 与官方源相同则不重复
+        let list = release_sources(Some(&format!(
+            "https://api.github.com/repos/{RELEASE_REPO}/releases/latest"
+        )));
+        assert_eq!(list.len(), 2);
+    }
+
+    #[test]
+    fn endpoint_requires_https_except_loopback() {
+        assert!(normalize_endpoint("https://example.com/a.json").is_ok());
+        assert!(normalize_endpoint("http://127.0.0.1:8080/a.json").is_ok());
+        assert!(normalize_endpoint("http://example.com/a.json").is_err());
+        assert!(normalize_endpoint("ftp://example.com/a.json").is_err());
+        assert!(normalize_endpoint("   ").is_err());
+    }
+
+    #[test]
+    fn download_urls_adds_mirror_once() {
+        let urls = download_urls("https://github.com/o/r/releases/download/v1/a.exe");
+        assert_eq!(urls.len(), 2);
+        assert!(urls[1].starts_with(MIRROR_PREFIX));
+
+        let already = format!("{MIRROR_PREFIX}https://github.com/o/r/a.exe");
+        assert_eq!(download_urls(&already).len(), 1);
+    }
+
+    #[test]
+    fn sha256_verify_roundtrip() {
+        let dir = std::env::temp_dir().join("moekoe-updater-test");
+        std::fs::create_dir_all(&dir).unwrap();
+        let file = dir.join("payload.bin");
+        std::fs::write(&file, b"hello").unwrap();
+        // sha256("hello")
+        let digest = "sha256:2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824";
+        assert!(verify_sha256(&file, digest).is_ok());
+        assert!(verify_sha256(&file, &digest.replace("2cf2", "0000")).is_err());
+        // 无前缀也接受
+        assert!(verify_sha256(&file, digest.strip_prefix("sha256:").unwrap()).is_ok());
+        let _ = std::fs::remove_file(&file);
+    }
+
+    /// 联网冒烟（默认忽略，CI 不依赖网络）：
+    /// `cargo test --lib -- --ignored --nocapture updater_live_smoke`
+    #[tokio::test]
+    #[ignore]
+    async fn updater_live_smoke() {
+        let client = build_client(None, Some(API_TIMEOUT)).expect("客户端初始化");
+        let rel = check_release(&client, None, current_platform(), current_arch())
+            .await
+            .expect("应能取到 release 清单");
+        assert!(!rel.version.is_empty(), "版本号为空");
+        let asset = rel.asset.expect("当前平台应能选到安装包");
+        assert!(asset.size > 0, "安装包大小为 0");
+        assert!(
+            asset.digest.as_deref().unwrap_or("").starts_with("sha256:"),
+            "缺少 sha256 摘要，无法校验完整性: {:?}",
+            asset.digest
+        );
+        assert!(
+            arch_rank(&asset.name, current_arch()).map(|r| r > 0).unwrap_or(false),
+            "选到的包与当前架构不匹配: {}",
+            asset.name
+        );
+        println!(
+            "[live] version={} asset={} size={} digest={:?}",
+            rel.version, asset.name, asset.size, asset.digest
+        );
+    }
+
+    /// 下载冒烟（默认忽略）：经镜像真实下载当前平台安装包并校验 sha256，
+    /// 验证「镜像 URL 拼接 + 流式落盘 + 摘要校验」整条链路。
+    /// `cargo test --lib -- --ignored --nocapture updater_download_smoke`
+    #[tokio::test]
+    #[ignore]
+    async fn updater_download_smoke() {
+        let check_client = build_client(None, Some(API_TIMEOUT)).expect("客户端初始化");
+        let rel = check_release(&check_client, None, current_platform(), current_arch())
+            .await
+            .expect("应能取到 release 清单");
+        let asset = rel.asset.expect("应能选到安装包");
+        let digest = asset.digest.clone().expect("缺少摘要，无法校验");
+
+        let client = build_client(None, None).expect("下载客户端初始化");
+        let dir = std::env::temp_dir().join("moekoe-updater-smoke");
+        std::fs::create_dir_all(&dir).unwrap();
+        let part = dir.join(format!("{}.part", asset.name));
+
+        // 直连 github.com 在受限网络不可达，这里直接用镜像候选地址
+        let urls = download_urls(&asset.url);
+        let mirror = urls.last().expect("应有镜像地址").clone();
+        let mut last_err = String::new();
+        for url in [mirror, asset.url.clone()] {
+            match fetch_to_file(&client, &url, &part, asset.size, &|_, _, _, _| {}).await {
+                Ok(()) => {
+                    if let Err(e) = verify_sha256(&part, &digest) {
+                        last_err = e;
+                        continue;
+                    }
+                    let size = std::fs::metadata(&part).map(|m| m.len()).unwrap_or(0);
+                    assert_eq!(size, asset.size, "落盘大小与清单不一致");
+                    println!("[download] ok: {} bytes via {}", size, url);
+                    let _ = std::fs::remove_file(&part);
+                    return;
+                }
+                Err(e) => last_err = e,
+            }
+        }
+        let _ = std::fs::remove_file(&part);
+        panic!("所有下载地址均失败: {last_err}");
+    }
+
+    /// 镜像冒烟：gh-proxy 必须能转发 API（受限网络下唯一的检查通道）
+    #[tokio::test]
+    #[ignore]
+    async fn updater_mirror_smoke() {
+        let client = build_client(None, Some(Duration::from_secs(20))).expect("客户端初始化");
+        let list = release_sources(None);
+        let mirror = list
+            .iter()
+            .find(|(label, _)| *label == "mirror")
+            .map(|(_, url)| url.clone())
+            .expect("应存在镜像源");
+        let resp = client.get(&mirror).send().await.expect("镜像请求失败");
+        assert!(resp.status().is_success(), "镜像返回 {}", resp.status());
+        let v: Value = resp.json().await.expect("镜像响应不是 JSON");
+        assert!(v.get("tag_name").and_then(|x| x.as_str()).is_some());
+        println!("[mirror] ok: {}", mirror);
+    }
+
+    #[test]
+    fn parse_assets_reads_digest_and_size() {
+        let raw = json!([{
+            "name": "a.exe",
+            "browser_download_url": "https://github.com/o/r/a.exe",
+            "size": 123,
+            "digest": "sha256:deadbeef"
+        }]);
+        let parsed = parse_assets(raw.as_array().unwrap());
+        assert_eq!(parsed.len(), 1);
+        assert_eq!(parsed[0].size, 123);
+        assert_eq!(parsed[0].digest.as_deref(), Some("sha256:deadbeef"));
+    }
 }

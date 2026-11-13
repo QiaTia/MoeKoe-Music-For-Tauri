@@ -360,6 +360,10 @@ pub fn run() {
             ipc::local_ip,
             ipc::export_log,
             ipc::start_update_download,
+            updater::check_update,
+            updater::cancel_update_download,
+            updater::install_update,
+            updater::update_gatekeeper_script,
             ipc::ipc_invoke,
         ])
         .run(tauri::generate_context!())

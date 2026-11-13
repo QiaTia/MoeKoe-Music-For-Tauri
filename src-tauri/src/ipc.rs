@@ -444,10 +444,13 @@ pub fn export_log(app: AppHandle) -> Value {
     open_log_path(app)
 }
 
-/// 在线更新
+/// 在线更新（检查 → 下载 → 拉起安装包）
 #[tauri::command]
-pub async fn start_update_download(app: AppHandle) -> Value {
-    crate::updater::start_update_download(app).await
+pub async fn start_update_download(
+    app: AppHandle,
+    expected_version: Option<String>,
+) -> Value {
+    crate::updater::start_update_download(app, expected_version).await
 }
 
 /// 启动问候语（对齐 playStartupSound）
