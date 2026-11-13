@@ -591,11 +591,14 @@ fn emit_progress(app: &AppHandle, stage: &str, transferred: u64, total: u64, bps
 }
 
 fn emit_error(app: &AppHandle, message: &str, cancelled: bool) {
-    let _ = app.emit_to(
+    // 主窗口可能已销毁（用户正在退出），发送失败只记日志，不影响下载流程收尾
+    if let Err(e) = app.emit_to(
         crate::windows::MAIN,
         "update-error",
         json!({ "message": message, "cancelled": cancelled }),
-    );
+    ) {
+        eprintln!("[updater] 错误事件发送失败: {e}（原始错误: {message}）");
+    }
 }
 
 /// 进度回调：(stage, 已下载, 总量, 字节/秒)

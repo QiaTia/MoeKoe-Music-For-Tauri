@@ -82,7 +82,7 @@ describe('更新弹窗错误处理', () => {
 
         emitMain('update-downloaded', { path: '/tmp/a.exe', version: '1.7.2' });
         await nextTick();
-        expect(wrapper.find('.update-status').text()).toContain('正在启动安装程序');
+        expect(wrapper.find('.update-status').text()).toContain('安装程序已启动');
 
         emitMain('update-error', { message: '无法打开安装包: permission denied' });
         await nextTick();

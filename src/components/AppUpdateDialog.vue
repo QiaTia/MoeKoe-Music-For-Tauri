@@ -50,8 +50,12 @@ const props = defineProps({
 
 const emit = defineEmits(['badge-change']);
 
+// 实际发布安装包的仓库（Tauri 版）。更新跳转必须指向这里，
+// 否则「手动更新」会把用户带到另一条产品线（上游 Electron 版）的发布页。
+const releaseRepoSlug = 'qiatia/MoeKoe-Music-For-Tauri';
+const releaseRepoUrl = `https://github.com/${releaseRepoSlug}`;
 const projectRepoUrl = 'https://github.com/MoeKoeMusic/MoeKoeMusic';
-const repoUrl = `${projectRepoUrl}/releases`;
+const repoUrl = `${releaseRepoUrl}/releases`;
 const showUpdateDialog = ref(false);
 const showNewBadge = ref(false);
 const downloadUrl = ref('');
@@ -95,23 +99,6 @@ const isVersionLower = (current, latest) => {
     return false;
 };
 
-const getPlatformDownloadUrl = (release) => {
-    const assets = Array.isArray(release?.assets) ? release.assets : [];
-    if (!assets.length) {
-        return release?.html_url || repoUrl;
-    }
-
-    const platformMatchers = {
-        win32: [/\.exe$/i, /\.msi$/i],
-        darwin: [/\.dmg$/i, /\.zip$/i],
-        linux: [/\.AppImage$/i, /\.deb$/i, /\.rpm$/i]
-    };
-
-    const matchers = platformMatchers[props.platform] || [];
-    const asset = assets.find(item => matchers.some(matcher => matcher.test(item.name)));
-    return asset?.browser_download_url || release?.html_url || repoUrl;
-};
-
 const applyReleaseInfo = (info) => {
     latestVersion.value = info.latestVersion || '';
     updateLog.value = String(info.notes || '').trim() || '暂无更新日志';
@@ -137,11 +124,13 @@ const fetchLatestVersion = async () => {
         console.warn('[更新] 调用本地检查失败:', error);
     }
 
-    // Web 环境（无 Tauri 宿主）兜底：直连 GitHub API，仅用于展示
+    // Web 环境（无 Tauri 宿主）兜底：直连 GitHub API，仅用于展示版本与徽标。
+    // 这里不给安装包直链——前端无法可靠判断架构（会分叉出第二套选包逻辑），
+    // 统一落到发布页让用户自己选。
     try {
-        const response = await fetch('https://api.github.com/repos/qiatia/MoeKoe-Music-For-Tauri/releases/latest');
+        const response = await fetch(`https://api.github.com/repos/${releaseRepoSlug}/releases/latest`);
         const data = await response.json();
-        downloadUrl.value = getPlatformDownloadUrl(data);
+        downloadUrl.value = data.html_url || repoUrl;
         latestVersion.value = String(data.tag_name || '').replace(/^v/, '');
         updateLog.value = data.body?.trim() || '暂无更新日志';
         setShowNewBadge(isVersionLower(props.appVersion, latestVersion.value));
@@ -187,7 +176,7 @@ const handleUpdateDownloaded = async () => {
     isUpdateDownloaded.value = true;
     updateProgress.value = 100;
     updateSpeedText.value = '';
-    updateStatusText.value = '更新包已下载完成，正在启动安装程序...';
+    updateStatusText.value = '安装程序已启动，如未出现请点击「运行安装包」';
 
     // macOS 未签名/未公证时，替换后首次打开可能被 Gatekeeper 拦截，预先取好放行命令
     if (props.platform === 'darwin') {
