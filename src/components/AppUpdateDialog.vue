@@ -206,7 +206,11 @@ const handleUpdateError = (_event, payload) => {
         isUpdateDownloaded.value = false;
         updateProgress.value = 0;
         updateStatusText.value = '已取消更新';
-    } else if (!isUpdateDownloaded.value) {
+    } else if (isUpdateDownloaded.value) {
+        // 下载已完成后再报错，只可能是「拉起安装程序」失败。若不单独处理，
+        // 状态会永久停在「正在启动安装程序…」，用户既等不到安装器也没有重试入口。
+        updateStatusText.value = `启动安装程序失败：${payload?.message || '未知原因'}，可点击「运行安装包」重试`;
+    } else {
         updateStatusText.value = payload?.message || '更新失败，请稍后重试';
     }
     updateSpeedText.value = '';

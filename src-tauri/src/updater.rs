@@ -24,7 +24,6 @@
 //! - `update-error`：`{ message, cancelled? }`
 
 use std::path::{Path, PathBuf};
-use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::{Mutex, OnceLock};
 use std::time::{Duration, Instant};
 
@@ -32,6 +31,7 @@ use serde_json::{json, Value};
 use sha2::{Digest, Sha256};
 use tauri::{AppHandle, Emitter, Manager};
 use tauri_plugin_opener::OpenerExt;
+use tokio::sync::watch;
 
 /// 发布仓库（Tauri 版自身的 Releases，勿混用上游 Electron 仓库）
 const RELEASE_REPO: &str = "qiatia/MoeKoe-Music-For-Tauri";
@@ -45,10 +45,44 @@ const DOWNLOAD_READ_TIMEOUT: Duration = Duration::from_secs(90);
 /// 进度事件节流（分片回调极密集，200ms 一次足够平滑且不会造成 IPC 洪水）
 const PROGRESS_THROTTLE_MS: u128 = 200;
 
-/// 取消标志：下载循环每个分片检查一次
-static CANCEL_FLAG: AtomicBool = AtomicBool::new(false);
+/// 下载取消信号。
+///
+/// 用 `watch` 而不是 `AtomicBool` 轮询：轮询只能在一个分片到达后才能感知取消，
+/// 弱网下 `stream.next()` 可能挂满 `read_timeout`（90s），用户点了「取消下载」
+/// 却要等一分半才响应。`watch` 可同时被「读取当前态」和「唤醒等待中的循环」使用。
+static CANCEL: OnceLock<(watch::Sender<bool>, watch::Receiver<bool>)> = OnceLock::new();
+/// 取消行为的统一文案；下游只允许通过 `is_cancelled()` 判定，避免字符串各处漂移
+const CANCELLED_MSG: &str = "已取消更新";
 /// 最近一次下载完成的安装包路径（供「重新安装」使用）
 static LAST_INSTALLER: OnceLock<Mutex<Option<PathBuf>>> = OnceLock::new();
+
+fn cancel_pair() -> &'static (watch::Sender<bool>, watch::Receiver<bool>) {
+    CANCEL.get_or_init(|| watch::channel(false))
+}
+
+/// 复位取消状态。**必须在「开始新一轮下载」的入口同步调用**（早于下载任务启动），
+/// 否则用户在检查阶段点了取消，会被下载开始时的复位吞掉。
+fn reset_cancel() {
+    cancel_pair().0.send_replace(false);
+}
+
+fn request_cancel() {
+    cancel_pair().0.send_replace(true);
+}
+
+fn cancel_requested() -> bool {
+    *cancel_pair().1.borrow()
+}
+
+/// 交给下载循环的独立 receiver：可 `changed().await`，不会丢掉取消通知
+fn cancel_receiver() -> watch::Receiver<bool> {
+    cancel_pair().1.clone()
+}
+
+/// 判断一个错误是否代表「用户取消」（而不是真的失败）
+fn is_cancelled(msg: &str) -> bool {
+    msg == CANCELLED_MSG
+}
 
 fn last_installer() -> &'static Mutex<Option<PathBuf>> {
     LAST_INSTALLER.get_or_init(|| Mutex::new(None))
@@ -146,10 +180,40 @@ struct UpdateAsset {
     digest: Option<String>,
 }
 
+/// 把远端可控的资产名收紧成安全的本地文件名。
+///
+/// `assets[].name` 由发布方决定（自定义更新源 / `MOEKOE_UPDATE_SOURCE` 时更是完全外部可控），
+/// 直接 `join` 到目录上会允许 `../../xxx` 逃出临时目录写到任意路径。安装包名不可能
+/// 含路径分隔符或 Windows 保留字符，因此这里只接受纯文件名。
+fn safe_file_name(raw: &str) -> Result<String, String> {
+    let name = raw.trim();
+    if name.is_empty() || name == "." || name == ".." {
+        return Err(format!("更新包文件名非法: {raw:?}"));
+    }
+    if name.len() > 128 {
+        return Err(format!("更新包文件名过长（{} 字符）", name.len()));
+    }
+    let illegal = name
+        .chars()
+        .any(|c| c.is_control() || matches!(c, '/' | '\\' | ':' | '*' | '?' | '"' | '<' | '>' | '|'));
+    if illegal || name.contains("..") {
+        return Err(format!("更新包文件名非法: {raw:?}"));
+    }
+    Ok(name.to_string())
+}
+
 fn parse_assets(raw: &[Value]) -> Vec<UpdateAsset> {
     raw.iter()
         .filter_map(|a| {
-            let name = a.get("name").and_then(|v| v.as_str())?.to_string();
+            let raw_name = a.get("name").and_then(|v| v.as_str())?;
+            // 非法名在选包阶段就丢弃，避免带着穿越路径一路走到写盘
+            let name = match safe_file_name(raw_name) {
+                Ok(n) => n,
+                Err(e) => {
+                    eprintln!("[updater] 忽略非法资产: {e}");
+                    return None;
+                }
+            };
             let url = a.get("browser_download_url").and_then(|v| v.as_str())?.to_string();
             Some(UpdateAsset {
                 name,
@@ -452,26 +516,42 @@ async fn fetch_to_file(
 
     let mut file = std::fs::File::create(part_path).map_err(|e| format!("创建临时文件失败: {e}"))?;
     let mut stream = resp.bytes_stream();
+    let mut cancel = cancel_receiver();
     let mut transferred: u64 = 0;
     let started = Instant::now();
     let mut last_emit = Instant::now();
 
-    while let Some(chunk) = stream.next().await {
-        if CANCEL_FLAG.load(Ordering::Relaxed) {
-            drop(file);
-            let _ = std::fs::remove_file(part_path);
-            return Err("已取消更新".into());
-        }
-        let chunk = chunk.map_err(|e| format!("下载中断: {e}"))?;
-        file.write_all(&chunk).map_err(|e| format!("写入失败: {e}"))?;
-        transferred += chunk.len() as u64;
+    // 进入循环前先看一次：用户可能在「检查阶段」或任务排队期间就点了取消，
+    // 那种情况不会再产生 changed() 事件。临时文件由调用方统一清理。
+    if cancel_requested() {
+        return Err(CANCELLED_MSG.into());
+    }
 
-        let finished = total > 0 && transferred >= total;
-        if finished || last_emit.elapsed().as_millis() >= PROGRESS_THROTTLE_MS {
-            let elapsed = started.elapsed().as_secs_f64().max(0.001);
-            let bps = (transferred as f64 / elapsed) as u64;
-            progress("downloading", transferred, total, bps);
-            last_emit = Instant::now();
+    loop {
+        // biased：取消优先，避免取消的同时恰好有分片到达又写了一次盘
+        tokio::select! {
+            biased;
+            _ = cancel.changed() => {
+                if cancel_requested() {
+                    // 此处 file 仍在作用域内，Windows 上删不掉已打开文件，
+                    // 清理统一交给 download_asset 的 Err 分支
+                    return Err(CANCELLED_MSG.into());
+                }
+            }
+            item = stream.next() => {
+                let Some(chunk) = item else { break };
+                let chunk = chunk.map_err(|e| format!("下载中断: {e}"))?;
+                file.write_all(&chunk).map_err(|e| format!("写入失败: {e}"))?;
+                transferred += chunk.len() as u64;
+
+                let finished = total > 0 && transferred >= total;
+                if finished || last_emit.elapsed().as_millis() >= PROGRESS_THROTTLE_MS {
+                    let elapsed = started.elapsed().as_secs_f64().max(0.001);
+                    let bps = (transferred as f64 / elapsed) as u64;
+                    progress("downloading", transferred, total, bps);
+                    last_emit = Instant::now();
+                }
+            }
         }
     }
     file.flush().map_err(|e| format!("写入失败: {e}"))?;
@@ -498,13 +578,14 @@ async fn download_asset(
         .join("moekoe-update");
     std::fs::create_dir_all(&dir).map_err(|e| format!("创建下载目录失败: {e}"))?;
 
-    let final_path = dir.join(&asset.name);
-    let part_path = dir.join(format!("{}.part", asset.name));
+    // 远端可控字段会参与本地路径拼接，先收紧成纯文件名（阻断 ../ 穿越）
+    let file_name = safe_file_name(&asset.name)?;
+    let final_path = dir.join(&file_name);
+    let part_path = dir.join(format!("{}.part", file_name));
     let mut last_err = String::from("没有可用的下载地址");
 
-    // 整轮下载只复位一次取消标志；换源时不再复位，否则用户在首次尝试期间点
-    // 「取消」会被下一次尝试清掉，继续下载下去。
-    CANCEL_FLAG.store(false, Ordering::Relaxed);
+    // 取消状态已在 start_update_download 的任务启动前复位；这里不能再复位，
+    // 否则「检查阶段就点了取消」会被清掉，用户看着进度条继续下载下去。
     for (idx, url) in download_urls(&asset.url).into_iter().enumerate() {
         let emit = |stage: &str, done: u64, total: u64, bps: u64| {
             emit_progress(app, stage, done, total, bps)
@@ -527,7 +608,7 @@ async fn download_asset(
             }
             Err(e) => {
                 let _ = std::fs::remove_file(&part_path);
-                if e.contains("已取消") {
+                if is_cancelled(&e) {
                     return Err(e);
                 }
                 eprintln!("[updater] 下载地址 {} 失败: {e}", idx + 1);
@@ -605,6 +686,9 @@ pub async fn check_update(app: AppHandle) -> Value {
 /// `expected_version` 用于「检查 → 下载」之间的一致性校验：期间若发布更高版本，
 /// 返回错误让用户重新检查，而不是静默装成另一个版本。
 pub async fn start_update_download(app: AppHandle, expected_version: Option<String>) -> Value {
+    // 新一轮下载的复位点放在命令入口（同步执行、早于下载任务启动）。
+    // 若放在下载任务内部，用户在「检查更新」这段时间点取消会被随后的复位吞掉。
+    reset_cancel();
     let current = app.package_info().version.to_string();
     let ctx = app.state::<crate::AppCtx>();
     let proxy = proxy_from_settings(&ctx.settings);
@@ -671,7 +755,7 @@ pub async fn start_update_download(app: AppHandle, expected_version: Option<Stri
                 }
             }
             Err(e) => {
-                let cancelled = e.contains("已取消");
+                let cancelled = is_cancelled(&e);
                 emit_error(&app2, &e, cancelled);
             }
         }
@@ -701,7 +785,7 @@ fn proxy_for_download(app: &AppHandle) -> Option<String> {
 /// 取消进行中的下载
 #[tauri::command]
 pub fn cancel_update_download() -> Value {
-    CANCEL_FLAG.store(true, Ordering::Relaxed);
+    request_cancel();
     json!({ "success": true })
 }
 
@@ -721,11 +805,24 @@ pub fn install_update(app: AppHandle) -> Value {
     }
 }
 
+/// 从可执行文件向上回溯，找到所属的 `.app` bundle。
+///
+/// 找不到必须返回 `None`。早期实现用 `loop` 一路回溯到根目录，`tauri dev` 或
+/// 未打包运行时会把它当成 bundle，生成 `sudo xattr -cr '/'` —— 用户照着粘贴
+/// 等于递归清除整盘的隔离属性。
+///
+/// 仅 macOS 分支与单测需要它，其它平台的正式构建不编译，避免 unused 警告。
+#[cfg(any(target_os = "macos", test))]
+fn find_app_bundle(exe: &Path) -> Option<&Path> {
+    exe.ancestors()
+        .find(|p| p.extension().and_then(|e| e.to_str()) == Some("app"))
+}
+
 /// macOS Gatekeeper 放行脚本：清除 .app 的隔离属性。
 ///
 /// 未签名/未公证的应用经自动更新替换后，首次打开可能被拦截（「已损坏」）。
 /// 路径从当前可执行文件回溯到 `.app` bundle，安装到非默认位置也准确。
-/// 非 macOS 返回空串（前端按平台决定是否展示）。
+/// 非 macOS、或当前不是 `.app` 形态时返回空串（前端按空值不展示）。
 #[tauri::command]
 pub fn update_gatekeeper_script() -> String {
     #[cfg(target_os = "macos")]
@@ -733,15 +830,12 @@ pub fn update_gatekeeper_script() -> String {
         let Ok(exe) = std::env::current_exe() else {
             return String::new();
         };
-        let mut cur = exe.as_path();
-        let bundle = loop {
-            if cur.extension().and_then(|e| e.to_str()) == Some("app") {
-                break cur;
-            }
-            match cur.parent() {
-                Some(parent) => cur = parent,
-                None => break cur,
-            }
+        let Some(bundle) = find_app_bundle(&exe) else {
+            eprintln!(
+                "[updater] 未找到 .app bundle，跳过 Gatekeeper 建议: {}",
+                exe.display()
+            );
+            return String::new();
         };
         // 该命令由用户手动粘贴执行：路径要按 shell 字面量处理，单引号内不做任何展开
         let quoted = format!("'{}'", bundle.to_string_lossy().replace('\'', "'\\''"));
@@ -890,6 +984,140 @@ mod tests {
         // 无前缀也接受
         assert!(verify_sha256(&file, digest.strip_prefix("sha256:").unwrap()).is_ok());
         let _ = std::fs::remove_file(&file);
+    }
+
+    #[test]
+    fn find_app_bundle_requires_dot_app() {
+        // 正常打包形态：向上回溯到 .app
+        let exe = Path::new("/Applications/MoeKoe Music.app/Contents/MacOS/moekoe-music");
+        assert_eq!(
+            find_app_bundle(exe),
+            Some(Path::new("/Applications/MoeKoe Music.app"))
+        );
+        // 开发运行 / 裸二进制：必须返回 None，绝不能回落到根目录
+        // （否则生成的命令是 `sudo xattr -cr '/'`）
+        assert_eq!(find_app_bundle(Path::new("/usr/local/bin/moekoe-music")), None);
+        assert_eq!(find_app_bundle(Path::new("/moekoe-music")), None);
+    }
+
+    #[test]
+    fn safe_file_name_rejects_traversal() {
+        let too_long = format!("{}.exe", "a".repeat(200));
+        let mut bad_names = vec![
+            "../../evil.exe",
+            "..\\..\\evil.exe",
+            "sub/dir/a.exe",
+            "sub\\a.exe",
+            "..",
+            ".",
+            "",
+            "   ",
+            "a\u{0}b.exe",
+            "C:evil.exe",
+            "a.exe:stream",
+        ];
+        bad_names.push(too_long.as_str());
+        for bad in bad_names {
+            assert!(safe_file_name(bad).is_err(), "应拒绝非法文件名: {bad:?}");
+        }
+
+        // 真实发布资产名必须全部放行
+        for ok in [
+            "MoeKoe.Music_1.7.1_x64-setup.exe",
+            "MoeKoe.Music_aarch64.app.tar.gz",
+            "MoeKoe.Music_1.7.1_amd64.AppImage",
+            "MoeKoe.Music_1.7.1_x64.dmg",
+        ] {
+            assert_eq!(safe_file_name(ok).unwrap(), ok);
+        }
+    }
+
+    #[test]
+    fn parse_assets_drops_traversal_names() {
+        let raw = json!([
+            { "name": "../../evil.exe", "browser_download_url": "https://x/e.exe", "size": 1 },
+            { "name": "ok.exe", "browser_download_url": "https://x/ok.exe", "size": 2 }
+        ]);
+        let parsed = parse_assets(raw.as_array().unwrap());
+        assert_eq!(parsed.len(), 1, "带路径穿越的资产必须被丢弃");
+        assert_eq!(parsed[0].name, "ok.exe");
+    }
+
+    /// 取消状态是全局的，涉及它的用例必须串行
+    static CANCEL_TEST_LOCK: Mutex<()> = Mutex::new(());
+
+    #[test]
+    fn cancel_signal_reset_and_request() {
+        let _guard = CANCEL_TEST_LOCK.lock().unwrap_or_else(|e| e.into_inner());
+        // 全局状态：本用例自洽，不与其他用例交叉断言
+        reset_cancel();
+        assert!(!cancel_requested(), "复位后应为未取消");
+        request_cancel();
+        assert!(cancel_requested(), "请求取消后必须立即可见");
+        reset_cancel();
+        assert!(!cancel_requested(), "再次复位后应恢复");
+
+        // 取消语义只认统一文案，避免各处手写字符串后失效
+        assert!(is_cancelled(CANCELLED_MSG));
+        assert!(!is_cancelled("下载中断: connection reset"));
+    }
+
+    /// 慢速流上点取消必须即时打断，而不是等下一个分片 / read_timeout（90s）。
+    #[tokio::test]
+    async fn cancel_interrupts_slow_stream() {
+        use axum::{routing::get, Router};
+        use futures_util::stream;
+        use std::convert::Infallible;
+
+        let _guard = CANCEL_TEST_LOCK.lock().unwrap_or_else(|e| e.into_inner());
+
+        // 每 100ms 才吐 1KB 且永不结束：轮询式取消在这里会卡到 read_timeout
+        let app = Router::new().route(
+            "/slow",
+            get(|| async {
+                let s = stream::unfold(0u32, |n| async move {
+                    tokio::time::sleep(Duration::from_millis(100)).await;
+                    Some((Ok::<_, Infallible>(vec![0u8; 1024]), n + 1))
+                });
+                axum::body::Body::from_stream(s)
+            }),
+        );
+        let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
+        let addr = listener.local_addr().unwrap();
+        tokio::spawn(async move {
+            let _ = axum::serve(listener, app).await;
+        });
+
+        reset_cancel();
+        let dir = std::env::temp_dir().join("moekoe-cancel-test");
+        std::fs::create_dir_all(&dir).unwrap();
+        let part = dir.join("slow.part");
+        let _ = std::fs::remove_file(&part);
+
+        let client = build_client(None, None).unwrap();
+        let url = format!("http://{addr}/slow");
+        let task = tokio::spawn(async move {
+            let progress = |_: &str, _: u64, _: u64, _: u64| {};
+            fetch_to_file(&client, &url, &part, 0, &progress).await
+        });
+
+        // 等它确实开始接收数据，再取消
+        tokio::time::sleep(Duration::from_millis(350)).await;
+        let started = Instant::now();
+        request_cancel();
+
+        let joined = tokio::time::timeout(Duration::from_secs(2), task)
+            .await
+            .expect("取消必须打断等待中的数据流，不能等到 read_timeout")
+            .expect("下载任务不应 panic");
+        assert!(
+            matches!(&joined, Err(e) if is_cancelled(e)),
+            "应返回取消错误，实际: {joined:?}"
+        );
+        println!("[cancel] 打断耗时 {:?}", started.elapsed());
+
+        let _ = std::fs::remove_file(&dir.join("slow.part"));
+        reset_cancel();
     }
 
     /// 联网冒烟（默认忽略，CI 不依赖网络）：
