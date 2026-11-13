@@ -286,6 +286,14 @@ const startOnlineUpdate = async () => {
             return;
         }
 
+        // 已有下载任务在跑（两个更新入口共用同一后端互斥标记）：不弹窗打扰，
+        // 保持「下载中」形态，让用户可以直接取消那一次下载
+        if (result?.reason === 'busy') {
+            isDownloadingUpdate.value = true;
+            updateStatusText.value = result.message || '已有更新正在下载';
+            return;
+        }
+
         if (result?.reason === 'version-changed') {
             latestVersion.value = result.latestVersion || latestVersion.value;
             updateStatusText.value = result.message || '更新版本已变化，请重新检查更新';

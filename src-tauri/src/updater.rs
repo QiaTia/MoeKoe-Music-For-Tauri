@@ -24,6 +24,7 @@
 //! - `update-error`：`{ message, cancelled? }`
 
 use std::path::{Path, PathBuf};
+use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::{Mutex, OnceLock};
 use std::time::{Duration, Instant};
 
@@ -55,6 +56,27 @@ static CANCEL: OnceLock<(watch::Sender<bool>, watch::Receiver<bool>)> = OnceLock
 const CANCELLED_MSG: &str = "已取消更新";
 /// 最近一次下载完成的安装包路径（供「重新安装」使用）
 static LAST_INSTALLER: OnceLock<Mutex<Option<PathBuf>>> = OnceLock::new();
+
+/// 下载互斥标记。
+///
+/// IPC 命令可被重复调用（更新弹窗在 Header 与 SidebarNavigation 各挂一份，用户也可能连点），
+/// 两个任务并发写同一个 `.part` 会互相截断，`rename` 也会竞态。
+static DOWNLOADING: AtomicBool = AtomicBool::new(false);
+
+/// 占用标记的 RAII 归位：下载任务无论正常结束、失败还是 panic 都会释放
+struct DownloadGuard;
+
+impl Drop for DownloadGuard {
+    fn drop(&mut self) {
+        DOWNLOADING.store(false, Ordering::SeqCst);
+    }
+}
+
+/// 提前返回时释放占用标记（`DownloadGuard` 只能覆盖下载任务本身）
+fn release_downloading(payload: Value) -> Value {
+    DOWNLOADING.store(false, Ordering::SeqCst);
+    payload
+}
 
 fn cancel_pair() -> &'static (watch::Sender<bool>, watch::Receiver<bool>) {
     CANCEL.get_or_init(|| watch::channel(false))
@@ -233,7 +255,9 @@ fn parse_assets(raw: &[Value]) -> Vec<UpdateAsset> {
 fn ext_priority(platform: &str) -> &'static [&'static str] {
     match platform {
         "windows" => &[".exe", ".msi"],
-        "macos" => &[".dmg", ".app.tar.gz"],
+        // 只取 .dmg：`.app.tar.gz` 是 Tauri 的 updater artifact，open_path 只会解压，
+        // 用户拿到的不是安装动作。缺失 dmg 时宁可提示「手动更新」也不下发不可用的包。
+        "macos" => &[".dmg"],
         _ => &[".appimage", ".deb", ".rpm"],
     }
 }
@@ -362,11 +386,47 @@ struct CheckedRelease {
     asset: Option<UpdateAsset>,
 }
 
+/// 检查结果缓存。
+///
+/// GitHub 匿名 API 只有 60 次/小时，而更新弹窗在 Header 与 SidebarNavigation 里各挂了一份，
+/// 反复切换视图或重启客户端很容易把配额烧光。缓存按「更新源」隔离，5 分钟内复用。
+const CHECK_CACHE_TTL: Duration = Duration::from_secs(300);
+static CHECK_CACHE: OnceLock<Mutex<Option<(String, Instant, Value)>>> = OnceLock::new();
+
+fn cache_slot() -> &'static Mutex<Option<(String, Instant, Value)>> {
+    CHECK_CACHE.get_or_init(|| Mutex::new(None))
+}
+
+fn cache_key(custom: Option<&str>) -> String {
+    custom
+        .map(str::trim)
+        .filter(|s| !s.is_empty())
+        .unwrap_or("__official__")
+        .to_string()
+}
+
+fn cache_get(key: &str) -> Option<Value> {
+    let guard = cache_slot().lock().ok()?;
+    let (k, at, value) = guard.as_ref()?;
+    (k == key && at.elapsed() < CHECK_CACHE_TTL).then(|| value.clone())
+}
+
+fn cache_put(key: &str, value: &Value) {
+    if let Ok(mut guard) = cache_slot().lock() {
+        *guard = Some((key.to_string(), Instant::now(), value.clone()));
+    }
+}
+
 /// 逐个源请求 latest release，返回首个成功的解析结果。
 async fn fetch_latest(
     client: &reqwest::Client,
     custom: Option<&str>,
 ) -> Result<Value, String> {
+    let key = cache_key(custom);
+    if let Some(cached) = cache_get(&key) {
+        return Ok(cached);
+    }
+
     let mut last_err = String::from("没有可用的更新源");
     for (label, url) in release_sources(custom) {
         match client.get(&url).send().await {
@@ -377,11 +437,21 @@ async fn fetch_latest(
                         last_err = format!("[{label}] 发布信息缺少 tag_name");
                         continue;
                     }
+                    cache_put(&key, &v);
                     return Ok(v);
                 }
                 Err(e) => last_err = format!("[{label}] 解析发布信息失败: {e}"),
             },
-            Ok(resp) => last_err = format!("[{label}] HTTP {}", resp.status()),
+            Ok(resp) => {
+                let status = resp.status();
+                // 403 / 429 基本都是匿名 API 限流：镜像转发的是同一个接口、共用同一配额，
+                // 继续换源也拿不到结果，直接把状态码抛给用户更是毫无意义
+                last_err = if matches!(status.as_u16(), 403 | 429) {
+                    format!("更新服务请求过于频繁（HTTP {status}），请稍后再试")
+                } else {
+                    format!("[{label}] HTTP {status}")
+                };
+            }
             Err(e) => last_err = format!("[{label}] {e}"),
         }
         eprintln!("[updater] 更新源不可用: {last_err}");
@@ -441,6 +511,44 @@ fn file_sha256(path: &Path) -> Result<String, String> {
         hasher.update(&buf[..n]);
     }
     Ok(format!("{:x}", hasher.finalize()))
+}
+
+/// 在阻塞线程池里算摘要。
+///
+/// 安装包最大近百 MB（AppImage 实测 89MB），同步读会让 tokio worker 卡住上百毫秒，
+/// 期间该 worker 上的其它异步任务（WS、播放状态推送）全部停顿。
+async fn verify_sha256_offloaded(path: PathBuf, digest: String) -> Result<(), String> {
+    tauri::async_runtime::spawn_blocking(move || verify_sha256(&path, &digest))
+        .await
+        .map_err(|e| format!("校验任务异常: {e}"))?
+}
+
+/// 清理下载目录里的历史产物（旧版本安装包与残留 `.part`）。
+///
+/// 每次更新都按版本名落一个新文件、几十 MB 一个，不清理会随升级次数无限累积。
+/// 只删本模块自己产生的后缀，避免误删同目录的其它内容；正在被安装器占用的文件
+/// 删除会失败，忽略即可（下次更新再清）。
+fn cleanup_old_downloads(dir: &Path, keep: &Path) {
+    const INSTALLER_EXTS: &[&str] = &[".exe", ".msi", ".dmg", ".deb", ".rpm", ".appimage", ".tar.gz"];
+    let Ok(entries) = std::fs::read_dir(dir) else {
+        return;
+    };
+    for entry in entries.flatten() {
+        let path = entry.path();
+        if path == keep || !path.is_file() {
+            continue;
+        }
+        let lower = path
+            .file_name()
+            .and_then(|n| n.to_str())
+            .unwrap_or("")
+            .to_ascii_lowercase();
+        let owned = lower.ends_with(".part")
+            || INSTALLER_EXTS.iter().any(|ext| lower.ends_with(ext));
+        if owned {
+            let _ = std::fs::remove_file(&path);
+        }
+    }
 }
 
 /// 校验 `sha256:<hex>` 形式的摘要
@@ -593,10 +701,15 @@ async fn download_asset(
         match fetch_to_file(client, &url, &part_path, asset.size, &emit).await {
             Ok(()) => {
                 if let Some(digest) = asset.digest.as_deref() {
-                    if let Err(e) = verify_sha256(&part_path, digest) {
-                        last_err = e;
-                        let _ = std::fs::remove_file(&part_path);
-                        continue; // 换下一个源（可能是镜像截断导致，不代表全部失败）
+                    // 校验要读完整包（最长数百毫秒），先把 UI 切到「正在校验」
+                    emit_progress(app, "verifying", asset.size, asset.size, 0);
+                    match verify_sha256_offloaded(part_path.clone(), digest.to_string()).await {
+                        Ok(()) => {}
+                        Err(e) => {
+                            last_err = e;
+                            let _ = std::fs::remove_file(&part_path);
+                            continue; // 换下一个源（可能是镜像截断导致，不代表全部失败）
+                        }
                     }
                 }
                 if final_path.exists() {
@@ -604,6 +717,8 @@ async fn download_asset(
                 }
                 std::fs::rename(&part_path, &final_path)
                     .map_err(|e| format!("保存安装包失败: {e}"))?;
+                // 清掉历史版本的安装包与残留分片，避免 temp 目录无限增长
+                cleanup_old_downloads(&dir, &final_path);
                 return Ok(final_path);
             }
             Err(e) => {
@@ -686,9 +801,19 @@ pub async fn check_update(app: AppHandle) -> Value {
 /// `expected_version` 用于「检查 → 下载」之间的一致性校验：期间若发布更高版本，
 /// 返回错误让用户重新检查，而不是静默装成另一个版本。
 pub async fn start_update_download(app: AppHandle, expected_version: Option<String>) -> Value {
-    // 新一轮下载的复位点放在命令入口（同步执行、早于下载任务启动）。
-    // 若放在下载任务内部，用户在「检查更新」这段时间点取消会被随后的复位吞掉。
+    // 先占位、后复位取消：若已有任务在跑，此时复位会打断「正在进行中的取消」，
+    // 所以必须先拒绝，再清理上一轮遗留的取消状态。
+    if DOWNLOADING.swap(true, Ordering::SeqCst) {
+        return json!({
+            "success": false,
+            "reason": "busy",
+            "message": "已有更新正在下载，请等待完成或先取消本次下载",
+        });
+    }
+    // 复位点必须在命令入口（同步执行，早于任何下载任务）。若放在下载任务内部，
+    // 用户在「检查更新」阶段点的取消会被随后的复位吞掉。
     reset_cancel();
+
     let current = app.package_info().version.to_string();
     let ctx = app.state::<crate::AppCtx>();
     let proxy = proxy_from_settings(&ctx.settings);
@@ -696,26 +821,32 @@ pub async fn start_update_download(app: AppHandle, expected_version: Option<Stri
 
     let client = match build_client(proxy.as_deref(), Some(API_TIMEOUT)) {
         Ok(c) => c,
-        Err(e) => return json!({ "success": false, "message": e }),
+        Err(e) => return release_downloading(json!({ "success": false, "message": e })),
     };
 
     let rel = match check_release(&client, custom.as_deref(), current_platform(), current_arch()).await
     {
         Ok(r) => r,
-        Err(e) => return json!({ "success": false, "message": format!("检查更新失败: {e}") }),
+        Err(e) => {
+            return release_downloading(
+                json!({ "success": false, "message": format!("检查更新失败: {e}") }),
+            )
+        }
     };
 
     if !is_newer(&current, &rel.version) {
-        return json!({ "success": false, "reason": "not-available", "latestVersion": rel.version });
+        return release_downloading(
+            json!({ "success": false, "reason": "not-available", "latestVersion": rel.version }),
+        );
     }
     if let Some(expected) = expected_version.as_deref().map(normalize_version) {
         if !expected.is_empty() && expected != rel.version {
-            return json!({
+            return release_downloading(json!({
                 "success": false,
                 "reason": "version-changed",
                 "message": format!("更新版本已变化（{expected} → {}），请重新检查更新", rel.version),
                 "latestVersion": rel.version,
-            });
+            }));
         }
     }
 
@@ -724,13 +855,22 @@ pub async fn start_update_download(app: AppHandle, expected_version: Option<Stri
         if !rel.html_url.is_empty() {
             let _ = app.opener().open_url(rel.html_url.clone(), None::<&str>);
         }
-        return json!({ "success": false, "reason": "unsupported", "latestVersion": rel.version });
+        return release_downloading(
+            json!({ "success": false, "reason": "unsupported", "latestVersion": rel.version }),
+        );
     };
 
     let version = rel.version.clone();
     let asset_name = asset.name.clone();
     let app2 = app.clone();
     tauri::async_runtime::spawn(async move {
+        // 占用标记随任务结束自动释放
+        let _guard = DownloadGuard;
+        // 用户在「检查更新」阶段就点了取消：不必再发一次下载请求
+        if cancel_requested() {
+            emit_error(&app2, CANCELLED_MSG, true);
+            return;
+        }
         // 下载用独立客户端：读取超时更宽松，避免大包慢速网络被中断
         let dl_client = match build_client(proxy_for_download(&app2).as_deref(), None) {
             Ok(c) => c,
@@ -741,7 +881,6 @@ pub async fn start_update_download(app: AppHandle, expected_version: Option<Stri
         };
         match download_asset(&app2, &dl_client, &asset).await {
             Ok(path) => {
-                emit_progress(&app2, "verifying", asset.size, asset.size, 0);
                 if let Ok(mut slot) = last_installer().lock() {
                     *slot = Some(path.clone());
                 }
@@ -764,16 +903,28 @@ pub async fn start_update_download(app: AppHandle, expected_version: Option<Stri
     json!({ "success": true, "latestVersion": rel.version, "assetName": asset_name })
 }
 
-/// 自定义更新源：设置页未提供该项时支持环境变量覆盖（企业内网 / 受限网络场景）
+/// 自定义更新源：优先读设置项；环境变量仅在显式开启时才生效。
+///
+/// 环境变量可以让客户端去下载并自动拉起任意安装包的安装程序（sha256 只能证明
+/// 「与该源的清单一致」，清单本身也来自该源），因此必须由使用者明确开启，
+/// 不能让任何能设置进程环境的程序单方面改写更新源。
 fn custom_source(ctx: &crate::AppCtx) -> Option<String> {
-    ctx.settings
+    if let Some(v) = ctx
+        .settings
         .setting_str("updateSource")
         .filter(|s| !s.trim().is_empty())
-        .or_else(|| {
-            std::env::var("MOEKOE_UPDATE_SOURCE")
-                .ok()
-                .filter(|s| !s.trim().is_empty())
-        })
+    {
+        return Some(v);
+    }
+    let env_allowed = std::env::var("MOEKOE_ALLOW_UPDATE_SOURCE")
+        .map(|v| v == "1" || v.eq_ignore_ascii_case("true"))
+        .unwrap_or(false);
+    if !env_allowed {
+        return None;
+    }
+    std::env::var("MOEKOE_UPDATE_SOURCE")
+        .ok()
+        .filter(|s| !s.trim().is_empty())
 }
 
 /// 下载线程里重新读一次代理设置（设置可能在检查后被修改）
@@ -1041,6 +1192,76 @@ mod tests {
         let parsed = parse_assets(raw.as_array().unwrap());
         assert_eq!(parsed.len(), 1, "带路径穿越的资产必须被丢弃");
         assert_eq!(parsed[0].name, "ok.exe");
+    }
+
+    #[test]
+    fn macos_asset_skips_updater_artifact() {
+        // `.app.tar.gz` 是 Tauri 的 updater artifact，双击只会解压，不能当安装包
+        let macos = ext_priority("macos");
+        assert!(macos.contains(&".dmg"));
+        assert!(!macos.contains(&".app.tar.gz"), "不能把 tar.gz 当安装包下发");
+
+        let only_tar = vec![asset("MoeKoe.Music_aarch64.app.tar.gz", 9)];
+        assert!(
+            pick_from_assets(&only_tar, "macos", "aarch64").is_none(),
+            "只剩 .app.tar.gz 时应判为无可用安装包（让用户手动更新）"
+        );
+    }
+
+    #[test]
+    fn cleanup_removes_stale_installers_only() {
+        let dir = std::env::temp_dir().join("moekoe-cleanup-test");
+        let _ = std::fs::remove_dir_all(&dir);
+        std::fs::create_dir_all(&dir).unwrap();
+
+        let keep = dir.join("MoeKoe.Music_1.7.2_x64-setup.exe");
+        let part = dir.join("MoeKoe.Music_1.7.2_x64-setup.exe.part");
+        let old = dir.join("MoeKoe.Music_1.7.1_x64-setup.exe");
+        let foreign = dir.join("notes.txt");
+        for p in [&keep, &part, &old, &foreign] {
+            std::fs::write(p, b"x").unwrap();
+        }
+
+        cleanup_old_downloads(&dir, &keep);
+
+        assert!(keep.exists(), "当前安装包必须保留");
+        assert!(!part.exists(), "残留分片应被清理");
+        assert!(!old.exists(), "旧版本安装包应被清理");
+        assert!(foreign.exists(), "非本模块产生的文件不能动");
+
+        let _ = std::fs::remove_dir_all(&dir);
+    }
+
+    #[test]
+    fn check_cache_hits_and_respects_key() {
+        let key = "unit-test-source";
+        cache_put(key, &json!({ "tag_name": "v9.9.9" }));
+        assert_eq!(
+            cache_get(key)
+                .and_then(|v| v.get("tag_name").and_then(|x| x.as_str()).map(str::to_string)),
+            Some("v9.9.9".to_string()),
+            "同源应命中缓存"
+        );
+        assert!(cache_get("another-source").is_none(), "不同更新源不共享缓存");
+
+        // 缓存是全局的，清掉避免影响其它用例
+        if let Ok(mut guard) = cache_slot().lock() {
+            *guard = None;
+        }
+    }
+
+    #[test]
+    fn download_flag_is_exclusive_and_released_by_guard() {
+        DOWNLOADING.store(false, Ordering::SeqCst);
+        assert!(!DOWNLOADING.swap(true, Ordering::SeqCst), "首次占位应成功");
+        assert!(DOWNLOADING.swap(true, Ordering::SeqCst), "占用中必须拒绝第二次");
+        {
+            let _guard = DownloadGuard;
+        }
+        assert!(
+            !DOWNLOADING.load(Ordering::SeqCst),
+            "guard 释放后应允许再次下载"
+        );
     }
 
     /// 取消状态是全局的，涉及它的用例必须串行
